@@ -1,5 +1,4 @@
 import 'package:fhe_template/core.dart';
-import '../model/firebase_user/firebase_user.dart';
 
 User get user {
   return FirebaseAuth.instance.currentUser!;

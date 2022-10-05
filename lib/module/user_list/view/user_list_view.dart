@@ -1,5 +1,4 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/model/firebase_user/firebase_user.dart';
 import 'package:flutter/material.dart';
 
 class UserListView extends StatefulWidget {

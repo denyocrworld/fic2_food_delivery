@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/contoh_view.dart';
 
 class ContohController extends State<ContohView> implements MvcController {
   static late ContohController instance;
