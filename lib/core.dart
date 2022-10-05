@@ -1,8 +1,8 @@
-export './core_package.dart';
-export 'package:fhe_template/core.dart';
-export 'package:fhe_template/core_package.dart';
-export 'package:fhe_template/firebase_options.dart';
-export 'package:fhe_template/main.dart';
+/*
+We believe, the class name must be unique. 
+If there is a conflicting class name in this file,
+it means you have to rename it to something more unique.
+*/
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
 export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
@@ -33,12 +33,12 @@ export 'package:fhe_template/module/user_list/view/user_list_view.dart';
 export 'package:fhe_template/router/no_transition.dart';
 export 'package:fhe_template/router/router.dart';
 export 'package:fhe_template/router/route_util.dart';
-export 'package:fhe_template/service/user_service.dart';
-export 'package:fhe_template/setup.dart';
 export 'package:fhe_template/shared/theme/theme.dart';
 export 'package:fhe_template/shared/util/focus_helper/focus_helper.dart';
 export 'package:fhe_template/shared/util/input/input.dart';
+export 'package:fhe_template/shared/util/theme/theme.dart';
 export 'package:fhe_template/shared/util/theme/theme_constants.dart';
+export 'package:fhe_template/shared/widget/abstract/input_control/input_control.dart';
 export 'package:fhe_template/shared/widget/button/button.dart';
 export 'package:fhe_template/shared/widget/checkbox/checkbox.dart';
 export 'package:fhe_template/shared/widget/combo/combo.dart';
@@ -54,6 +54,7 @@ export 'package:fhe_template/shared/widget/loading/image_loading.dart';
 export 'package:fhe_template/shared/widget/location_picker/location_picker.dart';
 export 'package:fhe_template/shared/widget/location_picker/location_picker_map_view.dart';
 export 'package:fhe_template/shared/widget/location_picker/map_viewer.dart';
+export 'package:fhe_template/shared/widget/navigation/navigation.dart';
 export 'package:fhe_template/shared/widget/radio/radio.dart';
 export 'package:fhe_template/shared/widget/radio/switch.dart';
 export 'package:fhe_template/shared/widget/rating/rating.dart';
@@ -62,4 +63,5 @@ export 'package:fhe_template/shared/widget/slider/slider.dart';
 export 'package:fhe_template/shared/widget/textfield/searchfield.dart';
 export 'package:fhe_template/shared/widget/textfield/textarea.dart';
 export 'package:fhe_template/shared/widget/textfield/textfield.dart';
-export 'package:fhe_template/state_util.dart';
+export 'core_package.dart';
+export 'state_util.dart';
