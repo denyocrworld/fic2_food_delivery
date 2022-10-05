@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/customer_list_view.dart';
 
 class CustomerListController extends State<CustomerListView>
     implements MvcController {

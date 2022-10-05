@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/profile_view.dart';
 
 class ProfileController extends State<ProfileView> implements MvcController {
   static late ProfileController instance;

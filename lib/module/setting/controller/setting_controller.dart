@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/setting_view.dart';
 
 class SettingController extends State<SettingView> implements MvcController {
   static late SettingController instance;

@@ -1,9 +1,12 @@
 export './core_package.dart';
 export 'package:fhe_template/core.dart';
+export 'package:fhe_template/core_package.dart';
 export 'package:fhe_template/firebase_options.dart';
 export 'package:fhe_template/main.dart';
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
+export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
+export 'package:fhe_template/module/contoh/view/contoh_view.dart';
 export 'package:fhe_template/module/customer_list/controller/customer_list_controller.dart';
 export 'package:fhe_template/module/customer_list/view/customer_list_view.dart';
 export 'package:fhe_template/module/dashboard/controller/dashboard_controller.dart';

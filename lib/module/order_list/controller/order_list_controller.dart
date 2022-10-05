@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/order_list_view.dart';
 
 class OrderListController extends State<OrderListView>
     implements MvcController {

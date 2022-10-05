@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/product_list_view.dart';
 
 class ProductListController extends State<ProductListView>
     implements MvcController {

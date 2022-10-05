@@ -1,8 +1,8 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/event_list_view.dart';
 
-class EventListController extends State<EventListView> implements MvcController {
+class EventListController extends State<EventListView>
+    implements MvcController {
   static late EventListController instance;
   late EventListView view;
 

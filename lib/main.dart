@@ -10,8 +10,15 @@ final GlobalKey<NavigatorState> rootNavigatorKey =
 final GlobalKey<NavigatorState> shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
+//http://localhost:8000?order_id=44OHkCKgS7omJGgZ9Iim_4l6wgLyZEbdgVqRm73GQLtVwETn1&status_code=200&transaction_status=settlement
 void main() async {
   await initialize();
+
+  String myurl = Uri.base.toString();
+  String orderId = Uri.base.queryParameters["order_id"]!;
+  String? eventId = Uri.base.queryParameters["event_id"]!;
+  String? userId = Uri.base.queryParameters["user_id"]!;
+
   runApp(const ShellRouteExampleApp());
 }
 

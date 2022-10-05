@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/report_view.dart';
 
 class ReportController extends State<ReportView> implements MvcController {
   static late ReportController instance;

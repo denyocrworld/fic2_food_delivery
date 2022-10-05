@@ -1,9 +1,9 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:dio/dio.dart';
 import 'package:fhe_template/core.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:file_picker_cross/file_picker_cross.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:path/path.dart' as path;
 import 'package:flutter/material.dart';
@@ -36,6 +36,7 @@ class ExImagePicker extends StatefulWidget {
 class _ExImagePickerState extends State<ExImagePicker>
     implements InputControlState {
   String? imageUrl;
+  Uint8List? imageBytes;
   bool loading = false;
 
   @override
@@ -81,20 +82,28 @@ class _ExImagePickerState extends State<ExImagePicker>
         var file = filePickerResult!.files[0];
         var filename = "${const Uuid().v1()}_${path.basename(file.name)}";
         //Compress Image
-        Directory tempDir = await getTemporaryDirectory();
-        String tempPath = tempDir.path;
-        String targetpath = "$tempPath/$filename";
-        File targetFile = File(targetpath);
 
-        await FlutterImageCompress.compressAndGetFile(
-          file.path!,
-          targetpath,
-          quality: 50,
-        );
+        if (!kIsWeb) {
+          Directory tempDir = await getTemporaryDirectory();
+          debugPrint("getTemporaryDirectory: ${tempDir.path}");
+          String tempPath = tempDir.path;
+          String targetpath = "$tempPath/$filename";
+          File targetFile = File(targetpath);
+
+          await FlutterImageCompress.compressAndGetFile(
+            file.path!,
+            targetpath,
+            quality: 50,
+          );
+
+          imageBytes = targetFile.readAsBytesSync();
+        } else {
+          imageBytes = filePickerResult!.files.first.bytes;
+        }
 
         final formData = FormData.fromMap({
           'image': MultipartFile.fromBytes(
-            targetFile.readAsBytesSync(),
+            imageBytes!,
             filename: "upload.jpg",
           ),
         });

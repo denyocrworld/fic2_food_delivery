@@ -1,4 +1,4 @@
-import 'package:fhe_template/shared/widget/textfield/textfield.dart';
+import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
 
 class ExTextArea extends StatelessWidget {
@@ -20,7 +20,7 @@ class ExTextArea extends StatelessWidget {
     return ExTextField(
       id: id,
       label: label,
-      maxLines: 4,
+      maxLines: maxLines,
       value: value,
     );
   }

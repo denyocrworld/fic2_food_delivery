@@ -7,6 +7,10 @@ User get user {
 
 late FirebaseUser me;
 
+get isAdmin {
+  return me.email == "denyocr.world@gmail.com" ? true : false;
+}
+
 class UserService {
   static getRandomPhotos() {
     var photos = [
@@ -28,6 +32,7 @@ class UserService {
 
   static initialize() async {
     me = FirebaseUser(
+      uid: user.uid,
       name: user.displayName ?? "No Name",
       email: user.email,
       photo: getRandomPhotos(),

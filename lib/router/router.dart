@@ -1,8 +1,6 @@
 import 'package:fhe_template/core.dart';
-import 'package:go_router/go_router.dart';
-import 'package:flutter/material.dart';
 
-import 'no_transition.dart';
+import 'package:flutter/material.dart';
 
 getRouters(context, rootNavigatorKey, shellNavigatorKey) {
   return GoRouter(

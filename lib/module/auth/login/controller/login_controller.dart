@@ -1,6 +1,4 @@
 import 'package:fhe_template/core.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginController extends State<LoginView> implements MvcController {
@@ -39,11 +37,11 @@ class LoginController extends State<LoginView> implements MvcController {
         idToken: googleSignInAuthentication.idToken,
       );
 
-      print("signInWithCredential>>>");
+      debugPrint("signInWithCredential>>>");
       var userCredential =
           await FirebaseAuth.instance.signInWithCredential(credential);
 
-      print("signInWithCredential Done");
+      debugPrint("signInWithCredential Done");
       debugPrint("userCredential: userCredential");
       //TODO: on login success
       //------------------

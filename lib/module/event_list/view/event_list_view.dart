@@ -1,7 +1,6 @@
 import 'package:fhe_template/core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
-import '../controller/event_list_controller.dart';
 
 class EventListView extends StatefulWidget {
   const EventListView({Key? key}) : super(key: key);
@@ -13,20 +12,25 @@ class EventListView extends StatefulWidget {
       appBar: AppBar(
         title: const Text("EventList"),
         actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton.icon(
-              icon: const Icon(Icons.add),
-              label: const Text("Add"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const EventFormView()),
+          if (isAdmin)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const EventFormView(),
+                    ),
+                  );
+                },
               ),
             ),
-          ),
         ],
       ),
       body: Padding(
@@ -107,8 +111,9 @@ class EventListView extends StatefulWidget {
                           child: ListTile(
                             leading: CircleAvatar(
                               backgroundColor: Colors.grey[200],
-                              backgroundImage: const NetworkImage(
-                                "https://i.ibb.co/QrTHd59/woman.jpg",
+                              backgroundImage: NetworkImage(
+                                item["photo"] ??
+                                    "https://i.ibb.co/S32HNjD/no-image.jpg",
                               ),
                             ),
                             title: Text("${item["title"]}"),

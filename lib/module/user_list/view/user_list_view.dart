@@ -35,7 +35,11 @@ class UserListView extends StatefulWidget {
                       Map<String, dynamic> item =
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
+
                       var user = FirebaseUser.fromJson(item);
+                      var maskedEmail = "*****@${user.email!.split("@")[1]}";
+                      var email = isAdmin ? maskedEmail : user.email!;
+
                       return Card(
                         child: ListTile(
                           leading: CircleAvatar(
@@ -45,7 +49,7 @@ class UserListView extends StatefulWidget {
                             ),
                           ),
                           title: Text(user.name!),
-                          subtitle: Text(user.email!),
+                          subtitle: Text(email),
                         ),
                       );
                     },

@@ -1,10 +1,10 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
+import '../view/contoh_view.dart';
 
-class EventFormController extends State<EventFormView>
-    implements MvcController {
-  static late EventFormController instance;
-  late EventFormView view;
+class ContohController extends State<ContohView> implements MvcController {
+  static late ContohController instance;
+  late ContohView view;
 
   @override
   void initState() {

@@ -1,7 +1,6 @@
 import 'package:fhe_template/core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+
 import 'package:flutter/material.dart';
-import '../controller/event_form_controller.dart';
 
 class EventFormView extends StatefulWidget {
   const EventFormView({Key? key}) : super(key: key);
@@ -22,12 +21,20 @@ class EventFormView extends StatefulWidget {
                 backgroundColor: Colors.blueGrey,
               ),
               onPressed: () async {
+                var photo = Input.get("photo");
                 var title = Input.get("title");
                 var description = Input.get("description");
+                var startAt = Input.get("start_at");
+                var endAt = Input.get("end_at");
+                var prizePool = Input.get("prize_pool");
 
                 await FirebaseFirestore.instance.collection("events").add({
-                  "product_name": title,
-                  "price": description,
+                  "photo": photo,
+                  "title": title,
+                  "description": description,
+                  "start_at": startAt,
+                  "end_at": endAt,
+                  "prize_pool": prizePool,
                 });
                 Navigator.pop(context);
               },
@@ -37,17 +44,62 @@ class EventFormView extends StatefulWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: const [
-            ExTextField(
-              id: "title",
-              label: "Title",
-            ),
-            ExTextArea(
-              id: "description",
-              label: "Description",
-            ),
-          ],
+        child: SingleChildScrollView(
+          controller: ScrollController(),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                margin: const EdgeInsets.only(),
+                child: TextFormField(
+                  initialValue: 'admin@gmail.com',
+                  maxLength: 20,
+                  decoration: const InputDecoration(
+                    labelText: 'Email',
+                    labelStyle: TextStyle(
+                      color: Colors.blueGrey,
+                    ),
+                    suffixIcon: Icon(
+                      Icons.email,
+                    ),
+                    enabledBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.blueGrey,
+                      ),
+                    ),
+                    helperText: 'Enter your email address',
+                  ),
+                  onChanged: (value) {},
+                ),
+              ),
+              const ExImagePicker(
+                id: "photo",
+                label: "Photo",
+              ),
+              const ExTextField(
+                id: "title",
+                label: "Title",
+              ),
+              const ExDatePicker(
+                id: "start_at",
+                label: "Start At",
+              ),
+              const ExDatePicker(
+                id: "end_at",
+                label: "End At",
+              ),
+              const ExTextArea(
+                id: "description",
+                label: "Description",
+              ),
+              const ExTextField(
+                id: "prize_pool",
+                label: "Prize Pool",
+                keyboardType: TextInputType.number,
+                value: "0",
+              ),
+            ],
+          ),
         ),
       ),
     );

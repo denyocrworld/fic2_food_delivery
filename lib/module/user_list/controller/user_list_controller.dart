@@ -1,6 +1,5 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import '../view/user_list_view.dart';
 
 class UserListController extends State<UserListView> implements MvcController {
   static late UserListController instance;
