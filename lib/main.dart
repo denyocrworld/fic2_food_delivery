@@ -1,12 +1,9 @@
+import 'package:fhe_template/core.dart';
 // Copyright 2013 The Flutter Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'package:fhe_template/router/router.dart';
-import 'package:fhe_template/setup.dart';
-import 'package:fhe_template/shared/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -27,6 +24,7 @@ class ShellRouteExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: defaultTheme,
       routerConfig: getRouters(context, rootNavigatorKey, shellNavigatorKey),
     );

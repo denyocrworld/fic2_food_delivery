@@ -1,8 +1,9 @@
+import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
 import '../view/product_list_view.dart';
 
-class ProductListController extends State<ProductListView> implements MvcController {
+class ProductListController extends State<ProductListView>
+    implements MvcController {
   static late ProductListController instance;
   late ProductListView view;
 

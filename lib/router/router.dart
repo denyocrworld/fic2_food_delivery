@@ -87,6 +87,22 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const ProfileView(),
             ),
           ),
+          GoRoute(
+            path: '/users',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const UserListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/events',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const EventListView(),
+            ),
+          ),
         ],
       ),
     ],

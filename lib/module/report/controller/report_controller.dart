@@ -1,5 +1,5 @@
+import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
 import '../view/report_view.dart';
 
 class ReportController extends State<ReportView> implements MvcController {

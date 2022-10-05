@@ -8,6 +8,9 @@
         "order_list",
         "report",
         "profile",
-        "setting"
+        "setting",
+        "user_list",
+        "event_list",
+        "event_form"
     ]
 }

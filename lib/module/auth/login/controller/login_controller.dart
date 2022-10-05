@@ -2,7 +2,6 @@ import 'package:fhe_template/core.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
 
 class LoginController extends State<LoginView> implements MvcController {
   static late LoginController instance;
@@ -48,6 +47,8 @@ class LoginController extends State<LoginView> implements MvcController {
       debugPrint("userCredential: userCredential");
       //TODO: on login success
       //------------------
+
+      await UserService.initialize();
       MainNavigationViewState.instance.update();
     } catch (_) {}
   }

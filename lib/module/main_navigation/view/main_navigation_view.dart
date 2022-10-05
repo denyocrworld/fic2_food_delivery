@@ -1,8 +1,9 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/router/route_util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class MainNavigationView extends StatefulWidget {
   final Widget child;
@@ -22,12 +23,8 @@ class MainNavigationViewState extends State<MainNavigationView> {
 
   List routes = [
     "/dashboard",
-    "/products",
-    "/customers",
-    "/orders",
-    "/reports",
-    "/settings",
-    "/profile",
+    "/events",
+    "/users",
   ];
 
   List navigationItems = [
@@ -36,28 +33,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: "Dashboard",
     ),
     NavigationItem(
-      icon: Icons.shop,
-      label: "Products",
+      icon: MdiIcons.calendarStar,
+      label: "Events",
     ),
     NavigationItem(
       icon: Icons.people,
-      label: "Customers",
-    ),
-    NavigationItem(
-      icon: Icons.list,
-      label: "Orders",
-    ),
-    NavigationItem(
-      icon: Icons.report,
-      label: "Reports",
-    ),
-    NavigationItem(
-      icon: Icons.tune,
-      label: "Settings",
-    ),
-    NavigationItem(
-      icon: Icons.person,
-      label: "Profile",
+      label: "Users",
     ),
   ];
 
@@ -134,7 +115,54 @@ class MainNavigationViewState extends State<MainNavigationView> {
             ),
             const VerticalDivider(thickness: 1, width: 1),
             Expanded(
-              child: widget.child,
+              child: Column(
+                children: [
+                  Container(
+                    color: Colors.white,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Capek Ngoding",
+                              style: GoogleFonts.bungee(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "Write less do more",
+                              style: GoogleFonts.bungee(
+                                fontSize: 12.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Spacer(),
+                        Text("${me.name}"),
+                        const SizedBox(
+                          width: 4.0,
+                        ),
+                        CircleAvatar(
+                          radius: 16.0,
+                          backgroundImage: NetworkImage(
+                            me.photo ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 1.4,
+                    color: Colors.grey[300],
+                  ),
+                  Expanded(
+                    child: widget.child,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
