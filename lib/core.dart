@@ -3,6 +3,7 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:fhe_template/model/firebase_user/firebase_user.dart';
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
 export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
@@ -33,12 +34,11 @@ export 'package:fhe_template/module/user_list/view/user_list_view.dart';
 export 'package:fhe_template/router/no_transition.dart';
 export 'package:fhe_template/router/router.dart';
 export 'package:fhe_template/router/route_util.dart';
+export 'package:fhe_template/service/user_service.dart';
 export 'package:fhe_template/shared/theme/theme.dart';
+export 'package:fhe_template/shared/theme/theme_constants.dart';
 export 'package:fhe_template/shared/util/focus_helper/focus_helper.dart';
 export 'package:fhe_template/shared/util/input/input.dart';
-export 'package:fhe_template/shared/util/theme/theme.dart';
-export 'package:fhe_template/shared/util/theme/theme_constants.dart';
-export 'package:fhe_template/shared/widget/abstract/input_control/input_control.dart';
 export 'package:fhe_template/shared/widget/button/button.dart';
 export 'package:fhe_template/shared/widget/checkbox/checkbox.dart';
 export 'package:fhe_template/shared/widget/combo/combo.dart';
@@ -65,3 +65,4 @@ export 'package:fhe_template/shared/widget/textfield/textarea.dart';
 export 'package:fhe_template/shared/widget/textfield/textfield.dart';
 export 'core_package.dart';
 export 'state_util.dart';
+export 'setup.dart';

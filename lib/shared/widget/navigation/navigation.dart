@@ -1,11 +1,11 @@
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
 
-class NavigationItem {
+class ExNavigationItem {
   final String? label;
   final IconData? icon;
 
-  NavigationItem({
+  ExNavigationItem({
     this.label,
     this.icon,
   });
@@ -21,7 +21,7 @@ enum NavigationType {
 
 class ExNavigation extends StatefulWidget {
   final List<Widget> children;
-  final List<NavigationItem> menus;
+  final List<ExNavigationItem> menus;
   final NavigationType? type;
   final Widget? floatingActionButton;
   final Color? selectedColor;
