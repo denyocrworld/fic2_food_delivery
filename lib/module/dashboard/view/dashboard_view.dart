@@ -195,6 +195,8 @@ class DashboardView extends StatefulWidget {
                                   StreamBuilder<QuerySnapshot>(
                                     stream: FirebaseFirestore.instance
                                         .collection("event_participants")
+                                        .where("event_id",
+                                            isEqualTo: item["event_id"])
                                         .snapshots(),
                                     builder: (context, snapshot) {
                                       if (snapshot.hasError) {
