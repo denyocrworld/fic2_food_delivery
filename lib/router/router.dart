@@ -22,6 +22,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
             ),
           ),
           GoRoute(
+            path: '/',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DashboardView(),
+            ),
+          ),
+          GoRoute(
             path: '/dashboard',
             pageBuilder: (context, state) => noTransition(
               context: context,
