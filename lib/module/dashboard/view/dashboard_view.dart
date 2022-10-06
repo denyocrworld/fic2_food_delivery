@@ -1,12 +1,7 @@
 import 'package:fhe_template/core.dart';
+import 'package:fhe_template/shared/util/format/format.dart';
 import 'package:flutter/material.dart';
-
-extension DateFormatExtension on DateTime {
-  format() {
-    var value = this;
-    return DateFormat("d MMM y").format(value);
-  }
-}
+import 'package:flutter/services.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -19,32 +14,29 @@ class DashboardView extends StatefulWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: Container(
-        // constraints: const BoxConstraints(
-        //   maxWidth: 760.0,
-        // ),
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            //body
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 4.0),
-              width: MediaQuery.of(context).size.width,
-              child: const Text(
-                "Events",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
+      body: SingleChildScrollView(
+        controller: ScrollController(),
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                width: MediaQuery.of(context).size.width,
+                child: const Text(
+                  "Events",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                  ),
                 ),
               ),
-            ),
-            const Divider(
-              height: 20.0,
-            ),
-            Expanded(
-              child: StreamBuilder<QuerySnapshot>(
+              const Divider(
+                height: 20.0,
+              ),
+              StreamBuilder<QuerySnapshot>(
                 stream:
                     FirebaseFirestore.instance.collection("events").snapshots(),
                 builder: (context, snapshot) {
@@ -106,16 +98,16 @@ class DashboardView extends StatefulWidget {
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
                                         ),
-                                        Text("${startAt.format()}"),
+                                        Text("${startAt.dMMMy}"),
                                         const SizedBox(
                                           height: 4.0,
                                         ),
-                                        Text("${endAt.format()}"),
+                                        Text("${endAt.dMMMy}"),
                                         const SizedBox(
                                           height: 6.0,
                                         ),
                                         Text(
-                                          "Rp${item["prize_pool"]}",
+                                          "${double.parse(item["prize_pool"]).idr}",
                                           style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -210,12 +202,84 @@ class DashboardView extends StatefulWidget {
                                       }
                                       final data = snapshot.data!;
 
-                                      return Text(
-                                        "Participants: ${snapshot.data!.docs.length}",
-                                        style: const TextStyle(
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                      return Column(
+                                        children: [
+                                          Text(
+                                            "Participants: ${snapshot.data!.docs.length}",
+                                            style: const TextStyle(
+                                              fontSize: 14.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          const SizedBox(
+                                            height: 12.0,
+                                          ),
+                                          ListView.builder(
+                                            itemCount:
+                                                snapshot.data!.docs.length,
+                                            shrinkWrap: true,
+                                            physics: const ScrollPhysics(),
+                                            itemBuilder: (BuildContext context,
+                                                int index) {
+                                              Map item = (snapshot
+                                                      .data!.docs[index]
+                                                      .data()
+                                                  as Map<String, dynamic>);
+                                              item["id"] =
+                                                  snapshot.data!.docs[index].id;
+
+                                              var email = item["user"]["email"];
+
+                                              var arr = email.split("@");
+                                              var maskedEmail = email[0] +
+                                                  email[1] +
+                                                  email[2] +
+                                                  "***" +
+                                                  "@" +
+                                                  arr[1];
+
+                                              if (!isAdmin) {
+                                                email = maskedEmail;
+                                              }
+                                              return Container(
+                                                padding:
+                                                    const EdgeInsets.all(4.0),
+                                                child: Row(
+                                                  children: [
+                                                    Expanded(
+                                                      child: Text(
+                                                        "${item["user"]["name"]}",
+                                                        style: const TextStyle(
+                                                          fontSize: 8.0,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Expanded(
+                                                      child: InkWell(
+                                                        onTap: () async {
+                                                          await Clipboard
+                                                              .setData(
+                                                                  ClipboardData(
+                                                            text: email,
+                                                          ));
+                                                        },
+                                                        child: Text(
+                                                          "$email",
+                                                          textAlign:
+                                                              TextAlign.right,
+                                                          style:
+                                                              const TextStyle(
+                                                            fontSize: 8.0,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        ],
                                       );
                                     },
                                   ),
@@ -265,8 +329,8 @@ class DashboardView extends StatefulWidget {
                   );
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

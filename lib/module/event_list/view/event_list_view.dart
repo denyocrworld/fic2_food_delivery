@@ -16,6 +16,50 @@ class EventListView extends StatefulWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton.icon(
+                icon: const Icon(Icons.developer_board),
+                label: const Text("Fix"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () async {
+                  var snapshot = await FirebaseFirestore.instance
+                      .collection("event_participants")
+                      .get();
+                  for (var doc in snapshot.docs) {
+                    Map<String, dynamic> obj = doc.data();
+
+                    var userSnapshot = await FirebaseFirestore.instance
+                        .collection("users")
+                        .doc(obj["user_id"])
+                        .get();
+
+                    Map<String, dynamic> user =
+                        (userSnapshot.data() as Map<String, dynamic>);
+
+                    obj["user"] = {
+                      "id": obj["user_id"],
+                      "name": user["name"],
+                      "email": user["email"],
+                    };
+
+                    FirebaseFirestore.instance
+                        .collection("event_participants")
+                        .doc(doc.id)
+                        .update({
+                      "user": {
+                        "id": obj["user_id"],
+                        "name": user["name"],
+                        "email": user["email"],
+                      },
+                    });
+                  }
+                },
+              ),
+            ),
+          if (isAdmin)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton.icon(
                 icon: const Icon(Icons.add),
                 label: const Text("Add"),
                 style: ElevatedButton.styleFrom(

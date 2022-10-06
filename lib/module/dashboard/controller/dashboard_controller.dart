@@ -28,7 +28,11 @@ class DashboardController extends State<DashboardView>
           .doc(eventUid + "_" + userUid)
           .set({
         "event_id": eventUid,
-        "user_id": userUid,
+        "user": {
+          "id": userUid,
+          "name": me.name,
+          "email": me.email,
+        },
         "joined": true,
       });
     } else {
