@@ -27,7 +27,7 @@ class ShellRouteExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,
       theme: defaultTheme,
       routerConfig: getRouters(context, rootNavigatorKey, shellNavigatorKey),
