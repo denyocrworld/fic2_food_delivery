@@ -34,3 +34,23 @@ class ShellRouteExampleApp extends StatelessWidget {
     );
   }
 }
+
+/*
+[[ NEW UPDATE!!!!! ]
+String Parser
+
+@i.productName
+@i.price
+@i.photo
+
+@m.productName
+@m.price
+@m.photo
+
+@p.productName
+@p.item.name
+@p.product.name
+
+HOTKEY( SHIFT + ALT + E)
+
+*/

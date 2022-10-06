@@ -3,9 +3,16 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:fhe_template/model/blog/blog.dart';
 export 'package:fhe_template/model/firebase_user/firebase_user.dart';
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
+export 'package:fhe_template/module/blog_form/controller/blog_form_controller.dart';
+export 'package:fhe_template/module/blog_form/view/blog_form_view.dart';
+export 'package:fhe_template/module/blog_list/controller/blog_list_controller.dart';
+export 'package:fhe_template/module/blog_list/view/blog_list_view.dart';
+export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
+export 'package:fhe_template/module/contoh/view/contoh_view.dart';
 export 'package:fhe_template/module/customer_list/controller/customer_list_controller.dart';
 export 'package:fhe_template/module/customer_list/view/customer_list_view.dart';
 export 'package:fhe_template/module/dashboard/controller/dashboard_controller.dart';

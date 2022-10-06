@@ -21,6 +21,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
   List routes = [
     "/dashboard",
     "/events",
+    "/blogs",
     "/users",
   ];
 
@@ -32,6 +33,10 @@ class MainNavigationViewState extends State<MainNavigationView> {
     NavigationItem(
       icon: MdiIcons.calendarStar,
       label: "Events",
+    ),
+    NavigationItem(
+      icon: MdiIcons.post,
+      label: "Blogs",
     ),
     NavigationItem(
       icon: Icons.people,

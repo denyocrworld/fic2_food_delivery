@@ -109,6 +109,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const EventListView(),
             ),
           ),
+          GoRoute(
+            path: '/blogs',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const BlogListView(),
+            ),
+          ),
         ],
       ),
     ],
