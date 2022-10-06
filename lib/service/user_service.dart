@@ -7,6 +7,7 @@ User get user {
 late FirebaseUser me;
 
 get isAdmin {
+  if (FirebaseAuth.instance.currentUser == null) return false;
   return me.email == "denyocr.world@gmail.com" ? true : false;
 }
 

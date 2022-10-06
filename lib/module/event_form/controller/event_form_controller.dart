@@ -17,4 +17,26 @@ class EventFormController extends State<EventFormView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  test() {
+    /*
+    @i.productName
+    @i.price
+    @i.fullName
+    
+
+    @m.productName
+    @m.price
+    @m.name
+
+    @p.productName
+    @p.item.name
+
+
+    @textfield.productName
+    @numberfield.price
+    @textarea.price
+    @combo.gender
+    */
+  }
 }

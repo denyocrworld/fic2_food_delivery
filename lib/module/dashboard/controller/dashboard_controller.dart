@@ -40,8 +40,9 @@ class DashboardController extends State<DashboardView>
   }
 
   openPaymentUrl(eventId, amount) async {
-    var url =
-        'https://capekngoding.com/payment_api/public/index.php/pay/$eventId/${me.uid}/$amount';
+    // var url =
+    //     'https://capekngoding.com/payment_api/public/index.php/pay/$eventId/${me.uid}/$amount';
+    var url = "https://saweria.co/denyocr";
     if (await canLaunchUrl(Uri.parse(url))) {
       await launchUrl(
         Uri.parse(url),

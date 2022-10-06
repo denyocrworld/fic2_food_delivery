@@ -1,4 +1,5 @@
 import 'package:fhe_template/core.dart';
+import 'package:fhe_template/service/event_service.dart';
 import 'package:flutter/material.dart';
 
 extension DateFormatExtension on DateTime {
@@ -28,6 +29,19 @@ class DashboardView extends StatefulWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //body
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 4.0),
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                globalMessage,
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                  color: Colors.orange[400],
+                ),
+              ),
+            ),
             SizedBox(
               height: 140.0,
               child: ListView.builder(

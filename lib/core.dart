@@ -6,8 +6,6 @@ it means you have to rename it to something more unique.
 export 'package:fhe_template/model/firebase_user/firebase_user.dart';
 export 'package:fhe_template/module/auth/login/controller/login_controller.dart';
 export 'package:fhe_template/module/auth/login/view/login_view.dart';
-export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
-export 'package:fhe_template/module/contoh/view/contoh_view.dart';
 export 'package:fhe_template/module/customer_list/controller/customer_list_controller.dart';
 export 'package:fhe_template/module/customer_list/view/customer_list_view.dart';
 export 'package:fhe_template/module/dashboard/controller/dashboard_controller.dart';
@@ -34,6 +32,7 @@ export 'package:fhe_template/module/user_list/view/user_list_view.dart';
 export 'package:fhe_template/router/no_transition.dart';
 export 'package:fhe_template/router/router.dart';
 export 'package:fhe_template/router/route_util.dart';
+export 'package:fhe_template/service/event_service.dart';
 export 'package:fhe_template/service/user_service.dart';
 export 'package:fhe_template/shared/theme/theme.dart';
 export 'package:fhe_template/shared/theme/theme_constants.dart';

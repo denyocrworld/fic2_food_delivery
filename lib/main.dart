@@ -14,10 +14,7 @@ final GlobalKey<NavigatorState> shellNavigatorKey =
 void main() async {
   await initialize();
 
-  String myurl = Uri.base.toString();
-  String orderId = Uri.base.queryParameters["order_id"]!;
-  String? eventId = Uri.base.queryParameters["event_id"]!;
-  String? userId = Uri.base.queryParameters["user_id"]!;
+  // await Eventservice.handleQueryParameter();
 
   runApp(const ShellRouteExampleApp());
 }
