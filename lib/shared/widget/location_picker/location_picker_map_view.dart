@@ -137,23 +137,6 @@ class LocationPickerMapState extends State<LocationPickerMap> {
     return Scaffold(
       body: Stack(
         children: [
-          // Positioned(
-          //   left: 0,
-          //   top: 0,
-          //   right: 0,
-          //   bottom: 0,
-          //   child: SizedBox(
-          //     width: 0.0,
-          //     height: 0.0,
-          //     child: MapViewer(
-          //       onPositionChanged: (pos, _) {
-          //         log("${pos.center!.latitude},${pos.center!.longitude}");
-          //         currentLatitude = pos.center!.latitude;
-          //         currentLongitude = pos.center!.longitude;
-          //       },
-          //     ),
-          //   ),
-          // ),
           if (loading)
             Align(
               alignment: Alignment.center,
@@ -262,6 +245,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             child: MapViewer(
                               latitude: currentLatitude,
                               longitude: currentLongitude,
+                              controller: mapController,
                               onPositionChanged: (pos, _) {
                                 log("${pos.center!.latitude},${pos.center!.longitude}");
                                 currentLatitude = pos.center!.latitude;
@@ -270,52 +254,6 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                               },
                             ),
                           ),
-                          // Positioned(
-                          //   left: 0,
-                          //   right: 0,
-                          //   top: 0,
-                          //   bottom: 0,
-                          //   child: FlutterMap(
-                          //     options: MapOptions(
-                          //       // center: LatLng(-6.200000, 106.816666),
-                          //       center: LatLng(
-                          //         currentLatitude,
-                          //         currentLongitude,
-                          //       ),
-                          //       zoom: 13.0,
-                          //       onPositionChanged: (pos, _) {
-                          //         log("${pos.center!.latitude},${pos.center!.longitude}");
-                          //         currentLatitude = pos.center!.latitude;
-                          //         currentLongitude = pos.center!.longitude;
-                          //         setState(() {});
-                          //       },
-                          //     ),
-                          //     mapController: mapController,
-                          //     // layers: [
-                          //     //   TileLayerOptions(
-                          //     //     urlTemplate:
-                          //     //         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                          //     //     subdomains: ['a', 'b', 'c'],
-                          //     //     attributionBuilder: (_) {
-                          //     //       return const Text(
-                          //     //           "© OpenStreetMap contributors");
-                          //     //     },
-                          //     //   ),
-                          //     //   MarkerLayerOptions(
-                          //     //     markers: [
-                          //     //       // Marker(
-                          //     //       //   width: 80.0,
-                          //     //       //   height: 80.0,
-                          //     //       //   point: LatLng(51.5, -0.09),
-                          //     //       //   builder: (ctx) => Container(
-                          //     //       //     child: FlutterLogo(),
-                          //     //       //   ),
-                          //     //       // ),
-                          //     //     ],
-                          //     //   ),
-                          //     // ],
-                          //   ),
-                          // ),
                           Align(
                             alignment: Alignment.center,
                             child: Padding(
@@ -331,27 +269,39 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             top: 10.0,
                             child: Text("$currentLatitude,$currentLongitude"),
                           ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(6.0),
-                      width: MediaQuery.of(context).size.width,
-                      child: ExButton(
-                        label: "Select Location",
-                        color: primaryColor,
-                        enabled: loading ? false : true,
-                        onPressed: () async {
-                          debugPrint("currentLatitude : $currentLatitude");
-                          debugPrint("currentLongitude : $currentLongitude");
-                          Input.set(
-                              widget.id, "$currentLatitude,$currentLongitude");
-                          Input.set("${widget.id}_latitude", currentLatitude);
-                          Input.set("${widget.id}_longitude", currentLongitude);
+                          Align(
+                            alignment: Alignment.bottomCenter,
+                            child: Container(
+                              color: Colors.transparent,
+                              height: 48,
+                              constraints:
+                                  const BoxConstraints(maxWidth: 360.0),
+                              margin: const EdgeInsets.only(
+                                bottom: 20.0,
+                              ),
+                              padding: const EdgeInsets.all(6.0),
+                              width: MediaQuery.of(context).size.width,
+                              child: ElevatedButton.icon(
+                                icon: const Icon(Icons.location_on),
+                                label: const Text("Select location"),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.blueGrey,
+                                ),
+                                onPressed: () async {
+                                  debugPrint("currentLatitude : ");
+                                  debugPrint("currentLongitude : ");
+                                  Input.set(widget.id, ",");
+                                  Input.set(
+                                      "${widget.id}_latitude", currentLatitude);
+                                  Input.set("${widget.id}_longitude",
+                                      currentLongitude);
 
-                          Navigator.pop(context);
-                        },
+                                  Navigator.pop(context);
+                                },
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],

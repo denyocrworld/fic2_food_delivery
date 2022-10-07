@@ -6,11 +6,13 @@ class MapViewer extends StatefulWidget {
   final double? latitude;
   final double? longitude;
   final Function(MapPosition, bool)? onPositionChanged;
+  final MapController? controller;
   const MapViewer({
     Key? key,
     this.onPositionChanged,
     this.latitude,
     this.longitude,
+    this.controller,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class _MapViewerState extends State<MapViewer> {
     return Stack(
       children: [
         FlutterMap(
+          mapController: widget.controller,
           options: MapOptions(
             // center: LatLng(-6.200000, 106.816666),
             // center: LatLng(-6.307332470724814, 106.82061421166996),

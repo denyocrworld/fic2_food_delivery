@@ -31,17 +31,18 @@ class _ExLocationPickerState extends State<ExLocationPicker>
   @override
   void initState() {
     super.initState();
-    if (widget.latitude == null && widget.longitude == null) {
+    if (widget.latitude == null || widget.longitude == null) {
       Input.set("${widget.id}_latitude", null);
       Input.set("${widget.id}_longitude", null);
+      getLocation();
     } else {
       Input.set("${widget.id}_latitude", widget.latitude);
       Input.set("${widget.id}_longitude", widget.longitude);
 
       latitude = widget.latitude;
       longitude = widget.longitude;
+      loading = false;
     }
-    getLocation();
   }
 
   getLocation() async {
@@ -172,8 +173,8 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                           ),
                           if (!isLocationPicked())
                             ElevatedButton.icon(
-                              icon: const Icon(Icons.add_location),
-                              label: const Text("Select Location"),
+                              icon: const Icon(Icons.location_on),
+                              label: const Text("Select"),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blueGrey,
                               ),
@@ -204,8 +205,8 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                             ),
                           if (isLocationPicked())
                             ElevatedButton.icon(
-                              icon: const Icon(Icons.add_location),
-                              label: const Text("Update location"),
+                              icon: const Icon(Icons.location_on),
+                              label: const Text("Change"),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blueGrey,
                               ),
@@ -228,11 +229,15 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                                 await Future.delayed(
                                     const Duration(milliseconds: 200));
 
-                                latitude = Input.get("${widget.id}_latitude");
-                                longitude = Input.get("${widget.id}_longitude");
+                                var pLatitude =
+                                    Input.get("${widget.id}_latitude");
+                                var pLongitude =
+                                    Input.get("${widget.id}_longitude");
 
-                                debugPrint("latitude : $latitude");
-                                debugPrint("longitude : $longitude");
+                                if (pLatitude != null) {
+                                  latitude = pLatitude;
+                                  longitude = pLongitude;
+                                }
 
                                 loading = false;
                                 setState(() {});
