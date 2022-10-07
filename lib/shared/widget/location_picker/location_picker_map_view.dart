@@ -82,7 +82,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
   }
 
   getCurrentLocation() async {
-    if (Platform.isWindows) return;
+    if (Platform.isAndroid || Platform.isIOS) return;
 
     var currentLocation = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
@@ -138,8 +138,10 @@ class LocationPickerMapState extends State<LocationPickerMap> {
       body: Stack(
         children: [
           const Positioned(
-            left: -1000,
-            top: -1000,
+            left: 0,
+            top: 0,
+            right: 0,
+            bottom: 0,
             child: SizedBox(
               width: 0.0,
               height: 0.0,

@@ -65,61 +65,122 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
           const SizedBox(
             height: 4.0,
           ),
-          if (!isLocationPicked())
-            ExButton(
-              label: "Select Location",
-              color: disabledColor,
-              icon: Icons.add_location,
-              height: md,
-              onPressed: () async {
-                if (Platform.isAndroid || Platform.isIOS) {
-                  if (await Permission.location.request().isGranted) {
-                    await Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ExLocationPickerMapView(
-                          id: widget.id,
-                        ),
-                      ),
-                    );
-
-                    setState(() {});
-                  }
-                  return;
-                }
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ExLocationPickerMapView(
-                      id: widget.id,
-                    ),
-                  ),
-                );
-
-                setState(() {});
-              },
-            ),
           if (isLocationPicked())
-            ExButton(
-              label: "You've picked your location",
-              fontSize: 10.0,
-              color: primaryColor,
-              icon: Icons.add_location,
-              onPressed: () async {
-                await Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ExLocationPickerMapView(
-                      id: widget.id,
-                      latitude: Input.get("${widget.id}_latitude"),
-                      longitude: Input.get("${widget.id}_longitude"),
+            Card(
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 120.0,
+                    height: 120.0,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(12.0),
+                      ),
+                      child: MapViewer(),
                     ),
                   ),
-                );
+                  const SizedBox(
+                    width: 10.0,
+                  ),
+                  Expanded(
+                    child: SizedBox(
+                      height: 120,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Latitude:",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                            ),
+                          ),
+                          Text(
+                            "${widget.latitude}",
+                            style: const TextStyle(
+                              fontSize: 12.0,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 4.0,
+                          ),
+                          const Text(
+                            "Longitude:",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                            ),
+                          ),
+                          Text(
+                            "${widget.longitude}",
+                            style: const TextStyle(
+                              fontSize: 12.0,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20.0,
+                          ),
+                          if (!isLocationPicked())
+                            ElevatedButton.icon(
+                              icon: const Icon(Icons.add_location),
+                              label: const Text("Select Location"),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blueGrey,
+                              ),
+                              onPressed: () async {
+                                if (Platform.isAndroid || Platform.isIOS) {
+                                  if (!await Permission.location
+                                      .request()
+                                      .isGranted) {
+                                    return;
+                                  }
+                                  return;
+                                }
 
-                setState(() {});
-              },
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ExLocationPickerMapView(
+                                      id: widget.id,
+                                    ),
+                                  ),
+                                );
+
+                                setState(() {});
+                                setState(() {});
+                              },
+                            ),
+                          if (isLocationPicked())
+                            ElevatedButton.icon(
+                              icon: const Icon(Icons.add_location),
+                              label: const Text("Change location"),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blueGrey,
+                              ),
+                              onPressed: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        ExLocationPickerMapView(
+                                      id: widget.id,
+                                      latitude:
+                                          Input.get("${widget.id}_latitude"),
+                                      longitude:
+                                          Input.get("${widget.id}_longitude"),
+                                    ),
+                                  ),
+                                );
+
+                                setState(() {});
+                              },
+                            ),
+                          const Spacer(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
         ],
       ),

@@ -62,7 +62,7 @@ class FormUiView extends StatefulWidget {
 
               Container(
                 constraints: const BoxConstraints(
-                  maxWidth: 720.0,
+                  maxWidth: 680.0,
                 ),
                 padding: const EdgeInsets.all(20.0),
                 decoration: const BoxDecoration(
@@ -123,6 +123,12 @@ class FormUiView extends StatefulWidget {
                       id: "photo",
                       label: "Photo",
                       value: null,
+                    ),
+                    const ExLocationPicker(
+                      id: "location",
+                      label: "Location",
+                      latitude: -6.218481065235333,
+                      longitude: 106.80254435779423,
                     ),
                     const ExCheckBox(
                       id: "my_hobby",
@@ -190,12 +196,6 @@ class FormUiView extends StatefulWidget {
                       id: "rating",
                       label: "Rating",
                       value: null,
-                    ),
-                    const ExLocationPicker(
-                      id: "location",
-                      label: "Location",
-                      latitude: -6.218481065235333,
-                      longitude: 106.80254435779423,
                     ),
                   ],
                 ),
