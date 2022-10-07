@@ -57,11 +57,12 @@ class FormUiView extends StatefulWidget {
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
                 constraints: const BoxConstraints(
-                  maxWidth: 680.0,
+                  maxWidth: 990.0,
                 ),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20.0,
@@ -94,7 +95,7 @@ class FormUiView extends StatefulWidget {
                     ),
                     Expanded(
                       child: Text(
-                        "text",
+                        "Dengan membuat reuseable widget, semua pekerjaan di Flutter akan jauh lebih mudah. Best practices-nya, reuseable widget tidak dikaitkan dengan state management tambahan dengan harapan reuseable widget yang kita buat bisa dipakai di state management apapun.\n\nDisini, kami menyediakan contoh reuseable widget yang bisa teman-teman gunakan dan kembangkan sesuai keperluan teman-teman, dan ini semua Free.\n\nKami mengizinkan untuk me-rebranding-nya ke versi rekan rekan sendiri agar semakin banyak ui kit atau ui framework yang tersedia di Flutter.",
                         style: TextStyle(
                           fontSize: 12.0,
                           color: Colors.orange[600],
@@ -151,7 +152,7 @@ class FormUiView extends StatefulWidget {
                               child: ExTextField(
                                 id: "last_name",
                                 label: "Last Name",
-                                value: "Deny",
+                                value: "Ocr",
                               ),
                             ),
                           ],
