@@ -21,6 +21,8 @@ export 'package:fhe_template/module/event_form/controller/event_form_controller.
 export 'package:fhe_template/module/event_form/view/event_form_view.dart';
 export 'package:fhe_template/module/event_list/controller/event_list_controller.dart';
 export 'package:fhe_template/module/event_list/view/event_list_view.dart';
+export 'package:fhe_template/module/form_ui/controller/form_ui_controller.dart';
+export 'package:fhe_template/module/form_ui/view/form_ui_view.dart';
 export 'package:fhe_template/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:fhe_template/module/main_navigation/model/navigation_item.dart';
 export 'package:fhe_template/module/main_navigation/view/main_navigation_view.dart';
@@ -44,6 +46,7 @@ export 'package:fhe_template/service/user_service.dart';
 export 'package:fhe_template/shared/theme/theme.dart';
 export 'package:fhe_template/shared/theme/theme_constants.dart';
 export 'package:fhe_template/shared/util/focus_helper/focus_helper.dart';
+export 'package:fhe_template/shared/util/format/format.dart';
 export 'package:fhe_template/shared/util/input/input.dart';
 export 'package:fhe_template/shared/widget/button/button.dart';
 export 'package:fhe_template/shared/widget/checkbox/checkbox.dart';

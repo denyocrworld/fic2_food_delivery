@@ -34,6 +34,7 @@ class DashboardController extends State<DashboardView>
           "email": me.email,
         },
         "joined": true,
+        "created_at": Timestamp.now(),
       });
     } else {
       await FirebaseFirestore.instance

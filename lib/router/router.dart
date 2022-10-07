@@ -117,6 +117,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const BlogListView(),
             ),
           ),
+          GoRoute(
+            path: '/form_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FormUiView(),
+            ),
+          ),
         ],
       ),
     ],

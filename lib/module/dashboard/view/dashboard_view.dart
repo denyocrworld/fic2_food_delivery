@@ -189,6 +189,7 @@ class DashboardView extends StatefulWidget {
                                         .collection("event_participants")
                                         .where("event_id",
                                             isEqualTo: item["event_id"])
+                                        .orderBy("created_at")
                                         .snapshots(),
                                     builder: (context, snapshot) {
                                       if (snapshot.hasError) {

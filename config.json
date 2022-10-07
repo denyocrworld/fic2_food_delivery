@@ -14,6 +14,7 @@
         "event_form",
         "contoh",
         "blog_list",
-        "blog_form"
+        "blog_form",
+        "form_ui"
     ]
 }

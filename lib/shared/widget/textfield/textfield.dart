@@ -72,14 +72,8 @@ class _ExTextFieldState extends State<ExTextField>
 
   @override
   Widget build(BuildContext context) {
-    double textAreaHeight = 0;
-    if (widget.maxLines != null && widget.maxLines! >= 2) {
-      textAreaHeight = (widget.size ?? md) * widget.maxLines!;
-    }
-    var height = (textAreaHeight) + (widget.size ?? md) + 50;
-
     return Container(
-      height: height,
+      // height: height,
       padding: const EdgeInsets.all(10.0),
       decoration: const BoxDecoration(
           // color: Colors.white,
@@ -104,40 +98,42 @@ class _ExTextFieldState extends State<ExTextField>
               height: 4.0,
             ),
           ],
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(10.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 1.0,
-                  color: Colors.grey[300]!,
-                ),
-                borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          Container(
+            padding: const EdgeInsets.only(
+              top: 12.0,
+              bottom: 12.0,
+              left: 12,
+              right: 12.0,
+            ),
+            decoration: BoxDecoration(
+              border: Border.all(
+                width: 1.0,
+                color: Colors.grey[300]!,
               ),
-              child: TextField(
-                controller: controller,
-                maxLines: widget.maxLines ?? 1,
-                keyboardType: widget.keyboardType,
-                obscureText: widget.textFieldType == TextFieldType.password
-                    ? true
-                    : false,
-                readOnly: widget.enabled! ? false : true,
-                decoration: InputDecoration.collapsed(
-                  hintText: widget.hintText,
-                  hintStyle: TextStyle(
-                    fontSize: 10.0,
-                    color: Colors.grey[400],
-                  ),
+              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+            ),
+            child: TextField(
+              controller: controller,
+              maxLines: widget.maxLines ?? 1,
+              keyboardType: widget.keyboardType,
+              obscureText:
+                  widget.textFieldType == TextFieldType.password ? true : false,
+              readOnly: widget.enabled! ? false : true,
+              decoration: InputDecoration.collapsed(
+                hintText: widget.hintText,
+                hintStyle: TextStyle(
+                  fontSize: 10.0,
+                  color: Colors.grey[400],
                 ),
-                onChanged: (text) {
-                  Input.set(widget.id, text);
-                  if (widget.onChanged != null) widget.onChanged!(text);
-                },
-                onSubmitted: (text) {
-                  Input.set(widget.id, text);
-                  if (widget.onSubmitted != null) widget.onSubmitted!(text);
-                },
               ),
+              onChanged: (text) {
+                Input.set(widget.id, text);
+                if (widget.onChanged != null) widget.onChanged!(text);
+              },
+              onSubmitted: (text) {
+                Input.set(widget.id, text);
+                if (widget.onSubmitted != null) widget.onSubmitted!(text);
+              },
             ),
           ),
         ],
