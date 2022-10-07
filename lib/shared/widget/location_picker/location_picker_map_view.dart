@@ -58,8 +58,8 @@ class LocationPickerMap extends StatefulWidget {
 
 class LocationPickerMapState extends State<LocationPickerMap> {
   bool loading = true;
-  double currentLatitude = -6.200000;
-  double currentLongitude = 106.816666;
+  late double currentLatitude;
+  late double currentLongitude;
   MapController mapController = MapController();
 
   initData() async {
@@ -96,7 +96,6 @@ class LocationPickerMapState extends State<LocationPickerMap> {
     super.initState();
     currentLatitude = widget.latitude ?? currentLatitude;
     currentLongitude = widget.longitude ?? currentLongitude;
-
     searchController = TextEditingController();
     initData();
   }
@@ -134,20 +133,27 @@ class LocationPickerMapState extends State<LocationPickerMap> {
 
   @override
   Widget build(BuildContext context) {
+    if (loading) return const Scaffold();
     return Scaffold(
       body: Stack(
         children: [
-          const Positioned(
-            left: 0,
-            top: 0,
-            right: 0,
-            bottom: 0,
-            child: SizedBox(
-              width: 0.0,
-              height: 0.0,
-              child: MapViewer(),
-            ),
-          ),
+          // Positioned(
+          //   left: 0,
+          //   top: 0,
+          //   right: 0,
+          //   bottom: 0,
+          //   child: SizedBox(
+          //     width: 0.0,
+          //     height: 0.0,
+          //     child: MapViewer(
+          //       onPositionChanged: (pos, _) {
+          //         log("${pos.center!.latitude},${pos.center!.longitude}");
+          //         currentLatitude = pos.center!.latitude;
+          //         currentLongitude = pos.center!.longitude;
+          //       },
+          //     ),
+          //   ),
+          // ),
           if (loading)
             Align(
               alignment: Alignment.center,
@@ -253,46 +259,63 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             right: 0,
                             top: 0,
                             bottom: 0,
-                            child: FlutterMap(
-                              options: MapOptions(
-                                // center: LatLng(-6.200000, 106.816666),
-                                center: LatLng(
-                                  currentLatitude,
-                                  currentLongitude,
-                                ),
-                                zoom: 13.0,
-                                onPositionChanged: (pos, _) {
-                                  log("${pos.center!.latitude},${pos.center!.longitude}");
-                                  currentLatitude = pos.center!.latitude;
-                                  currentLongitude = pos.center!.longitude;
-                                },
-                              ),
-                              mapController: mapController,
-                              // layers: [
-                              //   TileLayerOptions(
-                              //     urlTemplate:
-                              //         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                              //     subdomains: ['a', 'b', 'c'],
-                              //     attributionBuilder: (_) {
-                              //       return const Text(
-                              //           "© OpenStreetMap contributors");
-                              //     },
-                              //   ),
-                              //   MarkerLayerOptions(
-                              //     markers: [
-                              //       // Marker(
-                              //       //   width: 80.0,
-                              //       //   height: 80.0,
-                              //       //   point: LatLng(51.5, -0.09),
-                              //       //   builder: (ctx) => Container(
-                              //       //     child: FlutterLogo(),
-                              //       //   ),
-                              //       // ),
-                              //     ],
-                              //   ),
-                              // ],
+                            child: MapViewer(
+                              latitude: currentLatitude,
+                              longitude: currentLongitude,
+                              onPositionChanged: (pos, _) {
+                                log("${pos.center!.latitude},${pos.center!.longitude}");
+                                currentLatitude = pos.center!.latitude;
+                                currentLongitude = pos.center!.longitude;
+                                setState(() {});
+                              },
                             ),
                           ),
+                          // Positioned(
+                          //   left: 0,
+                          //   right: 0,
+                          //   top: 0,
+                          //   bottom: 0,
+                          //   child: FlutterMap(
+                          //     options: MapOptions(
+                          //       // center: LatLng(-6.200000, 106.816666),
+                          //       center: LatLng(
+                          //         currentLatitude,
+                          //         currentLongitude,
+                          //       ),
+                          //       zoom: 13.0,
+                          //       onPositionChanged: (pos, _) {
+                          //         log("${pos.center!.latitude},${pos.center!.longitude}");
+                          //         currentLatitude = pos.center!.latitude;
+                          //         currentLongitude = pos.center!.longitude;
+                          //         setState(() {});
+                          //       },
+                          //     ),
+                          //     mapController: mapController,
+                          //     // layers: [
+                          //     //   TileLayerOptions(
+                          //     //     urlTemplate:
+                          //     //         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                          //     //     subdomains: ['a', 'b', 'c'],
+                          //     //     attributionBuilder: (_) {
+                          //     //       return const Text(
+                          //     //           "© OpenStreetMap contributors");
+                          //     //     },
+                          //     //   ),
+                          //     //   MarkerLayerOptions(
+                          //     //     markers: [
+                          //     //       // Marker(
+                          //     //       //   width: 80.0,
+                          //     //       //   height: 80.0,
+                          //     //       //   point: LatLng(51.5, -0.09),
+                          //     //       //   builder: (ctx) => Container(
+                          //     //       //     child: FlutterLogo(),
+                          //     //       //   ),
+                          //     //       // ),
+                          //     //     ],
+                          //     //   ),
+                          //     // ],
+                          //   ),
+                          // ),
                           Align(
                             alignment: Alignment.center,
                             child: Padding(
@@ -320,10 +343,13 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                         color: primaryColor,
                         enabled: loading ? false : true,
                         onPressed: () async {
+                          debugPrint("currentLatitude : $currentLatitude");
+                          debugPrint("currentLongitude : $currentLongitude");
                           Input.set(
                               widget.id, "$currentLatitude,$currentLongitude");
                           Input.set("${widget.id}_latitude", currentLatitude);
                           Input.set("${widget.id}_longitude", currentLongitude);
+
                           Navigator.pop(context);
                         },
                       ),

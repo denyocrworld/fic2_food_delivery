@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class ExLocationPicker extends StatefulWidget {
@@ -21,7 +22,12 @@ class ExLocationPicker extends StatefulWidget {
   _ExLocationPickerState createState() => _ExLocationPickerState();
 }
 
-class _ExLocationPickerState extends State<ExLocationPicker> {
+class _ExLocationPickerState extends State<ExLocationPicker>
+    implements InputControlState {
+  double? latitude;
+  double? longitude;
+  bool loading = true;
+
   @override
   void initState() {
     super.initState();
@@ -31,16 +37,53 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
     } else {
       Input.set("${widget.id}_latitude", widget.latitude);
       Input.set("${widget.id}_longitude", widget.longitude);
+
+      latitude = widget.latitude;
+      longitude = widget.longitude;
     }
+    getLocation();
+  }
+
+  getLocation() async {
+    bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      return Future.error('Location services are disabled.');
+    }
+
+    LocationPermission permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return Future.error('Location permissions are denied');
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      return Future.error(
+          'Location permissions are permanently denied, we cannot request permissions.');
+    }
+
+    Position position = await Geolocator.getCurrentPosition();
+    latitude = position.latitude;
+    longitude = position.longitude;
+    loading = false;
+    setState(() {});
   }
 
   bool isLocationPicked() {
-    if (Input.get("${widget.id}_latitude") != null &&
-        Input.get("${widget.id}_longitude") != null) {
+    if (latitude != null && longitude != null) {
       return true;
     }
     return false;
   }
+
+  @override
+  setValue(value) {}
+
+  getValue(value) {}
+
+  @override
+  resetValue() {}
 
   @override
   Widget build(BuildContext context) {
@@ -69,14 +112,23 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
             Card(
               child: Row(
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     width: 120.0,
                     height: 120.0,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(12.0),
                       ),
-                      child: MapViewer(),
+                      child: loading
+                          ? const Center(
+                              child: CircularProgressIndicator(
+                                color: Colors.orange,
+                              ),
+                            )
+                          : MapViewer(
+                              latitude: latitude,
+                              longitude: longitude,
+                            ),
                     ),
                   ),
                   const SizedBox(
@@ -95,7 +147,7 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
                             ),
                           ),
                           Text(
-                            "${widget.latitude}",
+                            "$latitude",
                             style: const TextStyle(
                               fontSize: 12.0,
                             ),
@@ -110,7 +162,7 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
                             ),
                           ),
                           Text(
-                            "${widget.longitude}",
+                            "$longitude",
                             style: const TextStyle(
                               fontSize: 12.0,
                             ),
@@ -141,18 +193,19 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
                                     builder: (context) =>
                                         ExLocationPickerMapView(
                                       id: widget.id,
+                                      latitude: latitude,
+                                      longitude: longitude,
                                     ),
                                   ),
                                 );
 
-                                setState(() {});
                                 setState(() {});
                               },
                             ),
                           if (isLocationPicked())
                             ElevatedButton.icon(
                               icon: const Icon(Icons.add_location),
-                              label: const Text("Change location"),
+                              label: const Text("Update location"),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blueGrey,
                               ),
@@ -163,14 +216,25 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
                                     builder: (context) =>
                                         ExLocationPickerMapView(
                                       id: widget.id,
-                                      latitude:
-                                          Input.get("${widget.id}_latitude"),
-                                      longitude:
-                                          Input.get("${widget.id}_longitude"),
+                                      latitude: latitude,
+                                      longitude: longitude,
                                     ),
                                   ),
                                 );
 
+                                loading = true;
+                                setState(() {});
+
+                                await Future.delayed(
+                                    const Duration(milliseconds: 200));
+
+                                latitude = Input.get("${widget.id}_latitude");
+                                longitude = Input.get("${widget.id}_longitude");
+
+                                debugPrint("latitude : $latitude");
+                                debugPrint("longitude : $longitude");
+
+                                loading = false;
                                 setState(() {});
                               },
                             ),

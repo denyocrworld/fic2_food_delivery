@@ -104,6 +104,18 @@ class FormUiView extends StatefulWidget {
                       value:
                           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                     ),
+                    const ExLocationPicker(
+                      id: "location",
+                      label: "Location",
+                      latitude: -6.218481065235333,
+                      longitude: 106.80254435779423,
+                    ),
+                    const ExLocationPicker(
+                      id: "target_location",
+                      label: "Target Location",
+                      latitude: null,
+                      longitude: null,
+                    ),
                     const ExCombo(
                       id: "gender",
                       label: "Gender",
@@ -123,12 +135,6 @@ class FormUiView extends StatefulWidget {
                       id: "photo",
                       label: "Photo",
                       value: null,
-                    ),
-                    const ExLocationPicker(
-                      id: "location",
-                      label: "Location",
-                      latitude: -6.218481065235333,
-                      longitude: 106.80254435779423,
                     ),
                     const ExCheckBox(
                       id: "my_hobby",
