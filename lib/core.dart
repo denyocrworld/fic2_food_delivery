@@ -23,6 +23,8 @@ export 'package:fhe_template/module/event_list/controller/event_list_controller.
 export 'package:fhe_template/module/event_list/view/event_list_view.dart';
 export 'package:fhe_template/module/form_ui/controller/form_ui_controller.dart';
 export 'package:fhe_template/module/form_ui/view/form_ui_view.dart';
+export 'package:fhe_template/module/http_example/controller/http_example_controller.dart';
+export 'package:fhe_template/module/http_example/view/http_example_view.dart';
 export 'package:fhe_template/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:fhe_template/module/main_navigation/model/navigation_item.dart';
 export 'package:fhe_template/module/main_navigation/view/main_navigation_view.dart';

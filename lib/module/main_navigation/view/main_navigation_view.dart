@@ -24,6 +24,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
     "/blogs",
     "/users",
     "/form_ui",
+    "/http_examples",
   ];
 
   List navigationItems = [
@@ -46,6 +47,10 @@ class MainNavigationViewState extends State<MainNavigationView> {
     NavigationItem(
       icon: MdiIcons.post,
       label: "Form UI",
+    ),
+    NavigationItem(
+      icon: MdiIcons.web,
+      label: "Http Examples",
     ),
   ];
 

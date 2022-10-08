@@ -125,6 +125,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const FormUiView(),
             ),
           ),
+          GoRoute(
+            path: '/http_examples',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpExampleView(),
+            ),
+          ),
         ],
       ),
     ],

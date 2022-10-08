@@ -15,6 +15,7 @@
         "contoh",
         "blog_list",
         "blog_form",
-        "form_ui"
+        "form_ui",
+        "http_example"
     ]
 }
