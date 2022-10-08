@@ -18,35 +18,36 @@ class HttpExampleView extends StatefulWidget {
         child: Column(
           children: [
             //body
-            Expanded(
-              child: DragonList(
-                futureBuilder: (page) {
-                  var url = "http://localhost:8080/api/blogs?page=$page";
-                  var token = "dev_token";
+            if (1 == 2)
+              Expanded(
+                child: DragonList(
+                  futureBuilder: (page) {
+                    var url = "http://localhost:8080/api/blogs?page=$page";
+                    var token = "dev_token";
 
-                  debugPrint("url : $url");
+                    debugPrint("url : $url");
 
-                  return Dio().get(
-                    url,
-                    options: Options(headers: {
-                      "Authorization": "Bearer $token",
-                    }),
-                  );
-                },
-                builder: (index, item) {
-                  return Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.green[200],
-                        child: Text("${index + 1}"),
+                    return Dio().get(
+                      url,
+                      options: Options(headers: {
+                        "Authorization": "Bearer $token",
+                      }),
+                    );
+                  },
+                  builder: (index, item) {
+                    return Card(
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.green[200],
+                          child: Text("${index + 1}"),
+                        ),
+                        title: Text("${item["title"]}"),
+                        subtitle: Text("${item["description"]}"),
                       ),
-                      title: Text("${item["title"]}"),
-                      subtitle: Text("${item["description"]}"),
-                    ),
-                  );
-                },
-              ),
-            )
+                    );
+                  },
+                ),
+              )
           ],
         ),
       ),
