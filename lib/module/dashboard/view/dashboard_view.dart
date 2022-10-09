@@ -1,5 +1,4 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/shared/util/format/format.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -206,7 +205,7 @@ class DashboardView extends StatefulWidget {
                                       return Column(
                                         children: [
                                           Text(
-                                            "Participants: ${snapshot.data!.docs.length}",
+                                            "Participants: ${data.docs.length}",
                                             style: const TextStyle(
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.bold,
@@ -216,8 +215,7 @@ class DashboardView extends StatefulWidget {
                                             height: 12.0,
                                           ),
                                           ListView.builder(
-                                            itemCount:
-                                                snapshot.data!.docs.length,
+                                            itemCount: data.docs.length,
                                             shrinkWrap: true,
                                             physics: const ScrollPhysics(),
                                             itemBuilder: (BuildContext context,
@@ -291,42 +289,6 @@ class DashboardView extends StatefulWidget {
                         );
                       },
                     ),
-                  );
-                  return ListView.builder(
-                    itemCount: data.docs.length,
-                    itemBuilder: (context, index) {
-                      Map<String, dynamic> item =
-                          (data.docs[index].data() as Map<String, dynamic>);
-                      item["id"] = data.docs[index].id;
-                      return Card(
-                        child: ListTile(
-                          leading: CircleAvatar(
-                            backgroundColor: Colors.grey[200],
-                            backgroundImage: NetworkImage(
-                              item["photo"] ??
-                                  "https://i.ibb.co/S32HNjD/no-image.jpg",
-                            ),
-                          ),
-                          title: Text("${item["title"]}"),
-                          subtitle: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("${item["description"]}"),
-                              Text("${item["start_at"]}"),
-                              Text("${item["end_at"]}"),
-                            ],
-                          ),
-                          trailing: ElevatedButton.icon(
-                            icon: const Icon(Icons.add),
-                            label: const Text("Join"),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blueGrey,
-                            ),
-                            onPressed: () {},
-                          ),
-                        ),
-                      );
-                    },
                   );
                 },
               ),

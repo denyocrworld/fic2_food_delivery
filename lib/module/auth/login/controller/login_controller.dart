@@ -38,12 +38,10 @@ class LoginController extends State<LoginView> implements MvcController {
       );
 
       debugPrint("signInWithCredential>>>");
-      var userCredential =
-          await FirebaseAuth.instance.signInWithCredential(credential);
+      await FirebaseAuth.instance.signInWithCredential(credential);
 
       debugPrint("signInWithCredential Done");
       debugPrint("userCredential: userCredential");
-      //TODO: on login success
       //------------------
 
       await UserService.initialize();

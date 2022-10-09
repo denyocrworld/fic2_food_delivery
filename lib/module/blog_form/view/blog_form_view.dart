@@ -10,8 +10,6 @@ class BlogFormView extends StatefulWidget {
 
   Widget build(context, BlogFormController controller) {
     controller.view = this;
-    var editMode = blog != null;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("BlogForm"),

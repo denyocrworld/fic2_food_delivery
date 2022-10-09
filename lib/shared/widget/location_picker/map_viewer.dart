@@ -25,7 +25,6 @@ class _MapViewerState extends State<MapViewer> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     latitude = widget.latitude ?? -6.307332470724814;
     longitude = widget.longitude ?? 106.82061421166996;
