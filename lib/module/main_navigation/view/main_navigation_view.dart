@@ -2,6 +2,7 @@ import 'package:fhe_template/core.dart';
 import 'package:fhe_template/module/main_navigation/widget/side_group_title.dart';
 import 'package:fhe_template/module/main_navigation/widget/side_menu_item.dart';
 import 'package:fhe_template/module/main_navigation/widget/top_bar.dart';
+import 'package:fhe_template/shared/util/responsive/responsive.dart';
 
 import 'package:flutter/material.dart';
 
@@ -23,39 +24,44 @@ class MainNavigationViewState extends State<MainNavigationView> {
   bool expanded = true;
   double sidebarWidth = 240.0;
 
-  List routes = [
-    "/dashboard",
-    "/events",
-    "/blogs",
-    "/users",
-    "/form_ui",
-    "/http_examples",
-  ];
-
   List navigationItems = [
     NavigationItem(
-      icon: Icons.dashboard,
+      icon: const Icon(Icons.dashboard),
       label: "Dashboard",
+      route: "/dashboard",
     ),
     NavigationItem(
-      icon: MdiIcons.calendarStar,
+      icon: const Icon(MdiIcons.calendarStar),
       label: "Events",
+      route: "/events",
     ),
     NavigationItem(
-      icon: MdiIcons.post,
+      icon: const Icon(MdiIcons.post),
       label: "Blogs",
+      route: "/blogs",
     ),
     NavigationItem(
-      icon: Icons.people,
+      icon: const Icon(Icons.people),
       label: "Users",
+      route: "/users",
     ),
     NavigationItem(
-      icon: MdiIcons.post,
-      label: "Form UI",
+      icon: const Icon(MdiIcons.post),
+      label: "UI Kit",
+      route: "",
+      items: [
+        NavigationItem(
+          icon: const Icon(MdiIcons.post),
+          label: "Form UI",
+          route: "/form_ui",
+        ),
+      ],
     ),
     NavigationItem(
-      icon: MdiIcons.web,
+      icon: const Icon(MdiIcons.web),
       label: "Http Examples",
+      route: "/http_examples",
+      items: [],
     ),
   ];
 
@@ -73,12 +79,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
   @override
   Widget build(BuildContext context) {
     var currentEndpoint = GoRouter.of(context).location;
-    selectedIndex = !routes.contains(currentEndpoint)
-        ? selectedIndex
-        : routes.indexOf(currentEndpoint);
 
     if (FirebaseAuth.instance.currentUser == null) {
       return const LoginView();
+    }
+
+    if (Responsive.isMobile(context)) {
+      expanded = false;
     }
 
     return WillPopScope(
@@ -88,48 +95,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
       child: Scaffold(
         body: Row(
           children: <Widget>[
-            // Column(
-            //   children: [
-            //     Expanded(
-            //       child: NavigationRail(
-            //         backgroundColor: Colors.white,
-            //         selectedIndex: selectedIndex,
-            //         groupAlignment: groupAligment,
-            //         onDestinationSelected: (int index) async {
-            //           if (index == navigationItems.length) {
-            //             doLogout();
-            //             return;
-            //           }
-            //           selectedIndex = index;
-            //           setState(() {});
-            //           var routeName = routes[index];
-            //           go(routeName);
-            //         },
-            //         labelType: NavigationRailLabelType.all,
-            //         destinations:
-            //             List.generate(navigationItems.length, (index) {
-            //           var item = navigationItems[index];
-            //           return NavigationRailDestination(
-            //             icon: Icon(item.icon),
-            //             label: Text(
-            //               item.label,
-            //               style: const TextStyle(
-            //                 fontSize: 12.0,
-            //               ),
-            //             ),
-            //           );
-            //         }),
-            //       ),
-            //     ),
-            //     IconButton(
-            //       onPressed: () => doLogout(),
-            //       icon: const Icon(
-            //         Icons.logout,
-            //         size: 24.0,
-            //       ),
-            //     ),
-            //   ],
-            // ),
             Builder(builder: (context) {
               var defaultColor = Colors.grey[300]!;
               var fontStyle = GoogleFonts.sora();
@@ -150,13 +115,19 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   child: Drawer(
                     backgroundColor: backgroundColor,
                     child: ListView(
-                      children: const [
-                        Logo(),
-                        SizedBox(
+                      children: [
+                        const Logo(),
+                        const SizedBox(
                           height: 20.0,
                         ),
-                        SideGroupTitle(),
-                        SideMenuItem(),
+                        const SideGroupTitle(
+                          title: "Main menu",
+                        ),
+                        ...List.generate(navigationItems.length, (index) {
+                          return SideMenuItem(
+                            item: navigationItems[index],
+                          );
+                        }),
                       ],
                     ),
                   ),
@@ -169,53 +140,71 @@ class MainNavigationViewState extends State<MainNavigationView> {
                 children: [
                   Container(
                     color: Colors.white,
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0,
+                      vertical: 2.0,
+                    ),
                     child: Row(
                       children: [
-                        IconButton(
-                          onPressed: () {
-                            expanded = expanded ? false : true;
-                            setState(() {});
-                          },
-                          icon: CircleAvatar(
-                            backgroundColor:
-                                Theme.of(context).drawerTheme.backgroundColor,
-                            child: Icon(
-                              expanded
-                                  ? MdiIcons.chevronLeft
-                                  : MdiIcons.chevronRight,
-                              size: 18.0,
+                        if (!Responsive.isMobile(context)) ...[
+                          IconButton(
+                            onPressed: () {
+                              expanded = expanded ? false : true;
+                              setState(() {});
+                            },
+                            icon: CircleAvatar(
+                              backgroundColor:
+                                  Theme.of(context).drawerTheme.backgroundColor,
+                              child: Icon(
+                                expanded
+                                    ? MdiIcons.chevronLeft
+                                    : MdiIcons.chevronRight,
+                                size: 18.0,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 12.0,
+                          ),
+                        ],
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Dashboard",
+                            style: TextStyle(
+                              fontSize: 10.0,
                             ),
                           ),
                         ),
-                        const SizedBox(
-                          width: 12.0,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Capek Ngoding",
-                              style: GoogleFonts.bungee(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(
+                            "Settings",
+                            style: TextStyle(
+                              fontSize: 10.0,
                             ),
-                            Text(
-                              "Write less do more",
-                              style: GoogleFonts.bungee(
-                                fontSize: 12.0,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                         const Spacer(),
-                        Text("${me.name}"),
+                        const ImageIcon(
+                          NetworkImage(
+                            "https://cdn-icons-png.flaticon.com/512/3239/3239952.png",
+                          ),
+                          size: 20.0,
+                        ),
                         const SizedBox(
-                          width: 4.0,
+                          width: 10.0,
+                        ),
+                        const Icon(
+                          Icons.inbox_outlined,
+                          size: 20.0,
+                        ),
+                        const SizedBox(
+                          width: 10.0,
                         ),
                         CircleAvatar(
-                          radius: 16.0,
+                          backgroundColor: Colors.grey[200],
+                          radius: 18.0,
                           backgroundImage: NetworkImage(
                             me.photo ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
                           ),

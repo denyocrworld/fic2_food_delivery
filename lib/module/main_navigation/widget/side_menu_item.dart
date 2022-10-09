@@ -2,7 +2,11 @@ import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuItem extends StatefulWidget {
-  const SideMenuItem({Key? key}) : super(key: key);
+  final NavigationItem item;
+  const SideMenuItem({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
 
   @override
   State<SideMenuItem> createState() => _SideMenuItemState();
@@ -27,8 +31,12 @@ class _SideMenuItemState extends State<SideMenuItem> {
         ),
         child: InkWell(
           onTap: () {
-            subMenuExpanded = subMenuExpanded ? false : true;
-            setState(() {});
+            if (widget.item.items.isNotEmpty) {
+              subMenuExpanded = subMenuExpanded ? false : true;
+              setState(() {});
+              return;
+            }
+            go(widget.item.route);
           },
           child: Container(
             padding: const EdgeInsets.all(12.0),
@@ -38,31 +46,27 @@ class _SideMenuItemState extends State<SideMenuItem> {
               children: [
                 Row(
                   children: [
-                    ImageIcon(
-                      const NetworkImage(
-                        "https://cdn-icons-png.flaticon.com/128/1946/1946488.png",
-                      ),
-                      size: isExpanded ? 16.0 : 24.0,
-                    ),
+                    widget.item.icon,
                     if (isExpanded) ...[
                       const SizedBox(
                         width: 12.0,
                       ),
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          "Dashboard",
-                          style: TextStyle(
+                          widget.item.label,
+                          style: const TextStyle(
                             fontSize: 12.0,
                           ),
                         ),
                       ),
-                      Transform.rotate(
-                        angle: subMenuExpanded ? 1.6 : 0.0,
-                        child: const Icon(
-                          Icons.chevron_right,
-                          size: 20.0,
+                      if (widget.item.items.isNotEmpty)
+                        Transform.rotate(
+                          angle: subMenuExpanded ? 1.6 : 0.0,
+                          child: const Icon(
+                            Icons.chevron_right,
+                            size: 20.0,
+                          ),
                         ),
-                      ),
                     ],
                   ],
                 ),
@@ -73,70 +77,51 @@ class _SideMenuItemState extends State<SideMenuItem> {
                       const SizedBox(
                         height: 12.0,
                       ),
-                      AnimatedContainer(
-                        duration: const Duration(milliseconds: 300),
-                        padding: const EdgeInsets.all(6.0),
-                        margin: const EdgeInsets.only(
-                          left: 20.0,
-                        ),
-                        height: subMenuExpanded ? 40.0 : 0.0,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Row(
-                            children: const [
-                              Expanded(
-                                child: Text(
-                                  "Product",
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 11.0,
-                                  ),
-                                ),
-                              ),
-                            ],
+                      ...List.generate(widget.item.items.length, (index) {
+                        var item = widget.item.items[index];
+                        return AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          padding: const EdgeInsets.all(6.0),
+                          margin: const EdgeInsets.only(
+                            left: 20.0,
                           ),
-                        ),
-                      ),
-                      AnimatedContainer(
-                        duration: const Duration(milliseconds: 300),
-                        padding: const EdgeInsets.all(6.0),
-                        margin: const EdgeInsets.only(
-                          left: 20.0,
-                        ),
-                        height: subMenuExpanded ? 40.0 : 0.0,
-                        child: InkWell(
-                          onTap: () {},
-                          child: Row(
-                            children: const [
-                              Expanded(
-                                child: Text(
-                                  "Customer",
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 11.0,
-                                  ),
-                                ),
-                              ),
-                              Card(
-                                color: Colors.orange,
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal: 4.0,
-                                    vertical: 2.0,
-                                  ),
+                          height: subMenuExpanded ? 40.0 : 0.0,
+                          child: InkWell(
+                            onTap: () {
+                              go(item.route);
+                            },
+                            child: Row(
+                              children: [
+                                Expanded(
                                   child: Text(
-                                    "100+",
-                                    style: TextStyle(
-                                      fontSize: 8.0,
-                                      color: Colors.white,
+                                    item.label,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                      fontSize: 11.0,
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
+                                const Card(
+                                  color: Colors.orange,
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 4.0,
+                                      vertical: 2.0,
+                                    ),
+                                    child: Text(
+                                      "100+",
+                                      style: TextStyle(
+                                        fontSize: 8.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                      )
+                        );
+                      }),
                     ],
                   ),
               ],

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SideGroupTitle extends StatelessWidget {
-  const SideGroupTitle({Key? key}) : super(key: key);
+  final String title;
+  const SideGroupTitle({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class SideGroupTitle extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                "Navigation",
+                title,
                 style: TextStyle(
                   fontSize: 13.0,
                   fontWeight: FontWeight.bold,
