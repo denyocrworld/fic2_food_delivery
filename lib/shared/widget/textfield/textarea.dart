@@ -25,3 +25,43 @@ class ExTextArea extends StatelessWidget {
     );
   }
 }
+
+Widget contoh() {
+  return FutureBuilder(
+    future: Dio().get(
+      "http://localhost:8080/api/blogs",
+      options: Options(
+        contentType: "application/json",
+        headers: {
+          "Authorization": "Bearer dev_token",
+        },
+      ),
+    ),
+    builder: (BuildContext context, AsyncSnapshot snapshot) {
+      if (snapshot.data == null) return Container();
+      Response response = snapshot.data;
+      Map obj = response.data;
+      List items = obj["data"];
+      return ListView.builder(
+        itemCount: items.length,
+        shrinkWrap: true,
+        physics: const ScrollPhysics(),
+        itemBuilder: (BuildContext context, int index) {
+          var item = items[index];
+          return Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.grey[200],
+                backgroundImage: NetworkImage(
+                  item["avatar"],
+                ),
+              ),
+              title: Text("${item["first_name"]}"),
+              subtitle: Text("${item["email"]}"),
+            ),
+          );
+        },
+      );
+    },
+  );
+}
