@@ -34,16 +34,94 @@ class MainNavigationViewState extends State<MainNavigationView> {
       icon: const Icon(MdiIcons.calendarStar),
       label: "Events",
       route: "/events",
+      trailingBuilder: () {
+        return StreamBuilder<QuerySnapshot>(
+          stream: FirebaseFirestore.instance.collection("events").snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.data == null) return Container();
+            final data = snapshot.data!;
+            return Card(
+              color: Colors.orange,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 4.0,
+                  vertical: 2.0,
+                ),
+                child: Text(
+                  "${data.docs.length}",
+                  style: const TextStyle(
+                    fontSize: 8.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            );
+          },
+        );
+      },
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.post),
       label: "Blogs",
       route: "/blogs",
+      trailingBuilder: () {
+        return StreamBuilder<QuerySnapshot>(
+          stream: FirebaseFirestore.instance.collection("blogs").snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.data == null) return Container();
+            final data = snapshot.data!;
+            return Card(
+              color: Colors.orange,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 4.0,
+                  vertical: 2.0,
+                ),
+                child: Text(
+                  "${data.docs.length}",
+                  style: const TextStyle(
+                    fontSize: 8.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            );
+          },
+        );
+      },
     ),
     NavigationItem(
       icon: const Icon(Icons.people),
       label: "Users",
       route: "/users",
+      trailingBuilder: () {
+        return StreamBuilder<QuerySnapshot>(
+          stream: FirebaseFirestore.instance.collection("users").snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.data == null) return Container();
+            final data = snapshot.data!;
+            return Card(
+              color: Colors.orange,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 4.0,
+                  vertical: 2.0,
+                ),
+                child: Text(
+                  "${data.docs.length}",
+                  style: const TextStyle(
+                    fontSize: 8.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            );
+          },
+        );
+      },
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.post),
@@ -54,6 +132,24 @@ class MainNavigationViewState extends State<MainNavigationView> {
           icon: const Icon(MdiIcons.post),
           label: "Form UI",
           route: "/form_ui",
+          trailingBuilder: () {
+            return const Card(
+              color: Colors.orange,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 4.0,
+                  vertical: 2.0,
+                ),
+                child: Text(
+                  "100+",
+                  style: TextStyle(
+                    fontSize: 8.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       ],
     ),

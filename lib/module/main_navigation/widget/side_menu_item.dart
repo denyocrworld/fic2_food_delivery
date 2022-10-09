@@ -59,6 +59,10 @@ class _SideMenuItemState extends State<SideMenuItem> {
                           ),
                         ),
                       ),
+                      ...[
+                        if (widget.item.trailingBuilder != null)
+                          widget.item.trailingBuilder!(),
+                      ],
                       if (widget.item.items.isNotEmpty)
                         Transform.rotate(
                           angle: subMenuExpanded ? 1.6 : 0.0,
@@ -101,22 +105,10 @@ class _SideMenuItemState extends State<SideMenuItem> {
                                     ),
                                   ),
                                 ),
-                                const Card(
-                                  color: Colors.orange,
-                                  child: Padding(
-                                    padding: EdgeInsets.symmetric(
-                                      horizontal: 4.0,
-                                      vertical: 2.0,
-                                    ),
-                                    child: Text(
-                                      "100+",
-                                      style: TextStyle(
-                                        fontSize: 8.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                ...[
+                                  if (item.trailingBuilder != null)
+                                    item.trailingBuilder!(),
+                                ],
                               ],
                             ),
                           ),
