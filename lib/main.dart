@@ -29,7 +29,7 @@ class ShellRouteExampleApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,
-      theme: defaultTheme,
+      theme: getDefaultTheme(),
       routerConfig: getRouters(context, rootNavigatorKey, shellNavigatorKey),
     );
   }
