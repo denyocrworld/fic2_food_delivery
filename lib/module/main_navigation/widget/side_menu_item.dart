@@ -39,12 +39,18 @@ class _SideMenuItemState extends State<SideMenuItem> {
             go(widget.item.route);
           },
           child: Container(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 12.0,
+              vertical: 10.0,
+            ),
+            // color: Colors.red,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     widget.item.icon,
                     if (isExpanded) ...[
@@ -74,7 +80,7 @@ class _SideMenuItemState extends State<SideMenuItem> {
                     ],
                   ],
                 ),
-                if (isExpanded)
+                if (widget.item.items.isNotEmpty && isExpanded)
                   ListView(
                     shrinkWrap: true,
                     children: [
@@ -87,7 +93,7 @@ class _SideMenuItemState extends State<SideMenuItem> {
                           duration: const Duration(milliseconds: 300),
                           padding: const EdgeInsets.all(6.0),
                           margin: const EdgeInsets.only(
-                            left: 20.0,
+                            left: 30.0,
                           ),
                           height: subMenuExpanded ? 40.0 : 0.0,
                           child: InkWell(
