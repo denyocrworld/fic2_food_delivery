@@ -59,6 +59,7 @@ export 'package:fhe_template/shared/widget/image_picker/custom_image_builder.dar
 export 'package:fhe_template/shared/widget/image_picker/image_picker.dart';
 export 'package:fhe_template/shared/widget/image_picker/image_picker_controller.dart';
 export 'package:fhe_template/shared/widget/image_picker/network_image.dart';
+export 'package:fhe_template/shared/widget/list/dragon_list.dart';
 export 'package:fhe_template/shared/widget/list/power_document.dart';
 export 'package:fhe_template/shared/widget/list/power_list.dart';
 export 'package:fhe_template/shared/widget/loading/image_loading.dart';
