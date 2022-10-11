@@ -23,18 +23,18 @@ class MainNavigationViewState extends State<MainNavigationView> {
   List navigationItems = [
     NavigationItem(
       icon: const Icon(Icons.dashboard),
-      label: "Dashboard",
-      route: "/dashboard",
+      label: 'Dashboard',
+      route: '/dashboard',
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.calendarStar),
-      label: "Events",
-      route: "/events",
+      label: 'Events',
+      route: '/events',
       trailingBuilder: () {
         return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("events").snapshots(),
+          stream: FirebaseFirestore.instance.collection('events').snapshots(),
           builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.hasError) return const Text('Error');
             if (snapshot.data == null) return Container();
             final data = snapshot.data!;
             return Card(
@@ -45,7 +45,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   vertical: 2.0,
                 ),
                 child: Text(
-                  "${data.docs.length}",
+                  '${data.docs.length}',
                   style: const TextStyle(
                     fontSize: 8.0,
                     color: Colors.white,
@@ -59,13 +59,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.post),
-      label: "Blogs",
-      route: "/blogs",
+      label: 'Blogs',
+      route: '/blogs',
       trailingBuilder: () {
         return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("blogs").snapshots(),
+          stream: FirebaseFirestore.instance.collection('blogs').snapshots(),
           builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.hasError) return const Text('Error');
             if (snapshot.data == null) return Container();
             final data = snapshot.data!;
             return Card(
@@ -76,7 +76,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   vertical: 2.0,
                 ),
                 child: Text(
-                  "${data.docs.length}",
+                  '${data.docs.length}',
                   style: const TextStyle(
                     fontSize: 8.0,
                     color: Colors.white,
@@ -90,18 +90,18 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(Icons.developer_board),
-      label: "Products",
-      route: "/products",
+      label: 'Products',
+      route: '/products',
     ),
     NavigationItem(
       icon: const Icon(Icons.people),
-      label: "Users",
-      route: "/users",
+      label: 'Users',
+      route: '/users',
       trailingBuilder: () {
         return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection("users").snapshots(),
+          stream: FirebaseFirestore.instance.collection('users').snapshots(),
           builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text("Error");
+            if (snapshot.hasError) return const Text('Error');
             if (snapshot.data == null) return Container();
             final data = snapshot.data!;
             return Card(
@@ -112,7 +112,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   vertical: 2.0,
                 ),
                 child: Text(
-                  "${data.docs.length}",
+                  '${data.docs.length}',
                   style: const TextStyle(
                     fontSize: 8.0,
                     color: Colors.white,
@@ -126,13 +126,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.post),
-      label: "UI Kit",
-      route: "",
+      label: 'UI Kit',
+      route: '',
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.post),
-          label: "Cards",
-          route: "/card_template",
+          label: 'Cards',
+          route: '/card_template',
           trailingBuilder: () {
             return const Card(
               color: Colors.orange,
@@ -142,7 +142,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   vertical: 2.0,
                 ),
                 child: Text(
-                  "100+",
+                  '100+',
                   style: TextStyle(
                     fontSize: 8.0,
                     color: Colors.white,
@@ -154,8 +154,8 @@ class MainNavigationViewState extends State<MainNavigationView> {
         ),
         NavigationItem(
           icon: const Icon(MdiIcons.post),
-          label: "Form UI",
-          route: "/form_ui",
+          label: 'Form UI',
+          route: '/form_ui',
           trailingBuilder: () {
             return const Card(
               color: Colors.orange,
@@ -165,7 +165,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   vertical: 2.0,
                 ),
                 child: Text(
-                  "100+",
+                  '100+',
                   style: TextStyle(
                     fontSize: 8.0,
                     color: Colors.white,
@@ -179,8 +179,8 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.web),
-      label: "Http Examples",
-      route: "/http_examples",
+      label: 'Http Examples',
+      route: '/http_examples',
       items: [],
     ),
     //@NAVIGATION_GENERATOR
@@ -245,7 +245,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                             height: 20.0,
                           ),
                           const SideGroupTitle(
-                            title: "Main menu",
+                            title: 'Main menu',
                           ),
                           ...List.generate(navigationItems.length, (index) {
                             return SideMenuItem(
@@ -295,7 +295,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                           TextButton(
                             onPressed: () {},
                             child: const Text(
-                              "Dashboard",
+                              'Dashboard',
                               style: TextStyle(
                                 fontSize: 10.0,
                               ),
@@ -304,7 +304,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                           TextButton(
                             onPressed: () {},
                             child: const Text(
-                              "Settings",
+                              'Settings',
                               style: TextStyle(
                                 fontSize: 10.0,
                               ),
@@ -313,7 +313,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                           TextButton(
                             onPressed: () {},
                             child: const Text(
-                              "Theme changer",
+                              'Theme changer',
                               style: TextStyle(
                                 fontSize: 10.0,
                               ),
@@ -322,7 +322,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                           const Spacer(),
                           const ImageIcon(
                             NetworkImage(
-                              "https://cdn-icons-png.flaticon.com/512/3239/3239952.png",
+                              'https://cdn-icons-png.flaticon.com/512/3239/3239952.png',
                             ),
                             size: 20.0,
                           ),
@@ -341,7 +341,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                             radius: 18.0,
                             backgroundImage: NetworkImage(
                               me.photo ??
-                                  "https://i.ibb.co/S32HNjD/no-image.jpg",
+                                  'https://i.ibb.co/S32HNjD/no-image.jpg',
                             ),
                           ),
                         ],
@@ -373,7 +373,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                         vertical: 4.0),
                                     width: MediaQuery.of(context).size.width,
                                     child: const Text(
-                                      "Theme changer",
+                                      'Theme changer',
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -400,7 +400,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                     onChanged: (value) {
                                       MainTheme.cardBorderRadius = 100 * value;
                                       debugPrint(
-                                        "MainTheme.cardBorderRadius: ${MainTheme.cardBorderRadius}",
+                                        'MainTheme.cardBorderRadius: ${MainTheme.cardBorderRadius}',
                                       );
                                       setState(() {});
                                     },
@@ -411,7 +411,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                     onChanged: (value) {
                                       MainTheme.cardElevation = 50.0 * value;
                                       debugPrint(
-                                        "MainTheme.cardBorderRadius: ${MainTheme.cardElevation}",
+                                        'MainTheme.cardBorderRadius: ${MainTheme.cardElevation}',
                                       );
                                       setState(() {});
                                     },

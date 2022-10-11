@@ -1,10 +1,6 @@
 {
     "modules": [
-        "tutorial/tutorial_dashboard",
-        "shelf/shelf_welcome",
-        "shelf/shelf_dashboard",
-        "card_template",
-        "product_list",
-        "product_form"
+        "demo/demo_dashboard",
+        "demo/demo_order_list"
     ]
 }

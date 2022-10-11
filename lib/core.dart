@@ -19,6 +19,10 @@ export 'package:fhe_template/module/customer_list/controller/customer_list_contr
 export 'package:fhe_template/module/customer_list/view/customer_list_view.dart';
 export 'package:fhe_template/module/dashboard/controller/dashboard_controller.dart';
 export 'package:fhe_template/module/dashboard/view/dashboard_view.dart';
+export 'package:fhe_template/module/demo/demo_dashboard/controller/demo_dashboard_controller.dart';
+export 'package:fhe_template/module/demo/demo_dashboard/view/demo_dashboard_view.dart';
+export 'package:fhe_template/module/demo/demo_order_list/controller/demo_order_list_controller.dart';
+export 'package:fhe_template/module/demo/demo_order_list/view/demo_order_list_view.dart';
 export 'package:fhe_template/module/event_form/controller/event_form_controller.dart';
 export 'package:fhe_template/module/event_form/view/event_form_view.dart';
 export 'package:fhe_template/module/event_list/controller/event_list_controller.dart';
