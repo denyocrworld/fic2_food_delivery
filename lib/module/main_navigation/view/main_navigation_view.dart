@@ -183,6 +183,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: "/http_examples",
       items: [],
     ),
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

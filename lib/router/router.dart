@@ -149,6 +149,7 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const HttpExampleView(),
             ),
           ),
+          //@ROUTER_GENERATOR
         ],
       ),
     ],

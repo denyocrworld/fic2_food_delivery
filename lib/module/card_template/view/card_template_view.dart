@@ -2,6 +2,8 @@
 list_order_with_tab
 item_order
 */
+import 'dart:math';
+
 import 'package:fhe_template/core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -17,11 +19,79 @@ class CardTemplateView extends StatefulWidget {
         appBar: AppBar(
           title: const Text("CardTemplate"),
           actions: const [],
-          bottom: const TabBar(
+          bottom: TabBar(
             tabs: [
-              Tab(icon: Text("Pending")),
-              Tab(icon: Text("Ongoing")),
-              Tab(icon: Text("Done")),
+              Tab(
+                  icon: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Pending"),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  StreamBuilder<QuerySnapshot>(
+                    stream: FirebaseFirestore.instance
+                        .collection("orders")
+                        .where("status", isEqualTo: "Pending")
+                        .snapshots(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) return const Text("Error");
+                      if (snapshot.data == null) return Container();
+
+                      final count = snapshot.data!.docs.length;
+                      if (count == 0) return Container();
+                      return CircleAvatar(
+                        radius: 10.0,
+                        backgroundColor: Colors.blueGrey,
+                        child: Center(
+                          child: Text(
+                            "$count",
+                            style: const TextStyle(
+                              fontSize: 10.0,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              )),
+              Tab(
+                  icon: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Ongoing"),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  StreamBuilder<QuerySnapshot>(
+                    stream: FirebaseFirestore.instance
+                        .collection("orders")
+                        .where("status", isEqualTo: "Ongoing")
+                        .snapshots(),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasError) return const Text("Error");
+                      if (snapshot.data == null) return Container();
+                      final count = snapshot.data!.docs.length;
+                      if (count == 0) return Container();
+
+                      return CircleAvatar(
+                        radius: 10.0,
+                        backgroundColor: Colors.blueGrey,
+                        child: Center(
+                          child: Text(
+                            "$count",
+                            style: const TextStyle(
+                              fontSize: 10.0,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              )),
+              const Tab(icon: Text("Done")),
             ],
           ),
         ),
@@ -37,13 +107,16 @@ class CardTemplateView extends StatefulWidget {
                     if (index == 0) status = "Pending";
                     if (index == 1) status = "Ongoing";
                     if (index == 2) status = "Done";
+
                     return StreamBuilder<QuerySnapshot>(
                       stream: FirebaseFirestore.instance
                           .collection("orders")
                           .where("status", isEqualTo: status)
                           .snapshots(),
                       builder: (context, snapshot) {
-                        if (snapshot.hasError) return const Text("Error");
+                        if (snapshot.hasError) {
+                          return Text("Error: ${snapshot.error}");
+                        }
                         if (snapshot.data == null) return Container();
                         if (snapshot.data!.docs.isEmpty) {
                           return const Text("No Data");
@@ -143,11 +216,33 @@ class CardTemplateView extends StatefulWidget {
                                     const SizedBox(
                                       width: 6.0,
                                     ),
-                                    Text(
-                                      "${item["status"]}",
-                                      style: const TextStyle(
-                                        fontSize: 12.0,
-                                        fontWeight: FontWeight.bold,
+                                    InkWell(
+                                      onTap: () async {
+                                        late String newStatus;
+                                        switch (item["status"]) {
+                                          case "Pending":
+                                            newStatus = "Ongoing";
+                                            break;
+                                          case "Ongoing":
+                                            newStatus = "Done";
+                                            break;
+                                          default:
+                                            return;
+                                        }
+
+                                        await FirebaseFirestore.instance
+                                            .collection("orders")
+                                            .doc(item["id"])
+                                            .update({
+                                          "status": newStatus,
+                                        });
+                                      },
+                                      child: Text(
+                                        "${item["status"]}",
+                                        style: const TextStyle(
+                                          fontSize: 12.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -166,22 +261,94 @@ class CardTemplateView extends StatefulWidget {
               Positioned(
                 left: 10,
                 bottom: 10,
-                child: Row(
-                  children: [
-                    const Text(
-                      "DevTools",
-                      style: TextStyle(
-                        fontSize: 10.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      ElevatedButton.icon(
+                        icon: const Icon(Icons.add),
+                        label: const Text(
+                          "Delete All",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
+                        onPressed: () async {
+                          var snapshot = await FirebaseFirestore.instance
+                              .collection("orders")
+                              .get();
+                          for (var i = 0; i < snapshot.docs.length; i++) {
+                            await FirebaseFirestore.instance
+                                .collection("orders")
+                                .doc(snapshot.docs[i].id)
+                                .delete();
+                          }
+                        },
                       ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.bug_report,
-                        size: 24.0,
+                      const SizedBox(
+                        width: 6.0,
                       ),
-                    ),
-                  ],
+                      ElevatedButton.icon(
+                        icon: const Icon(Icons.refresh),
+                        label: const Text("Dummy"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blueGrey,
+                        ),
+                        onPressed: () async {
+                          for (var i = 0; i < 6; i++) {
+                            var randomStatus =
+                                i % 2 == 0 ? "Pending" : "Ongoing";
+
+                            await FirebaseFirestore.instance
+                                .collection("orders")
+                                .add({
+                              "created_at": Timestamp.fromDate(
+                                DateTime.now().add(
+                                  Duration(
+                                    days: Random().nextInt(40),
+                                  ),
+                                ),
+                              ),
+                              "customer": {
+                                "uid": FirebaseAuth.instance.currentUser!.uid,
+                                "customer_name": FirebaseAuth
+                                        .instance.currentUser!.displayName ??
+                                    "Anonymous",
+                                "email":
+                                    FirebaseAuth.instance.currentUser!.email ??
+                                        "-",
+                                "photo": FirebaseAuth
+                                        .instance.currentUser!.photoURL ??
+                                    "https://i.ibb.co/S32HNjD/no-image.jpg",
+                              },
+                              "items": [
+                                {
+                                  "product_name": "Elegant Soft Chips",
+                                  "price": 25.0,
+                                  "qty": 2.0,
+                                },
+                                {
+                                  "product_name": "Oriental Metal Hat",
+                                  "price": 30.0,
+                                  "qty": 1.0,
+                                },
+                                {
+                                  "product_name": "Generic Bronze Chips",
+                                  "price": 100.0,
+                                  "qty": 2.0,
+                                }
+                              ],
+                              "total": 280.0,
+                              "status": randomStatus,
+                            });
+                          }
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
           ],
