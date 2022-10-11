@@ -1,21 +1,10 @@
 {
     "modules": [
-        "auth/login",
-        "main_navigation",
-        "dashboard",
+        "tutorial/tutorial_dashboard",
+        "shelf/shelf_welcome",
+        "shelf/shelf_dashboard",
+        "card_template",
         "product_list",
-        "customer_list",
-        "order_list",
-        "report",
-        "profile",
-        "setting",
-        "user_list",
-        "event_list",
-        "event_form",
-        "contoh",
-        "blog_list",
-        "blog_form",
-        "form_ui",
-        "http_example"
+        "product_form"
     ]
 }

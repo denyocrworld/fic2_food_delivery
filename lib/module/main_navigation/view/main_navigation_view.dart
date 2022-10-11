@@ -1,14 +1,6 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/module/main_navigation/widget/side_group_title.dart';
-import 'package:fhe_template/module/main_navigation/widget/side_menu_item.dart';
-import 'package:fhe_template/module/main_navigation/widget/top_bar.dart';
-import 'package:fhe_template/shared/theme/value_changer.dart';
-import 'package:fhe_template/shared/util/responsive/responsive.dart';
 
 import 'package:flutter/material.dart';
-
-import '../../../shared/theme/color_changer.dart';
-import '../../../shared/theme/font_changer.dart';
 
 class MainNavigationView extends StatefulWidget {
   final Widget child;
@@ -97,6 +89,11 @@ class MainNavigationViewState extends State<MainNavigationView> {
       },
     ),
     NavigationItem(
+      icon: const Icon(Icons.developer_board),
+      label: "Products",
+      route: "/products",
+    ),
+    NavigationItem(
       icon: const Icon(Icons.people),
       label: "Users",
       route: "/users",
@@ -132,6 +129,29 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: "UI Kit",
       route: "",
       items: [
+        NavigationItem(
+          icon: const Icon(MdiIcons.post),
+          label: "Cards",
+          route: "/card_template",
+          trailingBuilder: () {
+            return const Card(
+              color: Colors.orange,
+              child: Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 4.0,
+                  vertical: 2.0,
+                ),
+                child: Text(
+                  "100+",
+                  style: TextStyle(
+                    fontSize: 8.0,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
         NavigationItem(
           icon: const Icon(MdiIcons.post),
           label: "Form UI",
@@ -330,65 +350,77 @@ class MainNavigationViewState extends State<MainNavigationView> {
                       height: 1.4,
                       color: Colors.grey[300],
                     ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: widget.child,
-                          ),
-                          const VerticalDivider(thickness: 1, width: 1),
-                          Container(
-                            width: 240.0,
-                            height: MediaQuery.of(context).size.height,
-                            padding: const EdgeInsets.all(12.0),
-                            color: Colors.white,
-                            child: Wrap(
-                              runSpacing: 6.0,
-                              spacing: 6.0,
-                              children: [
-                                Container(
-                                  padding:
-                                      const EdgeInsets.symmetric(vertical: 4.0),
-                                  width: MediaQuery.of(context).size.width,
-                                  child: const Text(
-                                    "Theme changer",
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 18.0,
+                    if (!Responsive.isMobile(context))
+                      Expanded(
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: widget.child,
+                            ),
+                            const VerticalDivider(thickness: 1, width: 1),
+                            Container(
+                              width: 240.0,
+                              height: MediaQuery.of(context).size.height,
+                              padding: const EdgeInsets.all(12.0),
+                              color: Colors.white,
+                              child: Wrap(
+                                runSpacing: 6.0,
+                                spacing: 6.0,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 4.0),
+                                    width: MediaQuery.of(context).size.width,
+                                    child: const Text(
+                                      "Theme changer",
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18.0,
+                                      ),
                                     ),
                                   ),
-                                ),
-                                const TUIColorChanger(),
-                                const TUIFontChanger(),
-                                TUIValueChanger(
-                                  min: 0.0,
-                                  max: 100.0,
-                                  onChanged: (value) {
-                                    MainTheme.cardBorderRadius = 100 * value;
-                                    debugPrint(
-                                      "MainTheme.cardBorderRadius: ${MainTheme.cardBorderRadius}",
-                                    );
-                                    setState(() {});
-                                  },
-                                ),
-                                TUIValueChanger(
-                                  min: 0.0,
-                                  max: 50.0,
-                                  onChanged: (value) {
-                                    MainTheme.cardElevation = 50.0 * value;
-                                    debugPrint(
-                                      "MainTheme.cardBorderRadius: ${MainTheme.cardElevation}",
-                                    );
-                                    setState(() {});
-                                  },
-                                ),
-                              ],
+                                  TUIColorChanger(
+                                    onChanged: (value) {
+                                      MainTheme.appbarBackgroundColor = value;
+                                      setState(() {});
+                                    },
+                                  ),
+                                  TUIColorChanger(
+                                    onChanged: (value) {
+                                      MainTheme.scaffoldBackgroundColor = value;
+                                      setState(() {});
+                                    },
+                                  ),
+                                  const TUIFontChanger(),
+                                  TUIValueChanger(
+                                    min: 0.0,
+                                    max: 100.0,
+                                    onChanged: (value) {
+                                      MainTheme.cardBorderRadius = 100 * value;
+                                      debugPrint(
+                                        "MainTheme.cardBorderRadius: ${MainTheme.cardBorderRadius}",
+                                      );
+                                      setState(() {});
+                                    },
+                                  ),
+                                  TUIValueChanger(
+                                    min: 0.0,
+                                    max: 50.0,
+                                    onChanged: (value) {
+                                      MainTheme.cardElevation = 50.0 * value;
+                                      debugPrint(
+                                        "MainTheme.cardBorderRadius: ${MainTheme.cardElevation}",
+                                      );
+                                      setState(() {});
+                                    },
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),

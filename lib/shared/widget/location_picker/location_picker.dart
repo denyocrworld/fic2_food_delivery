@@ -169,7 +169,7 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                             ),
                           ),
                           const SizedBox(
-                            height: 20.0,
+                            height: 16.0,
                           ),
                           if (!isLocationPicked())
                             ElevatedButton.icon(

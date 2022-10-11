@@ -6,7 +6,9 @@ class MainTheme {
   static Color fontColor = Colors.grey[700]!;
 
   //Color
+  static Color appbarBackgroundColor = Colors.white;
   static Color primaryColor = const Color(0xffFA533C);
+  static Color scaffoldBackgroundColor = Colors.grey[200]!;
   static MaterialColor primarySwatch = Colors.blueGrey;
   static TextStyle googleFont = GoogleFonts.sora();
   static Color drawerBackgroundColor = const Color(0xff404E67);
@@ -32,7 +34,7 @@ ThemeData getDefaultTheme() {
       ),
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.white,
+      backgroundColor: MainTheme.appbarBackgroundColor,
       elevation: 0.6,
       titleTextStyle: GoogleFonts.montserrat(
         color: Colors.blueGrey[700],
@@ -41,7 +43,7 @@ ThemeData getDefaultTheme() {
         color: Colors.blueGrey[700],
       ),
     ),
-    scaffoldBackgroundColor: const Color(0xffEBEDEF),
+    scaffoldBackgroundColor: MainTheme.scaffoldBackgroundColor,
     drawerTheme: DrawerThemeData(
       backgroundColor: MainTheme.drawerBackgroundColor,
     ),
@@ -57,6 +59,9 @@ ThemeData getDefaultTheme() {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
       ),
+    ),
+    tabBarTheme: TabBarTheme(
+      labelColor: MainTheme.fontColor,
     ),
   );
 }

@@ -118,6 +118,22 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
             ),
           ),
           GoRoute(
+            path: '/products',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProductListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/card_template',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CardTemplateView(),
+            ),
+          ),
+          GoRoute(
             path: '/form_ui',
             pageBuilder: (context, state) => noTransition(
               context: context,
