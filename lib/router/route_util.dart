@@ -1,9 +1,8 @@
 import 'package:go_router/go_router.dart';
-
-import '../main.dart';
+import '../state_util.dart';
 
 get ctx {
-  return shellNavigatorKey.currentState!.context;
+  return Get.shellNavigatorKey.currentState!.context;
 }
 
 go(routeName) {

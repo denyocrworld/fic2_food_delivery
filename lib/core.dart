@@ -13,16 +13,10 @@ export 'package:fhe_template/module/blog_list/controller/blog_list_controller.da
 export 'package:fhe_template/module/blog_list/view/blog_list_view.dart';
 export 'package:fhe_template/module/card_template/controller/card_template_controller.dart';
 export 'package:fhe_template/module/card_template/view/card_template_view.dart';
-export 'package:fhe_template/module/contoh/controller/contoh_controller.dart';
-export 'package:fhe_template/module/contoh/view/contoh_view.dart';
 export 'package:fhe_template/module/customer_list/controller/customer_list_controller.dart';
 export 'package:fhe_template/module/customer_list/view/customer_list_view.dart';
 export 'package:fhe_template/module/dashboard/controller/dashboard_controller.dart';
 export 'package:fhe_template/module/dashboard/view/dashboard_view.dart';
-export 'package:fhe_template/module/demo/demo_dashboard/controller/demo_dashboard_controller.dart';
-export 'package:fhe_template/module/demo/demo_dashboard/view/demo_dashboard_view.dart';
-export 'package:fhe_template/module/demo/demo_order_list/controller/demo_order_list_controller.dart';
-export 'package:fhe_template/module/demo/demo_order_list/view/demo_order_list_view.dart';
 export 'package:fhe_template/module/event_form/controller/event_form_controller.dart';
 export 'package:fhe_template/module/event_form/view/event_form_view.dart';
 export 'package:fhe_template/module/event_list/controller/event_list_controller.dart';

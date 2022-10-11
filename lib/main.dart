@@ -5,11 +5,6 @@ import 'package:fhe_template/core.dart';
 
 import 'package:flutter/material.dart';
 
-final GlobalKey<NavigatorState> rootNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'root');
-final GlobalKey<NavigatorState> shellNavigatorKey =
-    GlobalKey<NavigatorState>(debugLabel: 'shell');
-
 //http://localhost:8000?order_id=44OHkCKgS7omJGgZ9Iim_4l6wgLyZEbdgVqRm73GQLtVwETn1&status_code=200&transaction_status=settlement
 void main() async {
   await initialize();
@@ -26,37 +21,15 @@ class ShellRouteExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return MaterialApp(
-    //   navigatorKey: Get.currentContext,
-    //   debugShowCheckedModeBanner: false,
-    //   theme: getDefaultTheme(),
-    //   home: const ShelfWelcomeView(),
-    // );
     return MaterialApp.router(
       title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      routerConfig: getRouters(context, rootNavigatorKey, shellNavigatorKey),
+      routerConfig: getRouters(
+        context,
+        Get.navigatorKey,
+        Get.shellNavigatorKey,
+      ),
     );
   }
 }
-
-/*
-[[ NEW UPDATE!!!!! ]
-String Parser
-
-@i.productName
-@i.price
-@i.photo
-
-@m.productName
-@m.price
-@m.photo
-
-@p.productName
-@p.item.name
-@p.product.name
-
-HOTKEY( SHIFT + ALT + E)
-
-*/

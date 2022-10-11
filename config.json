@@ -1,6 +1,3 @@
 {
-    "modules": [
-        "demo/demo_dashboard",
-        "demo/demo_order_list"
-    ]
+    "modules": []
 }
