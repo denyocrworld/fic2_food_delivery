@@ -12,6 +12,8 @@ class TabListView extends StatefulWidget {
   Widget build(context, TabListController controller) {
     controller.view = this;
 
+    //#GROUP_TEMPLATE scaffold
+    //#TEMPLATE scaffold_tab_fire
     return DefaultTabController(
       length: 3,
       child: Scaffold(
@@ -354,6 +356,7 @@ class TabListView extends StatefulWidget {
         ),
       ),
     );
+    //#END
   }
 
   @override

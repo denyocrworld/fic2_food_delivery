@@ -10,6 +10,8 @@ class TableListView extends StatefulWidget {
   Widget build(context, TableListController controller) {
     controller.view = this;
 
+    //#GROUP_TEMPLATE scaffold
+    //#TEMPLATE scaffold_table_fire
     /*
     TODO: State management is required to enable this feature. 
     TODO: Create a page variable in your controller or State
