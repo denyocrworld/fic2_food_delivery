@@ -1,6 +1,7 @@
 {
     "modules": [
         "list/table_list",
-        "list/tab_list"
+        "list/tab_list",
+        "contoh_list"
     ]
 }

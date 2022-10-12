@@ -88,6 +88,9 @@ generateSnippet() async {
             code[i] = code[i].toString().replaceAll('"', '\\"').trim();
             code[i] = code[i].toString().replaceAll('\\\$', '\\\\\$').trim();
 
+            code[i] = code[i].toString().replaceAll(r'"$', r'"\\$').trim();
+            code[i] = code[i].toString().replaceAll(r"'$", r"'\\$").trim();
+
             if (i == code.length - 1) {
               code[i] = "\"${code[i]}\$2\"";
             } else {
@@ -126,7 +129,7 @@ generateSnippet() async {
 
   if (File("c:/yo/owner.txt").existsSync()) {
     var templateJsonFile = File(
-        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\new-template.json");
+        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\template.json");
     templateJsonFile.writeAsStringSync("""
 {
   ${codes.join(",\n")}

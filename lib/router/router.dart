@@ -150,29 +150,29 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
             ),
           ),
           GoRoute(
-      path: '/table_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TableListView(),
-      ),
-    ),
+            path: '/table_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TableListView(),
+            ),
+          ),
           GoRoute(
-      path: '/tab_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TabListView(),
-      ),
-    ),
+            path: '/tab_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TabListView(),
+            ),
+          ),
           GoRoute(
-      path: '/template_card',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TemplateCardView(),
-      ),
-    ),
+            path: '/contoh_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ContohListView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

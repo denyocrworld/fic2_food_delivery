@@ -209,7 +209,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/template_card',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Contoh List',
+      route: '/contoh_list',
+      items: [],
+    ),
+    //@NAVIGATION_GENERATOR
   ];
 
   @override
@@ -377,14 +383,15 @@ class MainNavigationViewState extends State<MainNavigationView> {
                       height: 1.4,
                       color: Colors.grey[300],
                     ),
-                    if (!Responsive.isMobile(context))
-                      Expanded(
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: widget.child,
-                            ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: widget.child,
+                          ),
+                          if (false)
                             const VerticalDivider(thickness: 1, width: 1),
+                          if (false)
                             Container(
                               width: 240.0,
                               height: MediaQuery.of(context).size.height,
@@ -445,9 +452,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                 ],
                               ),
                             ),
-                          ],
-                        ),
+                        ],
                       ),
+                    ),
                   ],
                 ),
               ),

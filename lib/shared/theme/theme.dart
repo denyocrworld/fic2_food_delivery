@@ -38,6 +38,7 @@ ThemeData getDefaultTheme() {
       elevation: 0.6,
       titleTextStyle: GoogleFonts.montserrat(
         color: Colors.blueGrey[700],
+        fontWeight: FontWeight.bold,
       ),
       iconTheme: IconThemeData(
         color: Colors.blueGrey[700],
