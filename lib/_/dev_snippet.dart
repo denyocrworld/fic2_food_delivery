@@ -1,0 +1,285 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+// ignore: use_key_in_widget_constructors
+class DevSnippetView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // ignore: unused_element
+
+    util() {
+      //#GROUP_TEMPLATE general_shortcode
+      /*
+      //#TEMPLATE co
+      controller
+      //#END
+      */
+
+      //#TEMPLATE dp
+      debugPrint("");
+      //#END
+
+      //#TEMPLATE dp_var
+      debugPrint("variableName: \$variableName");
+      //#END
+
+      //#TEMPLATE dp_line
+      debugPrint("-------------------");
+      //#END
+
+      //#GROUP_TEMPLATE dummy_util
+      var String = """
+//#TEMPLATE srcNoImage
+"https://i.ibb.co/S32HNjD/no-image.jpg"
+//#END
+//#TEMPLATE srcPicSum
+"https://picsum.photos/1000"
+//#END
+//#TEMPLATE srcMeImage
+"https://i.ibb.co/PGv8ZzG/me.jpg"
+//#END
+//#TEMPLATE lorem
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+//#END
+""";
+    }
+
+    test() async {
+      var email = "";
+      var password = "";
+
+      //#GROUP_TEMPLATE firebase
+
+      /*
+      //#TEMPLATE fireuser
+      FirebaseAuth.instance.currentUser!
+      //#END
+      */
+
+      //#TEMPLATE firelogin
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: "user@demo.com",
+        password: "123456 xxx",
+      );
+      //#END
+
+      //#TEMPLATE fireloginanonymously
+      await FirebaseAuth.instance.signInAnonymously();
+      //#END
+
+      //#TEMPLATE firegooglelogin
+      GoogleSignIn googleSignIn = GoogleSignIn(
+        scopes: [
+          'email',
+        ],
+      );
+
+      try {
+        await googleSignIn.disconnect();
+      } catch (_) {}
+
+      try {
+        GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
+        GoogleSignInAuthentication googleSignInAuthentication =
+            await googleSignInAccount!.authentication;
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
+        var userCredential =
+            await FirebaseAuth.instance.signInWithCredential(credential);
+        debugPrint("userCredential: $userCredential");
+        //TODO: on login success
+        //------------------
+      } catch (_) {}
+      //#END
+
+      //#TEMPLATE firesignup
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      //#END
+
+      //#TEMPLATE fireregister
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      //#END
+
+      //#TEMPLATE firecreate
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      //#END
+
+      //#TEMPLATE firelogout
+      await FirebaseAuth.instance.signOut();
+      //#END
+
+      //#TEMPLATE fireadd
+      await FirebaseFirestore.instance.collection("products").add({
+        "product_name": "ProductXXX",
+        "price": 25,
+      });
+      //#END
+
+      //#TEMPLATE fireupdate
+      await FirebaseFirestore.instance
+          .collection("products")
+          .doc("xxx")
+          .update({
+        "product_name": "ProductXXX",
+        "price": 25,
+      });
+      //#END
+
+      //#TEMPLATE firedelete
+      await FirebaseFirestore.instance
+          .collection("products")
+          .doc("xxx")
+          .delete();
+      //#END
+
+      {
+        //#TEMPLATE fireget
+        await FirebaseFirestore.instance.collection("products").get();
+        //#END
+      }
+      {
+        //#TEMPLATE firesnapshot
+        FirebaseFirestore.instance.collection("products").snapshots();
+        //#END
+      }
+
+      //#TEMPLATE firedeleteall
+      var snapshot =
+          await FirebaseFirestore.instance.collection("products").get();
+      for (var i = 0; i < snapshot.docs.length; i++) {
+        await FirebaseFirestore.instance
+            .collection("products")
+            .doc(snapshot.docs[i].id)
+            .delete();
+      }
+      //#END
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("DevSnippet"),
+      ),
+      body: SingleChildScrollView(
+        controller: ScrollController(),
+        child: Column(
+          children: [
+            Builder(
+              builder: (context) {
+                return Scaffold(
+                  //#TEMPLATE body_simple
+                  body: SingleChildScrollView(
+                    child: Container(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Column(
+                        children: const [],
+                      ),
+                    ),
+                  ),
+                  //#END
+                );
+              },
+            ),
+            //#GROUP_TEMPLATE container
+
+            //#TEMPLATE contrad
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: Colors.red[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
+              ),
+            ),
+            //#END
+            //#TEMPLATE conimage
+            Container(
+              height: 100.0,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://i.ibb.co/3pPYd14/freeban.jpg",
+                  ),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
+              ),
+            ),
+            //#END
+
+            Container(
+              //#TEMPLATE decoration
+              decoration: const BoxDecoration(),
+              //#END
+            ),
+
+            //----------------------------------------
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                  //#TEMPLATE border
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[900]!,
+                  ),
+                  //#END
+                  //#TEMPLATE radius
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  //#END
+                  //#TEMPLATE shadow
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x19000000),
+                      blurRadius: 24,
+                      offset: Offset(0, 11),
+                    ),
+                  ],
+                  //#END
+                  //#TEMPLATE decoration_image
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      "https://i.ibb.co/3pPYd14/freeban.jpg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  //#END
+                  //#TEMPLATE gradient
+                  gradient: const LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Colors.blue,
+                      Colors.red,
+                    ],
+                  )
+                  //#END
+                  ),
+            ),
+            //----------------------------------------
+          ],
+        ),
+      ),
+    );
+  }
+}
