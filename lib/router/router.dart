@@ -165,6 +165,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
         child: const TabListView(),
       ),
     ),
+          GoRoute(
+      path: '/template_card',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TemplateCardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

@@ -1,21 +1,20 @@
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
+import 'package:fhe_template/state_util.dart';
 import '../view/template_card_view.dart';
 
-class TemplateCardController extends GetxController {
-  TemplateCardView? view;
+class TemplateCardController extends State<TemplateCardView> implements MvcController {
+  static late TemplateCardController instance;
+  late TemplateCardView view;
 
   @override
-  void onInit() {
-    super.onInit();
+  void initState() {
+    instance = this;
+    super.initState();
   }
 
   @override
-  void onReady() {
-    super.onReady();
-  }
+  void dispose() => super.dispose();
 
   @override
-  void onClose() {
-    super.onClose();
-  }
+  Widget build(BuildContext context) => widget.build(context, this);
 }

@@ -1,5 +1,5 @@
+import 'package:custom_clippers/custom_clippers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 class TemplateDashboardOvoView extends StatelessWidget {
   const TemplateDashboardOvoView({Key? key}) : super(key: key);
@@ -132,7 +132,7 @@ class TemplateDashboardOvoView extends StatelessWidget {
       body: Stack(
         children: [
           ClipPath(
-            clipper: WaveClipperTwo(),
+            clipper: SinCosineWaveClipper(),
             child: Container(
               height: 240,
               decoration: const BoxDecoration(

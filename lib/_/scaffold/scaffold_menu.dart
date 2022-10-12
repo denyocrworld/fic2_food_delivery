@@ -6,7 +6,6 @@ import 'package:fhe_template/_/scaffold/scaffold_ovo.dart';
 import 'package:fhe_template/_/scaffold/scaffold_simple.dart';
 import 'package:fhe_template/_/scaffold/scaffold_sliver_appbar.dart';
 import 'package:fhe_template/_/scaffold/scaffold_tabbar_vertical.dart';
-import 'package:get/get.dart';
 
 import '../navigation/navigation_vertical.dart';
 import '../navigation/navigation_vertical_icon.dart';
@@ -16,6 +15,13 @@ class TemplateScaffoldMainNavigationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    navigateTo(Widget target) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => target),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
@@ -32,50 +38,51 @@ class TemplateScaffoldMainNavigationView extends StatelessWidget {
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold",
-                      "onTap": () => Get.to(const TemplateScaffold()),
+                      "onTap": () => navigateTo(const TemplateScaffold()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Simple",
-                      "onTap": () => Get.to(const TemplateScaffoldSimple()),
+                      "onTap": () => navigateTo(const TemplateScaffoldSimple()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Ovo",
-                      "onTap": () => Get.to(const TemplateScaffoldOvo()),
+                      "onTap": () => navigateTo(const TemplateScaffoldOvo()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Image",
-                      "onTap": () => Get.to(const TemplateScaffoldImage()),
+                      "onTap": () => navigateTo(const TemplateScaffoldImage()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Drawer",
-                      "onTap": () => Get.to(const TemplateScaffoldDrawer()),
+                      "onTap": () => navigateTo(const TemplateScaffoldDrawer()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Sliver Appbar",
                       "onTap": () =>
-                          Get.to(const TemplateScaffoldSliverAppbar()),
+                          navigateTo(const TemplateScaffoldSliverAppbar()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Tabbar Vertical",
                       "onTap": () =>
-                          Get.to(const TemplateScaffoldTabbarVertical()),
+                          navigateTo(const TemplateScaffoldTabbarVertical()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Navigation Vertical",
-                      "onTap": () => Get.to(const TemplateNavigationVertical()),
+                      "onTap": () =>
+                          navigateTo(const TemplateNavigationVertical()),
                     },
                     {
                       "icon": Icons.developer_board,
                       "label": "Navigation Vertical Icon",
                       "onTap": () =>
-                          Get.to(const TemplateNavigationVerticalIcon()),
+                          navigateTo(const TemplateNavigationVerticalIcon()),
                     },
                   ];
 

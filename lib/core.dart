@@ -51,6 +51,8 @@ export 'package:fhe_template/module/shelf/shelf_dashboard/controller/shelf_dashb
 export 'package:fhe_template/module/shelf/shelf_dashboard/view/shelf_dashboard_view.dart';
 export 'package:fhe_template/module/shelf/shelf_welcome/controller/shelf_welcome_controller.dart';
 export 'package:fhe_template/module/shelf/shelf_welcome/view/shelf_welcome_view.dart';
+export 'package:fhe_template/_/template_card/controller/template_card_controller.dart';
+export 'package:fhe_template/_/template_card/view/template_card_view.dart';
 export 'package:fhe_template/module/tutorial/tutorial_dashboard/controller/tutorial_dashboard_controller.dart';
 export 'package:fhe_template/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';
 export 'package:fhe_template/module/user_list/controller/user_list_controller.dart';

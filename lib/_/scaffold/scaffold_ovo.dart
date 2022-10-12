@@ -1,5 +1,5 @@
+import 'package:custom_clippers/custom_clippers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 class TemplateScaffoldOvo extends StatelessWidget {
   const TemplateScaffoldOvo({Key? key}) : super(key: key);
@@ -83,7 +83,7 @@ class TemplateScaffoldOvo extends StatelessWidget {
               child: Stack(
                 children: [
                   ClipPath(
-                    clipper: WaveClipperTwo(),
+                    clipper: SinCosineWaveClipper(),
                     child: Container(
                       height: 220,
                       decoration: const BoxDecoration(

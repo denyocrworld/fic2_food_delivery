@@ -203,7 +203,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [],
     ),
 
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Template Card',
+      route: '/template_card',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override
