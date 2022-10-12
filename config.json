@@ -1,3 +1,6 @@
 {
-    "modules": []
+    "modules": [
+        "list/table_list",
+        "list/tab_list"
+    ]
 }

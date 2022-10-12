@@ -179,10 +179,30 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.web),
+      label: 'List',
+      route: '/list',
+      items: [
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Table List',
+          route: '/table_list',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Tab List',
+          route: '/tab_list',
+          items: [],
+        ),
+      ],
+    ),
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
       label: 'Http Examples',
       route: '/http_examples',
       items: [],
     ),
+
     //@NAVIGATION_GENERATOR
   ];
 

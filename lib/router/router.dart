@@ -149,6 +149,22 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const HttpExampleView(),
             ),
           ),
+          GoRoute(
+      path: '/table_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TableListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tab_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TabListView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
