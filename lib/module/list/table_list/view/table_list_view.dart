@@ -44,7 +44,7 @@ class TableListView extends StatefulWidget {
                       const cellPadding = 12.0;
 
                       var itemCount = snapshot.data!.docs.length;
-                      var startIndex = (page * limit) - page;
+                      var startIndex = (page * limit) - limit;
                       var endIndex = startIndex + limit;
 
                       if (endIndex >= (itemCount - 1)) {
@@ -60,7 +60,11 @@ class TableListView extends StatefulWidget {
                         return searchField.toString().contains(search);
                       }).toList();
 
-                      if (searchItems.isNotEmpty) {
+                      debugPrint("page : $page");
+                      debugPrint("startIndex : $startIndex");
+                      debugPrint("endIndex : $endIndex");
+
+                      if (searchItems.isNotEmpty && startIndex >= 0) {
                         pageItems =
                             searchItems.getRange(startIndex, endIndex).toList();
                       }
@@ -151,6 +155,7 @@ class TableListView extends StatefulWidget {
                                   2: FlexColumnWidth(),
                                   3: FixedColumnWidth(120),
                                   4: FixedColumnWidth(120),
+                                  5: FixedColumnWidth(120),
                                 },
                                 defaultVerticalAlignment:
                                     TableCellVerticalAlignment.middle,
@@ -195,6 +200,14 @@ class TableListView extends StatefulWidget {
                                         child: Padding(
                                           padding: EdgeInsets.all(cellPadding),
                                           child: Text("Total"),
+                                        ),
+                                      ),
+                                      TableCell(
+                                        verticalAlignment:
+                                            TableCellVerticalAlignment.top,
+                                        child: Padding(
+                                          padding: EdgeInsets.all(cellPadding),
+                                          child: Text("Action"),
                                         ),
                                       ),
                                     ],
@@ -256,6 +269,40 @@ class TableListView extends StatefulWidget {
                                             padding: const EdgeInsets.all(
                                                 cellPadding),
                                             child: Text("€${item["total"]}"),
+                                          ),
+                                        ),
+                                        TableCell(
+                                          verticalAlignment:
+                                              TableCellVerticalAlignment.top,
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(
+                                                cellPadding),
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                IconButton(
+                                                  onPressed: () {},
+                                                  icon: const Icon(
+                                                    Icons.edit,
+                                                    size: 18.0,
+                                                  ),
+                                                ),
+                                                IconButton(
+                                                  onPressed: () async {
+                                                    await FirebaseFirestore
+                                                        .instance
+                                                        .collection("orders")
+                                                        .doc(item["id"])
+                                                        .delete();
+                                                  },
+                                                  icon: const Icon(
+                                                    Icons.cancel,
+                                                    size: 18.0,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       ],
