@@ -173,6 +173,38 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
               child: const ContohListView(),
             ),
           ),
+          GoRoute(
+      path: '/debug',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DebugView(),
+      ),
+    ),
+          GoRoute(
+      path: '/hris_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HrisLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/hris_employee_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HrisEmployeeDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/hris_hr_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HrisHrDashboardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

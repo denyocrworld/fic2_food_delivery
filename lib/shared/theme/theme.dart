@@ -8,7 +8,7 @@ class MainTheme {
   //Color
   static Color appbarBackgroundColor = Colors.white;
   static Color primaryColor = const Color(0xffFA533C);
-  static Color scaffoldBackgroundColor = Colors.grey[200]!;
+  static Color scaffoldBackgroundColor = Colors.grey[300]!;
   static MaterialColor primarySwatch = Colors.blueGrey;
   static TextStyle googleFont = GoogleFonts.sora();
   static Color drawerBackgroundColor = const Color(0xff404E67);

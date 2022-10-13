@@ -215,7 +215,31 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/contoh_list',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Debug',
+      route: '/debug',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Hris Login',
+      route: '/hris_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Hris Employee Dashboard',
+      route: '/hris_employee_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Hris Hr Dashboard',
+      route: '/hris_hr_dashboard',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

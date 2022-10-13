@@ -2,14 +2,14 @@
 //#TEMPLATE stfl
 import 'package:flutter/material.dart';
 
-class TStatefulWidget extends StatefulWidget {
-  const TStatefulWidget({Key? key}) : super(key: key);
+class CURSOR_1 extends StatefulWidget {
+  const CURSOR_1({Key? key}) : super(key: key);
 
   @override
-  State<TStatefulWidget> createState() => _TStatefulWidgetState();
+  State<CURSOR_1> createState() => _CURSOR_1State();
 }
 
-class _TStatefulWidgetState extends State<TStatefulWidget> {
+class _CURSOR_1State extends State<CURSOR_1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,7 @@ class _TStatefulWidgetState extends State<TStatefulWidget> {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [CURSOR_2],
           ),
         ),
       ),
@@ -29,3 +29,5 @@ class _TStatefulWidgetState extends State<TStatefulWidget> {
   }
 }
 //#END
+
+var CURSOR_2;

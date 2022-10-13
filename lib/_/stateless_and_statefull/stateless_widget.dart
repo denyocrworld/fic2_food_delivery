@@ -2,8 +2,8 @@
 //#TEMPLATE stss
 import 'package:flutter/material.dart';
 
-class TStatelessWidget extends StatelessWidget {
-  const TStatelessWidget({Key? key}) : super(key: key);
+class CURSOR_1 extends StatelessWidget {
+  const CURSOR_1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class TStatelessWidget extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [CURSOR_2],
           ),
         ),
       ),
@@ -24,3 +24,5 @@ class TStatelessWidget extends StatelessWidget {
   }
 }
 //#END
+
+var CURSOR_2;

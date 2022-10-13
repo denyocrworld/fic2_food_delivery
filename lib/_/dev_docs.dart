@@ -977,9 +977,10 @@ class DevDocsView extends StatelessWidget {
                         decoration: const InputDecoration.collapsed(
                           filled: true,
                           fillColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
                           hintText: "Search",
                         ),
-                        onChanged: (value) {},
+                        onFieldSubmitted: (value) {},
                       ),
                     ),
                   ],
@@ -1021,8 +1022,9 @@ class DevDocsView extends StatelessWidget {
                           hintStyle: TextStyle(
                             color: Colors.grey[500],
                           ),
+                          hoverColor: Colors.transparent,
                         ),
-                        onChanged: (value) {},
+                        onFieldSubmitted: (value) {},
                       ),
                     ),
                   ],
@@ -1062,7 +1064,9 @@ class DevDocsView extends StatelessWidget {
                           filled: true,
                           fillColor: Colors.transparent,
                           hintText: "Search",
+                          hoverColor: Colors.transparent,
                         ),
+                        onFieldSubmitted: (value) {},
                       ),
                     ),
                     InkWell(

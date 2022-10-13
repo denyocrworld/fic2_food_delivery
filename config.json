@@ -2,6 +2,10 @@
     "modules": [
         "list/table_list",
         "list/tab_list",
-        "contoh_list"
+        "contoh_list",
+        "debug",
+        "hris/auth/hris_login",
+        "hris/employee/hris_employee_dashboard",
+        "hris/hr/hris_hr_dashboard"
     ]
 }

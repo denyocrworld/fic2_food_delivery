@@ -1,4 +1,5 @@
 import 'package:blur/blur.dart';
+import 'package:fhe_template/_/__widget/reuseable_stepper.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../controller/template_card_controller.dart';
@@ -21,6 +22,7 @@ class TemplateCardView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const QStepper(),
               //#GROUP_TEMPLATE list_item
 
               //#TEMPLATE item_card

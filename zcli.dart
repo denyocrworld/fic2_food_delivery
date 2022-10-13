@@ -90,9 +90,15 @@ generateSnippet() async {
 
             code[i] = code[i].toString().replaceAll(r'"$', r'"\\$').trim();
             code[i] = code[i].toString().replaceAll(r"'$", r"'\\$").trim();
+            code[i] = code[i].toString().replaceAll(r" $", r" \\$").trim();
+            code[i] = code[i].toString().replaceAll(r":$", r":\\$").trim();
 
-            if (i == code.length - 1) {
-              code[i] = "\"${code[i]}\$2\"";
+            code[i] = code[i].toString().replaceAll("CURSOR_1", "\$1");
+            code[i] = code[i].toString().replaceAll("CURSOR_2", "\$2");
+
+            if (i == code.length - 1 &&
+                !code[i].toString().contains("CURSOR_")) {
+              code[i] = "\"${code[i]}\$100\"";
             } else {
               code[i] = "\"${code[i]}\",";
             }

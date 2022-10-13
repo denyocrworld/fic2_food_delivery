@@ -17,6 +17,15 @@ class ShellRouteExampleApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Capek Ngoding',
+      debugShowCheckedModeBanner: false,
+      theme: getDefaultTheme(),
+      // home: const MagicSnippetView(),
+      // home: const HrisLoginView(),
+      home: const TableListView(),
+    );
+
     return MaterialApp.router(
       title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,

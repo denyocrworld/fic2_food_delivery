@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:fhe_template/core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +20,126 @@ class TableListView extends StatefulWidget {
     var page = controller.page;
     var limit = 10;
 
+    deleteAllData() async {
+      var snapshot =
+          await FirebaseFirestore.instance.collection("customers").get();
+      for (var i = 0; i < snapshot.docs.length; i++) {
+        await FirebaseFirestore.instance
+            .collection("customers")
+            .doc(snapshot.docs[i].id)
+            .delete();
+      }
+    }
+
+    generateDummies() async {
+      var randomPhoto = [
+        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/902.jpg",
+        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/774.jpg",
+        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/436.jpg",
+        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/205.jpg",
+      ];
+      randomPhoto.shuffle();
+
+      var randomNames = [
+        "Leo Hickle",
+        "Kevin Spencer",
+        "Vincenza Cruickshank",
+        "Nicolas Shields",
+      ];
+      randomNames.shuffle();
+
+      var randomAddress = [
+        "9806 Lebsack River Suite 348",
+        "26976 Goldner Mews Apt. 850",
+        "52339 Demario Mount Apt. 489",
+        "2819 Stracke Prairie Apt. 894",
+      ];
+
+      for (var i = 1; i <= 5; i++) {
+        randomPhoto.shuffle();
+        randomNames.shuffle();
+        randomAddress.shuffle();
+        await FirebaseFirestore.instance.collection("customers").add({
+          "photo": randomPhoto.first,
+          "customer_name": randomNames.first,
+          "address": randomAddress.first,
+        });
+      }
+    }
+
+    TableCell getCellHeader(String header) {
+      const cellPadding = 12.0;
+
+      return TableCell(
+        verticalAlignment: TableCellVerticalAlignment.top,
+        child: Padding(
+          padding: const EdgeInsets.all(cellPadding),
+          child: Text(header),
+        ),
+      );
+    }
+
+    TableCell getCellValue(dynamic value) {
+      const cellPadding = 12.0;
+
+      if (value.toString().startsWith("http")) {
+        return TableCell(
+          verticalAlignment: TableCellVerticalAlignment.top,
+          child: Padding(
+            padding: const EdgeInsets.all(cellPadding),
+            child: CircleAvatar(
+              backgroundImage: NetworkImage(
+                value ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
+              ),
+            ),
+          ),
+        );
+      }
+
+      return TableCell(
+        verticalAlignment: TableCellVerticalAlignment.top,
+        child: Padding(
+          padding: const EdgeInsets.all(cellPadding),
+          child: Text("$value"),
+        ),
+      );
+    }
+
+    TableCell getActionCell(Map item) {
+      const cellPadding = 12.0;
+
+      return TableCell(
+        verticalAlignment: TableCellVerticalAlignment.top,
+        child: Padding(
+          padding: const EdgeInsets.all(cellPadding),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.edit,
+                  size: 18.0,
+                ),
+              ),
+              IconButton(
+                onPressed: () async {
+                  await FirebaseFirestore.instance
+                      .collection("customers")
+                      .doc(item["id"])
+                      .delete();
+                },
+                icon: const Icon(
+                  Icons.cancel,
+                  size: 18.0,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("TableList"),
@@ -37,7 +155,7 @@ class TableListView extends StatefulWidget {
                 children: [
                   StreamBuilder<QuerySnapshot>(
                     stream: FirebaseFirestore.instance
-                        .collection("orders")
+                        .collection("customers")
                         .snapshots(),
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
@@ -56,9 +174,8 @@ class TableListView extends StatefulWidget {
                       var pageItems = [];
                       var searchItems = snapshot.data!.docs.where((i) {
                         var search = controller.search.toLowerCase();
-                        var searchField = i["customer.customer_name"]
-                            .toString()
-                            .toLowerCase();
+                        var searchField =
+                            i["customer_name"].toString().toLowerCase();
                         return searchField.toString().contains(search);
                       }).toList();
 
@@ -85,7 +202,7 @@ class TableListView extends StatefulWidget {
                                     padding: const EdgeInsets.symmetric(
                                         vertical: 4.0),
                                     child: const Text(
-                                      "Orders",
+                                      "Customers",
                                       textAlign: TextAlign.left,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
@@ -128,6 +245,8 @@ class TableListView extends StatefulWidget {
                                               hintStyle: TextStyle(
                                                 color: Colors.grey[500],
                                               ),
+                                              focusColor: Colors.red,
+                                              hoverColor: Colors.transparent,
                                             ),
                                             onFieldSubmitted: (value) {
                                               controller.search = value;
@@ -155,158 +274,36 @@ class TableListView extends StatefulWidget {
                                   0: IntrinsicColumnWidth(),
                                   1: FixedColumnWidth(120),
                                   2: FlexColumnWidth(),
-                                  3: FixedColumnWidth(120),
+                                  3: FlexColumnWidth(),
                                   4: FixedColumnWidth(120),
-                                  5: FixedColumnWidth(120),
                                 },
                                 defaultVerticalAlignment:
                                     TableCellVerticalAlignment.middle,
                                 children: <TableRow>[
-                                  const TableRow(
+                                  TableRow(
                                     children: <Widget>[
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Order ID"),
-                                        ),
-                                      ),
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Created At"),
-                                        ),
-                                      ),
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Customer Name"),
-                                        ),
-                                      ),
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Status"),
-                                        ),
-                                      ),
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Total"),
-                                        ),
-                                      ),
-                                      TableCell(
-                                        verticalAlignment:
-                                            TableCellVerticalAlignment.top,
-                                        child: Padding(
-                                          padding: EdgeInsets.all(cellPadding),
-                                          child: Text("Action"),
-                                        ),
-                                      ),
+                                      getCellHeader("ID"),
+                                      getCellHeader("Photo"),
+                                      getCellHeader("Customer Name"),
+                                      getCellHeader("Address"),
+                                      getCellHeader("Action"),
                                     ],
                                   ),
                                   ...List.generate(pageItems.length, (index) {
                                     Map<String, dynamic> item =
                                         (pageItems[index].data()
                                             as Map<String, dynamic>);
+
                                     item["id"] = pageItems[index].id;
-                                    DateTime createdAt =
-                                        (item["created_at"] as Timestamp)
-                                            .toDate();
-                                    String formattedCreatedAt =
-                                        DateFormat("d MMM y").format(createdAt);
+
                                     return TableRow(
                                       decoration: const BoxDecoration(),
                                       children: <Widget>[
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Text("${item["id"]}"),
-                                          ),
-                                        ),
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Text(formattedCreatedAt),
-                                          ),
-                                        ),
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Text(item["customer"]
-                                                ["customer_name"]),
-                                          ),
-                                        ),
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Text(item["status"]),
-                                          ),
-                                        ),
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Text("€${item["total"]}"),
-                                          ),
-                                        ),
-                                        TableCell(
-                                          verticalAlignment:
-                                              TableCellVerticalAlignment.top,
-                                          child: Padding(
-                                            padding: const EdgeInsets.all(
-                                                cellPadding),
-                                            child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                IconButton(
-                                                  onPressed: () {},
-                                                  icon: const Icon(
-                                                    Icons.edit,
-                                                    size: 18.0,
-                                                  ),
-                                                ),
-                                                IconButton(
-                                                  onPressed: () async {
-                                                    await FirebaseFirestore
-                                                        .instance
-                                                        .collection("orders")
-                                                        .doc(item["id"])
-                                                        .delete();
-                                                  },
-                                                  icon: const Icon(
-                                                    Icons.cancel,
-                                                    size: 18.0,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
+                                        getCellValue(item["id"]),
+                                        getCellValue(item["photo"]),
+                                        getCellValue(item["customer_name"]),
+                                        getCellValue(item["address"]),
+                                        getActionCell(item),
                                       ],
                                     );
                                   }),
@@ -420,17 +417,7 @@ class TableListView extends StatefulWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
                           ),
-                          onPressed: () async {
-                            var snapshot = await FirebaseFirestore.instance
-                                .collection("orders")
-                                .get();
-                            for (var i = 0; i < snapshot.docs.length; i++) {
-                              await FirebaseFirestore.instance
-                                  .collection("orders")
-                                  .doc(snapshot.docs[i].id)
-                                  .delete();
-                            }
-                          },
+                          onPressed: () => deleteAllData(),
                         ),
                         const SizedBox(
                           width: 6.0,
@@ -441,55 +428,7 @@ class TableListView extends StatefulWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueGrey,
                           ),
-                          onPressed: () async {
-                            for (var i = 0; i < 6; i++) {
-                              var randomStatus =
-                                  i % 2 == 0 ? "Pending" : "Ongoing";
-
-                              await FirebaseFirestore.instance
-                                  .collection("orders")
-                                  .add({
-                                "created_at": Timestamp.fromDate(
-                                  DateTime.now().add(
-                                    Duration(
-                                      days: Random().nextInt(40),
-                                    ),
-                                  ),
-                                ),
-                                "customer": {
-                                  "uid": FirebaseAuth.instance.currentUser!.uid,
-                                  "customer_name": FirebaseAuth
-                                          .instance.currentUser!.displayName ??
-                                      "Anonymous",
-                                  "email": FirebaseAuth
-                                          .instance.currentUser!.email ??
-                                      "-",
-                                  "photo": FirebaseAuth
-                                          .instance.currentUser!.photoURL ??
-                                      "https://i.ibb.co/S32HNjD/no-image.jpg",
-                                },
-                                "items": [
-                                  {
-                                    "product_name": "Elegant Soft Chips",
-                                    "price": 25.0,
-                                    "qty": 2.0,
-                                  },
-                                  {
-                                    "product_name": "Oriental Metal Hat",
-                                    "price": 30.0,
-                                    "qty": 1.0,
-                                  },
-                                  {
-                                    "product_name": "Generic Bronze Chips",
-                                    "price": 100.0,
-                                    "qty": 2.0,
-                                  }
-                                ],
-                                "total": 280.0,
-                                "status": randomStatus,
-                              });
-                            }
-                          },
+                          onPressed: () => generateDummies(),
                         ),
                       ],
                     ),
