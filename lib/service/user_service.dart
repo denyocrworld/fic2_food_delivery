@@ -31,6 +31,7 @@ class UserService {
   }
 
   static initialize() async {
+    if (FirebaseAuth.instance.currentUser == null) return;
     me = FirebaseUser(
       uid: user.uid,
       name: user.displayName ?? "No Name",

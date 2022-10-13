@@ -33,10 +33,10 @@ class TableListView extends StatefulWidget {
 
     generateDummies() async {
       var randomPhoto = [
-        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/902.jpg",
-        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/774.jpg",
-        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/436.jpg",
-        "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/205.jpg",
+        "https://i.ibb.co/b21w4Sn/photo-1453396450673-3fe83d2db2c4-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+        "https://i.ibb.co/TbrgS3x/photo-1588731234159-8b9963143fca-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+        "https://i.ibb.co/K5qNzyN/photo-1570295999919-56ceb5ecca61-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+        "https://i.ibb.co/nLvfTp3/photo-1568602471122-7832951cc4c5-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
       ];
       randomPhoto.shuffle();
 
@@ -55,14 +55,11 @@ class TableListView extends StatefulWidget {
         "2819 Stracke Prairie Apt. 894",
       ];
 
-      for (var i = 1; i <= 5; i++) {
-        randomPhoto.shuffle();
-        randomNames.shuffle();
-        randomAddress.shuffle();
+      for (var i = 0; i < 4; i++) {
         await FirebaseFirestore.instance.collection("customers").add({
-          "photo": randomPhoto.first,
-          "customer_name": randomNames.first,
-          "address": randomAddress.first,
+          "photo": randomPhoto[i],
+          "customer_name": "#$i ${randomNames[i]}",
+          "address": randomAddress[i],
         });
       }
     }
@@ -176,17 +173,27 @@ class TableListView extends StatefulWidget {
                         var search = controller.search.toLowerCase();
                         var searchField =
                             i["customer_name"].toString().toLowerCase();
-                        return searchField.toString().contains(search);
+                        return i["customer_name"] != null &&
+                            searchField.toString().contains(search);
                       }).toList();
 
+                      if (searchItems.isNotEmpty && startIndex >= 0) {
+                        // 20
+                        // 23
+                        // 23
+                        // endIndex = 20 + (23 - 20)
+                        endIndex = startIndex + limit;
+                        endIndex = endIndex >= itemCount ? itemCount : endIndex;
+                        pageItems = searchItems.sublist(
+                          startIndex,
+                          endIndex,
+                        );
+                      }
+
                       debugPrint("page : $page");
+                      debugPrint("itemCount : $itemCount");
                       debugPrint("startIndex : $startIndex");
                       debugPrint("endIndex : $endIndex");
-
-                      if (searchItems.isNotEmpty && startIndex >= 0) {
-                        pageItems =
-                            searchItems.getRange(startIndex, endIndex).toList();
-                      }
 
                       var pageCount = (itemCount / limit).ceil();
 
