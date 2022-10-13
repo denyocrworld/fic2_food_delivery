@@ -2,12 +2,12 @@
 //#TEMPLATE reuseable
 import 'package:flutter/material.dart';
 
-class TReuseableWidget extends StatefulWidget {
+class CURSOR_1 extends StatefulWidget {
   final String value;
   final Function(String value) onChanged;
   final String? label;
 
-  const TReuseableWidget({
+  const CURSOR_1({
     Key? key,
     required this.value,
     required this.onChanged,
@@ -15,10 +15,10 @@ class TReuseableWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<TReuseableWidget> createState() => _TReuseableWidgetState();
+  State<CURSOR_1> createState() => _CURSOR_1State();
 }
 
-class _TReuseableWidgetState extends State<TReuseableWidget> {
+class _CURSOR_1State extends State<CURSOR_1> {
   @override
   Widget build(BuildContext context) {
     return TextField(
