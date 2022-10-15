@@ -183,8 +183,8 @@ class DevDocsView extends StatelessWidget {
               //#END
 
               //#TEMPLATE list_image_gallery
-              Builder(
-                builder: (context) {
+              LayoutBuilder(
+                builder: (context, constraint) {
                   List menus = [
                     {
                       "photo":
@@ -230,15 +230,20 @@ class DevDocsView extends StatelessWidget {
                     },
                   ];
 
+                  var spacing = 2.0;
+                  var rowCount = 4;
+
                   return Wrap(
-                    runSpacing: 20.0,
-                    spacing: 10.0,
+                    runSpacing: spacing,
+                    spacing: spacing,
                     children: List.generate(
                       menus.length,
                       (index) {
                         var item = menus[index];
+                        var size =
+                            (constraint.biggest.width - (rowCount * spacing)) /
+                                rowCount;
 
-                        var size = (MediaQuery.of(context).size.width - 80) / 4;
                         return InkWell(
                           onTap: () => item["onTap"](),
                           child: Container(
@@ -253,7 +258,7 @@ class DevDocsView extends StatelessWidget {
                               ),
                               borderRadius: const BorderRadius.all(
                                 Radius.circular(
-                                  16.0,
+                                  0.0,
                                 ),
                               ),
                             ),

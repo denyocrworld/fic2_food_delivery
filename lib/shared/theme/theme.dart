@@ -61,6 +61,7 @@ ThemeData getDefaultTheme() {
         borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
       ),
     ),
+    chipTheme: const ChipThemeData(),
     tabBarTheme: TabBarTheme(
       labelColor: MainTheme.fontColor,
     ),
