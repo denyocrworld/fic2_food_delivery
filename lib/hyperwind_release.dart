@@ -1,3 +1,5 @@
+//#GROUP_TEMPLATE class
+//#TEMPLATE hyperwind
 import 'package:flutter/material.dart';
 
 abstract class HyperWind {}
@@ -42,19 +44,6 @@ extension WidgetLayoutExtension on Widget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: this,
-    );
-  }
-
-  Widget listView({
-    int itemCount = 4,
-  }) {
-    return ListView.builder(
-      itemCount: itemCount,
-      shrinkWrap: true,
-      itemBuilder: (context, index) {
-        var item = {};
-        return this;
-      },
     );
   }
 }
@@ -137,124 +126,36 @@ get wxxxs {
   return SizedBox(width: sizeXXXS);
 }
 
-/*
-//#TEMPLATE hxxxs
-hxxxs,
-//#END
-
-//#TEMPLATE wxxxs
-wxxxs,
-//#END
-*/
-
 get wxxs {
   return SizedBox(width: sizeXXS);
 }
-
-/*
-//#TEMPLATE hxxs
-hxxs,
-//#END
-
-//#TEMPLATE wxxs
-wxxs,
-//#END
-*/
 
 get wxs {
   return SizedBox(width: sizeXS);
 }
 
-/*
-//#TEMPLATE hxs
-hxs,
-//#END
-
-//#TEMPLATE wxs
-wxs,
-//#END
-*/
-
 get ws {
   return SizedBox(width: sizeS);
 }
-
-/*
-//#TEMPLATE hs
-hs,
-//#END
-
-//#TEMPLATE ws
-ws,
-//#END
-*/
 
 get wmd {
   return SizedBox(width: sizeMD);
 }
 
-/*
-//#TEMPLATE hmd
-hmd,
-//#END
-
-//#TEMPLATE wmd
-wmd,
-//#END
-*/
-
 get wl {
   return SizedBox(width: sizeL);
 }
-
-/*
-//#TEMPLATE hl
-hl,
-//#END
-
-//#TEMPLATE wl
-wl,
-//#END
-*/
 
 get wxl {
   return SizedBox(width: sizeXL);
 }
 
-/*
-//#TEMPLATE hxl
-hxl,
-//#END
-
-//#TEMPLATE wxl
-wxl,
-//#END
-*/
-
 get wxxl {
   return SizedBox(width: sizeXXL);
 }
-
-/*
-//#TEMPLATE hxxl
-hxxl,
-//#END
-
-//#TEMPLATE wxxl
-wxxl,
-//#END
-*/
 
 get wxxxl {
   return SizedBox(width: sizeXXXL);
 }
 
-/*
-//#TEMPLATE hxxxl
-hxxxl,
 //#END
-
-//#TEMPLATE wxxxl
-wxxxl,
-//#END
-*/

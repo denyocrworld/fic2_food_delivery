@@ -1,4 +1,5 @@
 import 'package:fhe_template/core.dart';
+import 'package:fhe_template/hyperwind.dart';
 import 'package:flutter/material.dart';
 
 class DebugView extends StatefulWidget {
@@ -12,81 +13,182 @@ class DebugView extends StatefulWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              //contrad
-              //alt+shift+v
-              ListView.builder(
-                itemCount: controller.items.length,
-                shrinkWrap: true,
-                itemBuilder: (context, index) {
-                  var item = controller.items[index];
-                  return Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.grey[200],
-                        backgroundImage: NetworkImage(
-                          item["photo"],
-                        ),
-                      ),
-                      title: Text("${item["product_name"]}"),
-                      subtitle: Text("${item["price"]}"),
-                      trailing: SizedBox(
-                        width: 120.0,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                if (item["qty"] == 0) return;
-                                item["qty"]--;
-                                controller.update();
-                              },
-                              child: Card(
-                                color: Colors.grey[800],
-                                child: const Icon(
-                                  Icons.remove,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Text(
-                                "${item["qty"]}",
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () {
-                                item["qty"]++;
-                                controller.update();
-                              },
-                              child: Card(
-                                color: Colors.grey[800],
-                                child: const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ],
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      color: Colors.red[200],
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          16.0,
                         ),
                       ),
                     ),
-                  );
-                },
+                  ),
+                ),
+                wxl,
+                Expanded(
+                  child: Container(
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      color: Colors.red[200],
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          16.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: Colors.blue[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
               ),
-            ],
-          ),
+            ),
+            hl,
+            hl,
+            hl,
+            hl,
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: Colors.purple[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
+              ),
+            ),
+            const ImageIcon(
+              NetworkImage(
+                "https://i.ibb.co/rsz6JWq/751463.png",
+              ),
+              size: 24.0,
+            ).p12(),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 100.0,
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                      color: Colors.red[200],
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          16.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 100.0,
+                    width: 100.0,
+                    decoration: BoxDecoration(
+                      color: Colors.green[200],
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(
+                          16.0,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Container(
+                  height: 100.0,
+                  width: 100.0,
+                  decoration: BoxDecoration(
+                    color: Colors.red[200],
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(
+                        16.0,
+                      ),
+                    ),
+                  ),
+                ).expanded(),
+                Container(
+                  height: 100.0,
+                  width: 100.0,
+                  decoration: BoxDecoration(
+                    color: Colors.green[200],
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(
+                        16.0,
+                      ),
+                    ),
+                  ),
+                ).expanded(),
+              ],
+            ),
+            SizedBox(
+              height: 50.0,
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).md(),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).xl(),
+            Image.network(
+              "https://i.ibb.co/S32HNjD/no-image.jpg",
+              fit: BoxFit.fill,
+            ).xs(),
+            Container(
+              height: 500.0,
+              decoration: BoxDecoration(
+                color: Colors.red[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
+      ).scroll(),
     );
   }
 
