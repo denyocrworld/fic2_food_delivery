@@ -68,7 +68,7 @@ double get heightMedium => 50;
 double get heightLarge => 60;
 double get heightXtraLarge => 70;
 
-extension ButtonExtension on Widget {
+extension WidgetSizeExtension on Widget {
   xs() {
     return SizedBox(
       height: heightXtraSmall,

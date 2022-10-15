@@ -39,19 +39,29 @@ class MagicSnippetView extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
               //#TEMPLATE ctt
               Column(
-                children: const [
-                  Text("Your Text"),
-                  Text("Your Text"),
+                children: [
+                  const Text("Your Text"),
+                  const Text("Your Text"),
+                  CURSOR_1
                 ],
               ),
               //#END
               //#TEMPLATE rtt
               Row(
-                children: const [
-                  Text("Your Text"),
-                  Text("Your Text"),
+                children: [
+                  const Text("Your Text"),
+                  const Text("Your Text"),
+                  CURSOR_1
                 ],
               ),
               //#END
@@ -69,7 +79,7 @@ class MagicSnippetView extends StatelessWidget {
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Column(
+                  child: Row(
                     children: [CURSOR_1],
                   ),
                 ),
