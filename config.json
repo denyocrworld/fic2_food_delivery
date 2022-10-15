@@ -5,6 +5,7 @@
         "contoh_list",
         "debug",
         "hris/auth/hris_login",
+        "hris/auth/hris_phone_login",
         "hris/employee/hris_employee_dashboard",
         "hris/hr/hris_hr_dashboard"
     ]

@@ -1,3 +1,4 @@
+import 'package:fhe_template/_/cursor.dart';
 import 'package:flutter/material.dart';
 
 class TemplateLayout extends StatelessWidget {
@@ -20,7 +21,7 @@ class TemplateLayout extends StatelessWidget {
             children: [
               //#TEMPLATE row
               Row(
-                children: const [],
+                children: [CURSOR_1],
               ),
               //#END
               const SizedBox(
@@ -126,7 +127,7 @@ class TemplateLayout extends StatelessWidget {
               ),
               //#TEMPLATE col
               Column(
-                children: const [],
+                children: [CURSOR_1],
               ),
               //#END
               //#TEMPLATE col2

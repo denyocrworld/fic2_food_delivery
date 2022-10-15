@@ -12,10 +12,12 @@ class ExLocationPickerMapView extends StatefulWidget {
 
   final double? latitude;
   final double? longitude;
+  final bool enableEdit;
 
   const ExLocationPickerMapView({
     Key? key,
     required this.id,
+    required this.enableEdit,
     this.latitude,
     this.longitude,
   }) : super(key: key);
@@ -42,10 +44,12 @@ class LocationPickerMap extends StatefulWidget {
   final double? longitude;
   final double zoom;
   final bool enableMyLocationFeature;
+  final bool enableEdit;
 
   const LocationPickerMap({
     Key? key,
     required this.id,
+    this.enableEdit = true,
     this.latitude,
     this.longitude,
     this.zoom = 16,
@@ -269,38 +273,39 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             top: 10.0,
                             child: Text("$currentLatitude,$currentLongitude"),
                           ),
-                          Align(
-                            alignment: Alignment.bottomCenter,
-                            child: Container(
-                              color: Colors.transparent,
-                              height: 48,
-                              constraints:
-                                  const BoxConstraints(maxWidth: 360.0),
-                              margin: const EdgeInsets.only(
-                                bottom: 20.0,
-                              ),
-                              padding: const EdgeInsets.all(6.0),
-                              width: MediaQuery.of(context).size.width,
-                              child: ElevatedButton.icon(
-                                icon: const Icon(Icons.location_on),
-                                label: const Text("Select location"),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blueGrey,
+                          if (widget.enableEdit == false)
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                color: Colors.transparent,
+                                height: 48,
+                                constraints:
+                                    const BoxConstraints(maxWidth: 360.0),
+                                margin: const EdgeInsets.only(
+                                  bottom: 20.0,
                                 ),
-                                onPressed: () async {
-                                  debugPrint("currentLatitude : ");
-                                  debugPrint("currentLongitude : ");
-                                  Input.set(widget.id, ",");
-                                  Input.set(
-                                      "${widget.id}_latitude", currentLatitude);
-                                  Input.set("${widget.id}_longitude",
-                                      currentLongitude);
+                                padding: const EdgeInsets.all(6.0),
+                                width: MediaQuery.of(context).size.width,
+                                child: ElevatedButton.icon(
+                                  icon: const Icon(Icons.location_on),
+                                  label: const Text("Select location"),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.blueGrey,
+                                  ),
+                                  onPressed: () async {
+                                    debugPrint("currentLatitude : ");
+                                    debugPrint("currentLongitude : ");
+                                    Input.set(widget.id, ",");
+                                    Input.set("${widget.id}_latitude",
+                                        currentLatitude);
+                                    Input.set("${widget.id}_longitude",
+                                        currentLongitude);
 
-                                  Navigator.pop(context);
-                                },
+                                    Navigator.pop(context);
+                                  },
+                                ),
                               ),
                             ),
-                          ),
                         ],
                       ),
                     ),

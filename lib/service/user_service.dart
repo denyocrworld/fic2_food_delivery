@@ -11,6 +11,11 @@ get isAdmin {
   return me.email == "denyocr.world@gmail.com" ? true : false;
 }
 
+get isHR {
+  if (FirebaseAuth.instance.currentUser == null) return false;
+  return me.email == "5lineofcode@gmail.com" ? true : false;
+}
+
 class UserService {
   static getRandomPhotos() {
     var photos = [
@@ -35,7 +40,7 @@ class UserService {
     me = FirebaseUser(
       uid: user.uid,
       name: user.displayName ?? "No Name",
-      email: user.email,
+      email: user.email ?? "No Email",
       photo: getRandomPhotos(),
     );
 

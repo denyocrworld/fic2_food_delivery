@@ -1,7 +1,7 @@
 import 'package:blur/blur.dart';
-import 'package:fhe_template/_/__widget/reuseable_stepper.dart';
+import 'package:fhe_template/_/template_card/widget/rifqi_product_item.dart';
+import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../controller/template_card_controller.dart';
 
 class TemplateCardView extends StatefulWidget {
@@ -22,9 +22,94 @@ class TemplateCardView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const QStepper(),
               //#GROUP_TEMPLATE list_item
+              Container(
+                height: 160.0,
+                width: 160.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://i.ibb.co/F5yBDNk/photo-1513104890138-7c749659a591-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(
+                      16.0,
+                    ),
+                    topRight: Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Stack(
+                  children: const [
+                    Positioned(
+                      top: 6,
+                      right: 6,
+                      child: CircleAvatar(
+                        radius: 12.0,
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                          size: 12.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              //#TEMPLATE item_product_favorite
+              Container(
+                height: 160.0,
+                width: 160.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(
+                      16.0,
+                    ),
+                    topRight: Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Stack(
+                  children: const [
+                    Positioned(
+                      top: 6,
+                      right: 6,
+                      child: CircleAvatar(
+                        radius: 12.0,
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                          size: 12.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //#END
+              const SizedBox(
+                height: 20.0,
+              ),
+              const RifqiProductItem(),
 
+              const SizedBox(
+                height: 20.0,
+              ),
               //#TEMPLATE item_card
               Card(
                 child: ListTile(

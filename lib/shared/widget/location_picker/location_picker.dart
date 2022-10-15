@@ -9,6 +9,7 @@ class ExLocationPicker extends StatefulWidget {
   final String? label;
   final double? latitude;
   final double? longitude;
+  final bool enableEdit;
 
   const ExLocationPicker({
     Key? key,
@@ -16,6 +17,7 @@ class ExLocationPicker extends StatefulWidget {
     this.label,
     this.latitude,
     this.longitude,
+    this.enableEdit = true,
   }) : super(key: key);
 
   @override
@@ -196,6 +198,7 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                                       id: widget.id,
                                       latitude: latitude,
                                       longitude: longitude,
+                                      enableEdit: widget.enableEdit,
                                     ),
                                   ),
                                 );
@@ -206,7 +209,8 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                           if (isLocationPicked())
                             ElevatedButton.icon(
                               icon: const Icon(Icons.location_on),
-                              label: const Text("Change"),
+                              label:
+                                  Text(widget.enableEdit ? "Change" : "View"),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blueGrey,
                               ),
@@ -219,6 +223,7 @@ class _ExLocationPickerState extends State<ExLocationPicker>
                                       id: widget.id,
                                       latitude: latitude,
                                       longitude: longitude,
+                                      enableEdit: widget.enableEdit,
                                     ),
                                   ),
                                 );

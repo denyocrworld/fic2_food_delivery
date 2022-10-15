@@ -239,6 +239,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/hris_hr_dashboard',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Hris Phone Login',
+      route: '/hris_phone_login',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

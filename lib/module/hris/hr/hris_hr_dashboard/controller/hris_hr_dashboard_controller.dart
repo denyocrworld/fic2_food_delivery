@@ -1,8 +1,8 @@
+import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
-import '../view/hris_hr_dashboard_view.dart';
 
-class HrisHrDashboardController extends State<HrisHrDashboardView> implements MvcController {
+class HrisHrDashboardController extends State<HrisHrDashboardView>
+    implements MvcController {
   static late HrisHrDashboardController instance;
   late HrisHrDashboardView view;
 
@@ -17,4 +17,12 @@ class HrisHrDashboardController extends State<HrisHrDashboardView> implements Mv
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  Future doLogout() async {
+    await FirebaseAuth.instance.signOut();
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const HrisLoginView()),
+    );
+  }
 }

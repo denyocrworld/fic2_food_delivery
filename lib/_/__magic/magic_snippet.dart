@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../cursor.dart';
+
 //#GROUP_TEMPLATE magic_snippet
 class MagicSnippetView extends StatelessWidget {
   const MagicSnippetView({Key? key}) : super(key: key);
@@ -37,7 +39,7 @@ class MagicSnippetView extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              //#TEMPLATE col.tt
+              //#TEMPLATE ctt
               Column(
                 children: const [
                   Text("Your Text"),
@@ -51,6 +53,18 @@ class MagicSnippetView extends StatelessWidget {
                   Text("Your Text"),
                   Text("Your Text"),
                 ],
+              ),
+              //#END
+              //#TEMPLATE capc
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      CURSOR_1,
+                    ],
+                  ),
+                ),
               ),
               //#END
               //#TEMPLATE caprtt

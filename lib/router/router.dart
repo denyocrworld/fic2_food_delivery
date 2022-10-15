@@ -2,11 +2,48 @@ import 'package:fhe_template/core.dart';
 
 import 'package:flutter/material.dart';
 
-getRouters(context, rootNavigatorKey, shellNavigatorKey) {
+getRouters(
+  context,
+  rootNavigatorKey,
+  shellNavigatorKey,
+  initialRoute,
+) {
   return GoRouter(
     navigatorKey: rootNavigatorKey,
-    initialLocation: '/dashboard',
+    initialLocation: initialRoute ?? '/dashboard',
     routes: <RouteBase>[
+      GoRoute(
+        path: '/hris_login',
+        pageBuilder: (context, state) => noTransition(
+          context: context,
+          state: state,
+          child: const HrisLoginView(),
+        ),
+      ),
+      GoRoute(
+        path: '/hris_employee_dashboard',
+        pageBuilder: (context, state) => noTransition(
+          context: context,
+          state: state,
+          child: const HrisEmployeeDashboardView(),
+        ),
+      ),
+      GoRoute(
+        path: '/hris_hr_dashboard',
+        pageBuilder: (context, state) => noTransition(
+          context: context,
+          state: state,
+          child: const HrisHrDashboardView(),
+        ),
+      ),
+      GoRoute(
+        path: '/hris_phone_login',
+        pageBuilder: (context, state) => noTransition(
+          context: context,
+          state: state,
+          child: const HrisPhoneLoginView(),
+        ),
+      ),
       ShellRoute(
         navigatorKey: shellNavigatorKey,
         builder: (BuildContext context, GoRouterState state, Widget child) {
@@ -174,37 +211,14 @@ getRouters(context, rootNavigatorKey, shellNavigatorKey) {
             ),
           ),
           GoRoute(
-      path: '/debug',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DebugView(),
-      ),
-    ),
-          GoRoute(
-      path: '/hris_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HrisLoginView(),
-      ),
-    ),
-          GoRoute(
-      path: '/hris_employee_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HrisEmployeeDashboardView(),
-      ),
-    ),
-          GoRoute(
-      path: '/hris_hr_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HrisHrDashboardView(),
-      ),
-    ),
+            path: '/debug',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DebugView(),
+            ),
+          ),
+
           //@ROUTER_GENERATOR
         ],
       ),
