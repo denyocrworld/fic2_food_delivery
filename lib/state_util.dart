@@ -68,6 +68,14 @@ double get heightMedium => 50;
 double get heightLarge => 60;
 double get heightXtraLarge => 70;
 
+extension WidgetLayoutExtension on Widget {
+  expanded() {
+    return Expanded(
+      child: this,
+    );
+  }
+}
+
 extension WidgetSizeExtension on Widget {
   xs() {
     return SizedBox(
