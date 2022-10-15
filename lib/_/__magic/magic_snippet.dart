@@ -1,3 +1,4 @@
+import 'package:fhe_template/hyperwind.dart';
 import 'package:flutter/material.dart';
 
 import '../cursor.dart';
@@ -34,75 +35,70 @@ class MagicSnippetView extends StatelessWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
+      body: Column(
+        children: [
+          ElevatedButton.icon(
+            icon: const Icon(Icons.add),
+            label: const Text("Add"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueGrey,
+            ),
+            onPressed: () {},
+          ),
+          //#TEMPLATE ctt
+          Column(
             children: [
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Add"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () {},
-              ),
-              //#TEMPLATE ctt
-              Column(
-                children: [
-                  const Text("Your Text"),
-                  const Text("Your Text"),
-                  CURSOR_1
-                ],
-              ),
-              //#END
-              //#TEMPLATE rtt
-              Row(
-                children: [
-                  const Text("Your Text"),
-                  const Text("Your Text"),
-                  CURSOR_1
-                ],
-              ),
-              //#END
-              //#TEMPLATE capc
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [CURSOR_1],
-                  ),
-                ),
-              ),
-              //#END
-              //#TEMPLATE capr
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [CURSOR_1],
-                  ),
-                ),
-              ),
-              //#END
-              //#TEMPLATE caprtt
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      const Text("Your Text"),
-                      const Text("Your Text"),
-                      CURSOR_1,
-                    ],
-                  ),
-                ),
-              ),
-              //#END
+              const Text("Your Text"),
+              const Text("Your Text"),
+              CURSOR_1
             ],
           ),
-        ),
-      ),
+          //#END
+          //#TEMPLATE rtt
+          Row(
+            children: [
+              const Text("Your Text"),
+              const Text("Your Text"),
+              CURSOR_1
+            ],
+          ),
+          //#END
+          //#TEMPLATE capc
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [CURSOR_1],
+              ),
+            ),
+          ),
+          //#END
+          //#TEMPLATE capr
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [CURSOR_1],
+              ),
+            ),
+          ),
+          //#END
+          //#TEMPLATE caprtt
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  const Text("Your Text"),
+                  const Text("Your Text"),
+                  CURSOR_1,
+                ],
+              ),
+            ),
+          ),
+          //#END
+        ],
+      ).p12().scroll(),
     );
   }
 }

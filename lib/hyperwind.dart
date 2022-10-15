@@ -21,8 +21,28 @@ double get heightLarge => 60;
 double get heightXtraLarge => 70;
 
 extension WidgetLayoutExtension on Widget {
-  expanded() {
+  Widget expanded() {
     return Expanded(
+      child: this,
+    );
+  }
+
+  Widget p12() {
+    return Container(
+      padding: const EdgeInsets.all(12.0),
+      child: this,
+    );
+  }
+
+  Widget scroll() {
+    return SingleChildScrollView(
+      child: this,
+    );
+  }
+
+  Widget scrollH() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: this,
     );
   }
