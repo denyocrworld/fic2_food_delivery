@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main() async {
-  var file = File(".\\lib\\state_util.dart");
+  var file = File(".\\lib\\hyperwind.dart");
   var content = file.readAsStringSync();
 
   var sizes = [

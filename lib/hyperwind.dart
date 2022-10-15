@@ -40,7 +40,7 @@ extension WidgetLayoutExtension on Widget {
     );
   }
 
-  Widget scrollH() {
+  Widget scrollHorizontal() {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: this,
@@ -86,3 +86,164 @@ extension WidgetSizeExtension on Widget {
 }
 
 //#GENERATED_CODE
+get hxxxs {
+  return SizedBox(height: sizeXXXS);
+}
+
+get hxxs {
+  return SizedBox(height: sizeXXS);
+}
+
+get hxs {
+  return SizedBox(height: sizeXS);
+}
+
+get hs {
+  return SizedBox(height: sizeS);
+}
+
+get hmd {
+  return SizedBox(height: sizeMD);
+}
+
+get hl {
+  return SizedBox(height: sizeL);
+}
+
+get hxl {
+  return SizedBox(height: sizeXL);
+}
+
+get hxxl {
+  return SizedBox(height: sizeXXL);
+}
+
+get hxxxl {
+  return SizedBox(height: sizeXXXL);
+}
+
+get wxxxs {
+  return SizedBox(width: sizeXXXS);
+}
+
+/*
+//#TEMPLATE hxxxs
+hxxxs,
+//#END
+
+//#TEMPLATE wxxxs
+wxxxs,
+//#END
+*/
+
+get wxxs {
+  return SizedBox(width: sizeXXS);
+}
+
+/*
+//#TEMPLATE hxxs
+hxxs,
+//#END
+
+//#TEMPLATE wxxs
+wxxs,
+//#END
+*/
+
+get wxs {
+  return SizedBox(width: sizeXS);
+}
+
+/*
+//#TEMPLATE hxs
+hxs,
+//#END
+
+//#TEMPLATE wxs
+wxs,
+//#END
+*/
+
+get ws {
+  return SizedBox(width: sizeS);
+}
+
+/*
+//#TEMPLATE hs
+hs,
+//#END
+
+//#TEMPLATE ws
+ws,
+//#END
+*/
+
+get wmd {
+  return SizedBox(width: sizeMD);
+}
+
+/*
+//#TEMPLATE hmd
+hmd,
+//#END
+
+//#TEMPLATE wmd
+wmd,
+//#END
+*/
+
+get wl {
+  return SizedBox(width: sizeL);
+}
+
+/*
+//#TEMPLATE hl
+hl,
+//#END
+
+//#TEMPLATE wl
+wl,
+//#END
+*/
+
+get wxl {
+  return SizedBox(width: sizeXL);
+}
+
+/*
+//#TEMPLATE hxl
+hxl,
+//#END
+
+//#TEMPLATE wxl
+wxl,
+//#END
+*/
+
+get wxxl {
+  return SizedBox(width: sizeXXL);
+}
+
+/*
+//#TEMPLATE hxxl
+hxxl,
+//#END
+
+//#TEMPLATE wxxl
+wxxl,
+//#END
+*/
+
+get wxxxl {
+  return SizedBox(width: sizeXXXL);
+}
+
+/*
+//#TEMPLATE hxxxl
+hxxxl,
+//#END
+
+//#TEMPLATE wxxxl
+wxxxl,
+//#END
+*/
