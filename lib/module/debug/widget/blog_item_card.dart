@@ -11,6 +11,32 @@ class BlogItemCard extends StatefulWidget {
 }
 
 class _BlogItemCardState extends State<BlogItemCard> {
+  //belajar flutter enaknya dimana?
+  /*
+  belajar Dart dulu gan, dart basic ya, boleh dimana aja referensiinya:
+  youtube, dokumentasi
+  - Variable
+  - IF
+  - Array
+  - Looping
+  - Function
+  - Basic OOP (Minimal bisa bkin class, method dan variabel-nya dan tau cara pake-nya)
+
+  Habis itu belajar Flutter Basic
+  - Common Widget
+    Image, Icon, Text, Container, Scaffold
+
+  - Layout
+    Row, Column, Wrap, Stack, SinglechildScrollView
+
+  - State Management
+    - coba bikin loading aja dulu
+    - coba bikin counter
+  
+  - Perbanyak latihan | |
+
+  Yes, vs code!
+  */
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -96,7 +122,7 @@ class _BlogItemCardState extends State<BlogItemCard> {
                           ),
                         ),
                         const SizedBox(
-                          width: 4.0,
+                          width: 6.0,
                         ),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,9 +130,9 @@ class _BlogItemCardState extends State<BlogItemCard> {
                             // nanti ini ada snippet-nya
                             // di youtube gak di share
                             const Text(
-                              "By Jessica Miller",
+                              "By Roy Marteen",
                               style: TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 14.0,
                               ),
                             ),
                             Row(
