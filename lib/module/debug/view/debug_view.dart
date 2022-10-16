@@ -1,4 +1,7 @@
 import 'package:fhe_template/core.dart';
+import 'package:fhe_template/module/debug/widget/blog_card.dart';
+import 'package:fhe_template/module/debug/widget/blog_horizontal_card.dart';
+import 'package:fhe_template/module/debug/widget/blog_item_card.dart';
 import 'package:fhe_template/module/debug/widget/event_card.dart';
 import 'package:fhe_template/module/debug/widget/gallery_album_card.dart';
 import 'package:fhe_template/module/debug/widget/gallery_card.dart';
@@ -39,6 +42,18 @@ class DebugView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              const BlogItemCard(),
+              const SizedBox(
+                height: 20.0,
+              ),
+              const BlogHorizontalCard(),
+              const SizedBox(
+                height: 20.0,
+              ),
+              const BlogCard(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Row(
                 children: [
                   WeatherCard(
