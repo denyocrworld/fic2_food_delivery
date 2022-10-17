@@ -11,32 +11,6 @@ class BlogItemCard extends StatefulWidget {
 }
 
 class _BlogItemCardState extends State<BlogItemCard> {
-  //belajar flutter enaknya dimana?
-  /*
-  belajar Dart dulu gan, dart basic ya, boleh dimana aja referensiinya:
-  youtube, dokumentasi
-  - Variable
-  - IF
-  - Array
-  - Looping
-  - Function
-  - Basic OOP (Minimal bisa bkin class, method dan variabel-nya dan tau cara pake-nya)
-
-  Habis itu belajar Flutter Basic
-  - Common Widget
-    Image, Icon, Text, Container, Scaffold
-
-  - Layout
-    Row, Column, Wrap, Stack, SinglechildScrollView
-
-  - State Management
-    - coba bikin loading aja dulu
-    - coba bikin counter
-  
-  - Perbanyak latihan | |
-
-  Yes, vs code!
-  */
   @override
   Widget build(BuildContext context) {
     return Card(

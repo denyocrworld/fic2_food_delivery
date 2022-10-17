@@ -35,7 +35,9 @@ class ShellRouteExampleApp extends StatelessWidget {
       title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      home: const DebugView(),
+      // home: const DebugView(),
+      home: const ContohDashboardView(),
+      // home: const ContohBacaApiView(),
     );
     return MaterialApp.router(
       title: 'Capek Ngoding',
@@ -66,3 +68,15 @@ class ShellRouteExampleApp extends StatelessWidget {
     // );
   }
 }
+//TODO: perbaiki kode ini yaa
+//* perbaiki kode ini yaa
+//? perbaiki kode ini yaa
+//! perbaiki kode ini yaa
+/*
+Extension
+- Flutter
+- Dart
+- Better Comments
+- JSON to Dart Model (by Hirantha)
+- Flutter Hyper Extension
+*/

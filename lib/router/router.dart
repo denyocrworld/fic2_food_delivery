@@ -219,6 +219,46 @@ getRouters(
             ),
           ),
 
+          GoRoute(
+      path: '/contoh_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ContohDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/new_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const NewProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/contoh_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ContohProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/contoh_baca_api',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ContohBacaApiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

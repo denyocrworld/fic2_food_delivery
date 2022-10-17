@@ -245,6 +245,36 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/hris_phone_login',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Contoh Dashboard',
+      route: '/contoh_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Product Form',
+      route: '/product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'New Product Form',
+      route: '/new_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Contoh Product Form',
+      route: '/contoh_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Contoh Baca Api',
+      route: '/contoh_baca_api',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 
