@@ -6,6 +6,7 @@
         "ps/ps_profile",
         "ps/ps_share_parking_form",
         "ps/ps_parking_list",
-        "ps/ps_booking_list"
+        "ps/ps_booking_list",
+        "ps/ps_user_list"
     ]
 }

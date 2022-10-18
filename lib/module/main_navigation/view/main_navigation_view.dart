@@ -335,6 +335,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ps_booking_list',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps User List',
+      route: '/ps_user_list',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

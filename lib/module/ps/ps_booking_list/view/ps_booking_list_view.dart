@@ -114,14 +114,87 @@ class PsBookingListView extends StatefulWidget {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Expanded(
-                                          child: Text(
-                                            "${item["user"]["name"]}",
-                                            style: const TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "${item["user"]["name"]}",
+                                                overflow: TextOverflow.ellipsis,
+                                                style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: 6.0,
+                                              ),
+                                              Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.center,
+                                                children: [
+                                                  const Text(
+                                                    "8.1 km",
+                                                    style: TextStyle(
+                                                      fontSize: 10.0,
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 4.0,
+                                                  ),
+                                                  const Icon(
+                                                    Icons.circle,
+                                                    size: 4.0,
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 4.0,
+                                                  ),
+                                                  Icon(
+                                                    Icons.star,
+                                                    color: Colors.orange[400],
+                                                    size: 16.0,
+                                                  ),
+                                                  const Text(
+                                                    "4.8",
+                                                    style: TextStyle(
+                                                      fontSize: 10.0,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                              const SizedBox(
+                                                height: 6.0,
+                                              ),
+                                              Text(
+                                                "${item["description"]}",
+                                                style: const TextStyle(
+                                                  fontSize: 10.0,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: 6.0,
+                                              ),
+                                              Text(
+                                                "${item["status"]}",
+                                                style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: 6.0,
+                                              ),
+                                              Text(
+                                                "\$${item["price"]}",
+                                                style: const TextStyle(
+                                                  fontSize: 14.0,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         SizedBox(
@@ -161,97 +234,36 @@ class PsBookingListView extends StatefulWidget {
                                               const SizedBox(
                                                 height: 4.0,
                                               ),
-                                              SizedBox(
-                                                width: MediaQuery.of(context)
-                                                    .size
-                                                    .width,
-                                                child: ElevatedButton.icon(
-                                                  icon: const Icon(
-                                                    MdiIcons.book,
-                                                    size: 16.0,
-                                                  ),
-                                                  label: const Text(
-                                                    "Done",
-                                                    style: TextStyle(
-                                                      fontSize: 10.0,
+                                              if (item["status"] == "Ongoing")
+                                                SizedBox(
+                                                  width: MediaQuery.of(context)
+                                                      .size
+                                                      .width,
+                                                  child: ElevatedButton.icon(
+                                                    icon: const Icon(
+                                                      MdiIcons.book,
+                                                      size: 16.0,
                                                     ),
+                                                    label: const Text(
+                                                      "Mark as completed",
+                                                      style: TextStyle(
+                                                        fontSize: 10.0,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Colors.blueGrey,
+                                                    ),
+                                                    onPressed: () => controller
+                                                        .doMarkAsCompleted(
+                                                            item),
                                                   ),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    backgroundColor:
-                                                        Colors.blueGrey,
-                                                  ),
-                                                  onPressed: () {},
                                                 ),
-                                              ),
                                             ],
                                           ),
                                         ),
                                       ],
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        const Text(
-                                          "8.1 km",
-                                          style: TextStyle(
-                                            fontSize: 10.0,
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          width: 4.0,
-                                        ),
-                                        const Icon(
-                                          Icons.circle,
-                                          size: 4.0,
-                                        ),
-                                        const SizedBox(
-                                          width: 4.0,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: Colors.orange[400],
-                                          size: 16.0,
-                                        ),
-                                        const Text(
-                                          "4.8",
-                                          style: TextStyle(
-                                            fontSize: 10.0,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Text(
-                                      "${item["description"]}",
-                                      style: const TextStyle(
-                                        fontSize: 10.0,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Text(
-                                      "${item["status"]}",
-                                      style: const TextStyle(
-                                        fontSize: 12.0,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Text(
-                                      "\$${item["price"]}",
-                                      style: const TextStyle(
-                                        fontSize: 14.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
                                     ),
                                   ],
                                 ),

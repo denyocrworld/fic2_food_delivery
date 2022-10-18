@@ -41,7 +41,7 @@ class UserService {
       uid: user.uid,
       name: user.displayName ?? "No Name",
       email: user.email ?? "No Email",
-      photo: getRandomPhotos(),
+      photo: user.photoURL ?? getRandomPhotos(),
     );
 
     await FirebaseFirestore.instance.collection("users").doc(user.uid).set({

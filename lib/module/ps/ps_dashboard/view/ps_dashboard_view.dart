@@ -89,75 +89,80 @@ class PsDashboardView extends StatefulWidget {
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
                       if (snapshot.data == null) return Container();
-                      if (snapshot.data!.docs.isEmpty) {
-                        return const Text("No Data");
-                      }
                       final data = snapshot.data!;
                       return Expanded(
-                        child: Container(
-                          width: MediaQuery.of(context).size.width,
-                          padding: const EdgeInsets.all(20.0),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                16.0,
-                              ),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x19000000),
-                                blurRadius: 24,
-                                offset: Offset(0, 11),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "Parking list",
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "${data.docs.length}",
-                                          style: const TextStyle(
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                        child: InkWell(
+                          onTap: () {
+                            PsMainNavigationViewState.instance.selectedIndex =
+                                1;
+                            PsMainNavigationViewState.instance.update();
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            padding: const EdgeInsets.all(20.0),
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  16.0,
                                 ),
                               ),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: const BoxDecoration(
-                                  color: Colors.red,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.0,
-                                    ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0x19000000),
+                                  blurRadius: 24,
+                                  offset: Offset(0, 11),
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        "Parking list",
+                                        style: TextStyle(
+                                          fontSize: 12.0,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 6.0,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "${data.docs.length}",
+                                            style: const TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                child: const Icon(
-                                  Icons.car_rental,
-                                  size: 24.0,
-                                  color: Colors.white,
+                                Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  decoration: const BoxDecoration(
+                                    color: Colors.red,
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                        8.0,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Icon(
+                                    Icons.car_rental,
+                                    size: 24.0,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       );
@@ -173,75 +178,83 @@ class PsDashboardView extends StatefulWidget {
                     builder: (context, snapshot) {
                       if (snapshot.hasError) return const Text("Error");
                       if (snapshot.data == null) return Container();
-                      if (snapshot.data!.docs.isEmpty) {
-                        return const Text("No Data");
-                      }
                       final data = snapshot.data!;
                       return Expanded(
-                        child: Container(
-                          width: MediaQuery.of(context).size.width,
-                          padding: const EdgeInsets.all(20.0),
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                16.0,
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const PsUserListView(),
                               ),
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x19000000),
-                                blurRadius: 24,
-                                offset: Offset(0, 11),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "Users",
-                                      style: TextStyle(
-                                        fontSize: 12.0,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 6.0,
-                                    ),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          "${data.docs.length}",
-                                          style: const TextStyle(
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                            );
+                          },
+                          child: Container(
+                            width: MediaQuery.of(context).size.width,
+                            padding: const EdgeInsets.all(20.0),
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(
+                                  16.0,
                                 ),
                               ),
-                              Container(
-                                padding: const EdgeInsets.all(10.0),
-                                decoration: const BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      8.0,
-                                    ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Color(0x19000000),
+                                  blurRadius: 24,
+                                  offset: Offset(0, 11),
+                                ),
+                              ],
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        "Users",
+                                        style: TextStyle(
+                                          fontSize: 12.0,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 6.0,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "${data.docs.length}",
+                                            style: const TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
-                                child: const Icon(
-                                  Icons.people,
-                                  size: 24.0,
-                                  color: Colors.white,
+                                Container(
+                                  padding: const EdgeInsets.all(10.0),
+                                  decoration: const BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(
+                                        8.0,
+                                      ),
+                                    ),
+                                  ),
+                                  child: const Icon(
+                                    Icons.people,
+                                    size: 24.0,
+                                    color: Colors.white,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       );

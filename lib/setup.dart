@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fhe_template/service/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -18,6 +19,9 @@ Future initialize() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await FirebaseAuth.instance.wait();
+  // await deleteAll("users");
+  // await deleteAll("booking_list");
+  // await deleteAll("parking_list");
   UserService.initialize();
 }
 
@@ -31,5 +35,16 @@ extension FirebaseAuthExtension on FirebaseAuth {
     while (ready == false) {
       await Future.delayed(const Duration(milliseconds: 250));
     }
+  }
+}
+
+deleteAll(collectionName) async {
+  var snapshot =
+      await FirebaseFirestore.instance.collection(collectionName).get();
+  for (var i = 0; i < snapshot.docs.length; i++) {
+    await FirebaseFirestore.instance
+        .collection(collectionName)
+        .doc(snapshot.docs[i].id)
+        .delete();
   }
 }

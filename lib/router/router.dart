@@ -339,6 +339,14 @@ getRouters(
         child: const PsBookingListView(),
       ),
     ),
+          GoRoute(
+      path: '/ps_user_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsUserListView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

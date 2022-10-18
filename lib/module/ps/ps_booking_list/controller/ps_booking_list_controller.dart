@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fhe_template/state_util.dart';
 import '../view/ps_booking_list_view.dart';
@@ -20,4 +21,12 @@ class PsBookingListController extends State<PsBookingListView>
   Widget build(BuildContext context) => widget.build(context, this);
 
   String status = "Ongoing";
+  doMarkAsCompleted(item) async {
+    await FirebaseFirestore.instance
+        .collection("booking_list")
+        .doc(item["id"])
+        .update({
+      "status": "Done",
+    });
+  }
 }

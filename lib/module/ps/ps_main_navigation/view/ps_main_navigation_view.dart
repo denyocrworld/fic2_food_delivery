@@ -5,11 +5,19 @@ class PsMainNavigationView extends StatefulWidget {
   const PsMainNavigationView({Key? key}) : super(key: key);
 
   @override
-  State<PsMainNavigationView> createState() => _PsMainNavigationViewState();
+  State<PsMainNavigationView> createState() => PsMainNavigationViewState();
 }
 
-class _PsMainNavigationViewState extends State<PsMainNavigationView> {
+class PsMainNavigationViewState extends State<PsMainNavigationView> {
+  static late PsMainNavigationViewState instance;
   int selectedIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    instance = this;
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -37,7 +45,7 @@ class _PsMainNavigationViewState extends State<PsMainNavigationView> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               Icon(
-                MdiIcons.car2Plus,
+                MdiIcons.carConnected,
                 color: Colors.white,
               ),
               SizedBox(
