@@ -173,7 +173,6 @@ class FormExampleView extends StatelessWidget {
                 longitude: 106.80254435779423,
               ),
               //#END
-
             ],
           ),
         ),
