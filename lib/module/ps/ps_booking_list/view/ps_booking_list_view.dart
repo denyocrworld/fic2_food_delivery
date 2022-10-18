@@ -1,5 +1,4 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/shared/util/url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class PsBookingListView extends StatefulWidget {
@@ -61,6 +60,7 @@ class PsBookingListView extends StatefulWidget {
                       Map<String, dynamic> item =
                           (data.docs[index].data() as Map<String, dynamic>);
                       item["id"] = data.docs[index].id;
+
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
@@ -98,10 +98,10 @@ class PsBookingListView extends StatefulWidget {
                                         ),
                                       ),
                                       child: const Text(
-                                        "PROMO",
+                                        "Book now",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 8.0,
+                                          fontSize: 6.0,
                                         ),
                                       ),
                                     ),
@@ -255,9 +255,71 @@ class PsBookingListView extends StatefulWidget {
                                                       backgroundColor:
                                                           Colors.blueGrey,
                                                     ),
-                                                    onPressed: () => controller
-                                                        .doMarkAsCompleted(
-                                                            item),
+                                                    onPressed: () async {
+                                                      bool confirm = false;
+                                                      await showDialog<void>(
+                                                        context: context,
+                                                        barrierDismissible:
+                                                            true,
+                                                        builder: (BuildContext
+                                                            context) {
+                                                          return AlertDialog(
+                                                            title: const Text(
+                                                                'Confirm'),
+                                                            content:
+                                                                SingleChildScrollView(
+                                                              child: ListBody(
+                                                                children: const <
+                                                                    Widget>[
+                                                                  Text(
+                                                                      'Are you sure you want to mark this item as completed?'),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            actions: <Widget>[
+                                                              ElevatedButton(
+                                                                style: ElevatedButton
+                                                                    .styleFrom(
+                                                                  backgroundColor:
+                                                                      Colors.grey[
+                                                                          600],
+                                                                ),
+                                                                onPressed: () {
+                                                                  Navigator.pop(
+                                                                      context);
+                                                                },
+                                                                child:
+                                                                    const Text(
+                                                                        "No"),
+                                                              ),
+                                                              ElevatedButton(
+                                                                style: ElevatedButton
+                                                                    .styleFrom(
+                                                                  backgroundColor:
+                                                                      Colors
+                                                                          .blueGrey,
+                                                                ),
+                                                                onPressed: () {
+                                                                  confirm =
+                                                                      true;
+                                                                  Navigator.pop(
+                                                                      context);
+                                                                },
+                                                                child:
+                                                                    const Text(
+                                                                        "Yes"),
+                                                              ),
+                                                            ],
+                                                          );
+                                                        },
+                                                      );
+
+                                                      if (confirm) {
+                                                        controller
+                                                            .doMarkAsCompleted(
+                                                                item);
+                                                      }
+                                                    },
                                                   ),
                                                 ),
                                             ],
