@@ -9,7 +9,7 @@ class PsShareParkingFormView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("PsShareParkingForm"),
+        title: const Text("Share Parking Form"),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
