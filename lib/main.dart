@@ -37,7 +37,9 @@ class ShellRouteExampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
       // home: const DebugView(),
-      home: const TemplateCardView(),
+      home: FirebaseAuth.instance.currentUser != null
+          ? const PsMainNavigationView()
+          : const PsLoginView(),
       // home: const ContohBacaApiView(),
     );
     return MaterialApp.router(

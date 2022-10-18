@@ -1,18 +1,11 @@
 {
     "modules": [
-        "list/table_list",
-        "list/tab_list",
-        "contoh_list",
-        "debug",
-        "hris/auth/hris_login",
-        "hris/auth/hris_phone_login",
-        "hris/employee/hris_employee_dashboard",
-        "hris/hr/hris_hr_dashboard",
-        "contoh_dashboard",
-        "contoh_product_form",
-        "contoh_baca_api",
-        "contoh_login",
-        "product_crud_list",
-        "product_crud_form"
+        "ps/ps_login",
+        "ps/ps_main_navigation",
+        "ps/ps_dashboard",
+        "ps/ps_profile",
+        "ps/ps_share_parking_form",
+        "ps/ps_parking_list",
+        "ps/ps_booking_list"
     ]
 }

@@ -293,6 +293,48 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/product_crud_form',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Login',
+      route: '/ps_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Main Navigation',
+      route: '/ps_main_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Dashboard',
+      route: '/ps_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Profile',
+      route: '/ps_profile',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Share Parking Form',
+      route: '/ps_share_parking_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Parking List',
+      route: '/ps_parking_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ps Booking List',
+      route: '/ps_booking_list',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

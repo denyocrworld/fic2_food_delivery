@@ -283,6 +283,62 @@ getRouters(
         child: const ProductCrudFormView(),
       ),
     ),
+          GoRoute(
+      path: '/ps_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_profile',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsProfileView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_share_parking_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsShareParkingFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_parking_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsParkingListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ps_booking_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PsBookingListView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
