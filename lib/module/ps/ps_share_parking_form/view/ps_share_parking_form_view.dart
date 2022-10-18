@@ -43,6 +43,7 @@ class PsShareParkingFormView extends StatefulWidget {
                       ExLocationPicker(
                         id: "location",
                         label: "Location",
+                        enableEdit: true,
                       ),
                       ExTextField(
                         id: "price",
@@ -53,7 +54,7 @@ class PsShareParkingFormView extends StatefulWidget {
                       ExTextArea(
                         id: "description",
                         label: "Description",
-                        value: null,
+                        value: "-",
                       ),
                     ],
                   ),

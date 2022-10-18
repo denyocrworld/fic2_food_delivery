@@ -273,7 +273,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             top: 10.0,
                             child: Text("$currentLatitude,$currentLongitude"),
                           ),
-                          if (widget.enableEdit == false)
+                          if (widget.enableEdit == true)
                             Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
