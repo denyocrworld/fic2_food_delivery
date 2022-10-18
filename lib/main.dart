@@ -1,4 +1,3 @@
-import 'package:fhe_template/_/template_card/view/template_card_view.dart';
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
 

@@ -32,12 +32,16 @@ class PsProfileView extends StatefulWidget {
             //body
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CircleAvatar(
+              CircleAvatar(
                 backgroundColor: Colors.transparent,
-                radius: 42.0,
+                radius: 52.0,
                 backgroundImage: NetworkImage(
-                  "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  FirebaseAuth.instance.currentUser!.photoURL ??
+                      "https://i.ibb.co/S32HNjD/no-image.jpg",
                 ),
+              ),
+              const SizedBox(
+                height: 4.0,
               ),
               Text(
                 FirebaseAuth.instance.currentUser!.displayName.toString(),

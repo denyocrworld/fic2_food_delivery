@@ -9,7 +9,7 @@ class PsParkingListView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("PsParkingList"),
+        title: const Text("Parking List"),
         actions: const [],
       ),
       body: Padding(
@@ -131,30 +131,33 @@ class PsParkingListView extends StatefulWidget {
                                               const SizedBox(
                                                 height: 4.0,
                                               ),
-                                              SizedBox(
-                                                width: MediaQuery.of(context)
-                                                    .size
-                                                    .width,
-                                                child: ElevatedButton.icon(
-                                                  icon: const Icon(
-                                                    MdiIcons.book,
-                                                    size: 16.0,
-                                                  ),
-                                                  label: const Text(
-                                                    "Book",
-                                                    style: TextStyle(
-                                                      fontSize: 10.0,
+                                              if (item["user"]["uid"] !=
+                                                  FirebaseAuth.instance
+                                                      .currentUser!.uid)
+                                                SizedBox(
+                                                  width: MediaQuery.of(context)
+                                                      .size
+                                                      .width,
+                                                  child: ElevatedButton.icon(
+                                                    icon: const Icon(
+                                                      MdiIcons.book,
+                                                      size: 16.0,
                                                     ),
+                                                    label: const Text(
+                                                      "Book",
+                                                      style: TextStyle(
+                                                        fontSize: 10.0,
+                                                      ),
+                                                    ),
+                                                    style: ElevatedButton
+                                                        .styleFrom(
+                                                      backgroundColor:
+                                                          Colors.blueGrey,
+                                                    ),
+                                                    onPressed: () => controller
+                                                        .doBooking(item),
                                                   ),
-                                                  style:
-                                                      ElevatedButton.styleFrom(
-                                                    backgroundColor:
-                                                        Colors.blueGrey,
-                                                  ),
-                                                  onPressed: () => controller
-                                                      .doBooking(item),
                                                 ),
-                                              ),
                                             ],
                                           ),
                                         ),

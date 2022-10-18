@@ -94,6 +94,29 @@ class FormExampleView extends StatelessWidget {
                 value: null,
               ),
               //#END
+              //#TEMPLATE f_autocomplete_remote
+              ExAutoComplete(
+                value: "",
+                future: (search) async {
+                  var response = await Dio().get(
+                    "https://dummyjson.com/products/search?q=$search",
+                    options: Options(
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                    ),
+                  );
+                  Map obj = response.data;
+                  return obj["products"]; //List
+                },
+                valueField: "id",
+                displayField: "title",
+                photoField: "thumbnail",
+                onChanged: (value) {
+                  print("Your value is $value");
+                },
+              ),
+              //#END
               //#TEMPLATE f_combo
               const ExCombo(
                 id: "gender",

@@ -34,14 +34,16 @@ class PsParkingListController extends State<PsParkingListView>
       "user": {
         "uid": item["user"]["uid"],
         "name": item["user"]["name"],
-        "photo": item["user"]["photo"],
+        "photo":
+            item["user"]["photo"] ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
       },
       "customer": {
         "uid": FirebaseAuth.instance.currentUser!.uid,
         "name": FirebaseAuth.instance.currentUser!.displayName,
-        "photo": FirebaseAuth.instance.currentUser!.photoURL,
+        "photo": FirebaseAuth.instance.currentUser!.photoURL ??
+            "https://i.ibb.co/S32HNjD/no-image.jpg",
       },
-      "photo": item["photo"],
+      "photo": item["photo"] ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
       "price": item["price"],
       "description": item["description"],
       "latitude": item["latitude"],

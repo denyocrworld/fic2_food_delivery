@@ -51,7 +51,7 @@ class PsShareParkingFormController extends State<PsShareParkingFormView>
     var position = await getLocation();
 
     await FirebaseFirestore.instance.collection("parking_list").add({
-      "photo": photo,
+      "photo": photo ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
       "location": location,
       "price": price,
       "description": description,
@@ -59,7 +59,8 @@ class PsShareParkingFormController extends State<PsShareParkingFormView>
       "longitude": position.longitude,
       "user": {
         "uid": FirebaseAuth.instance.currentUser!.uid,
-        "photo": FirebaseAuth.instance.currentUser!.photoURL,
+        "photo": FirebaseAuth.instance.currentUser!.photoURL ??
+            "https://i.ibb.co/S32HNjD/no-image.jpg",
         "name": FirebaseAuth.instance.currentUser!.displayName,
       },
       "status": "Pending",

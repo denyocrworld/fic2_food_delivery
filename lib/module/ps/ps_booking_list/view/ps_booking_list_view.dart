@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fhe_template/core.dart';
+import 'package:fhe_template/shared/util/url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
-import '../controller/ps_booking_list_controller.dart';
 
 class PsBookingListView extends StatefulWidget {
   const PsBookingListView({Key? key}) : super(key: key);
@@ -12,18 +10,39 @@ class PsBookingListView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("PsBookingList"),
+        title: const Text("Booking List"),
         actions: const [],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+            ExRadio(
+              id: "gender",
+              items: const [
+                {
+                  "label": "Ongoing",
+                  "value": "Ongoing",
+                },
+                {
+                  "label": "Done",
+                  "value": "Done",
+                }
+              ],
+              value: "Ongoing",
+              onChanged: (value) {
+                controller.status = value;
+                controller.update();
+              },
+            ),
+            const SizedBox(
+              height: 12.0,
+            ),
             Expanded(
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection("booking_list")
-                    .where("status", isEqualTo: "Ongoing")
+                    .where("status", isEqualTo: controller.status)
                     .where(
                       "customer.uid",
                       isEqualTo: FirebaseAuth.instance.currentUser!.uid,
@@ -131,7 +150,12 @@ class PsBookingListView extends StatefulWidget {
                                                     backgroundColor:
                                                         Colors.blueGrey,
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () async {
+                                                    UrlLauncher.openMap(
+                                                      item["latitude"],
+                                                      item["longitude"],
+                                                    );
+                                                  },
                                                 ),
                                               ),
                                               const SizedBox(
