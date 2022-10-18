@@ -141,15 +141,22 @@ class TemplateCardView extends StatefulWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Card(
-                          color: Colors.grey[800],
-                          child: const Icon(
-                            Icons.remove,
-                            color: Colors.white,
+                        CircleAvatar(
+                          backgroundColor: Colors.blueGrey,
+                          radius: 12.0,
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                                size: 9.0,
+                              ),
+                            ),
                           ),
                         ),
                         const Padding(
-                          padding: EdgeInsets.all(4.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "1",
                             style: TextStyle(
@@ -157,11 +164,18 @@ class TemplateCardView extends StatefulWidget {
                             ),
                           ),
                         ),
-                        Card(
-                          color: Colors.grey[800],
-                          child: const Icon(
-                            Icons.add,
-                            color: Colors.white,
+                        CircleAvatar(
+                          backgroundColor: Colors.blueGrey,
+                          radius: 12.0,
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 9.0,
+                              ),
+                            ),
                           ),
                         ),
                       ],

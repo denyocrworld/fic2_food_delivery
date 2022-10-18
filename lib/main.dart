@@ -1,3 +1,4 @@
+import 'package:fhe_template/_/template_card/view/template_card_view.dart';
 import 'package:fhe_template/core.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,7 @@ class ShellRouteExampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
       // home: const DebugView(),
-      home: const ProductCrudListView(),
+      home: const TemplateCardView(),
       // home: const ContohBacaApiView(),
     );
     return MaterialApp.router(
