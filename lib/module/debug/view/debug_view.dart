@@ -1,16 +1,5 @@
 import 'package:fhe_template/core.dart';
-import 'package:fhe_template/module/debug/widget/amazing_card.dart';
-import 'package:fhe_template/module/debug/widget/blog_card.dart';
-import 'package:fhe_template/module/debug/widget/blog_horizontal_card.dart';
-import 'package:fhe_template/module/debug/widget/blog_item_card.dart';
-import 'package:fhe_template/module/debug/widget/event_card.dart';
-import 'package:fhe_template/module/debug/widget/gallery_album_card.dart';
-import 'package:fhe_template/module/debug/widget/gallery_card.dart';
-import 'package:fhe_template/module/debug/widget/profile_card.dart';
-import 'package:fhe_template/module/debug/widget/tags_card.dart';
 import 'package:flutter/material.dart';
-
-import '../widget/weather_card.dart';
 
 class DebugView extends StatefulWidget {
   const DebugView({Key? key}) : super(key: key);

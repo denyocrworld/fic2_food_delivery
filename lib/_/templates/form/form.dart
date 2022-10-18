@@ -54,7 +54,7 @@ class FormExampleView extends StatelessWidget {
               const ExTextField(
                 id: "first_name",
                 label: "First Name",
-                value: "Deny",
+                value: null,
               ),
               //#END
               //#TEMPLATE f_password
@@ -62,6 +62,7 @@ class FormExampleView extends StatelessWidget {
                 id: "password",
                 label: "Password",
                 textFieldType: TextFieldType.password,
+                value: null,
               ),
               //#END
               //#TEMPLATE f_number
@@ -69,14 +70,28 @@ class FormExampleView extends StatelessWidget {
                 id: "qty",
                 label: "Qty",
                 keyboardType: TextInputType.number,
-                value: "12",
+                value: null,
+              ),
+              //#END
+              //#TEMPLATE f_datepicker
+              const ExDatePicker(
+                id: "birth_date",
+                label: "Birth Date",
+                value: null,
+              ),
+              //#END
+              //#TEMPLATE f_timepicker
+              const ExTimePicker(
+                id: "working_hour",
+                label: "Working Hour",
+                value: null,
               ),
               //#END
               //#TEMPLATE f_text_area
               const ExTextArea(
                 id: "memo",
                 label: "Memo",
-                value: "nice one!",
+                value: null,
               ),
               //#END
               //#TEMPLATE f_combo
@@ -159,118 +174,6 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE f_slider
-              ExSlider(
-                items: [
-                  {
-                    "id": 1,
-                    "photo":
-                        "https://i.ibb.co/6NZ8dGk/Holiday-Travel-Agent-Promotion-Banner-Landscape.png",
-                    "onTap": (item) {},
-                  },
-                  {
-                    "id": 2,
-                    "photo":
-                        "https://i.ibb.co/5xfjdy9/Blue-Modern-Discount-Banner.png",
-                    "onTap": (item) {},
-                  },
-                  {
-                    "id": 3,
-                    "photo":
-                        "https://i.ibb.co/6Rvjyy1/Brown-Yellow-Free-Furniture-Promotion-Banner.png",
-                    "onTap": (item) {},
-                  }
-                ],
-              ),
-              //#END
-
-              //#TEMPLATE item_movie_flh
-              Container(
-                margin: const EdgeInsets.only(bottom: 10.0),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 160.0,
-                      width: 120.0,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(
-                            "https://i.ibb.co/Ksk6d1K/movie.webp",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            16.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10.0,
-                    ),
-                    Expanded(
-                      child: Container(
-                        height: 160.0,
-                        padding: const EdgeInsets.symmetric(vertical: 10.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Text(
-                              "Pertaruhan",
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 6.0,
-                            ),
-                            ExRating(
-                              id: "rating",
-                              value: 4,
-                              itemSize: 18.0,
-                            ),
-                            SizedBox(
-                              height: 6.0,
-                            ),
-                            Text(
-                              "1h 30min",
-                              style: TextStyle(
-                                fontSize: 12.0,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Center(
-                      child: InkWell(
-                        onTap: () {},
-                        child: Card(
-                          color: Colors.orange,
-                          child: Container(
-                            padding: const EdgeInsets.only(
-                              left: 20.0,
-                              right: 20.0,
-                              top: 10.0,
-                              bottom: 10.0,
-                            ),
-                            child: const Text(
-                              "Book",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              //#END
             ],
           ),
         ),

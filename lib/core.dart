@@ -17,8 +17,11 @@ export 'package:fhe_template/module/contoh_baca_api/controller/contoh_baca_api_c
 export 'package:fhe_template/module/contoh_baca_api/view/contoh_baca_api_view.dart';
 export 'package:fhe_template/module/contoh_dashboard/controller/contoh_dashboard_controller.dart';
 export 'package:fhe_template/module/contoh_dashboard/view/contoh_dashboard_view.dart';
+export 'package:fhe_template/module/contoh_dashboard/widget/contoh_menu.dart';
 export 'package:fhe_template/module/contoh_list/controller/contoh_list_controller.dart';
 export 'package:fhe_template/module/contoh_list/view/contoh_list_view.dart';
+export 'package:fhe_template/module/contoh_login/controller/contoh_login_controller.dart';
+export 'package:fhe_template/module/contoh_login/view/contoh_login_view.dart';
 export 'package:fhe_template/module/contoh_product_form/controller/contoh_product_form_controller.dart';
 export 'package:fhe_template/module/contoh_product_form/view/contoh_product_form_view.dart';
 export 'package:fhe_template/module/customer_list/controller/customer_list_controller.dart';
@@ -70,6 +73,10 @@ export 'package:fhe_template/module/new_product_form/controller/new_product_form
 export 'package:fhe_template/module/new_product_form/view/new_product_form_view.dart';
 export 'package:fhe_template/module/order_list/controller/order_list_controller.dart';
 export 'package:fhe_template/module/order_list/view/order_list_view.dart';
+export 'package:fhe_template/module/product_crud_form/controller/product_crud_form_controller.dart';
+export 'package:fhe_template/module/product_crud_form/view/product_crud_form_view.dart';
+export 'package:fhe_template/module/product_crud_list/controller/product_crud_list_controller.dart';
+export 'package:fhe_template/module/product_crud_list/view/product_crud_list_view.dart';
 export 'package:fhe_template/module/product_form/controller/product_form_controller.dart';
 export 'package:fhe_template/module/product_form/view/product_form_view.dart';
 export 'package:fhe_template/module/product_list/controller/product_list_controller.dart';

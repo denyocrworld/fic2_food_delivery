@@ -10,6 +10,9 @@
         "hris/hr/hris_hr_dashboard",
         "contoh_dashboard",
         "contoh_product_form",
-        "contoh_baca_api"
+        "contoh_baca_api",
+        "contoh_login",
+        "product_crud_list",
+        "product_crud_form"
     ]
 }

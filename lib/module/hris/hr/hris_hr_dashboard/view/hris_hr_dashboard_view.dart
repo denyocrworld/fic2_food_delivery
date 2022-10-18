@@ -63,11 +63,11 @@ class HrisHrDashboardView extends StatefulWidget {
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(checkInDate ?? "-"),
+                              Text(checkInDate),
                               const SizedBox(
                                 height: 2.0,
                               ),
-                              Text(checkOutDate ?? "-"),
+                              Text(checkOutDate),
                               const Text("Checkin:"),
                               ExLocationPicker(
                                 id: "location",

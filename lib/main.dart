@@ -36,7 +36,7 @@ class ShellRouteExampleApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
       // home: const DebugView(),
-      home: const ContohDashboardView(),
+      home: const ProductCrudListView(),
       // home: const ContohBacaApiView(),
     );
     return MaterialApp.router(

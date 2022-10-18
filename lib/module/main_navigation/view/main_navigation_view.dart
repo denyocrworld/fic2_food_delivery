@@ -275,6 +275,24 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/contoh_baca_api',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Contoh Login',
+      route: '/contoh_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Product Crud List',
+      route: '/product_crud_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Product Crud Form',
+      route: '/product_crud_form',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

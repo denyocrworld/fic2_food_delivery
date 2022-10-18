@@ -259,6 +259,30 @@ getRouters(
         child: const ContohBacaApiView(),
       ),
     ),
+          GoRoute(
+      path: '/contoh_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ContohLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/product_crud_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ProductCrudListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/product_crud_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ProductCrudFormView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

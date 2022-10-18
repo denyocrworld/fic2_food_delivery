@@ -6,309 +6,252 @@ class ContohDashboardView extends StatefulWidget {
 
   Widget build(context, ContohDashboardController controller) {
     controller.view = this;
+    /*
+    JSX vs JS
+    JSX = Untuk bikin UI
+    JS = Logic
+    */
 
+    /*
+    selector {
+      property: value
+    }
+
+    namaWidget(
+      property: value,
+      method/function: () {}
+    )
+
+    Mobile
+      Android
+      IOS
+      Web
+      Desktop
+        FLUTTER
+
+    Backend
+      PHP
+        Laravel
+      Python
+      NodeJS
+        Expresss
+      Golang
+
+    Bahasa Pemrograman  
+      PHP -> Laravel, CI, Phalcon, dsb-nya...
+      Dart  -> Flutter, DartFrog
+      Javascript -> React, Vue, ExtJS, jQuery
+
+    Bahasa Styling
+      CSS -> Bootstrap, Tailwind
+    
+    Framework
+      1. Supaya lebih mudah develop-nya
+      2. Supaya kode-nya lebih ringkas
+        (misalnya, tanpa framework, kodingnya 100 baris)
+        (tapi kalo pake framework , koding-nya jadi 10 baris)
+
+
+    Flutter harus ngoding Native juga?
+    Jawabannya: Tidak
+    ----
+    - POS
+    - Ecommerce (Tokopedia, Shopee)
+    - Fin-Tech
+    - Absensi Online
+    - Monitoring pekerjaan karyawan
+    - E-Money (OVO, Dana)
+    - Video Player (Netflix,dsb)
+
+    Kecuali:
+    - Aplikasi yang berhubungan dengan hardware/sensor
+      (Kalo ga ada package-nya, akan perlu belajar Java dan Swift)
+
+
+    Supaya kodingan Flutter lebih clean
+    1. Pelajari cara membuat reuseable widget
+    2. Pelajar Architecture (Paling mudah, MVC)
+
+    Android
+    IOS
+    Desktop (Linux | Macos | Windows)
+    Web
+
+    Hati2 dalam memilih teknologi
+    - Jarang terlalu sering pindah2
+    - Karena framwork baru itu selalu bermunculan
+    
+
+    Kalau kondisinya:
+    Udah nyaman di React
+      Fokus aja di React
+
+    React = bagus
+    Flutter = bagus
+
+    Fullstack
+      - Backend
+      - Front End
+
+    Front End
+      - React/Flutter
+
+    Front End
+      - Flutter
+
+    //-------------------------
+    Semua state management ini,
+    cocok untuk aplikasi besar dan kecil!!
+
+      yang mudah:
+        setState
+        provider
+        riverpod
+          getx
+        mobx
+
+      yang agak ruwet:
+        bloc
+        cubit
+        redux
+
+    State Management itu
+    Tidak terlalu berpengaruh untuk
+    Aplikasi besar atau kecil
+
+    Yang lebih berpengaruh itu
+    adalah
+    Architecture
+
+    */
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ContohDashboard"),
+        title: const Text("Dashboard"),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.chat_bubble,
-              size: 24.0,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.chat_bubble,
+                size: 24.0,
+              ),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications,
-              size: 24.0,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.notifications,
+                size: 24.0,
+              ),
             ),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const ContohProductFormView()),
-          );
-        },
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(
-                vertical: 6.0,
-                horizontal: 12.0,
-              ),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(20.0),
-                ),
-              ),
-              child: Row(
+      //alt+shift+s
+      //state management
+      //1. loading
+      //2. counter
+      //3. coba manipulasi list (contoh-nya bikin Cart)
+      body: controller.loading
+          ? const Center(
+              child: CircularProgressIndicator(),
+            )
+          : Container(
+              width: MediaQuery.of(context).size.width,
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.search,
-                      color: Colors.grey[500],
+                  const ExLocationPicker(
+                    id: "location",
+                    label: "Location",
+                    latitude: -6.218481065235333,
+                    longitude: 106.80254435779423,
+                  ),
+                  //alt+shift+v
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: controller.products.length,
+                      itemBuilder: (context, index) {
+                        var item = controller.products[index];
+                        return GestureDetector(
+                          onTap: () {},
+                          child: Card(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundColor: Colors.grey[200],
+                                backgroundImage: NetworkImage(
+                                  item["photo"],
+                                ),
+                              ),
+                              title: Text("${item["product_name"]}"),
+                              subtitle: Text("${item["price"]}"),
+                              trailing: SizedBox(
+                                width: 120.0,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    InkWell(
+                                      onTap: () {
+                                        item["qty"]--;
+                                        controller.update();
+                                      },
+                                      child: Card(
+                                        color: Colors.grey[800],
+                                        child: const Icon(
+                                          Icons.remove,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: Text(
+                                        "${item["qty"]}",
+                                        style: const TextStyle(
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    ),
+                                    InkWell(
+                                      onTap: () {
+                                        item["qty"]++;
+                                        controller.update();
+                                      },
+                                      child: Card(
+                                        color: Colors.grey[800],
+                                        child: const Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   ),
-                  Expanded(
-                    child: TextFormField(
-                      initialValue: null,
-                      decoration: InputDecoration.collapsed(
-                        filled: true,
-                        fillColor: Colors.transparent,
-                        hintText: "What are you craving?",
-                        hintStyle: TextStyle(
-                          color: Colors.grey[500],
-                        ),
-                        hoverColor: Colors.transparent,
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height / 12,
+                    width: MediaQuery.of(context).size.width,
+                    child: ElevatedButton.icon(
+                      icon: const Icon(Icons.add),
+                      label: const Text("Add"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                       ),
-                      onFieldSubmitted: (value) {
-                        controller.search = value;
-                        controller.update();
-                      },
+                      onPressed: () {},
                     ),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Expanded(
-              child: StreamBuilder<QuerySnapshot>(
-                stream: FirebaseFirestore.instance
-                    .collection("tiktok_products")
-                    .snapshots(),
-                builder: (context, snapshot) {
-                  if (snapshot.hasError) return const Text("Error");
-                  if (snapshot.data == null) return Container();
-                  if (snapshot.data!.docs.isEmpty) {
-                    return const Text("No Data");
-                  }
-                  final data = snapshot.data!;
-                  return ListView.builder(
-                    itemCount: data.docs.length,
-                    itemBuilder: (context, index) {
-                      Map<String, dynamic> item =
-                          (data.docs[index].data() as Map<String, dynamic>);
-                      item["id"] = data.docs[index].id;
-
-                      if (controller.search.isNotEmpty) {
-                        var search = controller.search.toLowerCase();
-                        var productName =
-                            item["product_name"].toString().toLowerCase();
-
-                        if (!productName.contains(search)) return Container();
-                      }
-
-                      //alt+shift+d
-                      return InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ContohProductFormView(
-                                item: item,
-                              ),
-                            ),
-                          );
-                        },
-                        child: Dismissible(
-                          key: UniqueKey(),
-                          onDismissed: (detail) {},
-                          confirmDismiss: (direction) async {
-                            bool confirm = false;
-                            await showDialog<void>(
-                              context: context,
-                              barrierDismissible: true,
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: const Text('Confirm'),
-                                  content: SingleChildScrollView(
-                                    child: ListBody(
-                                      children: const <Widget>[
-                                        Text(
-                                            'Are you sure you want to delete this item?'),
-                                      ],
-                                    ),
-                                  ),
-                                  actions: <Widget>[
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.grey[600],
-                                      ),
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: const Text("No"),
-                                    ),
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: Colors.blueGrey,
-                                      ),
-                                      onPressed: () {
-                                        confirm = true;
-                                        Navigator.pop(context);
-                                      },
-                                      child: const Text("Yes"),
-                                    ),
-                                  ],
-                                );
-                              },
-                            );
-                            if (confirm) {
-                              await FirebaseFirestore.instance
-                                  .collection("tiktok_products")
-                                  .doc(item["id"])
-                                  .delete();
-                              return Future.value(true);
-                            }
-                            return Future.value(false);
-                          },
-                          child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(12.0),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 90,
-                                    height: 90,
-                                    margin: const EdgeInsets.only(right: 10.0),
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: NetworkImage(
-                                          item["photo"],
-                                        ),
-                                        fit: BoxFit.cover,
-                                      ),
-                                      borderRadius: const BorderRadius.all(
-                                        Radius.circular(16.0),
-                                      ),
-                                      color: Colors.blue[400],
-                                    ),
-                                    child: Stack(
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.all(6.0),
-                                          margin: const EdgeInsets.all(8.0),
-                                          decoration: BoxDecoration(
-                                            color: Colors.green[800],
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                              Radius.circular(
-                                                12.0,
-                                              ),
-                                            ),
-                                          ),
-                                          child: const Text(
-                                            "PROMO",
-                                            style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 8.0,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          item["product_name"],
-                                          style: const TextStyle(
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          height: 6.0,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            const Text(
-                                              "8.1 km",
-                                              style: TextStyle(
-                                                fontSize: 10.0,
-                                              ),
-                                            ),
-                                            const SizedBox(
-                                              width: 4.0,
-                                            ),
-                                            const Icon(
-                                              Icons.circle,
-                                              size: 4.0,
-                                            ),
-                                            const SizedBox(
-                                              width: 4.0,
-                                            ),
-                                            Icon(
-                                              Icons.star,
-                                              color: Colors.orange[400],
-                                              size: 16.0,
-                                            ),
-                                            const Text(
-                                              "4.8",
-                                              style: TextStyle(
-                                                fontSize: 10.0,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 6.0,
-                                        ),
-                                        Text(
-                                          item["category"],
-                                          style: const TextStyle(
-                                            fontSize: 10.0,
-                                          ),
-                                        ),
-                                        const SizedBox(
-                                          height: 6.0,
-                                        ),
-                                        Text(
-                                          "€${item["price"]}",
-                                          style: const TextStyle(
-                                            fontSize: 14.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 
