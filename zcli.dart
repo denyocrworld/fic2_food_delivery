@@ -181,7 +181,7 @@ Be careful, you should press this button when your project is still empty to avo
 </span>
 </div>
       <vscode-button class="title" style="background-color: #2B3E51 !important;color: #FFF !important">setState</vscode-button>
-      <vscode-button class="item create-project" id="setstate_hyper_ui">Web GoRoute Freezed</vscode-button>
+      <vscode-button class="item create-project" id="setstate_hyper_ui">Hyper UI</vscode-button>
       <vscode-button class="item create-project" id="setstate">Blank</vscode-button>
       <vscode-button class="item create-project" id="setstate_freezed">Blank Freezed</vscode-button>
       <vscode-button class="item create-project" id="setstate_fire">Firebase</vscode-button>
