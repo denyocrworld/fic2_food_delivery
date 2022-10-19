@@ -16,7 +16,16 @@ class DemoView extends StatefulWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: const [],
+            children: [
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
