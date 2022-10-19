@@ -347,6 +347,14 @@ getRouters(
         child: const PsUserListView(),
       ),
     ),
+          GoRoute(
+      path: '/demo',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DemoView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

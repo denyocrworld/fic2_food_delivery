@@ -43,6 +43,8 @@ export 'package:fhe_template/module/debug/widget/my_container_with_radius.dart';
 export 'package:fhe_template/module/debug/widget/profile_card.dart';
 export 'package:fhe_template/module/debug/widget/tags_card.dart';
 export 'package:fhe_template/module/debug/widget/weather_card.dart';
+export 'package:fhe_template/module/demo/controller/demo_controller.dart';
+export 'package:fhe_template/module/demo/view/demo_view.dart';
 export 'package:fhe_template/module/event_form/controller/event_form_controller.dart';
 export 'package:fhe_template/module/event_form/view/event_form_view.dart';
 export 'package:fhe_template/module/event_list/controller/event_list_controller.dart';

@@ -86,10 +86,10 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 
-dependency_overrides:
-  google_sign_in_web:
-    path:
-      ./google_sign_in_web/
+# dependency_overrides:
+#   google_sign_in_web:
+#     path:
+#       ./google_sign_in_web/
 flutter:
 
   # The following line ensures that the Material Icons font is
