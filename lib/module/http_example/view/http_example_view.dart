@@ -19,7 +19,7 @@ class HttpExampleView extends StatefulWidget {
             //body
             if (1 == 2)
               Expanded(
-                child: DragonList(
+                child: ExListView(
                   futureBuilder: (page) {
                     var url = "http://localhost:8080/api/blogs?page=$page";
                     var token = "dev_token";

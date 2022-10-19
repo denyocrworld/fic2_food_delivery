@@ -12,21 +12,40 @@ class DemoView extends StatefulWidget {
         title: const Text("Demo"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [],
-                  ),
-                ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: ExListView(
+                futureBuilder: (page) async {
+                  var response = await Dio().get(
+                    "https://reqres.in/api/users",
+                    options: Options(
+                      headers: {
+                        "Content-Type": "application/json",
+                      },
+                    ),
+                  );
+                  return response;
+                },
+                builder: (index, item) {
+                  return Card(
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.grey[200],
+                        backgroundImage: NetworkImage(
+                          item["avatar"],
+                        ),
+                      ),
+                      title: Text("${item["first_name"]}"),
+                      subtitle: Text("${item["email"]}"),
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
