@@ -1,7 +1,7 @@
 import 'package:blur/blur.dart';
-import 'package:fhe_template/_/__dummy/dummy_template.dart';
-import 'package:fhe_template/_/template_card/widget/rifqi_product_item.dart';
-import 'package:fhe_template/core.dart';
+import 'package:example/_/__dummy/dummy_template.dart';
+import 'package:example/_/template_card/widget/rifqi_product_item.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 import '../controller/template_card_controller.dart';
 

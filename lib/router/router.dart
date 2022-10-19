@@ -1,4 +1,4 @@
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
 
@@ -220,141 +220,141 @@ getRouters(
           ),
 
           GoRoute(
-      path: '/contoh_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ContohDashboardView(),
-      ),
-    ),
+            path: '/contoh_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ContohDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ProductFormView(),
-      ),
-    ),
+            path: '/product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/new_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const NewProductFormView(),
-      ),
-    ),
+            path: '/new_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const NewProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/contoh_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ContohProductFormView(),
-      ),
-    ),
+            path: '/contoh_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ContohProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/contoh_baca_api',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ContohBacaApiView(),
-      ),
-    ),
+            path: '/contoh_baca_api',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ContohBacaApiView(),
+            ),
+          ),
           GoRoute(
-      path: '/contoh_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ContohLoginView(),
-      ),
-    ),
+            path: '/contoh_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ContohLoginView(),
+            ),
+          ),
           GoRoute(
-      path: '/product_crud_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ProductCrudListView(),
-      ),
-    ),
+            path: '/product_crud_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProductCrudListView(),
+            ),
+          ),
           GoRoute(
-      path: '/product_crud_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ProductCrudFormView(),
-      ),
-    ),
+            path: '/product_crud_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProductCrudFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsLoginView(),
-      ),
-    ),
+            path: '/ps_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsLoginView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_main_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsMainNavigationView(),
-      ),
-    ),
+            path: '/ps_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsMainNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsDashboardView(),
-      ),
-    ),
+            path: '/ps_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsProfileView(),
-      ),
-    ),
+            path: '/ps_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsProfileView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_share_parking_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsShareParkingFormView(),
-      ),
-    ),
+            path: '/ps_share_parking_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsShareParkingFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_parking_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsParkingListView(),
-      ),
-    ),
+            path: '/ps_parking_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsParkingListView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_booking_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsBookingListView(),
-      ),
-    ),
+            path: '/ps_booking_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsBookingListView(),
+            ),
+          ),
           GoRoute(
-      path: '/ps_user_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PsUserListView(),
-      ),
-    ),
+            path: '/ps_user_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PsUserListView(),
+            ),
+          ),
           GoRoute(
-      path: '/demo',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DemoView(),
-      ),
-    ),
+            path: '/demo',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DemoView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

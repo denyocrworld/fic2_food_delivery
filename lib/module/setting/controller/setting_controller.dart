@@ -1,4 +1,4 @@
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class SettingController extends State<SettingView> implements MvcController {

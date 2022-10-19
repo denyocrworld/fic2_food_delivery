@@ -1,4 +1,4 @@
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 
 User get user {
   return FirebaseAuth.instance.currentUser!;

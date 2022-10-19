@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/card_template_view.dart';
 
-class CardTemplateController extends State<CardTemplateView> implements MvcController {
+class CardTemplateController extends State<CardTemplateView>
+    implements MvcController {
   static late CardTemplateController instance;
   late CardTemplateView view;
 

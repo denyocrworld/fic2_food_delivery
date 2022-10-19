@@ -1,4 +1,4 @@
-import 'package:fhe_template/hyperwind.dart';
+import 'package:example/hyperwind.dart';
 import 'package:flutter/material.dart';
 
 import '../cursor.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/shelf_welcome_view.dart';
 
 class ShelfWelcomeController extends State<ShelfWelcomeView>

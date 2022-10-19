@@ -3,7 +3,7 @@ list_order_with_tab
 item_order
 */
 
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class CardTemplateView extends StatefulWidget {

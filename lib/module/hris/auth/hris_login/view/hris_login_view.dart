@@ -1,5 +1,5 @@
 import 'package:blur/blur.dart';
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class HrisLoginView extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' as path;
 import 'package:flutter/material.dart';

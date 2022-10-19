@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';

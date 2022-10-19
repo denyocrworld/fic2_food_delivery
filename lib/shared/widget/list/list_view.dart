@@ -13,6 +13,7 @@ class ExListView extends StatefulWidget {
   final Color? color;
   final Axis? scrollDirection;
   final bool wrapMode;
+  final bool shrinkWrap;
   final double? bottomMargin;
 
   static reloadAll() async {
@@ -32,6 +33,7 @@ class ExListView extends StatefulWidget {
     this.color,
     this.scrollDirection,
     this.wrapMode = false,
+    this.shrinkWrap = false,
     this.bottomMargin,
     Key? key,
   }) : super(key: key);
@@ -237,6 +239,7 @@ class ExListViewState extends State<ExListView> {
           child: ListView.builder(
             controller: scrollController,
             itemCount: items.length,
+            shrinkWrap: widget.shrinkWrap,
             scrollDirection: widget.scrollDirection ?? Axis.vertical,
             itemBuilder: (context, index) {
               Map item = (items[index] as Map);

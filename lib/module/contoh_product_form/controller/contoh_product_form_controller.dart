@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/contoh_product_form_view.dart';
 
-class ContohProductFormController extends State<ContohProductFormView> implements MvcController {
+class ContohProductFormController extends State<ContohProductFormView>
+    implements MvcController {
   static late ContohProductFormController instance;
   late ContohProductFormView view;
 

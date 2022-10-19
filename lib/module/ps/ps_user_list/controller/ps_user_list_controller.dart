@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/ps_user_list_view.dart';
 
-class PsUserListController extends State<PsUserListView> implements MvcController {
+class PsUserListController extends State<PsUserListView>
+    implements MvcController {
   static late PsUserListController instance;
   late PsUserListView view;
 

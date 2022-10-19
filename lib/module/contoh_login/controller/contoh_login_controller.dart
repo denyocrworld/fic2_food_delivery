@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/contoh_login_view.dart';
 
-class ContohLoginController extends State<ContohLoginView> implements MvcController {
+class ContohLoginController extends State<ContohLoginView>
+    implements MvcController {
   static late ContohLoginController instance;
   late ContohLoginView view;
 

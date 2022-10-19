@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/contoh_baca_api_view.dart';
 
-class ContohBacaApiController extends State<ContohBacaApiView> implements MvcController {
+class ContohBacaApiController extends State<ContohBacaApiView>
+    implements MvcController {
   static late ContohBacaApiController instance;
   late ContohBacaApiView view;
 

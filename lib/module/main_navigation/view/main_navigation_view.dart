@@ -1,4 +1,4 @@
-import 'package:fhe_template/core.dart';
+import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
 
@@ -221,133 +221,133 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/debug',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Hris Login',
       route: '/hris_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Hris Employee Dashboard',
       route: '/hris_employee_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Hris Hr Dashboard',
       route: '/hris_hr_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Hris Phone Login',
       route: '/hris_phone_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Contoh Dashboard',
       route: '/contoh_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Product Form',
       route: '/product_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'New Product Form',
       route: '/new_product_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Contoh Product Form',
       route: '/contoh_product_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Contoh Baca Api',
       route: '/contoh_baca_api',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Contoh Login',
       route: '/contoh_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Product Crud List',
       route: '/product_crud_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Product Crud Form',
       route: '/product_crud_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Login',
       route: '/ps_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Main Navigation',
       route: '/ps_main_navigation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Dashboard',
       route: '/ps_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Profile',
       route: '/ps_profile',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Share Parking Form',
       route: '/ps_share_parking_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Parking List',
       route: '/ps_parking_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps Booking List',
       route: '/ps_booking_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ps User List',
       route: '/ps_user_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Demo',
       route: '/demo',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

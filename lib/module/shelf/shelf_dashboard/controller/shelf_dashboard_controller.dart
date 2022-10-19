@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/shelf_dashboard_view.dart';
 
-class ShelfDashboardController extends State<ShelfDashboardView> implements MvcController {
+class ShelfDashboardController extends State<ShelfDashboardView>
+    implements MvcController {
   static late ShelfDashboardController instance;
   late ShelfDashboardView view;
 

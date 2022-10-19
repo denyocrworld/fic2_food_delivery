@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fhe_template/state_util.dart';
+import 'package:example/state_util.dart';
 import '../view/http_example_view.dart';
 
-class HttpExampleController extends State<HttpExampleView> implements MvcController {
+class HttpExampleController extends State<HttpExampleView>
+    implements MvcController {
   static late HttpExampleController instance;
   late HttpExampleView view;
 
