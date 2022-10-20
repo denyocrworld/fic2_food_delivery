@@ -34,9 +34,11 @@ margin: const EdgeInsets.all(\$1),
   for (var i = 1; i <= 40; i++) {
     templates.add("""
 #GROUP_TEMPLATE skip_docs
+
 #TEMPLATE sz$i
-fontSize: $i.0,
+size: $i.0,
 #END
+
 
 #TEMPLATE sw$i
 const SizedBox(
@@ -201,6 +203,44 @@ color: Colors.black87,
 #TEMPLATE cTransparent
 color: Colors.transparent,
 #END
+
+// =======-----------
+
+#TEMPLATE bcWhite
+backgroundColor: Colors.white,
+#END
+
+#TEMPLATE bcBlack
+backgroundColor: Colors.black,
+#END
+
+#TEMPLATE bcBlack12
+backgroundColor: Colors.black12,
+#END
+
+#TEMPLATE bcBlack26
+backgroundColor: Colors.black26,
+#END
+
+#TEMPLATE bcBlack38
+backgroundColor: Colors.black38,
+#END
+
+#TEMPLATE bcBlack45
+backgroundColor: Colors.black45,
+#END
+
+#TEMPLATE bcBlack54
+backgroundColor: Colors.black54,
+#END
+
+#TEMPLATE bcBlack87
+backgroundColor: Colors.black87,
+#END
+
+#TEMPLATE bcTransparent
+backgroundColor: Colors.transparent,
+#END
 """
       .trim());
 
@@ -233,6 +273,10 @@ color: Colors.transparent,
 #TEMPLATE c${colorName.toString().firstCharacterUpper()}
 color: $color,
 #END
+
+#TEMPLATE bc${colorName.toString().firstCharacterUpper()}
+backgroundColor: $color,
+#END
 """
         .trim());
 
@@ -240,6 +284,10 @@ color: $color,
       templates.add("""
 #TEMPLATE c${colorName.toString().firstCharacterUpper()}$colorValue
 color: $color[$colorValue],
+#END
+
+#TEMPLATE bc${colorName.toString().firstCharacterUpper()}$colorValue
+backgroundColor: $color[$colorValue],
 #END
 """
           .trim());
@@ -275,6 +323,10 @@ void addExtraColors(List templates) {
 #TEMPLATE c${colorName.toString().firstCharacterUpper()}
 color: $color,
 #END
+
+#TEMPLATE bc${colorName.toString().firstCharacterUpper()}
+backgroundColor: $color,
+#END
 """
         .trim());
 
@@ -282,6 +334,10 @@ color: $color,
       templates.add("""
 #TEMPLATE c${colorName.toString().firstCharacterUpper()}$colorValue
 color: $color[$colorValue],
+#END
+
+#TEMPLATE bc${colorName.toString().firstCharacterUpper()}$colorValue
+backgroundColor: $color[$colorValue],
 #END
 """
           .trim());
