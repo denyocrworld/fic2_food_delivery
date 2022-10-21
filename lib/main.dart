@@ -1,12 +1,10 @@
-import 'dart:io';
 import 'package:example/core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   await initialize();
-  if (!kIsWeb && Platform.isWindows) return;
-  if (!kIsWeb && Platform.isWindows) await UserService.initialize();
+  // if (!kIsWeb && Platform.isWindows) return;
+  // if (!kIsWeb && Platform.isWindows) await UserService.initialize();
   runApp(const ShellRouteExampleApp());
 }
 
@@ -24,6 +22,7 @@ class ShellRouteExampleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Capek Ngoding',
+        navigatorKey: Get.navigatorKey,
         debugShowCheckedModeBanner: false,
         theme: getDefaultTheme(),
         home: const DebugView()

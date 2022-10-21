@@ -10,22 +10,7 @@ class TemplateScaffold extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.tune,
-              size: 24.0,
-            ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.notifications,
-              size: 24.0,
-            ),
-          ),
-        ],
+        actions: const [],
       ),
       body: SingleChildScrollView(
         child: Container(

@@ -7,7 +7,6 @@ class FormExampleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //#GROUP_TEMPLATE flutter_hyper_ui
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Form"),
