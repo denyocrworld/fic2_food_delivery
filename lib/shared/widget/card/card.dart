@@ -5,10 +5,12 @@ class ExCard extends StatelessWidget {
   final IconData? icon;
   final List<Widget> children;
   final List<Widget> actions;
+  final EdgeInsets? padding;
   const ExCard({
     Key? key,
     required this.title,
     required this.children,
+    this.padding,
     this.actions = const [],
     this.icon,
   }) : super(key: key);
@@ -49,7 +51,12 @@ class ExCard extends StatelessWidget {
             const Divider(
               height: 1.0,
             ),
-            ...children,
+            Container(
+              padding: padding,
+              child: Column(
+                children: children,
+              ),
+            ),
           ],
         ),
       ),
