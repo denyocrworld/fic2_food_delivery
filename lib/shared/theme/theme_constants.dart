@@ -16,14 +16,6 @@ var disabledTextColor = Colors.grey[800];
 //--------
 var loginBackgroundColor = Colors.blueGrey[400];
 
-List<BoxShadow> shadowList = [
-  BoxShadow(
-    color: Colors.grey[400]!,
-    blurRadius: 30,
-    offset: const Offset(0, 10),
-  )
-];
-
 const double xs = 28;
 const double sm = 38;
 const double md = 50;

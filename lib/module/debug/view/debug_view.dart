@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/shared/widget/card/card.dart';
 import 'package:flutter/material.dart';
 
 class DebugView extends StatefulWidget {
@@ -22,6 +23,75 @@ class DebugView extends StatefulWidget {
           H4("Firebase"),
           H5("Firebase"),
           H6("Firebase"),
+          ExCard(
+            title: "Hello",
+            children: [
+              Row(
+                children: const [
+                  Expanded(
+                    child: ExTextField(
+                      id: "first_name",
+                      label: "First Name",
+                      value: null,
+                    ),
+                  ),
+                  Expanded(
+                    child: ExTextField(
+                      id: "last_name",
+                      label: "Last Name",
+                      value: null,
+                    ),
+                  ),
+                ],
+              ),
+              const ExCombo(
+                id: "gender",
+                label: "Gender",
+                items: [
+                  {
+                    "label": "Male",
+                    "value": "Male",
+                  },
+                  {
+                    "label": "Female",
+                    "value": "Female",
+                  }
+                ],
+                value: "Female",
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.save),
+                label: const Text("Save"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ).w100.xl,
+            ],
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const [
+              Expanded(
+                child: ExCard(
+                  title: "Hello",
+                  children: [],
+                ),
+              ),
+              Expanded(
+                child: ExCard(
+                  title: "Hello",
+                  children: [],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
           ElevatedButton.icon(
             icon: const Icon(Icons.add),
             label: const Text("Add"),
