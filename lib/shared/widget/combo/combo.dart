@@ -199,13 +199,16 @@ class ExComboState extends State<ExCombo> implements InputControlState {
       items: items.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
-          child: Text(
-            value,
-            style: TextStyle(
-              fontSize: widget.valueFontSize ??
-                  Theme.of(context).textTheme.bodyText2!.fontSize,
-              fontFamily: Theme.of(context).textTheme.bodyText2!.fontFamily,
-              color: Theme.of(context).textTheme.bodyText2!.color,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: Text(
+              value,
+              style: TextStyle(
+                fontSize: widget.valueFontSize ??
+                    Theme.of(context).textTheme.bodyText2!.fontSize,
+                fontFamily: Theme.of(context).textTheme.bodyText2!.fontFamily,
+                color: Theme.of(context).textTheme.bodyText2!.color,
+              ),
             ),
           ),
         );
@@ -229,10 +232,10 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     getDropDown() {
       return Container(
         height: 42.0,
-        padding: const EdgeInsets.only(
-          left: 8.0,
-          right: 8.0,
-        ),
+        // padding: const EdgeInsets.only(
+        //   left: 8.0,
+        //   right: 8.0,
+        // ),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
           border: Border.all(color: Colors.grey[300]!),
