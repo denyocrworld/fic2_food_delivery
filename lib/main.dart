@@ -1,21 +1,12 @@
+import 'dart:io';
 import 'package:example/core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-//hello world
-/*
-asfafs
-*/
-//hello world
-/*
-asfafs
-*/
-//hello world
-/*
-asfafs
-*/
 void main() async {
   await initialize();
-  await UserService.initialize();
+  if (!kIsWeb && Platform.isWindows) return;
+  if (!kIsWeb && Platform.isWindows) await UserService.initialize();
   runApp(const ShellRouteExampleApp());
 }
 
@@ -32,13 +23,14 @@ class ShellRouteExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Capek Ngoding',
-      debugShowCheckedModeBanner: false,
-      theme: getDefaultTheme(),
-      home: FirebaseAuth.instance.currentUser != null
-          ? const PosMainNavigationView()
-          : const PosLoginView(),
-    );
+        title: 'Capek Ngoding',
+        debugShowCheckedModeBanner: false,
+        theme: getDefaultTheme(),
+        home: const DebugView()
+        // home: FirebaseAuth.instance.currentUser != null
+        //     ? const PosMainNavigationView()
+        //     : const PosLoginView(),
+        );
     return MaterialApp.router(
       title: 'Capek Ngoding',
       debugShowCheckedModeBanner: false,

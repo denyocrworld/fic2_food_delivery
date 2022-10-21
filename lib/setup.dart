@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:example/service/user_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 /*
 TODO: 
@@ -13,6 +16,8 @@ import 'firebase_options.dart';
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!kIsWeb && Platform.isWindows) return;
+
   await Firebase.initializeApp(
     //run > flutterfire configure
     //and import DefaultFirebaseOptions!

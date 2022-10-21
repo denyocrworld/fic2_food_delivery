@@ -584,11 +584,11 @@ packages:
     source: hosted
     version: "2.3.0"
   google_sign_in_web:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
-      name: google_sign_in_web
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: google_sign_in_web
+      relative: true
+    source: path
     version: "0.10.2"
   graphs:
     dependency: transitive
