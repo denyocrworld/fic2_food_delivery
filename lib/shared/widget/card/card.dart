@@ -46,7 +46,19 @@ class ExCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ...actions,
+                  Row(
+                    children: List.generate(
+                      actions.length,
+                      (index) {
+                        return SizedBox(
+                          height: 30.0,
+                          child: FittedBox(
+                            child: actions[index],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),

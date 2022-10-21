@@ -9,6 +9,9 @@ class DebugView extends StatefulWidget {
 
   Widget build(context, DebugController controller) {
     controller.view = this;
+
+    // return const ExScaffoldMenubar();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),
@@ -27,15 +30,58 @@ class DebugView extends StatefulWidget {
             title: "Hello",
             icon: Icons.dashboard,
             padding: const EdgeInsets.all(10.0),
-            actions: const [],
-            bottomActions: [
-              ElevatedButton.icon(
-                icon: const Icon(Icons.save),
-                label: const Text("Save"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
+            actions: [
+              IconButton(
                 onPressed: () {},
+                icon: const Icon(
+                  Icons.add,
+                  size: 24.0,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.add,
+                  size: 24.0,
+                ),
+              ),
+            ],
+            bottomActions: [
+              Expanded(
+                child: SizedBox(
+                  height: 50.0,
+                  child: ElevatedButton.icon(
+                    icon: const Icon(Icons.save),
+                    label: const Text("Save"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {},
+                  ),
+                ),
+              ),
+              const SizedBox(
+                width: 20.0,
+              ),
+              Expanded(
+                child: SizedBox(
+                  height: 50.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      FittedBox(
+                        child: ElevatedButton.icon(
+                          icon: const Icon(Icons.save),
+                          label: const Text("Save"),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blueGrey,
+                          ),
+                          onPressed: () {},
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ],
             children: [
@@ -71,6 +117,73 @@ class DebugView extends StatefulWidget {
                   }
                 ],
                 value: "Female",
+              ),
+              const ExCheckBox(
+                id: "my_hobby",
+                label: "My Hobby",
+                items: [
+                  {
+                    "label": "Coding",
+                    "value": "Coding",
+                  },
+                  {
+                    "label": "Afk",
+                    "value": "Afk",
+                  },
+                  {
+                    "label": "E-Sport",
+                    "value": "E-Sport",
+                  }
+                ],
+                value: [
+                  "Coding",
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: const [
+                  SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: Icon(
+                      Icons.developer_board,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: FittedBox(
+                      child: Icon(
+                        Icons.developer_board,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80.0,
+                    height: 80.0,
+                    child: FittedBox(
+                      child: Icon(
+                        Icons.developer_board,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 120.0,
+                    height: 120.0,
+                    child: FittedBox(
+                      child: Icon(
+                        Icons.developer_board,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const ExRating(
+                id: "rating",
+                label: "Rating",
+                value: null,
               ),
             ],
           ),

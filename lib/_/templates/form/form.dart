@@ -195,6 +195,14 @@ class FormExampleView extends StatelessWidget {
                 longitude: 106.80254435779423,
               ),
               //#END
+              //#TEMPLATE f_rating
+              const ExRating(
+                id: "rating",
+                label: "Rating",
+                value: null,
+              ),
+              //#END
+              
             ],
           ),
         ),
