@@ -182,6 +182,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     if (widget.items.isEmpty) {
       return const Text("Loading...");
     }
+
     var dropDownButton = DropdownButton<String>(
       isExpanded: true,
       value: selectedValue,

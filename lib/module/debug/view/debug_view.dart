@@ -26,6 +26,7 @@ class DebugView extends StatefulWidget {
           ExCard(
             title: "Hello",
             icon: Icons.dashboard,
+            padding: const EdgeInsets.all(10.0),
             actions: const [],
             children: [
               Row(
