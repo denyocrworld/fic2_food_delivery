@@ -355,6 +355,86 @@ getRouters(
               child: const DemoView(),
             ),
           ),
+          GoRoute(
+      path: '/pos_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_order_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosOrderListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_profile',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosProfileView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_product_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosProductListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_table',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosTableView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_checkout',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosCheckoutView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

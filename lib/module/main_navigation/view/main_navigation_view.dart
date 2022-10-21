@@ -347,7 +347,67 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/demo',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Login',
+      route: '/pos_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Main Navigation',
+      route: '/pos_main_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Dashboard',
+      route: '/pos_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Order List',
+      route: '/pos_order_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Profile',
+      route: '/pos_profile',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos',
+      route: '/pos',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Product List',
+      route: '/pos_product_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Product Form',
+      route: '/pos_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Table',
+      route: '/pos_table',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Checkout',
+      route: '/pos_checkout',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

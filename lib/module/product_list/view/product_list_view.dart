@@ -23,7 +23,7 @@ class ProductListView extends StatefulWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ProductFormView(),
+                    builder: (context) => const PosProductListView(),
                   ),
                 );
               },

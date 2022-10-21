@@ -8,6 +8,16 @@
         "ps/ps_parking_list",
         "ps/ps_booking_list",
         "ps/ps_user_list",
-        "demo"
+        "demo",
+        "pos/pos_login",
+        "pos/pos_main_navigation",
+        "pos/pos_dashboard",
+        "pos/pos_order_list",
+        "pos/pos_profile",
+        "pos/pos",
+        "pos/pos_product_list",
+        "pos/pos_product_form",
+        "pos/pos_table",
+        "pos/pos_checkout"
     ]
 }
