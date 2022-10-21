@@ -41,6 +41,17 @@ class DebugView extends StatefulWidget {
             ),
             onPressed: () {},
           ).w100.xl,
+          const SizedBox(
+            height: 20.0,
+          ),
+          ElevatedButton.icon(
+            icon: const Icon(Icons.save),
+            label: const Text("Save"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueGrey,
+            ),
+            onPressed: () {},
+          ).w100.xl,
         ],
       ).p20.scroll,
     );
@@ -90,6 +101,7 @@ extension ButtonExtension on Widget {
 
   Widget get scroll {
     return SingleChildScrollView(
+      controller: ScrollController(),
       child: this,
     );
   }
@@ -104,4 +116,25 @@ extension ButtonExtension on Widget {
   Widget get p10 => getPadding(10);
   Widget get p20 => getPadding(20);
   Widget get p30 => getPadding(30);
+
+  Widget get scale15 {
+    return Transform.scale(
+      scale: 1.5,
+      child: this,
+    );
+  }
+
+  Widget get scale2 {
+    return Transform.scale(
+      scale: 2.0,
+      child: this,
+    );
+  }
+
+  Widget get scale3 {
+    return Transform.scale(
+      scale: 2.0,
+      child: this,
+    );
+  }
 }
