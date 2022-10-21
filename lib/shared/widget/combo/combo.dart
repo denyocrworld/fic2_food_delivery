@@ -8,15 +8,11 @@ class ExCombo extends StatefulWidget {
   final List items;
   final String? value;
   final dynamic onChanged;
-
   final double? labelFontSize;
   final double? valueFontSize;
-
   final bool? visibleIf;
-
   final bool? disableTranslate;
   final bool? hideLabel;
-
   const ExCombo({
     Key? key,
     required this.id,
@@ -30,7 +26,6 @@ class ExCombo extends StatefulWidget {
     this.visibleIf,
     this.hideLabel = false,
   }) : super(key: key);
-
   @override
   ExComboState createState() => ExComboState();
 }
@@ -39,25 +34,20 @@ class ExComboState extends State<ExCombo> implements InputControlState {
   List comboItems = [];
   List<String> items = [];
   String selectedValue = "";
-
   initItems(starredItems) async {
     comboItems.clear();
     items.clear();
-
     starredItems.forEach((item) {
       var itemLabel = item["label"];
       if (!widget.disableTranslate!) {
         itemLabel = itemLabel;
       }
-
       comboItems.add({
         "label": itemLabel,
         "value": item["value"],
       });
-
       items.add(itemLabel);
     });
-
     if (Input.get(widget.id) == null) {
       selectedValue = comboItems[0]["label"];
       Input.set(widget.id, comboItems[0]["value"]);
@@ -69,7 +59,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
         selectedValue = widget.value!;
       }
     }
-
     if (widget.value != null) {
       updateValueByValue(widget.value!);
     }
@@ -101,9 +90,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     try {
       if (comboItems.isEmpty) return;
       var results = comboItems.where((item) => getWhere(item, value)).toList();
-
       if (results.isEmpty) return;
-
       var sv = results[0];
       Input.set(widget.id, sv["value"]);
       selectedValue = sv["label"];
@@ -142,7 +129,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
   setValue(value) {
     var selectedComboItem =
         comboItems.where((i) => i["value"] == value).toList();
-
     if (selectedComboItem.isEmpty) {
       Input.set(widget.id, comboItems[0]["value"]);
       selectedValue = comboItems[0]["label"];
@@ -151,7 +137,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
       Input.set(widget.id, comboItems[selectedIndex]["value"]);
       selectedValue = comboItems[selectedIndex]["label"];
     }
-
     setState(() {});
   }
 
@@ -170,19 +155,15 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     if (widget.visibleIf == false) {
       return Container();
     }
-
     if (comboItems.isEmpty) {
       return const Text("Loading...");
     }
-
     if (widget.items.isEmpty) {
       return const Text("Loading...");
     }
-
     if (widget.items.isEmpty) {
       return const Text("Loading...");
     }
-
     var dropDownButton = DropdownButton<String>(
       isExpanded: true,
       value: selectedValue,
@@ -210,7 +191,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
         setState(() {
           selectedValue = newValue!;
           updateValueByLabel(newValue);
-
           if (widget.onChanged != null) {
             widget.onChanged();
           }
@@ -231,7 +211,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
         );
       }).toList(),
     );
-
     getLabel() {
       return Container(
         padding: const EdgeInsets.only(
@@ -258,7 +237,6 @@ class ExComboState extends State<ExCombo> implements InputControlState {
           borderRadius: const BorderRadius.all(Radius.circular(4.0)),
           border: Border.all(color: Colors.grey[300]!),
         ),
-        // child: DropdownButtonHideUnderline(
         child: DropdownButtonHideUnderline(
           child: dropDownButton,
         ),
