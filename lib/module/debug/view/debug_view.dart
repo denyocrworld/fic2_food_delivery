@@ -25,6 +25,8 @@ class DebugView extends StatefulWidget {
           H6("Firebase"),
           ExCard(
             title: "Hello",
+            icon: Icons.dashboard,
+            actions: const [],
             children: [
               Row(
                 children: const [

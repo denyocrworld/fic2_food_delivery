@@ -2,29 +2,53 @@ import 'package:flutter/material.dart';
 
 class ExCard extends StatelessWidget {
   final String title;
+  final IconData? icon;
   final List<Widget> children;
+  final List<Widget> actions;
   const ExCard({
     Key? key,
     required this.title,
     required this.children,
+    this.actions = const [],
+    this.icon,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Container(
+      child: SizedBox(
         width: MediaQuery.of(context).size.width,
-        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 16.0,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 8.0,
+                horizontal: 20.0,
+              ),
+              child: Row(
+                children: [
+                  if (icon != null) ...[
+                    Icon(icon),
+                    const SizedBox(
+                      width: 6.0,
+                    ),
+                  ],
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ),
+                  ...actions,
+                ],
               ),
             ),
-            const Divider(),
+            const Divider(
+              height: 1.0,
+            ),
             ...children,
           ],
         ),
