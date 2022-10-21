@@ -8,10 +8,7 @@ void main() async {
   await initialize();
   if (!kIsWeb && !Platform.isWindows) await UserService.initialize();
   if (!kIsWeb && !Platform.isWindows) {
-    await FirebaseNotification.initializeAwesomeNotifications();
-    // await FirebaseNotification.listenNotifications();
-    await FirebaseNotification.requestNotificationPermission();
-    await FirebaseNotification.getFirebaseMessagingToken();
+    await FirebaseNotification.initialize();
   }
 
   runApp(const ShellRouteExampleApp());
