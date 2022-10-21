@@ -1,10 +1,19 @@
+import 'package:example/shared/util/firebase_notification/firebase_notification.dart';
+import 'package:flutter/foundation.dart';
+import 'dart:io';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   await initialize();
-  // if (!kIsWeb && Platform.isWindows) return;
-  // if (!kIsWeb && Platform.isWindows) await UserService.initialize();
+  if (!kIsWeb && !Platform.isWindows) await UserService.initialize();
+  if (!kIsWeb && !Platform.isWindows) {
+    await FirebaseNotification.initializeAwesomeNotifications();
+    // await FirebaseNotification.listenNotifications();
+    await FirebaseNotification.requestNotificationPermission();
+    await FirebaseNotification.getFirebaseMessagingToken();
+  }
+
   runApp(const ShellRouteExampleApp());
 }
 

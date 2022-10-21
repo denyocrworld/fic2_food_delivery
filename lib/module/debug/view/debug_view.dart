@@ -1,3 +1,4 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:example/core.dart';
 import 'package:example/shared/widget/card/card.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +21,23 @@ class DebugView extends StatefulWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueGrey,
+            ),
+            child: const Text("Save"),
+            onPressed: () {
+              AwesomeNotifications().createNotification(
+                content: NotificationContent(
+                  id: 10,
+                  channelKey: 'basic_channel',
+                  title: 'Simple Notification',
+                  body: 'Simple body',
+                  actionType: ActionType.Default,
+                ),
+              );
+            },
+          ),
           H1("Firebase"),
           H2("Firebase"),
           H3("Firebase"),
@@ -102,6 +120,21 @@ class DebugView extends StatefulWidget {
                     ),
                   ),
                 ],
+              ),
+              const ExCombo(
+                id: "gender",
+                label: "Gender",
+                items: [
+                  {
+                    "label": "Male",
+                    "value": "Male",
+                  },
+                  {
+                    "label": "Female",
+                    "value": "Female",
+                  }
+                ],
+                value: "Female",
               ),
               const ExCombo(
                 id: "gender",

@@ -12,7 +12,7 @@ dependencies:
   json_annotation: ^4.7.0
   firebase_core: ^1.23.0
   firebase_auth: ^3.10.0
-  firebase_messaging: ^13.0.3
+  # firebase_messaging: ^14.0.2 
   cloud_firestore: ^3.4.9
   google_sign_in: ^5.4.2
   intl: ^0.17.0
@@ -36,6 +36,8 @@ dependencies:
   flutter_svg: ^1.1.5
   custom_clippers: ^2.0.0
   badges: ^2.0.3
+  awesome_notifications: ^0.7.3
+  awesome_notifications_fcm: ^0.7.3
 dependency_overrides:
   google_sign_in_web:
     path: ./google_sign_in_web/
@@ -49,4 +51,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/icon/
+    - assets/icon/
