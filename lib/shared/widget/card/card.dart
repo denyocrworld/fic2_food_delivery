@@ -5,6 +5,7 @@ class ExCard extends StatelessWidget {
   final IconData? icon;
   final List<Widget> children;
   final List<Widget> actions;
+  final List<Widget> bottomActions;
   final EdgeInsets? padding;
   const ExCard({
     Key? key,
@@ -12,6 +13,7 @@ class ExCard extends StatelessWidget {
     required this.children,
     this.padding,
     this.actions = const [],
+    this.bottomActions = const [],
     this.icon,
   }) : super(key: key);
 
@@ -57,6 +59,18 @@ class ExCard extends StatelessWidget {
                 children: children,
               ),
             ),
+            if (bottomActions.isNotEmpty) ...[
+              const Divider(
+                height: 1.0,
+              ),
+              Container(
+                padding: const EdgeInsets.all(12.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: bottomActions,
+                ),
+              ),
+            ],
           ],
         ),
       ),

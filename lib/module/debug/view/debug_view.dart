@@ -28,6 +28,16 @@ class DebugView extends StatefulWidget {
             icon: Icons.dashboard,
             padding: const EdgeInsets.all(10.0),
             actions: const [],
+            bottomActions: [
+              ElevatedButton.icon(
+                icon: const Icon(Icons.save),
+                label: const Text("Save"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+            ],
             children: [
               Row(
                 children: const [
@@ -62,14 +72,6 @@ class DebugView extends StatefulWidget {
                 ],
                 value: "Female",
               ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.save),
-                label: const Text("Save"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () {},
-              ).w100.xl,
             ],
           ),
           const SizedBox(
