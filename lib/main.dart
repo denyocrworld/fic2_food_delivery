@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 
 //hello world
 /*
-- fitur kirim lokasi-nya
-- lihat lokasi (HR)
+asfafs
+*/
+//hello world
+/*
+asfafs
+*/
+//hello world
+/*
+asfafs
 */
 void main() async {
   await initialize();
