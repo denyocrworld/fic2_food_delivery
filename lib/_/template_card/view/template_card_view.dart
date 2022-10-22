@@ -1,6 +1,6 @@
 import 'package:blur/blur.dart';
 import 'package:example/core.dart';
-import 'package:example/shared/widget/theme_editor/theme_editor.dart';
+import 'package:example/shared/widget/theme_editor/theme_icon.dart';
 import 'package:flutter/material.dart';
 import '../controller/template_card_controller.dart';
 
@@ -13,6 +13,9 @@ class TemplateCardView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("TemplateCard"),
+        actions: const [
+          ThemeIcon(),
+        ],
       ),
       body: SingleChildScrollView(
         controller: ScrollController(),
@@ -22,36 +25,6 @@ class TemplateCardView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Add"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () async {
-                  Get.to(const DemoView());
-                },
-              ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Change"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () async {
-                  ThemeEditor.change(0);
-                },
-              ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Change"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () async {
-                  ThemeEditor.change(1);
-                },
-              ),
               const SizedBox(
                 height: 20.0,
               ),

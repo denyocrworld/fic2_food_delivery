@@ -1,15 +1,30 @@
 import 'package:example/core.dart';
 
+class Format {}
+
 extension CommonExtension on DateTime {
-  get dMMMykkss {
-    return DateFormat("d MMM y kk:ss").format(this);
-  }
-
   get dMMMy {
-    return DateFormat("d MMM y").format(this);
+    var value = this;
+    return DateFormat("d MMM y").format(value);
   }
 
-  get kkss {
-    return DateFormat("kk:ss").format(this);
+  get dMMMykksss {
+    var value = this;
+    return DateFormat("d MMM y kk:ss").format(value);
+  }
+}
+
+extension ParserExtension on dynamic {
+  double toDouble() {
+    var value = this;
+    return double.parse("$value");
+  }
+}
+
+extension NumberFormatExtension on double {
+  get idr {
+    var value = this;
+    var formatter = NumberFormat.currency(locale: 'id');
+    return formatter.format(value);
   }
 }

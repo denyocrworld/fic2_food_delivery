@@ -1,5 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/shared/util/common/common.dart';
 import 'package:flutter/material.dart';
 
 class PosOrderListView extends StatefulWidget {
@@ -51,7 +50,7 @@ class PosOrderListView extends StatefulWidget {
                   */
 
                       var createdAt =
-                          (item["created_at"] as Timestamp).toDate().dMMMykkss;
+                          (item["created_at"] as Timestamp).toDate().dMMMykksss;
                       var total = item["total"];
 
                       return Card(
