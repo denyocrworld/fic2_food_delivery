@@ -18,6 +18,7 @@ class DebugController extends State<DebugView> implements MvcController {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
+  bool loading = false;
   //Shift+Alt+E
   List items = [
     {

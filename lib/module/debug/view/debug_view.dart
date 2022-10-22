@@ -19,14 +19,157 @@ class DebugView extends StatefulWidget {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Login"),
+          title: const Text("Debug View"),
         ),
         body: SingleChildScrollView(
           controller: ScrollController(),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              children: const [],
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ElevatedButton.icon(
+                  icon: const Icon(Icons.arrow_right),
+                  label: const Text("Move"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueGrey,
+                  ),
+                  onPressed: () {
+                    controller.loading = controller.loading ? false : true;
+                    controller.update();
+                  },
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 600),
+                  // margin: EdgeInsets.only(
+                  //   top: controller.loading ? 1000 : 0,
+                  // ),
+                  // width: controller.loading
+                  //     ? MediaQuery.of(context).size.width * 0
+                  //     : MediaQuery.of(context).size.width,
+                  child: FittedBox(
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 160.0,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage(
+                                "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(
+                                16.0,
+                              ),
+                            ),
+                          ),
+                          child: Stack(
+                            children: [
+                              Container(
+                                decoration: const BoxDecoration(
+                                  color: Colors.black26,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      16.0,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 20.0,
+                                top: 0.0,
+                                bottom: 0.0,
+                                child: SizedBox(
+                                  width: 100.0,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        "30%",
+                                        style: GoogleFonts.oswald(
+                                          fontSize: 30.0,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        "Discount Only Valid for Today",
+                                        style: GoogleFonts.oswald(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        ExListView(
+                          shrinkWrap: true,
+                          futureBuilder: (page) async {
+                            var response = await Dio().get(
+                              "https://reqres.in/api/users",
+                              options: Options(
+                                headers: {
+                                  "Content-Type": "application/json",
+                                },
+                              ),
+                            );
+                            return response;
+                          },
+                          builder: (index, item) {
+                            return AnimatedOpacity(
+                              duration:
+                                  Duration(milliseconds: 600 + (500 * index)),
+                              opacity: controller.loading ? 0.0 : 1.0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  AnimatedContainer(
+                                    duration: const Duration(milliseconds: 900),
+                                    // margin: EdgeInsets.symmetric(
+                                    //   horizontal: controller.loading ? 80.0 : 0,
+                                    // ),
+                                    width: controller.loading
+                                        ? 0
+                                        : MediaQuery.of(context).size.width,
+                                    child: Card(
+                                      child: ListTile(
+                                        leading: CircleAvatar(
+                                          backgroundColor: Colors.grey[200],
+                                          backgroundImage: NetworkImage(
+                                            item["avatar"],
+                                          ),
+                                        ),
+                                        title: Text("${item["first_name"]}"),
+                                        subtitle: Text("${item["email"]}"),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

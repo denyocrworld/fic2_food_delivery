@@ -2,19 +2,24 @@ import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class ThemeEditor {
-  static List themes = [
-    getDefaultTheme(),
-    getDarkTheme(),
-  ];
+  static getThemes(index) {
+    var themeList = [
+      getDefaultTheme(),
+      getDarkTheme(),
+      getElegantTheme(),
+      getOrangeTheme(),
+    ];
+    return themeList[index];
+  }
 
-  static int selectedIndex = 1;
+  static int selectedIndex = 0;
 
   static ValueNotifier<ThemeData> mainTheme =
-      ValueNotifier<ThemeData>(themes[selectedIndex]);
+      ValueNotifier<ThemeData>(getThemes(selectedIndex));
 
   static change(int index) {
     selectedIndex = index;
-    ThemeEditor.mainTheme.value = ThemeEditor.themes[selectedIndex];
+    ThemeEditor.mainTheme.value = getThemes(selectedIndex);
   }
 
   static Widget build({

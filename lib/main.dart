@@ -1,6 +1,4 @@
 import 'package:example/_/template_card/view/template_card_view.dart';
-import 'package:example/shared/util/firebase_notification/firebase_notification.dart';
-import 'package:example/shared/widget/theme_editor/theme_editor.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:io';
 import 'package:example/core.dart';
@@ -36,6 +34,7 @@ class ShellRouteExampleApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: theme,
           home: const TemplateCardView(),
+          // home: const DebugView(),
           // home: const DebugView()
           // home: FirebaseAuth.instance.currentUser != null
           //     ? const PosMainNavigationView()
