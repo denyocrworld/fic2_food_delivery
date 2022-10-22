@@ -12,7 +12,9 @@ class ExTextField extends StatefulWidget {
   final String id;
   final String? label;
   final String? value;
+  final String? type;
   final String hintText;
+  final String symbol;
   final TextFieldType textFieldType;
   final TextInputType? keyboardType;
   final int? maxLines;
@@ -30,6 +32,8 @@ class ExTextField extends StatefulWidget {
     this.label,
     this.value = "",
     this.hintText = "",
+    this.symbol = "",
+    this.type = "",
     this.textFieldType = TextFieldType.normal,
     this.keyboardType,
     this.onChanged,
@@ -112,28 +116,44 @@ class _ExTextFieldState extends State<ExTextField>
               ),
               borderRadius: const BorderRadius.all(Radius.circular(8.0)),
             ),
-            child: TextField(
-              controller: controller,
-              maxLines: widget.maxLines ?? 1,
-              keyboardType: widget.keyboardType,
-              obscureText:
-                  widget.textFieldType == TextFieldType.password ? true : false,
-              readOnly: widget.enabled! ? false : true,
-              decoration: InputDecoration.collapsed(
-                hintText: widget.hintText,
-                hintStyle: TextStyle(
-                  fontSize: 10.0,
-                  color: Colors.grey[400],
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                if (widget.symbol.isNotEmpty)
+                  const Text(
+                    "\$",
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                Expanded(
+                  child: TextField(
+                    controller: controller,
+                    maxLines: widget.maxLines ?? 1,
+                    keyboardType: widget.keyboardType,
+                    obscureText: widget.textFieldType == TextFieldType.password
+                        ? true
+                        : false,
+                    readOnly: widget.enabled! ? false : true,
+                    decoration: InputDecoration.collapsed(
+                      hintText: widget.hintText,
+                      hintStyle: const TextStyle(
+                        fontSize: 10.0,
+                      ),
+                    ),
+                    onChanged: (text) {
+                      Input.set(widget.id, text);
+                      if (widget.onChanged != null) widget.onChanged!(text);
+                    },
+                    onSubmitted: (text) {
+                      Input.set(widget.id, text);
+                      if (widget.onSubmitted != null) widget.onSubmitted!(text);
+                    },
+                  ),
                 ),
-              ),
-              onChanged: (text) {
-                Input.set(widget.id, text);
-                if (widget.onChanged != null) widget.onChanged!(text);
-              },
-              onSubmitted: (text) {
-                Input.set(widget.id, text);
-                if (widget.onSubmitted != null) widget.onSubmitted!(text);
-              },
+              ],
             ),
           ),
         ],

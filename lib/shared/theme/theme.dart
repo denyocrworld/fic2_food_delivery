@@ -67,3 +67,49 @@ ThemeData getDefaultTheme() {
     ),
   );
 }
+
+ThemeData getDarkTheme() {
+  return ThemeData.dark().copyWith(
+    // primarySwatch:  Color(0xffFA533C),
+    // elevatedButtonTheme: ElevatedButtonThemeData(
+    //   style: ElevatedButton.styleFrom(
+    //     shape: ContinuousRectangleBorder(
+    //       borderRadius: BorderRadius.circular(64.0),
+    //     ),
+    //     foregroundColor: Colors.white,
+    //   ),
+    // ),
+    // appBarTheme: AppBarTheme(
+    //   backgroundColor: MainTheme.appbarBackgroundColor,
+    //   elevation: 0.6,
+    //   titleTextStyle: GoogleFonts.montserrat(
+    //     color: Colors.blueGrey[700],
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    //   iconTheme: IconThemeData(
+    //     color: Colors.blueGrey[700],
+    //   ),
+    // ),
+    // scaffoldBackgroundColor: MainTheme.scaffoldBackgroundColor,
+    // drawerTheme: DrawerThemeData(
+    //   backgroundColor: MainTheme.drawerBackgroundColor,
+    // ),
+    // iconTheme: IconThemeData(
+    //   color: MainTheme.fontColor,
+    // ),
+    // textTheme: TextTheme(
+    //   bodyText1: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
+    //   bodyText2: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
+    // ),
+    cardTheme: CardTheme(
+      elevation: MainTheme.cardElevation,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
+      ),
+    ),
+    // chipTheme: const ChipThemeData(),
+    // tabBarTheme: TabBarTheme(
+    //   labelColor: MainTheme.fontColor,
+    // ),
+  );
+}

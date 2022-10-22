@@ -1,3 +1,4 @@
+import 'package:example/_/template_card/view/template_card_view.dart';
 import 'package:example/shared/util/firebase_notification/firebase_notification.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:io';
@@ -30,8 +31,10 @@ class ShellRouteExampleApp extends StatelessWidget {
         title: 'Capek Ngoding',
         navigatorKey: Get.navigatorKey,
         debugShowCheckedModeBanner: false,
-        theme: getDefaultTheme(),
-        home: const DebugView()
+        // theme: getDarkTheme(),
+        theme: getDarkTheme(),
+        home: const TemplateCardView()
+        // home: const DebugView()
         // home: FirebaseAuth.instance.currentUser != null
         //     ? const PosMainNavigationView()
         //     : const PosLoginView(),
