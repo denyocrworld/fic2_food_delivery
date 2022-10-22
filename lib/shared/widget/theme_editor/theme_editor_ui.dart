@@ -63,6 +63,8 @@ class ThemeEditorUI extends StatelessWidget {
                 ],
               ),
               const Divider(),
+              const TUIFontChanger(),
+              const Divider(),
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),

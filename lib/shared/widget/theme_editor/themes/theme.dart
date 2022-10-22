@@ -36,7 +36,7 @@ ThemeData getDefaultTheme() {
     appBarTheme: AppBarTheme(
       backgroundColor: MainTheme.appbarBackgroundColor,
       elevation: 0.6,
-      titleTextStyle: GoogleFonts.montserrat(
+      titleTextStyle: MainTheme.googleFont.copyWith(
         color: Colors.blueGrey[700],
         fontWeight: FontWeight.bold,
       ),
@@ -79,17 +79,17 @@ ThemeData getDarkTheme() {
     //     foregroundColor: Colors.white,
     //   ),
     // ),
-    // appBarTheme: AppBarTheme(
-    //   backgroundColor: MainTheme.appbarBackgroundColor,
-    //   elevation: 0.6,
-    //   titleTextStyle: GoogleFonts.montserrat(
-    //     color: Colors.blueGrey[700],
-    //     fontWeight: FontWeight.bold,
-    //   ),
-    //   iconTheme: IconThemeData(
-    //     color: Colors.blueGrey[700],
-    //   ),
-    // ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: MainTheme.appbarBackgroundColor,
+      elevation: 0.6,
+      titleTextStyle: MainTheme.googleFont.copyWith(
+        color: Colors.blueGrey[700],
+        fontWeight: FontWeight.bold,
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.blueGrey[700],
+      ),
+    ),
     // scaffoldBackgroundColor: MainTheme.scaffoldBackgroundColor,
     // drawerTheme: DrawerThemeData(
     //   backgroundColor: MainTheme.drawerBackgroundColor,
@@ -97,10 +97,14 @@ ThemeData getDarkTheme() {
     // iconTheme: IconThemeData(
     //   color: MainTheme.fontColor,
     // ),
-    // textTheme: TextTheme(
-    //   bodyText1: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
-    //   bodyText2: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
-    // ),
+    textTheme: TextTheme(
+      bodyText1: MainTheme.googleFont.copyWith(
+        color: MainTheme.fontColor,
+      ),
+      bodyText2: MainTheme.googleFont.copyWith(
+        color: MainTheme.fontColor,
+      ),
+    ),
     cardTheme: CardTheme(
       elevation: MainTheme.cardElevation,
       shape: RoundedRectangleBorder(

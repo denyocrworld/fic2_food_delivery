@@ -42,16 +42,13 @@ class _TUIFontChangerState extends State<TUIFontChanger> {
           var item = items[index];
 
           return InkWell(
-            onTap: () {
+            onTap: () async {
               debugPrint("it works");
-              MainNavigationViewState.instance.expanded = false;
-              MainNavigationViewState.instance.update();
-
               MainTheme.googleFont = item;
-              MainNavigationViewState.instance.update();
-
-              MainNavigationViewState.instance.expanded = true;
-              MainNavigationViewState.instance.update();
+              ThemeEditor.change(0);
+              // await Future.delayed(const Duration(seconds: 1));
+              // ThemeEditor.change(1);
+              // await Future.delayed(const Duration(seconds: 1));
             },
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
