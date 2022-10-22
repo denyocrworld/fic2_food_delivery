@@ -44,8 +44,8 @@ class _TUIFontChangerState extends State<TUIFontChanger> {
           return InkWell(
             onTap: () async {
               debugPrint("it works");
-              MainTheme.googleFont = item;
-              ThemeEditor.change(0);
+              googleFont = item;
+              ThemeEditor.update();
               // await Future.delayed(const Duration(seconds: 1));
               // ThemeEditor.change(1);
               // await Future.delayed(const Duration(seconds: 1));

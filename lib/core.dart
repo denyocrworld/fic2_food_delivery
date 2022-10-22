@@ -175,7 +175,6 @@ export 'package:example/shared/widget/textfield/textfield.dart';
 export 'package:example/shared/widget/theme_editor/themes/color_changer.dart';
 export 'package:example/shared/widget/theme_editor/themes/font_changer.dart';
 export 'package:example/shared/widget/theme_editor/themes/theme.dart';
-export 'package:example/shared/widget/theme_editor/themes/theme_constants.dart';
 export 'package:example/shared/widget/theme_editor/themes/value_changer.dart';
 export 'package:example/shared/widget/theme_editor/theme_editor.dart';
 export 'package:example/shared/widget/theme_editor/theme_editor_ui.dart';

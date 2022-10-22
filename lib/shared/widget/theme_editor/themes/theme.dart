@@ -1,30 +1,51 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MainTheme {
-  //Text
-  static Color fontColor = Colors.grey[700]!;
+//OLD VERSION
+var primaryColor = Colors.blueGrey[800];
+var secondaryColor = const Color(0xFF2A2D3E);
+var bgColor = const Color(0xFF212332);
+var defaultPadding = 16.0;
 
-  //Color
-  static Color appbarBackgroundColor = Colors.white;
-  static Color primaryColor = Colors.blueGrey;
-  static Color scaffoldBackgroundColor = Colors.grey[300]!;
-  static MaterialColor primarySwatch = Colors.blueGrey;
-  static TextStyle googleFont = GoogleFonts.sora();
-  static Color drawerBackgroundColor = const Color(0xff404E67);
+var dangerColor = Colors.red[300];
+var successColor = Colors.green[300];
+var infoColor = Colors.blue[300];
+var warningColor = Colors.orange[300];
+var disabledColor = Colors.grey[300];
 
-  //drawer
-  static Color drawerFontColor = Colors.grey[300]!;
+var disabledTextColor = Colors.grey[800];
+//--------
 
-  static double cardElevation = 0.8;
-  static double cardBorderRadius = 24.0;
-}
+const double xs = 28;
+const double sm = 38;
+const double md = 50;
+const double lg = 60;
+const double xl = 70;
+
+//---
+//Text
+Color fontColor = Colors.grey[700]!;
+
+//Color
+Color appbarBackgroundColor = Colors.white;
+Color scaffoldBackgroundColor = Colors.grey[300]!;
+MaterialColor primarySwatch = Colors.blueGrey;
+TextStyle googleFont = GoogleFonts.sora();
+Color drawerBackgroundColor = const Color(0xff404E67);
+
+//drawer
+Color drawerFontColor = Colors.grey[300]!;
+
+double cardElevation = 0.8;
+double cardBorderRadius = 24.0;
+
+class MainTheme {}
 
 ThemeData getDefaultTheme() {
   return ThemeData(
     // primarySwatch:  Color(0xffFA533C),
-    primaryColor: MainTheme.primaryColor,
-    primarySwatch: MainTheme.primarySwatch,
+    primaryColor: primaryColor,
+    primarySwatch: primarySwatch,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         shape: ContinuousRectangleBorder(
@@ -34,9 +55,9 @@ ThemeData getDefaultTheme() {
       ),
     ),
     appBarTheme: AppBarTheme(
-      backgroundColor: MainTheme.appbarBackgroundColor,
+      backgroundColor: appbarBackgroundColor,
       elevation: 0.6,
-      titleTextStyle: MainTheme.googleFont.copyWith(
+      titleTextStyle: googleFont.copyWith(
         color: Colors.blueGrey[700],
         fontWeight: FontWeight.bold,
       ),
@@ -44,26 +65,26 @@ ThemeData getDefaultTheme() {
         color: Colors.blueGrey[700],
       ),
     ),
-    scaffoldBackgroundColor: MainTheme.scaffoldBackgroundColor,
+    scaffoldBackgroundColor: scaffoldBackgroundColor,
     drawerTheme: DrawerThemeData(
-      backgroundColor: MainTheme.drawerBackgroundColor,
+      backgroundColor: drawerBackgroundColor,
     ),
     iconTheme: IconThemeData(
-      color: MainTheme.fontColor,
+      color: fontColor,
     ),
     textTheme: TextTheme(
-      bodyText1: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
-      bodyText2: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
+      bodyText1: googleFont.copyWith(color: fontColor),
+      bodyText2: googleFont.copyWith(color: fontColor),
     ),
     cardTheme: CardTheme(
-      elevation: MainTheme.cardElevation,
+      elevation: cardElevation,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
+        borderRadius: BorderRadius.circular(cardBorderRadius),
       ),
     ),
     chipTheme: const ChipThemeData(),
     tabBarTheme: TabBarTheme(
-      labelColor: MainTheme.fontColor,
+      labelColor: fontColor,
     ),
   );
 }
@@ -80,9 +101,9 @@ ThemeData getDarkTheme() {
     //   ),
     // ),
     appBarTheme: AppBarTheme(
-      backgroundColor: MainTheme.appbarBackgroundColor,
+      backgroundColor: appbarBackgroundColor,
       elevation: 0.6,
-      titleTextStyle: MainTheme.googleFont.copyWith(
+      titleTextStyle: googleFont.copyWith(
         color: Colors.blueGrey[700],
         fontWeight: FontWeight.bold,
       ),
@@ -90,30 +111,30 @@ ThemeData getDarkTheme() {
         color: Colors.blueGrey[700],
       ),
     ),
-    // scaffoldBackgroundColor: MainTheme.scaffoldBackgroundColor,
+    // scaffoldBackgroundColor: scaffoldBackgroundColor,
     // drawerTheme: DrawerThemeData(
-    //   backgroundColor: MainTheme.drawerBackgroundColor,
+    //   backgroundColor: drawerBackgroundColor,
     // ),
     // iconTheme: IconThemeData(
-    //   color: MainTheme.fontColor,
+    //   color: fontColor,
     // ),
     textTheme: TextTheme(
-      bodyText1: MainTheme.googleFont.copyWith(
-        color: MainTheme.fontColor,
+      bodyText1: googleFont.copyWith(
+        color: fontColor,
       ),
-      bodyText2: MainTheme.googleFont.copyWith(
-        color: MainTheme.fontColor,
+      bodyText2: googleFont.copyWith(
+        color: fontColor,
       ),
     ),
     cardTheme: CardTheme(
-      elevation: MainTheme.cardElevation,
+      elevation: cardElevation,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
+        borderRadius: BorderRadius.circular(cardBorderRadius),
       ),
     ),
     // chipTheme: const ChipThemeData(),
     // tabBarTheme: TabBarTheme(
-    //   labelColor: MainTheme.fontColor,
+    //   labelColor: fontColor,
     // ),
   );
 }
@@ -148,24 +169,24 @@ ThemeData getElegantTheme() {
       backgroundColor: Colors.red,
     ),
     // drawerTheme: DrawerThemeData(
-    //   backgroundColor: MainTheme.drawerBackgroundColor,
+    //   backgroundColor: drawerBackgroundColor,
     // ),
     // iconTheme: IconThemeData(
-    //   color: MainTheme.fontColor,
+    //   color: fontColor,
     // ),
     textTheme: TextTheme(
-      bodyText1: MainTheme.googleFont.copyWith(color: Colors.white),
-      bodyText2: MainTheme.googleFont.copyWith(color: Colors.white),
+      bodyText1: googleFont.copyWith(color: Colors.white),
+      bodyText2: googleFont.copyWith(color: Colors.white),
     ),
     cardTheme: CardTheme(
-      elevation: MainTheme.cardElevation,
+      elevation: cardElevation,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
+        borderRadius: BorderRadius.circular(cardBorderRadius),
       ),
     ),
     // chipTheme: const ChipThemeData(),
     // tabBarTheme: TabBarTheme(
-    //   labelColor: MainTheme.fontColor,
+    //   labelColor: fontColor,
     // ),
   );
 }
@@ -199,25 +220,25 @@ ThemeData getOrangeTheme() {
       backgroundColor: Colors.red,
     ),
     // drawerTheme: DrawerThemeData(
-    //   backgroundColor: MainTheme.drawerBackgroundColor,
+    //   backgroundColor: drawerBackgroundColor,
     // ),
     // iconTheme: IconThemeData(
-    //   color: MainTheme.fontColor,
+    //   color: fontColor,
     // ),
     // textTheme: TextTheme(
-    //   bodyText1: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
-    //   bodyText2: MainTheme.googleFont.copyWith(color: MainTheme.fontColor),
+    //   bodyText1: googleFont.copyWith(color: fontColor),
+    //   bodyText2: googleFont.copyWith(color: fontColor),
     // ),
     cardTheme: CardTheme(
       color: const Color(0xff47B5FF),
-      elevation: MainTheme.cardElevation,
+      elevation: cardElevation,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(MainTheme.cardBorderRadius),
+        borderRadius: BorderRadius.circular(cardBorderRadius),
       ),
     ),
     // chipTheme: const ChipThemeData(),
     // tabBarTheme: TabBarTheme(
-    //   labelColor: MainTheme.fontColor,
+    //   labelColor: fontColor,
     // ),
   );
 }

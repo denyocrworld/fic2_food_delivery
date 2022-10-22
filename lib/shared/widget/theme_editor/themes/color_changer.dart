@@ -38,7 +38,7 @@ class _TUIColorChangerState extends State<TUIColorChanger> {
               // MainNavigationViewState.instance.expanded = false;
               // MainNavigationViewState.instance.update();
 
-              // MainTheme.primaryColor = color;
+              // primaryColor = color;
               // MainNavigationViewState.instance.update();
 
               // MainNavigationViewState.instance.expanded = true;

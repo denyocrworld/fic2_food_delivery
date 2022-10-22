@@ -22,6 +22,10 @@ class ThemeEditor {
     ThemeEditor.mainTheme.value = getThemes(selectedIndex);
   }
 
+  static update() {
+    ThemeEditor.mainTheme.value = getThemes(selectedIndex);
+  }
+
   static Widget build({
     required Function(ThemeData theme) builder,
   }) {

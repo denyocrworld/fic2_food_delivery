@@ -353,61 +353,61 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Main Navigation',
       route: '/pos_main_navigation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Dashboard',
       route: '/pos_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Order List',
       route: '/pos_order_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Profile',
       route: '/pos_profile',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos',
       route: '/pos',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Product List',
       route: '/pos_product_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Product Form',
       route: '/pos_product_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Table',
       route: '/pos_table',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Checkout',
       route: '/pos_checkout',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override
@@ -449,19 +449,19 @@ class MainNavigationViewState extends State<MainNavigationView> {
                   child: Theme(
                     data: getDefaultTheme().copyWith(
                       textTheme: TextTheme(
-                        bodyText1: MainTheme.googleFont.copyWith(
-                          color: MainTheme.drawerFontColor,
+                        bodyText1: googleFont.copyWith(
+                          color: drawerFontColor,
                         ),
-                        bodyText2: MainTheme.googleFont.copyWith(
-                          color: MainTheme.drawerFontColor,
+                        bodyText2: googleFont.copyWith(
+                          color: drawerFontColor,
                         ),
                       ),
                       iconTheme: IconThemeData(
-                        color: MainTheme.drawerFontColor,
+                        color: drawerFontColor,
                       ),
                     ),
                     child: Drawer(
-                      backgroundColor: MainTheme.drawerBackgroundColor,
+                      backgroundColor: drawerBackgroundColor,
                       child: ListView(
                         children: [
                           const Logo(),
@@ -608,13 +608,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                   ),
                                   TUIColorChanger(
                                     onChanged: (value) {
-                                      MainTheme.appbarBackgroundColor = value;
+                                      appbarBackgroundColor = value;
                                       setState(() {});
                                     },
                                   ),
                                   TUIColorChanger(
                                     onChanged: (value) {
-                                      MainTheme.scaffoldBackgroundColor = value;
+                                      scaffoldBackgroundColor = value;
                                       setState(() {});
                                     },
                                   ),
@@ -623,9 +623,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                     min: 0.0,
                                     max: 100.0,
                                     onChanged: (value) {
-                                      MainTheme.cardBorderRadius = 100 * value;
+                                      cardBorderRadius = 100 * value;
                                       debugPrint(
-                                        'MainTheme.cardBorderRadius: ${MainTheme.cardBorderRadius}',
+                                        'cardBorderRadius: $cardBorderRadius',
                                       );
                                       setState(() {});
                                     },
@@ -634,9 +634,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
                                     min: 0.0,
                                     max: 50.0,
                                     onChanged: (value) {
-                                      MainTheme.cardElevation = 50.0 * value;
+                                      cardElevation = 50.0 * value;
                                       debugPrint(
-                                        'MainTheme.cardBorderRadius: ${MainTheme.cardElevation}',
+                                        'cardBorderRadius: $cardElevation',
                                       );
                                       setState(() {});
                                     },
