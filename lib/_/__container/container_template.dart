@@ -16,7 +16,6 @@ class ContainerTemplateView extends StatelessWidget {
           child: Column(
             children: [
               //#GROUP_TEMPLATE container
-
               //#TEMPLATE contrad
               Container(
                 height: 100.0,
@@ -100,6 +99,36 @@ class ContainerTemplateView extends StatelessWidget {
                     ),
               ),
               //----------------------------------------
+              //----------------------------------------
+              //----------------------------------------
+              //#TEMPLATE cr3
+              Container(
+                width: 100.0,
+                color: Colors.red,
+              ),
+              Container(
+                width: 100.0,
+                color: Colors.red,
+              ),
+              Container(
+                width: 100.0,
+                color: Colors.red,
+              ),
+              //#END
+              //#TEMPLATE cc3
+              Container(
+                height: 100.0,
+                color: Colors.green,
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.blue,
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.purple,
+              ),
+              //#END
             ],
           ),
         ),
