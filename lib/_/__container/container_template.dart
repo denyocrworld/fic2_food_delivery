@@ -101,7 +101,7 @@ class ContainerTemplateView extends StatelessWidget {
               //----------------------------------------
               //----------------------------------------
               //----------------------------------------
-              //#TEMPLATE cr3
+              //#TEMPLATE ch3
               Container(
                 width: 100.0,
                 color: Colors.red,
@@ -115,7 +115,7 @@ class ContainerTemplateView extends StatelessWidget {
                 color: Colors.red,
               ),
               //#END
-              //#TEMPLATE cc3
+              //#TEMPLATE cv3
               Container(
                 height: 100.0,
                 color: Colors.green,
