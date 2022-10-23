@@ -407,7 +407,31 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_checkout',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Cg Main Navigation',
+      route: '/cg_main_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Cg Dashboard',
+      route: '/cg_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Cg Profile',
+      route: '/cg_profile',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Cg Module Manager',
+      route: '/cg_module_manager',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

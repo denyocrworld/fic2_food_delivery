@@ -356,83 +356,115 @@ getRouters(
             ),
           ),
           GoRoute(
-      path: '/pos_login',
+            path: '/pos_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosLoginView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosMainNavigationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_order_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosOrderListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosProfileView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosProductListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosProductFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_table',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosTableView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_checkout',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosCheckoutView(),
+            ),
+          ),
+          GoRoute(
+      path: '/cg_main_navigation',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const PosLoginView(),
+        child: const CgMainNavigationView(),
       ),
     ),
           GoRoute(
-      path: '/pos_main_navigation',
+      path: '/cg_dashboard',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const PosMainNavigationView(),
+        child: const CgDashboardView(),
       ),
     ),
           GoRoute(
-      path: '/pos_dashboard',
+      path: '/cg_profile',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const PosDashboardView(),
+        child: const CgProfileView(),
       ),
     ),
           GoRoute(
-      path: '/pos_order_list',
+      path: '/cg_module_manager',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const PosOrderListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosProfileView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos_product_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosProductListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosProductFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos_table',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosTableView(),
-      ),
-    ),
-          GoRoute(
-      path: '/pos_checkout',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosCheckoutView(),
+        child: const CgModuleManagerView(),
       ),
     ),
           //@ROUTER_GENERATOR

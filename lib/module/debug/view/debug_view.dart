@@ -9,6 +9,14 @@ class DebugView extends StatefulWidget {
   Widget build(context, DebugController controller) {
     controller.view = this;
 
+    var size = MediaQuery.of(context).size;
+
+/*
+Semua WIDGET
+di FLUTTER
+itu bisa di klik
+dengan dibungkus dengan InkWell atau GestureDetector
+*/
     return Theme(
       data: ThemeData.dark().copyWith(
         cardTheme: CardTheme(
@@ -21,625 +29,172 @@ class DebugView extends StatefulWidget {
         appBar: AppBar(
           title: const Text("Debug View"),
         ),
-        body: SingleChildScrollView(
-          controller: ScrollController(),
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.arrow_right),
-                  label: const Text("Move"),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blueGrey,
-                  ),
-                  onPressed: () {
-                    controller.loading = controller.loading ? false : true;
-                    controller.update();
-                  },
-                ),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 600),
-                  // margin: EdgeInsets.only(
-                  //   top: controller.loading ? 1000 : 0,
-                  // ),
-                  // width: controller.loading
-                  //     ? MediaQuery.of(context).size.width * 0
-                  //     : MediaQuery.of(context).size.width,
-                  child: FittedBox(
-                    child: Column(
-                      children: [
-                        Container(
-                          height: 160.0,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
-                              ),
-                              fit: BoxFit.cover,
-                            ),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(
-                                16.0,
-                              ),
-                            ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    var item = {};
+                    return Container(
+                      width: 300.0,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            16.0,
                           ),
-                          child: Stack(
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(
-                                  color: Colors.black26,
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      16.0,
-                                    ),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x19000000),
+                            blurRadius: 24,
+                            offset: Offset(0, 11),
+                          ),
+                        ],
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 160.0,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: NetworkImage(
+                                    "https://i.ibb.co/JpdK5ch/photo-1513104890138-7c749659a591-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
                                   ),
+                                  fit: BoxFit.cover,
                                 ),
                               ),
-                              Positioned(
-                                left: 20.0,
-                                top: 0.0,
-                                bottom: 0.0,
-                                child: SizedBox(
-                                  width: 100.0,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: const [
                                       Text(
-                                        "30%",
-                                        style: GoogleFonts.oswald(
-                                          fontSize: 30.0,
-                                          color: Colors.white,
+                                        "Pepperoni Pizza",
+                                        style: TextStyle(
+                                          fontSize: 12.0,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      Text(
-                                        "Discount Only Valid for Today",
-                                        style: GoogleFonts.oswald(
-                                          fontSize: 16.0,
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.white,
+                                      Spacer(),
+                                      CircleAvatar(
+                                        backgroundColor: Colors.red,
+                                        radius: 10.0,
+                                        child: Icon(
+                                          MdiIcons.fire,
+                                          size: 10.0,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 4.0,
+                                      ),
+                                      CircleAvatar(
+                                        backgroundColor: Colors.orange,
+                                        radius: 10.0,
+                                        child: Icon(
+                                          Icons.thumb_up,
+                                          size: 10.0,
                                         ),
                                       ),
                                     ],
                                   ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        ExListView(
-                          shrinkWrap: true,
-                          futureBuilder: (page) async {
-                            var response = await Dio().get(
-                              "https://reqres.in/api/users",
-                              options: Options(
-                                headers: {
-                                  "Content-Type": "application/json",
-                                },
-                              ),
-                            );
-                            return response;
-                          },
-                          builder: (index, item) {
-                            return AnimatedOpacity(
-                              duration:
-                                  Duration(milliseconds: 600 + (500 * index)),
-                              opacity: controller.loading ? 0.0 : 1.0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  AnimatedContainer(
-                                    duration: const Duration(milliseconds: 900),
-                                    // margin: EdgeInsets.symmetric(
-                                    //   horizontal: controller.loading ? 80.0 : 0,
-                                    // ),
-                                    width: controller.loading
-                                        ? 0
-                                        : MediaQuery.of(context).size.width,
-                                    child: Card(
-                                      child: ListTile(
-                                        leading: CircleAvatar(
-                                          backgroundColor: Colors.grey[200],
-                                          backgroundImage: NetworkImage(
-                                            item["avatar"],
-                                          ),
+                                  const SizedBox(
+                                    height: 6.0,
+                                  ),
+                                  const Text(
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                    maxLines: 4,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 12.0,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: const [
+                                      Text(
+                                        "256 Cal",
+                                        style: TextStyle(
+                                          fontSize: 10.0,
                                         ),
-                                        title: Text("${item["first_name"]}"),
-                                        subtitle: Text("${item["email"]}"),
                                       ),
-                                    ),
+                                      Text(
+                                        "P/F/C: 12/10/31",
+                                        style: TextStyle(
+                                          fontSize: 10.0,
+                                        ),
+                                      ),
+                                      Text(
+                                        "53.8 °C",
+                                        style: TextStyle(
+                                          fontSize: 10.0,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 12.0,
+                                  ),
+                                  Row(
+                                    children: [
+                                      const Text(
+                                        "€9",
+                                        style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 6.0,
+                                      ),
+                                      const Text(
+                                        "€12",
+                                        style: TextStyle(
+                                          fontSize: 14.0,
+                                          fontWeight: FontWeight.bold,
+                                          decoration:
+                                              TextDecoration.lineThrough,
+                                          color: Colors.red,
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      Transform.scale(
+                                        scale: 0.8,
+                                        alignment: Alignment.centerRight,
+                                        child: ElevatedButton.icon(
+                                          icon: const Icon(MdiIcons.cart),
+                                          label: const Text("Add to Cart"),
+                                          style: ElevatedButton.styleFrom(),
+                                          onPressed: () {},
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
-                            );
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        /*
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 160.0,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
-                  ),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(
-                    16.0,
-                  ),
-                ),
-              ),
-              child: Stack(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Colors.black26,
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(
-                          16.0,
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 20.0,
-                    top: 0.0,
-                    bottom: 0.0,
-                    child: SizedBox(
-                      width: 100.0,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "30%",
-                            style: GoogleFonts.oswald(
-                              fontSize: 30.0,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            "Discount Only Valid for Today",
-                            style: GoogleFonts.oswald(
-                              fontSize: 16.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            //alt+shift+v
-            ListView.builder(
-              itemCount: controller.products.length,
-              shrinkWrap: true,
-              itemBuilder: (context, index) {
-                var item = controller.products[index];
-                return Card(
-                  child: Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: 90,
-                          height: 90,
-                          margin: EdgeInsets.only(right: 10.0),
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(item["photo"]),
-                              fit: BoxFit.cover,
-                            ),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(16.0),
-                            ),
-                            color: Colors.blue[400],
-                          ),
-                          child: Stack(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.all(6.0),
-                                margin: EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  color: Colors.green[800],
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(
-                                      12.0,
-                                    ),
-                                  ),
-                                ),
-                                child: Text(
-                                  "PROMO",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 8.0,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                item["product_name"],
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 6.0,
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "8.1 km",
-                                    style: TextStyle(
-                                      fontSize: 10.0,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 4.0,
-                                  ),
-                                  Icon(
-                                    Icons.circle,
-                                    size: 4.0,
-                                  ),
-                                  SizedBox(
-                                    width: 4.0,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.orange[400],
-                                    size: 16.0,
-                                  ),
-                                  Text(
-                                    "4.8",
-                                    style: TextStyle(
-                                      fontSize: 10.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 6.0,
-                              ),
-                              Text(
-                                "Bakery & Cake . Breakfast . Snack",
-                                style: TextStyle(
-                                  fontSize: 10.0,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 6.0,
-                              ),
-                              Text(
-                                "€${item["price"]}",
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
-            ),
-            H3("State Management yang Enak"),
-            Divider(),
-            H4("Provider"),
-            H4("Riverpod"),
-            H4("Mobx"),
-            H4("Getx"),
-            H4("setState"),
-            Divider(),
-            H1("Firebase"),
-            H2("Firebase"),
-            H3("Firebase"),
-            H4("Firebase"),
-            H5("Firebase"),
-            H6("Firebase"),
-            ExCard(
-              title: "Row Item Demo",
-              children: [
-                RowItem(
-                  label: "Short Dresses",
-                  value: "1500",
-                  onPressed: () {
-                    print("Test");
+                    );
                   },
                 ),
-                RowItem(
-                  label: "Mid-length Dresses",
-                  value: "1500",
-                ),
-                RowItem(
-                  label: "Bodycon",
-                  value: "1500",
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 2.0,
-            ),
-            ExCard(
-              title: "Hello",
-              icon: Icons.dashboard,
-              padding: EdgeInsets.all(10.0),
-              actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.add,
-                    size: 24.0,
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.add,
-                    size: 24.0,
-                  ),
-                ),
-              ],
-              bottomActions: [
-                Expanded(
-                  child: SizedBox(
-                    height: 50.0,
-                    child: ElevatedButton.icon(
-                      icon: Icon(Icons.save),
-                      label: Text("Save"),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: 20.0,
-                ),
-                Expanded(
-                  child: SizedBox(
-                    height: 50.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        FittedBox(
-                          child: ElevatedButton.icon(
-                            icon: Icon(Icons.save),
-                            label: Text("Save"),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blueGrey,
-                            ),
-                            onPressed: () {},
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-              children: [
-                ExTextField(
-                  id: "price",
-                  label: "Price",
-                  value: null,
-                  symbol: "\$",
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: ExTextField(
-                        id: "first_name",
-                        label: "First Name",
-                        value: null,
-                      ),
-                    ),
-                    Expanded(
-                      child: ExTextField(
-                        id: "last_name",
-                        label: "Last Name",
-                        value: null,
-                      ),
-                    ),
-                  ],
-                ),
-                ExCombo(
-                  id: "gender",
-                  label: "Gender",
-                  items: [
-                    {
-                      "label": "Male",
-                      "value": "Male",
-                    },
-                    {
-                      "label": "Female",
-                      "value": "Female",
-                    }
-                  ],
-                  value: "Female",
-                ),
-                ExCombo(
-                  id: "gender",
-                  label: "Gender",
-                  items: [
-                    {
-                      "label": "Male",
-                      "value": "Male",
-                    },
-                    {
-                      "label": "Female",
-                      "value": "Female",
-                    }
-                  ],
-                  value: "Female",
-                ),
-                ExCheckBox(
-                  id: "my_hobby",
-                  label: "My Hobby",
-                  items: [
-                    {
-                      "label": "Coding",
-                      "value": "Coding",
-                    },
-                    {
-                      "label": "Afk",
-                      "value": "Afk",
-                    },
-                    {
-                      "label": "E-Sport",
-                      "value": "E-Sport",
-                    }
-                  ],
-                  value: [
-                    "Coding",
-                  ],
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: 50.0,
-                      height: 50.0,
-                      child: Icon(
-                        Icons.developer_board,
-                      ),
-                    ),
-                    SizedBox(
-                      width: 50.0,
-                      height: 50.0,
-                      child: FittedBox(
-                        child: Icon(
-                          Icons.developer_board,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 80.0,
-                      height: 80.0,
-                      child: FittedBox(
-                        child: Icon(
-                          Icons.developer_board,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 120.0,
-                      height: 120.0,
-                      child: FittedBox(
-                        child: Icon(
-                          Icons.developer_board,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                ExRating(
-                  id: "rating",
-                  label: "Rating",
-                  value: null,
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: ExCard(
-                    title: "Hello",
-                    children: [],
-                  ),
-                ),
-                Expanded(
-                  child: ExCard(
-                    title: "Hello",
-                    children: [],
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            ElevatedButton.icon(
-              icon: Icon(Icons.add),
-              label: Text("Add"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
               ),
-              onPressed: () {},
-            ).xs,
-            SizedBox(
-              height: 20.0,
-            ),
-            ElevatedButton.icon(
-              icon: Icon(Icons.save),
-              label: Text("Save"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () {},
-            ).w100.xl,
-            SizedBox(
-              height: 20.0,
-            ),
-            ElevatedButton.icon(
-              icon: Icon(Icons.save),
-              label: Text("Save"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () {},
-            ).w100.xl,
-          ],
-        ).p20.scroll,
-      */
+            ],
+          ),
+        ),
       ),
     );
   }

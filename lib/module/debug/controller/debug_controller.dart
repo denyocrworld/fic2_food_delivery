@@ -19,6 +19,7 @@ class DebugController extends State<DebugView> implements MvcController {
   Widget build(BuildContext context) => widget.build(context, this);
 
   bool loading = false;
+  String text = "Hello";
   //Shift+Alt+E
   List items = [
     {

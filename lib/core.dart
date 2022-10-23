@@ -24,6 +24,14 @@ export 'package:example/module/contoh_login/controller/contoh_login_controller.d
 export 'package:example/module/contoh_login/view/contoh_login_view.dart';
 export 'package:example/module/contoh_product_form/controller/contoh_product_form_controller.dart';
 export 'package:example/module/contoh_product_form/view/contoh_product_form_view.dart';
+export 'package:example/module/crud_generator/cg_dashboard/controller/cg_dashboard_controller.dart';
+export 'package:example/module/crud_generator/cg_dashboard/view/cg_dashboard_view.dart';
+export 'package:example/module/crud_generator/cg_main_navigation/controller/cg_main_navigation_controller.dart';
+export 'package:example/module/crud_generator/cg_main_navigation/view/cg_main_navigation_view.dart';
+export 'package:example/module/crud_generator/cg_module_manager/controller/cg_module_manager_controller.dart';
+export 'package:example/module/crud_generator/cg_module_manager/view/cg_module_manager_view.dart';
+export 'package:example/module/crud_generator/cg_profile/controller/cg_profile_controller.dart';
+export 'package:example/module/crud_generator/cg_profile/view/cg_profile_view.dart';
 export 'package:example/module/customer_list/controller/customer_list_controller.dart';
 export 'package:example/module/customer_list/view/customer_list_view.dart';
 export 'package:example/module/dashboard/controller/dashboard_controller.dart';
