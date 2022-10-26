@@ -69,9 +69,3 @@ class DebugView extends StatefulWidget {
   @override
   State<DebugView> createState() => DebugController();
 }
-
-class LocationService {
-  getPosition() async {
-    var productUrl = "http://facebook.com";
-  }
-}
