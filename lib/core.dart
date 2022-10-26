@@ -145,7 +145,6 @@ export 'package:example/router/no_transition.dart';
 export 'package:example/router/router.dart';
 export 'package:example/router/route_util.dart';
 export 'package:example/service/event_service.dart';
-export 'package:example/service/location_service.dart';
 export 'package:example/service/user_service.dart';
 export 'package:example/shared/util/common/common.dart';
 export 'package:example/shared/util/firebase_notification/firebase_notification.dart';
