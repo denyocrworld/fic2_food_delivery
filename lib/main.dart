@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
+import '_/navigation/navigation_sliverappbar.dart';
+
 void main() async {
   await initialize();
   if (!kIsWeb && !Platform.isWindows) await UserService.initialize();
@@ -31,10 +33,10 @@ class ShellRouteExampleApp extends StatelessWidget {
           title: 'Capek Ngoding',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
-          theme: getDarkTheme(),
+          theme: theme,
           // home: const CgModuleManagerView(),
           // home: const TemplateCardView(),
-          home: const DebugView(),
+          home: const TemplateNavigationSliverAppBarView(),
           // home: const DebugView()
           // home: FirebaseAuth.instance.currentUser != null
           //     ? const PosMainNavigationView()

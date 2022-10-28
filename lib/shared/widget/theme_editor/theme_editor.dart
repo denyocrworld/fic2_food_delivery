@@ -12,7 +12,7 @@ class ThemeEditor {
     return themeList[index];
   }
 
-  static int selectedIndex = 0;
+  static int selectedIndex = 1;
 
   static ValueNotifier<ThemeData> mainTheme =
       ValueNotifier<ThemeData>(getThemes(selectedIndex));

@@ -5,6 +5,7 @@ class OrderListView extends StatefulWidget {
   const OrderListView({Key? key}) : super(key: key);
   Widget build(context, OrderListController controller) {
     controller.view = this;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("OrderList"),
