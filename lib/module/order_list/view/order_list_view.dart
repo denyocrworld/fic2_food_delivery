@@ -13,7 +13,33 @@ class OrderListView extends StatefulWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          children: const [],
+          children: [
+            Container(
+              padding: const EdgeInsets.all(12),
+              margin: const EdgeInsets.only(),
+              child: TextFormField(
+                initialValue: '123456',
+                maxLength: 20,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.password,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your password',
+                ),
+                onChanged: (value) {},
+              ),
+            ),
+          ],
         ),
       ),
     );
