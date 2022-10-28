@@ -100,17 +100,17 @@ ThemeData getDarkTheme() {
     //     foregroundColor: Colors.white,
     //   ),
     // ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: appbarBackgroundColor,
-      elevation: 0.6,
-      titleTextStyle: googleFont.copyWith(
-        color: Colors.blueGrey[700],
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(
-        color: Colors.blueGrey[700],
-      ),
-    ),
+    // appBarTheme: AppBarTheme(
+    //   backgroundColor: appbarBackgroundColor,
+    //   elevation: 0.6,
+    //   titleTextStyle: googleFont.copyWith(
+    //     color: Colors.blueGrey[700],
+    //     fontWeight: FontWeight.bold,
+    //   ),
+    //   iconTheme: IconThemeData(
+    //     color: Colors.blueGrey[700],
+    //   ),
+    // ),
     // scaffoldBackgroundColor: scaffoldBackgroundColor,
     // drawerTheme: DrawerThemeData(
     //   backgroundColor: drawerBackgroundColor,
@@ -118,14 +118,14 @@ ThemeData getDarkTheme() {
     // iconTheme: IconThemeData(
     //   color: fontColor,
     // ),
-    textTheme: TextTheme(
-      bodyText1: googleFont.copyWith(
-        color: fontColor,
-      ),
-      bodyText2: googleFont.copyWith(
-        color: fontColor,
-      ),
-    ),
+    // textTheme: TextTheme(
+    //   bodyText1: googleFont.copyWith(
+    //     color: fontColor,
+    //   ),
+    //   bodyText2: googleFont.copyWith(
+    //     color: fontColor,
+    //   ),
+    // ),
     cardTheme: CardTheme(
       elevation: cardElevation,
       shape: RoundedRectangleBorder(

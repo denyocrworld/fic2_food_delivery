@@ -1,27 +1,7 @@
 {
     "modules": [
-        "ps/ps_login",
-        "ps/ps_main_navigation",
-        "ps/ps_dashboard",
-        "ps/ps_profile",
-        "ps/ps_share_parking_form",
-        "ps/ps_parking_list",
-        "ps/ps_booking_list",
-        "ps/ps_user_list",
-        "demo",
-        "pos/pos_login",
-        "pos/pos_main_navigation",
-        "pos/pos_dashboard",
-        "pos/pos_order_list",
-        "pos/pos_profile",
-        "pos/pos",
-        "pos/pos_product_list",
-        "pos/pos_product_form",
-        "pos/pos_table",
-        "pos/pos_checkout",
-        "crud_generator/cg_main_navigation",
-        "crud_generator/cg_dashboard",
-        "crud_generator/cg_profile",
-        "crud_generator/cg_module_manager"
+        "debug_dashboard",
+        "debug_profile",
+        "debug_order"
     ]
 }

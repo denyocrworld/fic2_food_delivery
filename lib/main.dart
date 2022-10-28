@@ -31,7 +31,7 @@ class ShellRouteExampleApp extends StatelessWidget {
           title: 'Capek Ngoding',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
-          theme: theme,
+          theme: getDarkTheme(),
           // home: const CgModuleManagerView(),
           // home: const TemplateCardView(),
           home: const DebugView(),

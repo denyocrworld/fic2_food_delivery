@@ -467,6 +467,30 @@ getRouters(
         child: const CgModuleManagerView(),
       ),
     ),
+          GoRoute(
+      path: '/debug_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DebugDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/debug_profile',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DebugProfileView(),
+      ),
+    ),
+          GoRoute(
+      path: '/debug_order',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DebugOrderView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

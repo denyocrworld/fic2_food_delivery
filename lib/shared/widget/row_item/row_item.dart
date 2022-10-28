@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class RowItem extends StatelessWidget {
+  final IconData? icon;
   final String label;
   final String value;
   final Function()? onPressed;
 
   const RowItem({
     Key? key,
+    this.icon,
     this.label = "",
     this.value = "",
     this.onPressed,
@@ -23,6 +25,12 @@ class RowItem extends StatelessWidget {
         ),
         child: Row(
           children: [
+            if (icon != null) ...[
+              Icon(icon),
+              const SizedBox(
+                width: 6.0,
+              ),
+            ],
             Expanded(
               child: Text(label),
             ),

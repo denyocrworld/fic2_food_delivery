@@ -431,6 +431,24 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/cg_module_manager',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Debug Dashboard',
+      route: '/debug_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Debug Profile',
+      route: '/debug_profile',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Debug Order',
+      route: '/debug_order',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 
