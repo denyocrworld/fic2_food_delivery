@@ -440,11 +440,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
     MainNavigationViewState.instance = this;
   }
 
-  doLogout() async {
-    await FirebaseAuth.instance.signOut();
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     var currentEndpoint = GoRouter.of(context).location;
@@ -583,9 +578,8 @@ class MainNavigationViewState extends State<MainNavigationView> {
                           CircleAvatar(
                             backgroundColor: Colors.grey[200],
                             radius: 18.0,
-                            backgroundImage: NetworkImage(
-                              me.photo ??
-                                  'https://i.ibb.co/S32HNjD/no-image.jpg',
+                            backgroundImage: const NetworkImage(
+                              'https://i.ibb.co/S32HNjD/no-image.jpg',
                             ),
                           ),
                         ],
