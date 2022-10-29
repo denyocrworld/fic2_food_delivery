@@ -1,66 +1,28 @@
 void main() {
-  var price = 0;
-  price = 3 * 5;
-  print(price);
+  var price = 25000;
+  print(price.toDuit());
+
+  var total = 32500.25;
+  print(total.toDuit());
 }
 
-
-// returnValue nama_function()
-
-
-//GET products
-//POST products
-//PUT/[id] products
-//DELETE/[id] products
-
-//POST login & get token
-//POST logout
-
-/*
-PHP
-ExpressJS
-Golang
-Python
-*/
-
-/*
-PHP
----
-CI
-LARAVEL
-YII
-Phalcon
----
-Q: Boleh gak lompat ke Framework tanpa 
-belajar bahasa basic-nya?
-
-A: Sebaiknya jangan,
-Karena nanti bingung implementasinya.
-Jadi, basic itu tetap perlu
-Minimal:
-- Variabel
-- IF Statement
-- Array/List
-- Looping
-- Function
-- Async Function
-- OOP (Minimal bisa bikin class, dan ngerti cara pakeknya)
-*/
-
-
-/*
-JSON
-
-[DART]
-var products = [];
-
-[PHP]
-$products = [];
-
-- Untuk mengirimkan data ke server
-- Atau untuk menerima data dari server
-
-{
-
+extension DoubleNumberExtension on double {
+  toDuit() {
+    var value = toString();
+    value = value.replaceAll(RegExp(r'\D'), '');
+    value = value.replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), ',');
+    return value;
+  }
 }
-*/
+
+extension IntNumberExtension on int {
+  toDuit() {
+    var value = toString();
+    value = value.replaceAll(RegExp(r'\D'), '');
+    value = value.replaceAll(RegExp(r'\B(?=(\d{3})+(?!\d))'), ',');
+    return value;
+  }
+}
+
+//references:
+//https://stackoverflow.com/questions/14865568/currency-format-in-dart
