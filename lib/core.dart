@@ -61,6 +61,8 @@ export 'package:example/module/debug_profile/controller/debug_profile_controller
 export 'package:example/module/debug_profile/view/debug_profile_view.dart';
 export 'package:example/module/demo/controller/demo_controller.dart';
 export 'package:example/module/demo/view/demo_view.dart';
+export 'package:example/module/dev/dev_main_navigation/controller/dev_main_navigation_controller.dart';
+export 'package:example/module/dev/dev_main_navigation/view/dev_main_navigation_view.dart';
 export 'package:example/module/event_form/controller/event_form_controller.dart';
 export 'package:example/module/event_form/view/event_form_view.dart';
 export 'package:example/module/event_list/controller/event_list_controller.dart';

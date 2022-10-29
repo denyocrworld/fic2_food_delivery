@@ -413,43 +413,49 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/cg_main_navigation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Cg Dashboard',
       route: '/cg_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Cg Profile',
       route: '/cg_profile',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Cg Module Manager',
       route: '/cg_module_manager',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Debug Dashboard',
       route: '/debug_dashboard',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Debug Profile',
       route: '/debug_profile',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Debug Order',
       route: '/debug_order',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Dev Main Navigation',
+      route: '/dev_main_navigation',
+      items: [],
+    ),
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

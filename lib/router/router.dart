@@ -2,14 +2,11 @@ import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
 
-getRouters(
-  context,
-  rootNavigatorKey,
-  shellNavigatorKey,
-  initialRoute,
-) {
+getRouters({
+  String? initialRoute,
+}) {
   return GoRouter(
-    navigatorKey: rootNavigatorKey,
+    navigatorKey: Get.navigatorKey,
     initialLocation: initialRoute ?? '/dashboard',
     routes: <RouteBase>[
       GoRoute(
@@ -45,7 +42,7 @@ getRouters(
         ),
       ),
       ShellRoute(
-        navigatorKey: shellNavigatorKey,
+        navigatorKey: Get.shellNavigatorKey,
         builder: (BuildContext context, GoRouterState state, Widget child) {
           return MainNavigationView(child: child);
         },
@@ -436,61 +433,69 @@ getRouters(
             ),
           ),
           GoRoute(
-      path: '/cg_main_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const CgMainNavigationView(),
-      ),
-    ),
+            path: '/cg_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgMainNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/cg_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const CgDashboardView(),
-      ),
-    ),
+            path: '/cg_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/cg_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const CgProfileView(),
-      ),
-    ),
+            path: '/cg_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgProfileView(),
+            ),
+          ),
           GoRoute(
-      path: '/cg_module_manager',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const CgModuleManagerView(),
-      ),
-    ),
+            path: '/cg_module_manager',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CgModuleManagerView(),
+            ),
+          ),
           GoRoute(
-      path: '/debug_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DebugDashboardView(),
-      ),
-    ),
+            path: '/debug_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DebugDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/debug_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DebugProfileView(),
-      ),
-    ),
+            path: '/debug_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DebugProfileView(),
+            ),
+          ),
           GoRoute(
-      path: '/debug_order',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DebugOrderView(),
-      ),
-    ),
+            path: '/debug_order',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DebugOrderView(),
+            ),
+          ),
+          GoRoute(
+            path: '/dev_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DevMainNavigationView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),
