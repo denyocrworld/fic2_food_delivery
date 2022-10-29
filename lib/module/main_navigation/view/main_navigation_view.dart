@@ -31,29 +31,21 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: 'Events',
       route: '/events',
       trailingBuilder: () {
-        return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection('events').snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text('Error');
-            if (snapshot.data == null) return Container();
-            final data = snapshot.data!;
-            return Card(
-              color: Colors.orange,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 4.0,
-                  vertical: 2.0,
-                ),
-                child: Text(
-                  '${data.docs.length}',
-                  style: const TextStyle(
-                    fontSize: 8.0,
-                    color: Colors.white,
-                  ),
-                ),
+        return const Card(
+          color: Colors.orange,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 4.0,
+              vertical: 2.0,
+            ),
+            child: Text(
+              '24',
+              style: TextStyle(
+                fontSize: 8.0,
+                color: Colors.white,
               ),
-            );
-          },
+            ),
+          ),
         );
       },
     ),
@@ -62,29 +54,21 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: 'Blogs',
       route: '/blogs',
       trailingBuilder: () {
-        return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection('blogs').snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text('Error');
-            if (snapshot.data == null) return Container();
-            final data = snapshot.data!;
-            return Card(
-              color: Colors.orange,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 4.0,
-                  vertical: 2.0,
-                ),
-                child: Text(
-                  '${data.docs.length}',
-                  style: const TextStyle(
-                    fontSize: 8.0,
-                    color: Colors.white,
-                  ),
-                ),
+        return const Card(
+          color: Colors.orange,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 4.0,
+              vertical: 2.0,
+            ),
+            child: Text(
+              '32',
+              style: TextStyle(
+                fontSize: 8.0,
+                color: Colors.white,
               ),
-            );
-          },
+            ),
+          ),
         );
       },
     ),
@@ -98,29 +82,21 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: 'Users',
       route: '/users',
       trailingBuilder: () {
-        return StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance.collection('users').snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.hasError) return const Text('Error');
-            if (snapshot.data == null) return Container();
-            final data = snapshot.data!;
-            return Card(
-              color: Colors.orange,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 4.0,
-                  vertical: 2.0,
-                ),
-                child: Text(
-                  '${data.docs.length}',
-                  style: const TextStyle(
-                    fontSize: 8.0,
-                    color: Colors.white,
-                  ),
-                ),
+        return const Card(
+          color: Colors.orange,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 4.0,
+              vertical: 2.0,
+            ),
+            child: Text(
+              '39',
+              style: TextStyle(
+                fontSize: 8.0,
+                color: Colors.white,
               ),
-            );
-          },
+            ),
+          ),
         );
       },
     ),
@@ -472,10 +448,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
   @override
   Widget build(BuildContext context) {
     var currentEndpoint = GoRouter.of(context).location;
-
-    if (FirebaseAuth.instance.currentUser == null) {
-      return const LoginView();
-    }
 
     if (Responsive.isMobile(context)) {
       expanded = false;
