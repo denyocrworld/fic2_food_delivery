@@ -27,6 +27,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/dashboard',
     ),
     NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Card',
+      route: '/card',
+      items: [],
+    ),
+    NavigationItem(
       icon: const Icon(Icons.dashboard),
       label: 'Form UI',
       route: '/form_ui',
@@ -38,7 +44,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/hyper_ui',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

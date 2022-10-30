@@ -73,6 +73,14 @@ getRouters({
         child: const HyperUiView(),
       ),
     ),
+          GoRoute(
+      path: '/card',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const CardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
