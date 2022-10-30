@@ -18,7 +18,7 @@ class FormUiView extends StatefulWidget {
           children: [
             //body
             const Text(
-              "text",
+              "text12",
               style: TextStyle(
                 fontSize: 20.0,
                 fontWeight: FontWeight.bold,

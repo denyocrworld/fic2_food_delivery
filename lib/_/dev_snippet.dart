@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
 // ignore: use_key_in_widget_constructors
 class DevSnippetView extends StatelessWidget {
@@ -69,6 +68,7 @@ class DevSnippetView extends StatelessWidget {
       await FirebaseAuth.instance.signInAnonymously();
       //#END
 
+      /*
       //#TEMPLATE firegooglelogin
       GoogleSignIn googleSignIn = GoogleSignIn(
         scopes: [
@@ -95,6 +95,7 @@ class DevSnippetView extends StatelessWidget {
         //------------------
       } catch (_) {}
       //#END
+      */
 
       //#TEMPLATE firesignup
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
