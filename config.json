@@ -3,6 +3,7 @@
         "debug_dashboard",
         "debug_profile",
         "debug_order",
-        "dev/dev_main_navigation"
+        "dev/dev_main_navigation",
+        "game"
     ]
 }

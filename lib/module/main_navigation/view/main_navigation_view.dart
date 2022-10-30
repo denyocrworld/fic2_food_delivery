@@ -431,7 +431,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/dev_main_navigation',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Game',
+      route: '/game',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

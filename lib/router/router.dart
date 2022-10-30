@@ -496,6 +496,14 @@ getRouters({
               child: const DevMainNavigationView(),
             ),
           ),
+          GoRoute(
+      path: '/game',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const GameView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

@@ -69,6 +69,8 @@ export 'package:example/module/event_list/controller/event_list_controller.dart'
 export 'package:example/module/event_list/view/event_list_view.dart';
 export 'package:example/module/form_ui/controller/form_ui_controller.dart';
 export 'package:example/module/form_ui/view/form_ui_view.dart';
+export 'package:example/module/game/controller/game_controller.dart';
+export 'package:example/module/game/view/game_view.dart';
 export 'package:example/module/hris/auth/hris_login/controller/hris_login_controller.dart';
 export 'package:example/module/hris/auth/hris_login/view/hris_login_view.dart';
 export 'package:example/module/hris/auth/hris_phone_login/controller/hris_phone_login_controller.dart';

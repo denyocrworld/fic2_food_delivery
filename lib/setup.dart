@@ -16,6 +16,13 @@ import 'firebase_options.dart';
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //     options: const FirebaseOptions(
+  //   apiKey: 'AIzaSyDBlw7fwK5WNE3Apios4kL6WIDznCkEHaA',
+  //   appId: '1:845116064246:web:90a43f50a18b54e9d447d7',
+  //   messagingSenderId: '845116064246',
+  //   projectId: 'capekngoding-website',
+  // ));
   if (!kIsWeb && Platform.isWindows) return;
 
   await Firebase.initializeApp(
