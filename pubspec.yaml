@@ -37,6 +37,7 @@ dependencies:
   badges: ^2.0.3
   awesome_notifications: ^0.7.3
   awesome_notifications_fcm: ^0.7.3
+  flutter_markdown: ^0.6.12
 dependency_overrides:
   google_sign_in_web:
     path: ./google_sign_in_web/

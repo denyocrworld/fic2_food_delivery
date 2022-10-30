@@ -22,7 +22,23 @@ getRouters({
         builder: (BuildContext context, GoRouterState state, Widget child) {
           return MainNavigationView(child: child);
         },
-        routes: const <RouteBase>[
+        routes: <RouteBase>[
+          GoRoute(
+            path: '/dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/form_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FormUiView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

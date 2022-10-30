@@ -5,6 +5,10 @@ it means you have to rename it to something more unique.
 */
 export 'package:example/model/blog/blog.dart';
 export 'package:example/model/firebase_user/firebase_user.dart';
+export 'package:example/module/dashboard/controller/dashboard_controller.dart';
+export 'package:example/module/dashboard/view/dashboard_view.dart';
+export 'package:example/module/form_ui/controller/form_ui_controller.dart';
+export 'package:example/module/form_ui/view/form_ui_view.dart';
 export 'package:example/module/list/table_list/controller/table_list_controller.dart';
 export 'package:example/module/list/table_list/view/table_list_view.dart';
 export 'package:example/module/list/tab_list/controller/tab_list_controller.dart';
