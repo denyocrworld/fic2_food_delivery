@@ -36,7 +36,7 @@ class _SideMenuItemState extends State<SideMenuItem> {
               setState(() {});
               return;
             }
-            go(widget.item.route);
+            GoRouter.of(Get.navigatorKey.currentContext!).go(widget.item.route);
           },
           child: Container(
             padding: const EdgeInsets.symmetric(

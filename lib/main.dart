@@ -17,15 +17,21 @@ class ShellRouteExampleApp extends StatelessWidget {
   const ShellRouteExampleApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return ThemeEditor.build(
-      builder: (theme) {
-        return MaterialApp.router(
-          title: 'Capek Ngoding',
-          debugShowCheckedModeBanner: false,
-          theme: theme,
-          routerConfig: getRouters(),
-        );
-      },
+    // return ThemeEditor.build(
+    //   builder: (theme) {
+    //     return MaterialApp.router(
+    //       title: 'Capek Ngoding',
+    //       debugShowCheckedModeBanner: false,
+    //       theme: theme,
+    //       routerConfig: getRouters(),
+    //     );
+    //   },
+    // );
+    return MaterialApp.router(
+      title: 'Capek Ngoding',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      routerConfig: getRouters(),
     );
   }
 }

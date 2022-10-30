@@ -17,6 +17,16 @@ class FormUiView extends StatefulWidget {
         child: Column(
           children: [
             //body
+            const Text(
+              "text",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
             ExCard(
               title: "Basic Form",
               width: 240.0,
