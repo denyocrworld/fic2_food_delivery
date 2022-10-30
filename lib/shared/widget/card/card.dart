@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ExCard extends StatelessWidget {
   final String title;
-  final double width;
+  final double? width;
   final IconData? icon;
   final List<Widget> children;
   final List<Widget> actions;
@@ -11,7 +11,7 @@ class ExCard extends StatelessWidget {
   const ExCard({
     Key? key,
     required this.title,
-    this.width = 240.0,
+    this.width,
     this.children = const [],
     this.padding,
     this.actions = const [],
@@ -22,8 +22,7 @@ class ExCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
-      height: 300.0,
+      width: width ?? MediaQuery.of(context).size.width,
       child: Card(
         child: SizedBox(
           child: Column(

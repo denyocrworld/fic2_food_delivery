@@ -1,5 +1,5 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import '../controller/dashboard_controller.dart';
 
 class DashboardView extends StatefulWidget {
   const DashboardView({Key? key}) : super(key: key);
@@ -16,8 +16,26 @@ class DashboardView extends StatefulWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: const [
+            children: [
               //body
+              Text(
+                GoRouter.of(context).location,
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  GoRouter.of(context).go("/form_ui");
+                },
+              ),
             ],
           ),
         ),

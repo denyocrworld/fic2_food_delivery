@@ -45,9 +45,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
   Widget build(BuildContext context) {
     var currentEndpoint = GoRouter.of(context).location;
 
-    if (Responsive.isMobile(context)) {
-      expanded = false;
-    }
+    // if (Responsive.isMobile(context)) {
+    //   expanded = false;
+    // }
 
     return Theme(
       data: getDefaultTheme(),

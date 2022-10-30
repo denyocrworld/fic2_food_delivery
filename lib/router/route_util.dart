@@ -6,7 +6,5 @@ get ctx {
 }
 
 go(routeName) {
-  GoRouter.of(ctx).go(
-    routeName,
-  );
+  GoRouter.of(Get.navigatorKey.currentContext!).go(routeName);
 }

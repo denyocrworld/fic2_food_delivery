@@ -8,6 +8,9 @@ getRouters({
   return GoRouter(
     navigatorKey: Get.navigatorKey,
     initialLocation: initialRoute ?? '/dashboard',
+    redirect: (context, state) {
+      return null;
+    },
     routes: <RouteBase>[
       // GoRoute(
       //   path: '/hris_phone_login',
@@ -16,6 +19,28 @@ getRouters({
       //     state: state,
       //     child: const HrisPhoneLoginView(),
       //   ),
+      // ),
+      // GoRoute(
+      //   path: '/dashboard',
+      //   // pageBuilder: (context, state) => noTransition(
+      //   //   context: context,
+      //   //   state: state,
+      //   //   child: const DashboardView(),
+      //   // ),
+      //   builder: (context, state) {
+      //     return secureRoute(const DashboardView());
+      //   },
+      // ),
+      // GoRoute(
+      //   path: '/form_ui',
+      //   // pageBuilder: (context, state) => noTransition(
+      //   //   context: context,
+      //   //   state: state,
+      //   //   child: const FormUiView(),
+      //   // ),
+      //   builder: (context, state) {
+      //     return secureRoute(const FormUiView());
+      //   },
       // ),
       ShellRoute(
         navigatorKey: Get.shellNavigatorKey,
@@ -39,6 +64,7 @@ getRouters({
               child: const FormUiView(),
             ),
           ),
+
           //@ROUTER_GENERATOR
         ],
       ),
