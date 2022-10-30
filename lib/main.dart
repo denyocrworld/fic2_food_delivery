@@ -15,33 +15,15 @@ void main() async {
 
 class ShellRouteExampleApp extends StatelessWidget {
   const ShellRouteExampleApp({Key? key}) : super(key: key);
-  Widget get userDashboardView {
-    if (isHR) {
-      return const HrisHrDashboardView();
-    } else {
-      return const HrisEmployeeDashboardView();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return ThemeEditor.build(
       builder: (theme) {
         return MaterialApp.router(
           title: 'Capek Ngoding',
-          // navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: theme,
           routerConfig: getRouters(),
-          // home: const CgModuleManagerView(),
-          // home: const TemplateCardView(),
-          // home: const TemplateNavigationTabView(),
-          // home: const DevMainNavigationView(),
-          // home: const DevMainNavigationView(),
-          // home: const DebugView()
-          // home: FirebaseAuth.instance.currentUser != null
-          //     ? const PosMainNavigationView()
-          //     : const PosLoginView(),
         );
       },
     );
