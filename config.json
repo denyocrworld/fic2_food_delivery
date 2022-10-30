@@ -1,6 +1,7 @@
 {
     "modules": [
         "dashboard",
-        "form_ui"
+        "form_ui",
+        "hyper_ui"
     ]
 }

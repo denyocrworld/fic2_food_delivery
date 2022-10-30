@@ -65,6 +65,14 @@ getRouters({
             ),
           ),
 
+          GoRoute(
+      path: '/hyper_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HyperUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
