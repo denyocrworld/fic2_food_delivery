@@ -20,12 +20,26 @@ class FormUiView extends StatefulWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //body
-
+            Container(
+              height: 100.0,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://i.ibb.co/3pPYd14/freeban.jpg",
+                  ),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(
+                    16.0,
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 20.0,
             ),
             ExCard(
-              title: "Basic",
               children: [
                 Container(
                   padding: const EdgeInsets.all(12),

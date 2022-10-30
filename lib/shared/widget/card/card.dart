@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ExCard extends StatelessWidget {
-  final String title;
+  final String? title;
   final double? width;
   final IconData? icon;
   final List<Widget> children;
@@ -10,7 +10,7 @@ class ExCard extends StatelessWidget {
   final EdgeInsets? padding;
   const ExCard({
     Key? key,
-    required this.title,
+    this.title,
     this.width,
     this.children = const [],
     this.padding,
@@ -21,6 +21,7 @@ class ExCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool showTitle = title != null;
     return SizedBox(
       width: width ?? MediaQuery.of(context).size.width,
       child: Card(
@@ -28,46 +29,48 @@ class ExCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 20.0,
-                  horizontal: 24.0,
-                ),
-                child: Row(
-                  children: [
-                    if (icon != null) ...[
-                      Icon(icon),
-                      const SizedBox(
-                        width: 6.0,
-                      ),
-                    ],
-                    Expanded(
-                      child: Text(
-                        title,
-                        style: const TextStyle(
-                          fontSize: 16.0,
+              if (showTitle) ...[
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 20.0,
+                    horizontal: 24.0,
+                  ),
+                  child: Row(
+                    children: [
+                      if (icon != null) ...[
+                        Icon(icon),
+                        const SizedBox(
+                          width: 6.0,
+                        ),
+                      ],
+                      Expanded(
+                        child: Text(
+                          title!,
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                          ),
                         ),
                       ),
-                    ),
-                    Row(
-                      children: List.generate(
-                        actions.length,
-                        (index) {
-                          return SizedBox(
-                            height: 30.0,
-                            child: FittedBox(
-                              child: actions[index],
-                            ),
-                          );
-                        },
+                      Row(
+                        children: List.generate(
+                          actions.length,
+                          (index) {
+                            return SizedBox(
+                              height: 30.0,
+                              child: FittedBox(
+                                child: actions[index],
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              const Divider(
-                height: 1.0,
-              ),
+                const Divider(
+                  height: 1.0,
+                ),
+              ],
               Container(
                 padding: padding ?? const EdgeInsets.all(8.0),
                 child: Column(
