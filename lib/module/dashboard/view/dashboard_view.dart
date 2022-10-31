@@ -18,23 +18,59 @@ class DashboardView extends StatefulWidget {
           child: Column(
             children: [
               //body
-              Text(
-                GoRouter.of(context).location,
-                style: const TextStyle(
+              const Text(
+                "Dashboard UI",
+                style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Add"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+              const SizedBox(
+                height: 20.0,
+              ),
+              Transform.scale(
+                scale: 0.6,
+                alignment: Alignment.topLeft,
+                child: SizedBox(
+                  width: 560.0,
+                  height: 820.0,
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 560.0,
+                        height: 740.0,
+                        padding: const EdgeInsets.only(
+                          left: 16.0,
+                          right: 16.0,
+                          bottom: 16.0,
+                          top: 32.0,
+                        ),
+                        decoration: const BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                        ),
+                        child: const ClipRRect(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(20.0),
+                          ),
+                          child: DashboardTodoListView(),
+                        ),
+                      ),
+                      const Align(
+                        alignment: Alignment.topCenter,
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Icon(
+                            Icons.camera,
+                            size: 16.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                onPressed: () {
-                  GoRouter.of(context).go("/form_ui");
-                },
               ),
             ],
           ),

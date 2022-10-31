@@ -7,7 +7,8 @@ getRouters({
 }) {
   return GoRouter(
     navigatorKey: Get.navigatorKey,
-    initialLocation: initialRoute ?? '/dashboard',
+    // initialLocation: initialRoute ?? '/dashboard',
+    initialLocation: initialRoute ?? '/dashboard_food_delivery',
     redirect: (context, state) {
       return null;
     },
@@ -94,6 +95,22 @@ getRouters({
               context: context,
               state: state,
               child: const ThemeView(),
+            ),
+          ),
+          GoRoute(
+            path: '/dashboard_todo_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DashboardTodoListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/dashboard_food_delivery',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DashboardFoodDeliveryView(),
             ),
           ),
           //@ROUTER_GENERATOR

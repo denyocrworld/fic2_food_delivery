@@ -4,6 +4,8 @@
         "card",
         "form_ui",
         "hyper_ui",
-        "theme"
+        "theme",
+        "dashboard_todo_list",
+        "dashboard_food_delivery"
     ]
 }
