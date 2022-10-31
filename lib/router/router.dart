@@ -45,7 +45,14 @@ getRouters({
       ShellRoute(
         navigatorKey: Get.shellNavigatorKey,
         builder: (BuildContext context, GoRouterState state, Widget child) {
-          return MainNavigationView(child: child);
+          return ThemeEditor.build(builder: (theme) {
+            return Theme(
+              data: theme,
+              child: MainNavigationView(
+                child: child,
+              ),
+            );
+          });
         },
         routes: <RouteBase>[
           GoRoute(
@@ -66,29 +73,29 @@ getRouters({
           ),
 
           GoRoute(
-      path: '/hyper_ui',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HyperUiView(),
-      ),
-    ),
+            path: '/hyper_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HyperUiView(),
+            ),
+          ),
           GoRoute(
-      path: '/card',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const CardView(),
-      ),
-    ),
+            path: '/card',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const CardView(),
+            ),
+          ),
           GoRoute(
-      path: '/theme',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ThemeView(),
-      ),
-    ),
+            path: '/theme',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ThemeView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

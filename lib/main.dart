@@ -10,12 +10,9 @@ void main() async {
     await FirebaseNotification.initialize();
   }
 
-  runApp(ThemeEditor.build(builder: (theme) {
-    return MaterialApp.router(
-      title: 'Capek Ngoding',
-      debugShowCheckedModeBanner: false,
-      theme: theme,
-      routerConfig: getRouters(),
-    );
-  }));
+  runApp(MaterialApp.router(
+    title: 'Capek Ngoding',
+    debugShowCheckedModeBanner: false,
+    routerConfig: getRouters(),
+  ));
 }
