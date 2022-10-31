@@ -81,6 +81,14 @@ getRouters({
         child: const CardView(),
       ),
     ),
+          GoRoute(
+      path: '/theme',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ThemeView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

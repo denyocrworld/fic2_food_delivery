@@ -44,7 +44,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/hyper_ui',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Theme',
+      route: '/theme',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

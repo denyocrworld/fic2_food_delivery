@@ -23,6 +23,8 @@ export 'package:example/module/main_navigation/view/main_navigation_view.dart';
 export 'package:example/module/main_navigation/widget/side_group_title.dart';
 export 'package:example/module/main_navigation/widget/side_menu_item.dart';
 export 'package:example/module/main_navigation/widget/top_bar.dart';
+export 'package:example/module/theme/controller/theme_controller.dart';
+export 'package:example/module/theme/view/theme_view.dart';
 export 'package:example/router/no_transition.dart';
 export 'package:example/router/router.dart';
 export 'package:example/router/route_util.dart';

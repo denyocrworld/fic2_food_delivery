@@ -3,6 +3,7 @@
         "dashboard",
         "card",
         "form_ui",
-        "hyper_ui"
+        "hyper_ui",
+        "theme"
     ]
 }

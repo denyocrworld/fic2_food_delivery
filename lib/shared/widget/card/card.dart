@@ -74,6 +74,7 @@ class ExCard extends StatelessWidget {
               Container(
                 padding: padding ?? const EdgeInsets.all(8.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: children,
                 ),
               ),
