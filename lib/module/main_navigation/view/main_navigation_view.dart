@@ -62,6 +62,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/dashboard_food_delivery',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Example',
+      route: '/pos_example',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

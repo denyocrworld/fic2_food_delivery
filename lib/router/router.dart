@@ -8,7 +8,7 @@ getRouters({
   return GoRouter(
     navigatorKey: Get.navigatorKey,
     // initialLocation: initialRoute ?? '/dashboard',
-    initialLocation: initialRoute ?? '/dashboard_food_delivery',
+    initialLocation: initialRoute ?? '/dashboard_todo_list',
     redirect: (context, state) {
       return null;
     },
@@ -111,6 +111,14 @@ getRouters({
               context: context,
               state: state,
               child: const DashboardFoodDeliveryView(),
+            ),
+          ),
+          GoRoute(
+            path: '/pos_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosExampleView(),
             ),
           ),
           //@ROUTER_GENERATOR
