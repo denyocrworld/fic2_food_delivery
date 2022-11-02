@@ -121,6 +121,14 @@ getRouters({
               child: const PosExampleView(),
             ),
           ),
+          GoRoute(
+      path: '/debug',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DebugView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

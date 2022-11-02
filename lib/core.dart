@@ -13,6 +13,9 @@ export 'package:example/module/dashboard_food_delivery/controller/dashboard_food
 export 'package:example/module/dashboard_food_delivery/view/dashboard_food_delivery_view.dart';
 export 'package:example/module/dashboard_todo_list/controller/dashboard_todo_list_controller.dart';
 export 'package:example/module/dashboard_todo_list/view/dashboard_todo_list_view.dart';
+export 'package:example/module/dashboard_todo_list/widget/hacked_widget.dart';
+export 'package:example/module/debug/controller/debug_controller.dart';
+export 'package:example/module/debug/view/debug_view.dart';
 export 'package:example/module/form_ui/controller/form_ui_controller.dart';
 export 'package:example/module/form_ui/view/form_ui_view.dart';
 export 'package:example/module/hyper_ui/controller/hyper_ui_controller.dart';

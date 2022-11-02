@@ -68,6 +68,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_example',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Debug',
+      route: '/debug',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 
