@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/module/style_guide/widget/color_widget.dart';
 import 'package:flutter/material.dart';
 
 class StyleGuideView extends StatefulWidget {
@@ -29,80 +30,44 @@ class StyleGuideView extends StatefulWidget {
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: successColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: successColor,
+                                  name: "successColor",
                                 ),
                                 const SizedBox(
                                   width: 8.0,
                                 ),
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: warningColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: warningColor,
+                                  name: "warningColor",
                                 ),
                                 const SizedBox(
                                   width: 8.0,
                                 ),
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: dangerColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: dangerColor,
+                                  name: "dangerColor",
                                 ),
                                 const SizedBox(
                                   width: 8.0,
                                 ),
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: infoColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: infoColor,
+                                  name: "infoColor",
                                 ),
                                 const SizedBox(
                                   width: 8.0,
                                 ),
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: primaryColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: primaryColor,
+                                  name: "primaryColor",
                                 ),
                                 const SizedBox(
                                   width: 8.0,
                                 ),
-                                Container(
-                                  width: 60.0,
-                                  height: 60.0,
-                                  decoration: BoxDecoration(
-                                    color: disabledColor,
-                                    borderRadius: const BorderRadius.all(
-                                      Radius.circular(12.0),
-                                    ),
-                                  ),
+                                ColorWidget(
+                                  color: disabledColor,
+                                  name: "disabledColor",
                                 ),
                               ],
                             ),
