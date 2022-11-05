@@ -13,224 +13,214 @@ class StyleGuideView extends StatefulWidget {
         title: const Text("StyleGuide"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
+      body: Column(
+        children: [
+          //body
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //body
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: Column(
+              Expanded(
+                child: Column(
+                  children: [
+                    ExCard(
+                      title: "Base Color",
                       children: [
-                        ExCard(
-                          title: "Base Color",
+                        Row(
                           children: [
-                            Row(
-                              children: [
-                                ColorWidget(
-                                  color: successColor,
-                                  name: "successColor",
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                ColorWidget(
-                                  color: warningColor,
-                                  name: "warningColor",
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                ColorWidget(
-                                  color: dangerColor,
-                                  name: "dangerColor",
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                ColorWidget(
-                                  color: infoColor,
-                                  name: "infoColor",
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                ColorWidget(
-                                  color: primaryColor,
-                                  name: "primaryColor",
-                                ),
-                                const SizedBox(
-                                  width: 8.0,
-                                ),
-                                ColorWidget(
-                                  color: disabledColor,
-                                  name: "disabledColor",
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 12.0,
-                        ),
-                        ExCard(
-                          title: "Scale",
-                          children: [
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 30,
-                              decoration: const BoxDecoration(
-                                color: Colors.orange,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(12.0),
-                                ),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Extra Small",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 8.0,
-                                  ),
-                                ),
-                              ),
+                            ColorWidget(
+                              color: successColor,
+                              name: "successColor",
                             ),
                             const SizedBox(
-                              height: 8.0,
+                              width: 8.0,
                             ),
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              height: 40,
-                              decoration: const BoxDecoration(
-                                color: Colors.orange,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(12.0),
-                                ),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Small",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(
-                                    fontSize: 8.0,
-                                  ),
-                                ),
-                              ),
+                            ColorWidget(
+                              color: warningColor,
+                              name: "warningColor",
+                            ),
+                            const SizedBox(
+                              width: 8.0,
+                            ),
+                            ColorWidget(
+                              color: dangerColor,
+                              name: "dangerColor",
+                            ),
+                            const SizedBox(
+                              width: 8.0,
+                            ),
+                            ColorWidget(
+                              color: infoColor,
+                              name: "infoColor",
+                            ),
+                            const SizedBox(
+                              width: 8.0,
+                            ),
+                            ColorWidget(
+                              color: primaryColor,
+                              name: "primaryColor",
+                            ),
+                            const SizedBox(
+                              width: 8.0,
+                            ),
+                            ColorWidget(
+                              color: disabledColor,
+                              name: "disabledColor",
                             ),
                           ],
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(
-                    width: 12.0,
-                  ),
-                  Expanded(
-                    child: Column(
+                    const SizedBox(
+                      height: 12.0,
+                    ),
+                    ExCard(
+                      title: "Scale",
                       children: [
-                        "Heading".card(
-                          [
-                            const Text(
-                              "Heading H1",
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 30,
+                          decoration: const BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(12.0),
+                            ),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Extra Small",
+                              textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 8.0,
                               ),
                             ),
-                            const Text(
-                              "Heading h2",
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8.0,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width,
+                          height: 40,
+                          decoration: const BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(12.0),
+                            ),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              "Small",
+                              textAlign: TextAlign.left,
                               style: TextStyle(
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 8.0,
                               ),
                             ),
-                            const Text(
-                              "Heading h3",
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Heading h4",
-                              style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Heading h5",
-                              style: TextStyle(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const Text(
-                              "Heading h6",
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              "Typography".card([
-                Text(
-                  "xxl",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
-                  ),
+              const SizedBox(
+                width: 12.0,
+              ),
+              Expanded(
+                child: Column(
+                  children: [
+                    "Heading".card(
+                      [
+                        const Text(
+                          "Heading H1",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text(
+                          "Heading h2",
+                          style: TextStyle(
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text(
+                          "Heading h3",
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text(
+                          "Heading h4",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text(
+                          "Heading h5",
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text(
+                          "Heading h6",
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                const Text(
-                  "xl",
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  "lg",
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  "md",
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  "sm",
-                  style: TextStyle(
-                    fontSize: 10.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Text(
-                  "xs",
-                  style: TextStyle(
-                    fontSize: 8.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ]),
+              ),
             ],
           ),
-        ),
-      ),
+          "Typography".card([
+            Text(
+              "xxl",
+              style: TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+                color: primaryColor,
+              ),
+            ),
+            const Text(
+              "xl",
+              style: TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+            const Text(
+              "lg",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+            const Text(
+              "md",
+              style: TextStyle(
+                fontSize: 12.0,
+              ),
+            ),
+            const Text(
+              "sm",
+              style: TextStyle(
+                fontSize: 10.0,
+              ),
+            ),
+            const Text(
+              "xs",
+              style: TextStyle(
+                fontSize: 8.0,
+              ),
+            ),
+          ]),
+        ],
+      ).scroll(),
     );
   }
 
@@ -243,6 +233,23 @@ extension CardExtension on String {
     return ExCard(
       title: this,
       children: children,
+    );
+  }
+}
+
+extension BodyExtension on Widget {
+  Widget scroll() {
+    return SingleChildScrollView(
+      child: Container(
+        padding: const EdgeInsets.all(20.0),
+        child: this,
+      ),
+    );
+  }
+
+  Widget scrollNoPadding() {
+    return SingleChildScrollView(
+      child: this,
     );
   }
 }
