@@ -201,6 +201,14 @@ getRouters({
         child: const WidgetUiView(),
       ),
     ),
+          GoRoute(
+      path: '/searchfield_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const SearchfieldUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

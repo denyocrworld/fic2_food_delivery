@@ -129,6 +129,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/widget_ui',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Searchfield Ui',
+      route: '/searchfield_ui',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

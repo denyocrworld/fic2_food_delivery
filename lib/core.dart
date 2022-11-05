@@ -44,6 +44,8 @@ export 'package:example/module/pos_example/controller/pos_example_controller.dar
 export 'package:example/module/pos_example/view/pos_example_view.dart';
 export 'package:example/module/scaffold_ui/controller/scaffold_ui_controller.dart';
 export 'package:example/module/scaffold_ui/view/scaffold_ui_view.dart';
+export 'package:example/module/searchfield_ui/controller/searchfield_ui_controller.dart';
+export 'package:example/module/searchfield_ui/view/searchfield_ui_view.dart';
 export 'package:example/module/style_guide/controller/style_guide_controller.dart';
 export 'package:example/module/style_guide/view/style_guide_view.dart';
 export 'package:example/module/style_guide/widget/color_widget.dart';

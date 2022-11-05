@@ -17,6 +17,7 @@
         "detail_ui",
         "tab_ui",
         "dialog_ui",
-        "widget_ui"
+        "widget_ui",
+        "searchfield_ui"
     ]
 }

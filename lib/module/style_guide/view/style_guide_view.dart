@@ -1,5 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/module/style_guide/widget/color_widget.dart';
 import 'package:flutter/material.dart';
 
 class StyleGuideView extends StatefulWidget {
@@ -16,58 +15,77 @@ class StyleGuideView extends StatefulWidget {
       body: Column(
         children: [
           Row(
+            children: [
+              "Context".card([
+                const Text(
+                  "globalContext",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 6.0,
+                ),
+                const Text(
+                  "You can use this variable to create a ui that requires context. In order for the implementation to be contextless. Usually used for dualog, bottomsheet and other similar ui.",
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+              ]).expanded(),
+            ],
+          ),
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 children: [
-                  ExCard(
-                    title: "Base Color",
-                    children: [
-                      Row(
-                        children: [
-                          ColorWidget(
-                            color: successColor,
-                            name: "successColor",
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          ColorWidget(
-                            color: warningColor,
-                            name: "warningColor",
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          ColorWidget(
-                            color: dangerColor,
-                            name: "dangerColor",
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          ColorWidget(
-                            color: infoColor,
-                            name: "infoColor",
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          ColorWidget(
-                            color: primaryColor,
-                            name: "primaryColor",
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          ColorWidget(
-                            color: disabledColor,
-                            name: "disabledColor",
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                  "Base Color".card([
+                    Row(
+                      children: [
+                        ColorWidget(
+                          color: successColor,
+                          name: "successColor",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        ColorWidget(
+                          color: warningColor,
+                          name: "warningColor",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        ColorWidget(
+                          color: dangerColor,
+                          name: "dangerColor",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        ColorWidget(
+                          color: infoColor,
+                          name: "infoColor",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        ColorWidget(
+                          color: primaryColor,
+                          name: "primaryColor",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        ColorWidget(
+                          color: disabledColor,
+                          name: "disabledColor",
+                        ),
+                      ],
+                    ),
+                  ]),
                   const SizedBox(
                     height: 12.0,
                   ),
@@ -224,7 +242,7 @@ class StyleGuideView extends StatefulWidget {
 }
 
 extension CardExtension on String {
-  card(List<Widget> children) {
+  Widget card(List<Widget> children) {
     return ExCard(
       title: this,
       children: children,
