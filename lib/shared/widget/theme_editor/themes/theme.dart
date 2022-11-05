@@ -23,6 +23,9 @@ const double lg = 60;
 const double xl = 70;
 
 //---
+const defaultRadius = 20;
+//---
+
 //Text
 Color fontColor = Colors.grey[700]!;
 
