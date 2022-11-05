@@ -9,6 +9,14 @@
         "dashboard_food_delivery",
         "pos_example",
         "debug",
-        "style_guide"
+        "style_guide",
+        "scaffold_ui",
+        "appbar_ui",
+        "navigation_ui",
+        "list_ui",
+        "detail_ui",
+        "tab_ui",
+        "dialog_ui",
+        "widget_ui"
     ]
 }

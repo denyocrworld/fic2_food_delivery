@@ -137,6 +137,70 @@ getRouters({
         child: const StyleGuideView(),
       ),
     ),
+          GoRoute(
+      path: '/scaffold_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ScaffoldUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/navigation_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const NavigationUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/appbar_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AppbarUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/list_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ListUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/detail_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DetailUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tab_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TabUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/dialog_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DialogUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/widget_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const WidgetUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

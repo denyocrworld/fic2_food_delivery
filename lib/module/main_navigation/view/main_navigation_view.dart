@@ -81,7 +81,55 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [],
     ),
 
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Scaffold Ui',
+      route: '/scaffold_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Navigation Ui',
+      route: '/navigation_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Appbar Ui',
+      route: '/appbar_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'List Ui',
+      route: '/list_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Detail Ui',
+      route: '/detail_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tab Ui',
+      route: '/tab_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Dialog Ui',
+      route: '/dialog_ui',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Widget Ui',
+      route: '/widget_ui',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

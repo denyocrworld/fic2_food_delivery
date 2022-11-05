@@ -13,9 +13,11 @@ class DashboardView extends StatefulWidget {
         actions: const [],
       ),
       body: SingleChildScrollView(
-        child: Padding(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               //body
               const Text(
@@ -33,12 +35,12 @@ class DashboardView extends StatefulWidget {
                 alignment: Alignment.topLeft,
                 child: SizedBox(
                   width: 560.0,
-                  height: 820.0,
+                  height: 920.0,
                   child: Stack(
                     children: [
                       Container(
                         width: 560.0,
-                        height: 740.0,
+                        height: 920.0,
                         padding: const EdgeInsets.only(
                           left: 16.0,
                           right: 16.0,
