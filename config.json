@@ -8,6 +8,7 @@
         "dashboard_todo_list",
         "dashboard_food_delivery",
         "pos_example",
-        "debug"
+        "debug",
+        "style_guide"
     ]
 }

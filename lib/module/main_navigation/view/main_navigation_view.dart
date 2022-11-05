@@ -28,6 +28,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.web),
+      label: 'Style Guide',
+      route: '/style_guide',
+      items: [],
+    ),
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
       label: 'Card',
       route: '/card',
       items: [],
@@ -56,25 +62,26 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/dashboard_todo_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Dashboard Food Delivery',
       route: '/dashboard_food_delivery',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Pos Example',
       route: '/pos_example',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Debug',
       route: '/debug',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+
+    //@NAVIGATION_GENERATOR
   ];
 
   @override
