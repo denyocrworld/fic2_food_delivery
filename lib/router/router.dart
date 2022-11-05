@@ -7,8 +7,8 @@ getRouters({
 }) {
   return GoRouter(
     navigatorKey: Get.navigatorKey,
-    // initialLocation: initialRoute ?? '/dashboard',
-    initialLocation: initialRoute ?? '/dashboard_todo_list',
+    initialLocation: initialRoute ?? '/dashboard',
+    // initialLocation: initialRoute ?? '/dashboard_todo_list',
     redirect: (context, state) {
       return null;
     },
@@ -122,13 +122,13 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/debug',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const DebugView(),
-      ),
-    ),
+            path: '/debug',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const DebugView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),
