@@ -14,7 +14,7 @@ class SearchfieldUiView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             children: [
               //body
@@ -25,7 +25,7 @@ class SearchfieldUiView extends StatefulWidget {
                   horizontal: 12.0,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: Colors.white,
                   borderRadius: const BorderRadius.all(
                     Radius.circular(12.0),
                   ),
