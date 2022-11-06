@@ -32,8 +32,8 @@ class ExCard extends StatelessWidget {
               if (showTitle) ...[
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 20.0,
-                    horizontal: 24.0,
+                    vertical: 16.0,
+                    horizontal: 20.0,
                   ),
                   child: Row(
                     children: [
