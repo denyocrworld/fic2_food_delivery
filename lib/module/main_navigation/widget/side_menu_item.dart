@@ -94,23 +94,30 @@ class _SideMenuItemState extends State<SideMenuItem> {
                         var item = widget.item.items[index];
                         return AnimatedContainer(
                           duration: const Duration(milliseconds: 300),
-                          padding: const EdgeInsets.all(6.0),
+                          padding: const EdgeInsets.all(2.0),
                           margin: const EdgeInsets.only(
-                            left: 30.0,
+                            left: 16.0,
                           ),
-                          height: subMenuExpanded ? 40.0 : 0.0,
+                          height: subMenuExpanded ? 30.0 : 0.0,
                           child: InkWell(
                             onTap: () {
                               go(item.route);
                             },
                             child: Row(
                               children: [
+                                Icon(
+                                  Icons.circle,
+                                  size: subMenuExpanded ? 6.0 : 0.0,
+                                ),
+                                const SizedBox(
+                                  width: 6.0,
+                                ),
                                 Expanded(
                                   child: Text(
                                     item.label,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
-                                      fontSize: 11.0,
+                                      fontSize: 10.0,
                                     ),
                                   ),
                                 ),
