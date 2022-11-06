@@ -41,7 +41,7 @@ class _SideMenuItemState extends State<SideMenuItem> {
           child: Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 12.0,
-              vertical: 10.0,
+              vertical: 8.0,
             ),
             // color: Colors.red,
             child: Column(
@@ -52,16 +52,19 @@ class _SideMenuItemState extends State<SideMenuItem> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    widget.item.icon,
+                    Transform.scale(
+                      scale: 0.8,
+                      child: widget.item.icon,
+                    ),
                     if (isExpanded) ...[
                       const SizedBox(
-                        width: 12.0,
+                        width: 6.0,
                       ),
                       Expanded(
                         child: Text(
                           widget.item.label,
                           style: const TextStyle(
-                            fontSize: 12.0,
+                            fontSize: 10.0,
                           ),
                         ),
                       ),
