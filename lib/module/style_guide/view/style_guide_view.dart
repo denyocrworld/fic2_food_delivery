@@ -36,59 +36,56 @@ class StyleGuideView extends StatefulWidget {
               ]).expanded(),
             ],
           ),
+          "Base Color".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: successColor,
+                  name: "successColor",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: warningColor,
+                  name: "warningColor",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: dangerColor,
+                  name: "dangerColor",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "infoColor",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: primaryColor,
+                  name: "primaryColor",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: disabledColor,
+                  name: "disabledColor",
+                ),
+              ],
+            ),
+          ]),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Column(
                 children: [
-                  "Base Color".card([
-                    Row(
-                      children: [
-                        ColorWidget(
-                          color: successColor,
-                          name: "successColor",
-                        ),
-                        const SizedBox(
-                          width: 8.0,
-                        ),
-                        ColorWidget(
-                          color: warningColor,
-                          name: "warningColor",
-                        ),
-                        const SizedBox(
-                          width: 8.0,
-                        ),
-                        ColorWidget(
-                          color: dangerColor,
-                          name: "dangerColor",
-                        ),
-                        const SizedBox(
-                          width: 8.0,
-                        ),
-                        ColorWidget(
-                          color: infoColor,
-                          name: "infoColor",
-                        ),
-                        const SizedBox(
-                          width: 8.0,
-                        ),
-                        ColorWidget(
-                          color: primaryColor,
-                          name: "primaryColor",
-                        ),
-                        const SizedBox(
-                          width: 8.0,
-                        ),
-                        ColorWidget(
-                          color: disabledColor,
-                          name: "disabledColor",
-                        ),
-                      ],
-                    ),
-                  ]),
-                  const SizedBox(
-                    height: 12.0,
-                  ),
                   ExCard(
                     title: "Scale",
                     children: [

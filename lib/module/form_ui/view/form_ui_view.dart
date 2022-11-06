@@ -602,7 +602,12 @@ class FormUiView extends StatefulWidget {
                           backgroundColor: disabledColor,
                         ),
                         onPressed: () {},
-                        child: const Text("Save"),
+                        child: Text(
+                          "Save",
+                          style: TextStyle(
+                            color: disabledTextColor,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -667,8 +672,16 @@ class FormUiView extends StatefulWidget {
                         width: 8.0,
                       ),
                       ElevatedButton.icon(
-                        icon: const Icon(Icons.add),
-                        label: const Text("Add"),
+                        icon: Icon(
+                          Icons.add,
+                          color: disabledTextColor,
+                        ),
+                        label: Text(
+                          "Add",
+                          style: TextStyle(
+                            color: disabledTextColor,
+                          ),
+                        ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: disabledColor,
                         ),
