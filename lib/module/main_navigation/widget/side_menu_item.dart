@@ -41,7 +41,7 @@ class _SideMenuItemState extends State<SideMenuItem> {
           child: Container(
             padding: const EdgeInsets.symmetric(
               horizontal: 12.0,
-              vertical: 8.0,
+              vertical: 6.0,
             ),
             // color: Colors.red,
             child: Column(
