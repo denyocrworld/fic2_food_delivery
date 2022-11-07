@@ -468,42 +468,36 @@ class StyleGuideView extends StatefulWidget {
                 "Heading H1",
                 style: TextStyle(
                   fontSize: h1,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Heading h2",
                 style: TextStyle(
                   fontSize: h2,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Heading h3",
                 style: TextStyle(
                   fontSize: h3,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Heading h4",
                 style: TextStyle(
                   fontSize: h4,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Heading h5",
                 style: TextStyle(
                   fontSize: h5,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
               const Text(
                 "Heading h6",
                 style: TextStyle(
                   fontSize: h6,
-                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],
@@ -513,42 +507,36 @@ class StyleGuideView extends StatefulWidget {
               "Font Size 1",
               style: TextStyle(
                 fontSize: fs1,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
               "Font Size 2",
               style: TextStyle(
                 fontSize: fs2,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
               "Font Size 3",
               style: TextStyle(
                 fontSize: fs3,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
               "Font Size 4",
               style: TextStyle(
                 fontSize: fs4,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
               "Font Size 5",
               style: TextStyle(
                 fontSize: fs5,
-                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
               "Font Size 6",
               style: TextStyle(
                 fontSize: fs6,
-                fontWeight: FontWeight.bold,
               ),
             ),
           ]),
