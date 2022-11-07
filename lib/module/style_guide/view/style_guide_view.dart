@@ -462,151 +462,93 @@ class StyleGuideView extends StatefulWidget {
               ],
             ),
           ]),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                children: [
-                  ExCard(
-                    title: "Scale",
-                    children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 30,
-                        decoration: const BoxDecoration(
-                          color: Colors.orange,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(12.0),
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Extra Small",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontSize: 8.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 8.0,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 40,
-                        decoration: const BoxDecoration(
-                          color: Colors.orange,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(12.0),
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            "Small",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              fontSize: 8.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ).expanded(),
-              const SizedBox(
-                width: 12.0,
+          "Heading".card(
+            [
+              const Text(
+                "Heading H1",
+                style: TextStyle(
+                  fontSize: h1,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Column(
-                children: [
-                  "Heading".card(
-                    [
-                      const Text(
-                        "Heading H1",
-                        style: TextStyle(
-                          fontSize: 30.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "Heading h2",
-                        style: TextStyle(
-                          fontSize: 24.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "Heading h3",
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "Heading h4",
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "Heading h5",
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Text(
-                        "Heading h6",
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ).expanded(),
+              const Text(
+                "Heading h2",
+                style: TextStyle(
+                  fontSize: h2,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Heading h3",
+                style: TextStyle(
+                  fontSize: h3,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Heading h4",
+                style: TextStyle(
+                  fontSize: h4,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Heading h5",
+                style: TextStyle(
+                  fontSize: h5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Text(
+                "Heading h6",
+                style: TextStyle(
+                  fontSize: h6,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
-          "Typography".card([
-            Text(
-              "xxl",
+          "Font Size".card([
+            const Text(
+              "Font Size 1",
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: fs1,
                 fontWeight: FontWeight.bold,
-                color: primaryColor,
               ),
             ),
             const Text(
-              "xl",
+              "Font Size 2",
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: fs2,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
-              "lg",
+              "Font Size 3",
               style: TextStyle(
-                fontSize: 14.0,
+                fontSize: fs3,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
-              "md",
+              "Font Size 4",
               style: TextStyle(
-                fontSize: 12.0,
+                fontSize: fs4,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
-              "sm",
+              "Font Size 5",
               style: TextStyle(
-                fontSize: 10.0,
+                fontSize: fs5,
+                fontWeight: FontWeight.bold,
               ),
             ),
             const Text(
-              "xs",
+              "Font Size 6",
               style: TextStyle(
-                fontSize: 8.0,
+                fontSize: fs6,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ]),

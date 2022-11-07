@@ -24,11 +24,21 @@ var disabledColor = Colors.grey[300]!;
 var disabledTextColor = Colors.grey[800];
 //--------
 
-const double xs = 28;
-const double sm = 38;
-const double md = 50;
-const double lg = 60;
-const double xl = 70;
+//Header size
+const double h1 = 36;
+const double h2 = 30;
+const double h3 = 24;
+const double h4 = 20;
+const double h5 = 16;
+const double h6 = 14;
+
+//Font size
+const double fs1 = 36;
+const double fs2 = 30;
+const double fs3 = 24;
+const double fs4 = 20;
+const double fs5 = 16;
+const double fs6 = 14;
 
 //---
 const defaultRadius = 20;
