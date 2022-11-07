@@ -142,7 +142,19 @@ class MainNavigationViewState extends State<MainNavigationView> {
       ],
     ),
 
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Http Example',
+      route: '/http_example',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Http Form Example',
+      route: '/http_form_example',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

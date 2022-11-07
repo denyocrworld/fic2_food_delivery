@@ -18,6 +18,8 @@
         "tab_ui",
         "dialog_ui",
         "widget_ui",
-        "searchfield_ui"
+        "searchfield_ui",
+        "http_example",
+        "http_form_example"
     ]
 }

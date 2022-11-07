@@ -209,6 +209,22 @@ getRouters({
         child: const SearchfieldUiView(),
       ),
     ),
+          GoRoute(
+      path: '/http_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpExampleView(),
+      ),
+    ),
+          GoRoute(
+      path: '/http_form_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpFormExampleView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

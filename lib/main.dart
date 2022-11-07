@@ -10,12 +10,13 @@ void main() async {
     await FirebaseNotification.initialize();
   }
 
-  // return runApp(MaterialApp(
-  //   title: 'Capek Ngoding',
-  //   debugShowCheckedModeBanner: false,
-  //   theme: getDarkTheme(),
-  //   home: const DebugView(),
-  // ));
+  return runApp(MaterialApp(
+    title: 'Capek Ngoding',
+    navigatorKey: Get.navigatorKey,
+    debugShowCheckedModeBanner: false,
+    theme: getDarkTheme(),
+    home: const HttpExampleView(),
+  ));
 
   runApp(MaterialApp.router(
     title: 'Capek Ngoding',
