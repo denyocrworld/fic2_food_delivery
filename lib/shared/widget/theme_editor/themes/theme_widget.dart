@@ -1,35 +1,88 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class ThemeWidget {}
 
 //!WARNING
 //TODO: Experimental
-Widget sizedBoxWidth(width) => SizedBox(
-      height: width,
+Widget sizedBoxWidth(double width) => SizedBox(
+      width: width,
     );
 
-Widget sizedBoxHeight(height) => SizedBox(
+Widget sizedBoxHeight(double height) => SizedBox(
       height: height,
     );
 
-Widget get sw2 => sizedBoxWidth(2);
-Widget get sw4 => sizedBoxWidth(4);
-Widget get sw6 => sizedBoxWidth(6);
-Widget get sw8 => sizedBoxWidth(8);
-Widget get sw10 => sizedBoxWidth(10);
-Widget get sw12 => sizedBoxWidth(12);
-Widget get sw14 => sizedBoxWidth(14);
-Widget get sw16 => sizedBoxWidth(16);
-Widget get sw18 => sizedBoxWidth(18);
-Widget get sw20 => sizedBoxWidth(20);
+Widget sw2() => sizedBoxWidth(2);
+Widget sw4() => sizedBoxWidth(4);
+Widget sw6() => sizedBoxWidth(6);
+Widget sw8() => sizedBoxWidth(8);
+Widget sw10() => sizedBoxWidth(10);
+Widget sw12() => sizedBoxWidth(12);
+Widget sw14() => sizedBoxWidth(14);
+Widget sw16() => sizedBoxWidth(16);
+Widget sw18() => sizedBoxWidth(18);
+Widget sw20() => sizedBoxWidth(20);
 
-Widget get sh2 => sizedBoxHeight(2);
-Widget get sh4 => sizedBoxHeight(4);
-Widget get sh6 => sizedBoxHeight(6);
-Widget get sh8 => sizedBoxHeight(8);
-Widget get sh10 => sizedBoxHeight(10);
-Widget get sh12 => sizedBoxHeight(12);
-Widget get sh14 => sizedBoxHeight(14);
-Widget get sh16 => sizedBoxHeight(16);
-Widget get sh18 => sizedBoxHeight(18);
-Widget get sh20 => sizedBoxHeight(20);
+Widget sh2() => sizedBoxHeight(2);
+Widget sh4() => sizedBoxHeight(4);
+Widget sh6() => sizedBoxHeight(6);
+Widget sh8() => sizedBoxHeight(8);
+Widget sh10() => sizedBoxHeight(10);
+Widget sh12() => sizedBoxHeight(12);
+Widget sh14() => sizedBoxHeight(14);
+Widget sh16() => sizedBoxHeight(16);
+Widget sh18() => sizedBoxHeight(18);
+Widget sh20() => sizedBoxHeight(20);
+
+extension WidgetExtension on Widget {
+  xs() {
+    return SizedBox(
+      width: wxs,
+      height: wxs,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+
+  sm() {
+    return SizedBox(
+      width: wsm,
+      height: wsm,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+
+  md() {
+    return SizedBox(
+      width: wmd,
+      height: wmd,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+
+  lg() {
+    return SizedBox(
+      width: wlg,
+      height: wlg,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+
+  xl() {
+    return SizedBox(
+      width: wxl,
+      height: wxl,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+}

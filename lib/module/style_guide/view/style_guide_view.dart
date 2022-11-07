@@ -540,6 +540,110 @@ class StyleGuideView extends StatefulWidget {
               ),
             ),
           ]),
+          "Scaling Icon".card([
+            Row(
+              children: [
+                const Icon(Icons.home).xs(),
+                sw6(),
+                const Icon(Icons.home).sm(),
+                sw6(),
+                const Icon(Icons.home).md(),
+                sw6(),
+                const Icon(Icons.home).lg(),
+                sw6(),
+                const Icon(Icons.home).xl(),
+              ],
+            ),
+          ]),
+          "Scaling CircleAvatar".card([
+            Row(
+              children: [
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ).xs(),
+                sw6(),
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ).sm(),
+                sw6(),
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ).md(),
+                sw6(),
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ).lg(),
+                sw6(),
+                const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ).xl(),
+              ],
+            ),
+          ]),
+          "Scaling Button".card([
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).xs(),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).sm(),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).md(),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).lg(),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {},
+            ).xl(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 40.0,
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+            ),
+          ]),
         ],
       ).scroll(),
     );
