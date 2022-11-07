@@ -1,5 +1,6 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
+export 'package:example/shared/widget/theme_editor/themes/theme_widget.dart';
 
 get mq {
   return MediaQuery.of(globalContext);
