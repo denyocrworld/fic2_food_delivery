@@ -6,6 +6,7 @@ class ColorWidget extends StatelessWidget {
   final dynamic label;
   final double? width;
   final double? height;
+  final double? radius;
 
   const ColorWidget({
     Key? key,
@@ -14,6 +15,7 @@ class ColorWidget extends StatelessWidget {
     this.label,
     this.width,
     this.height,
+    this.radius,
   }) : super(key: key);
 
   @override
@@ -24,10 +26,12 @@ class ColorWidget extends StatelessWidget {
           width: width ?? 60.0,
           height: height ?? 60.0,
           decoration: BoxDecoration(
+            borderRadius: radius == null
+                ? null
+                : BorderRadius.all(
+                    Radius.circular(radius!),
+                  ),
             color: color,
-            borderRadius: const BorderRadius.all(
-              Radius.circular(12.0),
-            ),
           ),
           child: Center(
             child: Text(

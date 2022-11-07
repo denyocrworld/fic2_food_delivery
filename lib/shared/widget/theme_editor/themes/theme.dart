@@ -1,5 +1,13 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+get mq {
+  return MediaQuery.of(globalContext);
+}
+
+get mqs {
+  return MediaQuery.of(globalContext).size;
+}
 
 //OLD VERSION
 var primaryColor = Colors.blueGrey[800]!;
@@ -34,12 +42,75 @@ Color textColor4 = Colors.grey[500]!;
 Color textColor5 = Colors.grey[300]!;
 Color textColor6 = Colors.grey[200]!;
 
+//Icon
+Color iconColor1 = Colors.grey[700]!;
+Color iconColor2 = Colors.grey[600]!;
+Color iconColor3 = Colors.grey[500]!;
+Color iconColor4 = Colors.grey[500]!;
+Color iconColor5 = Colors.grey[300]!;
+Color iconColor6 = Colors.grey[200]!;
+
 //Height
 const double hxs = 30;
 const double hsm = 40;
 const double hmd = 50;
 const double hlg = 60;
 const double hxl = 70;
+
+//Width
+const double wxs = 30;
+const double wsm = 40;
+const double wmd = 50;
+const double wlg = 60;
+const double wxl = 70;
+
+//Width
+double get w100 {
+  return MediaQuery.of(globalContext).size.width;
+}
+
+double get w90 {
+  return MediaQuery.of(globalContext).size.width * 0.9;
+}
+
+double get w80 {
+  return MediaQuery.of(globalContext).size.width * 0.8;
+}
+
+double get w70 {
+  return MediaQuery.of(globalContext).size.width * 0.7;
+}
+
+double get w60 {
+  return MediaQuery.of(globalContext).size.width * 0.6;
+}
+
+double get w50 {
+  return MediaQuery.of(globalContext).size.width * 0.5;
+}
+
+double get w40 {
+  return MediaQuery.of(globalContext).size.width * 0.4;
+}
+
+double get w30 {
+  return MediaQuery.of(globalContext).size.width * 0.3;
+}
+
+double get w20 {
+  return MediaQuery.of(globalContext).size.width * 0.2;
+}
+
+double get w10 {
+  return MediaQuery.of(globalContext).size.width * 0.1;
+}
+
+//Radius
+const double rxs = 6;
+const double rsm = 12;
+const double rmd = 20;
+const double rlg = 30;
+const double rxl = 40;
 
 //Color
 Color appbarBackgroundColor = Colors.white;

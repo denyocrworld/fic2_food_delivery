@@ -33,6 +33,44 @@ class StyleGuideView extends StatefulWidget {
                     fontSize: 10.0,
                   ),
                 ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                const Text(
+                  "mq",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 6.0,
+                ),
+                const Text(
+                  "You can use this variable to get MediaQuery.of(context)",
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                const Text(
+                  "mqs",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 6.0,
+                ),
+                const Text(
+                  "You can use this variable to get MediaQuery.of(context).size",
+                  style: TextStyle(
+                    fontSize: 10.0,
+                  ),
+                ),
               ]).expanded(),
             ],
           ),
@@ -126,6 +164,51 @@ class StyleGuideView extends StatefulWidget {
               ],
             ),
           ]),
+          "Icon Color".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: iconColor1,
+                  name: "iconColor1",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: iconColor2,
+                  name: "iconColor2",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: iconColor3,
+                  name: "iconColor3",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: iconColor4,
+                  name: "iconColor4",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: iconColor5,
+                  name: "iconColor5",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: iconColor6,
+                  name: "iconColor6",
+                ),
+              ],
+            ),
+          ]),
           "Base Height".card([
             Row(
               children: [
@@ -170,6 +253,211 @@ class StyleGuideView extends StatefulWidget {
                   name: "hxl",
                   label: hxl,
                   height: hxl,
+                ),
+              ],
+            ),
+          ]),
+          "Base Width".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: infoColor,
+                  name: "wxs",
+                  label: wxs,
+                  width: wxs,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "wsm",
+                  label: wsm,
+                  width: wsm,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "wmd",
+                  label: wmd,
+                  width: wmd,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "wlg",
+                  label: wlg,
+                  width: wlg,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "wxl",
+                  label: wxl,
+                  width: wxl,
+                ),
+              ],
+            ),
+          ]),
+          "Base Width by MediaQuery".card([
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ColorWidget(
+                  color: infoColor,
+                  name: "w10",
+                  label: w10,
+                  width: w10,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w20",
+                  label: w20,
+                  width: w20,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w30",
+                  label: w30,
+                  width: w30,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w40",
+                  label: w40,
+                  width: w40,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w50",
+                  label: w50,
+                  width: w50,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w60",
+                  label: w60,
+                  width: w60,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w70",
+                  label: w70,
+                  width: w70,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w80",
+                  label: w80,
+                  width: w80,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w90",
+                  label: w90,
+                  width: w90,
+                  height: 30.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "w100",
+                  label: w100,
+                  width: w100,
+                  height: 30.0,
+                ),
+              ],
+            ),
+          ]),
+          "Base Radius".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: infoColor,
+                  name: "rxs",
+                  label: rxs,
+                  radius: rxs,
+                  width: 90.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "rsm",
+                  label: rsm,
+                  radius: rsm,
+                  width: 90.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "rmd",
+                  label: rmd,
+                  radius: rmd,
+                  width: 90.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "rlg",
+                  label: rlg,
+                  radius: rlg,
+                  width: 90.0,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "rxl",
+                  label: rxl,
+                  radius: rxl,
+                  width: 90.0,
                 ),
               ],
             ),
