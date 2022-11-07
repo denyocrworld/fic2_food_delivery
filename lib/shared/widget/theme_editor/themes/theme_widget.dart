@@ -4,7 +4,6 @@ class ThemeWidget {}
 
 //!WARNING
 //TODO: Experimental
-
 Widget sizedBoxWidth(width) => SizedBox(
       height: width,
     );
