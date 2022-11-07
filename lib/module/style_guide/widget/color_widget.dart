@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 class ColorWidget extends StatelessWidget {
   final Color color;
   final String name;
+  final dynamic label;
+  final double? width;
+  final double? height;
+
   const ColorWidget({
     Key? key,
     required this.color,
     required this.name,
+    this.label,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -14,12 +21,20 @@ class ColorWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 60.0,
-          height: 60.0,
+          width: width ?? 60.0,
+          height: height ?? 60.0,
           decoration: BoxDecoration(
             color: color,
             borderRadius: const BorderRadius.all(
               Radius.circular(12.0),
+            ),
+          ),
+          child: Center(
+            child: Text(
+              "${label ?? ''}",
+              style: const TextStyle(
+                fontSize: 10.0,
+              ),
             ),
           ),
         ),

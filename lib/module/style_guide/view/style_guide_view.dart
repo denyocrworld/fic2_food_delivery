@@ -81,6 +81,99 @@ class StyleGuideView extends StatefulWidget {
               ],
             ),
           ]),
+          "Base Text Color".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: textColor1,
+                  name: "textColor1",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: textColor2,
+                  name: "textColor2",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: textColor3,
+                  name: "textColor3",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: textColor4,
+                  name: "textColor4",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: textColor5,
+                  name: "textColor5",
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: textColor6,
+                  name: "textColor6",
+                ),
+              ],
+            ),
+          ]),
+          "Base Height".card([
+            Row(
+              children: [
+                ColorWidget(
+                  color: infoColor,
+                  name: "hxs",
+                  label: hxs,
+                  height: hxs,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "hsm",
+                  label: hsm,
+                  height: hsm,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "hmd",
+                  label: hmd,
+                  height: hmd,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "hlg",
+                  label: hlg,
+                  height: hlg,
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                ColorWidget(
+                  color: infoColor,
+                  name: "hxl",
+                  label: hxl,
+                  height: hxl,
+                ),
+              ],
+            ),
+          ]),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

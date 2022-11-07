@@ -27,7 +27,19 @@ const defaultRadius = 20;
 //---
 
 //Text
-Color fontColor = Colors.grey[700]!;
+Color textColor1 = Colors.grey[700]!;
+Color textColor2 = Colors.grey[600]!;
+Color textColor3 = Colors.grey[500]!;
+Color textColor4 = Colors.grey[500]!;
+Color textColor5 = Colors.grey[300]!;
+Color textColor6 = Colors.grey[200]!;
+
+//Height
+const double hxs = 30;
+const double hsm = 40;
+const double hmd = 50;
+const double hlg = 60;
+const double hxl = 70;
 
 //Color
 Color appbarBackgroundColor = Colors.white;
@@ -73,11 +85,11 @@ ThemeData getDefaultTheme() {
       backgroundColor: drawerBackgroundColor,
     ),
     iconTheme: IconThemeData(
-      color: fontColor,
+      color: textColor1,
     ),
     textTheme: TextTheme(
-      bodyText1: googleFont.copyWith(color: fontColor),
-      bodyText2: googleFont.copyWith(color: fontColor),
+      bodyText1: googleFont.copyWith(color: textColor1),
+      bodyText2: googleFont.copyWith(color: textColor1),
     ),
     cardTheme: CardTheme(
       elevation: cardElevation,
@@ -87,7 +99,7 @@ ThemeData getDefaultTheme() {
     ),
     chipTheme: const ChipThemeData(),
     tabBarTheme: TabBarTheme(
-      labelColor: fontColor,
+      labelColor: textColor1,
     ),
   );
 }
