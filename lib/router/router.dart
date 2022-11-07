@@ -225,6 +225,14 @@ getRouters({
         child: const HttpFormExampleView(),
       ),
     ),
+          GoRoute(
+      path: '/example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ExampleView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

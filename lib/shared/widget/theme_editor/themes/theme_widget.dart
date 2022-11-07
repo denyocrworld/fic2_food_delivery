@@ -85,4 +85,60 @@ extension WidgetExtension on Widget {
       ),
     );
   }
+
+  Widget fullWidth() {
+    return SizedBox(
+      width: MediaQuery.of(globalContext).size.width,
+      child: this,
+    );
+  }
+
+  Widget fw90() {
+    return FittedBox(
+      child: SizedBox(
+        width: 2000,
+        height: 120,
+        child: FittedBox(
+          child: this,
+        ),
+      ),
+    );
+  }
+
+  Widget fw30() {
+    return SizedBox(
+      width: MediaQuery.of(globalContext).size.width,
+      height: 30,
+      child: FittedBox(
+        child: this,
+      ),
+    );
+  }
+
+  Widget h90() {
+    return SizedBox(
+      height: 90,
+      child: this,
+    );
+  }
+
+  Widget h30() {
+    return SizedBox(
+      height: 30,
+      child: this,
+    );
+  }
+
+  Widget h40() {
+    return SizedBox(
+      height: 40,
+      child: this,
+    );
+  }
+
+  Widget fit() {
+    return FittedBox(
+      child: this,
+    );
+  }
 }

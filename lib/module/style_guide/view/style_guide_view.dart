@@ -14,6 +14,182 @@ class StyleGuideView extends StatefulWidget {
       ),
       body: Column(
         children: [
+          ExCard(
+            title: "Buttons",
+            children: [
+              const CircleAvatar(
+                backgroundImage: NetworkImage(
+                  "https://i.ibb.co/PGv8ZzG/me.jpg",
+                ),
+              ).xs(),
+              const CircleAvatar(
+                backgroundImage: NetworkImage(
+                  "https://i.ibb.co/PGv8ZzG/me.jpg",
+                ),
+              ).xl(),
+              Row(
+                children: [
+                  OutlinedButton.icon(
+                    icon: const Icon(Icons.save),
+                    label: const Text("Save"),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: successColor,
+                      backgroundColor: successColor.withOpacity(0.3),
+                    ),
+                    onPressed: () {},
+                  ),
+                  sw10(),
+                  OutlinedButton.icon(
+                    icon: const Icon(Icons.save),
+                    label: const Text("Save"),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: dangerColor,
+                      backgroundColor: dangerColor.withOpacity(0.3),
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+              sh20(),
+              Row(
+                children: [
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: successColor,
+                    ),
+                    onPressed: () {
+                      showLoading();
+                    },
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: infoColor,
+                    ),
+                    onPressed: () async {
+                      var confirm = await showConfirmationDialog();
+                      if (confirm) {
+                        Get.to(Scaffold(
+                          appBar: AppBar(
+                            title: const Text("Contoh"),
+                          ),
+                        ));
+                      }
+                    },
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: warningColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: dangerColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: disabledColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: [
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: successColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: infoColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: warningColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: dangerColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: primaryColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.add),
+                    label: const Text("Add"),
+                    style: ElevatedButton.styleFrom(
+                      shape: ContinuousRectangleBorder(
+                        borderRadius: BorderRadius.circular(64.0),
+                      ),
+                      backgroundColor: disabledColor,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
           Row(
             children: [
               "Context".card([
@@ -590,7 +766,36 @@ class StyleGuideView extends StatefulWidget {
               ],
             ),
           ]),
-          "Scaling Button".card([
+          "Scaling Button -- Experimental".card([
+            sh10(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              child: ElevatedButton.icon(
+                icon: const Icon(Icons.save),
+                label: const Text("Save"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+            ),
+            sh10(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 50,
+              child: FittedBox(
+                child: ElevatedButton.icon(
+                  icon: const Icon(Icons.save),
+                  label: const Text("Save"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueGrey,
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+            ),
+            sh10(),
             ElevatedButton.icon(
               icon: const Icon(Icons.add),
               label: const Text("Add"),
@@ -598,7 +803,7 @@ class StyleGuideView extends StatefulWidget {
                 backgroundColor: Colors.blueGrey,
               ),
               onPressed: () {},
-            ).xs(),
+            ).fullWidth().h30().fit(),
             ElevatedButton.icon(
               icon: const Icon(Icons.add),
               label: const Text("Add"),
