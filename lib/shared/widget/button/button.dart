@@ -52,34 +52,8 @@ class ExButton extends StatelessWidget {
     return color == disabledColor ? disabledTextColor : Colors.white;
   }
 
-  getHeight() {
-    if (size == xs) {
-      return xs;
-    } else if (size == sm) {
-      return sm;
-    } else if (size == md) {
-      return md;
-    } else if (size == xl) {
-      return xl;
-    }
-    return height ?? 120.0;
-  }
-
   getWidth() {
     return width;
-  }
-
-  getFontSize() {
-    if (size == xs) {
-      return 10.0;
-    } else if (size == sm) {
-      return 12.0;
-    } else if (size == md) {
-      return 14.0;
-    } else if (size == xl) {
-      return 16.0;
-    }
-    return fontSize;
   }
 
   getIconColor() {
@@ -91,7 +65,7 @@ class ExButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: getWidth() ?? MediaQuery.of(context).size.width,
-      height: getHeight(),
+      height: height,
       margin: margin ??
           const EdgeInsets.only(
             left: 10.0,
@@ -109,7 +83,7 @@ class ExButton extends StatelessWidget {
               ? null
               : BorderSide(
                   width: 2,
-                  color: (color ?? primaryColor)!,
+                  color: (color ?? primaryColor),
                 ), //border width and color
 
           elevation: 3, //elevation of button
@@ -139,7 +113,7 @@ class ExButton extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: getTextColor(),
-                    fontSize: getFontSize(),
+                    fontSize: 14,
                   ),
                 ),
             ],
