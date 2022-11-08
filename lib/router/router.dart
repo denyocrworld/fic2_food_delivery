@@ -257,6 +257,14 @@ getRouters({
         child: const AvatarUiView(),
       ),
     ),
+          GoRoute(
+      path: '/pos_another_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosAnotherExampleView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

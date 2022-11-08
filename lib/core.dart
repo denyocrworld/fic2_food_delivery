@@ -54,6 +54,8 @@ export 'package:example/module/main_navigation/widget/side_menu_item.dart';
 export 'package:example/module/main_navigation/widget/top_bar.dart';
 export 'package:example/module/navigation_ui/controller/navigation_ui_controller.dart';
 export 'package:example/module/navigation_ui/view/navigation_ui_view.dart';
+export 'package:example/module/pos_another_example/controller/pos_another_example_controller.dart';
+export 'package:example/module/pos_another_example/view/pos_another_example_view.dart';
 export 'package:example/module/pos_example/controller/pos_example_controller.dart';
 export 'package:example/module/pos_example/view/pos_example_view.dart';
 export 'package:example/module/scaffold_ui/controller/scaffold_ui_controller.dart';
