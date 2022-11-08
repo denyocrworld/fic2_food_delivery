@@ -233,6 +233,30 @@ getRouters({
         child: const ExampleView(),
       ),
     ),
+          GoRoute(
+      path: '/badge_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const BadgeUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/button_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ButtonUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/avatar_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AvatarUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

@@ -87,6 +87,30 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.web),
+          label: 'Badge Ui',
+          route: '/badge_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Button Ui',
+          route: '/button_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Tab Ui',
+          route: '/tab_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Avatar Ui',
+          route: '/avatar_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
           label: 'Scaffold Ui',
           route: '/scaffold_ui',
           items: [],
@@ -117,12 +141,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
         ),
         NavigationItem(
           icon: const Icon(MdiIcons.web),
-          label: 'Tab Ui',
-          route: '/tab_ui',
-          items: [],
-        ),
-        NavigationItem(
-          icon: const Icon(MdiIcons.web),
           label: 'Dialog Ui',
           route: '/dialog_ui',
           items: [],
@@ -148,19 +166,19 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/http_example',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Http Form Example',
       route: '/http_form_example',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Example',
       route: '/example',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override
