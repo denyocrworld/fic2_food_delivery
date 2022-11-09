@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/module/form_ui/widget/radio.dart';
 import 'package:flutter/material.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -106,16 +107,42 @@ class FormUISwitchView extends StatelessWidget {
                       errorText: field.errorText,
                       border: InputBorder.none,
                     ),
-                    child: RadioListTile(
-                      title: const Text("Subscribe to our mailing list."),
-                      groupValue: "demo",
-                      value: false,
-                      onChanged: (val) {
-                        field.didChange(true);
-                      },
+                    child: ListView(
+                      shrinkWrap: true,
+                      children: [
+                        RadioListTile(
+                          title: const Text("Male"),
+                          groupValue: "demo",
+                          value: false,
+                          onChanged: (val) {
+                            field.didChange(true);
+                          },
+                        ),
+                        RadioListTile(
+                          title: const Text("Female"),
+                          groupValue: "demo",
+                          value: false,
+                          onChanged: (val) {
+                            field.didChange(true);
+                          },
+                        )
+                      ],
                     ),
                   );
                 },
+              ),
+              const QRadioField(
+                id: "gender",
+                items: [
+                  {
+                    "label": "Male",
+                    "value": "Male",
+                  },
+                  {
+                    "label": "Female",
+                    "value": "Female",
+                  },
+                ],
               ),
               Row(
                 children: [
