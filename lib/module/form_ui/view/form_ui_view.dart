@@ -1,7 +1,5 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 
 class FormUiView extends StatefulWidget {
   const FormUiView({Key? key}) : super(key: key);
@@ -45,7 +43,7 @@ class FormUiView extends StatefulWidget {
                 children: [
                   Expanded(
                     child: ExCard(
-                      title: "Basic",
+                      title: "Textfield",
                       children: [
                         Container(
                           padding: const EdgeInsets.all(12),
@@ -94,35 +92,6 @@ class FormUiView extends StatefulWidget {
                               helperText: 'Enter your password',
                             ),
                             onChanged: (value) {},
-                          ),
-                        ),
-                        ElevatedButton.icon(
-                          icon: const Icon(Icons.login),
-                          label: const Text("Login"),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blueGrey,
-                          ),
-                          onPressed: () {},
-                        ),
-                        Theme(
-                          data: ThemeData.dark(),
-                          child: SizedBox(
-                            width: MediaQuery.of(context).size.width,
-                            height: 200.0,
-                            child: InkWell(
-                              onTap: () async {
-                                await Clipboard.setData(
-                                  const ClipboardData(
-                                    text: "your text",
-                                  ),
-                                );
-                              },
-                              child: Markdown(
-                                data:
-                                    """```class MyClass {  final String name = "Paul";}```"""
-                                        .trim(),
-                              ),
-                            ),
                           ),
                         ),
                       ],
