@@ -54,6 +54,59 @@ class FormUISwitchView extends StatelessWidget {
                   );
                 },
               ),
+              FormField(
+                initialValue: false,
+                validator: (value) {
+                  if (value == null || value == false) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+                enabled: true,
+                builder: (FormFieldState<bool> field) {
+                  return InputDecorator(
+                    decoration: InputDecoration(
+                      labelText: 'Subscribe to mailing list.',
+                      errorText: field.errorText,
+                      border: InputBorder.none,
+                    ),
+                    child: CheckboxListTile(
+                      title: const Text("Subscribe to our mailing list."),
+                      value: false,
+                      onChanged: (val) {
+                        field.didChange(val);
+                      },
+                    ),
+                  );
+                },
+              ),
+              FormField(
+                initialValue: false,
+                validator: (value) {
+                  if (value == null || value == false) {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+                enabled: true,
+                builder: (FormFieldState<bool> field) {
+                  return InputDecorator(
+                    decoration: InputDecoration(
+                      labelText: 'Subscribe to mailing list.',
+                      errorText: field.errorText,
+                      border: InputBorder.none,
+                    ),
+                    child: RadioListTile(
+                      title: const Text("Subscribe to our mailing list."),
+                      groupValue: "demo",
+                      value: false,
+                      onChanged: (val) {
+                        field.didChange(true);
+                      },
+                    ),
+                  );
+                },
+              ),
               ElevatedButton.icon(
                 icon: const Icon(Icons.save),
                 label: const Text("Save"),
@@ -63,6 +116,19 @@ class FormUISwitchView extends StatelessWidget {
                 onPressed: () {
                   var validation = _formKey.currentState!.validate();
                   print(validation);
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.save),
+                label: const Text("Reset"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  _formKey.currentState!.reset();
                 },
               ),
             ],

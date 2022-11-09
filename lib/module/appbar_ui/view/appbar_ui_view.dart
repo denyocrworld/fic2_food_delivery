@@ -53,7 +53,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 120.0,
                 width: MediaQuery.of(context).size.width,
@@ -90,7 +92,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 120.0,
                 width: MediaQuery.of(context).size.width,
@@ -130,7 +134,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,
@@ -165,7 +171,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,
@@ -191,7 +199,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,
@@ -230,7 +240,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,
@@ -269,7 +281,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,
@@ -303,7 +317,9 @@ class AppbarUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               SizedBox(
                 height: 100.0,
                 width: MediaQuery.of(context).size.width,

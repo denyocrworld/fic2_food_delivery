@@ -78,7 +78,9 @@ class StatisticUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Card(
                 child: Container(
                   width: MediaQuery.of(context).size.width,
@@ -139,7 +141,9 @@ class StatisticUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Card(
                 child: Container(
                   width: MediaQuery.of(context).size.width,
@@ -200,7 +204,9 @@ class StatisticUiView extends StatefulWidget {
                   ),
                 ),
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Card(
                 child: Container(
                   width: MediaQuery.of(context).size.width,

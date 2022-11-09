@@ -265,7 +265,9 @@ class ChipUiView extends StatefulWidget {
                       ),
                     ],
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Wrap(
                     runSpacing: 10,
                     spacing: 10,

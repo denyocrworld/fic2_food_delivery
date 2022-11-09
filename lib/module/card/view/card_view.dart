@@ -127,7 +127,9 @@ class CardView extends StatefulWidget {
                   ),
                 ],
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

@@ -38,7 +38,9 @@ class StyleGuideView extends StatefulWidget {
                     ),
                     onPressed: () {},
                   ),
-                  sw10(),
+                  const SizedBox(
+                    width: 10.0,
+                  ),
                   OutlinedButton.icon(
                     icon: const Icon(Icons.save),
                     label: const Text("Save"),
@@ -50,7 +52,9 @@ class StyleGuideView extends StatefulWidget {
                   ),
                 ],
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               Row(
                 children: [
                   ElevatedButton.icon(
@@ -114,7 +118,9 @@ class StyleGuideView extends StatefulWidget {
                   ),
                 ],
               ),
-              sh20(),
+              const SizedBox(
+                height: 20.0,
+              ),
               const SizedBox(
                 height: 20.0,
               ),
@@ -720,13 +726,21 @@ class StyleGuideView extends StatefulWidget {
             Row(
               children: [
                 const Icon(Icons.home).xs(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const Icon(Icons.home).sm(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const Icon(Icons.home).md(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const Icon(Icons.home).lg(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const Icon(Icons.home).xl(),
               ],
             ),
@@ -739,25 +753,33 @@ class StyleGuideView extends StatefulWidget {
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
                   ),
                 ).xs(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const CircleAvatar(
                   backgroundImage: NetworkImage(
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
                   ),
                 ).sm(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const CircleAvatar(
                   backgroundImage: NetworkImage(
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
                   ),
                 ).md(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const CircleAvatar(
                   backgroundImage: NetworkImage(
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
                   ),
                 ).lg(),
-                sw6(),
+                const SizedBox(
+                  width: 6.0,
+                ),
                 const CircleAvatar(
                   backgroundImage: NetworkImage(
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
@@ -767,7 +789,9 @@ class StyleGuideView extends StatefulWidget {
             ),
           ]),
           "Scaling Button -- Experimental".card([
-            sh10(),
+            const SizedBox(
+              height: 10.0,
+            ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 50,
@@ -780,7 +804,9 @@ class StyleGuideView extends StatefulWidget {
                 onPressed: () {},
               ),
             ),
-            sh10(),
+            const SizedBox(
+              height: 10.0,
+            ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 50,
@@ -795,7 +821,9 @@ class StyleGuideView extends StatefulWidget {
                 ),
               ),
             ),
-            sh10(),
+            const SizedBox(
+              height: 10.0,
+            ),
             ElevatedButton.icon(
               icon: const Icon(Icons.add),
               label: const Text("Add"),

@@ -95,7 +95,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: SizedBox(
                       width: 300.0,
@@ -162,7 +164,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: SizedBox(
                       width: 300.0,
@@ -268,7 +272,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: SizedBox(
                       width: 300.0,
@@ -410,7 +416,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Container(
                     width: 160,
                     height: 160,
@@ -474,7 +482,9 @@ class ListItemUiView extends StatefulWidget {
                       ],
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -594,7 +604,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Container(
                     height: 160.0,
                     width: 160.0,
@@ -632,7 +644,9 @@ class ListItemUiView extends StatefulWidget {
                       ],
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(
@@ -762,7 +776,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Card(
                     child: SizedBox(
                       width: 240.0,
@@ -887,7 +903,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                   Row(
                     children: [
                       Column(
@@ -919,7 +937,9 @@ class ListItemUiView extends StatefulWidget {
                       ),
                     ],
                   ),
-                  sh20(),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
                 ],
               ),
             ],
