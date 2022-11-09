@@ -42,6 +42,7 @@ class FormUISwitchView extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Subscribe to mailing list.',
                       errorText: field.errorText,
+                      border: InputBorder.none,
                     ),
                     child: SwitchListTile(
                       title: const Text("Subscribe to our mailing list."),
