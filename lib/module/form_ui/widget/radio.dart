@@ -48,7 +48,6 @@ class _QRadioFieldState extends State<QRadioField> {
             itemCount: items.length,
             itemBuilder: (context, index) {
               var item = items[index];
-
               return RadioListTile(
                 title: Text("${item["label"]}"),
                 groupValue: widget.id,
