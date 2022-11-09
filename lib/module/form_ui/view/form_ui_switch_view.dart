@@ -11,23 +11,33 @@ class FormUISwitchView extends StatelessWidget {
     return ExCard(
       title: "Switch",
       children: [
-        Switch(
-          value: false,
-          onChanged: (value) {},
-        ),
-        Checkbox(
-          value: false,
-          onChanged: (value) {},
-        ),
-        Radio(
-          value: false,
-          groupValue: "gender",
-          onChanged: (value) {},
-        ),
         Form(
           key: _formKey,
           child: Column(
             children: [
+              TextFormField(
+                initialValue: 'John Doe',
+                maxLength: 20,
+                validator: (value) {
+                  if (value == null || value == "") {
+                    return 'Please enter some text';
+                  }
+                  return null;
+                },
+                decoration: const InputDecoration(
+                  labelText: 'Name',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: "What's your name?",
+                ),
+                onChanged: (value) {},
+              ),
               FormField(
                 initialValue: false,
                 validator: (value) {
@@ -107,29 +117,33 @@ class FormUISwitchView extends StatelessWidget {
                   );
                 },
               ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.save),
-                label: const Text("Save"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () {
-                  var validation = _formKey.currentState!.validate();
-                  print(validation);
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.save),
-                label: const Text("Reset"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () {
-                  _formKey.currentState!.reset();
-                },
+              Row(
+                children: [
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.save),
+                    label: const Text("Save"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      var validation = _formKey.currentState!.validate();
+                      print(validation);
+                    },
+                  ),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  ElevatedButton.icon(
+                    icon: const Icon(Icons.save),
+                    label: const Text("Reset"),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      _formKey.currentState!.reset();
+                    },
+                  ),
+                ],
               ),
             ],
           ),
