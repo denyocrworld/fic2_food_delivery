@@ -87,8 +87,20 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.web),
+          label: 'Statistic Ui',
+          route: '/statistic_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
           label: 'Badge Ui',
           route: '/badge_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'Chip Ui',
+          route: '/chip_ui',
           items: [],
         ),
         NavigationItem(
@@ -131,6 +143,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
           icon: const Icon(MdiIcons.web),
           label: 'List Ui',
           route: '/list_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
+          label: 'List Item Ui',
+          route: '/list_item_ui',
           items: [],
         ),
         NavigationItem(
@@ -184,7 +202,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_another_example',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

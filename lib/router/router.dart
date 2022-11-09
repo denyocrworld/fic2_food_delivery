@@ -265,6 +265,30 @@ getRouters({
         child: const PosAnotherExampleView(),
       ),
     ),
+          GoRoute(
+      path: '/list_item_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ListItemUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/statistic_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const StatisticUiView(),
+      ),
+    ),
+          GoRoute(
+      path: '/chip_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ChipUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

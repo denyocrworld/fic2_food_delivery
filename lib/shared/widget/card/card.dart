@@ -8,6 +8,7 @@ class ExCard extends StatelessWidget {
   final List<Widget> actions;
   final List<Widget> bottomActions;
   final EdgeInsets? padding;
+  final Color? color;
   const ExCard({
     Key? key,
     this.title,
@@ -17,6 +18,7 @@ class ExCard extends StatelessWidget {
     this.actions = const [],
     this.bottomActions = const [],
     this.icon,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class ExCard extends StatelessWidget {
     return SizedBox(
       width: width ?? MediaQuery.of(context).size.width,
       child: Card(
+        color: color,
         child: SizedBox(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

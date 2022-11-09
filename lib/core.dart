@@ -15,6 +15,8 @@ export 'package:example/module/button_ui/controller/button_ui_controller.dart';
 export 'package:example/module/button_ui/view/button_ui_view.dart';
 export 'package:example/module/card/controller/card_controller.dart';
 export 'package:example/module/card/view/card_view.dart';
+export 'package:example/module/chip_ui/controller/chip_ui_controller.dart';
+export 'package:example/module/chip_ui/view/chip_ui_view.dart';
 export 'package:example/module/dashboard/controller/dashboard_controller.dart';
 export 'package:example/module/dashboard/view/dashboard_view.dart';
 export 'package:example/module/dashboard_food_delivery/controller/dashboard_food_delivery_controller.dart';
@@ -44,6 +46,8 @@ export 'package:example/module/list/table_list/controller/table_list_controller.
 export 'package:example/module/list/table_list/view/table_list_view.dart';
 export 'package:example/module/list/tab_list/controller/tab_list_controller.dart';
 export 'package:example/module/list/tab_list/view/tab_list_view.dart';
+export 'package:example/module/list_item_ui/controller/list_item_ui_controller.dart';
+export 'package:example/module/list_item_ui/view/list_item_ui_view.dart';
 export 'package:example/module/list_ui/controller/list_ui_controller.dart';
 export 'package:example/module/list_ui/view/list_ui_view.dart';
 export 'package:example/module/main_navigation/controller/main_navigation_controller.dart';
@@ -62,6 +66,8 @@ export 'package:example/module/scaffold_ui/controller/scaffold_ui_controller.dar
 export 'package:example/module/scaffold_ui/view/scaffold_ui_view.dart';
 export 'package:example/module/searchfield_ui/controller/searchfield_ui_controller.dart';
 export 'package:example/module/searchfield_ui/view/searchfield_ui_view.dart';
+export 'package:example/module/statistic_ui/controller/statistic_ui_controller.dart';
+export 'package:example/module/statistic_ui/view/statistic_ui_view.dart';
 export 'package:example/module/style_guide/controller/style_guide_controller.dart';
 export 'package:example/module/style_guide/view/style_guide_view.dart';
 export 'package:example/module/style_guide/widget/color_widget.dart';
