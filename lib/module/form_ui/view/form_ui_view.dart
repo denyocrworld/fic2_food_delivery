@@ -6,6 +6,7 @@ Textfield
 - email
 - password
 - textarea?
+- numeric
 
 Button
 - basic

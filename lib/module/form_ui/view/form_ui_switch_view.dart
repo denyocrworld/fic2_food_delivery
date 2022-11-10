@@ -81,6 +81,28 @@ class FormUISwitchView extends StatelessWidget {
                 onChanged: (value) {},
               ),
               //#END
+              //#TEMPLATE form_numberfield
+              TextFormField(
+                initialValue: '24',
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  labelText: 'Age',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.email,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your email address',
+                ),
+                onChanged: (value) {},
+              ),
+              //#END
               //#TEMPLATE form_textarea
               TextFormField(
                 initialValue: 'Jln. Sukangoding No. 45',
