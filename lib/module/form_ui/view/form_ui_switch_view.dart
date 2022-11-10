@@ -1,5 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
+import 'package:example/module/form_ui/widget/check.dart';
 import 'package:flutter/material.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -270,6 +271,23 @@ class FormUISwitchView extends StatelessWidget {
                   }
                 ],
               ),
+              const QCheckField(
+                id: "club",
+                label: "Club",
+                items: [
+                  {
+                    "label": "Persib",
+                    "value": "Persib",
+                    "checked": true,
+                  },
+                  {
+                    "label": "Persikabo",
+                    "value": "Persikabo",
+                  }
+                ],
+              ),
+              //------------------
+              //------------------
               const Divider(),
               const SizedBox(
                 height: 30.0,
