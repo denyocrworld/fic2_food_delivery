@@ -107,6 +107,7 @@ class FormUISwitchView extends StatelessWidget {
                   {
                     "label": "Female",
                     "value": "female",
+                    "checked": true,
                   },
                   {
                     "label": "Male",
@@ -134,10 +135,62 @@ class FormUISwitchView extends StatelessWidget {
                         itemCount: items.length,
                         itemBuilder: (context, index) {
                           var item = items[index];
-                          return RadioListTile(
+
+                          return RadioListTile<dynamic>(
                             title: Text("${item["label"]}"),
-                            groupValue: groupValue,
-                            value: false,
+                            groupValue: true,
+                            value: item["checked"] ?? false,
+                            onChanged: (val) {
+                              field.didChange(true);
+                            },
+                          );
+                        },
+                      ),
+                    );
+                  },
+                );
+              }),
+              //#END
+              //#TEMPLATE form_radio
+              LayoutBuilder(builder: (context, constraint) {
+                String groupValue = "gender";
+                List items = [
+                  {
+                    "label": "Female",
+                    "value": "female",
+                    "checked": true,
+                  },
+                  {
+                    "label": "Male",
+                    "value": "Male",
+                  }
+                ];
+                return FormField(
+                  initialValue: false,
+                  validator: (value) {
+                    if (value == null || value == false) {
+                      return 'Please enter some text';
+                    }
+                    return null;
+                  },
+                  enabled: true,
+                  builder: (FormFieldState<bool> field) {
+                    return InputDecorator(
+                      decoration: InputDecoration(
+                        labelText: 'Gender',
+                        errorText: field.errorText,
+                        border: InputBorder.none,
+                      ),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: items.length,
+                        itemBuilder: (context, index) {
+                          var item = items[index];
+
+                          return RadioListTile<dynamic>(
+                            title: Text("${item["label"]}"),
+                            groupValue: true,
+                            value: item["checked"] ?? false,
                             onChanged: (val) {
                               field.didChange(true);
                             },
