@@ -80,10 +80,10 @@ class FormUISwitchView extends StatelessWidget {
                 onChanged: (value) {},
               ),
               //#END
-              //#TEMPLATE form_textfield_textarea
+              //#TEMPLATE form_textarea
               TextFormField(
                 initialValue: 'Jln. Sukangoding No. 45',
-                maxLength: 20,
+                maxLength: 200,
                 maxLines: 4,
                 decoration: const InputDecoration(
                   labelText: 'Address',
@@ -100,7 +100,108 @@ class FormUISwitchView extends StatelessWidget {
                 onChanged: (value) {},
               ),
               //#END
+              //#TEMPLATE form_radio
+              LayoutBuilder(builder: (context, constraint) {
+                String groupValue = "gender";
+                List items = [
+                  {
+                    "label": "Female",
+                    "value": "female",
+                  },
+                  {
+                    "label": "Male",
+                    "value": "Male",
+                  }
+                ];
+                return FormField(
+                  initialValue: false,
+                  validator: (value) {
+                    if (value == null || value == false) {
+                      return 'Please enter some text';
+                    }
+                    return null;
+                  },
+                  enabled: true,
+                  builder: (FormFieldState<bool> field) {
+                    return InputDecorator(
+                      decoration: InputDecoration(
+                        labelText: 'Gender',
+                        errorText: field.errorText,
+                        border: InputBorder.none,
+                      ),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: items.length,
+                        itemBuilder: (context, index) {
+                          var item = items[index];
+                          return RadioListTile(
+                            title: Text("${item["label"]}"),
+                            groupValue: groupValue,
+                            value: false,
+                            onChanged: (val) {
+                              field.didChange(true);
+                            },
+                          );
+                        },
+                      ),
+                    );
+                  },
+                );
+              }),
+              //#END
+              //#TEMPLATE form_check
+              LayoutBuilder(builder: (context, constraint) {
+                List items = [
+                  {
+                    "label": "Flutter",
+                    "value": "Flutter",
+                  },
+                  {
+                    "label": "Java",
+                    "value": "Java",
+                    "checked": true,
+                  },
+                  {
+                    "label": "C#",
+                    "value": "C#",
+                  }
+                ];
+                return FormField(
+                  initialValue: false,
+                  validator: (value) {
+                    if (value == null || value == false) {
+                      return 'Please enter some text';
+                    }
+                    return null;
+                  },
+                  enabled: true,
+                  builder: (FormFieldState<bool> field) {
+                    return InputDecorator(
+                      decoration: InputDecoration(
+                        labelText: 'Gender',
+                        errorText: field.errorText,
+                        border: InputBorder.none,
+                      ),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: items.length,
+                        itemBuilder: (context, index) {
+                          var item = items[index];
 
+                          return CheckboxListTile(
+                            title: Text("${item["label"]}"),
+                            value: item["checked"] ?? false,
+                            onChanged: (value) {
+                              field.didChange(true);
+                            },
+                          );
+                        },
+                      ),
+                    );
+                  },
+                );
+              }),
+              //#END
               const Divider(),
               const SizedBox(
                 height: 30.0,
