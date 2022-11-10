@@ -5,6 +5,8 @@ it means you have to rename it to something more unique.
 */
 export 'package:example/model/blog/blog.dart';
 export 'package:example/model/firebase_user/firebase_user.dart';
+export 'package:example/module/accordions_ui/controller/accordions_ui_controller.dart';
+export 'package:example/module/accordions_ui/view/accordions_ui_view.dart';
 export 'package:example/module/appbar_ui/controller/appbar_ui_controller.dart';
 export 'package:example/module/appbar_ui/view/appbar_ui_view.dart';
 export 'package:example/module/avatar_ui/controller/avatar_ui_controller.dart';
@@ -33,7 +35,11 @@ export 'package:example/module/dialog_ui/view/dialog_ui_view.dart';
 export 'package:example/module/example/controller/example_controller.dart';
 export 'package:example/module/example/view/example_view.dart';
 export 'package:example/module/form_ui/controller/form_ui_controller.dart';
+export 'package:example/module/form_ui/view/form_ui_autocomplete_view.dart';
+export 'package:example/module/form_ui/view/form_ui_switch_view.dart';
+export 'package:example/module/form_ui/view/form_ui_textfield_view.dart';
 export 'package:example/module/form_ui/view/form_ui_view.dart';
+export 'package:example/module/form_ui/widget/radio.dart';
 export 'package:example/module/http_example/controller/http_example_controller.dart';
 export 'package:example/module/http_example/view/http_example_view.dart';
 export 'package:example/module/http_form_example/controller/http_form_example_controller.dart';

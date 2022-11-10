@@ -22,6 +22,7 @@
         "dialog_ui",
         "widget_ui",
         "statistic_ui",
+        "accordions_ui",
         "chip_ui",
         "searchfield_ui",
         "list_item_ui",

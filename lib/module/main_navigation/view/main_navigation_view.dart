@@ -93,6 +93,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
         ),
         NavigationItem(
           icon: const Icon(MdiIcons.web),
+          label: 'Accordions Ui',
+          route: '/accordions_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
           label: 'Badge Ui',
           route: '/badge_ui',
           items: [],

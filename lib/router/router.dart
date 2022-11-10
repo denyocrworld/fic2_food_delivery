@@ -289,6 +289,14 @@ getRouters({
         child: const ChipUiView(),
       ),
     ),
+          GoRoute(
+      path: '/accordions_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AccordionsUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
