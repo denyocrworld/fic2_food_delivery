@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 
 class QRadioField extends StatefulWidget {
   final String id;
+  final String label;
   final List<Map<String, dynamic>> items;
   final String? Function(bool?)? validator;
 
   const QRadioField({
     Key? key,
     required this.id,
+    required this.label,
     required this.items,
     this.validator,
   }) : super(key: key);
@@ -17,12 +19,14 @@ class QRadioField extends StatefulWidget {
 }
 
 class _QRadioFieldState extends State<QRadioField> {
-  late List<Map<String, dynamic>> items;
+  List<Map<String, dynamic>> items = [];
 
   @override
   void initState() {
     super.initState();
-    items = widget.items;
+    for (var item in widget.items) {
+      items.add(Map.from(item));
+    }
   }
 
   @override
@@ -39,7 +43,7 @@ class _QRadioFieldState extends State<QRadioField> {
       builder: (FormFieldState<bool> field) {
         return InputDecorator(
           decoration: InputDecoration(
-            labelText: 'Subscribe to mailing list.',
+            labelText: widget.label,
             errorText: field.errorText,
             border: InputBorder.none,
           ),
@@ -50,10 +54,13 @@ class _QRadioFieldState extends State<QRadioField> {
               var item = items[index];
               return RadioListTile(
                 title: Text("${item["label"]}"),
-                groupValue: widget.id,
-                value: false,
+                groupValue: item["chekced"] ?? false,
+                value: item["checked"] ?? false,
                 onChanged: (val) {
+                  bool newValue = val ? false : true;
+                  items[index]["checked"] = newValue;
                   field.didChange(true);
+                  setState(() {});
                 },
               );
             },

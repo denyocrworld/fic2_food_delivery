@@ -255,6 +255,21 @@ class FormUISwitchView extends StatelessWidget {
                 );
               }),
               //#END
+              const QRadioField(
+                id: "member",
+                label: "Member",
+                items: [
+                  {
+                    "label": "Private",
+                    "value": "Private",
+                    "checked": true,
+                  },
+                  {
+                    "label": "Premium",
+                    "value": "Premium",
+                  }
+                ],
+              ),
               const Divider(),
               const SizedBox(
                 height: 30.0,
@@ -375,19 +390,6 @@ class FormUISwitchView extends StatelessWidget {
                     ),
                   );
                 },
-              ),
-              const QRadioField(
-                id: "gender",
-                items: [
-                  {
-                    "label": "Male",
-                    "value": "Male",
-                  },
-                  {
-                    "label": "Female",
-                    "value": "Female",
-                  },
-                ],
               ),
               Row(
                 children: [
