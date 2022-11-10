@@ -31,7 +31,6 @@ class _QRadioFieldState extends State<QRadioField> {
 
   setAllItemsToFalse() {
     for (var item in items) {
-      print(item);
       item["checked"] = false;
     }
   }
@@ -40,12 +39,7 @@ class _QRadioFieldState extends State<QRadioField> {
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      validator: (value) {
-        if (value == null || value == false) {
-          return 'Please enter some text';
-        }
-        return null;
-      },
+      validator: widget.validator,
       enabled: true,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(
