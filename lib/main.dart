@@ -15,7 +15,7 @@ void main() async {
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     theme: getDarkTheme(),
-    home: const FormUiView(),
+    home: const DebugView(),
   ));
 
   runApp(MaterialApp.router(
