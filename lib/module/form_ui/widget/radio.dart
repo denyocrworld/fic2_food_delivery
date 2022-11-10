@@ -29,6 +29,13 @@ class _QRadioFieldState extends State<QRadioField> {
     }
   }
 
+  setAllItemsToFalse() {
+    for (var item in items) {
+      print(item);
+      item["checked"] = false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return FormField(
@@ -54,9 +61,11 @@ class _QRadioFieldState extends State<QRadioField> {
               var item = items[index];
               return RadioListTile(
                 title: Text("${item["label"]}"),
-                groupValue: item["chekced"] ?? false,
+                groupValue: true,
                 value: item["checked"] ?? false,
                 onChanged: (val) {
+                  setAllItemsToFalse();
+
                   bool newValue = val ? false : true;
                   items[index]["checked"] = newValue;
                   field.didChange(true);
