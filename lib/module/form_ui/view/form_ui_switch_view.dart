@@ -1,5 +1,5 @@
+//#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
-import 'package:example/module/form_ui/widget/radio.dart';
 import 'package:flutter/material.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -16,6 +16,97 @@ class FormUISwitchView extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
+              //#TEMPLATE form_textfield
+              TextFormField(
+                initialValue: 'John Doe',
+                maxLength: 20,
+                decoration: const InputDecoration(
+                  labelText: 'Name',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: "What's your name?",
+                ),
+                onChanged: (value) {},
+              ),
+              //#END
+              //#TEMPLATE form_textfield_email
+              TextFormField(
+                initialValue: 'admin@gmail.com',
+                maxLength: 20,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.email,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your email address',
+                ),
+                onChanged: (value) {},
+              ),
+              //#END
+              //#TEMPLATE form_textfield_password
+              TextFormField(
+                initialValue: '123456',
+                maxLength: 20,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.password,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your password',
+                ),
+                onChanged: (value) {},
+              ),
+              //#END
+              //#TEMPLATE form_textfield_textarea
+              TextFormField(
+                initialValue: 'Jln. Sukangoding No. 45',
+                maxLength: 20,
+                maxLines: 4,
+                decoration: const InputDecoration(
+                  labelText: 'Address',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: "What's your address",
+                ),
+                onChanged: (value) {},
+              ),
+              //#END
+
+              const Divider(),
+              const SizedBox(
+                height: 30.0,
+              ),
+              const Divider(),
+
               TextFormField(
                 initialValue: 'John Doe',
                 maxLength: 20,
