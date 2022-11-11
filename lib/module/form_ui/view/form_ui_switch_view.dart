@@ -1,5 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
+import 'package:example/module/form_ui/widget/switch.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/util/validator/validator.dart';
@@ -84,6 +85,21 @@ class FormUISwitchView extends StatelessWidget {
                   helperText: "What's your name!?",
                 ),
                 onChanged: (value) {},
+              ),
+              const QSwitch(
+                id: "member",
+                label: "Member",
+                validator: Validator.atLeastOneitem,
+                items: [
+                  {
+                    "label": "Private",
+                    "value": "Private",
+                  },
+                  {
+                    "label": "Premium",
+                    "value": "Premium",
+                  }
+                ],
               ),
               const QRadioField(
                 id: "member",
