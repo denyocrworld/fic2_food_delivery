@@ -47,6 +47,27 @@ class FormUISwitchView extends StatelessWidget {
           child: Column(
             children: [
               TextFormField(
+                initialValue: 'admin@gmail.com',
+                maxLength: 20,
+                validator: Validator.email,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.email,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your email address',
+                ),
+                onChanged: (value) {},
+              ),
+              TextFormField(
                 // initialValue: '',
                 maxLength: 20,
                 validator: Validator.required,
