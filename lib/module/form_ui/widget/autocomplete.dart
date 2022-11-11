@@ -29,12 +29,6 @@ class _QAutoCompleteState extends State<QAutoComplete> {
     }
   }
 
-  setAllItemsToFalse() {
-    for (var item in items) {
-      item["checked"] = false;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -86,6 +80,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
         optionsViewBuilder: (context, onSelected, options) => Align(
           alignment: Alignment.topLeft,
           child: Material(
+            color: Colors.transparent,
             child: ClipRRect(
               borderRadius: const BorderRadius.vertical(
                 bottom: Radius.circular(4.0),
@@ -98,12 +93,15 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                     Container(
                       decoration: BoxDecoration(
                         // color: Colors.grey[100],
+                        color: Theme.of(context).scaffoldBackgroundColor,
                         borderRadius: const BorderRadius.all(
                           Radius.circular(12.0),
                         ),
                         border: Border.all(
                           width: 1.0,
-                          // color: Colors.grey[300]!,
+                          color: Theme.of(context)
+                              .scaffoldBackgroundColor
+                              .withOpacity(0.4),
                         ),
                       ),
                       child: ListView.builder(
