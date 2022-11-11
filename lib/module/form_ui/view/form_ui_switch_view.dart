@@ -1,5 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
+import 'package:example/module/form_ui/widget/autocomplete.dart';
 import 'package:example/module/form_ui/widget/numberfield.dart';
 import 'package:example/module/form_ui/widget/switch.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,30 @@ class FormUISwitchView extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
+              const QAutoComplete(
+                id: "member",
+                label: "Member",
+                validator: Validator.required,
+                items: [
+                  {
+                    "photo": "https://i.ibb.co/PGv8ZzG/me.jpg",
+                    "label": "John Doe",
+                    "info": "Programmer"
+                  },
+                  {
+                    "photo":
+                        "https://i.ibb.co/5v5RLKr/photo-1528813860492-bb99459ec095-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                    "label": "Renata",
+                    "info": "System Analyst"
+                  },
+                  {
+                    "photo":
+                        "https://i.ibb.co/mR8PJCz/photo-1576570734316-e9d0317d7384-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                    "label": "Kayla",
+                    "info": "Test Engineer"
+                  }
+                ],
+              ),
               const QTextField(
                 id: "name",
                 label: "Name",
