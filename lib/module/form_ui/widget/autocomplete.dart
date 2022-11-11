@@ -137,11 +137,13 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                                 ),
                               ),
                               child: ListTile(
-                                leading: CircleAvatar(
-                                  backgroundImage: NetworkImage(
-                                    option["photo"],
-                                  ),
-                                ),
+                                leading: option["photo"] == null
+                                    ? null
+                                    : CircleAvatar(
+                                        backgroundImage: NetworkImage(
+                                          option["photo"],
+                                        ),
+                                      ),
                                 title: Text("${option["label"]}"),
                                 subtitle: Text("${option["info"]}"),
                               ),
