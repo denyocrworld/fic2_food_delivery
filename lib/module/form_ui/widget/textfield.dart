@@ -6,6 +6,7 @@ class QTextField extends StatefulWidget {
   final String? value;
   final String? hint;
   final String? Function(String?)? validator;
+  final Function(String)? onChanged;
 
   const QTextField({
     Key? key,
@@ -14,6 +15,7 @@ class QTextField extends StatefulWidget {
     this.value,
     this.validator,
     this.hint,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -44,7 +46,7 @@ class _QTextFieldState extends State<QTextField> {
         ),
         helperText: widget.hint,
       ),
-      onChanged: (value) {},
+      onChanged: widget.onChanged,
     );
   }
 }

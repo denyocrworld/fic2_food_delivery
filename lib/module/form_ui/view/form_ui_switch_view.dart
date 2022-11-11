@@ -51,6 +51,7 @@ class FormUISwitchView extends StatelessWidget {
                 id: "name",
                 label: "Name",
                 validator: Validator.required,
+                hint: "Your name",
               ),
               const QSwitch(
                 id: "member",
