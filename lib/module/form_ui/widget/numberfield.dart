@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class QTextField extends StatefulWidget {
+class QNumberField extends StatefulWidget {
   final String id;
   final String label;
   final String? value;
@@ -8,7 +8,7 @@ class QTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final Function(String)? onChanged;
 
-  const QTextField({
+  const QNumberField({
     Key? key,
     required this.id,
     required this.label,
@@ -19,10 +19,10 @@ class QTextField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<QTextField> createState() => _QTextFieldState();
+  State<QNumberField> createState() => _QNumberFieldState();
 }
 
-class _QTextFieldState extends State<QTextField> {
+class _QNumberFieldState extends State<QNumberField> {
   @override
   void initState() {
     super.initState();
@@ -34,6 +34,7 @@ class _QTextFieldState extends State<QTextField> {
       initialValue: widget.value,
       validator: widget.validator,
       maxLength: 20,
+      keyboardType: TextInputType.number,
       decoration: InputDecoration(
         labelText: widget.label,
         labelStyle: const TextStyle(
@@ -45,7 +46,7 @@ class _QTextFieldState extends State<QTextField> {
           ),
         ),
         suffixIcon: const Icon(
-          Icons.text_format,
+          Icons.numbers,
         ),
         helperText: widget.hint,
       ),

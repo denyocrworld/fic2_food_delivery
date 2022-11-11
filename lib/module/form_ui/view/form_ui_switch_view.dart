@@ -1,5 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
+import 'package:example/module/form_ui/widget/numberfield.dart';
 import 'package:example/module/form_ui/widget/switch.dart';
 import 'package:flutter/material.dart';
 
@@ -50,6 +51,12 @@ class FormUISwitchView extends StatelessWidget {
               const QTextField(
                 id: "name",
                 label: "Name",
+                validator: Validator.required,
+                hint: "Your name",
+              ),
+              const QNumberField(
+                id: "age",
+                label: "Age",
                 validator: Validator.required,
                 hint: "Your name",
               ),
