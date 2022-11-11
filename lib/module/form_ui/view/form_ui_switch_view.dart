@@ -57,7 +57,7 @@ class FormUISwitchView extends StatelessWidget {
               const QNumberField(
                 id: "age",
                 label: "Age",
-                validator: Validator.required,
+                validator: Validator.number,
                 hint: "Your name",
               ),
               const QSwitch(

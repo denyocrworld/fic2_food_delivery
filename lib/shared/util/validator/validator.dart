@@ -28,6 +28,16 @@ class Validator {
     return null;
   }
 
+  static String? number(String? value) {
+    if (value!.isEmpty) return "This field is required";
+
+    final bool isNumber = RegExp(r"^[0-9]+$").hasMatch(value);
+    if (!isNumber) {
+      return "This field is not in a valid number format";
+    }
+    return null;
+  }
+
   //!List validator
   static String? atLeastOneitem(List<Map<String, dynamic>> items) {
     var checkedItems = items.where((i) => i["checked"] == true).toList();
