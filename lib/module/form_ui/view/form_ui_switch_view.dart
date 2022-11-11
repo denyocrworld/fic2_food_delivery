@@ -1,7 +1,8 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
-import 'package:example/module/form_ui/widget/check.dart';
 import 'package:flutter/material.dart';
+
+import '../../../shared/util/validator/validator.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -13,10 +14,90 @@ class FormUISwitchView extends StatelessWidget {
     return ExCard(
       title: "Switch",
       children: [
+        Row(
+          children: [
+            ElevatedButton.icon(
+              icon: const Icon(Icons.save),
+              label: const Text("Save"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                var validation = _formKey.currentState!.validate();
+                print(validation);
+              },
+            ),
+            const SizedBox(
+              width: 20.0,
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.save),
+              label: const Text("Reset"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                _formKey.currentState!.reset();
+              },
+            ),
+          ],
+        ),
         Form(
           key: _formKey,
           child: Column(
             children: [
+              TextFormField(
+                // initialValue: '',
+                maxLength: 20,
+                validator: Validator.required,
+                decoration: const InputDecoration(
+                  labelText: 'Name',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: "What's your name!?",
+                ),
+                onChanged: (value) {},
+              ),
+              const QRadioField(
+                id: "member",
+                label: "Member",
+                validator: Validator.atLeastOneitem,
+                items: [
+                  {
+                    "label": "Private",
+                    "value": "Private",
+                  },
+                  {
+                    "label": "Premium",
+                    "value": "Premium",
+                  }
+                ],
+              ),
+              const QCheckField(
+                id: "club",
+                label: "Club",
+                validator: Validator.atLeastOneitem,
+                items: [
+                  {
+                    "label": "Persib",
+                    "value": "Persib",
+                    "checked": true,
+                  },
+                  {
+                    "label": "Persikabo",
+                    "value": "Persikabo",
+                  }
+                ],
+              ),
+              //------------------
+              //------------------
+
               //#TEMPLATE form_textfield
               TextFormField(
                 initialValue: 'John Doe',
@@ -139,12 +220,6 @@ class FormUISwitchView extends StatelessWidget {
                 ];
                 return FormField(
                   initialValue: false,
-                  validator: (value) {
-                    if (value == null || value == false) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
                   enabled: true,
                   builder: (FormFieldState<bool> field) {
                     return InputDecorator(
@@ -190,12 +265,6 @@ class FormUISwitchView extends StatelessWidget {
                 ];
                 return FormField(
                   initialValue: false,
-                  validator: (value) {
-                    if (value == null || value == false) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
                   enabled: true,
                   builder: (FormFieldState<bool> field) {
                     return InputDecorator(
@@ -278,38 +347,7 @@ class FormUISwitchView extends StatelessWidget {
                 );
               }),
               //#END
-              const QRadioField(
-                id: "member",
-                label: "Member",
-                items: [
-                  {
-                    "label": "Private",
-                    "value": "Private",
-                    "checked": true,
-                  },
-                  {
-                    "label": "Premium",
-                    "value": "Premium",
-                  }
-                ],
-              ),
-              const QCheckField(
-                id: "club",
-                label: "Club",
-                items: [
-                  {
-                    "label": "Persib",
-                    "value": "Persib",
-                    "checked": true,
-                  },
-                  {
-                    "label": "Persikabo",
-                    "value": "Persikabo",
-                  }
-                ],
-              ),
-              //------------------
-              //------------------
+
               const Divider(),
               const SizedBox(
                 height: 30.0,
@@ -430,34 +468,6 @@ class FormUISwitchView extends StatelessWidget {
                     ),
                   );
                 },
-              ),
-              Row(
-                children: [
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.save),
-                    label: const Text("Save"),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blueGrey,
-                    ),
-                    onPressed: () {
-                      var validation = _formKey.currentState!.validate();
-                      print(validation);
-                    },
-                  ),
-                  const SizedBox(
-                    width: 20.0,
-                  ),
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.save),
-                    label: const Text("Reset"),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blueGrey,
-                    ),
-                    onPressed: () {
-                      _formKey.currentState!.reset();
-                    },
-                  ),
-                ],
               ),
             ],
           ),

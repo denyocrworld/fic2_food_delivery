@@ -4,7 +4,7 @@ class QRadioField extends StatefulWidget {
   final String id;
   final String label;
   final List<Map<String, dynamic>> items;
-  final String? Function(bool?)? validator;
+  final String? Function(List<Map<String, dynamic>> item)? validator;
 
   const QRadioField({
     Key? key,
@@ -39,7 +39,7 @@ class _QRadioFieldState extends State<QRadioField> {
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      validator: widget.validator,
+      validator: (value) => widget.validator!(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(

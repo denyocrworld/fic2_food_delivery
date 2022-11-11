@@ -87,6 +87,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.web),
+          label: 'Bottom Navigation Bar Ui',
+          route: '/bottom_navigation_bar_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
           label: 'Statistic Ui',
           route: '/statistic_ui',
           items: [],
@@ -208,6 +214,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_another_example',
       items: [],
     ),
+
     //@NAVIGATION_GENERATOR
   ];
 
