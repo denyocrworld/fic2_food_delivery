@@ -6,6 +6,7 @@ import 'package:example/module/form_ui/widget/switch.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/util/validator/validator.dart';
+import '../widget/datepicker.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -49,6 +50,19 @@ class FormUISwitchView extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
+              QDatePicker(
+                id: "birth_date",
+                label: "Birth Date",
+                validator: Validator.required,
+                hint: "Your birth date",
+                value: DateTime.now(),
+              ),
+              const QDatePicker(
+                id: "created_at",
+                label: "Created At",
+                validator: Validator.required,
+                hint: "Created at N",
+              ),
               const QAutoComplete(
                 id: "member",
                 label: "Member",
