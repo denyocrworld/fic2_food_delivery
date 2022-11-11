@@ -47,44 +47,10 @@ class FormUISwitchView extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              TextFormField(
-                initialValue: 'admin@gmail.com',
-                maxLength: 20,
-                validator: Validator.email,
-                decoration: const InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.email,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
-                    ),
-                  ),
-                  helperText: 'Enter your email address',
-                ),
-                onChanged: (value) {},
-              ),
-              TextFormField(
-                // initialValue: '',
-                maxLength: 20,
+              const QTextField(
+                id: "name",
+                label: "Name",
                 validator: Validator.required,
-                decoration: const InputDecoration(
-                  labelText: 'Name',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
-                    ),
-                  ),
-                  helperText: "What's your name!?",
-                ),
-                onChanged: (value) {},
               ),
               const QSwitch(
                 id: "member",

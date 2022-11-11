@@ -5,7 +5,7 @@ class QTextField extends StatefulWidget {
   final String label;
   final String? value;
   final String? hint;
-  final String? Function(bool?)? validator;
+  final String? Function(String?)? validator;
 
   const QTextField({
     Key? key,
@@ -28,26 +28,23 @@ class _QTextFieldState extends State<QTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(12),
-      margin: const EdgeInsets.only(),
-      child: TextFormField(
-        initialValue: widget.value,
-        maxLength: 20,
-        decoration: InputDecoration(
-          labelText: widget.label,
-          labelStyle: const TextStyle(
+    return TextFormField(
+      initialValue: widget.value,
+      validator: widget.validator,
+      maxLength: 20,
+      decoration: InputDecoration(
+        labelText: widget.label,
+        labelStyle: const TextStyle(
+          color: Colors.blueGrey,
+        ),
+        enabledBorder: const UnderlineInputBorder(
+          borderSide: BorderSide(
             color: Colors.blueGrey,
           ),
-          enabledBorder: const UnderlineInputBorder(
-            borderSide: BorderSide(
-              color: Colors.blueGrey,
-            ),
-          ),
-          helperText: widget.hint,
         ),
-        onChanged: (value) {},
+        helperText: widget.hint,
       ),
+      onChanged: (value) {},
     );
   }
 }
