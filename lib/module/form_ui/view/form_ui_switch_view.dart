@@ -3,6 +3,7 @@ import 'package:example/core.dart';
 import 'package:example/module/form_ui/widget/autocomplete.dart';
 import 'package:example/module/form_ui/widget/numberfield.dart';
 import 'package:example/module/form_ui/widget/switch.dart';
+import 'package:example/module/form_ui/widget/timepicker.dart';
 import 'package:flutter/material.dart';
 
 import '../../../shared/util/validator/validator.dart';
@@ -56,6 +57,16 @@ class FormUISwitchView extends StatelessWidget {
                 validator: Validator.required,
                 hint: "Your birth date",
                 value: DateTime.now(),
+              ),
+              const QTimePicker(
+                id: "birth_date",
+                label: "Birth Date",
+                validator: Validator.required,
+                hint: "Your birth date",
+                value: TimeOfDay(
+                  hour: 13,
+                  minute: 30,
+                ),
               ),
               const QDatePicker(
                 id: "created_at",
