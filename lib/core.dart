@@ -68,6 +68,8 @@ export 'package:example/module/pos_another_example/controller/pos_another_exampl
 export 'package:example/module/pos_another_example/view/pos_another_example_view.dart';
 export 'package:example/module/pos_example/controller/pos_example_controller.dart';
 export 'package:example/module/pos_example/view/pos_example_view.dart';
+export 'package:example/module/profile_ui_example/controller/profile_ui_example_controller.dart';
+export 'package:example/module/profile_ui_example/view/profile_ui_example_view.dart';
 export 'package:example/module/scaffold_ui/controller/scaffold_ui_controller.dart';
 export 'package:example/module/scaffold_ui/view/scaffold_ui_view.dart';
 export 'package:example/module/searchfield_ui/controller/searchfield_ui_controller.dart';
@@ -79,6 +81,8 @@ export 'package:example/module/style_guide/view/style_guide_view.dart';
 export 'package:example/module/style_guide/widget/color_widget.dart';
 export 'package:example/module/tab_ui/controller/tab_ui_controller.dart';
 export 'package:example/module/tab_ui/view/tab_ui_view.dart';
+export 'package:example/module/testxxx/controller/testxxx_controller.dart';
+export 'package:example/module/testxxx/view/testxxx_view.dart';
 export 'package:example/module/theme/controller/theme_controller.dart';
 export 'package:example/module/theme/view/theme_view.dart';
 export 'package:example/module/widget_ui/controller/widget_ui_controller.dart';

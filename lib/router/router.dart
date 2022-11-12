@@ -297,6 +297,22 @@ getRouters({
         child: const AccordionsUiView(),
       ),
     ),
+          GoRoute(
+      path: '/profile_ui_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ProfileUiExampleView(),
+      ),
+    ),
+          GoRoute(
+      path: '/testxxx',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TestxxxView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
