@@ -91,10 +91,11 @@ class FormUISwitchView extends StatelessWidget {
                   }
                 ],
               ),
-              const QTextField(
+              QTextField(
                 id: "name",
                 label: "Name",
-                validator: Validator.required,
+                validator: (value) =>
+                    Validator.required(value, fieldName: "Name"),
                 hint: "Your name",
               ),
               const QNumberField(

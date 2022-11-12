@@ -2,6 +2,8 @@ import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
 
+import '../module/main_navigation/view/main_navigation_view.dart';
+
 getRouters({
   String? initialRoute,
 }) {
