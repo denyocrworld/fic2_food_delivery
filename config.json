@@ -12,6 +12,7 @@
         "style_guide",
         "scaffold_ui",
         "appbar_ui",
+        "bottom_navigation_bar_ui",
         "navigation_ui",
         "list_ui",
         "detail_ui",
@@ -30,7 +31,11 @@
         "http_form_example",
         "example",
         "pos_another_example",
+<<<<<<< HEAD
         "profile_ui_example",
         "testxxx"
+=======
+        "profile_ui"
+>>>>>>> 015bfb1b552214b52fa2681be302ab39fdaa5575
     ]
 }

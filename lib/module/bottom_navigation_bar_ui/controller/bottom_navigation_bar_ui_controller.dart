@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/table_list_view.dart';
+import '../view/bottom_navigation_bar_ui_view.dart';
 
-class TableListController extends State<TableListView>
-    implements MvcController {
-  static late TableListController instance;
-  late TableListView view;
+class BottomNavigationBarUiController extends State<BottomNavigationBarUiView> implements MvcController {
+  static late BottomNavigationBarUiController instance;
+  late BottomNavigationBarUiView view;
 
   @override
   void initState() {
@@ -18,7 +17,4 @@ class TableListController extends State<TableListView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-
-  int page = 1;
-  String search = "";
 }
