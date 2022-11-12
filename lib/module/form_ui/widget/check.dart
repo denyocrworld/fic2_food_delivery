@@ -5,6 +5,7 @@ class QCheckField extends StatefulWidget {
   final String label;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
+  final Future<List<Map<String, dynamic>>> Function()? onFuture;
 
   const QCheckField({
     Key? key,
@@ -12,6 +13,7 @@ class QCheckField extends StatefulWidget {
     required this.label,
     required this.items,
     this.validator,
+    this.onFuture,
   }) : super(key: key);
 
   @override
@@ -27,6 +29,15 @@ class _QCheckFieldState extends State<QCheckField> {
     for (var item in widget.items) {
       items.add(Map.from(item));
     }
+    loadItems();
+  }
+
+  loadItems() async {
+    if (widget.onFuture == null) return;
+
+    List<Map<String, dynamic>> newItems = await widget.onFuture!();
+    items = newItems;
+    setState(() {});
   }
 
   @override

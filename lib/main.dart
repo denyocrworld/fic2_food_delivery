@@ -13,8 +13,21 @@ void main() async {
   return runApp(MaterialApp(
     title: 'Capek Ngoding',
     debugShowCheckedModeBanner: false,
-    theme: ThemeData.dark(),
-    home: const FormUiView(),
+    theme: ThemeData.dark().copyWith(
+      // scaffoldBackgroundColor: Colors.brown[200],
+      // appBarTheme: const AppBarTheme(
+      //   backgroundColor: Colors.purple,
+      // ),
+      cardTheme: CardTheme(
+        elevation: 10,
+        // color: Colors.green[100],
+        shape: ContinuousRectangleBorder(
+          borderRadius: BorderRadius.circular(64.0),
+        ),
+      ),
+    ),
+    home: const ProfileUiView(),
+    // home: const FormUiView(),
   ));
 
   runApp(MaterialApp.router(

@@ -1,13 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
-import 'package:example/module/form_ui/widget/autocomplete.dart';
-import 'package:example/module/form_ui/widget/numberfield.dart';
-import 'package:example/module/form_ui/widget/switch.dart';
-import 'package:example/module/form_ui/widget/timepicker.dart';
 import 'package:flutter/material.dart';
-
-import '../../../shared/util/validator/validator.dart';
-import '../widget/datepicker.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
@@ -148,11 +141,12 @@ class FormUISwitchView extends StatelessWidget {
                   {
                     "label": "Persib",
                     "value": "Persib",
-                    "checked": true,
+                    "checked": false,
                   },
                   {
                     "label": "Persikabo",
                     "value": "Persikabo",
+                    "checked": true,
                   }
                 ],
               ),

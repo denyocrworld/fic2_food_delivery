@@ -289,6 +289,30 @@ getRouters({
               child: const BottomNavigationBarUiView(),
             ),
           ),
+          GoRoute(
+            path: '/http_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpExampleView(),
+            ),
+          ),
+          GoRoute(
+            path: '/http_form_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpFormExampleView(),
+            ),
+          ),
+          GoRoute(
+            path: '/profile_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProfileUiView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

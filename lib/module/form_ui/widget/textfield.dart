@@ -37,7 +37,9 @@ class _QTextFieldState extends State<QTextField> {
       decoration: InputDecoration(
         labelText: widget.label,
         labelStyle: const TextStyle(
-          color: Colors.blueGrey,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          color: Colors.red,
         ),
         enabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
@@ -46,6 +48,7 @@ class _QTextFieldState extends State<QTextField> {
         ),
         suffixIcon: const Icon(
           Icons.text_format,
+          color: Colors.yellow,
         ),
         helperText: widget.hint,
       ),

@@ -87,6 +87,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
               ),
               child: Container(
                 width: constraints.biggest.width,
+                // width: MediaQuery.of(context).size.width,
                 margin: const EdgeInsets.only(top: 10.0),
                 child: Wrap(
                   children: [
