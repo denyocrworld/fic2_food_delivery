@@ -1,9 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/module/form_ui/widget/yd_datepicker.dart';
-import 'package:example/module/form_ui/widget/yd_textarea.dart';
-import 'package:example/module/form_ui/widget/yd_timepicker.dart';
-import 'package:example/service/employee_service.dart';
-import 'package:example/shared/widget/user_data_source_builder/user_data_source_builder.dart';
 import 'package:flutter/material.dart';
 
 /*
@@ -113,42 +108,6 @@ class FormUiView extends StatefulWidget {
                   id: "age",
                   label: "Age",
                   validator: Validator.number,
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: YDDatePicker(
-                        label: "Start at",
-                        value: DateTime.now(),
-                        onChanged: (value) {
-                          print("Start at: $value");
-                        },
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 12.0,
-                    ),
-                    Expanded(
-                      child: YDDatePicker(
-                        label: "End at",
-                        value: DateTime.now(),
-                        onChanged: (value) {
-                          print("End at: $value");
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-                const YDTimePicker(
-                  label: "Working hours",
-                  value: TimeOfDay(
-                    hour: 13,
-                    minute: 30,
-                  ),
-                ),
-                const YDTextArea(
-                  label: "Memo",
-                  value: "-",
                 ),
                 Row(
                   children: [
