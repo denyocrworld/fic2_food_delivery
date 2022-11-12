@@ -10,8 +10,13 @@ class Validator {
   }
 
   //!String validator
-  static String? required(String? value) {
-    if (value!.isEmpty) return "This field is required";
+  static String? required(
+    String? value, {
+    String? fieldName,
+    String? errorMessage,
+  }) {
+    if (errorMessage != null) return errorMessage;
+    if (value!.isEmpty) return "This $fieldName is required";
     return null;
   }
 
