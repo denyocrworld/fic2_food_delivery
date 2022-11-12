@@ -2,8 +2,6 @@ import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
 
-import '../module/main_navigation/view/main_navigation_view.dart';
-
 getRouters({
   String? initialRoute,
 }) {
@@ -292,55 +290,29 @@ getRouters({
             ),
           ),
           GoRoute(
-<<<<<<< HEAD
-      path: '/accordions_ui',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const AccordionsUiView(),
-      ),
-    ),
-          GoRoute(
-      path: '/profile_ui_example',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const ProfileUiExampleView(),
-      ),
-    ),
-          GoRoute(
-      path: '/testxxx',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TestxxxView(),
-      ),
-    ),
-=======
-            path: '/http_example',
+            path: '/accordions_ui',
             pageBuilder: (context, state) => noTransition(
               context: context,
               state: state,
-              child: const HttpExampleView(),
+              child: const AccordionsUiView(),
             ),
           ),
           GoRoute(
-            path: '/http_form_example',
+            path: '/profile_ui_example',
             pageBuilder: (context, state) => noTransition(
               context: context,
               state: state,
-              child: const HttpFormExampleView(),
+              child: const ProfileUiExampleView(),
             ),
           ),
           GoRoute(
-            path: '/profile_ui',
+            path: '/testxxx',
             pageBuilder: (context, state) => noTransition(
               context: context,
               state: state,
-              child: const ProfileUiView(),
+              child: const TestxxxView(),
             ),
           ),
->>>>>>> 015bfb1b552214b52fa2681be302ab39fdaa5575
           //@ROUTER_GENERATOR
         ],
       ),
