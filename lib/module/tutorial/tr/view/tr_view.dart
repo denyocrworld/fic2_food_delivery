@@ -38,34 +38,6 @@ class TrView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              //-------------------
-              Container(
-                height: 300,
-                color: Colors.red[200],
-                child: Column(
-                  children: [
-                    Container(
-                      color: Colors.yellow,
-                      height: 150.0,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(12.0),
-                      color: Colors.blue,
-                      height: 150.0,
-                      child: Container(
-                        padding: const EdgeInsets.all(12.0),
-                        transform: Matrix4.translationValues(0.0, -30, 0),
-                        color: Colors.purple,
-                        height: 150.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              //-------------------
-              const SizedBox(
-                height: 200.0,
-              ),
               header("State Management"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
