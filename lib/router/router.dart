@@ -434,6 +434,94 @@ getRouters({
         child: const TrView(),
       ),
     ),
+          GoRoute(
+      path: '/trfm_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_login_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmLoginFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_signup_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmSignupFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_forgot_password_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmForgotPasswordFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_reset_password_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmResetPasswordFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_edit_profile_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmEditProfileFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_checkout_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmCheckoutFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_review_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmReviewFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_filter_date_dialog_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmFilterDateDialogFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_filter_category_and_date_bottomsheet_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmFilterCategoryAndDateBottomsheetFormView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

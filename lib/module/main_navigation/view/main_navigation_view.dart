@@ -321,6 +321,72 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/tr',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Login',
+      route: '/trfm_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Login Form',
+      route: '/trfm_login_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Signup Form',
+      route: '/trfm_signup_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Forgot Password Form',
+      route: '/trfm_forgot_password_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Reset Password Form',
+      route: '/trfm_reset_password_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Edit Profile Form',
+      route: '/trfm_edit_profile_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Product Form',
+      route: '/trfm_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Checkout Form',
+      route: '/trfm_checkout_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Review Form',
+      route: '/trfm_review_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Filter Date Dialog Form',
+      route: '/trfm_filter_date_dialog_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Filter Category And Date Bottomsheet Form',
+      route: '/trfm_filter_category_and_date_bottomsheet_form',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

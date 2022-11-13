@@ -11,6 +11,17 @@
                 "tutorial/trsm_loading_for_http_request",
                 "tutorial/trsm_animation",
                 "tutorial/trsm_digital_clock",
-                "tutorial/trsm_crud"
+                "tutorial/trsm_crud",
+                "tutorial/trfm_login",
+                "tutorial/trfm_login_form",
+                "tutorial/trfm_signup_form",
+                "tutorial/trfm_forgot_password_form",
+                "tutorial/trfm_reset_password_form",
+                "tutorial/trfm_edit_profile_form",
+                "tutorial/trfm_product_form",
+                "tutorial/trfm_checkout_form",
+                "tutorial/trfm_review_form",
+                "tutorial/trfm_filter_date_dialog_form",
+                "tutorial/trfm_filter_category_and_date_bottomsheet_form"
         ]
 }

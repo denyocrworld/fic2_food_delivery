@@ -31,7 +31,7 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmVisibilityView(),
     },
     {
-      "label": "Navigaiton",
+      "label": "Navigation",
       "view": const TrsmNavigationView(),
     },
     {
@@ -62,5 +62,48 @@ class TrController extends State<TrView> implements MvcController {
       "label": "CRUD",
       "view": const TrsmCrudView(),
     }
+  ];
+
+  List formItems = [
+    {
+      "label": "Login",
+      "view": const TrfmLoginFormView(),
+    },
+    {
+      "label": "Signup",
+      "view": const TrfmSignupFormView(),
+    },
+    {
+      "label": "Forgot Password",
+      "view": const TrfmForgotPasswordFormView(),
+    },
+    {
+      "label": "Reset Password",
+      "view": const TrfmResetPasswordFormView(),
+    },
+    {
+      "label": "Edit Profile",
+      "view": const TrfmEditProfileFormView(),
+    },
+    {
+      "label": "Product Form",
+      "view": const TrfmProductFormView(),
+    },
+    {
+      "label": "Checkout Form",
+      "view": const TrfmCheckoutFormView(),
+    },
+    {
+      "label": "Review Form",
+      "view": const TrfmReviewFormView(),
+    },
+    {
+      "label": "Filter Date Dialog",
+      "view": const TrfmFilterDateDialogFormView(),
+    },
+    {
+      "label": "Filter Category & Date Bottomsheet",
+      "view": const TrfmFilterCategoryAndDateBottomsheetFormView(),
+    },
   ];
 }

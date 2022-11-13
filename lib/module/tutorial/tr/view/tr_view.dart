@@ -1,3 +1,4 @@
+import 'package:example/module/tutorial/tr/widget/tutorial_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
@@ -48,34 +49,9 @@ class TrView extends StatefulWidget {
                     (index) {
                       var item = controller.items[index];
                       var size = (constraints.biggest.width - (10 * 3)) / 4;
-                      return InkWell(
-                        onTap: () {
-                          Get.to(item!["view"]);
-                        },
-                        child: Container(
-                          width: size,
-                          height: size,
-                          decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(12.0),
-                            ),
-                            color:
-                                Theme.of(context).primaryColor.withOpacity(0.6),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "${item["label"]}",
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(
-                                  fontSize: 12.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
                       );
                     },
                   ),
@@ -85,6 +61,23 @@ class TrView extends StatefulWidget {
                 height: 20.0,
               ),
               header("Form"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.formItems.length,
+                    (index) {
+                      var item = controller.formItems[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                      );
+                    },
+                  ),
+                );
+              }),
             ],
           ),
         ),
