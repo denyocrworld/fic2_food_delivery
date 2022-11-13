@@ -59,7 +59,23 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmDigitalClockView(),
     },
     {
+      "label": "Horizontal List",
+      "view": const TrsmHorizontalCategoryListView(),
+    },
+    {
+      "label": "Vertical Category List",
+      "view": const TrsmVerticalCategoryListView(),
+    },
+    {
+      "label": "Category in Wrap",
+      "view": const TrsmCategoryInWrapView(),
+    },
+    {
       "label": "Filter List",
+      "view": const TrsmFilterListView(),
+    },
+    {
+      "label": "Read Chat List",
       "view": const TrsmFilterListView(),
     },
     {
@@ -92,6 +108,10 @@ class TrController extends State<TrView> implements MvcController {
     {
       "label": "Product Form",
       "view": const TrfmProductFormView(),
+    },
+    {
+      "label": "Edit Store Form",
+      "view": const TrfmEditStoreFormView(),
     },
     {
       "label": "Checkout Form",

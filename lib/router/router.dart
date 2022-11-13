@@ -530,6 +530,38 @@ getRouters({
         child: const TrsmFilterListView(),
       ),
     ),
+          GoRoute(
+      path: '/trsm_horizontal_category_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmHorizontalCategoryListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_vertical_category_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmVerticalCategoryListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_category_in_wrap',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmCategoryInWrapView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trfm_edit_store_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrfmEditStoreFormView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

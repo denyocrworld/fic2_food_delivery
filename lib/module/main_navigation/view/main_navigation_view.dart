@@ -393,6 +393,30 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/trsm_filter_list',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Horizontal Category List',
+      route: '/trsm_horizontal_category_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Vertical Category List',
+      route: '/trsm_vertical_category_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Category In Wrap',
+      route: '/trsm_category_in_wrap',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trfm Edit Store Form',
+      route: '/trfm_edit_store_form',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 
