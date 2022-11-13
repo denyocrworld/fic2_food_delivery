@@ -4,6 +4,27 @@ import 'package:example/core.dart';
 class TrView extends StatefulWidget {
   const TrView({Key? key}) : super(key: key);
 
+  header(String title) {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      width: MediaQuery.of(Get.currentContext).size.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.0,
+            ),
+          ),
+          const Divider(),
+        ],
+      ),
+    );
+  }
+
   Widget build(context, TrController controller) {
     controller.view = this;
 
@@ -17,18 +38,7 @@ class TrView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Container(
-                padding: const EdgeInsets.symmetric(vertical: 4.0),
-                width: MediaQuery.of(context).size.width,
-                child: const Text(
-                  "State Management",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18.0,
-                  ),
-                ),
-              ),
+              header("State Management"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
                   spacing: 10,
@@ -45,11 +55,12 @@ class TrView extends StatefulWidget {
                         child: Container(
                           width: size,
                           height: size,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(12.0),
                             ),
-                            color: Colors.red,
+                            color:
+                                Theme.of(context).primaryColor.withOpacity(0.6),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -73,24 +84,7 @@ class TrView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              ListView.builder(
-                itemCount: controller.items.length,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  var item = controller.items[index];
-                  return InkWell(
-                    onTap: () {
-                      Get.to(item!["view"]);
-                    },
-                    child: Card(
-                      child: ListTile(
-                        title: Text("${item["label"]}"),
-                      ),
-                    ),
-                  );
-                },
-              ),
+              header("Form"),
             ],
           ),
         ),
