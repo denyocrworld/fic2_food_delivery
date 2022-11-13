@@ -1,3 +1,16 @@
 {
-        "modules": []
+        "modules": [
+                "tutorial/tr",
+                "tutorial/trsm_counter",
+                "tutorial/trsm_loading",
+                "tutorial/trsm_visibility",
+                "tutorial/trsm_navigation",
+                "tutorial/trsm_enabled_and_disabled",
+                "tutorial/trsm_cart",
+                "tutorial/trsm_add_and_delete_from_list",
+                "tutorial/trsm_loading_for_http_request",
+                "tutorial/trsm_animation",
+                "tutorial/trsm_digital_clock",
+                "tutorial/trsm_crud"
+        ]
 }

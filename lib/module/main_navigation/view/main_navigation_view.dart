@@ -237,6 +237,90 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/profile_ui',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tr State Management',
+      route: '/tr_state_management',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tr Form',
+      route: '/tr_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Counter',
+      route: '/trsm_counter',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Loading',
+      route: '/trsm_loading',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Visibility',
+      route: '/trsm_visibility',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Navigation',
+      route: '/trsm_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Enabled And Disabled',
+      route: '/trsm_enabled_and_disabled',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Cart',
+      route: '/trsm_cart',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Add And Delete From List',
+      route: '/trsm_add_and_delete_from_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Loading For Http Request',
+      route: '/trsm_loading_for_http_request',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Animation',
+      route: '/trsm_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Digital Clock',
+      route: '/trsm_digital_clock',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Crud',
+      route: '/trsm_crud',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tr',
+      route: '/tr',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

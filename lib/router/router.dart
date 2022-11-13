@@ -314,27 +314,124 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/http_example',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HttpExampleView(),
-      ),
-    ),
+            path: '/http_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpExampleView(),
+            ),
+          ),
           GoRoute(
-      path: '/http_form_example',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HttpFormExampleView(),
-      ),
-    ),
+            path: '/http_form_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpFormExampleView(),
+            ),
+          ),
           GoRoute(
-      path: '/profile_ui',
+            path: '/profile_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ProfileUiView(),
+            ),
+          ),
+
+          GoRoute(
+            path: '/trsm_counter',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmCounterView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_loading',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmLoadingView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_visibility',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmVisibilityView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmNavigationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_enabled_and_disabled',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmEnabledAndDisabledView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_cart',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmCartView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_add_and_delete_from_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmAddAndDeleteFromListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_loading_for_http_request',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmLoadingForHttpRequestView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmAnimationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_digital_clock',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmDigitalClockView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_crud',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmCrudView(),
+            ),
+          ),
+          GoRoute(
+      path: '/tr',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const ProfileUiView(),
+        child: const TrView(),
       ),
     ),
           //@ROUTER_GENERATOR
