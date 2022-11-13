@@ -134,6 +134,10 @@ export 'package:example/module/tutorial/trsm_digital_clock/controller/trsm_digit
 export 'package:example/module/tutorial/trsm_digital_clock/view/trsm_digital_clock_view.dart';
 export 'package:example/module/tutorial/trsm_enabled_and_disabled/controller/trsm_enabled_and_disabled_controller.dart';
 export 'package:example/module/tutorial/trsm_enabled_and_disabled/view/trsm_enabled_and_disabled_view.dart';
+export 'package:example/module/tutorial/trsm_fade_in_animation/controller/trsm_fade_in_animation_controller.dart';
+export 'package:example/module/tutorial/trsm_fade_in_animation/view/trsm_fade_in_animation_view.dart';
+export 'package:example/module/tutorial/trsm_fade_out_animation/controller/trsm_fade_out_animation_controller.dart';
+export 'package:example/module/tutorial/trsm_fade_out_animation/view/trsm_fade_out_animation_view.dart';
 export 'package:example/module/tutorial/trsm_filter_list/controller/trsm_filter_list_controller.dart';
 export 'package:example/module/tutorial/trsm_filter_list/view/trsm_filter_list_view.dart';
 export 'package:example/module/tutorial/trsm_horizontal_category_list/controller/trsm_horizontal_category_list_controller.dart';
@@ -144,6 +148,12 @@ export 'package:example/module/tutorial/trsm_loading_for_http_request/controller
 export 'package:example/module/tutorial/trsm_loading_for_http_request/view/trsm_loading_for_http_request_view.dart';
 export 'package:example/module/tutorial/trsm_navigation/controller/trsm_navigation_controller.dart';
 export 'package:example/module/tutorial/trsm_navigation/view/trsm_navigation_view.dart';
+export 'package:example/module/tutorial/trsm_scale_in_animation/controller/trsm_scale_in_animation_controller.dart';
+export 'package:example/module/tutorial/trsm_scale_in_animation/view/trsm_scale_in_animation_view.dart';
+export 'package:example/module/tutorial/trsm_scale_out_animation/controller/trsm_scale_out_animation_controller.dart';
+export 'package:example/module/tutorial/trsm_scale_out_animation/view/trsm_scale_out_animation_view.dart';
+export 'package:example/module/tutorial/trsm_slide_animation/controller/trsm_slide_animation_controller.dart';
+export 'package:example/module/tutorial/trsm_slide_animation/view/trsm_slide_animation_view.dart';
 export 'package:example/module/tutorial/trsm_vertical_category_list/controller/trsm_vertical_category_list_controller.dart';
 export 'package:example/module/tutorial/trsm_vertical_category_list/view/trsm_vertical_category_list_view.dart';
 export 'package:example/module/tutorial/trsm_visibility/controller/trsm_visibility_controller.dart';

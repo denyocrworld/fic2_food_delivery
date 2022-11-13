@@ -562,6 +562,46 @@ getRouters({
         child: const TrfmEditStoreFormView(),
       ),
     ),
+          GoRoute(
+      path: '/trsm_slide_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmSlideAnimationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_fade_in_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmFadeInAnimationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_fade_out_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmFadeOutAnimationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_scale_in_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmScaleInAnimationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/trsm_scale_out_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmScaleOutAnimationView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

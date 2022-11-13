@@ -417,6 +417,36 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/trfm_edit_store_form',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Slide Animation',
+      route: '/trsm_slide_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Fade In Animation',
+      route: '/trsm_fade_in_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Fade Out Animation',
+      route: '/trsm_fade_out_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Scale In Animation',
+      route: '/trsm_scale_in_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Scale Out Animation',
+      route: '/trsm_scale_out_animation',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

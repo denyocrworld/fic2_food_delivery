@@ -55,6 +55,26 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmAnimationView(),
     },
     {
+      "label": "Slide Animation",
+      "view": const TrsmSlideAnimationView(),
+    },
+    {
+      "label": "Fade In Animation",
+      "view": const TrsmFadeInAnimationView(),
+    },
+    {
+      "label": "Scale In Animation",
+      "view": const TrsmScaleInAnimationView(),
+    },
+    {
+      "label": "Scale Out Animation",
+      "view": const TrsmScaleOutAnimationView(),
+    },
+    {
+      "label": "Fade Out Animation",
+      "view": const TrsmFadeOutAnimationView(),
+    },
+    {
       "label": "Digital Clock",
       "view": const TrsmDigitalClockView(),
     },
