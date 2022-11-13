@@ -93,6 +93,7 @@ export 'package:example/module/theme/controller/theme_controller.dart';
 export 'package:example/module/theme/view/theme_view.dart';
 export 'package:example/module/tutorial/tr/controller/tr_controller.dart';
 export 'package:example/module/tutorial/tr/view/tr_view.dart';
+export 'package:example/module/tutorial/tr/widget/tutorial_navigation_item.dart';
 export 'package:example/module/tutorial/trfm_checkout_form/controller/trfm_checkout_form_controller.dart';
 export 'package:example/module/tutorial/trfm_checkout_form/view/trfm_checkout_form_view.dart';
 export 'package:example/module/tutorial/trfm_edit_profile_form/controller/trfm_edit_profile_form_controller.dart';
@@ -129,6 +130,8 @@ export 'package:example/module/tutorial/trsm_digital_clock/controller/trsm_digit
 export 'package:example/module/tutorial/trsm_digital_clock/view/trsm_digital_clock_view.dart';
 export 'package:example/module/tutorial/trsm_enabled_and_disabled/controller/trsm_enabled_and_disabled_controller.dart';
 export 'package:example/module/tutorial/trsm_enabled_and_disabled/view/trsm_enabled_and_disabled_view.dart';
+export 'package:example/module/tutorial/trsm_filter_list/controller/trsm_filter_list_controller.dart';
+export 'package:example/module/tutorial/trsm_filter_list/view/trsm_filter_list_view.dart';
 export 'package:example/module/tutorial/trsm_loading/controller/trsm_loading_controller.dart';
 export 'package:example/module/tutorial/trsm_loading/view/trsm_loading_view.dart';
 export 'package:example/module/tutorial/trsm_loading_for_http_request/controller/trsm_loading_for_http_request_controller.dart';

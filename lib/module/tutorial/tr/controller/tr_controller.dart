@@ -59,6 +59,10 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmDigitalClockView(),
     },
     {
+      "label": "Filter List",
+      "view": const TrsmFilterListView(),
+    },
+    {
       "label": "CRUD",
       "view": const TrsmCrudView(),
     }

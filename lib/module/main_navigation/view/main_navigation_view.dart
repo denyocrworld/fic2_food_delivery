@@ -387,6 +387,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/trfm_filter_category_and_date_bottomsheet_form',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Filter List',
+      route: '/trsm_filter_list',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

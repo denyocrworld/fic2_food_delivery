@@ -522,6 +522,14 @@ getRouters({
         child: const TrfmFilterCategoryAndDateBottomsheetFormView(),
       ),
     ),
+          GoRoute(
+      path: '/trsm_filter_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrsmFilterListView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
