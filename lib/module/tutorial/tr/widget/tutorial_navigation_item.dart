@@ -12,6 +12,25 @@ class TutorialNavigationItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return SizedBox(
+      width: size,
+      height: size,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.orange[900],
+        ),
+        onPressed: () {
+          Get.to(item["view"]);
+        },
+        child: Text(
+          "${item["label"]}",
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 9.0,
+          ),
+        ),
+      ),
+    );
     return InkWell(
       onTap: () {
         Get.to(item["view"]);
