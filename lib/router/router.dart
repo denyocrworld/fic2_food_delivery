@@ -427,179 +427,196 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/tr',
+            path: '/tr',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmLoginView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_login_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmLoginFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_signup_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmSignupFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_forgot_password_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmForgotPasswordFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_reset_password_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmResetPasswordFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_edit_profile_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmEditProfileFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmProductFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_checkout_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmCheckoutFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_review_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmReviewFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_filter_date_dialog_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmFilterDateDialogFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_filter_category_and_date_bottomsheet_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmFilterCategoryAndDateBottomsheetFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_filter_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmFilterListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_horizontal_category_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmHorizontalCategoryListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_vertical_category_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmVerticalCategoryListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_category_in_wrap',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmCategoryInWrapView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trfm_edit_store_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrfmEditStoreFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_slide_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmSlideAnimationView(),
+            ),
+          ),
+
+          GoRoute(
+            path: '/trsm_animation_by_mouse_event',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmAnimationByMouseEventView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_fade_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmFadeAnimationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/trsm_scale_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmScaleAnimationView(),
+            ),
+          ),
+          GoRoute(
+      path: '/trsm_rotate_animation',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const TrView(),
+        child: const TrsmRotateAnimationView(),
       ),
     ),
           GoRoute(
-      path: '/trfm_login',
+      path: '/trsm_scale_animation_by_slide_value',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const TrfmLoginView(),
+        child: const TrsmScaleAnimationBySlideValueView(),
       ),
     ),
           GoRoute(
-      path: '/trfm_login_form',
+      path: '/trsm_chat_list',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const TrfmLoginFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_signup_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmSignupFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_forgot_password_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmForgotPasswordFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_reset_password_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmResetPasswordFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_edit_profile_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmEditProfileFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmProductFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_checkout_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmCheckoutFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_review_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmReviewFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_filter_date_dialog_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmFilterDateDialogFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_filter_category_and_date_bottomsheet_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmFilterCategoryAndDateBottomsheetFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_filter_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmFilterListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_horizontal_category_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmHorizontalCategoryListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_vertical_category_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmVerticalCategoryListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_category_in_wrap',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmCategoryInWrapView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trfm_edit_store_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrfmEditStoreFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_slide_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmSlideAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_fade_in_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmFadeInAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_fade_out_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmFadeOutAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_scale_in_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmScaleInAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/trsm_scale_out_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmScaleOutAnimationView(),
+        child: const TrsmChatListView(),
       ),
     ),
           //@ROUTER_GENERATOR

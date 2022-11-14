@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/trsm_scale_out_animation_view.dart';
+import '../view/trsm_scale_animation_view.dart';
 
-class TrsmScaleOutAnimationController extends State<TrsmScaleOutAnimationView> implements MvcController {
-  static late TrsmScaleOutAnimationController instance;
-  late TrsmScaleOutAnimationView view;
+class TrsmScaleAnimationController extends State<TrsmScaleAnimationView>
+    implements MvcController {
+  static late TrsmScaleAnimationController instance;
+  late TrsmScaleAnimationView view;
 
   @override
   void initState() {
@@ -17,4 +18,7 @@ class TrsmScaleOutAnimationController extends State<TrsmScaleOutAnimationView> i
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  bool scaleOut = false;
+  bool scaleIn = false;
 }

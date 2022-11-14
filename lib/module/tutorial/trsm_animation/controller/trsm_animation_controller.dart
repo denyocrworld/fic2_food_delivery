@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trsm_animation_view.dart';
 
-class TrsmAnimationController extends State<TrsmAnimationView> implements MvcController {
+class TrsmAnimationController extends State<TrsmAnimationView>
+    implements MvcController {
   static late TrsmAnimationController instance;
   late TrsmAnimationView view;
 
@@ -17,4 +18,6 @@ class TrsmAnimationController extends State<TrsmAnimationView> implements MvcCon
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  bool enabled = false;
 }

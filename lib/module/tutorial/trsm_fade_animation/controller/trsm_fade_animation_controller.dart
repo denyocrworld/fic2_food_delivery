@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/trsm_fade_out_animation_view.dart';
+import '../view/trsm_fade_animation_view.dart';
 
-class TrsmFadeOutAnimationController extends State<TrsmFadeOutAnimationView> implements MvcController {
-  static late TrsmFadeOutAnimationController instance;
-  late TrsmFadeOutAnimationView view;
+class TrsmFadeAnimationController extends State<TrsmFadeAnimationView>
+    implements MvcController {
+  static late TrsmFadeAnimationController instance;
+  late TrsmFadeAnimationView view;
 
   @override
   void initState() {
@@ -17,4 +18,6 @@ class TrsmFadeOutAnimationController extends State<TrsmFadeOutAnimationView> imp
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  bool visible = false;
 }

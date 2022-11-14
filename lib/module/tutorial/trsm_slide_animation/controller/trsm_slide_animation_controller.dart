@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trsm_slide_animation_view.dart';
 
-class TrsmSlideAnimationController extends State<TrsmSlideAnimationView> implements MvcController {
+class TrsmSlideAnimationController extends State<TrsmSlideAnimationView>
+    implements MvcController {
   static late TrsmSlideAnimationController instance;
   late TrsmSlideAnimationView view;
 
@@ -17,4 +18,6 @@ class TrsmSlideAnimationController extends State<TrsmSlideAnimationView> impleme
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  bool visible = false;
 }

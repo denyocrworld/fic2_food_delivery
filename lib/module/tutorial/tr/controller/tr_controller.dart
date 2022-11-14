@@ -31,10 +31,6 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmVisibilityView(),
     },
     {
-      "label": "Navigation",
-      "view": const TrsmNavigationView(),
-    },
-    {
       "label": "Enabled/Disabled",
       "view": const TrsmEnabledAndDisabledView(),
     },
@@ -55,25 +51,45 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmAnimationView(),
     },
     {
+      "label": "Animation by Mouse Event",
+      "view": const TrsmAnimationByMouseEventView(),
+    },
+    {
       "label": "Slide Animation",
       "view": const TrsmSlideAnimationView(),
     },
     {
-      "label": "Fade In Animation",
-      "view": const TrsmFadeInAnimationView(),
+      "label": "Fade Animation",
+      "view": const TrsmFadeAnimationView(),
     },
     {
-      "label": "Scale In Animation",
-      "view": const TrsmScaleInAnimationView(),
+      "label": "Scale Animation",
+      "view": const TrsmScaleAnimationView(),
     },
     {
-      "label": "Scale Out Animation",
-      "view": const TrsmScaleOutAnimationView(),
+      "label": "Scale Animation by Slide Value",
+      "view": const TrsmScaleAnimationBySlideValueView(),
     },
     {
-      "label": "Fade Out Animation",
-      "view": const TrsmFadeOutAnimationView(),
+      "label": "Rotate Animation",
+      "view": const TrsmRotateAnimationView(),
     },
+    // {
+    //   "label": "Fade In Animation",
+    //   "view": const TrsmFadeInAnimationView(),
+    // },
+    // {
+    //   "label": "Fade Out Animation",
+    //   "view": const TrsmFadeOutAnimationView(),
+    // },
+    // {
+    //   "label": "Scale In Animation",
+    //   "view": const TrsmScaleInAnimationView(),
+    // },
+    // {
+    //   "label": "Scale Out Animation",
+    //   "view": const TrsmScaleOutAnimationView(),
+    // },
     {
       "label": "Digital Clock",
       "view": const TrsmDigitalClockView(),
@@ -95,8 +111,12 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmFilterListView(),
     },
     {
-      "label": "Read Chat List",
-      "view": const TrsmFilterListView(),
+      "label": "Chat List",
+      "view": const TrsmChatListView(),
+    },
+    {
+      "label": "Navigation",
+      "view": const TrsmNavigationView(),
     },
     {
       "label": "CRUD",

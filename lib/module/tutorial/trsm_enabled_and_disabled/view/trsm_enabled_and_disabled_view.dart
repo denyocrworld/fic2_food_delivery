@@ -17,7 +17,65 @@ class TrsmEnabledAndDisabledView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              TextFormField(
+                initialValue: '',
+                maxLength: 20,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: "Your email",
+                ),
+                onChanged: (value) {
+                  controller.email = value;
+                  controller.setState(() {});
+                },
+              ),
+              TextFormField(
+                initialValue: '',
+                maxLength: 20,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.password,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your password',
+                ),
+                onChanged: (value) {
+                  controller.password = value;
+                  controller.setState(() {});
+                },
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: controller.loginButtonEnabled == false
+                      ? Colors.grey
+                      : Colors.blueGrey,
+                ),
+                onPressed: () {
+                  if (!controller.loginButtonEnabled) return;
+                  print("Hello world");
+                },
+              ),
+            ],
           ),
         ),
       ),
@@ -25,5 +83,6 @@ class TrsmEnabledAndDisabledView extends StatefulWidget {
   }
 
   @override
-  State<TrsmEnabledAndDisabledView> createState() => TrsmEnabledAndDisabledController();
+  State<TrsmEnabledAndDisabledView> createState() =>
+      TrsmEnabledAndDisabledController();
 }

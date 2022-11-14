@@ -13,13 +13,33 @@ class TrsmCategoryInWrapView extends StatefulWidget {
         title: const Text("TrsmCategoryInWrap"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
-        ),
+      body: Container(
+        padding: const EdgeInsets.all(10.0),
+        child: Wrap(
+            spacing: 10.0,
+            runSpacing: 10.0,
+            children: List.generate(
+              controller.categoryList.length,
+              (index) {
+                var item = controller.categoryList[index];
+                double size = (MediaQuery.of(context).size.width - 40) / 2;
+                bool selected = item == controller.selectedCategory;
+                return SizedBox(
+                  width: size,
+                  height: size,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: selected ? Colors.purple : Colors.grey,
+                    ),
+                    onPressed: () {
+                      controller.selectedCategory = item;
+                      controller.setState(() {});
+                    },
+                    child: Text("$item"),
+                  ),
+                );
+              },
+            )),
       ),
     );
   }

@@ -447,6 +447,42 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/trsm_scale_out_animation',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Animation By Mouse Event',
+      route: '/trsm_animation_by_mouse_event',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Fade Animation',
+      route: '/trsm_fade_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Scale Animation',
+      route: '/trsm_scale_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Rotate Animation',
+      route: '/trsm_rotate_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Scale Animation By Slide Value',
+      route: '/trsm_scale_animation_by_slide_value',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Chat List',
+      route: '/trsm_chat_list',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

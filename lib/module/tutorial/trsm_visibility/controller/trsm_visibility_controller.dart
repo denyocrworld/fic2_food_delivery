@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trsm_visibility_view.dart';
 
-class TrsmVisibilityController extends State<TrsmVisibilityView> implements MvcController {
+class TrsmVisibilityController extends State<TrsmVisibilityView>
+    implements MvcController {
   static late TrsmVisibilityController instance;
   late TrsmVisibilityView view;
+  bool visible = false;
 
   @override
   void initState() {

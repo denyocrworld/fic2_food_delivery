@@ -17,7 +17,39 @@ class TrsmHorizontalCategoryListView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              SizedBox(
+                height: 30.0,
+                child: ListView.builder(
+                  itemCount: controller.categoryList.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    var item = controller.categoryList[index];
+                    bool isSelected = item == controller.selectedCategory;
+
+                    return Container(
+                      margin: const EdgeInsets.only(
+                        right: 10.0,
+                      ),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: ContinuousRectangleBorder(
+                            borderRadius: BorderRadius.circular(64.0),
+                          ),
+                          backgroundColor:
+                              isSelected ? Colors.orange : Colors.grey,
+                        ),
+                        onPressed: () {
+                          controller.selectedCategory = item;
+                          controller.setState(() {});
+                        },
+                        child: Text("$item"),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -25,5 +57,6 @@ class TrsmHorizontalCategoryListView extends StatefulWidget {
   }
 
   @override
-  State<TrsmHorizontalCategoryListView> createState() => TrsmHorizontalCategoryListController();
+  State<TrsmHorizontalCategoryListView> createState() =>
+      TrsmHorizontalCategoryListController();
 }

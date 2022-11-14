@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 class TutorialNavigationItem extends StatelessWidget {
   final Map<String, dynamic> item;
   final double size;
+  final int index;
   const TutorialNavigationItem({
     Key? key,
     required this.item,
     required this.size,
+    required this.index,
   }) : super(key: key);
 
   @override
@@ -22,12 +24,24 @@ class TutorialNavigationItem extends StatelessWidget {
         onPressed: () {
           Get.to(item["view"]);
         },
-        child: Text(
-          "${item["label"]}",
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 9.0,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "${item["label"]}",
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 10.0,
+              ),
+            ),
+            Text(
+              "#${index + 1}",
+              style: const TextStyle(
+                fontSize: 10.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
       ),
     );

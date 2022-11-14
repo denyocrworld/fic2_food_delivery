@@ -13,17 +13,46 @@ class TrsmVerticalCategoryListView extends StatefulWidget {
         title: const Text("TrsmVerticalCategoryList"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
+      body: Container(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: controller.categoryList.length,
+                itemBuilder: (context, index) {
+                  var item = controller.categoryList[index];
+                  bool selected = controller.selectedCategory == item;
+                  return Container(
+                    height: 60.0,
+                    margin: const EdgeInsets.only(
+                      bottom: 10.0,
+                    ),
+                    child: ElevatedButton.icon(
+                      icon: Icon(
+                        Icons.check,
+                        size: selected ? 20 : 0,
+                      ),
+                      label: Text("$item"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: selected ? Colors.green : Colors.grey,
+                      ),
+                      onPressed: () {
+                        controller.selectedCategory = item;
+                        controller.setState(() {});
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 
   @override
-  State<TrsmVerticalCategoryListView> createState() => TrsmVerticalCategoryListController();
+  State<TrsmVerticalCategoryListView> createState() =>
+      TrsmVerticalCategoryListController();
 }
