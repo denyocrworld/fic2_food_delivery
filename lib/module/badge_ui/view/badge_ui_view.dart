@@ -165,7 +165,7 @@ class BadgeUiView extends StatefulWidget {
                               child: Align(
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "Info Link",
+                                  "Info Linkn",
                                   style: TextStyle(
                                     fontSize: fs5,
                                     color: infoColor,

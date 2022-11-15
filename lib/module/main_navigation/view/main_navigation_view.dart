@@ -202,6 +202,10 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_another_example',
       items: [],
     ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 63c7bc2f66b6b43dcf52ce1c9c505c6aef1811ac
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Profile Ui Example',
