@@ -170,4 +170,86 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrfmFilterCategoryAndDateBottomsheetFormView(),
     },
   ];
+
+  List stateManagementExerciseList = [
+    {
+      "label": "Counter",
+      "view": const LtsmCounterView(),
+    },
+    {
+      "label": "Loading",
+      "view": const LtsmLoadingView(),
+    },
+    {
+      "label": "Visibility",
+      "view": const LtsmVisibilityView(),
+    },
+    {
+      "label": "Enabled or Disabled",
+      "view": const LtsmEnabledOrDisabledView(),
+    },
+    {
+      "label": "Slide Animation",
+      "view": const LtsmSlideAnimationView(),
+    },
+    {
+      "label": "Fade Animation",
+      "view": const LtsmFadeAnimationView(),
+    },
+    {
+      "label": "Rotate Animation",
+      "view": const LtsmRotateAnimationView(),
+    },
+    {
+      "label": "Horizontal Category List",
+      "view": const LtsmHorizontalCategoryListView(),
+    },
+    {
+      "label": "Vertical Category List",
+      "view": const LtsmVerticalCategoryListView(),
+    },
+    {
+      "label": "CRUD",
+      "view": const LtsmCrudView(),
+    },
+  ];
+
+  List formExerciseList = [
+    {
+      "label": "Login",
+      "view": const LtfmLoginView(),
+    },
+    {
+      "label": "Sign Up",
+      "view": const LtfmSignUpView(),
+    },
+    {
+      "label": "Edit Profile",
+      "view": const LtfmEditProfileView(),
+    },
+    {
+      "label": "Product Form",
+      "view": const LtfmProductFormView(),
+    },
+    {
+      "label": "Review Form",
+      "view": const LtfmReviewFormView(),
+    },
+    {
+      "label": "Checkout Form",
+      "view": const LtfmCheckoutFormView(),
+    },
+    {
+      "label": "Filter Dialog Form",
+      "view": const LtfmFilterDialogView(),
+    },
+    {
+      "label": "Filter Bottom Sheet",
+      "view": const LtfmFilterBottomSheetView(),
+    },
+    {
+      "label": "Sliding Form",
+      "view": const LtfmSlidingFormView(),
+    },
+  ];
 }

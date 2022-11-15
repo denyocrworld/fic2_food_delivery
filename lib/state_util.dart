@@ -20,7 +20,8 @@ class Get {
   }
 
   static back() {
-    navigatorKey.currentState!.pop(currentContext);
+    // navigatorKey.currentState!.pop(currentContext);
+    Navigator.pop(globalContext);
   }
 
   static offAll(page) {
