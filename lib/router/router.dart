@@ -97,38 +97,7 @@ getRouters({
               child: const ThemeView(),
             ),
           ),
-          GoRoute(
-            path: '/dashboard_todo_list',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const DashboardTodoListView(),
-            ),
-          ),
-          GoRoute(
-            path: '/dashboard_food_delivery',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const DashboardFoodDeliveryView(),
-            ),
-          ),
-          GoRoute(
-            path: '/pos_example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const PosExampleView(),
-            ),
-          ),
-          GoRoute(
-            path: '/debug',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const DebugView(),
-            ),
-          ),
+
           GoRoute(
             path: '/style_guide',
             pageBuilder: (context, state) => noTransition(
@@ -255,14 +224,6 @@ getRouters({
               context: context,
               state: state,
               child: const AvatarUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/pos_another_example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const PosAnotherExampleView(),
             ),
           ),
           GoRoute(
@@ -580,13 +541,13 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/heading_ui',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HeadingUiView(),
-      ),
-    ),
+            path: '/heading_ui',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HeadingUiView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

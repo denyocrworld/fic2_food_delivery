@@ -53,11 +53,15 @@ class DashboardView extends StatefulWidget {
                             Radius.circular(20.0),
                           ),
                         ),
-                        child: const ClipRRect(
-                          borderRadius: BorderRadius.all(
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(20.0),
                           ),
-                          child: DashboardTodoListView(),
+                          child: Scaffold(
+                            appBar: AppBar(
+                              title: const Text("Example"),
+                            ),
+                          ),
                         ),
                       ),
                       const Align(

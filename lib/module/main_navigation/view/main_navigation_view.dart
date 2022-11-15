@@ -58,30 +58,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
     ),
     NavigationItem(
       icon: const Icon(MdiIcons.web),
-      label: 'Dashboard Todo List',
-      route: '/dashboard_todo_list',
-      items: [],
-    ),
-    NavigationItem(
-      icon: const Icon(MdiIcons.web),
-      label: 'Dashboard Food Delivery',
-      route: '/dashboard_food_delivery',
-      items: [],
-    ),
-    NavigationItem(
-      icon: const Icon(MdiIcons.web),
-      label: 'Pos Example',
-      route: '/pos_example',
-      items: [],
-    ),
-    NavigationItem(
-      icon: const Icon(MdiIcons.web),
-      label: 'Debug',
-      route: '/debug',
-      items: [],
-    ),
-    NavigationItem(
-      icon: const Icon(MdiIcons.web),
       label: 'Widgets',
       route: '/widgets',
       items: [
