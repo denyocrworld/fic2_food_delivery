@@ -1,6 +1,5 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/debug_view.dart';
 
 class DebugController extends State<DebugView> implements MvcController {
   static late DebugController instance;

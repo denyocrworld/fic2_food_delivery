@@ -1,6 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/module/main_navigation/model/navigation_item.dart';
-import 'package:example/module/main_navigation/view/main_navigation_view.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuItem extends StatefulWidget {

@@ -11,15 +11,15 @@ get mqs {
 }
 
 //OLD VERSION
-var primaryColor = const Color(0xff727CF5);
-var secondaryColor = const Color(0xff6C757D);
+var primaryColor = Colors.blueGrey[800]!;
+var secondaryColor = const Color(0xFF2A2D3E);
 var bgColor = const Color(0xFF212332);
 var defaultPadding = 16.0;
 
-var dangerColor = const Color(0xffFA5C7C);
-var successColor = const Color(0xff0ACF97);
-var infoColor = const Color(0xff39AFD1);
-var warningColor = const Color(0xffFFC35A);
+var dangerColor = Colors.red[300]!;
+var successColor = Colors.green[300]!;
+var infoColor = Colors.blue[300]!;
+var warningColor = Colors.orange[300]!;
 var disabledColor = Colors.grey[300]!;
 
 var disabledTextColor = Colors.grey[800];

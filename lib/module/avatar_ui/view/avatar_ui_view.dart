@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:example/state_util.dart';
 import '../controller/avatar_ui_controller.dart';
 
 class AvatarUiView extends StatefulWidget {
@@ -13,10 +13,15 @@ class AvatarUiView extends StatefulWidget {
         title: const Text("AvatarUi"),
         actions: const [],
       ),
-      body: ListView(
-        children: const [
-          //body
-        ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: const [
+              //body
+            ],
+          ),
+        ),
       ),
     );
   }

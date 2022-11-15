@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/testxxx_view.dart';
+import '../view/tab_list_view.dart';
 
-class TestxxxController extends State<TestxxxView> implements MvcController {
-  static late TestxxxController instance;
-  late TestxxxView view;
+class TabListController extends State<TabListView> implements MvcController {
+  static late TabListController instance;
+  late TabListView view;
 
   @override
   void initState() {

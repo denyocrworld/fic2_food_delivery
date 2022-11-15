@@ -130,189 +130,165 @@ getRouters({
             ),
           ),
           GoRoute(
-            path: '/style_guide',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const StyleGuideView(),
-            ),
-          ),
+      path: '/style_guide',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const StyleGuideView(),
+      ),
+    ),
           GoRoute(
-            path: '/scaffold_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ScaffoldUiView(),
-            ),
-          ),
+      path: '/scaffold_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ScaffoldUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/navigation_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const NavigationUiView(),
-            ),
-          ),
+      path: '/navigation_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const NavigationUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/appbar_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AppbarUiView(),
-            ),
-          ),
+      path: '/appbar_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AppbarUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/list_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ListUiView(),
-            ),
-          ),
+      path: '/list_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ListUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/detail_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const DetailUiView(),
-            ),
-          ),
+      path: '/detail_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DetailUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/tab_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const TabUiView(),
-            ),
-          ),
+      path: '/tab_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TabUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/dialog_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const DialogUiView(),
-            ),
-          ),
+      path: '/dialog_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const DialogUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/widget_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const WidgetUiView(),
-            ),
-          ),
+      path: '/widget_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const WidgetUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/searchfield_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const SearchfieldUiView(),
-            ),
-          ),
+      path: '/searchfield_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const SearchfieldUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ExampleView(),
-            ),
-          ),
+      path: '/http_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpExampleView(),
+      ),
+    ),
           GoRoute(
-            path: '/badge_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const BadgeUiView(),
-            ),
-          ),
+      path: '/http_form_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpFormExampleView(),
+      ),
+    ),
           GoRoute(
-            path: '/button_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ButtonUiView(),
-            ),
-          ),
+      path: '/example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ExampleView(),
+      ),
+    ),
           GoRoute(
-            path: '/avatar_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AvatarUiView(),
-            ),
-          ),
+      path: '/badge_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const BadgeUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/pos_another_example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const PosAnotherExampleView(),
-            ),
-          ),
+      path: '/button_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ButtonUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/list_item_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ListItemUiView(),
-            ),
-          ),
+      path: '/avatar_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AvatarUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/statistic_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const StatisticUiView(),
-            ),
-          ),
+      path: '/pos_another_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosAnotherExampleView(),
+      ),
+    ),
           GoRoute(
-            path: '/chip_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ChipUiView(),
-            ),
-          ),
+      path: '/list_item_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ListItemUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/accordions_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AccordionsUiView(),
-            ),
-          ),
+      path: '/statistic_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const StatisticUiView(),
+      ),
+    ),
           GoRoute(
-            path: '/bottom_navigation_bar_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const BottomNavigationBarUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/accordions_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AccordionsUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/profile_ui_example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ProfileUiExampleView(),
-            ),
-          ),
-          GoRoute(
-            path: '/testxxx',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const TestxxxView(),
-            ),
-          ),
+      path: '/chip_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const ChipUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
