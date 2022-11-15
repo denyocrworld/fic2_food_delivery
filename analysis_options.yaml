@@ -10,3 +10,6 @@ linter:
 analyzer:
   errors:
     invalid_annotation_target: ignore
+    invalid_use_of_protected_member: ignore
+    unused_local_variable: ignore
+    avoid_print: ignore
