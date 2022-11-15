@@ -330,11 +330,6 @@ class BadgeUiView extends StatefulWidget {
                               width: 10.0,
                               height: 10,
                               alignment: Alignment.center,
-                              child: const Text(
-                                "",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10.0),
-                              ),
                             ),
                             text: "New",
                             backgroundColor: warningColor,
@@ -347,11 +342,6 @@ class BadgeUiView extends StatefulWidget {
                               width: 10.0,
                               height: 10,
                               alignment: Alignment.center,
-                              child: const Text(
-                                "",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 10.0),
-                              ),
                             ),
                             showBadge: true,
                             isButton: false,
