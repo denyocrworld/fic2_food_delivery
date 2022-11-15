@@ -43,7 +43,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
       label: 'Form UI',
       route: '/form_ui',
     ),
-
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Hyper Ui',
@@ -159,7 +158,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
         ),
       ],
     ),
+  ];
 
+  List unusedNavigations = [
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Http Example',
