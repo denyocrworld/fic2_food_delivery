@@ -579,6 +579,14 @@ getRouters({
               child: const TrsmChatListView(),
             ),
           ),
+          GoRoute(
+      path: '/heading_ui',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HeadingUiView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

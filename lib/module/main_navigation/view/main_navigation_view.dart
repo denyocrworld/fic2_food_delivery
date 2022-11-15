@@ -87,6 +87,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.web),
+          label: 'Heading UI',
+          route: '/heading_ui',
+          items: [],
+        ),
+        NavigationItem(
+          icon: const Icon(MdiIcons.web),
           label: 'Statistic Ui',
           route: '/statistic_ui',
           items: [],
@@ -202,10 +208,6 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_another_example',
       items: [],
     ),
-<<<<<<< HEAD
-=======
-
->>>>>>> 63c7bc2f66b6b43dcf52ce1c9c505c6aef1811ac
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Profile Ui Example',
@@ -468,6 +470,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       icon: const Icon(MdiIcons.web),
       label: 'Trsm Chat List',
       route: '/trsm_chat_list',
+      items: [],
+    ),
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Heading Ui',
+      route: '/heading_ui',
       items: [],
     ),
     //@NAVIGATION_GENERATOR
