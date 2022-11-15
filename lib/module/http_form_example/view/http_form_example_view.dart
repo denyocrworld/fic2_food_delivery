@@ -1,8 +1,5 @@
 import 'package:example/core.dart';
-import 'package:example/module/http_form_example/widget/category_picker.dart';
 import 'package:flutter/material.dart';
-
-import '../widget/textfield.dart';
 
 class HttpFormExampleView extends StatefulWidget {
   final Map? item;
@@ -75,19 +72,19 @@ class HttpFormExampleView extends StatefulWidget {
                     }
                     return null;
                   },
-                  helperText: "Enter your email",
+                  hint: "Enter your email",
                   onChanged: (value) {},
                 ),
                 QTextField(
                   label: "First Name",
                   value: "Deny",
-                  helperText: "Enter your first name",
+                  hint: "Enter your first name",
                   onChanged: (value) {},
                 ),
                 QTextField(
                   label: "Last Name",
                   value: "OCr",
-                  helperText: "Enter your last name",
+                  hint: "Enter your last name",
                   onChanged: (value) {},
                 ),
                 ExTextField(

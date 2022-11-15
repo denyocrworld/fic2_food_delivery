@@ -20,7 +20,9 @@ class TrView extends StatefulWidget {
 
   header(String title) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.symmetric(
+        vertical: 16.0,
+      ),
       width: MediaQuery.of(Get.currentContext).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,46 +54,6 @@ class TrView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              ElevatedButton.icon(
-                icon: const Icon(Icons.add),
-                label: const Text("Dialog"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () async {
-                  await showDialog<void>(
-                    context: context,
-                    barrierDismissible: true,
-                    builder: (BuildContext context) {
-                      return Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: Container(
-                            width: MediaQuery.of(context).size.width,
-                            height: MediaQuery.of(context).size.height,
-                            color: Colors.black12,
-                            padding: const EdgeInsets.all(20.0),
-                            child: Container(
-                              color: Colors.green,
-                            ),
-                          ),
-                        ),
-                      );
-                      return const AlertDialog(
-                        title: Text('Info'),
-                        insetPadding: EdgeInsets.zero,
-                        contentPadding: EdgeInsets.all(0.0),
-                      );
-                    },
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
               header("State Management"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
@@ -111,9 +73,6 @@ class TrView extends StatefulWidget {
                   ),
                 );
               }),
-              const SizedBox(
-                height: 20.0,
-              ),
               header("Form"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
@@ -128,6 +87,46 @@ class TrView extends StatefulWidget {
                         item: item,
                         size: size,
                         index: index,
+                      );
+                    },
+                  ),
+                );
+              }),
+              header("State Management Exercise"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.stateManagementExerciseList.length,
+                    (index) {
+                      var item = controller.stateManagementExerciseList[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                        index: index,
+                        color: Colors.green,
+                      );
+                    },
+                  ),
+                );
+              }),
+              header("Form Exercise"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.formExerciseList.length,
+                    (index) {
+                      var item = controller.formExerciseList[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                        index: index,
+                        color: Colors.green,
                       );
                     },
                   ),

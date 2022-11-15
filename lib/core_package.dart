@@ -1,9 +1,6 @@
 export 'package:cupertino_icons/cupertino_icons.dart';
 export 'package:freezed_annotation/freezed_annotation.dart';
 export 'package:json_annotation/json_annotation.dart';
-export 'package:firebase_core/firebase_core.dart';
-export 'package:firebase_auth/firebase_auth.dart';
-export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:intl/intl.dart';
 export 'package:go_router/go_router.dart';
 export 'package:google_fonts/google_fonts.dart';

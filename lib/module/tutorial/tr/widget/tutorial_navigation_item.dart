@@ -5,11 +5,14 @@ class TutorialNavigationItem extends StatelessWidget {
   final Map<String, dynamic> item;
   final double size;
   final int index;
+  final Color? color;
+
   const TutorialNavigationItem({
     Key? key,
     required this.item,
     required this.size,
     required this.index,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -19,7 +22,7 @@ class TutorialNavigationItem extends StatelessWidget {
       height: size,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.orange[900],
+          backgroundColor: color ?? Colors.orange[900],
         ),
         onPressed: () {
           Get.to(item["view"]);
