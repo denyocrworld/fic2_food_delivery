@@ -575,6 +575,30 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltfm_reset_password',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Trsm Scroll',
+      route: '/trsm_scroll',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ltsm Scroll',
+      route: '/ltsm_scroll',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ltsm Repeat Animation',
+      route: '/ltsm_repeat_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ltsm Navigation With Slide Animation',
+      route: '/ltsm_navigation_with_slide_animation',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

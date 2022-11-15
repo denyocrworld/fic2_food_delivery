@@ -1,24 +1,7 @@
 {
     "modules": [
-        "tutorial/latihan/ltsm_counter",
-        "tutorial/latihan/ltsm_loading",
-        "tutorial/latihan/ltsm_visibility",
-        "tutorial/latihan/ltsm_enabled_or_disabled",
-        "tutorial/latihan/ltsm_slide_animation",
-        "tutorial/latihan/ltsm_fade_animation",
-        "tutorial/latihan/ltsm_rotate_animation",
-        "tutorial/latihan/ltsm_horizontal_category_list",
-        "tutorial/latihan/ltsm_vertical_category_list",
-        "tutorial/latihan/ltsm_crud",
-        "tutorial/latihan/ltfm_login",
-        "tutorial/latihan/ltfm_sign_up",
-        "tutorial/latihan/ltfm_reset_password",
-        "tutorial/latihan/ltfm_edit_profile",
-        "tutorial/latihan/ltfm_product_form",
-        "tutorial/latihan/ltfm_review_form",
-        "tutorial/latihan/ltfm_checkout_form",
-        "tutorial/latihan/ltfm_filter_dialog",
-        "tutorial/latihan/ltfm_filter_bottom_sheet",
-        "tutorial/latihan/ltfm_sliding_form"
+        "tutorial/ltsm_scroll",
+        "tutorial/ltsm_repeat_animation",
+        "tutorial/ltsm_navigation_with_slide_animation"
     ]
 }

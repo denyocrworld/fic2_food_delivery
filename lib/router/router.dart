@@ -549,163 +549,187 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/ltsm_counter',
+            path: '/ltsm_counter',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmCounterView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_loading',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmLoadingView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_visibility',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmVisibilityView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_enabled_or_disabled',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmEnabledOrDisabledView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_slide_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmSlideAnimationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_fade_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmFadeAnimationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_rotate_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmRotateAnimationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_horizontal_category_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmHorizontalCategoryListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_vertical_category_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmVerticalCategoryListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_crud',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmCrudView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmLoginView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_sign_up',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmSignUpView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_edit_profile',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmEditProfileView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmProductFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_review_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmReviewFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_checkout_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmCheckoutFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_filter_dialog',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmFilterDialogView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_filter_bottom_sheet',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmFilterBottomSheetView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_sliding_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmSlidingFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltfm_reset_password',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtfmResetPasswordView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ltsm_scroll',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmScrollView(),
+            ),
+          ),
+          GoRoute(
+      path: '/ltsm_repeat_animation',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const LtsmCounterView(),
+        child: const LtsmRepeatAnimationView(),
       ),
     ),
           GoRoute(
-      path: '/ltsm_loading',
+      path: '/ltsm_navigation_with_slide_animation',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const LtsmLoadingView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_visibility',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmVisibilityView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_enabled_or_disabled',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmEnabledOrDisabledView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_slide_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmSlideAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_fade_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmFadeAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_rotate_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmRotateAnimationView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_horizontal_category_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmHorizontalCategoryListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_vertical_category_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmVerticalCategoryListView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltsm_crud',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmCrudView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmLoginView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_sign_up',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmSignUpView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_edit_profile',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmEditProfileView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmProductFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_review_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmReviewFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_checkout_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmCheckoutFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_filter_dialog',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmFilterDialogView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_filter_bottom_sheet',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmFilterBottomSheetView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_sliding_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmSlidingFormView(),
-      ),
-    ),
-          GoRoute(
-      path: '/ltfm_reset_password',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtfmResetPasswordView(),
+        child: const LtsmNavigationWithSlideAnimationView(),
       ),
     ),
           //@ROUTER_GENERATOR
