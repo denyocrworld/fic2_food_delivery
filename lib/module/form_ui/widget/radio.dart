@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 
 class QRadioField extends StatefulWidget {
   final String id;
-  final String label;
   final List<Map<String, dynamic>> items;
-  final String? Function(List<Map<String, dynamic>> item)? validator;
+  final String? Function(bool?)? validator;
 
   const QRadioField({
     Key? key,
     required this.id,
-    required this.label,
     required this.items,
     this.validator,
   }) : super(key: key);
@@ -19,32 +17,29 @@ class QRadioField extends StatefulWidget {
 }
 
 class _QRadioFieldState extends State<QRadioField> {
-  List<Map<String, dynamic>> items = [];
+  late List<Map<String, dynamic>> items;
 
   @override
   void initState() {
     super.initState();
-    for (var item in widget.items) {
-      items.add(Map.from(item));
-    }
-  }
-
-  setAllItemsToFalse() {
-    for (var item in items) {
-      item["checked"] = false;
-    }
+    items = widget.items;
   }
 
   @override
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      validator: (value) => widget.validator!(items),
+      validator: (value) {
+        if (value == null || value == false) {
+          return 'Please enter some text';
+        }
+        return null;
+      },
       enabled: true,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(
           decoration: InputDecoration(
-            labelText: widget.label,
+            labelText: 'Subscribe to mailing list.',
             errorText: field.errorText,
             border: InputBorder.none,
           ),
@@ -55,15 +50,10 @@ class _QRadioFieldState extends State<QRadioField> {
               var item = items[index];
               return RadioListTile(
                 title: Text("${item["label"]}"),
-                groupValue: true,
-                value: item["checked"] ?? false,
+                groupValue: widget.id,
+                value: false,
                 onChanged: (val) {
-                  setAllItemsToFalse();
-
-                  bool newValue = val ? false : true;
-                  items[index]["checked"] = newValue;
                   field.didChange(true);
-                  setState(() {});
                 },
               );
             },

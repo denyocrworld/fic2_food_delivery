@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
         "modules": [
                 "tutorial/tr",
                 "tutorial/trsm_counter",
@@ -36,4 +37,37 @@
                 "tutorial/trfm_filter_date_dialog_form",
                 "tutorial/trfm_filter_category_and_date_bottomsheet_form"
         ]
+=======
+    "modules": [
+        "dashboard",
+        "card",
+        "form_ui",
+        "hyper_ui",
+        "theme",
+        "dashboard_todo_list",
+        "dashboard_food_delivery",
+        "pos_example",
+        "debug",
+        "style_guide",
+        "scaffold_ui",
+        "appbar_ui",
+        "navigation_ui",
+        "list_ui",
+        "detail_ui",
+        "tab_ui",
+        "avatar_ui",
+        "badge_ui",
+        "button_ui",
+        "dialog_ui",
+        "widget_ui",
+        "statistic_ui",
+        "chip_ui",
+        "searchfield_ui",
+        "list_item_ui",
+        "http_example",
+        "http_form_example",
+        "example",
+        "pos_another_example"
+    ]
+>>>>>>> f5235c110c217889bac21d567a19f51d9c5b1b25
 }

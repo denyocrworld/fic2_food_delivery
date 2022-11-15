@@ -1,11 +1,6 @@
 import 'package:example/core.dart';
-import 'package:example/module/main_navigation/model/navigation_item.dart';
 
 import 'package:flutter/material.dart';
-
-import '../widget/side_group_title.dart';
-import '../widget/side_menu_item.dart';
-import '../widget/top_bar.dart';
 
 class MainNavigationView extends StatefulWidget {
   final Widget child;
@@ -92,20 +87,8 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [
         NavigationItem(
           icon: const Icon(MdiIcons.web),
-          label: 'Bottom Navigation Bar Ui',
-          route: '/bottom_navigation_bar_ui',
-          items: [],
-        ),
-        NavigationItem(
-          icon: const Icon(MdiIcons.web),
           label: 'Statistic Ui',
           route: '/statistic_ui',
-          items: [],
-        ),
-        NavigationItem(
-          icon: const Icon(MdiIcons.web),
-          label: 'Accordions Ui',
-          route: '/accordions_ui',
           items: [],
         ),
         NavigationItem(
@@ -219,6 +202,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/pos_another_example',
       items: [],
     ),
+<<<<<<< HEAD
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Profile Ui Example',
@@ -484,6 +468,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [],
     ),
           //@NAVIGATION_GENERATOR
+=======
+    //@NAVIGATION_GENERATOR
+>>>>>>> f5235c110c217889bac21d567a19f51d9c5b1b25
   ];
 
   @override

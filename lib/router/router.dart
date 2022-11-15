@@ -210,6 +210,22 @@ getRouters({
             ),
           ),
           GoRoute(
+            path: '/http_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpExampleView(),
+            ),
+          ),
+          GoRoute(
+            path: '/http_form_example',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpFormExampleView(),
+            ),
+          ),
+          GoRoute(
             path: '/example',
             pageBuilder: (context, state) => noTransition(
               context: context,
@@ -265,54 +281,7 @@ getRouters({
               child: const StatisticUiView(),
             ),
           ),
-          GoRoute(
-            path: '/chip_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ChipUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/accordions_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AccordionsUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/bottom_navigation_bar_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const BottomNavigationBarUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/accordions_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const AccordionsUiView(),
-            ),
-          ),
-          GoRoute(
-            path: '/profile_ui_example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ProfileUiExampleView(),
-            ),
-          ),
-          GoRoute(
-            path: '/testxxx',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const TestxxxView(),
-            ),
-          ),
+
           GoRoute(
             path: '/http_example',
             pageBuilder: (context, state) => noTransition(
@@ -329,15 +298,6 @@ getRouters({
               child: const HttpFormExampleView(),
             ),
           ),
-          GoRoute(
-            path: '/profile_ui',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ProfileUiView(),
-            ),
-          ),
-
           GoRoute(
             path: '/trsm_counter',
             pageBuilder: (context, state) => noTransition(
@@ -596,29 +556,29 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/trsm_rotate_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmRotateAnimationView(),
-      ),
-    ),
+            path: '/trsm_rotate_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmRotateAnimationView(),
+            ),
+          ),
           GoRoute(
-      path: '/trsm_scale_animation_by_slide_value',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmScaleAnimationBySlideValueView(),
-      ),
-    ),
+            path: '/trsm_scale_animation_by_slide_value',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmScaleAnimationBySlideValueView(),
+            ),
+          ),
           GoRoute(
-      path: '/trsm_chat_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrsmChatListView(),
-      ),
-    ),
+            path: '/trsm_chat_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrsmChatListView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

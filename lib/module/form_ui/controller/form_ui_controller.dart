@@ -5,7 +5,6 @@ import '../view/form_ui_view.dart';
 class FormUiController extends State<FormUiView> implements MvcController {
   static late FormUiController instance;
   late FormUiView view;
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
