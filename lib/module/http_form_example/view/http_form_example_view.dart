@@ -64,7 +64,6 @@ class HttpFormExampleView extends StatefulWidget {
                   },
                 ),
                 QTextField(
-                  id: "email",
                   label: "Email",
                   value: "demo@gmail.com",
                   validator: (value) {
@@ -77,14 +76,12 @@ class HttpFormExampleView extends StatefulWidget {
                   onChanged: (value) {},
                 ),
                 QTextField(
-                  id: "first_name",
                   label: "First Name",
                   value: "Deny",
                   hint: "Enter your first name",
                   onChanged: (value) {},
                 ),
                 QTextField(
-                  id: "last_name",
                   label: "Last Name",
                   value: "OCr",
                   hint: "Enter your last name",

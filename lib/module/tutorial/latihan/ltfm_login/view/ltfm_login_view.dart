@@ -18,14 +18,12 @@ class LtfmLoginView extends StatefulWidget {
           child: Column(
             children: [
               QTextField(
-                id: "email",
                 value: "demo@gmail.com",
                 label: "Email",
                 hint: "Your email",
                 onChanged: (value) {},
               ),
               QTextField(
-                id: "password",
                 value: "123456",
                 label: "Password",
                 hint: "Your password",
