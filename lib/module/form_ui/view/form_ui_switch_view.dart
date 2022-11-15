@@ -156,6 +156,8 @@ class FormUISwitchView extends StatelessWidget {
                   }
                 ],
               ),
+              const Divider(),
+              const Divider(),
               //------------------
               //------------------
 
