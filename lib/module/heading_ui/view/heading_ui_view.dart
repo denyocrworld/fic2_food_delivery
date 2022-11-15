@@ -1,7 +1,6 @@
 import 'package:example/shared/widget/heading/heading.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/heading_ui_controller.dart';
 
 class HeadingUiView extends StatefulWidget {
   const HeadingUiView({Key? key}) : super(key: key);
