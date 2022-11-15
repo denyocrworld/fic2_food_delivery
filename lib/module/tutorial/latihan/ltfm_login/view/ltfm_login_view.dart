@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ltfm_login_controller.dart';
 
 class LtfmLoginView extends StatefulWidget {
   const LtfmLoginView({Key? key}) : super(key: key);
@@ -17,7 +16,28 @@ class LtfmLoginView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              QTextField(
+                value: "demo@gmail.com",
+                label: "Email",
+                helperText: "Your email",
+                onChanged: (value) {},
+              ),
+              QTextField(
+                value: "123456",
+                label: "Password",
+                helperText: "Your password",
+                onChanged: (value) {},
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+            ],
           ),
         ),
       ),
