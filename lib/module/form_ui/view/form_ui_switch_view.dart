@@ -1,5 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
+import 'package:example/shared/widget/form/textarea.dart';
 import 'package:flutter/material.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -102,6 +103,11 @@ class FormUISwitchView extends StatelessWidget {
                 label: "Age",
                 validator: Validator.number,
                 hint: "Your name",
+              ),
+              const QMemoField(
+                label: "address",
+                validator: Validator.required,
+                hint: "Your address",
               ),
               const QSwitch(
                 id: "member",
