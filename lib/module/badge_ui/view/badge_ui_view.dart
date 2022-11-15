@@ -1,6 +1,5 @@
 import 'package:badges/badges.dart';
 import 'package:example/core.dart';
-import 'package:example/shared/widget/badge_text/badge_text.dart';
 import 'package:flutter/material.dart';
 
 class BadgeUiView extends StatefulWidget {
@@ -18,168 +17,573 @@ class BadgeUiView extends StatefulWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ExCard(
-                color: Colors.white,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
+                  ExCard(
+                    color: Colors.white,
+                    width: MediaQuery.of(context).size.width * 0.32,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      Column(
                         children: [
-                          Text(
-                            "h1.Example heading",
-                            style: TextStyle(
-                              color: textColor1,
-                              fontSize: fs1,
-                            ),
-                          ),
-                          BadgeText(backgroundColor: textColor1)
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "h2.Example heading",
-                            style: TextStyle(
-                              color: textColor1,
-                              fontSize: fs2,
-                            ),
-                          ),
-                          Badge(
-                            child: SizedBox(
-                              height: hmd,
-                              width: 100.0,
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      successColor.withOpacity(0.3),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  "New",
-                                  style: TextStyle(
-                                    fontSize: fs2,
-                                    color: successColor,
-                                  ),
-                                ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            width: MediaQuery.of(context).size.width,
+                            child: const Text(
+                              "Basic",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "h3.Example heading",
-                            style: TextStyle(
-                              color: textColor1,
-                              fontSize: fs3,
-                            ),
-                          ),
-                          Badge(
-                            child: SizedBox(
-                              height: hsm,
-                              width: 80.0,
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: infoColor,
-                                ),
-                                onPressed: () {},
-                                child: const Text(
-                                  "New",
-                                  style: TextStyle(
-                                    fontSize: fs3,
-                                  ),
-                                ),
+                          Row(
+                            children: [
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: primaryColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
                               ),
-                            ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: disabledColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: successColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: dangerColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: warningColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                isButton: false,
+                                text: "New",
+                                backgroundColor: infoColor,
+                              ).md(),
+                            ],
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    ],
+                  ),
+                  ExCard(
+                    color: Colors.white,
+                    width: MediaQuery.of(context).size.width * 0.32,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            "h4.Example heading",
-                            style: TextStyle(
-                              color: textColor1,
-                              fontSize: fs4,
-                            ),
-                          ),
-                          Badge(
-                            child: SizedBox(
-                              height: hsm,
-                              width: 120.0,
-                              child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: infoColor.withOpacity(0.3),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  "Info Link",
-                                  style: TextStyle(
-                                    fontSize: fs4,
-                                    color: infoColor,
-                                  ),
-                                ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            width: MediaQuery.of(context).size.width,
+                            child: const Text(
+                              "Badge Sizing",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
                               ),
                             ),
                           ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text(
-                            "h5.Example heading",
-                            style: TextStyle(
-                              color: textColor1,
-                              fontSize: fs5,
-                            ),
-                          ),
-                          Badge(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 1.0,
-                                  color: warningColor,
-                                ),
+                          Row(
+                            children: [
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: primaryColor,
+                              ).xl(),
+                              const SizedBox(
+                                width: 10.0,
                               ),
-                              height: hsm,
-                              width: 120.0,
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Text(
-                                  "Info Linkn",
-                                  style: TextStyle(
-                                    fontSize: fs5,
-                                    color: infoColor,
-                                  ),
-                                ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: disabledColor,
+                              ).lg(),
+                              const SizedBox(
+                                width: 10.0,
                               ),
-                            ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: successColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: dangerColor,
+                              ).sm(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: warningColor,
+                              ).xs(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     ],
                   ),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ExCard(
+                    width: MediaQuery.of(context).size.width * 0.32,
+                    color: Colors.white,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            width: MediaQuery.of(context).size.width,
+                            child: const Text(
+                              "Lighten",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: primaryColor.withOpacity(0.3),
+                                textColor: primaryColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: disabledColor.withOpacity(0.3),
+                                textColor: disabledColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: successColor.withOpacity(0.3),
+                                textColor: successColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: dangerColor.withOpacity(0.3),
+                                textColor: dangerColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: warningColor.withOpacity(0.3),
+                                textColor: warningColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                isButton: false,
+                                text: "New",
+                                backgroundColor: infoColor.withOpacity(0.3),
+                                textColor: infoColor,
+                              ).md(),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  ExCard(
+                    width: MediaQuery.of(context).size.width * 0.32,
+                    color: Colors.white,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(vertical: 4.0),
+                        width: MediaQuery.of(context).size.width,
+                        child: const Text(
+                          "Notification Badge - Varian 1 ",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "1",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: primaryColor,
+                          ).md(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "2",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: disabledColor,
+                          ).md(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "3",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: successColor,
+                          ).md(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "4",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: dangerColor,
+                          ).md(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: warningColor,
+                          ).md(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            showBadge: true,
+                            isButton: false,
+                            text: "New",
+                            backgroundColor: infoColor,
+                          ).md(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ExCard(
+                    width: MediaQuery.of(context).size.width * 0.32,
+                    color: Colors.white,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(vertical: 4.0),
+                            width: MediaQuery.of(context).size.width,
+                            child: const Text(
+                              "Outlined",
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: primaryColor,
+                                textColor: primaryColor,
+                                outline: true,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: disabledColor,
+                                outline: true,
+                                textColor: disabledColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: successColor,
+                                outline: true,
+                                textColor: successColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                text: "New",
+                                backgroundColor: dangerColor,
+                                outline: true,
+                                textColor: dangerColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                outline: true,
+                                text: "New",
+                                backgroundColor: warningColor,
+                                textColor: warningColor,
+                              ).md(),
+                              const SizedBox(
+                                width: 10.0,
+                              ),
+                              BadgeText(
+                                outline: true,
+                                text: "New",
+                                backgroundColor: infoColor,
+                                textColor: infoColor,
+                              ).md(),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  ExCard(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    color: Colors.white,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(vertical: 4.0),
+                        width: MediaQuery.of(context).size.width,
+                        child: const Text(
+                          "Notification Badge - Varian 2 ",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18.0,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "1",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            text: "New",
+                            backgroundColor: primaryColor,
+                          ).xl(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "2",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            text: "New",
+                            backgroundColor: disabledColor,
+                          ).xl(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "3",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            text: "New",
+                            backgroundColor: successColor,
+                          ).xl(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "4",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            text: "New",
+                            backgroundColor: dangerColor,
+                          ).xl(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "5",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            showBadge: true,
+                            text: "New",
+                            backgroundColor: warningColor,
+                          ).xl(),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          BadgeText(
+                            showBadge: true,
+                            badgeContent: Container(
+                              width: 10.0,
+                              height: 10,
+                              alignment: Alignment.center,
+                              child: const Text(
+                                "6",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 10.0),
+                              ),
+                            ),
+                            position: BadgePosition.topEnd(top: 8, end: -5),
+                            text: "New",
+                            backgroundColor: infoColor,
+                          ).xl(),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
