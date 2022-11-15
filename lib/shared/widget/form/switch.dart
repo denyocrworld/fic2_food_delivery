@@ -1,45 +1,46 @@
 import 'package:flutter/material.dart';
 
-class QRadioField extends StatefulWidget {
+class QSwitch extends StatefulWidget {
   final String id;
+  final String label;
   final List<Map<String, dynamic>> items;
-  final String? Function(bool?)? validator;
+  final String? Function(List<Map<String, dynamic>> item)? validator;
 
-  const QRadioField({
+  const QSwitch({
     Key? key,
     required this.id,
+    required this.label,
     required this.items,
     this.validator,
   }) : super(key: key);
 
   @override
-  State<QRadioField> createState() => _QRadioFieldState();
+  State<QSwitch> createState() => _QSwitchState();
 }
 
-class _QRadioFieldState extends State<QRadioField> {
-  late List<Map<String, dynamic>> items;
+class _QSwitchState extends State<QSwitch> {
+  List<Map<String, dynamic>> items = [];
 
   @override
   void initState() {
     super.initState();
-    items = widget.items;
+    for (var item in widget.items) {
+      items.add(Map.from(item));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,
-      validator: (value) {
-        if (value == null || value == false) {
-          return 'Please enter some text';
-        }
-        return null;
-      },
+      // validator: widget.validator,
+      // validator: (value) => validate(items),
+      validator: (value) => widget.validator!(items),
       enabled: true,
       builder: (FormFieldState<bool> field) {
         return InputDecorator(
           decoration: InputDecoration(
-            labelText: 'Subscribe to mailing list.',
+            labelText: widget.label,
             errorText: field.errorText,
             border: InputBorder.none,
           ),
@@ -48,12 +49,14 @@ class _QRadioFieldState extends State<QRadioField> {
             itemCount: items.length,
             itemBuilder: (context, index) {
               var item = items[index];
-              return RadioListTile(
+
+              return SwitchListTile(
                 title: Text("${item["label"]}"),
-                groupValue: widget.id,
-                value: false,
+                value: item["checked"] ?? false,
                 onChanged: (val) {
+                  items[index]["checked"] = val;
                   field.didChange(true);
+                  setState(() {});
                 },
               );
             },
