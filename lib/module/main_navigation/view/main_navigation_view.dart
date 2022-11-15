@@ -569,6 +569,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltfm_sliding_form',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ltfm Reset Password',
+      route: '/ltfm_reset_password',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

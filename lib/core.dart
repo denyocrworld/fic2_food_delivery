@@ -78,6 +78,8 @@ export 'package:example/module/tutorial/latihan/ltfm_login/controller/ltfm_login
 export 'package:example/module/tutorial/latihan/ltfm_login/view/ltfm_login_view.dart';
 export 'package:example/module/tutorial/latihan/ltfm_product_form/controller/ltfm_product_form_controller.dart';
 export 'package:example/module/tutorial/latihan/ltfm_product_form/view/ltfm_product_form_view.dart';
+export 'package:example/module/tutorial/latihan/ltfm_reset_password/controller/ltfm_reset_password_controller.dart';
+export 'package:example/module/tutorial/latihan/ltfm_reset_password/view/ltfm_reset_password_view.dart';
 export 'package:example/module/tutorial/latihan/ltfm_review_form/controller/ltfm_review_form_controller.dart';
 export 'package:example/module/tutorial/latihan/ltfm_review_form/view/ltfm_review_form_view.dart';
 export 'package:example/module/tutorial/latihan/ltfm_sign_up/controller/ltfm_sign_up_controller.dart';

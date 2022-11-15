@@ -224,6 +224,10 @@ class TrController extends State<TrView> implements MvcController {
       "view": const LtfmSignUpView(),
     },
     {
+      "label": "Reset Password",
+      "view": const LtfmResetPasswordView(),
+    },
+    {
       "label": "Edit Profile",
       "view": const LtfmEditProfileView(),
     },

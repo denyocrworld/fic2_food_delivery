@@ -700,6 +700,14 @@ getRouters({
         child: const LtfmSlidingFormView(),
       ),
     ),
+          GoRoute(
+      path: '/ltfm_reset_password',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const LtfmResetPasswordView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
