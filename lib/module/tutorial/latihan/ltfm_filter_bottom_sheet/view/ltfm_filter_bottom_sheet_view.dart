@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ltfm_filter_bottom_sheet_controller.dart';
 
 class LtfmFilterBottomSheetView extends StatefulWidget {
   const LtfmFilterBottomSheetView({Key? key}) : super(key: key);
@@ -17,7 +16,42 @@ class LtfmFilterBottomSheetView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              ElevatedButton.icon(
+                icon: const Icon(Icons.tune),
+                label: const Text("Filter"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () async {
+                  await showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Wrap(
+                          children: [
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const <Widget>[
+                                  //! 1. Buat datepicker:
+                                  //? datepicker: "From"
+                                  //? datepicker: "To"
+                                  //! 2. Buat tombol dengan label "FILTER"
+                                  //! 3. Ketika di klik, panggil Navigator.pop(context)
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+              ),
+            ],
           ),
         ),
       ),
@@ -25,5 +59,6 @@ class LtfmFilterBottomSheetView extends StatefulWidget {
   }
 
   @override
-  State<LtfmFilterBottomSheetView> createState() => LtfmFilterBottomSheetController();
+  State<LtfmFilterBottomSheetView> createState() =>
+      LtfmFilterBottomSheetController();
 }
