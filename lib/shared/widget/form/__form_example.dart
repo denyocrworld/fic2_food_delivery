@@ -24,6 +24,7 @@ class _FormExampleViewState extends State<FormExampleView> {
           backgroundColor: Colors.blueGrey[900],
         ),
       ),
+      hintColor: Colors.orange,
     );
   }
 
@@ -34,6 +35,7 @@ class _FormExampleViewState extends State<FormExampleView> {
           backgroundColor: Colors.orange[900],
         ),
       ),
+      hintColor: Colors.blue,
     );
   }
 
@@ -109,13 +111,14 @@ class _FormExampleViewState extends State<FormExampleView> {
                   ),
                   QMemoField(
                     label: "Address",
-                    hint: "Your addres",
+                    hint: "Your addresses",
                     validator: Validator.required,
                     value: "Kamboja street 16, Bogor, West Java, Indonesia",
                     onChanged: (value) {},
                   ),
                   const QRadioField(
                     label: "Member",
+                    hint: "Your memberships",
                     validator: Validator.atLeastOneitem,
                     items: [
                       {
@@ -129,8 +132,8 @@ class _FormExampleViewState extends State<FormExampleView> {
                     ],
                   ),
                   const QCheckField(
-                    id: "club",
                     label: "Club",
+                    hint: "Your favorite football club",
                     validator: Validator.atLeastOneitem,
                     items: [
                       {
@@ -146,8 +149,8 @@ class _FormExampleViewState extends State<FormExampleView> {
                     ],
                   ),
                   const QSwitch(
-                    id: "member",
                     label: "Member",
+                    hint: "Your membership",
                     validator: Validator.atLeastOneitem,
                     items: [
                       {
@@ -162,6 +165,7 @@ class _FormExampleViewState extends State<FormExampleView> {
                   ),
                   QDropdownField(
                     label: "Membership",
+                    hint: "Your membership",
                     validator: Validator.required,
                     items: const [
                       {
@@ -180,6 +184,7 @@ class _FormExampleViewState extends State<FormExampleView> {
                   ),
                   QDropdownField(
                     label: "Membership",
+                    hint: "Your account membership",
                     validator: Validator.required,
                     items: const [
                       {

@@ -108,7 +108,6 @@ class FormUISwitchView extends StatelessWidget {
                 hint: "Your address",
               ),
               const QSwitch(
-                id: "member",
                 label: "Member",
                 validator: Validator.atLeastOneitem,
                 items: [
@@ -137,7 +136,6 @@ class FormUISwitchView extends StatelessWidget {
                 ],
               ),
               const QCheckField(
-                id: "club",
                 label: "Club",
                 validator: Validator.atLeastOneitem,
                 items: [

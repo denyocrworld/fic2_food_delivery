@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class QDropdownField extends StatefulWidget {
   final String label;
+  final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(String? value)? validator;
   final String? value;
@@ -16,6 +17,7 @@ class QDropdownField extends StatefulWidget {
     this.value,
     this.validator,
     this.emptyMode = true,
+    this.hint,
   }) : super(key: key);
 
   @override
@@ -66,6 +68,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
           decoration: InputDecoration(
             labelText: widget.label,
             errorText: field.errorText,
+            helperText: widget.hint,
           ),
           child: DropdownButtonHideUnderline(
             child: ButtonTheme(

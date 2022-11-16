@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class QCheckField extends StatefulWidget {
-  final String id;
   final String label;
+  final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
   final Future<List<Map<String, dynamic>>> Function()? onFuture;
 
   const QCheckField({
     Key? key,
-    required this.id,
     required this.label,
     required this.items,
     this.validator,
     this.onFuture,
+    this.hint,
   }) : super(key: key);
 
   @override
@@ -54,6 +54,7 @@ class _QCheckFieldState extends State<QCheckField> {
             labelText: widget.label,
             errorText: field.errorText,
             border: InputBorder.none,
+            helperText: widget.hint,
           ),
           child: ListView.builder(
             shrinkWrap: true,
