@@ -182,7 +182,76 @@ class FormExampleNonReuseableViewState
                     onChanged: (value) {},
                   ),
                   //#END
-                  //#TEMPLATE form_textarea
+                  //#TEMPLATE form_datefield
+                  InkWell(
+                    onTap: () async {
+                      DateTime? pickedDate = await showDatePicker(
+                        context: context,
+                        initialDate: DateTime.now(),
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime(2100),
+                      );
+                      print("pickedDate: $pickedDate");
+                    },
+                    child: TextFormField(
+                      initialValue: '2022-08-01',
+                      maxLength: 20,
+                      enabled: false,
+                      decoration: const InputDecoration(
+                        labelText: 'Birth date',
+                        labelStyle: TextStyle(
+                          color: Colors.blueGrey,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                        suffixIcon: Icon(Icons.date_range),
+                        helperText: "What's your name?",
+                      ),
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  //#END
+                  //#TEMPLATE form_timefield
+                  InkWell(
+                    onTap: () async {
+                      TimeOfDay? pickedTime = await showTimePicker(
+                        initialTime: TimeOfDay.now(),
+                        context: context,
+                        builder: (context, child) {
+                          return MediaQuery(
+                            data: MediaQuery.of(context)
+                                .copyWith(alwaysUse24HourFormat: true),
+                            child: child ?? Container(),
+                          );
+                        },
+                      );
+                      print("pickedTime: $pickedTime");
+                    },
+                    child: TextFormField(
+                      initialValue: '08:23',
+                      maxLength: 20,
+                      enabled: false,
+                      decoration: const InputDecoration(
+                        labelText: 'Working hour',
+                        labelStyle: TextStyle(
+                          color: Colors.blueGrey,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                        suffixIcon: Icon(Icons.timer),
+                        helperText: "What's your name?",
+                      ),
+                      onChanged: (value) {},
+                    ),
+                  ),
+                  //#END
+                  //#TEMPLATE form_memofield
                   TextFormField(
                     initialValue: 'Jln. Sukangoding No. 45',
                     maxLength: 200,
