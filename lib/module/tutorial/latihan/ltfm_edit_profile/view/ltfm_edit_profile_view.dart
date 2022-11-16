@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ltfm_edit_profile_controller.dart';
 
 class LtfmEditProfileView extends StatefulWidget {
   const LtfmEditProfileView({Key? key}) : super(key: key);
@@ -11,13 +10,23 @@ class LtfmEditProfileView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("LtfmEditProfile"),
-        actions: const [],
+        actions: const [
+          //! 4. Tambahkan tombol Save
+          //! 5. Beri padding/margin pada tombol Save sebanyak 10
+          //! 6. Panggil controller.save() ketika tombol di klik
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: const [
+              //! 1. Buat sebuah Card, tambahkan Column di dalamnya
+              //! 2. Tambahkan padding.all 20.0
+              //! 3. Di dalam column yang ada di dalam Card, tambahkan field ini:
+              //? textfield email
+              //? textfield password
+            ],
           ),
         ),
       ),

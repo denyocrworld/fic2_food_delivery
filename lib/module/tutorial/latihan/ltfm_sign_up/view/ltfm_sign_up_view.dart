@@ -17,7 +17,17 @@ class LtfmSignUpView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: const [
+              //! 1. Buatlah textfield email
+              //! 2. Buatlah textfield password
+              //! 3. Buatlah textfield confirm password
+              //! 4. Buat sebuah tombol,
+              //gunakan icon: Icons.login
+              //atur text-nya: Login
+              //ketika di klik, panggil:
+              // controller.doLogin()
+              //Jika dialog muncul ketika tombol di klik, tasks ini selesai
+            ],
           ),
         ),
       ),
