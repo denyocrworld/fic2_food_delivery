@@ -5,7 +5,7 @@ class QNumberField extends StatefulWidget {
   final String? value;
   final String? hint;
   final String? Function(String?)? validator;
-  final Function(String)? onChanged;
+  final Function(String) onChanged;
 
   const QNumberField({
     Key? key,
@@ -13,7 +13,7 @@ class QNumberField extends StatefulWidget {
     this.value,
     this.validator,
     this.hint,
-    this.onChanged,
+    required this.onChanged,
   }) : super(key: key);
 
   @override

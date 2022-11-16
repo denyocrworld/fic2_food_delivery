@@ -39,6 +39,16 @@ class _FormExampleViewState extends State<FormExampleView> {
     );
   }
 
+  String? email = "";
+  String? password = "";
+  String? age = "";
+  String? address = "";
+  String? gender = "";
+  String? footballClub = "";
+  String? membership = "";
+  String? role = "";
+  String? favoriteEmployee = "";
+
   @override
   Widget build(BuildContext context) {
     return Theme(
@@ -92,7 +102,9 @@ class _FormExampleViewState extends State<FormExampleView> {
                     hint: "Your email",
                     validator: Validator.required,
                     value: "demo@gmail.com",
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      email = value;
+                    },
                   ),
                   QTextField(
                     label: "Password",
@@ -100,42 +112,51 @@ class _FormExampleViewState extends State<FormExampleView> {
                     obscure: true,
                     validator: Validator.required,
                     value: "123456",
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      password = value;
+                    },
                   ),
                   QNumberField(
                     label: "Age",
                     hint: "Your age's",
                     validator: Validator.required,
                     value: "24",
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      age = value;
+                    },
                   ),
                   QMemoField(
                     label: "Address",
                     hint: "Your addresses",
                     validator: Validator.required,
                     value: "Kamboja street 16, Bogor, West Java, Indonesia",
-                    onChanged: (value) {},
+                    onChanged: (value) {
+                      address = value;
+                    },
                   ),
-                  const QRadioField(
-                    label: "Member",
-                    hint: "Your memberships",
+                  QRadioField(
+                    label: "Gender",
+                    hint: "Gender",
                     validator: Validator.atLeastOneitem,
-                    items: [
+                    items: const [
                       {
-                        "label": "Private",
-                        "value": "Private",
+                        "label": "Female",
+                        "value": "Female",
                       },
                       {
-                        "label": "Premium",
-                        "value": "Premium",
+                        "label": "Male",
+                        "value": "Male",
                       }
                     ],
+                    onChanged: (value, label) {
+                      gender = value;
+                    },
                   ),
-                  const QCheckField(
+                  QCheckField(
                     label: "Club",
                     hint: "Your favorite football club",
                     validator: Validator.atLeastOneitem,
-                    items: [
+                    items: const [
                       {
                         "label": "Persib",
                         "value": "Persib",
@@ -147,12 +168,15 @@ class _FormExampleViewState extends State<FormExampleView> {
                         "checked": true,
                       }
                     ],
+                    onChanged: (value, label) {
+                      footballClub = value;
+                    },
                   ),
-                  const QSwitch(
+                  QSwitch(
                     label: "Member",
                     hint: "Your membership",
                     validator: Validator.atLeastOneitem,
-                    items: [
+                    items: const [
                       {
                         "label": "Private",
                         "value": "Private",
@@ -162,44 +186,28 @@ class _FormExampleViewState extends State<FormExampleView> {
                         "value": "Premium",
                       }
                     ],
-                  ),
-                  QDropdownField(
-                    label: "Membership",
-                    hint: "Your membership",
-                    validator: Validator.required,
-                    items: const [
-                      {
-                        "label": "Regular",
-                        "value": "1",
-                      },
-                      {
-                        "label": "Premium",
-                        "value": "2",
-                      }
-                    ],
                     onChanged: (value, label) {
-                      print("New Label: $label #");
-                      print("New Value: $value #");
+                      membership = value;
                     },
                   ),
                   QDropdownField(
-                    label: "Membership",
-                    hint: "Your account membership",
+                    label: "Roles",
+                    hint: "Your roles",
                     validator: Validator.required,
                     items: const [
                       {
-                        "label": "Regular",
-                        "value": "1",
+                        "label": "Admin",
+                        "value": "Admin",
                       },
                       {
-                        "label": "Premium",
-                        "value": "2",
+                        "label": "Staff",
+                        "value": "Staff",
                       }
                     ],
-                    value: "Regular",
                     onChanged: (value, label) {
                       print("New Label: $label #");
                       print("New Value: $value #");
+                      role = value;
                     },
                   ),
                   const SizedBox(
@@ -212,48 +220,30 @@ class _FormExampleViewState extends State<FormExampleView> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const QAutoComplete(
-                    id: "member",
-                    label: "Member",
+                  QAutoComplete(
+                    label: "Favorite employee",
+                    hint: "Your favorite Employee",
                     validator: Validator.required,
-                    items: [
+                    items: const [
                       {
                         "label": "Jackie Roo",
+                        "value": "Jackie Roo",
                         "info": "Hacker",
                       },
                       {
                         "label": "Dan Milton",
+                        "value": "Dan Milton",
                         "info": "UI/UX Designer",
                       },
                       {
                         "label": "Ryper Roo",
+                        "value": "Ryper Roo",
                         "info": "Android Developer",
                       }
                     ],
-                  ),
-                  const QAutoComplete(
-                    id: "member",
-                    label: "Member",
-                    validator: Validator.required,
-                    items: [
-                      {
-                        "photo": "https://i.ibb.co/PGv8ZzG/me.jpg",
-                        "label": "John Doe",
-                        "info": "Programmer"
-                      },
-                      {
-                        "photo":
-                            "https://i.ibb.co/5v5RLKr/photo-1528813860492-bb99459ec095-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
-                        "label": "Renata",
-                        "info": "System Analyst"
-                      },
-                      {
-                        "photo":
-                            "https://i.ibb.co/mR8PJCz/photo-1576570734316-e9d0317d7384-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
-                        "label": "Kayla",
-                        "info": "Test Engineer"
-                      }
-                    ],
+                    onChanged: (value, label) {
+                      favoriteEmployee = value;
+                    },
                   ),
                   const SizedBox(
                     height: 300.0,

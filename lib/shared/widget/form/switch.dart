@@ -5,6 +5,7 @@ class QSwitch extends StatefulWidget {
   final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
+  final Function(String? value, String? label) onChanged;
 
   const QSwitch({
     Key? key,
@@ -12,6 +13,7 @@ class QSwitch extends StatefulWidget {
     required this.items,
     this.validator,
     this.hint,
+    required this.onChanged,
   }) : super(key: key);
 
   @override

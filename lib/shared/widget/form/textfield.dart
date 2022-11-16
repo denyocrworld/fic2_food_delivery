@@ -6,7 +6,7 @@ class QTextField extends StatefulWidget {
   final String? hint;
   final String? Function(String?)? validator;
   final bool obscure;
-  final Function(String)? onChanged;
+  final Function(String) onChanged;
 
   const QTextField({
     Key? key,
@@ -14,7 +14,7 @@ class QTextField extends StatefulWidget {
     this.value,
     this.validator,
     this.hint,
-    this.onChanged,
+    required this.onChanged,
     this.obscure = false,
   }) : super(key: key);
 
