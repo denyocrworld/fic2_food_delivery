@@ -63,7 +63,7 @@ class _QAutoCompleteState extends State<QAutoComplete> {
               onSelected: (Map map) {
                 //selected value
                 String? label = map["label"];
-                String? value = map["value"];
+                dynamic value = map["value"];
                 widget.onChanged(value, label);
               },
               optionsBuilder: (TextEditingValue textEditingValue) {

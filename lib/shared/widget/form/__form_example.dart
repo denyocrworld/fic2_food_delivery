@@ -49,7 +49,8 @@ class FormExampleViewState extends State<FormExampleView> {
   dynamic footballClub;
   dynamic membership;
   dynamic role;
-  String? favoriteEmployee = "";
+  dynamic favoriteEmployee;
+  dynamic staff;
 
   @override
   void initState() {
@@ -308,9 +309,9 @@ class FormExampleViewState extends State<FormExampleView> {
                       }
                     ],
                     onChanged: (value, label) {
-                      favoriteEmployee = value;
-                      print("favoriteEmployee: values > $value");
-                      print("favoriteEmployee: label > $label");
+                      staff = value;
+                      print("staff: values > $value");
+                      print("staff: label > $label");
                     },
                   ),
                   const SizedBox(

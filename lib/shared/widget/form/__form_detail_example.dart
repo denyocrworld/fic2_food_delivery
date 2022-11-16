@@ -72,6 +72,7 @@ class _FormDetailExampleViewState extends State<FormDetailExampleView> {
               ItemValue("membership", form.membership),
               ItemValue("role", form.role),
               ItemValue("favoriteEmployee", form.favoriteEmployee),
+              ItemValue("staff", form.staff),
             ],
           ),
         ),
