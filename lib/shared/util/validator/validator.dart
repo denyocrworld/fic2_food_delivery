@@ -13,12 +13,13 @@ class Validator {
 
   //!String validator
   static String? required(
-    String? value, {
+    dynamic value, {
     String? fieldName,
-    String? errorMessage,
   }) {
-    if (errorMessage != null) return errorMessage;
-    if (value == null || value.isEmpty) return "This field is required";
+    if (value is String) {
+      if (value.toString() == "null") return "This field is required";
+      if (value.isEmpty) return "This field is required";
+    }
     return null;
   }
 

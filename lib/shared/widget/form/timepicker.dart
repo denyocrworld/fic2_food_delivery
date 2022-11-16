@@ -75,7 +75,12 @@ class _QTimePickerState extends State<QTimePicker> {
       child: AbsorbPointer(
         child: TextFormField(
           controller: controller,
-          validator: widget.validator,
+          validator: (value) {
+            if (widget.validator != null) {
+              return widget.validator!(selectedValue.toString());
+            }
+            return null;
+          },
           maxLength: 20,
           readOnly: true,
           decoration: InputDecoration(
