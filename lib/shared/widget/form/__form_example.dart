@@ -95,9 +95,9 @@ class _FormExampleViewState extends State<FormExampleView> {
                       "value": "2",
                     }
                   ],
-                  onChanged: (label, value) {
-                    print("New Label: ");
-                    print("New Value: ");
+                  onChanged: (value, label) {
+                    print("New Label: $label #");
+                    print("New Value: $value #");
                   },
                 ),
                 QDropdownField(
@@ -114,9 +114,9 @@ class _FormExampleViewState extends State<FormExampleView> {
                     }
                   ],
                   value: "Regular",
-                  onChanged: (label, value) {
-                    print("New Label: ");
-                    print("New Value: ");
+                  onChanged: (value, label) {
+                    print("New Label: $label #");
+                    print("New Value: $value #");
                   },
                 ),
                 const SizedBox(

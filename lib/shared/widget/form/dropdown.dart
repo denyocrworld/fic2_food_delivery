@@ -6,7 +6,7 @@ class QDropdownField extends StatefulWidget {
   final String? Function(String? value)? validator;
   final String? value;
   final bool emptyMode;
-  final Function(String? label, String? value) onChanged;
+  final Function(String? value, String? label) onChanged;
 
   const QDropdownField({
     Key? key,
@@ -100,7 +100,10 @@ class _QDropdownFieldState extends State<QDropdownField> {
                   }
                   setState(() {});
 
-                  widget.onChanged(selectedValue, selectedValue);
+                  String? label = selectedValue;
+                  int index = items.indexWhere((item) => item == label);
+                  String? value = items[index];
+                  widget.onChanged(value, label);
                 },
                 items: items.map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
