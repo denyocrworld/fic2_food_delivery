@@ -121,7 +121,7 @@ class TrView extends StatefulWidget {
                   Expanded(
                     child: ElevatedButton.icon(
                       icon: const Icon(Icons.app_registration_rounded),
-                      label: const Text("Form"),
+                      label: const Text("Form (Reuseable)"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueGrey,
                       ),
@@ -141,7 +141,7 @@ class TrView extends StatefulWidget {
                   Expanded(
                     child: ElevatedButton.icon(
                       icon: const Icon(Icons.app_registration_rounded),
-                      label: const Text("Form (Reuseable)"),
+                      label: const Text("Form"),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blueGrey,
                       ),
