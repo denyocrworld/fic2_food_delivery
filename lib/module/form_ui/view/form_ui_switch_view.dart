@@ -1,6 +1,5 @@
 //#GROUP_TEMPLATE form_
 import 'package:example/core.dart';
-import 'package:example/shared/widget/form/textarea.dart';
 import 'package:flutter/material.dart';
 
 GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -266,51 +265,6 @@ class FormUISwitchView extends StatelessWidget {
                 ),
                 onChanged: (value) {},
               ),
-              //#END
-              //#TEMPLATE form_radio
-              LayoutBuilder(builder: (context, constraint) {
-                String groupValue = "gender";
-                List items = [
-                  {
-                    "label": "Female",
-                    "value": "female",
-                    "checked": true,
-                  },
-                  {
-                    "label": "Male",
-                    "value": "Male",
-                  }
-                ];
-                return FormField(
-                  initialValue: false,
-                  enabled: true,
-                  builder: (FormFieldState<bool> field) {
-                    return InputDecorator(
-                      decoration: InputDecoration(
-                        labelText: 'Gender',
-                        errorText: field.errorText,
-                        border: InputBorder.none,
-                      ),
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: items.length,
-                        itemBuilder: (context, index) {
-                          var item = items[index];
-
-                          return RadioListTile<dynamic>(
-                            title: Text("${item["label"]}"),
-                            groupValue: true,
-                            value: item["checked"] ?? false,
-                            onChanged: (val) {
-                              field.didChange(true);
-                            },
-                          );
-                        },
-                      ),
-                    );
-                  },
-                );
-              }),
               //#END
               //#TEMPLATE form_radio
               LayoutBuilder(builder: (context, constraint) {

@@ -15,6 +15,18 @@ class MagicSnippetView extends StatelessWidget {
     }
     //#END
 
+    //#TEMPLATE cop
+    controller.update();
+    //#END
+
+    //#TEMPLATE cos
+    controller.setState((){});
+    //#END
+
+    //#TEMPLATE sst
+    setState((){});
+    //#END
+
     //#TEMPLATE afunc
     Future CURSOR_1() async {
       CURSOR_2
