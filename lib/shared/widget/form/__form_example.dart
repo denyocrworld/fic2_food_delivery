@@ -127,6 +127,7 @@ class FormExampleViewState extends State<FormExampleView> {
                     value: "demo@gmail.com",
                     onChanged: (value) {
                       email = value;
+                      print("email: $value");
                     },
                   ),
                   QTextField(
@@ -137,6 +138,7 @@ class FormExampleViewState extends State<FormExampleView> {
                     value: "123456",
                     onChanged: (value) {
                       password = value;
+                      print("password: $value");
                     },
                   ),
                   QNumberField(
@@ -146,6 +148,7 @@ class FormExampleViewState extends State<FormExampleView> {
                     value: "24",
                     onChanged: (value) {
                       age = value;
+                      print("age: $value");
                     },
                   ),
                   QMemoField(
@@ -155,6 +158,7 @@ class FormExampleViewState extends State<FormExampleView> {
                     value: "Kamboja street 16, Bogor, West Java, Indonesia",
                     onChanged: (value) {
                       address = value;
+                      print("address: $value");
                     },
                   ),
                   QRadioField(
@@ -214,7 +218,7 @@ class FormExampleViewState extends State<FormExampleView> {
                       }
                     ],
                     onChanged: (values, ids) {
-                      // membership = ids.toString();
+                      membership = values.toString();
                       print("membership: values > $values");
                       print("membership: ids > $ids");
                     },

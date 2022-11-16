@@ -10,7 +10,7 @@ class FormDetailExampleView extends StatefulWidget {
 }
 
 class _FormDetailExampleViewState extends State<FormDetailExampleView> {
-  Widget ItemValue(String label, String? value) {
+  Widget ItemValue(String label, dynamic value) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -24,13 +24,26 @@ class _FormDetailExampleViewState extends State<FormDetailExampleView> {
               ),
             ),
           ),
-          Text(
-            value!.isEmpty ? "FAILED" : value,
-            style: TextStyle(
-              fontSize: 12.0,
-              color: value.isEmpty ? Colors.red : Colors.green,
+          if (value is String)
+            Expanded(
+              child: Text(
+                value.isEmpty ? "FAILED" : value,
+                style: TextStyle(
+                  fontSize: 12.0,
+                  color: value.isEmpty ? Colors.red : Colors.green,
+                ),
+              ),
             ),
-          ),
+          if (value is! String)
+            Expanded(
+              child: Text(
+                "$value",
+                style: TextStyle(
+                  fontSize: 12.0,
+                  color: value == -1 ? Colors.red : Colors.green,
+                ),
+              ),
+            ),
         ],
       ),
     );
