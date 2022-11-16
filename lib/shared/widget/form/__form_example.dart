@@ -280,6 +280,39 @@ class FormExampleViewState extends State<FormExampleView> {
                       print("favoriteEmployee: label > $label");
                     },
                   ),
+                  QAutoComplete(
+                    label: "Staff",
+                    hint: "Your staff",
+                    validator: Validator.required,
+                    items: const [
+                      {
+                        "photo":
+                            "https://i.ibb.co/MSM9Pmm/photo-1576570734316-e9d0317d7384-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                        "label": "Jessica Rin",
+                        "value": 1,
+                        "info": "Hacker",
+                      },
+                      {
+                        "photo":
+                            "https://i.ibb.co/VM8w6SY/photo-1528813860492-bb99459ec095-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                        "label": "Jessica Dolf",
+                        "value": 2,
+                        "info": "UI/UX Designer",
+                      },
+                      {
+                        "photo":
+                            "https://i.ibb.co/ckMm0Lq/photo-1576568699715-bae7154950c7-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+                        "label": "Melisa Roo",
+                        "value": 3,
+                        "info": "Android Developer",
+                      }
+                    ],
+                    onChanged: (value, label) {
+                      favoriteEmployee = value;
+                      print("favoriteEmployee: values > $value");
+                      print("favoriteEmployee: label > $label");
+                    },
+                  ),
                   const SizedBox(
                     height: 300.0,
                   ),

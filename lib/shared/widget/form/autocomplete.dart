@@ -1,3 +1,4 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class QAutoComplete extends StatefulWidget {
@@ -96,7 +97,8 @@ class _QAutoCompleteState extends State<QAutoComplete> {
                           Container(
                             decoration: BoxDecoration(
                               // color: Colors.grey[100],
-                              color: Theme.of(context).scaffoldBackgroundColor,
+                              color: Theme.of(globalContext)
+                                  .scaffoldBackgroundColor,
                               borderRadius: const BorderRadius.all(
                                 Radius.circular(12.0),
                               ),
