@@ -6,7 +6,7 @@ class QCheckField extends StatefulWidget {
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
   final Future<List<Map<String, dynamic>>> Function()? onFuture;
-  final Function(String? value, String? label) onChanged;
+  final Function(List<Map<String, dynamic>> values, List ids) onChanged;
 
   const QCheckField({
     Key? key,
@@ -70,6 +70,17 @@ class _QCheckFieldState extends State<QCheckField> {
                   items[index]["checked"] = val;
                   field.didChange(true);
                   setState(() {});
+
+                  String? label = items[index]["label"];
+                  int foundIndex =
+                      items.indexWhere((item) => item["label"] == label);
+                  String? value = items[foundIndex]["value"];
+
+                  List<Map<String, dynamic>> selectedValues =
+                      items.where((i) => i["checked"] == true).toList();
+
+                  List ids = selectedValues.map((e) => e["value"]).toList();
+                  widget.onChanged(selectedValues, ids);
                 },
               );
             },

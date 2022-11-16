@@ -62,11 +62,16 @@ class _QRadioFieldState extends State<QRadioField> {
                 value: item["checked"] ?? false,
                 onChanged: (val) {
                   setAllItemsToFalse();
-
                   bool newValue = val ? false : true;
                   items[index]["checked"] = newValue;
                   field.didChange(true);
                   setState(() {});
+
+                  String? label = items[index]["label"];
+                  int foundIndex =
+                      items.indexWhere((item) => item["label"] == label);
+                  String? value = items[foundIndex]["value"];
+                  widget.onChanged(value, label);
                 },
               );
             },

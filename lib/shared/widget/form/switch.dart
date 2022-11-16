@@ -5,7 +5,7 @@ class QSwitch extends StatefulWidget {
   final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
-  final Function(String? value, String? label) onChanged;
+  final Function(List<Map<String, dynamic>> values, List ids) onChanged;
 
   const QSwitch({
     Key? key,
@@ -60,6 +60,17 @@ class _QSwitchState extends State<QSwitch> {
                   items[index]["checked"] = val;
                   field.didChange(true);
                   setState(() {});
+
+                  String? label = items[index]["label"];
+                  int foundIndex =
+                      items.indexWhere((item) => item["label"] == label);
+                  String? value = items[foundIndex]["value"];
+
+                  List<Map<String, dynamic>> selectedValues =
+                      items.where((i) => i["checked"] == true).toList();
+
+                  List ids = selectedValues.map((e) => e["value"]).toList();
+                  widget.onChanged(selectedValues, ids);
                 },
               );
             },

@@ -5,7 +5,7 @@ class QAutoComplete extends StatefulWidget {
   final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(String? item)? validator;
-  final Function(String? value, String? label) onChanged;
+  final Function(dynamic value, String? label) onChanged;
 
   const QAutoComplete({
     Key? key,
@@ -59,8 +59,11 @@ class _QAutoCompleteState extends State<QAutoComplete> {
               initialValue: TextEditingValue(
                 text: items.first["label"],
               ),
-              onSelected: (Map value) {
+              onSelected: (Map map) {
                 //selected value
+                String? label = map["label"];
+                String? value = map["value"];
+                widget.onChanged(value, label);
               },
               optionsBuilder: (TextEditingValue textEditingValue) {
                 if (textEditingValue.text == '') {

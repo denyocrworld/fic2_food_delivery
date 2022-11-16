@@ -1,4 +1,5 @@
 import 'package:example/core.dart';
+import 'package:example/shared/widget/form/__form_detail_example.dart';
 import 'package:example/shared/widget/form/dropdown.dart';
 import 'package:flutter/material.dart';
 
@@ -6,10 +7,11 @@ class FormExampleView extends StatefulWidget {
   const FormExampleView({Key? key}) : super(key: key);
 
   @override
-  State<FormExampleView> createState() => _FormExampleViewState();
+  State<FormExampleView> createState() => FormExampleViewState();
 }
 
-class _FormExampleViewState extends State<FormExampleView> {
+class FormExampleViewState extends State<FormExampleView> {
+  static late FormExampleViewState instance;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   bool lightMode = false;
 
@@ -46,8 +48,14 @@ class _FormExampleViewState extends State<FormExampleView> {
   String? gender = "";
   String? footballClub = "";
   String? membership = "";
-  String? role = "";
+  dynamic role = "";
   String? favoriteEmployee = "";
+
+  @override
+  void initState() {
+    instance = this;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +75,20 @@ class _FormExampleViewState extends State<FormExampleView> {
                 size: 24.0,
               ),
             ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const FormDetailExampleView(),
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.check,
+                size: 24.0,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: ElevatedButton.icon(
@@ -77,6 +99,7 @@ class _FormExampleViewState extends State<FormExampleView> {
                     ),
                 onPressed: () {
                   bool isValid = formKey.currentState!.validate();
+                  if (!isValid) return;
                 },
               ),
             ),
@@ -150,6 +173,8 @@ class _FormExampleViewState extends State<FormExampleView> {
                     ],
                     onChanged: (value, label) {
                       gender = value;
+                      print("gender: value > $value");
+                      print("gender: label > $label");
                     },
                   ),
                   QCheckField(
@@ -159,17 +184,19 @@ class _FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Persib",
-                        "value": "Persib",
+                        "value": "101",
                         "checked": false,
                       },
                       {
                         "label": "Persikabo",
-                        "value": "Persikabo",
+                        "value": "102",
                         "checked": true,
                       }
                     ],
-                    onChanged: (value, label) {
-                      footballClub = value;
+                    onChanged: (values, ids) {
+                      footballClub = values.toString();
+                      print("footballClub: values > $values");
+                      print("footballClub: ids > $ids");
                     },
                   ),
                   QSwitch(
@@ -186,8 +213,10 @@ class _FormExampleViewState extends State<FormExampleView> {
                         "value": "Premium",
                       }
                     ],
-                    onChanged: (value, label) {
-                      membership = value;
+                    onChanged: (values, ids) {
+                      membership = values.toString();
+                      print("membership: values > $values");
+                      print("membership: ids > $ids");
                     },
                   ),
                   QDropdownField(
@@ -197,17 +226,17 @@ class _FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Admin",
-                        "value": "Admin",
+                        "value": 1,
                       },
                       {
                         "label": "Staff",
-                        "value": "Staff",
+                        "value": 2,
                       }
                     ],
                     onChanged: (value, label) {
-                      print("New Label: $label #");
-                      print("New Value: $value #");
                       role = value;
+                      print("membership: values > $value");
+                      print("membership: label > $label");
                     },
                   ),
                   const SizedBox(
@@ -227,22 +256,24 @@ class _FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Jackie Roo",
-                        "value": "Jackie Roo",
+                        "value": "101",
                         "info": "Hacker",
                       },
                       {
                         "label": "Dan Milton",
-                        "value": "Dan Milton",
+                        "value": "102",
                         "info": "UI/UX Designer",
                       },
                       {
                         "label": "Ryper Roo",
-                        "value": "Ryper Roo",
+                        "value": "103",
                         "info": "Android Developer",
                       }
                     ],
                     onChanged: (value, label) {
                       favoriteEmployee = value;
+                      print("favoriteEmployee: values > $value");
+                      print("favoriteEmployee: label > $label");
                     },
                   ),
                   const SizedBox(
