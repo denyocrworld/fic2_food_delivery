@@ -5,7 +5,7 @@ class QRadioField extends StatefulWidget {
   final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
-  final Function(String? value, String? label) onChanged;
+  final Function(dynamic value, String? label) onChanged;
 
   const QRadioField({
     Key? key,
@@ -70,7 +70,7 @@ class _QRadioFieldState extends State<QRadioField> {
                   String? label = items[index]["label"];
                   int foundIndex =
                       items.indexWhere((item) => item["label"] == label);
-                  String? value = items[foundIndex]["value"];
+                  dynamic value = items[foundIndex]["value"];
                   widget.onChanged(value, label);
                 },
               );

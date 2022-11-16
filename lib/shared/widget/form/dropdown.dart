@@ -114,8 +114,6 @@ class _QDropdownFieldState extends State<QDropdownField> {
                     index -= 1;
                   }
                   var value = widget.items[index]["value"];
-                  print("value: $value");
-                  print("label: $label");
                   widget.onChanged(value, label);
                 },
                 items: items.map<DropdownMenuItem<String>>((String value) {

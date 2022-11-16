@@ -45,10 +45,10 @@ class FormExampleViewState extends State<FormExampleView> {
   String? password = "";
   String? age = "";
   String? address = "";
-  String? gender = "";
-  String? footballClub = "";
-  String? membership = "";
-  dynamic role = "";
+  dynamic gender;
+  dynamic footballClub;
+  dynamic membership;
+  dynamic role;
   String? favoriteEmployee = "";
 
   @override
@@ -164,11 +164,11 @@ class FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Female",
-                        "value": "Female",
+                        "value": 1,
                       },
                       {
                         "label": "Male",
-                        "value": "Male",
+                        "value": 2,
                       }
                     ],
                     onChanged: (value, label) {
@@ -184,12 +184,12 @@ class FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Persib",
-                        "value": "101",
+                        "value": 101,
                         "checked": false,
                       },
                       {
                         "label": "Persikabo",
-                        "value": "102",
+                        "value": 102,
                         "checked": true,
                       }
                     ],
@@ -206,15 +206,15 @@ class FormExampleViewState extends State<FormExampleView> {
                     items: const [
                       {
                         "label": "Private",
-                        "value": "Private",
+                        "value": 1,
                       },
                       {
                         "label": "Premium",
-                        "value": "Premium",
+                        "value": 2,
                       }
                     ],
                     onChanged: (values, ids) {
-                      membership = values.toString();
+                      // membership = ids.toString();
                       print("membership: values > $values");
                       print("membership: ids > $ids");
                     },

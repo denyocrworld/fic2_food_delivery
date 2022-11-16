@@ -74,7 +74,7 @@ class _QCheckFieldState extends State<QCheckField> {
                   String? label = items[index]["label"];
                   int foundIndex =
                       items.indexWhere((item) => item["label"] == label);
-                  String? value = items[foundIndex]["value"];
+                  dynamic value = items[foundIndex]["value"];
 
                   List<Map<String, dynamic>> selectedValues =
                       items.where((i) => i["checked"] == true).toList();
