@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class QNumberField extends StatefulWidget {
-  final String id;
   final String label;
   final String? value;
   final String? hint;
@@ -10,7 +9,6 @@ class QNumberField extends StatefulWidget {
 
   const QNumberField({
     Key? key,
-    required this.id,
     required this.label,
     this.value,
     this.validator,

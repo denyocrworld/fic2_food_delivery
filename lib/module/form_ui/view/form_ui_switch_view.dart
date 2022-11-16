@@ -98,7 +98,6 @@ class FormUISwitchView extends StatelessWidget {
                 hint: "Your name",
               ),
               const QNumberField(
-                id: "age",
                 label: "Age",
                 validator: Validator.number,
                 hint: "Your name",
@@ -124,7 +123,6 @@ class FormUISwitchView extends StatelessWidget {
                 ],
               ),
               const QRadioField(
-                id: "member",
                 label: "Member",
                 validator: Validator.atLeastOneitem,
                 items: [

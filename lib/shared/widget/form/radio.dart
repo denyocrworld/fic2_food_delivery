@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 class QRadioField extends StatefulWidget {
-  final String id;
   final String label;
   final List<Map<String, dynamic>> items;
   final String? Function(List<Map<String, dynamic>> item)? validator;
 
   const QRadioField({
     Key? key,
-    required this.id,
     required this.label,
     required this.items,
     this.validator,

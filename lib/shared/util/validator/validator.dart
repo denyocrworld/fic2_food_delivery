@@ -16,7 +16,7 @@ class Validator {
     String? errorMessage,
   }) {
     if (errorMessage != null) return errorMessage;
-    if (value!.isEmpty) return "This $fieldName is required";
+    if (value == null || value.isEmpty) return "This field is required";
     return null;
   }
 
