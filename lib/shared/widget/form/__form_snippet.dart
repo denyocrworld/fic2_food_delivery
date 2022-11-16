@@ -159,13 +159,33 @@ class FormExampleViewState extends State<FormExampleView> {
                     onChanged: (value) {},
                   ),
                   //#END
-                  //#TEMPLATE q_address
+                  //#TEMPLATE q_memofield
                   QMemoField(
                     label: "Address",
                     hint: "Your addresses",
                     validator: Validator.required,
                     value: "Kamboja street 16, Bogor, West Java, Indonesia",
                     onChanged: (value) {},
+                  ),
+                  //#END
+                  //#TEMPLATE q_datefield
+                  QDatePicker(
+                    label: "Birth date",
+                    hint: "Your birth date",
+                    validator: Validator.required,
+                    onChanged: (value) {
+                      print("value: $value");
+                    },
+                  ),
+                  //#END
+                  //#TEMPLATE q_timefield
+                  QTimePicker(
+                    label: "Working hour",
+                    hint: "Your working hour",
+                    validator: Validator.required,
+                    onChanged: (value) {
+                      print("value: $value");
+                    },
                   ),
                   //#END
                   //#TEMPLATE q_radio
