@@ -17,7 +17,21 @@ class _FormExampleViewState extends State<FormExampleView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Form Test"),
-        actions: const [],
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: ElevatedButton.icon(
+              icon: const Icon(Icons.login),
+              label: const Text("Save"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                bool isValid = formKey.currentState!.validate();
+              },
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -29,27 +43,31 @@ class _FormExampleViewState extends State<FormExampleView> {
                 QTextField(
                   label: "Email",
                   hint: "Your email",
-                  onChanged: (value) {},
+                  validator: Validator.required,
                   value: "demo@gmail.com",
+                  onChanged: (value) {},
                 ),
                 QTextField(
                   label: "Password",
                   hint: "Your password",
                   obscure: true,
-                  onChanged: (value) {},
+                  validator: Validator.required,
                   value: "123456",
+                  onChanged: (value) {},
                 ),
                 QNumberField(
                   label: "Age",
                   hint: "Your age's",
-                  onChanged: (value) {},
+                  validator: Validator.required,
                   value: "24",
+                  onChanged: (value) {},
                 ),
                 QMemoField(
                   label: "Address",
                   hint: "Your addres",
-                  onChanged: (value) {},
+                  validator: Validator.required,
                   value: "Kamboja street 16, Bogor, West Java, Indonesia",
+                  onChanged: (value) {},
                 ),
                 const QRadioField(
                   label: "Member",
