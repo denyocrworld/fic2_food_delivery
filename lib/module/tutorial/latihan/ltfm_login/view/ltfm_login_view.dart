@@ -1,4 +1,3 @@
-import 'package:example/shared/widget/form/__form_example.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
@@ -7,8 +6,6 @@ class LtfmLoginView extends StatefulWidget {
 
   Widget build(context, LtfmLoginController controller) {
     controller.view = this;
-
-    return const FormExampleView();
 
     return Scaffold(
       appBar: AppBar(

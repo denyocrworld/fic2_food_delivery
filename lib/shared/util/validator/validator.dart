@@ -1,3 +1,5 @@
+//#GROUP_TEMPLATE class
+//#TEMPLATE class_validator
 class Validator {
   static String? rule(
     String? value, {
@@ -52,3 +54,4 @@ class Validator {
     return null;
   }
 }
+//#END

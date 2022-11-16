@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
+import '../../../../shared/widget/form/__form_example.dart';
+
 /*
 KITA START 7:30 YAA!
 FRAMEWORK: FLUTTER
@@ -113,6 +115,24 @@ class TrView extends StatefulWidget {
                 );
               }),
               header("Form Exercise"),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.app_registration_rounded),
+                label: const Text("Form Example"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const FormExampleView(),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
                   spacing: 10,

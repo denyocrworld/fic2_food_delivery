@@ -3,8 +3,6 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
-export 'package:example/model/blog/blog.dart';
-export 'package:example/model/firebase_user/firebase_user.dart';
 export 'package:example/module/appbar_ui/controller/appbar_ui_controller.dart';
 export 'package:example/module/appbar_ui/view/appbar_ui_view.dart';
 export 'package:example/module/avatar_ui/controller/avatar_ui_controller.dart';
