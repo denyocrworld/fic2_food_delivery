@@ -2,21 +2,19 @@ import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class QDatePicker extends StatefulWidget {
-  final String id;
   final String label;
   final DateTime? value;
   final String? hint;
   final String? Function(String?)? validator;
-  final Function(String)? onChanged;
+  final Function(DateTime) onChanged;
 
   const QDatePicker({
     Key? key,
-    required this.id,
     required this.label,
     this.value,
     this.validator,
     this.hint,
-    this.onChanged,
+    required this.onChanged,
   }) : super(key: key);
 
   @override
@@ -62,6 +60,8 @@ class _QDatePickerState extends State<QDatePicker> {
         selectedValue = pickedDate;
         controller.text = getFormattedValue();
         setState(() {});
+
+        widget.onChanged(selectedValue!);
       },
       child: AbsorbPointer(
         child: TextFormField(
@@ -84,7 +84,6 @@ class _QDatePickerState extends State<QDatePicker> {
             ),
             helperText: widget.hint,
           ),
-          onChanged: widget.onChanged,
         ),
       ),
     );

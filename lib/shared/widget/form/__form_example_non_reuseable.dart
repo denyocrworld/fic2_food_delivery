@@ -271,7 +271,7 @@ class FormExampleNonReuseableViewState
                     onChanged: (value) {},
                   ),
                   //#END
-                  //#TEMPLATE form_radio
+                  //#TEMPLATE form_radiofield
                   LayoutBuilder(builder: (context, constraint) {
                     String groupValue = "gender";
                     List items = [

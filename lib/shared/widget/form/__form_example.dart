@@ -45,6 +45,8 @@ class FormExampleViewState extends State<FormExampleView> {
   String? password = "";
   String? age = "";
   String? address = "";
+  DateTime? birthDate;
+  TimeOfDay? workingHour;
   dynamic gender;
   dynamic footballClub;
   dynamic membership;
@@ -160,6 +162,24 @@ class FormExampleViewState extends State<FormExampleView> {
                     onChanged: (value) {
                       address = value;
                       print("address: $value");
+                    },
+                  ),
+                  QDatePicker(
+                    label: "Birth date",
+                    hint: "Your birth date",
+                    validator: Validator.required,
+                    onChanged: (value) {
+                      birthDate = value;
+                      print("value: $value");
+                    },
+                  ),
+                  QTimePicker(
+                    label: "Working hour",
+                    hint: "Your working hour",
+                    validator: Validator.required,
+                    onChanged: (value) {
+                      workingHour = value;
+                      print("value: $value");
                     },
                   ),
                   QRadioField(
