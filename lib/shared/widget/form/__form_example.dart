@@ -100,6 +100,21 @@ class _FormExampleViewState extends State<FormExampleView> {
                     }
                   ],
                 ),
+                const QSwitch(
+                  id: "member",
+                  label: "Member",
+                  validator: Validator.atLeastOneitem,
+                  items: [
+                    {
+                      "label": "Private",
+                      "value": "Private",
+                    },
+                    {
+                      "label": "Premium",
+                      "value": "Premium",
+                    }
+                  ],
+                ),
                 QDropdownField(
                   label: "Membership",
                   validator: Validator.required,
