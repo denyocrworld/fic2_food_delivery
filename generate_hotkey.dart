@@ -31,7 +31,7 @@ margin: const EdgeInsets.all(\$1),
 #END
 """);
 
-  for (var i = 1; i <= 40; i++) {
+  for (var i = 1; i <= 50; i++) {
     templates.add("""
 #GROUP_TEMPLATE skip_docs
 

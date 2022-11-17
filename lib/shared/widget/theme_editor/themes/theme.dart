@@ -1,3 +1,4 @@
+//#GROUP_TEMPLATE theme
 import 'package:example/core.dart';
 export 'package:example/shared/widget/theme_editor/themes/theme_widget.dart';
 import 'package:flutter/material.dart';
@@ -183,6 +184,11 @@ ThemeData getDefaultTheme() {
     tabBarTheme: TabBarTheme(
       labelColor: textColor1,
     ),
+    //#TEMPLATE theme_scroll
+    scrollbarTheme: const ScrollbarThemeData().copyWith(
+      thumbColor: MaterialStateProperty.all(Colors.red),
+    ),
+    //#END
   );
 }
 

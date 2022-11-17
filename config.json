@@ -1,7 +1,5 @@
 {
     "modules": [
-        "tutorial/ltsm_scroll",
-        "tutorial/ltsm_repeat_animation",
-        "tutorial/ltsm_navigation_with_slide_animation"
+        "tutorial/ltsm_theme"
     ]
 }

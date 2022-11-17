@@ -9,6 +9,23 @@ import 'package:permission_handler/permission_handler.dart';
 class ServiceExampleView extends StatelessWidget {
   const ServiceExampleView({Key? key}) : super(key: key);
 
+  listener() {
+    ScrollController scrollController = ScrollController();
+    /*
+    //#TEMPLATE get_scroll_listener
+    scrollController.addListener(() {
+      var offset = scrollController.offset;
+      var maxScroll = scrollController.position.maxScrollExtent;
+      if (offset == maxScroll) {
+        setState(() {});
+      } else {
+        setState(() {});
+      }
+    });
+    //#END
+    */
+  }
+
   getLocation() async {
     //#TEMPLATE get_location
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();

@@ -732,6 +732,14 @@ getRouters({
         child: const LtsmNavigationWithSlideAnimationView(),
       ),
     ),
+          GoRoute(
+      path: '/ltsm_theme',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const LtsmThemeView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

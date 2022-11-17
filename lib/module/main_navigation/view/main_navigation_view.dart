@@ -599,7 +599,13 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltsm_navigation_with_slide_animation',
       items: [],
     ),
-    //@NAVIGATION_GENERATOR
+    NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ltsm Theme',
+      route: '/ltsm_theme',
+      items: [],
+    ),
+          //@NAVIGATION_GENERATOR
   ];
 
   @override

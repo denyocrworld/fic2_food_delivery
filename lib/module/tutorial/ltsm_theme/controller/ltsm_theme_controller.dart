@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/ltsm_scroll_view.dart';
+import '../view/ltsm_theme_view.dart';
 
-class LtsmScrollController extends State<LtsmScrollView>
-    implements MvcController {
-  static late LtsmScrollController instance;
-  late LtsmScrollView view;
+class LtsmThemeController extends State<LtsmThemeView> implements MvcController {
+  static late LtsmThemeController instance;
+  late LtsmThemeView view;
 
   @override
   void initState() {

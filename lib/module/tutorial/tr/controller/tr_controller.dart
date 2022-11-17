@@ -123,16 +123,20 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrsmCrudView(),
     },
     {
-      "label": "Scroll",
-      "view": const LtsmScrollView(),
-    },
-    {
       "label": "Repeat Animation",
       "view": const LtsmRepeatAnimationView(),
     },
     {
       "label": "Navigation with Slide Animation",
       "view": const LtsmNavigationWithSlideAnimationView(),
+    },
+    {
+      "label": "Scroll",
+      "view": const LtsmScrollView(),
+    },
+    {
+      "label": "Theme",
+      "view": const LtsmThemeView(),
     },
   ];
 

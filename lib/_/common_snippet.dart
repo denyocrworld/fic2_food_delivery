@@ -4586,6 +4586,1146 @@ Text("text",
   ),
 ),
 #END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz41
+size: 41.0,
+#END
+
+
+#TEMPLATE sw41
+const SizedBox(
+  width: 41.0,
+),
+#END
+
+#TEMPLATE sh41
+const SizedBox(
+  height: 41.0,
+),
+#END
+
+#TEMPLATE p41
+padding: const EdgeInsets.all(41.0),
+#END
+
+#TEMPLATE plr41
+padding: const EdgeInsets.only(left: 41.0, right: 41.0,),
+#END
+
+#TEMPLATE ptb41
+padding: const EdgeInsets.only(top: 41.0, bottom: 41.0,),
+#END
+
+#TEMPLATE pt41
+padding: const EdgeInsets.only(top: 41.0,),
+#END
+
+#TEMPLATE pr41
+padding: const EdgeInsets.only(right: 41.0,),
+#END
+
+#TEMPLATE pb41
+padding: const EdgeInsets.only(bottom: 41.0,),
+#END
+
+#TEMPLATE pl41
+padding: const EdgeInsets.only(left: 41.0,),
+#END
+
+
+#TEMPLATE m41
+margin: const EdgeInsets.all(41.0),
+#END
+
+#TEMPLATE mlr41
+margin: const EdgeInsets.only(left: 41.0, right: 41.0,),
+#END
+
+#TEMPLATE mtb41
+margin: const EdgeInsets.only(top: 41.0, bottom: 41.0,),
+#END
+
+#TEMPLATE mt41
+margin: const EdgeInsets.only(top: 41.0,),
+#END
+
+#TEMPLATE mr41
+margin: const EdgeInsets.only(right: 41.0,),
+#END
+
+#TEMPLATE mb41
+margin: const EdgeInsets.only(bottom: 41.0,),
+#END
+
+#TEMPLATE ml41
+margin: const EdgeInsets.only(left: 41.0,),
+#END
+
+#TEMPLATE mv41
+margin: const EdgeInsets.symmetric(vertical: 41.0),
+#END
+
+#TEMPLATE mh41
+margin: const EdgeInsets.symmetric(horizontal: 41.0),
+#END
+
+#TEMPLATE pv41
+padding: const EdgeInsets.symmetric(vertical: 41.0),
+#END
+
+#TEMPLATE ph41
+padding: const EdgeInsets.symmetric(horizontal: 41.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs41
+fontSize: 41.0,
+#END
+
+#TEMPLATE text41
+Text("text",
+  style: TextStyle(
+    fontSize: 41.0,
+  ),
+),
+#END
+
+#TEMPLATE textb41
+Text("text",
+  style: TextStyle(
+    fontSize: 41.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz42
+size: 42.0,
+#END
+
+
+#TEMPLATE sw42
+const SizedBox(
+  width: 42.0,
+),
+#END
+
+#TEMPLATE sh42
+const SizedBox(
+  height: 42.0,
+),
+#END
+
+#TEMPLATE p42
+padding: const EdgeInsets.all(42.0),
+#END
+
+#TEMPLATE plr42
+padding: const EdgeInsets.only(left: 42.0, right: 42.0,),
+#END
+
+#TEMPLATE ptb42
+padding: const EdgeInsets.only(top: 42.0, bottom: 42.0,),
+#END
+
+#TEMPLATE pt42
+padding: const EdgeInsets.only(top: 42.0,),
+#END
+
+#TEMPLATE pr42
+padding: const EdgeInsets.only(right: 42.0,),
+#END
+
+#TEMPLATE pb42
+padding: const EdgeInsets.only(bottom: 42.0,),
+#END
+
+#TEMPLATE pl42
+padding: const EdgeInsets.only(left: 42.0,),
+#END
+
+
+#TEMPLATE m42
+margin: const EdgeInsets.all(42.0),
+#END
+
+#TEMPLATE mlr42
+margin: const EdgeInsets.only(left: 42.0, right: 42.0,),
+#END
+
+#TEMPLATE mtb42
+margin: const EdgeInsets.only(top: 42.0, bottom: 42.0,),
+#END
+
+#TEMPLATE mt42
+margin: const EdgeInsets.only(top: 42.0,),
+#END
+
+#TEMPLATE mr42
+margin: const EdgeInsets.only(right: 42.0,),
+#END
+
+#TEMPLATE mb42
+margin: const EdgeInsets.only(bottom: 42.0,),
+#END
+
+#TEMPLATE ml42
+margin: const EdgeInsets.only(left: 42.0,),
+#END
+
+#TEMPLATE mv42
+margin: const EdgeInsets.symmetric(vertical: 42.0),
+#END
+
+#TEMPLATE mh42
+margin: const EdgeInsets.symmetric(horizontal: 42.0),
+#END
+
+#TEMPLATE pv42
+padding: const EdgeInsets.symmetric(vertical: 42.0),
+#END
+
+#TEMPLATE ph42
+padding: const EdgeInsets.symmetric(horizontal: 42.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs42
+fontSize: 42.0,
+#END
+
+#TEMPLATE text42
+Text("text",
+  style: TextStyle(
+    fontSize: 42.0,
+  ),
+),
+#END
+
+#TEMPLATE textb42
+Text("text",
+  style: TextStyle(
+    fontSize: 42.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz43
+size: 43.0,
+#END
+
+
+#TEMPLATE sw43
+const SizedBox(
+  width: 43.0,
+),
+#END
+
+#TEMPLATE sh43
+const SizedBox(
+  height: 43.0,
+),
+#END
+
+#TEMPLATE p43
+padding: const EdgeInsets.all(43.0),
+#END
+
+#TEMPLATE plr43
+padding: const EdgeInsets.only(left: 43.0, right: 43.0,),
+#END
+
+#TEMPLATE ptb43
+padding: const EdgeInsets.only(top: 43.0, bottom: 43.0,),
+#END
+
+#TEMPLATE pt43
+padding: const EdgeInsets.only(top: 43.0,),
+#END
+
+#TEMPLATE pr43
+padding: const EdgeInsets.only(right: 43.0,),
+#END
+
+#TEMPLATE pb43
+padding: const EdgeInsets.only(bottom: 43.0,),
+#END
+
+#TEMPLATE pl43
+padding: const EdgeInsets.only(left: 43.0,),
+#END
+
+
+#TEMPLATE m43
+margin: const EdgeInsets.all(43.0),
+#END
+
+#TEMPLATE mlr43
+margin: const EdgeInsets.only(left: 43.0, right: 43.0,),
+#END
+
+#TEMPLATE mtb43
+margin: const EdgeInsets.only(top: 43.0, bottom: 43.0,),
+#END
+
+#TEMPLATE mt43
+margin: const EdgeInsets.only(top: 43.0,),
+#END
+
+#TEMPLATE mr43
+margin: const EdgeInsets.only(right: 43.0,),
+#END
+
+#TEMPLATE mb43
+margin: const EdgeInsets.only(bottom: 43.0,),
+#END
+
+#TEMPLATE ml43
+margin: const EdgeInsets.only(left: 43.0,),
+#END
+
+#TEMPLATE mv43
+margin: const EdgeInsets.symmetric(vertical: 43.0),
+#END
+
+#TEMPLATE mh43
+margin: const EdgeInsets.symmetric(horizontal: 43.0),
+#END
+
+#TEMPLATE pv43
+padding: const EdgeInsets.symmetric(vertical: 43.0),
+#END
+
+#TEMPLATE ph43
+padding: const EdgeInsets.symmetric(horizontal: 43.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs43
+fontSize: 43.0,
+#END
+
+#TEMPLATE text43
+Text("text",
+  style: TextStyle(
+    fontSize: 43.0,
+  ),
+),
+#END
+
+#TEMPLATE textb43
+Text("text",
+  style: TextStyle(
+    fontSize: 43.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz44
+size: 44.0,
+#END
+
+
+#TEMPLATE sw44
+const SizedBox(
+  width: 44.0,
+),
+#END
+
+#TEMPLATE sh44
+const SizedBox(
+  height: 44.0,
+),
+#END
+
+#TEMPLATE p44
+padding: const EdgeInsets.all(44.0),
+#END
+
+#TEMPLATE plr44
+padding: const EdgeInsets.only(left: 44.0, right: 44.0,),
+#END
+
+#TEMPLATE ptb44
+padding: const EdgeInsets.only(top: 44.0, bottom: 44.0,),
+#END
+
+#TEMPLATE pt44
+padding: const EdgeInsets.only(top: 44.0,),
+#END
+
+#TEMPLATE pr44
+padding: const EdgeInsets.only(right: 44.0,),
+#END
+
+#TEMPLATE pb44
+padding: const EdgeInsets.only(bottom: 44.0,),
+#END
+
+#TEMPLATE pl44
+padding: const EdgeInsets.only(left: 44.0,),
+#END
+
+
+#TEMPLATE m44
+margin: const EdgeInsets.all(44.0),
+#END
+
+#TEMPLATE mlr44
+margin: const EdgeInsets.only(left: 44.0, right: 44.0,),
+#END
+
+#TEMPLATE mtb44
+margin: const EdgeInsets.only(top: 44.0, bottom: 44.0,),
+#END
+
+#TEMPLATE mt44
+margin: const EdgeInsets.only(top: 44.0,),
+#END
+
+#TEMPLATE mr44
+margin: const EdgeInsets.only(right: 44.0,),
+#END
+
+#TEMPLATE mb44
+margin: const EdgeInsets.only(bottom: 44.0,),
+#END
+
+#TEMPLATE ml44
+margin: const EdgeInsets.only(left: 44.0,),
+#END
+
+#TEMPLATE mv44
+margin: const EdgeInsets.symmetric(vertical: 44.0),
+#END
+
+#TEMPLATE mh44
+margin: const EdgeInsets.symmetric(horizontal: 44.0),
+#END
+
+#TEMPLATE pv44
+padding: const EdgeInsets.symmetric(vertical: 44.0),
+#END
+
+#TEMPLATE ph44
+padding: const EdgeInsets.symmetric(horizontal: 44.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs44
+fontSize: 44.0,
+#END
+
+#TEMPLATE text44
+Text("text",
+  style: TextStyle(
+    fontSize: 44.0,
+  ),
+),
+#END
+
+#TEMPLATE textb44
+Text("text",
+  style: TextStyle(
+    fontSize: 44.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz45
+size: 45.0,
+#END
+
+
+#TEMPLATE sw45
+const SizedBox(
+  width: 45.0,
+),
+#END
+
+#TEMPLATE sh45
+const SizedBox(
+  height: 45.0,
+),
+#END
+
+#TEMPLATE p45
+padding: const EdgeInsets.all(45.0),
+#END
+
+#TEMPLATE plr45
+padding: const EdgeInsets.only(left: 45.0, right: 45.0,),
+#END
+
+#TEMPLATE ptb45
+padding: const EdgeInsets.only(top: 45.0, bottom: 45.0,),
+#END
+
+#TEMPLATE pt45
+padding: const EdgeInsets.only(top: 45.0,),
+#END
+
+#TEMPLATE pr45
+padding: const EdgeInsets.only(right: 45.0,),
+#END
+
+#TEMPLATE pb45
+padding: const EdgeInsets.only(bottom: 45.0,),
+#END
+
+#TEMPLATE pl45
+padding: const EdgeInsets.only(left: 45.0,),
+#END
+
+
+#TEMPLATE m45
+margin: const EdgeInsets.all(45.0),
+#END
+
+#TEMPLATE mlr45
+margin: const EdgeInsets.only(left: 45.0, right: 45.0,),
+#END
+
+#TEMPLATE mtb45
+margin: const EdgeInsets.only(top: 45.0, bottom: 45.0,),
+#END
+
+#TEMPLATE mt45
+margin: const EdgeInsets.only(top: 45.0,),
+#END
+
+#TEMPLATE mr45
+margin: const EdgeInsets.only(right: 45.0,),
+#END
+
+#TEMPLATE mb45
+margin: const EdgeInsets.only(bottom: 45.0,),
+#END
+
+#TEMPLATE ml45
+margin: const EdgeInsets.only(left: 45.0,),
+#END
+
+#TEMPLATE mv45
+margin: const EdgeInsets.symmetric(vertical: 45.0),
+#END
+
+#TEMPLATE mh45
+margin: const EdgeInsets.symmetric(horizontal: 45.0),
+#END
+
+#TEMPLATE pv45
+padding: const EdgeInsets.symmetric(vertical: 45.0),
+#END
+
+#TEMPLATE ph45
+padding: const EdgeInsets.symmetric(horizontal: 45.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs45
+fontSize: 45.0,
+#END
+
+#TEMPLATE text45
+Text("text",
+  style: TextStyle(
+    fontSize: 45.0,
+  ),
+),
+#END
+
+#TEMPLATE textb45
+Text("text",
+  style: TextStyle(
+    fontSize: 45.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz46
+size: 46.0,
+#END
+
+
+#TEMPLATE sw46
+const SizedBox(
+  width: 46.0,
+),
+#END
+
+#TEMPLATE sh46
+const SizedBox(
+  height: 46.0,
+),
+#END
+
+#TEMPLATE p46
+padding: const EdgeInsets.all(46.0),
+#END
+
+#TEMPLATE plr46
+padding: const EdgeInsets.only(left: 46.0, right: 46.0,),
+#END
+
+#TEMPLATE ptb46
+padding: const EdgeInsets.only(top: 46.0, bottom: 46.0,),
+#END
+
+#TEMPLATE pt46
+padding: const EdgeInsets.only(top: 46.0,),
+#END
+
+#TEMPLATE pr46
+padding: const EdgeInsets.only(right: 46.0,),
+#END
+
+#TEMPLATE pb46
+padding: const EdgeInsets.only(bottom: 46.0,),
+#END
+
+#TEMPLATE pl46
+padding: const EdgeInsets.only(left: 46.0,),
+#END
+
+
+#TEMPLATE m46
+margin: const EdgeInsets.all(46.0),
+#END
+
+#TEMPLATE mlr46
+margin: const EdgeInsets.only(left: 46.0, right: 46.0,),
+#END
+
+#TEMPLATE mtb46
+margin: const EdgeInsets.only(top: 46.0, bottom: 46.0,),
+#END
+
+#TEMPLATE mt46
+margin: const EdgeInsets.only(top: 46.0,),
+#END
+
+#TEMPLATE mr46
+margin: const EdgeInsets.only(right: 46.0,),
+#END
+
+#TEMPLATE mb46
+margin: const EdgeInsets.only(bottom: 46.0,),
+#END
+
+#TEMPLATE ml46
+margin: const EdgeInsets.only(left: 46.0,),
+#END
+
+#TEMPLATE mv46
+margin: const EdgeInsets.symmetric(vertical: 46.0),
+#END
+
+#TEMPLATE mh46
+margin: const EdgeInsets.symmetric(horizontal: 46.0),
+#END
+
+#TEMPLATE pv46
+padding: const EdgeInsets.symmetric(vertical: 46.0),
+#END
+
+#TEMPLATE ph46
+padding: const EdgeInsets.symmetric(horizontal: 46.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs46
+fontSize: 46.0,
+#END
+
+#TEMPLATE text46
+Text("text",
+  style: TextStyle(
+    fontSize: 46.0,
+  ),
+),
+#END
+
+#TEMPLATE textb46
+Text("text",
+  style: TextStyle(
+    fontSize: 46.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz47
+size: 47.0,
+#END
+
+
+#TEMPLATE sw47
+const SizedBox(
+  width: 47.0,
+),
+#END
+
+#TEMPLATE sh47
+const SizedBox(
+  height: 47.0,
+),
+#END
+
+#TEMPLATE p47
+padding: const EdgeInsets.all(47.0),
+#END
+
+#TEMPLATE plr47
+padding: const EdgeInsets.only(left: 47.0, right: 47.0,),
+#END
+
+#TEMPLATE ptb47
+padding: const EdgeInsets.only(top: 47.0, bottom: 47.0,),
+#END
+
+#TEMPLATE pt47
+padding: const EdgeInsets.only(top: 47.0,),
+#END
+
+#TEMPLATE pr47
+padding: const EdgeInsets.only(right: 47.0,),
+#END
+
+#TEMPLATE pb47
+padding: const EdgeInsets.only(bottom: 47.0,),
+#END
+
+#TEMPLATE pl47
+padding: const EdgeInsets.only(left: 47.0,),
+#END
+
+
+#TEMPLATE m47
+margin: const EdgeInsets.all(47.0),
+#END
+
+#TEMPLATE mlr47
+margin: const EdgeInsets.only(left: 47.0, right: 47.0,),
+#END
+
+#TEMPLATE mtb47
+margin: const EdgeInsets.only(top: 47.0, bottom: 47.0,),
+#END
+
+#TEMPLATE mt47
+margin: const EdgeInsets.only(top: 47.0,),
+#END
+
+#TEMPLATE mr47
+margin: const EdgeInsets.only(right: 47.0,),
+#END
+
+#TEMPLATE mb47
+margin: const EdgeInsets.only(bottom: 47.0,),
+#END
+
+#TEMPLATE ml47
+margin: const EdgeInsets.only(left: 47.0,),
+#END
+
+#TEMPLATE mv47
+margin: const EdgeInsets.symmetric(vertical: 47.0),
+#END
+
+#TEMPLATE mh47
+margin: const EdgeInsets.symmetric(horizontal: 47.0),
+#END
+
+#TEMPLATE pv47
+padding: const EdgeInsets.symmetric(vertical: 47.0),
+#END
+
+#TEMPLATE ph47
+padding: const EdgeInsets.symmetric(horizontal: 47.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs47
+fontSize: 47.0,
+#END
+
+#TEMPLATE text47
+Text("text",
+  style: TextStyle(
+    fontSize: 47.0,
+  ),
+),
+#END
+
+#TEMPLATE textb47
+Text("text",
+  style: TextStyle(
+    fontSize: 47.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz48
+size: 48.0,
+#END
+
+
+#TEMPLATE sw48
+const SizedBox(
+  width: 48.0,
+),
+#END
+
+#TEMPLATE sh48
+const SizedBox(
+  height: 48.0,
+),
+#END
+
+#TEMPLATE p48
+padding: const EdgeInsets.all(48.0),
+#END
+
+#TEMPLATE plr48
+padding: const EdgeInsets.only(left: 48.0, right: 48.0,),
+#END
+
+#TEMPLATE ptb48
+padding: const EdgeInsets.only(top: 48.0, bottom: 48.0,),
+#END
+
+#TEMPLATE pt48
+padding: const EdgeInsets.only(top: 48.0,),
+#END
+
+#TEMPLATE pr48
+padding: const EdgeInsets.only(right: 48.0,),
+#END
+
+#TEMPLATE pb48
+padding: const EdgeInsets.only(bottom: 48.0,),
+#END
+
+#TEMPLATE pl48
+padding: const EdgeInsets.only(left: 48.0,),
+#END
+
+
+#TEMPLATE m48
+margin: const EdgeInsets.all(48.0),
+#END
+
+#TEMPLATE mlr48
+margin: const EdgeInsets.only(left: 48.0, right: 48.0,),
+#END
+
+#TEMPLATE mtb48
+margin: const EdgeInsets.only(top: 48.0, bottom: 48.0,),
+#END
+
+#TEMPLATE mt48
+margin: const EdgeInsets.only(top: 48.0,),
+#END
+
+#TEMPLATE mr48
+margin: const EdgeInsets.only(right: 48.0,),
+#END
+
+#TEMPLATE mb48
+margin: const EdgeInsets.only(bottom: 48.0,),
+#END
+
+#TEMPLATE ml48
+margin: const EdgeInsets.only(left: 48.0,),
+#END
+
+#TEMPLATE mv48
+margin: const EdgeInsets.symmetric(vertical: 48.0),
+#END
+
+#TEMPLATE mh48
+margin: const EdgeInsets.symmetric(horizontal: 48.0),
+#END
+
+#TEMPLATE pv48
+padding: const EdgeInsets.symmetric(vertical: 48.0),
+#END
+
+#TEMPLATE ph48
+padding: const EdgeInsets.symmetric(horizontal: 48.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs48
+fontSize: 48.0,
+#END
+
+#TEMPLATE text48
+Text("text",
+  style: TextStyle(
+    fontSize: 48.0,
+  ),
+),
+#END
+
+#TEMPLATE textb48
+Text("text",
+  style: TextStyle(
+    fontSize: 48.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz49
+size: 49.0,
+#END
+
+
+#TEMPLATE sw49
+const SizedBox(
+  width: 49.0,
+),
+#END
+
+#TEMPLATE sh49
+const SizedBox(
+  height: 49.0,
+),
+#END
+
+#TEMPLATE p49
+padding: const EdgeInsets.all(49.0),
+#END
+
+#TEMPLATE plr49
+padding: const EdgeInsets.only(left: 49.0, right: 49.0,),
+#END
+
+#TEMPLATE ptb49
+padding: const EdgeInsets.only(top: 49.0, bottom: 49.0,),
+#END
+
+#TEMPLATE pt49
+padding: const EdgeInsets.only(top: 49.0,),
+#END
+
+#TEMPLATE pr49
+padding: const EdgeInsets.only(right: 49.0,),
+#END
+
+#TEMPLATE pb49
+padding: const EdgeInsets.only(bottom: 49.0,),
+#END
+
+#TEMPLATE pl49
+padding: const EdgeInsets.only(left: 49.0,),
+#END
+
+
+#TEMPLATE m49
+margin: const EdgeInsets.all(49.0),
+#END
+
+#TEMPLATE mlr49
+margin: const EdgeInsets.only(left: 49.0, right: 49.0,),
+#END
+
+#TEMPLATE mtb49
+margin: const EdgeInsets.only(top: 49.0, bottom: 49.0,),
+#END
+
+#TEMPLATE mt49
+margin: const EdgeInsets.only(top: 49.0,),
+#END
+
+#TEMPLATE mr49
+margin: const EdgeInsets.only(right: 49.0,),
+#END
+
+#TEMPLATE mb49
+margin: const EdgeInsets.only(bottom: 49.0,),
+#END
+
+#TEMPLATE ml49
+margin: const EdgeInsets.only(left: 49.0,),
+#END
+
+#TEMPLATE mv49
+margin: const EdgeInsets.symmetric(vertical: 49.0),
+#END
+
+#TEMPLATE mh49
+margin: const EdgeInsets.symmetric(horizontal: 49.0),
+#END
+
+#TEMPLATE pv49
+padding: const EdgeInsets.symmetric(vertical: 49.0),
+#END
+
+#TEMPLATE ph49
+padding: const EdgeInsets.symmetric(horizontal: 49.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs49
+fontSize: 49.0,
+#END
+
+#TEMPLATE text49
+Text("text",
+  style: TextStyle(
+    fontSize: 49.0,
+  ),
+),
+#END
+
+#TEMPLATE textb49
+Text("text",
+  style: TextStyle(
+    fontSize: 49.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE sz50
+size: 50.0,
+#END
+
+
+#TEMPLATE sw50
+const SizedBox(
+  width: 50.0,
+),
+#END
+
+#TEMPLATE sh50
+const SizedBox(
+  height: 50.0,
+),
+#END
+
+#TEMPLATE p50
+padding: const EdgeInsets.all(50.0),
+#END
+
+#TEMPLATE plr50
+padding: const EdgeInsets.only(left: 50.0, right: 50.0,),
+#END
+
+#TEMPLATE ptb50
+padding: const EdgeInsets.only(top: 50.0, bottom: 50.0,),
+#END
+
+#TEMPLATE pt50
+padding: const EdgeInsets.only(top: 50.0,),
+#END
+
+#TEMPLATE pr50
+padding: const EdgeInsets.only(right: 50.0,),
+#END
+
+#TEMPLATE pb50
+padding: const EdgeInsets.only(bottom: 50.0,),
+#END
+
+#TEMPLATE pl50
+padding: const EdgeInsets.only(left: 50.0,),
+#END
+
+
+#TEMPLATE m50
+margin: const EdgeInsets.all(50.0),
+#END
+
+#TEMPLATE mlr50
+margin: const EdgeInsets.only(left: 50.0, right: 50.0,),
+#END
+
+#TEMPLATE mtb50
+margin: const EdgeInsets.only(top: 50.0, bottom: 50.0,),
+#END
+
+#TEMPLATE mt50
+margin: const EdgeInsets.only(top: 50.0,),
+#END
+
+#TEMPLATE mr50
+margin: const EdgeInsets.only(right: 50.0,),
+#END
+
+#TEMPLATE mb50
+margin: const EdgeInsets.only(bottom: 50.0,),
+#END
+
+#TEMPLATE ml50
+margin: const EdgeInsets.only(left: 50.0,),
+#END
+
+#TEMPLATE mv50
+margin: const EdgeInsets.symmetric(vertical: 50.0),
+#END
+
+#TEMPLATE mh50
+margin: const EdgeInsets.symmetric(horizontal: 50.0),
+#END
+
+#TEMPLATE pv50
+padding: const EdgeInsets.symmetric(vertical: 50.0),
+#END
+
+#TEMPLATE ph50
+padding: const EdgeInsets.symmetric(horizontal: 50.0),
+#END
+
+#GROUP_TEMPLATE skip_docs
+
+#TEMPLATE fs50
+fontSize: 50.0,
+#END
+
+#TEMPLATE text50
+Text("text",
+  style: TextStyle(
+    fontSize: 50.0,
+  ),
+),
+#END
+
+#TEMPLATE textb50
+Text("text",
+  style: TextStyle(
+    fontSize: 50.0,
+    fontWeight: FontWeight.bold,
+  ),
+),
+#END
 //#GROUP_TEMPLATE colors
 
 #TEMPLATE cWhite
