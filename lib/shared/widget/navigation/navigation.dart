@@ -52,7 +52,7 @@ class _ExNavigationState extends State<ExNavigation> {
   getNavigation() {
     var selectedColor = widget.selectedColor ?? primaryColor;
     var unselectedColor =
-        widget.unselectedColor ?? primaryColor!.withOpacity(0.4);
+        widget.unselectedColor ?? primaryColor.withOpacity(0.4);
 
     if (widget.type == NavigationType.float) {
       return Container(
@@ -159,7 +159,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                     menu.icon,
                                     color: selectedIndex == index
                                         ? primaryColor
-                                        : primaryColor!.withOpacity(0.4),
+                                        : primaryColor.withOpacity(0.4),
                                     size: selectedIndex == index ? 20.0 : 16.0,
                                   ),
                                   const SizedBox(
@@ -171,7 +171,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                       fontSize: 10,
                                       color: selectedIndex == index
                                           ? primaryColor
-                                          : primaryColor!.withOpacity(0.4),
+                                          : primaryColor.withOpacity(0.4),
                                     ),
                                   ),
                                 ],

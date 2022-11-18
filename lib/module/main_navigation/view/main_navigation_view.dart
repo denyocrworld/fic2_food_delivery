@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
@@ -461,121 +463,121 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltsm_counter',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Loading',
       route: '/ltsm_loading',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Visibility',
       route: '/ltsm_visibility',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Enabled Or Disabled',
       route: '/ltsm_enabled_or_disabled',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Slide Animation',
       route: '/ltsm_slide_animation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Fade Animation',
       route: '/ltsm_fade_animation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Rotate Animation',
       route: '/ltsm_rotate_animation',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Horizontal Category List',
       route: '/ltsm_horizontal_category_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Vertical Category List',
       route: '/ltsm_vertical_category_list',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltsm Crud',
       route: '/ltsm_crud',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Login',
       route: '/ltfm_login',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Sign Up',
       route: '/ltfm_sign_up',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Edit Profile',
       route: '/ltfm_edit_profile',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Product Form',
       route: '/ltfm_product_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Review Form',
       route: '/ltfm_review_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Checkout Form',
       route: '/ltfm_checkout_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Filter Dialog',
       route: '/ltfm_filter_dialog',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Filter Bottom Sheet',
       route: '/ltfm_filter_bottom_sheet',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Sliding Form',
       route: '/ltfm_sliding_form',
       items: [],
     ),
-          NavigationItem(
+    NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Ltfm Reset Password',
       route: '/ltfm_reset_password',
       items: [],
     ),
-          //@NAVIGATION_GENERATOR
+    //@NAVIGATION_GENERATOR
   ];
 
   @override

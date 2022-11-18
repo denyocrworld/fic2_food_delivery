@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 //AvatarContainer
 class AvatarContainer extends StatefulWidget {
-  final String? url;
-
   const AvatarContainer({
     Key? key,
     required this.url,
   }) : super(key: key);
+
+  final String? url;
 
   @override
   State<AvatarContainer> createState() => _AvatarContainerState();
@@ -38,12 +38,12 @@ class _AvatarContainerState extends State<AvatarContainer> {
 
 //AvatarCircle
 class AvatarCircle extends StatefulWidget {
-  final String? url;
-
   const AvatarCircle({
     Key? key,
     required this.url,
   }) : super(key: key);
+
+  final String? url;
 
   @override
   State<AvatarCircle> createState() => _AvatarCircleState();
@@ -62,14 +62,14 @@ class _AvatarCircleState extends State<AvatarCircle> {
 
 //ContainerBackground
 class ContainerBackground extends StatefulWidget {
-  final Color? backgroundColor;
-  final String? title;
-
   const ContainerBackground({
     Key? key,
     required this.backgroundColor,
     required this.title,
   }) : super(key: key);
+
+  final Color? backgroundColor;
+  final String? title;
 
   @override
   State<ContainerBackground> createState() => _ContainerBackgroundState();
@@ -100,14 +100,14 @@ class _ContainerBackgroundState extends State<ContainerBackground> {
 
 //CircleBackground
 class CircleBackground extends StatefulWidget {
-  final Color? backgroundColor;
-  final String? title;
-
   const CircleBackground({
     Key? key,
     required this.backgroundColor,
     required this.title,
   }) : super(key: key);
+
+  final Color? backgroundColor;
+  final String? title;
 
   @override
   State<CircleBackground> createState() => _CircleBackgroundState();
@@ -130,12 +130,12 @@ class _CircleBackgroundState extends State<CircleBackground> {
 
 //RoundedImage
 class RoundedImage extends StatefulWidget {
-  final String? url;
-
   const RoundedImage({
     Key? key,
     required this.url,
   }) : super(key: key);
+
+  final String? url;
 
   @override
   State<RoundedImage> createState() => _RoundedImageState();
@@ -166,16 +166,17 @@ class _RoundedImageState extends State<RoundedImage> {
 
 //Thumbnail
 class Thumbnail extends StatefulWidget {
-  final String? url;
-  final double? height;
-  final double? width;
-
   const Thumbnail({
     Key? key,
     this.height,
     this.width,
     required this.url,
   }) : super(key: key);
+
+  final double? height;
+  final String? url;
+  final double? width;
+
   @override
   State<Thumbnail> createState() => _ThumbnailState();
 }
@@ -217,16 +218,17 @@ class _ThumbnailState extends State<Thumbnail> {
 
 //CircleThumbnail
 class CircleThumbnail extends StatefulWidget {
-  final String? url;
-  final double? height;
-  final double? width;
-
   const CircleThumbnail({
     Key? key,
     this.height,
     this.width,
     required this.url,
   }) : super(key: key);
+
+  final double? height;
+  final String? url;
+  final double? width;
+
   @override
   State<CircleThumbnail> createState() => _CircleThumbnailState();
 }
