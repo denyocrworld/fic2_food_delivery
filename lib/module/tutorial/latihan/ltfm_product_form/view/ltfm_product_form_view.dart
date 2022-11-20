@@ -26,7 +26,7 @@ class LtfmProductFormView extends StatefulWidget {
               //! 3. Di dalam column yang ada di dalam Card, tambahkan field ini:
               //? textfield product name
               //? textfield price (hanya bisa menerima angka)
-              //? textfield description (textfield dengan maxlines: 15)
+              //? textfield description (textfield dengan maxlines: 15) | Gunakan QMemoField
               //! 4. Tambahkan dropdown untuk memilih category, gunakan kode ini:
               /*
               QDropdownField(
