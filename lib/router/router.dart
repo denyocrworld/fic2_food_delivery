@@ -740,6 +740,134 @@ getRouters({
         child: const LtsmThemeView(),
       ),
     ),
+          GoRoute(
+      path: '/tutorial_extension',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TutorialExtensionView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_product_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosProductListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_order',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosOrderView(),
+      ),
+    ),
+          GoRoute(
+      path: '/pos_order_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const PosOrderListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_counter',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicCounterView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_loading',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicLoadingView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_enable_or_disabled',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicEnableOrDisabledView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_visibility',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicVisibilityView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_animation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicAnimationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_cart',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicCartView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_filter_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicFilterListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/fic_theme',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const FicThemeView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

@@ -1,5 +1,13 @@
 {
     "modules": [
-        "tutorial/ltsm_theme"
+        "tutorial/fic/fic_counter",
+        "tutorial/fic/fic_loading",
+        "tutorial/fic/fic_enable_or_disabled",
+        "tutorial/fic/fic_visibility",
+        "tutorial/fic/fic_animation",
+        "tutorial/fic/fic_navigation",
+        "tutorial/fic/fic_cart",
+        "tutorial/fic/fic_filter_list",
+        "tutorial/fic/fic_theme"
     ]
 }

@@ -1,18 +1,16 @@
 //#GROUP_TEMPLATE q_form
 import 'package:example/core.dart';
-import 'package:example/shared/widget/form/__form_detail_example.dart';
-import 'package:example/shared/widget/form/dropdown.dart';
 import 'package:flutter/material.dart';
 
-class FormExampleView extends StatefulWidget {
-  const FormExampleView({Key? key}) : super(key: key);
+class FormExampleWithSnippetView extends StatefulWidget {
+  const FormExampleWithSnippetView({Key? key}) : super(key: key);
 
   @override
-  State<FormExampleView> createState() => FormExampleViewState();
+  State<FormExampleWithSnippetView> createState() => FormExampleWithSnippetViewState();
 }
 
-class FormExampleViewState extends State<FormExampleView> {
-  static late FormExampleViewState instance;
+class FormExampleWithSnippetViewState extends State<FormExampleWithSnippetView> {
+  static late FormExampleWithSnippetViewState instance;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   bool lightMode = false;
 

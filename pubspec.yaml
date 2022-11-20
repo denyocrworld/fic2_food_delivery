@@ -39,6 +39,7 @@ dependencies:
   # awesome_notifications_fcm: ^0.7.3
   flutter_markdown: ^0.6.12
   dotted_border: ^2.0.0+3
+  hive: ^2.2.3
   
 # dependency_overrides:
 #   google_sign_in_web:

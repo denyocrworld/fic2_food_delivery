@@ -28,7 +28,7 @@ class LtsmLoadingView extends StatefulWidget {
 
               ? Buat sebuah button, dan tambahkan kode ini di dalam event onPressed()
               /*
-              controller.loading = controller.loading!;
+              controller.loading = !controller.loading;
               controller.setState((){});
               */
                 

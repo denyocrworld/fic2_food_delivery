@@ -605,6 +605,102 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltsm_theme',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tutorial Extension',
+      route: '/tutorial_extension',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Login',
+      route: '/pos_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Main Navigation',
+      route: '/pos_main_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Product List',
+      route: '/pos_product_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Product Form',
+      route: '/pos_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Order',
+      route: '/pos_order',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Pos Order List',
+      route: '/pos_order_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Counter',
+      route: '/fic_counter',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Loading',
+      route: '/fic_loading',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Enable Or Disabled',
+      route: '/fic_enable_or_disabled',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Visibility',
+      route: '/fic_visibility',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Animation',
+      route: '/fic_animation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Navigation',
+      route: '/fic_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Cart',
+      route: '/fic_cart',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Filter List',
+      route: '/fic_filter_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Fic Theme',
+      route: '/fic_theme',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 
