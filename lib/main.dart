@@ -7,25 +7,28 @@ import 'package:hive/hive.dart';
 
 /*
 TODO: ADA DI BIO
+
+! Link Youtube
+? https://youtube.com/@capekngoding
+
 ! Link Komunitas BERANDAL (UMUM)
 ? https://tinyurl.com/join-berandal
 //-----------------------------
 ! Link Komunitas FUGI (KHUSUS DART & FLUTTER)
 ? https://tinyurl.com/join-fugi
-? FIC
-? Selasa, Rabu dan Kamis di GMEET
-? 19:00 - 20:00
 */
 
 // MATERI HARI INI:
-// FLUTTER - STATE MANAGEMENT
-// 20:00 - 21:00
-// ! LINK GMEET:
-// ! https://tinyurl.com/gmeet-fic
+// ! HTTP Request dengan Flutter
+// - Login
+// - CRUD Product
+// - Product List
+// - Create Product
+// - Update Product
+// - Delete Product
 
 void main() async {
   await initialize();
-
   if (!kIsWeb && Platform.isWindows) {
     var path = Directory.current.path;
     Hive.init(path);

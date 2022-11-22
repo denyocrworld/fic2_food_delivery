@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/trfm_login_form_view.dart';
+import '../view/tf_product_form_view.dart';
 
-class TrfmLoginFormController extends State<TrfmLoginFormView>
-    implements MvcController {
-  static late TrfmLoginFormController instance;
-  late TrfmLoginFormView view;
+class TfProductFormController extends State<TfProductFormView> implements MvcController {
+  static late TfProductFormController instance;
+  late TfProductFormView view;
 
   @override
   void initState() {
@@ -18,6 +17,4 @@ class TrfmLoginFormController extends State<TrfmLoginFormView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-
-  String name = "";
 }

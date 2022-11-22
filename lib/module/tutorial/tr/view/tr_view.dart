@@ -113,6 +113,45 @@ class TrView extends StatefulWidget {
                   ),
                 );
               }),
+              header("HTTP Request"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.httpRequestItems.length,
+                    (index) {
+                      var item = controller.httpRequestItems[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                        index: index,
+                      );
+                    },
+                  ),
+                );
+              }),
+              header("Firebase x Firestore"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.firebaseExampleItems.length,
+                    (index) {
+                      var item = controller.firebaseExampleItems[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                        index: index,
+                        color: Colors.red,
+                      );
+                    },
+                  ),
+                );
+              }),
               header("State Management Exercise"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(

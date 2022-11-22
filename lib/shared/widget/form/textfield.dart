@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class QTextField extends StatefulWidget {
@@ -50,7 +52,9 @@ class _QTextFieldState extends State<QTextField> {
         ),
         helperText: widget.hint,
       ),
-      onChanged: widget.onChanged,
+      onChanged: (value) {
+        widget.onChanged(value);
+      },
     );
   }
 }

@@ -180,50 +180,80 @@ class TrController extends State<TrView> implements MvcController {
   ];
 
   List formItems = [
-    // {
-    //   "label": "Login",
-    //   "view": const TrfmLoginFormView(),
-    // },
-    // {
-    //   "label": "Signup",
-    //   "view": const TrfmSignupFormView(),
-    // },
-    // {
-    //   "label": "Forgot Password",
-    //   "view": const TrfmForgotPasswordFormView(),
-    // },
-    // {
-    //   "label": "Reset Password",
-    //   "view": const TrfmResetPasswordFormView(),
-    // },
-    // {
-    //   "label": "Edit Profile",
-    //   "view": const TrfmEditProfileFormView(),
-    // },
-    // {
-    //   "label": "Product Form",
-    //   "view": const TrfmProductFormView(),
-    // },
-    // {
-    //   "label": "Edit Store Form",
-    //   "view": const TrfmEditStoreFormView(),
-    // },
-    // {
-    //   "label": "Checkout Form",
-    //   "view": const TrfmCheckoutFormView(),
-    // },
-    // {
-    //   "label": "Review Form",
-    //   "view": const TrfmReviewFormView(),
-    // },
-    // {
-    //   "label": "Filter Date Dialog",
-    //   "view": const TrfmFilterDateDialogFormView(),
-    // },
-    // {
-    //   "label": "Filter Category & Date Bottomsheet",
-    //   "view": const TrfmFilterCategoryAndDateBottomsheetFormView(),
-    // },
+    {
+      "label": "Login",
+      "view": const TrfmLoginFormView(),
+    },
+    {
+      "label": "Signup",
+      "view": const TrfmSignupFormView(),
+    },
+    {
+      "label": "Forgot Password",
+      "view": const TrfmForgotPasswordFormView(),
+    },
+    {
+      "label": "Reset Password",
+      "view": const TrfmResetPasswordFormView(),
+    },
+    {
+      "label": "Edit Profile",
+      "view": const TrfmEditProfileFormView(),
+    },
+    {
+      "label": "Product Form",
+      "view": const TrfmProductFormView(),
+    },
+    {
+      "label": "Edit Store Form",
+      "view": const TrfmEditStoreFormView(),
+    },
+    {
+      "label": "Checkout Form",
+      "view": const TrfmCheckoutFormView(),
+    },
+    {
+      "label": "Review Form",
+      "view": const TrfmReviewFormView(),
+    },
+    {
+      "label": "Filter Date Dialog",
+      "view": const TrfmFilterDateDialogFormView(),
+    },
+    {
+      "label": "Filter Category & Date Bottomsheet",
+      "view": const TrfmFilterCategoryAndDateBottomsheetFormView(),
+    },
+  ];
+
+  List httpRequestItems = [
+    {
+      "label": "Login",
+      "view": const HttpLoginView(),
+    },
+    {
+      "label": "Product CRUD",
+      "view": const HttpProductListView(),
+    },
+  ];
+
+  List firebaseExampleItems = [
+    {
+      "label": "Login",
+      "view": const TfLoginView(),
+    },
+    {
+      "label": "Register",
+      "view": const TfRegisterView(),
+    },
+    {
+      "label": "Product List",
+      "view": const TfProductListView(),
+    },
+    {
+      "label": "Product Form",
+      "view": const TfProductFormView(),
+    },
   ];
 
   List stateManagementExerciseList = [

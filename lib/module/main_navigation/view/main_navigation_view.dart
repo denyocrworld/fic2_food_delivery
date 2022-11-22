@@ -701,6 +701,48 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/fic_theme',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Http Login',
+      route: '/http_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Http Product List',
+      route: '/http_product_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Http Product Form',
+      route: '/http_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tf Login',
+      route: '/tf_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tf Product List',
+      route: '/tf_product_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tf Product Form',
+      route: '/tf_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tf Register',
+      route: '/tf_register',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

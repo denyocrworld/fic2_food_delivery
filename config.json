@@ -8,6 +8,13 @@
         "tutorial/fic/fic_navigation",
         "tutorial/fic/fic_cart",
         "tutorial/fic/fic_filter_list",
-        "tutorial/fic/fic_theme"
+        "tutorial/fic/fic_theme",
+        "tutorial/http_login",
+        "tutorial/http_product_list",
+        "tutorial/http_product_form",
+        "tutorial/tf_login",
+        "tutorial/tf_register",
+        "tutorial/tf_product_list",
+        "tutorial/tf_product_form"
     ]
 }

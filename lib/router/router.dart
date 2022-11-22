@@ -868,6 +868,62 @@ getRouters({
         child: const FicThemeView(),
       ),
     ),
+          GoRoute(
+      path: '/http_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/http_product_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpProductListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/http_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const HttpProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_login',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfLoginView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_product_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfProductListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_product_form',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfProductFormView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_register',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfRegisterView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
