@@ -129,7 +129,101 @@ class DialogUiView extends StatefulWidget {
                     ],
                   ),
                 ],
-              )
+              ),
+              //soft alert
+              ExCard(
+                color: Colors.white,
+                width: MediaQuery.of(context).size.width * 0.8,
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(vertical: 4.0),
+                        width: MediaQuery.of(context).size.width,
+                        child: const Text(
+                          "Soft Alert",
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          ExButton(
+                              radius: 15,
+                              label: "primary",
+                              width: 100,
+                              color: primaryColor,
+                              onPressed: () {
+                                snackbarSoftPrimary(
+                                    message:
+                                        "primary - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                          ExButton(
+                              radius: 15,
+                              label: "secondary",
+                              width: 100,
+                              color: secondaryColor,
+                              onPressed: () {
+                                snackbarSoftSecondary(
+                                    message:
+                                        "secondary - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                          ExButton(
+                              radius: 15,
+                              label: "danger",
+                              width: 100,
+                              color: dangerColor,
+                              onPressed: () {
+                                snackbarSoftDanger(
+                                    message:
+                                        "danger - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                          ExButton(
+                              radius: 15,
+                              label: "success",
+                              width: 100,
+                              color: successColor,
+                              onPressed: () {
+                                snackbarSoftSuccess(
+                                    message:
+                                        "success - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                          ExButton(
+                              radius: 15,
+                              label: "info",
+                              width: 100,
+                              color: infoColor,
+                              onPressed: () {
+                                snackbarSoftInfo(
+                                    message:
+                                        "info - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                          ExButton(
+                              radius: 15,
+                              label: "warning",
+                              width: 100,
+                              color: warningColor,
+                              onPressed: () {
+                                snackbarSoftWarning(
+                                    message:
+                                        "warning - A sample alert -- check it out!",
+                                    duration: 1);
+                              }),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),
