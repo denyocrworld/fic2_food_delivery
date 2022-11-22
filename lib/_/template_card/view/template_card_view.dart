@@ -1,6 +1,5 @@
 import 'package:blur/blur.dart';
 import 'package:example/core.dart';
-import 'package:example/shared/widget/theme_editor/theme_icon.dart';
 import 'package:flutter/material.dart';
 import '../controller/template_card_controller.dart';
 

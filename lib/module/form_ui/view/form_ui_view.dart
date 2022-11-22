@@ -1,9 +1,5 @@
 import 'package:example/core.dart';
-import 'package:example/module/form_ui/view/form_ui_autocomplete_view.dart';
-import 'package:example/module/form_ui/view/form_ui_textfield_view.dart';
 import 'package:flutter/material.dart';
-
-import 'form_ui_switch_view.dart';
 
 class FormUiView extends StatefulWidget {
   const FormUiView({Key? key}) : super(key: key);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
 import '../controller/list_ui_controller.dart';
 
 class ListUiView extends StatefulWidget {
