@@ -60,7 +60,7 @@ class CardView extends StatefulWidget {
                       backgroundColor: Colors.blueGrey,
                     ),
                     onPressed: () {
-                      snackbarSuccess("Hello world!");
+                      snackbarSuccess(message: "Hello world!");
                     },
                   ),
                   ElevatedButton.icon(
@@ -70,7 +70,7 @@ class CardView extends StatefulWidget {
                       backgroundColor: Colors.blueGrey,
                     ),
                     onPressed: () {
-                      snackbarInfo("Hello world!");
+                      snackbarInfo(message: "Hello world!");
                     },
                   ),
                 ],

@@ -25,7 +25,7 @@ class DialogUiView extends StatefulWidget {
                     backgroundColor: Colors.blueGrey,
                   ),
                   onPressed: () {
-                    snackbarInfo("data1");
+                    snackbarInfo(message: "data1", duration: 1);
                   },
                 ),
               ]),
@@ -65,7 +65,9 @@ class DialogUiView extends StatefulWidget {
                               color: primaryColor,
                               onPressed: () {
                                 snackbarPrimary(
-                                    "primary - A sample alert -- check it out!");
+                                    message:
+                                        "primary - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                           ExButton(
                               radius: 15,
@@ -74,7 +76,9 @@ class DialogUiView extends StatefulWidget {
                               color: secondaryColor,
                               onPressed: () {
                                 snackbarSecondary(
-                                    "secondary - A sample alert -- check it out!");
+                                    message:
+                                        "secondary - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                           ExButton(
                               radius: 15,
@@ -83,7 +87,9 @@ class DialogUiView extends StatefulWidget {
                               color: dangerColor,
                               onPressed: () {
                                 snackbarDanger(
-                                    "danger - A sample alert -- check it out!");
+                                    message:
+                                        "danger - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                           ExButton(
                               radius: 15,
@@ -92,7 +98,9 @@ class DialogUiView extends StatefulWidget {
                               color: successColor,
                               onPressed: () {
                                 snackbarSuccess(
-                                    "success - A sample alert -- check it out!");
+                                    message:
+                                        "success - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                           ExButton(
                               radius: 15,
@@ -101,7 +109,9 @@ class DialogUiView extends StatefulWidget {
                               color: infoColor,
                               onPressed: () {
                                 snackbarInfo(
-                                    "info - A sample alert -- check it out!");
+                                    message:
+                                        "info - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                           ExButton(
                               radius: 15,
@@ -110,7 +120,9 @@ class DialogUiView extends StatefulWidget {
                               color: warningColor,
                               onPressed: () {
                                 snackbarWarning(
-                                    "warning - A sample alert -- check it out!");
+                                    message:
+                                        "warning - A sample alert -- check it out!",
+                                    duration: 1);
                               }),
                         ],
                       ),

@@ -14,52 +14,86 @@ import 'package:flutter/material.dart';
 // var disabledColor = Colors.grey[300]!;
 // var disabledTextColor = Colors.grey[800];
 
-snackbarPrimary(String message) {
+snackbarPrimary({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: primaryColor,
     content: Text(
       message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
     ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
-snackbarSecondary(String message) {
+snackbarSecondary({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: secondaryColor,
-    content: Text(message),
+    content: Text(
+      message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
-snackbarDanger(String message) {
+snackbarDanger({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: dangerColor,
-    content: Text(message),
+    content: Text(
+      message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
-snackbarSuccess(String message) {
+snackbarSuccess({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: successColor,
-    content: Text(message),
+    content: Text(
+      message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
-snackbarInfo(String message) {
+snackbarInfo({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: infoColor,
-    content: Text(message),
+    content: Text(
+      message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
 
-snackbarWarning(String message) {
+snackbarWarning({required String message, int duration = 4}) {
   var snackBar = SnackBar(
+    duration: Duration(seconds: duration),
     backgroundColor: warningColor,
-    content: Text(message),
+    content: Text(
+      message,
+      style: const TextStyle(
+        color: Colors.white,
+      ),
+    ),
   );
   ScaffoldMessenger.of(globalContext).showSnackBar(snackBar);
 }
