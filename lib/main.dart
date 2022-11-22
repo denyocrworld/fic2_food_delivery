@@ -13,19 +13,7 @@ TODO: ADA DI BIO
 
 ! Link Komunitas BERANDAL (UMUM)
 ? https://tinyurl.com/join-berandal
-//-----------------------------
-! Link Komunitas FUGI (KHUSUS DART & FLUTTER)
-? https://tinyurl.com/join-fugi
 */
-
-// MATERI HARI INI:
-// ! HTTP Request dengan Flutter
-// - Login
-// - CRUD Product
-// - Product List
-// - Create Product
-// - Update Product
-// - Delete Product
 
 void main() async {
   await initialize();
@@ -43,7 +31,7 @@ void main() async {
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     theme: ThemeData.dark(),
-    home: const TrView(),
+    home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
 

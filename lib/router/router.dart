@@ -924,6 +924,14 @@ getRouters({
         child: const TfRegisterView(),
       ),
     ),
+          GoRoute(
+      path: '/ui_dailiy_todo_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const UiDailiyTodoListView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

@@ -15,6 +15,7 @@
         "tutorial/tf_login",
         "tutorial/tf_register",
         "tutorial/tf_product_list",
-        "tutorial/tf_product_form"
+        "tutorial/tf_product_form",
+        "tutorial/ui_dailiy_todo_list"
     ]
 }

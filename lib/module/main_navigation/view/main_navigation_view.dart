@@ -743,6 +743,12 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/tf_register',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ui Dailiy Todo List',
+      route: '/ui_dailiy_todo_list',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

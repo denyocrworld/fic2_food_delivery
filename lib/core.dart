@@ -231,6 +231,8 @@ export 'package:example/module/tutorial/trsm_visibility/controller/trsm_visibili
 export 'package:example/module/tutorial/trsm_visibility/view/trsm_visibility_view.dart';
 export 'package:example/module/tutorial/tutorial_extension/controller/tutorial_extension_controller.dart';
 export 'package:example/module/tutorial/tutorial_extension/view/tutorial_extension_view.dart';
+export 'package:example/module/tutorial/ui_dailiy_todo_list/controller/ui_dailiy_todo_list_controller.dart';
+export 'package:example/module/tutorial/ui_dailiy_todo_list/view/ui_dailiy_todo_list_view.dart';
 export 'package:example/module/widget_ui/controller/widget_ui_controller.dart';
 export 'package:example/module/widget_ui/view/widget_ui_view.dart';
 export 'package:example/router/no_transition.dart';
