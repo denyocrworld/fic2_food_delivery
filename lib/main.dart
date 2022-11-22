@@ -13,6 +13,17 @@ TODO: ADA DI BIO
 
 ! Link Komunitas BERANDAL (UMUM)
 ? https://tinyurl.com/join-berandal
+
+
+- BASIC DART
+- COMMON WIDGET di FLUTTER
+  (CONTAINER, IMAGE, ICON, TEXT, dsb)
+- LAYOUT
+  (COLUMN, ROW, WRAP, STACK)
+- LIST
+  (LISTVIEW,GRIDVIEW)
+- NAVIGASI
+- STATE MANAGEMENT
 */
 
 void main() async {
