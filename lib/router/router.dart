@@ -932,6 +932,38 @@ getRouters({
         child: const UiDailiyTodoListView(),
       ),
     ),
+          GoRoute(
+      path: '/tk_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TkMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tk_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TkDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ovo_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const OvoDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ack_tutorial_cart',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const AckTutorialCartView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

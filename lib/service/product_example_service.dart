@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 class ProductExampleService {
   static Future<Map> getProducts() async {
     var response = await Dio().get(
-      "http://127.0.0.1:8080/deny/api/products",
+      "http://192.168.1.6:8080/deny/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -22,7 +22,7 @@ class ProductExampleService {
     required String description,
   }) async {
     var response = await Dio().post(
-      "http://127.0.0.1:8080/deny/api/products",
+      "http://192.168.1.6:8080/deny/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ class ProductExampleService {
     required String description,
   }) async {
     var response = await Dio().post(
-      "http://127.0.0.1:8080/deny/api/products/$id",
+      "http://192.168.1.6:8080/deny/api/products/$id",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ class ProductExampleService {
 
   static delete(dynamic id) async {
     var response = await Dio().delete(
-      "http://127.0.0.1:8080/deny/api/products/$id",
+      "http://192.168.1.6:8080/deny/api/products/$id",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -85,7 +85,7 @@ class ProductExampleService {
 
   static generateProducts() async {
     var response = await Dio().post(
-      "http://127.0.0.1:8080/deny/api/products",
+      "http://192.168.1.6:8080/deny/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",

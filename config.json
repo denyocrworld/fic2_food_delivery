@@ -16,6 +16,10 @@
         "tutorial/tf_register",
         "tutorial/tf_product_list",
         "tutorial/tf_product_form",
-        "tutorial/ui_dailiy_todo_list"
+        "tutorial/ui_dailiy_todo_list",
+        "tutorial/app/tiktok/tk_main_navigation",
+        "tutorial/app/tiktok/tk_dashboard",
+        "tutorial/app/ovo/ovo_dashboard",
+        "tutorial/acak/ack_tutorial_cart"
     ]
 }

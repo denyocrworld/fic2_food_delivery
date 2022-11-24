@@ -1,6 +1,6 @@
 import "package:hive/hive.dart";
 
-late LazyBox mainStorage;
+late Box mainStorage;
 
 class DBService {
   late Box mainStorage;

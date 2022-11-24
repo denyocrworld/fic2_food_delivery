@@ -749,6 +749,30 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ui_dailiy_todo_list',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tk Main Navigation',
+      route: '/tk_main_navigation',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tk Dashboard',
+      route: '/tk_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ovo Dashboard',
+      route: '/ovo_dashboard',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ack Tutorial Cart',
+      route: '/ack_tutorial_cart',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

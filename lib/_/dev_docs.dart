@@ -654,6 +654,21 @@ class DevDocsView extends StatelessWidget {
               ),
               //#END
 
+              SizedBox(
+                height: 0.0,
+                width: 0.0,
+                child: Scaffold(
+                  //#TEMPLATE floating_action_button
+                  floatingActionButton: FloatingActionButton(
+                    child: const Icon(Icons.add),
+                    onPressed: () {
+                      //
+                    },
+                  ),
+                  //#END
+                ),
+              ),
+
               //#TEMPLATE link
               Link(
                 uri: Uri.parse('https://www.youtube.com/c/CapekNgoding'),

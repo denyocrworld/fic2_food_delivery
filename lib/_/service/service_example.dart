@@ -1,10 +1,11 @@
 //#GROUP_TEMPLATE experimental_service
 import 'dart:io';
-import 'package:dio/dio.dart';
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:hive/hive.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:path_provider/path_provider.dart';
 
 class ServiceExampleView extends StatelessWidget {
   const ServiceExampleView({Key? key}) : super(key: key);
@@ -24,6 +25,28 @@ class ServiceExampleView extends StatelessWidget {
     });
     //#END
     */
+  }
+
+  getTemporaryDir() async {
+    //#TEMPLATE get_temporary_dir
+    var path = await getTemporaryDirectory();
+    //#END
+  }
+
+  hive() async {
+    //#TEMPLATE hive_init
+    var path = await getTemporaryDirectory();
+    Hive.init(path.path);
+    mainStorage = await Hive.openBox('mainStorage');
+    //#END
+
+    //#TEMPLATE hive_write
+    await mainStorage.put("mode", "legacy");
+    //#END
+
+    //#TEMPLATE hive_get
+    var value = await mainStorage.get("mode");
+    //#END
   }
 
   getLocation() async {

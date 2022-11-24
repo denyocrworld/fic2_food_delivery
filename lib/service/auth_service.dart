@@ -6,7 +6,7 @@ class AuthService {
     required String password,
   }) async {
     var response = await Dio().post(
-      "http://127.0.0.1:8080/deny/api/auth/action/login",
+      "http://192.168.1.6:8080/deny/api/auth/action/login",
       options: Options(
         headers: {
           "Content-Type": "application/json",

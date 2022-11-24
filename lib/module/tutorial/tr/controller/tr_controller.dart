@@ -256,6 +256,17 @@ class TrController extends State<TrView> implements MvcController {
     },
   ];
 
+  List uiExampleItems = [
+    {
+      "label": "Tiktok",
+      "view": const TkMainNavigationView(),
+    },
+    {
+      "label": "OVO",
+      "view": const OvoDashboardView(),
+    },
+  ];
+
   List stateManagementExerciseList = [
     {
       "label": "Counter",

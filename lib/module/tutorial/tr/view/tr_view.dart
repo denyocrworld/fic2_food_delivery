@@ -152,6 +152,26 @@ class TrView extends StatefulWidget {
                   ),
                 );
               }),
+              header("UI Example"),
+              LayoutBuilder(builder: (context, constraints) {
+                return Wrap(
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: List.generate(
+                    controller.uiExampleItems.length,
+                    (index) {
+                      var item = controller.uiExampleItems[index];
+                      var size = (constraints.biggest.width - (10 * 3)) / 4;
+                      return TutorialNavigationItem(
+                        item: item,
+                        size: size,
+                        index: index,
+                        color: Colors.cyan,
+                      );
+                    },
+                  ),
+                );
+              }),
               header("State Management Exercise"),
               LayoutBuilder(builder: (context, constraints) {
                 return Wrap(
