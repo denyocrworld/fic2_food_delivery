@@ -283,7 +283,7 @@ export 'package:example/shared/util/theme/dark_theme.dart';
 export 'package:example/shared/util/theme/elegant_theme.dart';
 export 'package:example/shared/util/theme/orang_theme.dart';
 export 'package:example/shared/util/theme/theme.dart';
-export 'package:example/shared/util/theme/theme_config.dart';
+export 'package:example/shared/util/theme/__config.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/color_changer.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/font_changer.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
