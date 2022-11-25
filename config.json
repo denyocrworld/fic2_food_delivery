@@ -20,6 +20,12 @@
         "tutorial/app/tiktok/tk_main_navigation",
         "tutorial/app/tiktok/tk_dashboard",
         "tutorial/app/ovo/ovo_dashboard",
-        "tutorial/acak/ack_tutorial_cart"
+        "tutorial/acak/ack_tutorial_cart",
+        "tutorial/ls_login",
+        "tutorial/ls_theme",
+        "tutorial/ls_product_list",
+        "tutorial/ls_product_form",
+        "tutorial/ls_form_history",
+        "tutorial/tr_basic_widget"
     ]
 }

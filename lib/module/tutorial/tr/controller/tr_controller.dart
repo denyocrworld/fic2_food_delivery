@@ -267,6 +267,25 @@ class TrController extends State<TrView> implements MvcController {
     },
   ];
 
+  List localStorageItems = [
+    {
+      "label": "Login",
+      "view": const LsLoginView(),
+    },
+    {
+      "label": "Theme",
+      "view": const LsThemeView(),
+    },
+    {
+      "label": "Product CRUD",
+      "view": const LsProductListView(),
+    },
+    {
+      "label": "Form History",
+      "view": const LsFormHistoryView(),
+    },
+  ];
+
   List stateManagementExerciseList = [
     {
       "label": "Counter",

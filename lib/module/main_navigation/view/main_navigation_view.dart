@@ -773,6 +773,42 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ack_tutorial_cart',
       items: [],
     ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ls Login',
+      route: '/ls_login',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ls Theme',
+      route: '/ls_theme',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ls Product List',
+      route: '/ls_product_list',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ls Product Form',
+      route: '/ls_product_form',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Ls Form History',
+      route: '/ls_form_history',
+      items: [],
+    ),
+          NavigationItem(
+      icon: const Icon(MdiIcons.web),
+      label: 'Tr Basic Widget',
+      route: '/tr_basic_widget',
+      items: [],
+    ),
           //@NAVIGATION_GENERATOR
   ];
 

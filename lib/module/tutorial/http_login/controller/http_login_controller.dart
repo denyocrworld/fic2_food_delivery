@@ -1,7 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/data/app_session.dart';
-import 'package:example/service/auth_service.dart';
-import 'package:example/shared/util/dialog/show_info_dialog.dart';
 import 'package:flutter/material.dart';
 
 class HttpLoginController extends State<HttpLoginView>
@@ -36,7 +33,7 @@ class HttpLoginController extends State<HttpLoginView>
       return;
     }
 
-    AppSession.token = obj["data"]["token"];
+    UserService.token = obj["data"]["token"];
 
     Get.to(const HttpProductListView());
     return;

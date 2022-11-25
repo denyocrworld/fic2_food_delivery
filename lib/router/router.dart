@@ -717,251 +717,299 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/ltsm_repeat_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmRepeatAnimationView(),
-      ),
-    ),
+            path: '/ltsm_repeat_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmRepeatAnimationView(),
+            ),
+          ),
           GoRoute(
-      path: '/ltsm_navigation_with_slide_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmNavigationWithSlideAnimationView(),
-      ),
-    ),
+            path: '/ltsm_navigation_with_slide_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmNavigationWithSlideAnimationView(),
+            ),
+          ),
           GoRoute(
-      path: '/ltsm_theme',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const LtsmThemeView(),
-      ),
-    ),
+            path: '/ltsm_theme',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LtsmThemeView(),
+            ),
+          ),
           GoRoute(
-      path: '/tutorial_extension',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TutorialExtensionView(),
-      ),
-    ),
+            path: '/tutorial_extension',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TutorialExtensionView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosLoginView(),
-      ),
-    ),
+            path: '/pos_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosLoginView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_main_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosMainNavigationView(),
-      ),
-    ),
+            path: '/pos_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosMainNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_product_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosProductListView(),
-      ),
-    ),
+            path: '/pos_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosProductListView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosProductFormView(),
-      ),
-    ),
+            path: '/pos_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_order',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosOrderView(),
-      ),
-    ),
+            path: '/pos_order',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosOrderView(),
+            ),
+          ),
           GoRoute(
-      path: '/pos_order_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const PosOrderListView(),
-      ),
-    ),
+            path: '/pos_order_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const PosOrderListView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_counter',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicCounterView(),
-      ),
-    ),
+            path: '/fic_counter',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicCounterView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_loading',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicLoadingView(),
-      ),
-    ),
+            path: '/fic_loading',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicLoadingView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_enable_or_disabled',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicEnableOrDisabledView(),
-      ),
-    ),
+            path: '/fic_enable_or_disabled',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicEnableOrDisabledView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_visibility',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicVisibilityView(),
-      ),
-    ),
+            path: '/fic_visibility',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicVisibilityView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_animation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicAnimationView(),
-      ),
-    ),
+            path: '/fic_animation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicAnimationView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicNavigationView(),
-      ),
-    ),
+            path: '/fic_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_cart',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicCartView(),
-      ),
-    ),
+            path: '/fic_cart',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicCartView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_filter_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicFilterListView(),
-      ),
-    ),
+            path: '/fic_filter_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicFilterListView(),
+            ),
+          ),
           GoRoute(
-      path: '/fic_theme',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const FicThemeView(),
-      ),
-    ),
+            path: '/fic_theme',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const FicThemeView(),
+            ),
+          ),
           GoRoute(
-      path: '/http_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HttpLoginView(),
-      ),
-    ),
+            path: '/http_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpLoginView(),
+            ),
+          ),
           GoRoute(
-      path: '/http_product_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HttpProductListView(),
-      ),
-    ),
+            path: '/http_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpProductListView(),
+            ),
+          ),
           GoRoute(
-      path: '/http_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const HttpProductFormView(),
-      ),
-    ),
+            path: '/http_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HttpProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_login',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfLoginView(),
-      ),
-    ),
+            path: '/tf_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfLoginView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_product_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfProductListView(),
-      ),
-    ),
+            path: '/tf_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfProductListView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_product_form',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfProductFormView(),
-      ),
-    ),
+            path: '/tf_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfProductFormView(),
+            ),
+          ),
           GoRoute(
-      path: '/tf_register',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TfRegisterView(),
-      ),
-    ),
+            path: '/tf_register',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TfRegisterView(),
+            ),
+          ),
           GoRoute(
-      path: '/ui_dailiy_todo_list',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const UiDailiyTodoListView(),
-      ),
-    ),
+            path: '/ui_dailiy_todo_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const UiDailiyTodoListView(),
+            ),
+          ),
           GoRoute(
-      path: '/tk_main_navigation',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TkMainNavigationView(),
-      ),
-    ),
+            path: '/tk_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TkMainNavigationView(),
+            ),
+          ),
           GoRoute(
-      path: '/tk_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TkDashboardView(),
-      ),
-    ),
+            path: '/tk_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TkDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/ovo_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const OvoDashboardView(),
-      ),
-    ),
+            path: '/ovo_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const OvoDashboardView(),
+            ),
+          ),
           GoRoute(
-      path: '/ack_tutorial_cart',
+            path: '/ack_tutorial_cart',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const AckTutorialCartView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsLoginView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_theme',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsThemeView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsProductListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_product_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsProductFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_form_history',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsFormHistoryView(),
+            ),
+          ),
+          GoRoute(
+      path: '/tr_basic_widget',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const AckTutorialCartView(),
+        child: const TrBasicWidgetView(),
       ),
     ),
           //@ROUTER_GENERATOR

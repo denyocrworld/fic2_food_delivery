@@ -1,16 +1,13 @@
-import 'package:example/_/template_card/view/template_card_view.dart';
 import 'package:example/core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
-TODO: ADA DI BIO
-! Link Youtube
-? https://youtube.com/@capekngoding
+! LINK GMEET
+? https://tinyurl.com/GMEET-NOW
 
-! Link Komunitas BERANDAL (UMUM)
+! Link Komunitas (GENERAL)
 ? https://tinyurl.com/join-berandal
 
 ! Link Komunitas DART & FLUTTER
@@ -20,36 +17,29 @@ TODO: ADA DI BIO
 
 void main() async {
   await initialize();
-  if (!kIsWeb) {
-    // if (Platform.isWindows) {
-    //   var path = Directory.current.path;
-    //   Hive.init(path);
-    //   mainStorage = await Hive.openLazyBox('mainStorage');
-    // } else if (Platform.isAndroid) {
-    //   var path = await getTemporaryDirectory();
-    //   Hive.init(path.path);
-    //   mainStorage = await Hive.openLazyBox('mainStorage');
-    // }
-    var path = await getTemporaryDirectory();
-    Hive.init(path.path);
-    mainStorage = await Hive.openBox('mainStorage');
+  // windows, android, ios
+  var path = await getTemporaryDirectory();
+  Hive.init(path.path);
+  mainStorage = await Hive.openBox('mainStorage');
 
-    print("mainStorage.isOpen: ${mainStorage.isOpen}");
-    print("storage: ${await mainStorage.get("mode")}");
-    print("-----");
+  await UserService.load();
+  await ThemeService.load();
+  await LocalProductService.load();
+  await FormHistoryService.load();
 
-    await mainStorage.put("mode", "JRocks");
-    await DBService().load();
-  }
+  // print("mainStorage.isOpen: ${mainStorage.isOpen}");
+  // print("storage: ${await mainStorage.get("token")}");
+  // print("-----");
+  // await mainStorage.put("mode", "JRocks");
 
   return runApp(MaterialApp(
     title: 'Capek Ngoding',
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     theme: ThemeData.dark(),
-    home: const TemplateCardView(),
+    // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
-    // home: const TrView(),
+    home: const TrBasicWidgetView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
