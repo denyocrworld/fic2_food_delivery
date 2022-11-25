@@ -1,5 +1,6 @@
-import 'package:example/core.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core.dart';
 
 class ExNavigationItem {
   final String? label;

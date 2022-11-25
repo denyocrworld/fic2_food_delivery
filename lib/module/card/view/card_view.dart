@@ -1,5 +1,5 @@
 import 'package:example/core.dart';
-import 'package:example/shared/util/show_snackbar/show_snackbar.dart';
+
 import 'package:flutter/material.dart';
 
 class CardView extends StatefulWidget {

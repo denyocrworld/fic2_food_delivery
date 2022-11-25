@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+
 import '../controller/dialog_ui_controller.dart';
 
 class DialogUiView extends StatefulWidget {

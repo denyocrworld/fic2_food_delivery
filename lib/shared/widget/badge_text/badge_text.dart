@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:example/core.dart';
+
 import 'package:flutter/material.dart';
 
 class BadgeText extends StatefulWidget {
