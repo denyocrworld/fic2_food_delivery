@@ -6,6 +6,26 @@ import '../widget/tr_list.dart';
 class TrView extends StatefulWidget {
   const TrView({Key? key}) : super(key: key);
 
+  title(String title) {
+    return SizedBox(
+      width: MediaQuery.of(globalContext).size.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.0,
+            ),
+          ),
+          const Divider(),
+        ],
+      ),
+    );
+  }
+
   Widget build(context, TrController controller) {
     controller.view = this;
 
@@ -19,6 +39,7 @@ class TrView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              title("Example"),
               TrList(
                 title: "FIC State Management",
                 items: controller.ficStateManagementList,
@@ -54,6 +75,7 @@ class TrView extends StatefulWidget {
                 items: controller.localStorageItems,
                 color: Colors.brown,
               ),
+              title("Exercise"),
               TrList(
                 title: "State Management Exercise",
                 items: controller.stateManagementExerciseList,
