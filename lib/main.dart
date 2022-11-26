@@ -4,15 +4,15 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
-! LINK GMEET
-? https://tinyurl.com/GMEET-NOW
-
-! Link Komunitas (GENERAL)
+! Link Komunitas BERANDAL (GENERAL)
 ? https://tinyurl.com/join-berandal
 
-! Link Komunitas DART & FLUTTER
+! Link Komunitas FUGI (DART & FLUTTER)
 ? https://tinyurl.com/join-fugi
 
+FIC (FREE)
+Selasa, Rabu, dan Kamis
+19:00 - 20:00
 */
 
 void main() async {
@@ -39,7 +39,8 @@ void main() async {
     theme: ThemeData.dark(),
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
-    home: const TrBasicWidgetView(),
+    // home: const TrBasicWidgetView(),
+    home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
