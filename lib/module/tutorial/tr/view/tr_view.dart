@@ -1,30 +1,8 @@
-import 'package:example/module/tutorial/tr/widget/form_example.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../widget/tr_list.dart';
 
 class TrView extends StatefulWidget {
   const TrView({Key? key}) : super(key: key);
-
-  title(String title) {
-    return SizedBox(
-      width: MediaQuery.of(globalContext).size.width,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            textAlign: TextAlign.left,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18.0,
-            ),
-          ),
-          const Divider(),
-        ],
-      ),
-    );
-  }
 
   Widget build(context, TrController controller) {
     controller.view = this;
@@ -89,12 +67,12 @@ class TrView extends StatefulWidget {
               ),
               TrList(
                 title: "Local Storage Exercise",
-                items: controller.formExerciseList,
+                items: controller.lsExerciseList,
                 color: Colors.blueAccent,
               ),
               TrList(
                 title: "HTTP Exercise",
-                items: controller.formExerciseList,
+                items: controller.httpExerciseList,
                 color: Colors.purple,
               ),
               TrList(
@@ -102,9 +80,32 @@ class TrView extends StatefulWidget {
                 items: controller.formExerciseList,
                 color: Colors.orange,
               ),
+              const SizedBox(
+                height: 200.0,
+              ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  title(String title) {
+    return SizedBox(
+      width: MediaQuery.of(globalContext).size.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            textAlign: TextAlign.left,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.0,
+            ),
+          ),
+          const Divider(),
+        ],
       ),
     );
   }

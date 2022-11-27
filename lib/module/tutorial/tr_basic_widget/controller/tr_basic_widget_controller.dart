@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tr_basic_widget_view.dart';
@@ -30,4 +31,29 @@ class TrBasicWidgetController extends State<TrBasicWidgetView>
   Widget build(BuildContext context) => widget.build(context, this);
 
   bool animated = false;
+
+  List users = [];
+  bool loading = false;
+  loadUsers() async {
+    loading = true;
+    users = [];
+    setState(() {});
+
+    var response = await Dio().get(
+      "https://reqres.in/api/users",
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+        },
+      ),
+    );
+
+    // await Future.delayed(const Duration(seconds: 2));
+
+    Map obj = response.data;
+    print(obj);
+    users = obj["data"];
+    loading = false;
+    setState(() {});
+  }
 }

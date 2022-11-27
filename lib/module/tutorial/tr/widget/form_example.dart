@@ -1,6 +1,5 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../core.dart';
 
 class TrFormExample extends StatelessWidget {
   const TrFormExample({Key? key}) : super(key: key);

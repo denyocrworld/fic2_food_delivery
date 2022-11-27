@@ -195,14 +195,6 @@ getRouters({
             ),
           ),
           GoRoute(
-            path: '/example',
-            pageBuilder: (context, state) => noTransition(
-              context: context,
-              state: state,
-              child: const ExampleView(),
-            ),
-          ),
-          GoRoute(
             path: '/badge_ui',
             pageBuilder: (context, state) => noTransition(
               context: context,
@@ -1005,13 +997,197 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/tr_basic_widget',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TrBasicWidgetView(),
-      ),
-    ),
+            path: '/tr_basic_widget',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TrBasicWidgetView(),
+            ),
+          ),
+          // GoRoute(
+          //   path: '/tr_basic_detail',
+          //   pageBuilder: (context, state) => noTransition(
+          //     context: context,
+          //     state: state,
+          //     child: TrBasicDetailView(),
+          //   ),
+          // ),
+          GoRoute(
+            path: '/ls_first_time_setup',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsFirstTimeSetupView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_login_and_save_token',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsLoginAndSaveTokenView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_create_pin',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsCreatePinView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_login_by_pin',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsLoginByPinView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_customer_crud',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsCustomerCrudView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_product_crud',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsProductCrudView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_pos',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsPosView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_pos_with_table_selection',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsPosWithTableSelectionView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_favorite',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsFavoriteView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_user_setting',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsUserSettingView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ls_login_form_with_history',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const LsLoginFormWithHistoryView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_login',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtLoginView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_product_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtProductListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_image_galleries',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtImageGalleriesView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_statistic_card',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtStatisticCardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_line_chart',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtLineChartView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_pie_chart',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtPieChartView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_todo_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtTodoListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_product_crud_list',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtProductCrudListView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_product_crud_form',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtProductCrudFormView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ht_map_marker',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const HtMapMarkerView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

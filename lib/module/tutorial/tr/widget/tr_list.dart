@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
-import '../../../../core.dart';
+import 'package:example/core.dart';
 
 class TrList extends StatefulWidget {
   final String title;
