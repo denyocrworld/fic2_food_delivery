@@ -18,10 +18,8 @@ class HtProductCrudFormView extends StatefulWidget {
   16. ok, bagus lanjut ke point 17
   buka HtProductCrudFormController
   */
-  final Map? item;
   const HtProductCrudFormView({
     Key? key,
-    this.item,
   }) : super(key: key);
 
   Widget build(context, HtProductCrudFormController controller) {
@@ -49,7 +47,7 @@ class HtProductCrudFormView extends StatefulWidget {
           child: Container(
             padding: const EdgeInsets.all(20.0),
             child: Column(
-              children: [
+              children: const [
                 /*
                 TODO: --
                 2. buat variabel photo, productName dan price
@@ -122,42 +120,6 @@ class HtProductCrudFormView extends StatefulWidget {
                 lanjut ke point 25
                 (cek bagian kode yang memiliki InkWell di dalam ListViewBuilder)
                 */
-                QImagePicker(
-                  label: "Photo",
-                  hint: "Your photo",
-                  validator: Validator.required,
-                  value: controller.photo,
-                  onChanged: (value) {
-                    controller.photo = value;
-                  },
-                ),
-                QTextField(
-                  label: "Product name",
-                  hint: "product name",
-                  validator: Validator.required,
-                  value: controller.productName,
-                  onChanged: (value) {
-                    controller.productName = value;
-                  },
-                ),
-                QNumberField(
-                  label: "Price",
-                  hint: "product price",
-                  validator: Validator.required,
-                  value: controller.price.toString(),
-                  onChanged: (value) {
-                    controller.price = double.parse(value);
-                  },
-                ),
-                QMemoField(
-                  label: "Description",
-                  hint: "Your addresses",
-                  validator: Validator.required,
-                  value: controller.description,
-                  onChanged: (value) {
-                    controller.description = value;
-                  },
-                ),
               ],
             ),
           ),

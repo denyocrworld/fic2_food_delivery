@@ -77,7 +77,7 @@ class HtProductCrudListController extends State<HtProductCrudListView>
 
     //TODO: --
     /*
-    33. ketika user melakukan klik ke tombol delete di dalam item
+    33A. ketika user melakukan klik ke tombol delete di dalam item
     maka product tersebut akan di hapus.
     Jadi, buatlah sebuah http request
     !snippet : dio_delete
@@ -86,22 +86,17 @@ class HtProductCrudListController extends State<HtProductCrudListView>
     @URL
     "${AppConfig.baseUrl}/products/$id",
 
+    33B. Ubah variabel id menjadi:
+    var id = item["id"]
+
     34. Ok, klik tombol delete, jika data terhapus dari list
     Maka tasks PRODUCT CRUD selesai
     Whuff~
     */
 
-    var id = item["id"];
-    var response = await Dio().delete(
-      "${AppConfig.baseUrl}/products/$id",
-      options: Options(
-        headers: {
-          "Content-Type": "application/json",
-        },
-      ),
-    );
-    print(response.statusCode);
-
+    //! #############################
+    //! Jangan ubah kode dibawah
+    //! #############################
     await loadProducts();
     hideLoading();
   }
