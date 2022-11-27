@@ -66,14 +66,14 @@ class TrView extends StatefulWidget {
                 head: const TrFormExample(),
               ),
               TrList(
-                title: "Local Storage Exercise",
-                items: controller.lsExerciseList,
-                color: Colors.blueAccent,
-              ),
-              TrList(
                 title: "HTTP Exercise",
                 items: controller.httpExerciseList,
                 color: Colors.purple,
+              ),
+              TrList(
+                title: "Local Storage Exercise",
+                items: controller.lsExerciseList,
+                color: Colors.blueAccent,
               ),
               TrList(
                 title: "Firebase Exercise",
