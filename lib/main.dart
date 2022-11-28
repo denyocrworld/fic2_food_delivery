@@ -12,8 +12,8 @@ import 'package:path_provider/path_provider.dart';
 void main() async {
   await initialize();
   // windows, android, ios
-  var path = await getTemporaryDirectory();
-  Hive.init(path.path);
+  // var path = await getTemporaryDirectory();
+  // Hive.init(path.path);
   mainStorage = await Hive.openBox('mainStorage');
 
   await UserService.load();
