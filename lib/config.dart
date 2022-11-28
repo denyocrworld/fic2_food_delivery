@@ -1,6 +1,13 @@
 class AppConfig {
-  static String yourName = "DDeny";
+  //# CONFIG
+  static String yourName = "Deny";
+  static String phoneNumber = "082146727409";
+  //# ---------------------------------------
+  //# ---------------------------------------
+
   static String get baseUrl {
-    return "http://capekngoding.com:8080/$yourName/api";
+    var storage = yourName.replaceAll(" ", "-").toLowerCase();
+    storage = "$storage-$phoneNumber";
+    return "http://capekngoding.com:8080/$storage/api";
   }
 }
