@@ -75,9 +75,9 @@ class TrView extends StatefulWidget {
                 items: controller.lsExerciseList,
                 color: Colors.blueAccent,
               ),
-              TrList(
-                title: "Firebase Exercise",
-                items: controller.formExerciseList,
+              const TrList(
+                title: "Firebase Exercise (Coming Soon)",
+                items: [],
                 color: Colors.orange,
               ),
               const SizedBox(

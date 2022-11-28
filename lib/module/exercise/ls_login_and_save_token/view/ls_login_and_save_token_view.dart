@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-import '../controller/ls_login_and_save_token_controller.dart';
 
 class LsLoginAndSaveTokenView extends StatefulWidget {
   const LsLoginAndSaveTokenView({Key? key}) : super(key: key);
@@ -15,9 +14,37 @@ class LsLoginAndSaveTokenView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: const [],
+            children: [
+              QTextField(
+                label: "Email",
+                hint: "Your email",
+                validator: Validator.email,
+                value: controller.email,
+                onChanged: (value) {
+                  controller.email = value;
+                },
+              ),
+              QTextField(
+                label: "Password",
+                hint: "Your password",
+                obscure: true,
+                validator: Validator.required,
+                value: controller.password,
+                onChanged: (value) {
+                  controller.password = value;
+                },
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.login),
+                label: const Text("Login"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () => controller.doLogin(),
+              ),
+            ],
           ),
         ),
       ),
@@ -25,5 +52,6 @@ class LsLoginAndSaveTokenView extends StatefulWidget {
   }
 
   @override
-  State<LsLoginAndSaveTokenView> createState() => LsLoginAndSaveTokenController();
+  State<LsLoginAndSaveTokenView> createState() =>
+      LsLoginAndSaveTokenController();
 }

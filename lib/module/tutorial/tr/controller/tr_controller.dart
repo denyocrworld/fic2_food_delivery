@@ -372,6 +372,49 @@ class TrController extends State<TrView> implements MvcController {
     },
   ];
 
+  List httpExerciseList = [
+    {
+      "label": "Login",
+      "view": const HtLoginView(),
+    },
+    {
+      "label": "Product List",
+      "view": const HtProductListView(),
+    },
+    {
+      "label": "Dashboard",
+      "view": const HtDashboardView(),
+    },
+    {
+      "label": "Image Galleries",
+      "view": const HtImageGalleriesView(),
+    },
+    {
+      "label": "Statistic Card",
+      "view": const HtStatisticCardView(),
+    },
+    {
+      "label": "Line Chart",
+      "view": const HtLineChartView(),
+    },
+    {
+      "label": "Pie Chart",
+      "view": const HtPieChartView(),
+    },
+    {
+      "label": "Todolist",
+      "view": const HtTodoListView(),
+    },
+    {
+      "label": "Product CRUD",
+      "view": const HtProductCrudListView(),
+    },
+    {
+      "label": "Map Marker",
+      "view": const HtMapMarkerView(),
+    },
+  ];
+
   List lsExerciseList = [
     {
       "label": "First Time Setup",
@@ -416,49 +459,6 @@ class TrController extends State<TrView> implements MvcController {
     {
       "label": "User Setting",
       "view": const LsUserSettingView(),
-    },
-  ];
-
-  List httpExerciseList = [
-    {
-      "label": "Login",
-      "view": const HtLoginView(),
-    },
-    {
-      "label": "Product List",
-      "view": const HtProductListView(),
-    },
-    {
-      "label": "Dashboard",
-      "view": const HtDashboardView(),
-    },
-    {
-      "label": "Image Galleries",
-      "view": const HtImageGalleriesView(),
-    },
-    {
-      "label": "Statistic Card",
-      "view": const HtStatisticCardView(),
-    },
-    {
-      "label": "Line Chart",
-      "view": const HtLineChartView(),
-    },
-    {
-      "label": "Pie Chart",
-      "view": const HtPieChartView(),
-    },
-    {
-      "label": "Todolist",
-      "view": const HtTodoListView(),
-    },
-    {
-      "label": "Product CRUD",
-      "view": const HtProductCrudListView(),
-    },
-    {
-      "label": "Map Marker",
-      "view": const HtMapMarkerView(),
     },
   ];
 }

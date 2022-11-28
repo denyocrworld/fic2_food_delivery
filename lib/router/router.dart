@@ -1188,6 +1188,22 @@ getRouters({
               child: const HtMapMarkerView(),
             ),
           ),
+          GoRoute(
+      path: '/tr_example',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TrExampleView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ls_first_time_setup_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const LsFirstTimeSetupDashboardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),
