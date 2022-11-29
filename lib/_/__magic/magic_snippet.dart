@@ -6,6 +6,73 @@ import '../cursor.dart';
 class MagicSnippetView extends StatelessWidget {
   const MagicSnippetView({Key? key}) : super(key: key);
 
+  test() {
+    /*
+  //#TEMPLATE rq 
+  required 
+  //#END
+  //#TEMPLATE dur100
+  duration: const Duration(milliseconds: 100),
+  //#END
+  //#TEMPLATE dur200
+  duration: const Duration(milliseconds: 200),
+  //#END
+  //#TEMPLATE dur300
+  duration: const Duration(milliseconds: 300),
+  //#END
+  //#TEMPLATE dur400
+  duration: const Duration(milliseconds: 400),
+  //#END
+  //#TEMPLATE dur500
+  duration: const Duration(milliseconds: 500),
+  //#END
+  //#TEMPLATE dur600
+  duration: const Duration(milliseconds: 600),
+  //#END
+  //#TEMPLATE dur700
+  duration: const Duration(milliseconds: 700),
+  //#END
+  //#TEMPLATE dur800
+  duration: const Duration(milliseconds: 800),
+  //#END
+  //#TEMPLATE dur900
+  duration: const Duration(milliseconds: 900),
+  //#END
+  //#TEMPLATE dur1000
+  duration: const Duration(milliseconds: 1000),
+  //#END
+  //#TEMPLATE dur1100
+  duration: const Duration(milliseconds: 1100),
+  //#END
+  //#TEMPLATE dur1200
+  duration: const Duration(milliseconds: 1200),
+  //#END
+  //#TEMPLATE dur1300
+  duration: const Duration(milliseconds: 1300),
+  //#END
+  //#TEMPLATE dur1400
+  duration: const Duration(milliseconds: 1400),
+  //#END
+  //#TEMPLATE dur1500
+  duration: const Duration(milliseconds: 1500),
+  //#END
+  //#TEMPLATE dur1600
+  duration: const Duration(milliseconds: 1600),
+  //#END
+  //#TEMPLATE dur1700
+  duration: const Duration(milliseconds: 1700),
+  //#END
+  //#TEMPLATE dur1800
+  duration: const Duration(milliseconds: 1800),
+  //#END
+  //#TEMPLATE dur1900
+  duration: const Duration(milliseconds: 1900),
+  //#END
+  //#TEMPLATE dur2000
+  duration: const Duration(milliseconds: 2000),
+  //#END
+  */
+  }
   @override
   Widget build(BuildContext context) {
     /*

@@ -38,8 +38,8 @@ void main() async {
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    // home: const TrExampleView(),
-    home: const TrView(),
+    home: const TrExampleView(),
+    // home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));

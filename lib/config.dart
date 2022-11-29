@@ -1,7 +1,7 @@
 class AppConfig {
   //# CONFIG
-  static String yourName = "Deny";
-  static String phoneNumber = "082146727409";
+  static String yourName = "DenyOcr";
+  static String phoneNumber = "082146727433";
   //# ---------------------------------------
   //# ---------------------------------------
 
