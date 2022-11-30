@@ -1204,6 +1204,78 @@ getRouters({
               child: const LsFirstTimeSetupDashboardView(),
             ),
           ),
+          GoRoute(
+      path: '/tf_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfDashboardView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_profile',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfProfileView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tf_user_list',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TfUserListView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tc_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TcNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tc_dialog',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TcDialogView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tc_bottom_sheet',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TcBottomSheetView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tc_snackbar',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TcSnackbarView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tc_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TcDashboardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

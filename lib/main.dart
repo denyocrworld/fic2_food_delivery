@@ -6,10 +6,9 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
-! Link Komunitas BERANDAL (GENERAL)
-? https://tinyurl.com/join-berandal
+! JOIN KOMUNITAS
+! https://tinyurl.com/join-berandal
 */
-
 void main() async {
   await initialize();
   // windows, android, ios
@@ -38,8 +37,8 @@ void main() async {
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    home: const TrExampleView(),
-    // home: const TrView(),
+    // home: const TrExampleView(),
+    home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));

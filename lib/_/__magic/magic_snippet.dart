@@ -8,9 +8,6 @@ class MagicSnippetView extends StatelessWidget {
 
   test() {
     /*
-  //#TEMPLATE rq 
-  required 
-  //#END
   //#TEMPLATE dur100
   duration: const Duration(milliseconds: 100),
   //#END
@@ -70,6 +67,18 @@ class MagicSnippetView extends StatelessWidget {
   //#END
   //#TEMPLATE dur2000
   duration: const Duration(milliseconds: 2000),
+  //#END
+  */
+
+    /*
+  //#TEMPLATE msd
+  Map<String,dynamic>
+  //#END
+  //#TEMPLATE lmsd
+  List<Map<String,dynamic>>
+  //#END
+  //#TEMPLATE rq
+  required
   //#END
   */
   }
