@@ -48,6 +48,22 @@ class CgModuleFormView extends StatefulWidget {
                 controller.moduleName = value;
               },
             ),
+            QDropdownField(
+              label: "Roles",
+              hint: "Your roles",
+              validator: Validator.required,
+              items: const [
+                {
+                  "label": "Admin",
+                  "value": 1,
+                },
+                {
+                  "label": "Staff",
+                  "value": 2,
+                }
+              ],
+              onChanged: (value, label) {},
+            ),
             const Divider(),
             Container(
               padding: const EdgeInsets.symmetric(vertical: 4.0),
