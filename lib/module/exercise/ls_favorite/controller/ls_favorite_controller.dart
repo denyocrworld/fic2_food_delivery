@@ -49,7 +49,7 @@ class LsFavoriteController extends State<LsFavoriteView>
     ###
 
     5. Panggil setState setelah-nya
-    6. Panggil saveLocalStorage setelah setState
+    6. Panggil saveToLocalStorage setelah setState
     7. Coba klik icon favorite di list bagian bawah,
     Apakah product yang kamu favoritkan muncul di list bagian atas?
     Jika muncul, coba hot-restart aplikasi-nya.
