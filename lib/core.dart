@@ -4,6 +4,7 @@ If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
 export 'package:example/model/sales_data.dart';
+export 'package:example/module/avatar_ui/widget/avatar_ui.dart';
 export 'package:example/module/dev/appbar_ui/controller/appbar_ui_controller.dart';
 export 'package:example/module/dev/appbar_ui/view/appbar_ui_view.dart';
 export 'package:example/module/dev/avatar_ui/controller/avatar_ui_controller.dart';
@@ -72,6 +73,7 @@ export 'package:example/module/dev/_/dialog_snippet.dart';
 export 'package:example/module/dev/_/future/future_builder.dart';
 export 'package:example/module/dev/_/grid/grid.dart';
 export 'package:example/module/dev/_/http/dio_template.dart';
+export 'package:example/module/dev/_/http/http_template.dart';
 export 'package:example/module/dev/_/layout/template_layour.dart';
 export 'package:example/module/dev/_/layout/template_layout_builder.dart';
 export 'package:example/module/dev/_/layout/template_orientation_builder.dart';
@@ -88,6 +90,10 @@ export 'package:example/module/dev/_/scaffold/scaffold_simple.dart';
 export 'package:example/module/dev/_/scaffold/scaffold_sliver_appbar.dart';
 export 'package:example/module/dev/_/scaffold/scaffold_tabbar_vertical.dart';
 export 'package:example/module/dev/_/service/service_example.dart';
+export 'package:example/module/dev/_/stateless_and_statefull/reuseable_widget.dart';
+export 'package:example/module/dev/_/stateless_and_statefull/statefull_widget.dart';
+export 'package:example/module/dev/_/stateless_and_statefull/statefull_widget_snippet.dart';
+export 'package:example/module/dev/_/stateless_and_statefull/stateless_widget.dart';
 export 'package:example/module/dev/_/templates/card/card_template.dart';
 export 'package:example/module/dev/_/templates/chat_detail.dart';
 export 'package:example/module/dev/_/templates/chat_list.dart';
@@ -424,6 +430,7 @@ export 'package:example/shared/util/firebase_notification/notification_controlle
 export 'package:example/shared/util/focus_helper/focus_helper.dart';
 export 'package:example/shared/util/input/input.dart';
 export 'package:example/shared/util/random_image/random_image.dart';
+export 'package:example/shared/util/responsive/responsive.dart';
 export 'package:example/shared/util/show_loading/show_loading.dart';
 export 'package:example/shared/util/show_snackbar/show_snackbar.dart';
 export 'package:example/shared/util/string_extension/string_extension.dart';
