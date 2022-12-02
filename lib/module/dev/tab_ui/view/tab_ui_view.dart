@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/module/dev/tab_ui/view/tab_ui_view.dart
-
-=======
->>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/tab_ui/view/tab_ui_view.dart
 import '../controller/tab_ui_controller.dart';
 
 class TabUiView extends StatefulWidget {

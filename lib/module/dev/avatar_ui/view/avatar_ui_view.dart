@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/module/dev/avatar_ui/view/avatar_ui_view.dart
-
-import '../controller/avatar_ui_controller.dart';
-=======
 import '../widget/avatar_ui.dart';
 import 'package:example/core.dart';
->>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/avatar_ui/view/avatar_ui_view.dart
 
 class AvatarUiView extends StatefulWidget {
   const AvatarUiView({Key? key}) : super(key: key);

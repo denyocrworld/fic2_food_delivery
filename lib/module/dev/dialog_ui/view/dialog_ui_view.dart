@@ -1,10 +1,6 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD:lib/module/dev/dialog_ui/view/dialog_ui_view.dart
-
-import '../controller/dialog_ui_controller.dart';
-=======
 import '../../../core.dart';
->>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/dialog_ui/view/dialog_ui_view.dart
 
 class DialogUiView extends StatefulWidget {
   const DialogUiView({Key? key}) : super(key: key);
