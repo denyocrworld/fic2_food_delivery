@@ -1,4 +1,4 @@
-import 'package:example/_/cursor.dart';
+import 'package:example/module/dev/_/cursor.dart';
 import 'package:flutter/material.dart';
 
 class TemplateLayout extends StatelessWidget {
