@@ -1,5 +1,8 @@
 import 'package:example/core.dart';
+<<<<<<< HEAD:lib/module/dev/card/view/card_view.dart
 
+=======
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/card/view/card_view.dart
 import 'package:flutter/material.dart';
 
 class CardView extends StatefulWidget {
@@ -61,7 +64,7 @@ class CardView extends StatefulWidget {
                       backgroundColor: Colors.blueGrey,
                     ),
                     onPressed: () {
-                      snackbarSuccess("Hello world!");
+                      snackbarSuccess(message: "Hello world!");
                     },
                   ),
                   ElevatedButton.icon(
@@ -71,7 +74,7 @@ class CardView extends StatefulWidget {
                       backgroundColor: Colors.blueGrey,
                     ),
                     onPressed: () {
-                      snackbarInfo("Hello world!");
+                      snackbarInfo(message: "Hello world!");
                     },
                   ),
                 ],

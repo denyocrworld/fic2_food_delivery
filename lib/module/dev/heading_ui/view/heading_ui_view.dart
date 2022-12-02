@@ -1,4 +1,7 @@
+<<<<<<< HEAD:lib/module/dev/heading_ui/view/heading_ui_view.dart
 
+=======
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/heading_ui/view/heading_ui_view.dart
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 

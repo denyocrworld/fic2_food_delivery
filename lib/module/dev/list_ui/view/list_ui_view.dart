@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/module/dev/list_ui/view/list_ui_view.dart
 
+=======
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/list_ui/view/list_ui_view.dart
 import '../controller/list_ui_controller.dart';
 
 class ListUiView extends StatefulWidget {

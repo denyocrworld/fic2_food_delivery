@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/module/dev/navigation_ui/view/navigation_ui_view.dart
 
+=======
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/navigation_ui/view/navigation_ui_view.dart
 import '../controller/navigation_ui_controller.dart';
 
 class NavigationUiView extends StatefulWidget {

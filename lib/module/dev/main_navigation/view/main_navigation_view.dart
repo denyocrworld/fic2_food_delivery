@@ -1,3 +1,5 @@
+// ignore_for_file: dead_code
+
 import 'package:example/core.dart';
 
 import 'package:flutter/material.dart';
@@ -575,6 +577,7 @@ class MainNavigationViewState extends State<MainNavigationView> {
       route: '/ltfm_reset_password',
       items: [],
     ),
+<<<<<<< HEAD:lib/module/dev/main_navigation/view/main_navigation_view.dart
     NavigationItem(
       icon: const Icon(MdiIcons.web),
       label: 'Trsm Scroll',
@@ -948,6 +951,9 @@ class MainNavigationViewState extends State<MainNavigationView> {
       items: [],
     ),
           //@NAVIGATION_GENERATOR
+=======
+    //@NAVIGATION_GENERATOR
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/main_navigation/view/main_navigation_view.dart
   ];
 
   @override

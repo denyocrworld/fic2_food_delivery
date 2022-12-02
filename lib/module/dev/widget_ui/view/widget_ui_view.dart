@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD:lib/module/dev/widget_ui/view/widget_ui_view.dart
 
+=======
+>>>>>>> b5b206a3e8f6f394a9e0d9b7160786169dd9ded6:lib/module/widget_ui/view/widget_ui_view.dart
 import '../controller/widget_ui_controller.dart';
 
 class WidgetUiView extends StatefulWidget {
