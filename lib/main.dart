@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
+/*
+LINK KOMUNITAS
+! https://tinyurl.com/join-berandal
+*/
 void main() async {
   await initialize();
   // windows, android, ios
@@ -33,8 +37,8 @@ void main() async {
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    home: const TrExampleView(),
-    // home: const TrView(),
+    // home: const TrExampleView(),
+    home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
@@ -45,3 +49,14 @@ void main() async {
     routerConfig: getRouters(),
   ));
 }
+
+
+/*
+CRUD Generator
+data-nya bisa di custom secara realtime.
+Bisa ditentukan jenis textfield-nya:
+- textfield
+- numberfield
+- photo
+- memofield
+*/
