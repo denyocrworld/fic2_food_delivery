@@ -1,4 +1,3 @@
-import 'package:example/module/dev/_/cursor.dart';
 import 'package:flutter/material.dart';
 
 class TemplateLayout extends StatelessWidget {
@@ -6,6 +5,7 @@ class TemplateLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var CURSOR_1 = Container();
     //#GROUP_TEMPLATE layout
 
     return Scaffold(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:example/module/dev/_/scaffold/scaffold.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_drawer.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_image.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_ovo.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_simple.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_sliver_appbar.dart';
-import 'package:example/module/dev/_/scaffold/scaffold_tabbar_vertical.dart';
+import 'package:example/_/scaffold/scaffold.dart';
+import 'package:example/_/scaffold/scaffold_drawer.dart';
+import 'package:example/_/scaffold/scaffold_image.dart';
+import 'package:example/_/scaffold/scaffold_ovo.dart';
+import 'package:example/_/scaffold/scaffold_simple.dart';
+import 'package:example/_/scaffold/scaffold_sliver_appbar.dart';
+import 'package:example/_/scaffold/scaffold_tabbar_vertical.dart';
 
 import '../navigation/navigation_vertical.dart';
 import '../navigation/navigation_vertical_icon.dart';

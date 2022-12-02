@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widget/avatar_ui.dart';
 import 'package:example/core.dart';
 
 class AvatarUiView extends StatefulWidget {

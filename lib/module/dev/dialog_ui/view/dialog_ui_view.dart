@@ -1,6 +1,5 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import '../../../core.dart';
 
 class DialogUiView extends StatefulWidget {
   const DialogUiView({Key? key}) : super(key: key);
