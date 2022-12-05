@@ -133,6 +133,12 @@ export 'package:example/module/tutorial/crud_generator/cg_module_form/controller
 export 'package:example/module/tutorial/crud_generator/cg_module_form/view/cg_module_form_view.dart';
 export 'package:example/module/tutorial/crud_generator/cg_module_list/controller/cg_module_list_controller.dart';
 export 'package:example/module/tutorial/crud_generator/cg_module_list/view/cg_module_list_view.dart';
+export 'package:example/module/tutorial/eln/eln_class_detail/controller/eln_class_detail_controller.dart';
+export 'package:example/module/tutorial/eln/eln_class_detail/view/eln_class_detail_view.dart';
+export 'package:example/module/tutorial/eln/eln_dashboard/controller/eln_dashboard_controller.dart';
+export 'package:example/module/tutorial/eln/eln_dashboard/view/eln_dashboard_view.dart';
+export 'package:example/module/tutorial/eln/eln_main_navigation/controller/eln_main_navigation_controller.dart';
+export 'package:example/module/tutorial/eln/eln_main_navigation/view/eln_main_navigation_view.dart';
 export 'package:example/module/tutorial/fic/fic_animation/controller/fic_animation_controller.dart';
 export 'package:example/module/tutorial/fic/fic_animation/view/fic_animation_view.dart';
 export 'package:example/module/tutorial/fic/fic_cart/controller/fic_cart_controller.dart';
@@ -371,6 +377,7 @@ export 'package:example/shared/util/theme/elegant_theme.dart';
 export 'package:example/shared/util/theme/light_theme.dart';
 export 'package:example/shared/util/theme/orang_theme.dart';
 export 'package:example/shared/util/theme/theme.dart';
+export 'package:example/shared/util/theme/theme_config.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/color_changer.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/font_changer.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
@@ -378,7 +385,6 @@ export 'package:example/shared/util/theme/theme_editor/themes/value_changer.dart
 export 'package:example/shared/util/theme/theme_editor/theme_editor.dart';
 export 'package:example/shared/util/theme/theme_editor/theme_editor_ui.dart';
 export 'package:example/shared/util/theme/theme_editor/theme_icon.dart';
-export 'package:example/shared/util/theme/__config.dart';
 export 'package:example/shared/util/url_launcher/url_launcher.dart';
 export 'package:example/shared/util/validator/validator.dart';
 export 'package:example/shared/widget/badge_text/badge_text.dart';

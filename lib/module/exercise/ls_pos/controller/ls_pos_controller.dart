@@ -70,6 +70,7 @@ class LsPosController extends State<LsPosView> implements MvcController {
     ###
     for (var i = 0; i < productList.length; i++) {
       var product = productList[i];
+      product["qty"] = product["qty"] ?? 0;
       itemTotal += product["qty"] * product["price"];
     }
     ###

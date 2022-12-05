@@ -1308,6 +1308,46 @@ getRouters({
               child: const CgModuleFormView(),
             ),
           ),
+          // GoRoute(
+          //   path: '/cg_crud_list',
+          //   pageBuilder: (context, state) => noTransition(
+          //     context: context,
+          //     state: state,
+          //     child: CgCrudListView(),
+          //   ),
+          // ),
+          // GoRoute(
+          //   path: '/cg_crud_form',
+          //   pageBuilder: (context, state) => noTransition(
+          //     context: context,
+          //     state: state,
+          //     child: CgCrudFormView(),
+          //   ),
+          // ),
+          GoRoute(
+            path: '/eln_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ElnMainNavigationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/eln_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ElnDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/eln_class_detail',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const ElnClassDetailView(),
+            ),
+          ),
           //@ROUTER_GENERATOR
         ],
       ),

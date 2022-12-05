@@ -7,7 +7,7 @@ class HtProductCrudFormView extends StatefulWidget {
   15. ok, kita ingin agar form ini bisa mengedit file
   ! Mari tambahkan variabel ini:
 
-  final Map item;
+  final Map? item;
 
   ! lalu sesuaikan constructor-nya
   const HtProductCrudFormView({

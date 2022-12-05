@@ -3,15 +3,9 @@ import 'package:example/core.dart';
 export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
 import 'package:flutter/material.dart';
 
-get mq {
-  return MediaQuery.of(globalContext);
-}
+get mq => MediaQuery.of(globalContext);
+get mqs => MediaQuery.of(globalContext).size;
 
-get mqs {
-  return MediaQuery.of(globalContext).size;
-}
-
-//OLD VERSION
 var primaryColor = Colors.blueGrey[800]!;
 var secondaryColor = const Color(0xFF2A2D3E);
 var bgColor = const Color(0xFF212332);
@@ -24,9 +18,20 @@ var warningColor = Colors.orange[300]!;
 var disabledColor = Colors.grey[300]!;
 
 var disabledTextColor = Colors.grey[800];
-//--------
 
-//Header size
+//#_!#$O!_@$
+Color appbarBackgroundColor = Colors.white;
+Color scaffoldBackgroundColor = Colors.grey[300]!;
+MaterialColor primarySwatch = Colors.blueGrey;
+TextStyle googleFont = GoogleFonts.sora();
+Color drawerBackgroundColor = const Color(0xff404E67);
+Color drawerFontColor = Colors.grey[300]!;
+
+double cardElevation = 0.8;
+double cardBorderRadius = 24.0;
+//#!$O!@)$1@#
+
+//Text Heading Size
 const double h1 = 36;
 const double h2 = 30;
 const double h3 = 24;
@@ -123,16 +128,3 @@ const double rsm = 12;
 const double rmd = 20;
 const double rlg = 30;
 const double rxl = 40;
-
-//Color
-Color appbarBackgroundColor = Colors.white;
-Color scaffoldBackgroundColor = Colors.grey[300]!;
-MaterialColor primarySwatch = Colors.blueGrey;
-TextStyle googleFont = GoogleFonts.sora();
-Color drawerBackgroundColor = const Color(0xff404E67);
-
-//drawer
-Color drawerFontColor = Colors.grey[300]!;
-
-double cardElevation = 0.8;
-double cardBorderRadius = 24.0;

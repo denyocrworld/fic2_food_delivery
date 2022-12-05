@@ -8,6 +8,47 @@ import 'package:path_provider/path_provider.dart';
 /*
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
+
+GAJI PROGRAMMER = TERGANTUNG DAERAH-NYA
+JUNIOR~
+
+- HARUS PUNYA PORTOFOLIO
+FRONTEND
+- Perbanyak Clone UI Aplikasi yang Populer (TOKOPEDIA, GOJEK, GRAB) 
+    (REACT, FLUTTER, HTML, JAVA)
+    (1-3 halaman per aplikasi)
+    (Minimal 5 Aplikasi lah)
+- Perbanyak Clone UI dari DRIBBLE
+    (Minimal 5 Aplikasi, 1-3 halaman per aplikasi)
+  (10 Portofolio)
+- Bikin CV yang ATS FRIENDLY
+- Bikin Portofolio (PDF), yang berisi screenshot aplikasi temen2 
+  (Gambar, Link GitHUB, Link DEMO-nya (opsional), Link VIDEO)
+- SUBMIT CV SEbanyak Mungkin
+- (100,200,300 , ~ 1000 Submission)
+
+- Jangan cari perusahaan2 yang udah gede
+- Cari STARTUP BARU
+
+
+DI DAERAH
+3-8
+
+JAKARTA
+8-15 
+
+BATAM
+8-20w
+
+SINGAPUR
+15-25
+
+US/UK
+25-45
+
+
+
+
 */
 void main() async {
   await initialize();
@@ -33,11 +74,12 @@ void main() async {
     title: 'Capek Ngoding',
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
+    // theme: getDefaultTheme(),
+    // home: const TrExampleView(),
     theme: ThemeData.dark(),
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    // home: const TrExampleView(),
     home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),

@@ -7,7 +7,7 @@ class TrExampleController extends State<TrExampleView>
   static late TrExampleController instance;
   late TrExampleView view;
   Faker faker = Faker.instance;
-
+  int selectedIndex = 0;
   @override
   void initState() {
     instance = this;

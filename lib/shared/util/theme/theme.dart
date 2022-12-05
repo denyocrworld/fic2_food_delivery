@@ -1,15 +1,15 @@
 //#GROUP_TEMPLATE theme
 export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
-import 'package:example/shared/util/theme/__config.dart';
+import 'package:example/shared/util/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getDefaultTheme() {
   return ThemeData(
-    // primarySwatch:  Color(0xffFA533C),
     primaryColor: primaryColor,
     primarySwatch: primarySwatch,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
+        backgroundColor: primaryColor,
         shape: ContinuousRectangleBorder(
           borderRadius: BorderRadius.circular(64.0),
         ),
