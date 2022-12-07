@@ -9,48 +9,53 @@ import 'package:path_provider/path_provider.dart';
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
 
-GAJI PROGRAMMER = TERGANTUNG DAERAH-NYA
-JUNIOR~
+KENAPA GW SUKA FLUTTER
+1. NGODING UI DI FLUTTER ITU GAMPANG
+2. PERFORMA APLIKASI KENCENG/NGEBUT
+3. KOMUNITAS-NYA OK
 
-- HARUS PUNYA PORTOFOLIO
+- BELAJAR BASIC
+- PERBANYAK LATIHAN
+- KURANGI MEMBACA, DAN PERBANYAK LATIHAN
+- KEJAR JAM KODING 100 JAM, 1000 JAM, lalu 10.000 JAM
+
+PEMULA
+- PYTHON, DART, JS, JAVA
+
+BASIC PROGRAMMING
+- Variabel
+- IF Statement
+- Array/List
+- Map
+- Looping
+- Function
+- OOP
+
+WAIT~
+IDE | (CODE EDITOR): VSCODE
+BAHASA: DART
+FRAMEWORK: FLUTTER
+PLATFORM:
+ANDROID, IOS, DESKTOP, WEB
+MACOS, WINDOWS, LINUX
+BACKEND: BEBAS (PHP, GOLANG, NODEJS)
+
 FRONTEND
-- Perbanyak Clone UI Aplikasi yang Populer (TOKOPEDIA, GOJEK, GRAB) 
-    (REACT, FLUTTER, HTML, JAVA)
-    (1-3 halaman per aplikasi)
-    (Minimal 5 Aplikasi lah)
-- Perbanyak Clone UI dari DRIBBLE
-    (Minimal 5 Aplikasi, 1-3 halaman per aplikasi)
-  (10 Portofolio)
-- Bikin CV yang ATS FRIENDLY
-- Bikin Portofolio (PDF), yang berisi screenshot aplikasi temen2 
-  (Gambar, Link GitHUB, Link DEMO-nya (opsional), Link VIDEO)
-- SUBMIT CV SEbanyak Mungkin
-- (100,200,300 , ~ 1000 Submission)
+- UI
+- Logic dari UI
+- Consume API
 
-- Jangan cari perusahaan2 yang udah gede
-- Cari STARTUP BARU
-
-
-DI DAERAH
-3-8
-
-JAKARTA
-8-15 
-
-BATAM
-8-20w
-
-SINGAPUR
-15-25
-
-US/UK
-25-45
-
-
-
-
+BACKEND
+FULLSTACK
 */
+
 void main() async {
+  Map product = {
+    //key, value
+    "product_name": "GG FILTER",
+    "price": 25,
+  };
+
   await initialize();
   // windows, android, ios
   if (!kIsWeb) {

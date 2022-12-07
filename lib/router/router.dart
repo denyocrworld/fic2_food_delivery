@@ -1348,6 +1348,22 @@ getRouters({
               child: const ElnClassDetailView(),
             ),
           ),
+          GoRoute(
+      path: '/ionly_main_navigation',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const IonlyMainNavigationView(),
+      ),
+    ),
+          GoRoute(
+      path: '/ionly_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const IonlyDashboardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

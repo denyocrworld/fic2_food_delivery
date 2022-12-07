@@ -348,6 +348,10 @@ export 'package:example/module/tutorial/tutorial_extension/controller/tutorial_e
 export 'package:example/module/tutorial/tutorial_extension/view/tutorial_extension_view.dart';
 export 'package:example/module/tutorial/ui_dailiy_todo_list/controller/ui_dailiy_todo_list_controller.dart';
 export 'package:example/module/tutorial/ui_dailiy_todo_list/view/ui_dailiy_todo_list_view.dart';
+export 'package:example/module/tutorial_ui/ionly_dashboard/controller/ionly_dashboard_controller.dart';
+export 'package:example/module/tutorial_ui/ionly_dashboard/view/ionly_dashboard_view.dart';
+export 'package:example/module/tutorial_ui/ionly_main_navigation/controller/ionly_main_navigation_controller.dart';
+export 'package:example/module/tutorial_ui/ionly_main_navigation/view/ionly_main_navigation_view.dart';
 export 'package:example/router/no_transition.dart';
 export 'package:example/router/router.dart';
 export 'package:example/router/route_util.dart';
