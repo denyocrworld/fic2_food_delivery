@@ -7,7 +7,6 @@ class IonlyDashboardView extends StatefulWidget {
 
   Widget build(context, IonlyDashboardController controller) {
     controller.view = this;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Ionly"),

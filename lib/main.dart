@@ -9,10 +9,8 @@ import 'package:path_provider/path_provider.dart';
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
 
-KENAPA GW SUKA FLUTTER
-1. NGODING UI DI FLUTTER ITU GAMPANG
-2. PERFORMA APLIKASI KENCENG/NGEBUT
-3. KOMUNITAS-NYA OK
+RAM 8GB
+Hardisk-nya harus SSD
 
 - BELAJAR BASIC
 - PERBANYAK LATIHAN
@@ -80,12 +78,12 @@ void main() async {
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     // theme: getDefaultTheme(),
-    // home: const TrExampleView(),
     theme: ThemeData.dark(),
+    home: const TrExampleView(),
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    home: const TrView(),
+    // home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
