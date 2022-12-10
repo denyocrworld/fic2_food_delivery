@@ -8,45 +8,7 @@ import 'package:path_provider/path_provider.dart';
 /*
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
-
-RAM 8GB
-Hardisk-nya harus SSD
-
-- BELAJAR BASIC
-- PERBANYAK LATIHAN
-- KURANGI MEMBACA, DAN PERBANYAK LATIHAN
-- KEJAR JAM KODING 100 JAM, 1000 JAM, lalu 10.000 JAM
-
-PEMULA
-- PYTHON, DART, JS, JAVA
-
-BASIC PROGRAMMING
-- Variabel
-- IF Statement
-- Array/List
-- Map
-- Looping
-- Function
-- OOP
-
-WAIT~
-IDE | (CODE EDITOR): VSCODE
-BAHASA: DART
-FRAMEWORK: FLUTTER
-PLATFORM:
-ANDROID, IOS, DESKTOP, WEB
-MACOS, WINDOWS, LINUX
-BACKEND: BEBAS (PHP, GOLANG, NODEJS)
-
-FRONTEND
-- UI
-- Logic dari UI
-- Consume API
-
-BACKEND
-FULLSTACK
 */
-
 void main() async {
   Map product = {
     //key, value
@@ -79,11 +41,11 @@ void main() async {
     debugShowCheckedModeBanner: false,
     // theme: getDefaultTheme(),
     theme: ThemeData.dark(),
-    home: const TrExampleView(),
+    // home: const TrExampleView(),
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    // home: const TrView(),
+    home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));

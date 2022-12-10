@@ -11,6 +11,7 @@ class TrExampleController extends State<TrExampleView>
   @override
   void initState() {
     instance = this;
+    getUsers();
     super.initState();
   }
 
@@ -20,27 +21,18 @@ class TrExampleController extends State<TrExampleView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  // ValueNotifier<int> counter = ValueNotifier(0);
-  var counter = 0.obs;
-}
-
-Widget Obx(ValueNotifier val, Widget Function(ValueNotifier vn) func) {
-  return ValueListenableBuilder(
-    valueListenable: val,
-    builder: (
-      _,
-      __,
-      ___,
-    ) {
-      return func(val);
-    },
-  );
-}
-
-extension ValueNonitifierExtension on num {
-  ValueNotifier get obs {
-    var value = this;
-    ValueNotifier _ = ValueNotifier(this);
-    return _;
+  List users = [];
+  getUsers() async {
+    var response = await Dio().get(
+      "https://reqres.in/api/users",
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+        },
+      ),
+    );
+    Map obj = response.data;
+    users = obj["data"];
+    setState(() {});
   }
 }
