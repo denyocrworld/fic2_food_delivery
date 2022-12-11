@@ -1364,6 +1364,22 @@ getRouters({
         child: const IonlyDashboardView(),
       ),
     ),
+          GoRoute(
+      path: '/tm_intro',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TmIntroView(),
+      ),
+    ),
+          GoRoute(
+      path: '/tm_dashboard',
+      pageBuilder: (context, state) => noTransition(
+        context: context,
+        state: state,
+        child: const TmDashboardView(),
+      ),
+    ),
           //@ROUTER_GENERATOR
         ],
       ),

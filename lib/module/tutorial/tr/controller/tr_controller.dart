@@ -502,5 +502,9 @@ class TrController extends State<TrView> implements MvcController {
       "label": "Ionly UI",
       "view": const IonlyMainNavigationView(),
     },
+    {
+      "label": "Taras Migulko UI",
+      "view": const TmIntroView(),
+    },
   ];
 }

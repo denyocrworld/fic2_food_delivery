@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:example/core.dart';
 import 'package:example/session.dart';
 import 'package:flutter/foundation.dart';
@@ -8,6 +11,9 @@ import 'package:path_provider/path_provider.dart';
 /*
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
+
+Kelas Online Dart/Flutter (8x Pertemuan)
+! https://capekngoding.com
 */
 void main() async {
   Map product = {
@@ -30,11 +36,17 @@ void main() async {
   await FormHistoryService.load();
   AppSession.token = await mainStorage.get("token") ?? "";
 
-  // print("mainStorage.isOpen: ${mainStorage.isOpen}");
-  // print("storage: ${await mainStorage.get("token")}");
-  // print("-----");
-  // await mainStorage.put("mode", "JRocks");
+  runMainApp();
+  customizeInDesktopVersion();
 
+  // runApp(MaterialApp.router(
+  //   title: 'Capek Ngoding',
+  //   debugShowCheckedModeBanner: false,
+  //   routerConfig: getRouters(),
+  // ));
+}
+
+runMainApp() async {
   return runApp(MaterialApp(
     title: 'Capek Ngoding',
     navigatorKey: Get.navigatorKey,
@@ -46,24 +58,21 @@ void main() async {
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
     home: const TrView(),
+    // home: const TrExampleView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
-
-  runApp(MaterialApp.router(
-    title: 'Capek Ngoding',
-    debugShowCheckedModeBanner: false,
-    routerConfig: getRouters(),
-  ));
 }
 
-
-/*
-CRUD Generator
-data-nya bisa di custom secara realtime.
-Bisa ditentukan jenis textfield-nya:
-- textfield
-- numberfield
-- photo
-- memofield
-*/
+customizeInDesktopVersion() async {
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    // await Future.delayed(const Duration(milliseconds: 600));
+    doWhenWindowReady(() {
+      const initialSize = Size(400, 600);
+      appWindow.minSize = initialSize;
+      appWindow.size = initialSize;
+      appWindow.alignment = Alignment.topLeft;
+      appWindow.show();
+    });
+  }
+}

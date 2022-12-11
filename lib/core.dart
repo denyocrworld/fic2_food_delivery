@@ -344,6 +344,7 @@ export 'package:example/module/tutorial/tr_basic_widget/view/tr_basic_widget_vie
 export 'package:example/module/tutorial/tr_basic_widget/widget/tr_basic_item.dart';
 export 'package:example/module/tutorial/tr_example/controller/tr_example_controller.dart';
 export 'package:example/module/tutorial/tr_example/view/tr_example_view.dart';
+export 'package:example/module/tutorial/tr_example/widget/promotion_banner.dart';
 export 'package:example/module/tutorial/tutorial_extension/controller/tutorial_extension_controller.dart';
 export 'package:example/module/tutorial/tutorial_extension/view/tutorial_extension_view.dart';
 export 'package:example/module/tutorial/ui_dailiy_todo_list/controller/ui_dailiy_todo_list_controller.dart';
@@ -352,6 +353,10 @@ export 'package:example/module/tutorial_ui/ionly_dashboard/controller/ionly_dash
 export 'package:example/module/tutorial_ui/ionly_dashboard/view/ionly_dashboard_view.dart';
 export 'package:example/module/tutorial_ui/ionly_main_navigation/controller/ionly_main_navigation_controller.dart';
 export 'package:example/module/tutorial_ui/ionly_main_navigation/view/ionly_main_navigation_view.dart';
+export 'package:example/module/tutorial_ui/taras/tm_dashboard/controller/tm_dashboard_controller.dart';
+export 'package:example/module/tutorial_ui/taras/tm_dashboard/view/tm_dashboard_view.dart';
+export 'package:example/module/tutorial_ui/taras/tm_intro/controller/tm_intro_controller.dart';
+export 'package:example/module/tutorial_ui/taras/tm_intro/view/tm_intro_view.dart';
 export 'package:example/router/no_transition.dart';
 export 'package:example/router/router.dart';
 export 'package:example/router/route_util.dart';

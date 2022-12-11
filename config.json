@@ -73,6 +73,9 @@
         "tutorial/eln/eln_dashboard",
         "tutorial/eln/eln_class_detail",
         "tutorial_ui/ionly_main_navigation",
-        "tutorial_ui/ionly_dashboard"
+        "tutorial_ui/ionly_dashboard",
+        "tutorial_ui/ionly_dashboard",
+        "tutorial_ui/taras/tm_intro",
+        "tutorial_ui/taras/tm_dashboard"
     ]
 }
