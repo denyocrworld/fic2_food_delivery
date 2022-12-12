@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
@@ -18,14 +16,7 @@ class TrExampleView extends StatefulWidget {
           child: Column(
             children: [
               Text(
-                "${controller.blueCounter.value}",
-                style: const TextStyle(
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                controller.name.value,
+                "${controller.counter.value}",
                 style: const TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.bold,
@@ -38,23 +29,8 @@ class TrExampleView extends StatefulWidget {
                   backgroundColor: Colors.blueGrey,
                 ),
                 onPressed: () {
-                  controller.blueCounter.value++;
-                  controller.xcounter++;
-                  controller.nomax.value++;
+                  controller.counter.value++;
                 },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
-                ),
-                onPressed: () {
-                  var r = Random().nextInt(1000);
-                  controller.name.value = "Deny $r";
-                },
-                child: const Text("Save"),
               ),
             ],
           ),
