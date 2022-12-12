@@ -15,6 +15,16 @@ LINK KOMUNITAS
 Kelas Online Dart/Flutter (8x Pertemuan)
 ! https://capekngoding.com
 */
+
+/*
+State Management
+- Provider
+- Mobx
+- Getx
+
+- Riverpod
+- Bloc
+*/
 void main() async {
   Map product = {
     //key, value
@@ -68,10 +78,10 @@ customizeInDesktopVersion() async {
   if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
     // await Future.delayed(const Duration(milliseconds: 600));
     doWhenWindowReady(() {
-      const initialSize = Size(400, 600);
+      const initialSize = Size(360, 660);
       appWindow.minSize = initialSize;
       appWindow.size = initialSize;
-      appWindow.alignment = Alignment.topLeft;
+      appWindow.alignment = Alignment.topRight;
       appWindow.show();
     });
   }
