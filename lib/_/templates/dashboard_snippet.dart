@@ -405,8 +405,7 @@ class TemplateDashboardSnippetView extends StatelessWidget {
                                   "${item["label"]}",
                                   textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.blueGrey[900],
+                                  style: const TextStyle(
                                     fontSize: 11.0,
                                   ),
                                 ),

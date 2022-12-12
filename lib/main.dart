@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '_/dev_docs.dart';
+
 /*
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
@@ -67,7 +69,8 @@ runMainApp() async {
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    home: const TrView(),
+    // home: const TrView(),
+    home: const DevDocsView(),
     // home: const TrExampleView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
