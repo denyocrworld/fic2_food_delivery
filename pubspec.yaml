@@ -15,7 +15,6 @@ dependencies:
   # cloud_firestore: ^3.4.9
   # google_sign_in: ^5.4.2
   intl: ^0.17.0
-  go_router: ^5.0.5
   google_fonts: ^3.0.1
   material_design_icons_flutter: ^5.0.6996
   image_picker: ^0.8.5+3
