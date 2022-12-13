@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/searchfield_ui_view.dart';
 
-class SearchfieldUiController extends State<SearchfieldUiView> implements MvcController {
+class SearchfieldUiController extends State<SearchfieldUiView>
+    implements MvcController {
   static late SearchfieldUiController instance;
   late SearchfieldUiView view;
 

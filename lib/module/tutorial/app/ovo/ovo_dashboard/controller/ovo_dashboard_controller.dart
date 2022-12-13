@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ovo_dashboard_view.dart';
 
-class OvoDashboardController extends State<OvoDashboardView> implements MvcController {
+class OvoDashboardController extends State<OvoDashboardView>
+    implements MvcController {
   static late OvoDashboardController instance;
   late OvoDashboardView view;
 

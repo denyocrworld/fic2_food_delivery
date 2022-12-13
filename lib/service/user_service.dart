@@ -15,7 +15,6 @@ class UserService {
 // VISUAL STUDIO 2019
 // C++ Desktop
 
-
 // SQL atau NoSQL
 // SQL => SQFLITE
 // NO SQL => shared_preferences , hive

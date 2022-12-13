@@ -14,16 +14,72 @@ LINK KOMUNITAS
 
 Kelas Online Dart/Flutter (8x Pertemuan)
 ! https://capekngoding.com
-*/
 
-/*
-State Management
-- Provider
-- Mobx
-- Getx
+TODO: Jangan pernah bikin aplikasi tanpa architecture
+- Akan susah di maintain
+- Pada akhirnya akan berexperiment yang nggak perlu
+- Kode-nya jadi gak clean
 
-- Riverpod
-- Bloc
+MVC
+MVP
+MVVM
+BLoc Architecutre
+Riverpod Architecutre
+Clean Architecture
+
+Flutter
+masih bergantung sama Native
+
+Produktivitas utk BKin UI
+- Flutter lebih ok daripada Native
+
+---
+
+RAM: 8GB-16GB
+Hardisk: SSD
+Processor: 10 tahun terakhir
+AMD RYZEN 3, AMD RYZEN 5
+i3, i5, i7
+---
++HARUS ADA PORTOFOLIO
+---
+Front END
+- Clone UI dari Aplikasi2 Populer
+> Tokopedia, Grab, OVO, Gojek, NOice, Tikok
+(3-5 halaman)
+(React, Flutter, bebas)
+- Clone 5 UI yang ada di Dribble
+
+(10 Portofolio)
+---
+
+- BASIC DART
+- MVC + State Management
+
+JUNIOR
+Daerah
+4-8jt
+
+Jakarta
+8-15jt
+
+Batam
+8-20jt
+
+Singapur
+15-35++
+
+UK/US
+25-45++
+
+
+setState
+provider
+mobx
+getx
+
+bloc
+riverpod
 */
 void main() async {
   Map product = {
@@ -67,7 +123,9 @@ runMainApp() async {
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
     // home: const TrBasicWidgetView(),
-    home: const TrExampleView(),
+    // home: const TrExampleView(),
+    // home: const CounterAppView(),
+    home: const MvcCounterView(),
     // home: const DevDocsView(),
     // home: const TrExampleView(),
     // home: const UiDailiyTodoListView(),
@@ -82,7 +140,7 @@ customizeInDesktopVersion() async {
       const initialSize = Size(360, 660);
       appWindow.minSize = initialSize;
       appWindow.size = initialSize;
-      appWindow.alignment = Alignment.topRight;
+      appWindow.alignment = Alignment.topLeft;
       appWindow.show();
     });
   }

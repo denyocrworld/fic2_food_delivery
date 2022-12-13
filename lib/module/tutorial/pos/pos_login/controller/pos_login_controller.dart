@@ -1,8 +1,6 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-
-
 class PosLoginController extends State<PosLoginView> implements MvcController {
   static late PosLoginController instance;
   late PosLoginView view;

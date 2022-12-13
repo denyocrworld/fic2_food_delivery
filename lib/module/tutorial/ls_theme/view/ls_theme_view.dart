@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-
 
 class LsThemeView extends StatefulWidget {
   const LsThemeView({Key? key}) : super(key: key);

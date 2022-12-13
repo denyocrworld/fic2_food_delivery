@@ -3,6 +3,7 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:example/model/product/product.dart';
 export 'package:example/model/sales_data.dart';
 export 'package:example/module/avatar_ui/widget/avatar_ui.dart';
 export 'package:example/module/dev/appbar_ui/controller/appbar_ui_controller.dart';
@@ -224,6 +225,14 @@ export 'package:example/module/tutorial/ltsm_scroll/controller/ltsm_scroll_contr
 export 'package:example/module/tutorial/ltsm_scroll/view/ltsm_scroll_view.dart';
 export 'package:example/module/tutorial/ltsm_theme/controller/ltsm_theme_controller.dart';
 export 'package:example/module/tutorial/ltsm_theme/view/ltsm_theme_view.dart';
+export 'package:example/module/tutorial/mvc_counter/controller/mvc_counter_controller.dart';
+export 'package:example/module/tutorial/mvc_counter/view/mvc_counter_view.dart';
+export 'package:example/module/tutorial/mvc_dashboard/controller/mvc_dashboard_controller.dart';
+export 'package:example/module/tutorial/mvc_dashboard/view/mvc_dashboard_view.dart';
+export 'package:example/module/tutorial/mvc_login/controller/mvc_login_controller.dart';
+export 'package:example/module/tutorial/mvc_login/view/mvc_login_view.dart';
+export 'package:example/module/tutorial/mvc_profile/controller/mvc_profile_controller.dart';
+export 'package:example/module/tutorial/mvc_profile/view/mvc_profile_view.dart';
 export 'package:example/module/tutorial/pos/pos_login/controller/pos_login_controller.dart';
 export 'package:example/module/tutorial/pos/pos_login/view/pos_login_view.dart';
 export 'package:example/module/tutorial/pos/pos_main_navigation/controller/pos_main_navigation_controller.dart';
@@ -343,7 +352,9 @@ export 'package:example/module/tutorial/tr_basic_widget/controller/tr_basic_widg
 export 'package:example/module/tutorial/tr_basic_widget/view/tr_basic_widget_view.dart';
 export 'package:example/module/tutorial/tr_basic_widget/widget/tr_basic_item.dart';
 export 'package:example/module/tutorial/tr_example/controller/tr_example_controller.dart';
+export 'package:example/module/tutorial/tr_example/util/obs.dart';
 export 'package:example/module/tutorial/tr_example/view/tr_example_view.dart';
+export 'package:example/module/tutorial/tr_example/widget/bergetar.dart';
 export 'package:example/module/tutorial/tr_example/widget/promotion_banner.dart';
 export 'package:example/module/tutorial/tutorial_extension/controller/tutorial_extension_controller.dart';
 export 'package:example/module/tutorial/tutorial_extension/view/tutorial_extension_view.dart';
@@ -353,10 +364,13 @@ export 'package:example/module/tutorial_ui/ionly_dashboard/controller/ionly_dash
 export 'package:example/module/tutorial_ui/ionly_dashboard/view/ionly_dashboard_view.dart';
 export 'package:example/module/tutorial_ui/ionly_main_navigation/controller/ionly_main_navigation_controller.dart';
 export 'package:example/module/tutorial_ui/ionly_main_navigation/view/ionly_main_navigation_view.dart';
+export 'package:example/module/tutorial_ui/taras/theme/tm_theme.dart';
 export 'package:example/module/tutorial_ui/taras/tm_dashboard/controller/tm_dashboard_controller.dart';
 export 'package:example/module/tutorial_ui/taras/tm_dashboard/view/tm_dashboard_view.dart';
 export 'package:example/module/tutorial_ui/taras/tm_intro/controller/tm_intro_controller.dart';
 export 'package:example/module/tutorial_ui/taras/tm_intro/view/tm_intro_view.dart';
+export 'package:example/module/tutorial_ui/taras/tm_intro/widget/arc_text.dart';
+export 'package:example/module/tutorial_ui/taras/tm_intro/widget/curved_text.dart';
 export 'package:example/router/no_transition.dart';
 export 'package:example/router/router.dart';
 export 'package:example/router/route_util.dart';

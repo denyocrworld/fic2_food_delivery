@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ltsm_fade_animation_view.dart';
 
-class LtsmFadeAnimationController extends State<LtsmFadeAnimationView> implements MvcController {
+class LtsmFadeAnimationController extends State<LtsmFadeAnimationView>
+    implements MvcController {
   static late LtsmFadeAnimationController instance;
   late LtsmFadeAnimationView view;
 

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ls_product_form_view.dart';
 
-class LsProductFormController extends State<LsProductFormView> implements MvcController {
+class LsProductFormController extends State<LsProductFormView>
+    implements MvcController {
   static late LsProductFormController instance;
   late LsProductFormView view;
 

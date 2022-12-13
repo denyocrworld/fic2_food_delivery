@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trfm_signup_form_view.dart';
 
-class TrfmSignupFormController extends State<TrfmSignupFormView> implements MvcController {
+class TrfmSignupFormController extends State<TrfmSignupFormView>
+    implements MvcController {
   static late TrfmSignupFormController instance;
   late TrfmSignupFormView view;
 

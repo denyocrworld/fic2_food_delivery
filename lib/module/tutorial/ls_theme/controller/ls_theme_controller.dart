@@ -1,8 +1,6 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-
-
 class LsThemeController extends State<LsThemeView> implements MvcController {
   static late LsThemeController instance;
   late LsThemeView view;

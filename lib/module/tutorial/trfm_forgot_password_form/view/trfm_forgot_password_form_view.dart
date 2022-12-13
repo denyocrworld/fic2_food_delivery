@@ -25,5 +25,6 @@ class TrfmForgotPasswordFormView extends StatefulWidget {
   }
 
   @override
-  State<TrfmForgotPasswordFormView> createState() => TrfmForgotPasswordFormController();
+  State<TrfmForgotPasswordFormView> createState() =>
+      TrfmForgotPasswordFormController();
 }

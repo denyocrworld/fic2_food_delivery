@@ -25,5 +25,6 @@ class TrfmEditProfileFormView extends StatefulWidget {
   }
 
   @override
-  State<TrfmEditProfileFormView> createState() => TrfmEditProfileFormController();
+  State<TrfmEditProfileFormView> createState() =>
+      TrfmEditProfileFormController();
 }

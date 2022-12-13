@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ltfm_review_form_view.dart';
 
-class LtfmReviewFormController extends State<LtfmReviewFormView> implements MvcController {
+class LtfmReviewFormController extends State<LtfmReviewFormView>
+    implements MvcController {
   static late LtfmReviewFormController instance;
   late LtfmReviewFormView view;
 

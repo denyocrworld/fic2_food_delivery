@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/scaffold_ui_view.dart';
 
-class ScaffoldUiController extends State<ScaffoldUiView> implements MvcController {
+class ScaffoldUiController extends State<ScaffoldUiView>
+    implements MvcController {
   static late ScaffoldUiController instance;
   late ScaffoldUiView view;
 

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tc_snackbar_view.dart';
 
-class TcSnackbarController extends State<TcSnackbarView> implements MvcController {
+class TcSnackbarController extends State<TcSnackbarView>
+    implements MvcController {
   static late TcSnackbarController instance;
   late TcSnackbarView view;
 

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/cg_dashboard_view.dart';
 
-class CgDashboardController extends State<CgDashboardView> implements MvcController {
+class CgDashboardController extends State<CgDashboardView>
+    implements MvcController {
   static late CgDashboardController instance;
   late CgDashboardView view;
 

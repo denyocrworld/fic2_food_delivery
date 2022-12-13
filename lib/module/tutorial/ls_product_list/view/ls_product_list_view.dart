@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-
 
 class LsProductListView extends StatefulWidget {
   const LsProductListView({Key? key}) : super(key: key);

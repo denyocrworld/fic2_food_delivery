@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tutorial_extension_view.dart';
 
-class TutorialExtensionController extends State<TutorialExtensionView> implements MvcController {
+class TutorialExtensionController extends State<TutorialExtensionView>
+    implements MvcController {
   static late TutorialExtensionController instance;
   late TutorialExtensionView view;
 

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trfm_login_view.dart';
 
-class TrfmLoginController extends State<TrfmLoginView> implements MvcController {
+class TrfmLoginController extends State<TrfmLoginView>
+    implements MvcController {
   static late TrfmLoginController instance;
   late TrfmLoginView view;
 

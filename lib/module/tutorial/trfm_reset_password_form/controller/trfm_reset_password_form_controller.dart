@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/trfm_reset_password_form_view.dart';
 
-class TrfmResetPasswordFormController extends State<TrfmResetPasswordFormView> implements MvcController {
+class TrfmResetPasswordFormController extends State<TrfmResetPasswordFormView>
+    implements MvcController {
   static late TrfmResetPasswordFormController instance;
   late TrfmResetPasswordFormView view;
 

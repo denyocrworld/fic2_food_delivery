@@ -1349,35 +1349,67 @@ getRouters({
             ),
           ),
           GoRoute(
-      path: '/ionly_main_navigation',
+            path: '/ionly_main_navigation',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const IonlyMainNavigationView(),
+            ),
+          ),
+          GoRoute(
+            path: '/ionly_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const IonlyDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/tm_intro',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TmIntroView(),
+            ),
+          ),
+          GoRoute(
+            path: '/tm_dashboard',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const TmDashboardView(),
+            ),
+          ),
+          GoRoute(
+            path: '/mvc_counter',
+            pageBuilder: (context, state) => noTransition(
+              context: context,
+              state: state,
+              child: const MvcCounterView(),
+            ),
+          ),
+          GoRoute(
+      path: '/mvc_dashboard',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const IonlyMainNavigationView(),
+        child: const MvcDashboardView(),
       ),
     ),
           GoRoute(
-      path: '/ionly_dashboard',
+      path: '/mvc_login',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const IonlyDashboardView(),
+        child: const MvcLoginView(),
       ),
     ),
           GoRoute(
-      path: '/tm_intro',
+      path: '/mvc_profile',
       pageBuilder: (context, state) => noTransition(
         context: context,
         state: state,
-        child: const TmIntroView(),
-      ),
-    ),
-          GoRoute(
-      path: '/tm_dashboard',
-      pageBuilder: (context, state) => noTransition(
-        context: context,
-        state: state,
-        child: const TmDashboardView(),
+        child: const MvcProfileView(),
       ),
     ),
           //@ROUTER_GENERATOR

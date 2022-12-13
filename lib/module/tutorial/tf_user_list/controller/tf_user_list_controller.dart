@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tf_user_list_view.dart';
 
-class TfUserListController extends State<TfUserListView> implements MvcController {
+class TfUserListController extends State<TfUserListView>
+    implements MvcController {
   static late TfUserListController instance;
   late TfUserListView view;
 

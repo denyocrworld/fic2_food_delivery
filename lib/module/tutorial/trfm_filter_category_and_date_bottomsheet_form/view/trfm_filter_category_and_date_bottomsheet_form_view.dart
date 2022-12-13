@@ -3,9 +3,11 @@ import 'package:example/core.dart';
 import '../controller/trfm_filter_category_and_date_bottomsheet_form_controller.dart';
 
 class TrfmFilterCategoryAndDateBottomsheetFormView extends StatefulWidget {
-  const TrfmFilterCategoryAndDateBottomsheetFormView({Key? key}) : super(key: key);
+  const TrfmFilterCategoryAndDateBottomsheetFormView({Key? key})
+      : super(key: key);
 
-  Widget build(context, TrfmFilterCategoryAndDateBottomsheetFormController controller) {
+  Widget build(
+      context, TrfmFilterCategoryAndDateBottomsheetFormController controller) {
     controller.view = this;
 
     return Scaffold(
@@ -25,5 +27,6 @@ class TrfmFilterCategoryAndDateBottomsheetFormView extends StatefulWidget {
   }
 
   @override
-  State<TrfmFilterCategoryAndDateBottomsheetFormView> createState() => TrfmFilterCategoryAndDateBottomsheetFormController();
+  State<TrfmFilterCategoryAndDateBottomsheetFormView> createState() =>
+      TrfmFilterCategoryAndDateBottomsheetFormController();
 }

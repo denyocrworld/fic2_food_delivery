@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ls_user_setting_view.dart';
 
-class LsUserSettingController extends State<LsUserSettingView> implements MvcController {
+class LsUserSettingController extends State<LsUserSettingView>
+    implements MvcController {
   static late LsUserSettingController instance;
   late LsUserSettingView view;
 

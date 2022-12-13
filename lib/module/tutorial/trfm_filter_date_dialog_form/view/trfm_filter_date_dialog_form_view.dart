@@ -25,5 +25,6 @@ class TrfmFilterDateDialogFormView extends StatefulWidget {
   }
 
   @override
-  State<TrfmFilterDateDialogFormView> createState() => TrfmFilterDateDialogFormController();
+  State<TrfmFilterDateDialogFormView> createState() =>
+      TrfmFilterDateDialogFormController();
 }

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tc_dashboard_view.dart';
 
-class TcDashboardController extends State<TcDashboardView> implements MvcController {
+class TcDashboardController extends State<TcDashboardView>
+    implements MvcController {
   static late TcDashboardController instance;
   late TcDashboardView view;
 

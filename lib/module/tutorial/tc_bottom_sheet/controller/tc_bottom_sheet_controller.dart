@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/tc_bottom_sheet_view.dart';
 
-class TcBottomSheetController extends State<TcBottomSheetView> implements MvcController {
+class TcBottomSheetController extends State<TcBottomSheetView>
+    implements MvcController {
   static late TcBottomSheetController instance;
   late TcBottomSheetView view;
 

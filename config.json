@@ -76,6 +76,10 @@
         "tutorial_ui/ionly_dashboard",
         "tutorial_ui/ionly_dashboard",
         "tutorial_ui/taras/tm_intro",
-        "tutorial_ui/taras/tm_dashboard"
+        "tutorial_ui/taras/tm_dashboard",
+        "tutorial/mvc_counter",
+        "tutorial/mvc_dashboard",
+        "tutorial/mvc_login",
+        "tutorial/mvc_profile"
     ]
 }

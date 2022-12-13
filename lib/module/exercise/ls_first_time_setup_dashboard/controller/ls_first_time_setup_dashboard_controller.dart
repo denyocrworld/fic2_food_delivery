@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ls_first_time_setup_dashboard_view.dart';
 
-class LsFirstTimeSetupDashboardController extends State<LsFirstTimeSetupDashboardView> implements MvcController {
+class LsFirstTimeSetupDashboardController
+    extends State<LsFirstTimeSetupDashboardView> implements MvcController {
   static late LsFirstTimeSetupDashboardController instance;
   late LsFirstTimeSetupDashboardView view;
 

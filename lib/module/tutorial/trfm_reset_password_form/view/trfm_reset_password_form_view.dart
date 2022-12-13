@@ -25,5 +25,6 @@ class TrfmResetPasswordFormView extends StatefulWidget {
   }
 
   @override
-  State<TrfmResetPasswordFormView> createState() => TrfmResetPasswordFormController();
+  State<TrfmResetPasswordFormView> createState() =>
+      TrfmResetPasswordFormController();
 }

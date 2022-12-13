@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/ltfm_filter_bottom_sheet_view.dart';
 
-class LtfmFilterBottomSheetController extends State<LtfmFilterBottomSheetView> implements MvcController {
+class LtfmFilterBottomSheetController extends State<LtfmFilterBottomSheetView>
+    implements MvcController {
   static late LtfmFilterBottomSheetController instance;
   late LtfmFilterBottomSheetView view;
 

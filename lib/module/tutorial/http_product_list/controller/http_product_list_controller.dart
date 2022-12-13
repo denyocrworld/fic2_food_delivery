@@ -1,7 +1,6 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-
 class HttpProductListController extends State<HttpProductListView>
     implements MvcController {
   static late HttpProductListController instance;
