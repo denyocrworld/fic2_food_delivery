@@ -106,8 +106,6 @@ export 'package:example/module/exercise/ls_product_crud/controller/ls_product_cr
 export 'package:example/module/exercise/ls_product_crud/view/ls_product_crud_view.dart';
 export 'package:example/module/exercise/ls_user_setting/controller/ls_user_setting_controller.dart';
 export 'package:example/module/exercise/ls_user_setting/view/ls_user_setting_view.dart';
-export 'package:example/module/tutorial/acak/ack_tutorial_cart/controller/ack_tutorial_cart_controller.dart';
-export 'package:example/module/tutorial/acak/ack_tutorial_cart/view/ack_tutorial_cart_view.dart';
 export 'package:example/module/tutorial/app/ovo/ovo_dashboard/controller/ovo_dashboard_controller.dart';
 export 'package:example/module/tutorial/app/ovo/ovo_dashboard/view/ovo_dashboard_view.dart';
 export 'package:example/module/tutorial/app/tiktok/tk_dashboard/controller/tk_dashboard_controller.dart';
