@@ -42,12 +42,6 @@ export 'package:example/module/dev/list_item_ui/controller/list_item_ui_controll
 export 'package:example/module/dev/list_item_ui/view/list_item_ui_view.dart';
 export 'package:example/module/dev/list_ui/controller/list_ui_controller.dart';
 export 'package:example/module/dev/list_ui/view/list_ui_view.dart';
-export 'package:example/module/dev/main_navigation/controller/main_navigation_controller.dart';
-export 'package:example/module/dev/main_navigation/model/navigation_item.dart';
-export 'package:example/module/dev/main_navigation/view/main_navigation_view.dart';
-export 'package:example/module/dev/main_navigation/widget/side_group_title.dart';
-export 'package:example/module/dev/main_navigation/widget/side_menu_item.dart';
-export 'package:example/module/dev/main_navigation/widget/top_bar.dart';
 export 'package:example/module/dev/navigation_ui/controller/navigation_ui_controller.dart';
 export 'package:example/module/dev/navigation_ui/view/navigation_ui_view.dart';
 export 'package:example/module/dev/scaffold_ui/controller/scaffold_ui_controller.dart';
@@ -371,9 +365,6 @@ export 'package:example/module/tutorial_ui/taras/tm_intro/controller/tm_intro_co
 export 'package:example/module/tutorial_ui/taras/tm_intro/view/tm_intro_view.dart';
 export 'package:example/module/tutorial_ui/taras/tm_intro/widget/arc_text.dart';
 export 'package:example/module/tutorial_ui/taras/tm_intro/widget/curved_text.dart';
-export 'package:example/router/no_transition.dart';
-export 'package:example/router/router.dart';
-export 'package:example/router/route_util.dart';
 export 'package:example/service/auth_service.dart';
 export 'package:example/service/db_service.dart';
 export 'package:example/service/form_history_service.dart';
