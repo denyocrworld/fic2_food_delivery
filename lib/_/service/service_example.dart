@@ -1,6 +1,7 @@
 //#GROUP_TEMPLATE experimental_service
 import 'dart:io';
 import 'package:example/core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:hive/hive.dart';
@@ -35,8 +36,10 @@ class ServiceExampleView extends StatelessWidget {
 
   hive() async {
     //#TEMPLATE hive_init
-    var path = await getTemporaryDirectory();
-    Hive.init(path.path);
+    if (!kIsWeb) {
+      var path = await getTemporaryDirectory();
+      Hive.init(path.path);
+    }
     mainStorage = await Hive.openBox('mainStorage');
     //#END
 
