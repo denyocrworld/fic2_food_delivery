@@ -15,7 +15,14 @@ class TrExampleView extends StatefulWidget {
         child: Column(
           children: [
             Text(
-              "${controller.state.counter.value}",
+              "${controller.counter.value}",
+              style: const TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Text(
+              "${controller.counterx.value}",
               style: const TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
@@ -28,8 +35,26 @@ class TrExampleView extends StatefulWidget {
                 backgroundColor: Colors.blueGrey,
               ),
               onPressed: () {
-                controller.state.updateCounter();
+                controller.updateCounter();
               },
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              controller.name.value,
+              style: const TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Update name"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () => controller.updateName(),
             ),
           ],
         ),

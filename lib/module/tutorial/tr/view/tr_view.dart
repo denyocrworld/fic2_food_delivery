@@ -81,6 +81,11 @@ class TrView extends StatefulWidget {
             children: [
               title("Example"),
               TrList(
+                title: "Ramdom Apps",
+                items: controller.randomAppItems,
+                color: Colors.black,
+              ),
+              TrList(
                 title: "FIC State Management",
                 items: controller.ficStateManagementList,
                 color: Colors.purple,
@@ -119,11 +124,6 @@ class TrView extends StatefulWidget {
                 title: "Local Storage",
                 items: controller.localStorageItems,
                 color: Colors.brown,
-              ),
-              TrList(
-                title: "Ramdom Apps",
-                items: controller.randomAppItems,
-                color: Colors.black,
               ),
               title("Exercise"),
               TrList(

@@ -103,6 +103,7 @@ void main() async {
     Hive.init(path.path);
   }
   mainStorage = await Hive.openBox('mainStorage');
+  await ObsStorage.initializeObsStorage();
 
   await UserService.load();
   await ThemeService.load();
@@ -135,7 +136,7 @@ runMainApp() async {
     // home: const CounterAppView(),
     // home: const MvcCounterView(),
     // home: const DevDocsView(),
-    home: const TrExampleView(),
+    home: const TrView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));
@@ -148,7 +149,7 @@ customizeInDesktopVersion() async {
       const initialSize = Size(360, 660);
       appWindow.minSize = initialSize;
       appWindow.size = initialSize;
-      appWindow.alignment = Alignment.topLeft;
+      appWindow.alignment = Alignment.topRight;
       appWindow.show();
     });
   }

@@ -1,8 +1,5 @@
-import 'package:example/module/tutorial_ui/taras/tm_intro/widget/arc_text.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
-
-import '../../theme/tm_theme.dart';
 
 class TmIntroView extends StatefulWidget {
   const TmIntroView({Key? key}) : super(key: key);
@@ -41,13 +38,18 @@ class TmIntroView extends StatefulWidget {
                   margin: EdgeInsets.only(
                     top: MediaQuery.of(context).size.width * 0.48,
                   ),
-                  child: ArcText(
-                    text: "ENJOY YOUR LIVE AUCTION",
-                    radius: MediaQuery.of(context).size.width * 0.3,
-                    startAngle: -360 / 360,
-                    style: TextStyle(
-                      fontSize: MediaQuery.of(context).size.width * 0.1,
-                      color: Colors.black,
+                  child: InkWell(
+                    onTap: () {
+                      Get.back();
+                    },
+                    child: ArcText(
+                      text: "ENJOY YOUR LIVE AUCTION",
+                      radius: MediaQuery.of(context).size.width * 0.3,
+                      startAngle: -360 / 360,
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.1,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                 ),
