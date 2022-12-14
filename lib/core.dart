@@ -267,6 +267,14 @@ export 'package:example/module/tutorial/tf_register/controller/tf_register_contr
 export 'package:example/module/tutorial/tf_register/view/tf_register_view.dart';
 export 'package:example/module/tutorial/tf_user_list/controller/tf_user_list_controller.dart';
 export 'package:example/module/tutorial/tf_user_list/view/tf_user_list_view.dart';
+export 'package:example/module/tutorial/tkpos_dashboard/controller/tkpos_dashboard_controller.dart';
+export 'package:example/module/tutorial/tkpos_dashboard/view/tkpos_dashboard_view.dart';
+export 'package:example/module/tutorial/tkpos_pos/controller/tkpos_pos_controller.dart';
+export 'package:example/module/tutorial/tkpos_pos/view/tkpos_pos_view.dart';
+export 'package:example/module/tutorial/tkpos_product_form/controller/tkpos_product_form_controller.dart';
+export 'package:example/module/tutorial/tkpos_product_form/view/tkpos_product_form_view.dart';
+export 'package:example/module/tutorial/tkpos_product_list/controller/tkpos_product_list_controller.dart';
+export 'package:example/module/tutorial/tkpos_product_list/view/tkpos_product_list_view.dart';
 export 'package:example/module/tutorial/tr/controller/tr_controller.dart';
 export 'package:example/module/tutorial/tr/view/tr_view.dart';
 export 'package:example/module/tutorial/tr/widget/form_example.dart';
@@ -346,6 +354,7 @@ export 'package:example/module/tutorial/tr_basic_widget/controller/tr_basic_widg
 export 'package:example/module/tutorial/tr_basic_widget/view/tr_basic_widget_view.dart';
 export 'package:example/module/tutorial/tr_basic_widget/widget/tr_basic_item.dart';
 export 'package:example/module/tutorial/tr_example/controller/tr_example_controller.dart';
+export 'package:example/module/tutorial/tr_example/state/tr_example_state.dart';
 export 'package:example/module/tutorial/tr_example/util/obs.dart';
 export 'package:example/module/tutorial/tr_example/view/tr_example_view.dart';
 export 'package:example/module/tutorial/tr_example/widget/bergetar.dart';

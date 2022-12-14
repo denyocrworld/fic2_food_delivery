@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:example/core.dart';
 import 'package:example/session.dart';
 import 'package:flutter/foundation.dart';
@@ -15,79 +12,9 @@ LINK KOMUNITAS
 Kelas Online Dart/Flutter
 ! https://capekngoding.com
 
-FrontEND
-React
-- HTML, CSS dan JS
-- React
+TODO: YOUTUBE
+TODO: CAPEK NGODING
 
-Flutter
-- Dart 
-- Flutter
-
-REACT NATIVE
-HTML, CSS, JS
-BAHASA PEMROGRAMAN: JS
-UI: JSX
-
-
-FLUTTER
-BAHAS PEMROGRAMAN: DART
-UI: DART
-
-10.000 JAM
-100 Jam, 1000 Jam, 5000 Jam
-
-Karena ga mungkin kalian bisa main gitar
-Tapi jarang main gitar.
-
-Bahasa Pemrograman: Dart
-Framework: Flutter
-
-Unity3d
-- C#
-- Javascript
-
----
-Clone 5 Aplikasi yang Populer
-- Tokopedia, Tiktok, Grab, Gojek, Noice, Shopee
-
-Clone 5 Aplikasi Acak di Dribble
-- Clone 5 UI dari dribble
----
-
-
-Framework Dart untuk Backend
-- Serverpod
-- Dartfrog
-- Conduit
-- GetServer
-
----
-
-JUNIOR
-Daerah
-4-8jt
-
-Jakarta
-8-15jt
-
-Batam
-8-20jt
-
-Singapur
-15-35++
-
-UK/US
-25-45++
-
-
-setState
-provider
-mobx
-getx
-
-bloc
-riverpod
 */
 void main() async {
   Map product = {
@@ -112,7 +39,7 @@ void main() async {
   AppSession.token = await mainStorage.get("token") ?? "";
 
   runMainApp();
-  customizeInDesktopVersion();
+  // customizeInDesktopVersion();
 
   // runApp(MaterialApp.router(
   //   title: 'Capek Ngoding',
@@ -143,14 +70,15 @@ runMainApp() async {
 }
 
 customizeInDesktopVersion() async {
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-    // await Future.delayed(const Duration(milliseconds: 600));
-    doWhenWindowReady(() {
-      const initialSize = Size(360, 660);
-      appWindow.minSize = initialSize;
-      appWindow.size = initialSize;
-      appWindow.alignment = Alignment.topRight;
-      appWindow.show();
-    });
-  }
+  // if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+  //   // await Future.delayed(const Duration(milliseconds: 600));
+  //   await Future.delayed(const Duration(seconds: 1));
+  //   doWhenWindowReady(() {
+  //     const initialSize = Size(360, 660);
+  //     appWindow.minSize = initialSize;
+  //     appWindow.size = initialSize;
+  //     appWindow.alignment = Alignment.topRight;
+  //     appWindow.show();
+  //   });
+  // }
 }

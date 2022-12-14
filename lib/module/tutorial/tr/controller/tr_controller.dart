@@ -495,6 +495,10 @@ class TrController extends State<TrView> implements MvcController {
       "view": const TrExampleView(),
     },
     {
+      "label": "POS",
+      "view": const TkposDashboardView(),
+    },
+    {
       "label": "Crud Generator",
       "view": const CgMainNavigationView(),
     },

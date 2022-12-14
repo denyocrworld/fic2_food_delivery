@@ -81,6 +81,10 @@
         "tutorial/mvc_dashboard",
         "tutorial/mvc_login",
         "tutorial/mvc_profile",
-        "tutorial/tr_product_form_example"
+        "tutorial/tr_product_form_example",
+        "tutorial/tkpos_dashboard",
+        "tutorial/tkpos_product_list",
+        "tutorial/tkpos_product_form",
+        "tutorial/tkpos_pos"
     ]
 }

@@ -6,6 +6,10 @@ import 'package:path_provider/path_provider.dart';
 List<ValueNotifier> valueNotifiers = [];
 List<State> stateList = [];
 
+observable(State state) {
+  stateList.add(state);
+}
+
 runStateList() {
   print("stateList: ${stateList.length}");
   for (var state in stateList) {

@@ -10,7 +10,7 @@ class TrExampleController extends State<TrExampleView>
   @override
   void initState() {
     instance = this;
-    stateList.add(this);
+    observable(this);
     super.initState();
   }
 
