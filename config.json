@@ -80,6 +80,7 @@
         "tutorial/mvc_counter",
         "tutorial/mvc_dashboard",
         "tutorial/mvc_login",
-        "tutorial/mvc_profile"
+        "tutorial/mvc_profile",
+        "tutorial/tr_product_form_example"
     ]
 }

@@ -106,6 +106,8 @@ export 'package:example/module/exercise/ls_product_crud/controller/ls_product_cr
 export 'package:example/module/exercise/ls_product_crud/view/ls_product_crud_view.dart';
 export 'package:example/module/exercise/ls_user_setting/controller/ls_user_setting_controller.dart';
 export 'package:example/module/exercise/ls_user_setting/view/ls_user_setting_view.dart';
+export 'package:example/module/tutorial/acak/ack_tutorial_cart/controller/ack_tutorial_cart_controller.dart';
+export 'package:example/module/tutorial/acak/ack_tutorial_cart/view/ack_tutorial_cart_view.dart';
 export 'package:example/module/tutorial/app/ovo/ovo_dashboard/controller/ovo_dashboard_controller.dart';
 export 'package:example/module/tutorial/app/ovo/ovo_dashboard/view/ovo_dashboard_view.dart';
 export 'package:example/module/tutorial/app/tiktok/tk_dashboard/controller/tk_dashboard_controller.dart';
@@ -348,6 +350,8 @@ export 'package:example/module/tutorial/tr_example/util/obs.dart';
 export 'package:example/module/tutorial/tr_example/view/tr_example_view.dart';
 export 'package:example/module/tutorial/tr_example/widget/bergetar.dart';
 export 'package:example/module/tutorial/tr_example/widget/promotion_banner.dart';
+export 'package:example/module/tutorial/tr_product_form_example/controller/tr_product_form_example_controller.dart';
+export 'package:example/module/tutorial/tr_product_form_example/view/tr_product_form_example_view.dart';
 export 'package:example/module/tutorial/tutorial_extension/controller/tutorial_extension_controller.dart';
 export 'package:example/module/tutorial/tutorial_extension/view/tutorial_extension_view.dart';
 export 'package:example/module/tutorial/ui_dailiy_todo_list/controller/ui_dailiy_todo_list_controller.dart';

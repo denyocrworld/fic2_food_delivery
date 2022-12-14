@@ -7,12 +7,31 @@ class TrExampleView extends StatefulWidget {
     controller.view = this;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Dashboards"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
+      body: Container(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            Text(
+              "${controller.state.counter.value}",
+              style: const TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.add),
+              label: const Text("Add"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+              ),
+              onPressed: () {
+                controller.state.updateCounter();
+              },
+            ),
+          ],
         ),
       ),
     );

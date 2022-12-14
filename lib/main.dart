@@ -12,49 +12,57 @@ import 'package:path_provider/path_provider.dart';
 LINK KOMUNITAS
 ! https://tinyurl.com/join-berandal
 
-Kelas Online Dart/Flutter (8x Pertemuan)
+Kelas Online Dart/Flutter
 ! https://capekngoding.com
 
-TODO: Jangan pernah bikin aplikasi tanpa architecture
-- Akan susah di maintain
-- Pada akhirnya akan berexperiment yang nggak perlu
-- Kode-nya jadi gak clean
-
-MVC
-MVP
-MVVM
-BLoc Architecutre
-Riverpod Architecutre
-Clean Architecture
+FrontEND
+React
+- HTML, CSS dan JS
+- React
 
 Flutter
-masih bergantung sama Native
+- Dart 
+- Flutter
 
-Produktivitas utk BKin UI
-- Flutter lebih ok daripada Native
+REACT NATIVE
+HTML, CSS, JS
+BAHASA PEMROGRAMAN: JS
+UI: JSX
+
+
+FLUTTER
+BAHAS PEMROGRAMAN: DART
+UI: DART
+
+10.000 JAM
+100 Jam, 1000 Jam, 5000 Jam
+
+Karena ga mungkin kalian bisa main gitar
+Tapi jarang main gitar.
+
+Bahasa Pemrograman: Dart
+Framework: Flutter
+
+Unity3d
+- C#
+- Javascript
 
 ---
+Clone 5 Aplikasi yang Populer
+- Tokopedia, Tiktok, Grab, Gojek, Noice, Shopee
 
-RAM: 8GB-16GB
-Hardisk: SSD
-Processor: 10 tahun terakhir
-AMD RYZEN 3, AMD RYZEN 5
-i3, i5, i7
----
-+HARUS ADA PORTOFOLIO
----
-Front END
-- Clone UI dari Aplikasi2 Populer
-> Tokopedia, Grab, OVO, Gojek, NOice, Tikok
-(3-5 halaman)
-(React, Flutter, bebas)
-- Clone 5 UI yang ada di Dribble
-
-(10 Portofolio)
+Clone 5 Aplikasi Acak di Dribble
+- Clone 5 UI dari dribble
 ---
 
-- BASIC DART
-- MVC + State Management
+
+Framework Dart untuk Backend
+- Serverpod
+- Dartfrog
+- Conduit
+- GetServer
+
+---
 
 JUNIOR
 Daerah
@@ -125,9 +133,9 @@ runMainApp() async {
     // home: const TrBasicWidgetView(),
     // home: const TrExampleView(),
     // home: const CounterAppView(),
-    home: const MvcCounterView(),
+    // home: const MvcCounterView(),
     // home: const DevDocsView(),
-    // home: const TrExampleView(),
+    home: const TrExampleView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));

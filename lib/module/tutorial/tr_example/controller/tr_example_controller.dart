@@ -1,5 +1,5 @@
 import 'package:example/core.dart';
-import 'package:example/module/tutorial/tr_example/util/obs.dart';
+import 'package:example/module/tutorial/tr_example/state/tr_example_state.dart';
 import 'package:flutter/material.dart';
 
 class TrExampleController extends State<TrExampleView>
@@ -23,5 +23,5 @@ class TrExampleController extends State<TrExampleView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  var counter = 23.obs();
+  TrExampleState state = TrExampleState();
 }
