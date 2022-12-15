@@ -90,6 +90,12 @@
         "app/membership_app/ma_login",
         "app/membership_app/ma_main_navigation",
         "app/membership_app/ma_dashboard",
-        "main"
+        "main",
+        "fhe/fhe_main_navigation",
+        "fhe/fhe_item",
+        "fhe/fhe_button",
+        "fhe/fhe_bottom_navigation",
+        "fhe/fhe_form",
+        "fhe/fhe_form_reuseable_widget"
     ]
 }

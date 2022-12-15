@@ -592,6 +592,20 @@ class DevDocsView extends StatelessWidget {
               ),
               //#END
 
+              //#TEMPLATE button_icon_outline_continuous
+              OutlinedButton.icon(
+                icon: const Icon(Icons.add),
+                label: const Text("Add"),
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.blueGrey,
+                  shape: ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.circular(64.0),
+                  ),
+                ),
+                onPressed: () {},
+              ),
+              //#END
+
               //#TEMPLATE button_icon_outline_radius
               OutlinedButton.icon(
                 icon: const Icon(Icons.add),
