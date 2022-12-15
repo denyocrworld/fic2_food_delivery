@@ -13,6 +13,9 @@ class DevSnippetView extends StatelessWidget {
       //#TEMPLATE co
       controller
       //#END
+      //#TEMPLATE cl
+      controller
+      //#END
       */
 
       //#TEMPLATE dp

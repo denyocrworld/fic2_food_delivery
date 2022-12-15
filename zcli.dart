@@ -4,7 +4,6 @@ import 'dart:io';
 String command = "";
 String value = "";
 String packageName = "";
-
 String? currentGroupTemplate;
 
 getPackageName() async {
