@@ -39,6 +39,14 @@ margin: const EdgeInsets.all(\$1),
 size: $i.0,
 #END
 
+#TEMPLATE rd$i
+radius: $i.0,
+#END
+
+#TEMPLATE brd$i
+borderRadius: BorderRadius.circular($i.0)
+#END
+
 
 #TEMPLATE sw$i
 const SizedBox(
