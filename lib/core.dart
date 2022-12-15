@@ -112,6 +112,10 @@ export 'package:example/module/exercise/ls_product_crud/controller/ls_product_cr
 export 'package:example/module/exercise/ls_product_crud/view/ls_product_crud_view.dart';
 export 'package:example/module/exercise/ls_user_setting/controller/ls_user_setting_controller.dart';
 export 'package:example/module/exercise/ls_user_setting/view/ls_user_setting_view.dart';
+export 'package:example/module/main/controller/main_controller.dart';
+export 'package:example/module/main/view/main_view.dart';
+export 'package:example/module/main/widget/main_view_list_item.dart';
+export 'package:example/module/main/widget/main_view_navigation_item.dart';
 export 'package:example/module/tutorial/acak/ack_tutorial_cart/controller/ack_tutorial_cart_controller.dart';
 export 'package:example/module/tutorial/acak/ack_tutorial_cart/view/ack_tutorial_cart_view.dart';
 export 'package:example/module/tutorial/app/ovo/ovo_dashboard/controller/ovo_dashboard_controller.dart';
@@ -281,11 +285,6 @@ export 'package:example/module/tutorial/tkpos_product_form/controller/tkpos_prod
 export 'package:example/module/tutorial/tkpos_product_form/view/tkpos_product_form_view.dart';
 export 'package:example/module/tutorial/tkpos_product_list/controller/tkpos_product_list_controller.dart';
 export 'package:example/module/tutorial/tkpos_product_list/view/tkpos_product_list_view.dart';
-export 'package:example/module/tutorial/tr/controller/tr_controller.dart';
-export 'package:example/module/tutorial/tr/view/tr_view.dart';
-export 'package:example/module/tutorial/tr/widget/form_example.dart';
-export 'package:example/module/tutorial/tr/widget/tr_list.dart';
-export 'package:example/module/tutorial/tr/widget/tutorial_navigation_item.dart';
 export 'package:example/module/tutorial/trfm_checkout_form/controller/trfm_checkout_form_controller.dart';
 export 'package:example/module/tutorial/trfm_checkout_form/view/trfm_checkout_form_view.dart';
 export 'package:example/module/tutorial/trfm_edit_profile_form/controller/trfm_edit_profile_form_controller.dart';

@@ -3,13 +3,13 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class TutorialNavigationItem extends StatelessWidget {
+class MainViewNavigationItem extends StatelessWidget {
   final Map<String, dynamic> item;
   final double size;
   final int index;
   final Color? color;
 
-  const TutorialNavigationItem({
+  const MainViewNavigationItem({
     Key? key,
     required this.item,
     required this.size,

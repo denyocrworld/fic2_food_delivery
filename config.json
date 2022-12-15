@@ -89,6 +89,7 @@
         "tutorial/tkpos_pos",
         "app/membership_app/ma_login",
         "app/membership_app/ma_main_navigation",
-        "app/membership_app/ma_dashboard"
+        "app/membership_app/ma_dashboard",
+        "main"
     ]
 }

@@ -2,10 +2,10 @@ import 'package:example/config.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class TrView extends StatefulWidget {
-  const TrView({Key? key}) : super(key: key);
+class MainView extends StatefulWidget {
+  const MainView({Key? key}) : super(key: key);
 
-  Widget build(context, TrController controller) {
+  Widget build(context, MainController controller) {
     controller.view = this;
 
     if (AppConfig.yourName == "Deny" ||
@@ -80,74 +80,68 @@ class TrView extends StatefulWidget {
           child: Column(
             children: [
               title("Example"),
-              TrList(
+              MainViewListItem(
                 title: "Ramdom Apps",
                 items: controller.randomAppItems,
                 color: Colors.black,
               ),
-              TrList(
+              MainViewListItem(
                 title: "FIC State Management",
                 items: controller.ficStateManagementList,
                 color: Colors.purple,
               ),
-              TrList(
+              MainViewListItem(
                 title: "State Management",
                 items: controller.items,
                 color: Colors.red,
               ),
-              TrList(
+              MainViewListItem(
                 title: "Form",
                 items: controller.formItems,
                 color: Colors.green,
               ),
-              TrList(
+              MainViewListItem(
                 title: "HTTP Request",
                 items: controller.httpRequestItems,
                 color: Colors.green,
               ),
-              TrList(
+              MainViewListItem(
                 title: "Firebase x Firestore",
                 items: controller.firebaseExampleItems,
                 color: Colors.red,
               ),
-              TrList(
+              MainViewListItem(
                 title: "Coontextless Tutorial",
                 items: controller.contextLessMenuItems,
                 color: Colors.blueAccent,
               ),
-              TrList(
+              MainViewListItem(
                 title: "UI Example",
                 items: controller.uiExampleItems,
                 color: Colors.cyan,
               ),
-              TrList(
+              MainViewListItem(
                 title: "Local Storage",
                 items: controller.localStorageItems,
                 color: Colors.brown,
               ),
               title("Exercise"),
-              TrList(
+              MainViewListItem(
                 title: "State Management Exercise",
                 items: controller.stateManagementExerciseList,
                 color: Colors.green,
               ),
-              TrList(
-                title: "Form Exercise",
-                items: controller.formExerciseList,
-                color: Colors.green,
-                head: const TrFormExample(),
-              ),
-              TrList(
+              MainViewListItem(
                 title: "HTTP Exercise",
                 items: controller.httpExerciseList,
                 color: Colors.purple,
               ),
-              TrList(
+              MainViewListItem(
                 title: "Local Storage Exercise",
                 items: controller.lsExerciseList,
                 color: Colors.blueAccent,
               ),
-              const TrList(
+              const MainViewListItem(
                 title: "Firebase Exercise (Coming Soon)",
                 items: [],
                 color: Colors.orange,
@@ -183,5 +177,5 @@ class TrView extends StatefulWidget {
   }
 
   @override
-  State<TrView> createState() => TrController();
+  State<MainView> createState() => MainController();
 }

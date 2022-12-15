@@ -1,9 +1,9 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class TrController extends State<TrView> implements MvcController {
-  static late TrController instance;
-  late TrView view;
+class MainController extends State<MainView> implements MvcController {
+  static late MainController instance;
+  late MainView view;
 
   @override
   void initState() {

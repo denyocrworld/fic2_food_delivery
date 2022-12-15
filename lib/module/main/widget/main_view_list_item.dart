@@ -1,13 +1,13 @@
 import 'dart:async';
+import 'package:example/module/main/widget/main_view_navigation_item.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
 
-class TrList extends StatefulWidget {
+class MainViewListItem extends StatefulWidget {
   final String title;
   final List items;
   final Widget? head;
   final Color? color;
-  const TrList({
+  const MainViewListItem({
     Key? key,
     required this.title,
     required this.items,
@@ -16,10 +16,10 @@ class TrList extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<TrList> createState() => _TrListState();
+  State<MainViewListItem> createState() => _MainViewListItemState();
 }
 
-class _TrListState extends State<TrList> {
+class _MainViewListItemState extends State<MainViewListItem> {
   bool expanded = false;
   bool rotated = false;
 
@@ -112,7 +112,7 @@ class _TrListState extends State<TrList> {
                             size = 0;
                           }
 
-                          return TutorialNavigationItem(
+                          return MainViewNavigationItem(
                             item: item,
                             size: size,
                             index: index,
