@@ -12,7 +12,7 @@ class CurrentTheme {
   static const cardBorderRadius = 12.0;
 }
 
-ThemeData getGrabInspiredTheme() {
+ThemeData getGojekTheme() {
   return ThemeData.light().copyWith(
     primaryColor: CurrentTheme.mainColor,
     // primarySwatch:  Color(0xffFA533C),
