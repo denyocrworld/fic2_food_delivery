@@ -32,6 +32,14 @@ margin: const EdgeInsets.all($1),
 size: 1.0,
 #END
 
+#TEMPLATE rd1
+radius: 1.0,
+#END
+
+#TEMPLATE brd1
+borderRadius: BorderRadius.circular(1.0)
+#END
+
 
 #TEMPLATE sw1
 const SizedBox(
@@ -144,6 +152,14 @@ Text("text",
 
 #TEMPLATE sz2
 size: 2.0,
+#END
+
+#TEMPLATE rd2
+radius: 2.0,
+#END
+
+#TEMPLATE brd2
+borderRadius: BorderRadius.circular(2.0)
 #END
 
 
@@ -260,6 +276,14 @@ Text("text",
 size: 3.0,
 #END
 
+#TEMPLATE rd3
+radius: 3.0,
+#END
+
+#TEMPLATE brd3
+borderRadius: BorderRadius.circular(3.0)
+#END
+
 
 #TEMPLATE sw3
 const SizedBox(
@@ -372,6 +396,14 @@ Text("text",
 
 #TEMPLATE sz4
 size: 4.0,
+#END
+
+#TEMPLATE rd4
+radius: 4.0,
+#END
+
+#TEMPLATE brd4
+borderRadius: BorderRadius.circular(4.0)
 #END
 
 
@@ -488,6 +520,14 @@ Text("text",
 size: 5.0,
 #END
 
+#TEMPLATE rd5
+radius: 5.0,
+#END
+
+#TEMPLATE brd5
+borderRadius: BorderRadius.circular(5.0)
+#END
+
 
 #TEMPLATE sw5
 const SizedBox(
@@ -600,6 +640,14 @@ Text("text",
 
 #TEMPLATE sz6
 size: 6.0,
+#END
+
+#TEMPLATE rd6
+radius: 6.0,
+#END
+
+#TEMPLATE brd6
+borderRadius: BorderRadius.circular(6.0)
 #END
 
 
@@ -716,6 +764,14 @@ Text("text",
 size: 7.0,
 #END
 
+#TEMPLATE rd7
+radius: 7.0,
+#END
+
+#TEMPLATE brd7
+borderRadius: BorderRadius.circular(7.0)
+#END
+
 
 #TEMPLATE sw7
 const SizedBox(
@@ -828,6 +884,14 @@ Text("text",
 
 #TEMPLATE sz8
 size: 8.0,
+#END
+
+#TEMPLATE rd8
+radius: 8.0,
+#END
+
+#TEMPLATE brd8
+borderRadius: BorderRadius.circular(8.0)
 #END
 
 
@@ -944,6 +1008,14 @@ Text("text",
 size: 9.0,
 #END
 
+#TEMPLATE rd9
+radius: 9.0,
+#END
+
+#TEMPLATE brd9
+borderRadius: BorderRadius.circular(9.0)
+#END
+
 
 #TEMPLATE sw9
 const SizedBox(
@@ -1056,6 +1128,14 @@ Text("text",
 
 #TEMPLATE sz10
 size: 10.0,
+#END
+
+#TEMPLATE rd10
+radius: 10.0,
+#END
+
+#TEMPLATE brd10
+borderRadius: BorderRadius.circular(10.0)
 #END
 
 
@@ -1172,6 +1252,14 @@ Text("text",
 size: 11.0,
 #END
 
+#TEMPLATE rd11
+radius: 11.0,
+#END
+
+#TEMPLATE brd11
+borderRadius: BorderRadius.circular(11.0)
+#END
+
 
 #TEMPLATE sw11
 const SizedBox(
@@ -1284,6 +1372,14 @@ Text("text",
 
 #TEMPLATE sz12
 size: 12.0,
+#END
+
+#TEMPLATE rd12
+radius: 12.0,
+#END
+
+#TEMPLATE brd12
+borderRadius: BorderRadius.circular(12.0)
 #END
 
 
@@ -1400,6 +1496,14 @@ Text("text",
 size: 13.0,
 #END
 
+#TEMPLATE rd13
+radius: 13.0,
+#END
+
+#TEMPLATE brd13
+borderRadius: BorderRadius.circular(13.0)
+#END
+
 
 #TEMPLATE sw13
 const SizedBox(
@@ -1512,6 +1616,14 @@ Text("text",
 
 #TEMPLATE sz14
 size: 14.0,
+#END
+
+#TEMPLATE rd14
+radius: 14.0,
+#END
+
+#TEMPLATE brd14
+borderRadius: BorderRadius.circular(14.0)
 #END
 
 
@@ -1628,6 +1740,14 @@ Text("text",
 size: 15.0,
 #END
 
+#TEMPLATE rd15
+radius: 15.0,
+#END
+
+#TEMPLATE brd15
+borderRadius: BorderRadius.circular(15.0)
+#END
+
 
 #TEMPLATE sw15
 const SizedBox(
@@ -1740,6 +1860,14 @@ Text("text",
 
 #TEMPLATE sz16
 size: 16.0,
+#END
+
+#TEMPLATE rd16
+radius: 16.0,
+#END
+
+#TEMPLATE brd16
+borderRadius: BorderRadius.circular(16.0)
 #END
 
 
@@ -1856,6 +1984,14 @@ Text("text",
 size: 17.0,
 #END
 
+#TEMPLATE rd17
+radius: 17.0,
+#END
+
+#TEMPLATE brd17
+borderRadius: BorderRadius.circular(17.0)
+#END
+
 
 #TEMPLATE sw17
 const SizedBox(
@@ -1968,6 +2104,14 @@ Text("text",
 
 #TEMPLATE sz18
 size: 18.0,
+#END
+
+#TEMPLATE rd18
+radius: 18.0,
+#END
+
+#TEMPLATE brd18
+borderRadius: BorderRadius.circular(18.0)
 #END
 
 
@@ -2084,6 +2228,14 @@ Text("text",
 size: 19.0,
 #END
 
+#TEMPLATE rd19
+radius: 19.0,
+#END
+
+#TEMPLATE brd19
+borderRadius: BorderRadius.circular(19.0)
+#END
+
 
 #TEMPLATE sw19
 const SizedBox(
@@ -2196,6 +2348,14 @@ Text("text",
 
 #TEMPLATE sz20
 size: 20.0,
+#END
+
+#TEMPLATE rd20
+radius: 20.0,
+#END
+
+#TEMPLATE brd20
+borderRadius: BorderRadius.circular(20.0)
 #END
 
 
@@ -2312,6 +2472,14 @@ Text("text",
 size: 21.0,
 #END
 
+#TEMPLATE rd21
+radius: 21.0,
+#END
+
+#TEMPLATE brd21
+borderRadius: BorderRadius.circular(21.0)
+#END
+
 
 #TEMPLATE sw21
 const SizedBox(
@@ -2424,6 +2592,14 @@ Text("text",
 
 #TEMPLATE sz22
 size: 22.0,
+#END
+
+#TEMPLATE rd22
+radius: 22.0,
+#END
+
+#TEMPLATE brd22
+borderRadius: BorderRadius.circular(22.0)
 #END
 
 
@@ -2540,6 +2716,14 @@ Text("text",
 size: 23.0,
 #END
 
+#TEMPLATE rd23
+radius: 23.0,
+#END
+
+#TEMPLATE brd23
+borderRadius: BorderRadius.circular(23.0)
+#END
+
 
 #TEMPLATE sw23
 const SizedBox(
@@ -2652,6 +2836,14 @@ Text("text",
 
 #TEMPLATE sz24
 size: 24.0,
+#END
+
+#TEMPLATE rd24
+radius: 24.0,
+#END
+
+#TEMPLATE brd24
+borderRadius: BorderRadius.circular(24.0)
 #END
 
 
@@ -2768,6 +2960,14 @@ Text("text",
 size: 25.0,
 #END
 
+#TEMPLATE rd25
+radius: 25.0,
+#END
+
+#TEMPLATE brd25
+borderRadius: BorderRadius.circular(25.0)
+#END
+
 
 #TEMPLATE sw25
 const SizedBox(
@@ -2880,6 +3080,14 @@ Text("text",
 
 #TEMPLATE sz26
 size: 26.0,
+#END
+
+#TEMPLATE rd26
+radius: 26.0,
+#END
+
+#TEMPLATE brd26
+borderRadius: BorderRadius.circular(26.0)
 #END
 
 
@@ -2996,6 +3204,14 @@ Text("text",
 size: 27.0,
 #END
 
+#TEMPLATE rd27
+radius: 27.0,
+#END
+
+#TEMPLATE brd27
+borderRadius: BorderRadius.circular(27.0)
+#END
+
 
 #TEMPLATE sw27
 const SizedBox(
@@ -3108,6 +3324,14 @@ Text("text",
 
 #TEMPLATE sz28
 size: 28.0,
+#END
+
+#TEMPLATE rd28
+radius: 28.0,
+#END
+
+#TEMPLATE brd28
+borderRadius: BorderRadius.circular(28.0)
 #END
 
 
@@ -3224,6 +3448,14 @@ Text("text",
 size: 29.0,
 #END
 
+#TEMPLATE rd29
+radius: 29.0,
+#END
+
+#TEMPLATE brd29
+borderRadius: BorderRadius.circular(29.0)
+#END
+
 
 #TEMPLATE sw29
 const SizedBox(
@@ -3336,6 +3568,14 @@ Text("text",
 
 #TEMPLATE sz30
 size: 30.0,
+#END
+
+#TEMPLATE rd30
+radius: 30.0,
+#END
+
+#TEMPLATE brd30
+borderRadius: BorderRadius.circular(30.0)
 #END
 
 
@@ -3452,6 +3692,14 @@ Text("text",
 size: 31.0,
 #END
 
+#TEMPLATE rd31
+radius: 31.0,
+#END
+
+#TEMPLATE brd31
+borderRadius: BorderRadius.circular(31.0)
+#END
+
 
 #TEMPLATE sw31
 const SizedBox(
@@ -3564,6 +3812,14 @@ Text("text",
 
 #TEMPLATE sz32
 size: 32.0,
+#END
+
+#TEMPLATE rd32
+radius: 32.0,
+#END
+
+#TEMPLATE brd32
+borderRadius: BorderRadius.circular(32.0)
 #END
 
 
@@ -3680,6 +3936,14 @@ Text("text",
 size: 33.0,
 #END
 
+#TEMPLATE rd33
+radius: 33.0,
+#END
+
+#TEMPLATE brd33
+borderRadius: BorderRadius.circular(33.0)
+#END
+
 
 #TEMPLATE sw33
 const SizedBox(
@@ -3792,6 +4056,14 @@ Text("text",
 
 #TEMPLATE sz34
 size: 34.0,
+#END
+
+#TEMPLATE rd34
+radius: 34.0,
+#END
+
+#TEMPLATE brd34
+borderRadius: BorderRadius.circular(34.0)
 #END
 
 
@@ -3908,6 +4180,14 @@ Text("text",
 size: 35.0,
 #END
 
+#TEMPLATE rd35
+radius: 35.0,
+#END
+
+#TEMPLATE brd35
+borderRadius: BorderRadius.circular(35.0)
+#END
+
 
 #TEMPLATE sw35
 const SizedBox(
@@ -4020,6 +4300,14 @@ Text("text",
 
 #TEMPLATE sz36
 size: 36.0,
+#END
+
+#TEMPLATE rd36
+radius: 36.0,
+#END
+
+#TEMPLATE brd36
+borderRadius: BorderRadius.circular(36.0)
 #END
 
 
@@ -4136,6 +4424,14 @@ Text("text",
 size: 37.0,
 #END
 
+#TEMPLATE rd37
+radius: 37.0,
+#END
+
+#TEMPLATE brd37
+borderRadius: BorderRadius.circular(37.0)
+#END
+
 
 #TEMPLATE sw37
 const SizedBox(
@@ -4248,6 +4544,14 @@ Text("text",
 
 #TEMPLATE sz38
 size: 38.0,
+#END
+
+#TEMPLATE rd38
+radius: 38.0,
+#END
+
+#TEMPLATE brd38
+borderRadius: BorderRadius.circular(38.0)
 #END
 
 
@@ -4364,6 +4668,14 @@ Text("text",
 size: 39.0,
 #END
 
+#TEMPLATE rd39
+radius: 39.0,
+#END
+
+#TEMPLATE brd39
+borderRadius: BorderRadius.circular(39.0)
+#END
+
 
 #TEMPLATE sw39
 const SizedBox(
@@ -4476,6 +4788,14 @@ Text("text",
 
 #TEMPLATE sz40
 size: 40.0,
+#END
+
+#TEMPLATE rd40
+radius: 40.0,
+#END
+
+#TEMPLATE brd40
+borderRadius: BorderRadius.circular(40.0)
 #END
 
 
@@ -4592,6 +4912,14 @@ Text("text",
 size: 41.0,
 #END
 
+#TEMPLATE rd41
+radius: 41.0,
+#END
+
+#TEMPLATE brd41
+borderRadius: BorderRadius.circular(41.0)
+#END
+
 
 #TEMPLATE sw41
 const SizedBox(
@@ -4704,6 +5032,14 @@ Text("text",
 
 #TEMPLATE sz42
 size: 42.0,
+#END
+
+#TEMPLATE rd42
+radius: 42.0,
+#END
+
+#TEMPLATE brd42
+borderRadius: BorderRadius.circular(42.0)
 #END
 
 
@@ -4820,6 +5156,14 @@ Text("text",
 size: 43.0,
 #END
 
+#TEMPLATE rd43
+radius: 43.0,
+#END
+
+#TEMPLATE brd43
+borderRadius: BorderRadius.circular(43.0)
+#END
+
 
 #TEMPLATE sw43
 const SizedBox(
@@ -4932,6 +5276,14 @@ Text("text",
 
 #TEMPLATE sz44
 size: 44.0,
+#END
+
+#TEMPLATE rd44
+radius: 44.0,
+#END
+
+#TEMPLATE brd44
+borderRadius: BorderRadius.circular(44.0)
 #END
 
 
@@ -5048,6 +5400,14 @@ Text("text",
 size: 45.0,
 #END
 
+#TEMPLATE rd45
+radius: 45.0,
+#END
+
+#TEMPLATE brd45
+borderRadius: BorderRadius.circular(45.0)
+#END
+
 
 #TEMPLATE sw45
 const SizedBox(
@@ -5160,6 +5520,14 @@ Text("text",
 
 #TEMPLATE sz46
 size: 46.0,
+#END
+
+#TEMPLATE rd46
+radius: 46.0,
+#END
+
+#TEMPLATE brd46
+borderRadius: BorderRadius.circular(46.0)
 #END
 
 
@@ -5276,6 +5644,14 @@ Text("text",
 size: 47.0,
 #END
 
+#TEMPLATE rd47
+radius: 47.0,
+#END
+
+#TEMPLATE brd47
+borderRadius: BorderRadius.circular(47.0)
+#END
+
 
 #TEMPLATE sw47
 const SizedBox(
@@ -5388,6 +5764,14 @@ Text("text",
 
 #TEMPLATE sz48
 size: 48.0,
+#END
+
+#TEMPLATE rd48
+radius: 48.0,
+#END
+
+#TEMPLATE brd48
+borderRadius: BorderRadius.circular(48.0)
 #END
 
 
@@ -5504,6 +5888,14 @@ Text("text",
 size: 49.0,
 #END
 
+#TEMPLATE rd49
+radius: 49.0,
+#END
+
+#TEMPLATE brd49
+borderRadius: BorderRadius.circular(49.0)
+#END
+
 
 #TEMPLATE sw49
 const SizedBox(
@@ -5616,6 +6008,14 @@ Text("text",
 
 #TEMPLATE sz50
 size: 50.0,
+#END
+
+#TEMPLATE rd50
+radius: 50.0,
+#END
+
+#TEMPLATE brd50
+borderRadius: BorderRadius.circular(50.0)
 #END
 
 
