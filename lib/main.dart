@@ -20,7 +20,6 @@ void main() async {
   await LocalProductService.load();
   await FormHistoryService.load();
   AppSession.token = await mainStorage.get("token") ?? "";
-
   runMainApp();
 }
 
