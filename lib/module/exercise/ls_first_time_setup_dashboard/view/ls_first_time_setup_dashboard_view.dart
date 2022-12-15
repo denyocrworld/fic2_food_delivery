@@ -13,7 +13,7 @@ class LsFirstTimeSetupDashboardView extends StatefulWidget {
         actions: [
           IconButton(
             onPressed: () async {
-              Get.offAll(const TrView());
+              Get.offAll(const MainView());
             },
             icon: const Icon(
               Icons.logout,

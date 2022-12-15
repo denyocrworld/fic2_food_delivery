@@ -30,6 +30,6 @@ runMainApp() async {
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     theme: getGojekTheme(),
-    home: const TrView(),
+    home: const MainView(),
   ));
 }

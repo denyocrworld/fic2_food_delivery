@@ -37,7 +37,7 @@ class LsFirstTimeSetupView extends StatefulWidget {
         title: const Text("LsFirstTimeSetup"),
         leading: IconButton(
           onPressed: () {
-            Get.offAll(const TrView());
+            Get.offAll(const MainView());
           },
           icon: const Icon(
             Icons.arrow_back,
