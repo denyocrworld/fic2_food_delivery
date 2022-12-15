@@ -1,4 +1,4 @@
-import 'package:example/shared/util/theme/theme_editor/theme_editor_ui.dart';
+import 'package:example/shared/theme/theme_editor/theme_editor_ui.dart';
 import 'package:flutter/material.dart';
 
 class ThemeIcon extends StatelessWidget {

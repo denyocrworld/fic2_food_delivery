@@ -17,6 +17,37 @@ class TrController extends State<TrView> implements MvcController {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
+  List randomAppItems = [
+    {
+      "label": "Example View",
+      "view": const TrExampleView(),
+    },
+    {
+      "label": "POS",
+      "view": const TkposDashboardView(),
+    },
+    {
+      "label": "Crud Generator",
+      "view": const CgMainNavigationView(),
+    },
+    {
+      "label": "ELearning",
+      "view": const ElnMainNavigationView(),
+    },
+    {
+      "label": "Ionly UI",
+      "view": const IonlyMainNavigationView(),
+    },
+    {
+      "label": "Taras Migulko UI",
+      "view": const TmIntroView(),
+    },
+    {
+      "label": "Gojek",
+      "view": const GjDashboardView(),
+    },
+  ];
+
   List ficStateManagementList = [
     {
       "label": "Counter",
@@ -486,33 +517,6 @@ class TrController extends State<TrView> implements MvcController {
     {
       "label": "Snackbar",
       "view": const TcSnackbarView(),
-    },
-  ];
-
-  List randomAppItems = [
-    {
-      "label": "Example View",
-      "view": const TrExampleView(),
-    },
-    {
-      "label": "POS",
-      "view": const TkposDashboardView(),
-    },
-    {
-      "label": "Crud Generator",
-      "view": const CgMainNavigationView(),
-    },
-    {
-      "label": "ELearning",
-      "view": const ElnMainNavigationView(),
-    },
-    {
-      "label": "Ionly UI",
-      "view": const IonlyMainNavigationView(),
-    },
-    {
-      "label": "Taras Migulko UI",
-      "view": const TmIntroView(),
     },
   ];
 }

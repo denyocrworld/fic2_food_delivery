@@ -1,6 +1,6 @@
 //#GROUP_TEMPLATE theme
 import 'package:example/core.dart';
-export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
+export 'package:example/shared/theme/theme_editor/themes/theme_widget.dart';
 import 'package:flutter/material.dart';
 
 get mq => MediaQuery.of(globalContext);

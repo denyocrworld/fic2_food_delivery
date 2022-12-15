@@ -1,4 +1,4 @@
-import 'package:example/shared/util/theme/theme_config.dart';
+import 'package:example/shared/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getDarkTheme() {

@@ -1,6 +1,6 @@
 //#GROUP_TEMPLATE theme
-export 'package:example/shared/util/theme/theme_editor/themes/theme_widget.dart';
-import 'package:example/shared/util/theme/theme_config.dart';
+export 'package:example/shared/theme/theme_editor/themes/theme_widget.dart';
+import 'package:example/shared/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
 ThemeData getDefaultTheme() {

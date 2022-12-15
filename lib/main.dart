@@ -12,8 +12,21 @@ LINK KOMUNITAS
 Kelas Online Dart/Flutter
 ! https://capekngoding.com
 
+- Game
+- Data Scientist
+
+- Tokopedia, Grab, OVO, Dana, Tiktok
+
+! KURANGI MEMBACA
+! PERBANYAK LATIHAN
+
 TODO: YOUTUBE
 TODO: CAPEK NGODING
+
+
+Live Tiktok 
+(Seminggu 3x)
+Pagi, jam 7-8/9
 
 */
 void main() async {
@@ -54,7 +67,7 @@ runMainApp() async {
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
     // theme: getDefaultTheme(),
-    theme: ThemeData.dark(),
+    theme: getGrabInspiredTheme(),
     // home: const TrExampleView(),
     // home: const TemplateCardView(),
     // home: const AckTutorialCartView(),
@@ -64,6 +77,8 @@ runMainApp() async {
     // home: const MvcCounterView(),
     // home: const DevDocsView(),
     home: const TrView(),
+    // home: const MaLoginView(),
+    // home: const GjDashboardView(),
     // home: const UiDailiyTodoListView(),
     // home: const LifeCycleDemoView(),
   ));

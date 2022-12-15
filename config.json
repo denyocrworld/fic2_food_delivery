@@ -77,6 +77,7 @@
         "tutorial_ui/ionly_dashboard",
         "tutorial_ui/taras/tm_intro",
         "tutorial_ui/taras/tm_dashboard",
+        "tutorial_ui/gojek/gj_dashboard",
         "tutorial/mvc_counter",
         "tutorial/mvc_dashboard",
         "tutorial/mvc_login",
@@ -85,6 +86,9 @@
         "tutorial/tkpos_dashboard",
         "tutorial/tkpos_product_list",
         "tutorial/tkpos_product_form",
-        "tutorial/tkpos_pos"
+        "tutorial/tkpos_pos",
+        "app/membership_app/ma_login",
+        "app/membership_app/ma_main_navigation",
+        "app/membership_app/ma_dashboard"
     ]
 }
