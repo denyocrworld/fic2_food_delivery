@@ -26,7 +26,7 @@ ThemeData getGojekTheme() {
       ),
     ),
     appBarTheme: AppBarTheme(
-      // backgroundColor: Colors.white,
+      backgroundColor: Colors.white,
       elevation: 0.6,
       titleTextStyle: GoogleFonts.montserrat(
         color: CurrentTheme.textColor,
@@ -50,35 +50,35 @@ ThemeData getGojekTheme() {
     listTileTheme: const ListTileThemeData(
       selectedColor: Colors.red,
     ),
-    textTheme: TextTheme(
-      bodyText1: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      bodyText2: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      headline1: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      headline2: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      headline3: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      headline4: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      displaySmall: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      displayMedium: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-      displayLarge: CurrentTheme.fontFamily.copyWith(
-        color: CurrentTheme.textColor,
-      ),
-    ),
+    // textTheme: TextTheme(
+    //   bodyText1: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   bodyText2: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   headline1: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   headline2: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   headline3: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   headline4: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   displaySmall: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   displayMedium: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    //   displayLarge: CurrentTheme.fontFamily.copyWith(
+    //     color: CurrentTheme.textColor,
+    //   ),
+    // ),
     // cardTheme: CardTheme(
     //   elevation: cardElevation,
     //   shape: RoundedRectangleBorder(

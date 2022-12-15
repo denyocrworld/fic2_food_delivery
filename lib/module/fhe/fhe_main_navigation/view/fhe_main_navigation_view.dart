@@ -32,7 +32,7 @@ class FheMainNavigationView extends StatefulWidget {
                     },
                     {
                       "icon": MdiIcons.navigation,
-                      "label": "Bottom Navigation",
+                      "label": "Bottom\nNavigation",
                       "view": const FheBottomNavigationView(),
                     },
                     {
@@ -42,7 +42,7 @@ class FheMainNavigationView extends StatefulWidget {
                     },
                     {
                       "icon": MdiIcons.formatSize,
-                      "label": "Form (Reuseable Widget)",
+                      "label": "Form\nReuseable Widget",
                       "view": const FheFormReuseableWidgetView(),
                     },
                   ];
@@ -55,41 +55,43 @@ class FheMainNavigationView extends StatefulWidget {
                         return SizedBox(
                           width: size,
                           height: size,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              foregroundColor: Colors.blueGrey,
-                              animationDuration:
-                                  const Duration(milliseconds: 1000),
-                              backgroundColor: Colors.transparent,
-                              splashFactory: InkSplash.splashFactory,
-                              shadowColor: Colors.transparent,
-                              elevation: 0.0,
-                            ),
-                            onPressed: () {
-                              Get.to(item["view"]);
-                            },
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  item["icon"],
-                                  color: CurrentTheme.textColor,
-                                  size: 40.0,
-                                ),
-                                const SizedBox(
-                                  height: 4.0,
-                                ),
-                                Text(
-                                  "${item["label"]}",
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.visible,
-                                  style: const TextStyle(
+                          child: FittedBox(
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                foregroundColor: Colors.blueGrey,
+                                animationDuration:
+                                    const Duration(milliseconds: 1000),
+                                backgroundColor: Colors.transparent,
+                                splashFactory: InkSplash.splashFactory,
+                                shadowColor: Colors.transparent,
+                                elevation: 0.0,
+                              ),
+                              onPressed: () {
+                                Get.to(item["view"]);
+                              },
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    item["icon"],
                                     color: CurrentTheme.textColor,
-                                    fontSize: 10.0,
+                                    size: 40.0,
                                   ),
-                                ),
-                              ],
+                                  const SizedBox(
+                                    height: 4.0,
+                                  ),
+                                  Text(
+                                    "${item["label"]}",
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.visible,
+                                    style: const TextStyle(
+                                      color: CurrentTheme.textColor,
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );
