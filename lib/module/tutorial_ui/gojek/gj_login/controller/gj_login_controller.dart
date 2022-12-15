@@ -1,6 +1,6 @@
+import 'package:example/core.dart';
+import 'package:example/service/mp/auth_service.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/gj_login_view.dart';
 
 class GjLoginController extends State<GjLoginView> implements MvcController {
   static late GjLoginController instance;
@@ -17,4 +17,18 @@ class GjLoginController extends State<GjLoginView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  doLoginAsMember() async {
+    var isSuccess = await MPAuthService.doLoginAsMember();
+    if (isSuccess) {
+      Get.offAll(const GjDashboardView());
+    }
+  }
+
+  doLoginAsVendor() async {
+    var isSuccess = await MPAuthService.doLoginAsVendor();
+    if (isSuccess) {
+      Get.offAll(const GjDashboardView());
+    }
+  }
 }

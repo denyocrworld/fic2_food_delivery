@@ -49,7 +49,7 @@ class GjLoginView extends StatefulWidget {
                         backgroundColor: CurrentTheme.mainColor,
                       ),
                       label: const Text("Login as Member"),
-                      onPressed: () {},
+                      onPressed: () => controller.doLoginAsMember(),
                     ),
                   ),
                   const SizedBox(
@@ -61,7 +61,7 @@ class GjLoginView extends StatefulWidget {
                     child: ElevatedButton.icon(
                       icon: const Icon(MdiIcons.google),
                       label: const Text("Login as Vendor"),
-                      onPressed: () {},
+                      onPressed: () => controller.doLoginAsVendor(),
                     ),
                   ),
                   const SizedBox(
