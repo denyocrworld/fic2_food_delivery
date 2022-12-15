@@ -40,9 +40,13 @@ class GjDashboardController extends State<GjDashboardView>
   }
 
   addListenerToScrollController() {
-    var offset = scrollController.offset;
-    var maxScrollExtent = scrollController.position.maxScrollExtent;
     scrollController.addListener(() {
+      var offset = scrollController.offset;
+      var maxScrollExtent = scrollController.position.maxScrollExtent;
+
+      print("offset: $offset");
+      print("maxScrollExtent: $maxScrollExtent");
+
       if (offset >= maxScrollExtent / 2) {
         selectedIndex = 1;
       } else {
@@ -51,6 +55,9 @@ class GjDashboardController extends State<GjDashboardView>
       setState(() {});
     });
 
+    var maxScrollExtent = scrollController.position.maxScrollExtent;
+    selectedIndex = 1;
+    setState(() {});
     scrollController.animateTo(
       maxScrollExtent,
       duration: const Duration(milliseconds: 400),

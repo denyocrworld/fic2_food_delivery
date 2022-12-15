@@ -77,7 +77,6 @@
         "tutorial_ui/ionly_dashboard",
         "tutorial_ui/taras/tm_intro",
         "tutorial_ui/taras/tm_dashboard",
-        "tutorial_ui/gojek/gj_dashboard",
         "tutorial/mvc_counter",
         "tutorial/mvc_dashboard",
         "tutorial/mvc_login",
@@ -96,6 +95,8 @@
         "fhe/fhe_button",
         "fhe/fhe_bottom_navigation",
         "fhe/fhe_form",
-        "fhe/fhe_form_reuseable_widget"
+        "fhe/fhe_form_reuseable_widget",
+        "tutorial_ui/gojek/gj_login",
+        "tutorial_ui/gojek/gj_dashboard"
     ]
 }

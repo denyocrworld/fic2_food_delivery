@@ -30,6 +30,7 @@ runMainApp() async {
     debugShowCheckedModeBanner: false,
     theme: getGojekTheme(),
     // home: const MainView(),
-    home: const FheMainNavigationView(),
+    // home: const FheMainNavigationView(),
+    home: const GjLoginView(),
   ));
 }

@@ -50,24 +50,20 @@ class GjDashboardView extends StatefulWidget {
                       ),
                     ),
                   ),
-                  child: Column(
-                    children: const [
-                      Expanded(
-                        child: TextField(
-                          style: TextStyle(
-                            color: CurrentTheme.textColor,
-                          ),
-                          decoration: InputDecoration(
-                            hintText: "Find services, food or places",
-                            prefixIcon: Icon(Icons.search),
-                            border: InputBorder.none,
-                          ),
-                        ),
+                  child: const Center(
+                    child: TextField(
+                      style: TextStyle(
+                        color: CurrentTheme.textColor,
+                        fontSize: 12.0,
                       ),
-                      SizedBox(
-                        height: 4.0,
+                      textAlignVertical: TextAlignVertical.center,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(bottom: 8.0),
+                        hintText: "Find services, food or places",
+                        prefixIcon: Icon(Icons.search),
+                        border: InputBorder.none,
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ),
@@ -172,6 +168,9 @@ class GjDashboardView extends StatefulWidget {
                                             ? 0.0
                                             : 6.0,
                                   ),
+                                  margin: EdgeInsets.only(
+                                    bottom: index == 1 ? 8.0 : 0.0,
+                                  ),
                                   child: Card(
                                     color: Colors.white.withOpacity(
                                         controller.selectedIndex == index
@@ -194,11 +193,11 @@ class GjDashboardView extends StatefulWidget {
                                                 color: item["color"],
                                               ),
                                               const SizedBox(
-                                                width: 6.0,
+                                                width: 2.0,
                                               ),
                                               Text(
                                                 item["header"],
-                                                style: const TextStyle(
+                                                style: GoogleFonts.amiko(
                                                   fontSize: 10.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -434,55 +433,61 @@ class GjDashboardView extends StatefulWidget {
                 },
               ),
               const SizedBox(
-                height: 12.0,
+                height: 20.0,
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: const [
-                              Icon(
-                                Icons.workspace_premium,
-                                color: Colors.purple,
-                              ),
-                              SizedBox(
-                                width: 4.0,
-                              ),
-                              Text(
-                                "Gold membership",
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.bold,
+              Card(
+                elevation: 4.0,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16.0,
+                    vertical: 8.0,
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: const [
+                                Icon(
+                                  Icons.workspace_premium,
+                                  color: Colors.purple,
                                 ),
-                              ),
-                            ],
-                          ),
-                          const Text(
-                            "Our new loyality program",
-                            style: TextStyle(
-                              fontSize: 11.0,
+                                SizedBox(
+                                  width: 4.0,
+                                ),
+                                Text(
+                                  "Gold membership",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Transform.scale(
-                      scale: 0.7,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: CurrentTheme.mainColor,
-                          shape: const StadiumBorder(),
+                            const Text(
+                              "Our new loyality program",
+                              style: TextStyle(
+                                fontSize: 11.0,
+                              ),
+                            ),
+                          ],
                         ),
-                        onPressed: () {},
-                        child: const Text("Join for free"),
                       ),
-                    ),
-                  ],
+                      Transform.scale(
+                        scale: 0.7,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: CurrentTheme.mainColor,
+                            shape: const StadiumBorder(),
+                          ),
+                          onPressed: () {},
+                          child: const Text("Join for free"),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(

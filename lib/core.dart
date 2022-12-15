@@ -384,6 +384,8 @@ export 'package:example/module/tutorial/ui_dailiy_todo_list/controller/ui_dailiy
 export 'package:example/module/tutorial/ui_dailiy_todo_list/view/ui_dailiy_todo_list_view.dart';
 export 'package:example/module/tutorial_ui/gojek/gj_dashboard/controller/gj_dashboard_controller.dart';
 export 'package:example/module/tutorial_ui/gojek/gj_dashboard/view/gj_dashboard_view.dart';
+export 'package:example/module/tutorial_ui/gojek/gj_login/controller/gj_login_controller.dart';
+export 'package:example/module/tutorial_ui/gojek/gj_login/view/gj_login_view.dart';
 export 'package:example/module/tutorial_ui/ionly_dashboard/controller/ionly_dashboard_controller.dart';
 export 'package:example/module/tutorial_ui/ionly_dashboard/view/ionly_dashboard_view.dart';
 export 'package:example/module/tutorial_ui/ionly_main_navigation/controller/ionly_main_navigation_controller.dart';

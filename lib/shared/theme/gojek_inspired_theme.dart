@@ -22,6 +22,7 @@ ThemeData getGojekTheme() {
         // shape: ContinuousRectangleBorder(
         //   borderRadius: BorderRadius.circular(64.0),
         // ),
+        shape: const StadiumBorder(),
         foregroundColor: Colors.white,
       ),
     ),
@@ -36,7 +37,7 @@ ThemeData getGojekTheme() {
         color: CurrentTheme.textColor,
       ),
     ),
-    scaffoldBackgroundColor: scaffoldBackgroundColor,
+    scaffoldBackgroundColor: CurrentTheme.scaffoldBackgroundColor,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       // backgroundColor: Color(0xff26354F),
       backgroundColor: Colors.red,
@@ -79,12 +80,12 @@ ThemeData getGojekTheme() {
     //     color: CurrentTheme.textColor,
     //   ),
     // ),
-    // cardTheme: CardTheme(
-    //   elevation: cardElevation,
-    //   shape: RoundedRectangleBorder(
-    //     borderRadius: BorderRadius.circular(CurrentTheme.cardBorderRadius),
-    //   ),
-    // ),
+    cardTheme: CardTheme(
+      elevation: cardElevation,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(CurrentTheme.cardBorderRadius),
+      ),
+    ),
     // chipTheme: const ChipThemeData(),
     // tabBarTheme: TabBarTheme(
     //   labelColor: fontColor,
