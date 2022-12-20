@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
@@ -7,26 +8,13 @@ class GjDashboardView extends StatefulWidget {
   Widget build(context, GjDashboardController controller) {
     controller.view = this;
 
-    List menuList = [
-      {
-        "icon": Icons.star,
-        "color": CurrentTheme.mainColor,
-        "header": "Point",
-        "balance": "12.300",
-        "info": "Tap for history",
-      },
-      {
-        "icon": Icons.wallet,
-        "color": CurrentTheme.buttonColor,
-        "header": "Balance",
-        "balance": "Rp93.400",
-        "info": "Tap for history",
-      }
-    ];
-
+    var appBarColor = Theme.of(context).primaryColor;
+    if (MPAuthService.isVendor) {
+      appBarColor = Colors.orange;
+    }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: appBarColor,
         titleTextStyle: GoogleFonts.roboto(
           color: Colors.white,
           fontWeight: FontWeight.bold,
@@ -67,14 +55,11 @@ class GjDashboardView extends StatefulWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 12.0,
-              ),
-              const CircleAvatar(
-                backgroundColor: Colors.white,
-                child: Icon(
-                  Icons.person,
-                  color: CurrentTheme.mainColor,
+              IconButton(
+                onPressed: () => controller.scanQrCode(),
+                icon: const Icon(
+                  MdiIcons.qrcode,
+                  size: 24.0,
                 ),
               ),
             ],
@@ -147,92 +132,120 @@ class GjDashboardView extends StatefulWidget {
                       const SizedBox(
                         width: 6.0,
                       ),
-                      SizedBox(
-                        // color: Colors.red,
-                        width: Get.width / 2.6,
-                        height: 80.0,
-                        child: Scrollbar(
-                          thickness: 0.0,
-                          child: ListView.builder(
-                            controller: controller.scrollController,
-                            itemCount: 2,
-                            shrinkWrap: true,
-                            itemBuilder: (context, index) {
-                              var item = menuList[index];
-                              return LayoutBuilder(
-                                  builder: (context, constraint) {
-                                return Container(
-                                  padding: EdgeInsets.symmetric(
-                                    horizontal:
-                                        controller.selectedIndex == index
-                                            ? 0.0
-                                            : 6.0,
-                                  ),
-                                  margin: EdgeInsets.only(
-                                    bottom: index == 1 ? 8.0 : 0.0,
-                                  ),
-                                  child: Card(
-                                    color: Colors.white.withOpacity(
-                                        controller.selectedIndex == index
-                                            ? 1.0
-                                            : 0.6),
-                                    child: Container(
-                                      padding: const EdgeInsets.symmetric(
-                                        vertical: 4.0,
-                                        horizontal: 8.0,
+                      StreamBuilder<DocumentSnapshot<Object?>>(
+                        stream: userCollection.snapshots(),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasError) return const Text("Error");
+                          if (!snapshot.hasData) return const Text("No Data");
+
+                          Map<String, dynamic> item =
+                              (snapshot.data!.data() as Map<String, dynamic>);
+                          item["id"] = snapshot.data!.id;
+
+                          List menuList = [
+                            {
+                              "icon": Icons.wallet,
+                              "color": CurrentTheme.buttonColor,
+                              "header": "Balance",
+                              "balance": "Rp${item["balance"] ?? 0}",
+                              "info": "Tap for history",
+                            },
+                            {
+                              "icon": Icons.star,
+                              "color": CurrentTheme.mainColor,
+                              "header": "Point",
+                              "balance": "${item["point"] ?? 0}",
+                              "info": "Tap for history",
+                            },
+                          ];
+                          return SizedBox(
+                            width: Get.width / 2.6,
+                            height: 80.0,
+                            child: Scrollbar(
+                              thickness: 0.0,
+                              child: ListView.builder(
+                                controller: controller.scrollController,
+                                itemCount: 2,
+                                shrinkWrap: true,
+                                itemBuilder: (context, index) {
+                                  var item = menuList[index];
+                                  return LayoutBuilder(
+                                      builder: (context, constraint) {
+                                    return Container(
+                                      padding: EdgeInsets.symmetric(
+                                        horizontal:
+                                            controller.selectedIndex == index
+                                                ? 0.0
+                                                : 6.0,
                                       ),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Row(
+                                      margin: EdgeInsets.only(
+                                        bottom: index == 1 ? 8.0 : 0.0,
+                                      ),
+                                      child: Card(
+                                        color: Colors.white.withOpacity(
+                                            controller.selectedIndex == index
+                                                ? 1.0
+                                                : 0.6),
+                                        child: Container(
+                                          padding: const EdgeInsets.symmetric(
+                                            vertical: 4.0,
+                                            horizontal: 8.0,
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
-                                              Icon(
-                                                item["icon"],
-                                                size: 16.0,
-                                                color: item["color"],
+                                              Row(
+                                                children: [
+                                                  Icon(
+                                                    item["icon"],
+                                                    size: 16.0,
+                                                    color: item["color"],
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 2.0,
+                                                  ),
+                                                  Text(
+                                                    item["header"],
+                                                    style: GoogleFonts.amiko(
+                                                      fontSize: 10.0,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                               const SizedBox(
-                                                width: 2.0,
+                                                height: 4.0,
                                               ),
                                               Text(
-                                                item["header"],
-                                                style: GoogleFonts.amiko(
-                                                  fontSize: 10.0,
+                                                "${item["balance"]}",
+                                                style: const TextStyle(
+                                                  fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                              const SizedBox(
+                                                height: 4.0,
+                                              ),
+                                              Text(
+                                                item["info"],
+                                                style: const TextStyle(
+                                                  fontSize: 10.0,
+                                                  color: CurrentTheme.mainColor,
                                                 ),
                                               ),
                                             ],
                                           ),
-                                          const SizedBox(
-                                            height: 4.0,
-                                          ),
-                                          Text(
-                                            "${item["balance"]}",
-                                            style: const TextStyle(
-                                              fontSize: 14.0,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                          const SizedBox(
-                                            height: 4.0,
-                                          ),
-                                          Text(
-                                            item["info"],
-                                            style: const TextStyle(
-                                              fontSize: 10.0,
-                                              color: CurrentTheme.mainColor,
-                                            ),
-                                          ),
-                                        ],
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                );
-                              });
-                            },
-                          ),
-                        ),
+                                    );
+                                  });
+                                },
+                              ),
+                            ),
+                          );
+                        },
                       ),
                       Expanded(
                         child: Column(
@@ -301,239 +314,380 @@ class GjDashboardView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              LayoutBuilder(
-                builder: (context, constraint) {
-                  List menus = [
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/878/878052.png",
-                      "label": "Burger",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon": "https://i.ibb.co/NmChyvn/1048361.png",
-                      "label": "Car",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/2718/2718224.png",
-                      "label": "Noodles",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/8060/8060549.png",
-                      "label": "Meat",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/454/454570.png",
-                      "label": "Soup",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/2965/2965567.png",
-                      "label": "Dessert",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/2769/2769608.png",
-                      "label": "Drink",
-                      "onTap": () {},
-                    },
-                    {
-                      "icon":
-                          "https://cdn-icons-png.flaticon.com/128/1037/1037855.png",
-                      "label": "Others",
-                      "onTap": () {},
-                    },
-                  ];
-
-                  return Wrap(
-                    children: List.generate(
-                      menus.length,
-                      (index) {
-                        var item = menus[index];
-
-                        var size = constraint.biggest.width / 4;
-
-                        return SizedBox(
-                          width: size,
-                          height: size,
-                          child: FittedBox(
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                foregroundColor: Colors.blueGrey,
-                                animationDuration:
-                                    const Duration(milliseconds: 1000),
-                                backgroundColor: Colors.transparent,
-                                splashFactory: InkSplash.splashFactory,
-                                shadowColor: Colors.transparent,
-                                elevation: 0.0,
-                              ),
-                              onPressed: () => item["onTap"](),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(
-                                    height: 50.0,
-                                    width: 50.0,
-                                    child: Stack(
-                                      children: [
-                                        Container(
-                                          width: 42.0,
-                                          height: 42.0,
-                                          decoration: BoxDecoration(
-                                            color: index % 2 == 0
-                                                ? Colors.green[100]
-                                                : Colors.red[100],
-                                            borderRadius:
-                                                const BorderRadius.all(
-                                              Radius.circular(12.0),
-                                            ),
+              if (MPAuthService.isVendor) ...[
+                Row(
+                  children: [
+                    Expanded(
+                      child: Card(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      "Orders",
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6.0,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Text(
+                                          "4,200",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
                                           ),
                                         ),
-                                        Positioned(
-                                          top: 10,
-                                          left: 10,
-                                          child: Image.network(
-                                            item["icon"],
-                                            width: 36.0,
+                                        Text(
+                                          "+36%",
+                                          style: TextStyle(
+                                            fontSize: 10.0,
+                                            color: Colors.green,
                                           ),
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  const SizedBox(
-                                    height: 6.0,
-                                  ),
-                                  Text(
-                                    "${item["label"]}",
-                                    textAlign: TextAlign.center,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      fontSize: 11.0,
-                                      color: CurrentTheme.textColor
-                                          .withOpacity(0.8),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: const BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      8.0,
                                     ),
                                   ),
-                                ],
+                                ),
+                                child: const Icon(
+                                  Icons.list,
+                                  size: 24.0,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
+                            ],
                           ),
-                        );
-                      },
+                        ),
+                      ),
                     ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                elevation: 4.0,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16.0,
-                    vertical: 8.0,
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.workspace_premium,
-                                  color: Colors.purple,
+                    const SizedBox(
+                      width: 6.0,
+                    ),
+                    Expanded(
+                      child: Card(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      "Customers",
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6.0,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Text(
+                                          "1,240",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                          "+25%",
+                                          style: TextStyle(
+                                            fontSize: 10.0,
+                                            color: Colors.green,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
                                 ),
-                                SizedBox(
-                                  width: 4.0,
-                                ),
-                                Text(
-                                  "Gold membership",
-                                  style: TextStyle(
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.bold,
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: const BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      8.0,
+                                    ),
                                   ),
                                 ),
-                              ],
-                            ),
-                            const Text(
-                              "Our new loyality program",
-                              style: TextStyle(
-                                fontSize: 11.0,
+                                child: const Icon(
+                                  Icons.people,
+                                  size: 24.0,
+                                  color: Colors.white,
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Transform.scale(
-                        scale: 0.7,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: CurrentTheme.mainColor,
-                            shape: const StadiumBorder(),
+                            ],
                           ),
-                          onPressed: () {},
-                          child: const Text("Join for free"),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              const Text(
-                "Quick actions",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.bold,
+                const SizedBox(
+                  height: 2.0,
                 ),
-              ),
-              //alt+shift+h
-              SizedBox(
-                height: 40.0,
-                child: ListView.builder(
-                  itemCount: 10,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () => Get.to(const GjPosView()),
+                        child: Column(
+                          children: const [
+                            Icon(
+                              MdiIcons.pointOfSale,
+                              size: 40.0,
+                              color: CurrentTheme.buttonColor,
+                            ),
                             Text(
-                              "${index + 1} vouchers expiring soon",
-                              style: const TextStyle(
+                              "POS",
+                              style: TextStyle(
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            const CircleAvatar(
-                              radius: 12.0,
-                              backgroundColor: CurrentTheme.mainColor,
-                              child: Icon(
-                                Icons.discount_rounded,
-                                size: 8.0,
+                                color: CurrentTheme.buttonColor,
                               ),
                             ),
                           ],
                         ),
                       ),
-                    );
-                  },
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        onTap: () => Get.to(const GjProductListView()),
+                        child: Column(
+                          children: const [
+                            Icon(
+                              MdiIcons.bowlMix,
+                              size: 40.0,
+                              color: CurrentTheme.buttonColor,
+                            ),
+                            Text(
+                              "Product",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: CurrentTheme.buttonColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: InkWell(
+                        onTap: () => Get.to(const GjCategoryListView()),
+                        child: Column(
+                          children: const [
+                            Icon(
+                              MdiIcons.viewList,
+                              size: 40.0,
+                              color: CurrentTheme.buttonColor,
+                            ),
+                            Text(
+                              "Categories",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: CurrentTheme.buttonColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+                const SizedBox(
+                  height: 20.0,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () async {
+                          var qrCode = await showQrcodeScanner();
+                          print("qrCode: $qrCode");
+                        },
+                        child: Column(
+                          children: const [
+                            Icon(
+                              MdiIcons.qrcode,
+                              size: 40.0,
+                              color: CurrentTheme.buttonColor,
+                            ),
+                            Text(
+                              "Scan QrCode",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: CurrentTheme.buttonColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+              if (MPAuthService.isMember) ...[
+                Row(
+                  children: [
+                    Expanded(
+                      child: Card(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      "Orders",
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6.0,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Text(
+                                          "1,320",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                          "+36%",
+                                          style: TextStyle(
+                                            fontSize: 10.0,
+                                            color: Colors.green,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: const BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      8.0,
+                                    ),
+                                  ),
+                                ),
+                                child: const Icon(
+                                  Icons.list,
+                                  size: 24.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 6.0,
+                    ),
+                    Expanded(
+                      child: Card(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width,
+                          padding: const EdgeInsets.all(20.0),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text(
+                                      "Vocuhers",
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6.0,
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Text(
+                                          "1,240",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        Text(
+                                          "+25%",
+                                          style: TextStyle(
+                                            fontSize: 10.0,
+                                            color: Colors.green,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(10.0),
+                                decoration: const BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(
+                                      8.0,
+                                    ),
+                                  ),
+                                ),
+                                child: const Icon(
+                                  Icons.discount,
+                                  size: 24.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ],
           ),
         ),

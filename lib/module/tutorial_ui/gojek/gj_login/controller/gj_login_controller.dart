@@ -1,5 +1,4 @@
 import 'package:example/core.dart';
-import 'package:example/service/mp/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class GjLoginController extends State<GjLoginView> implements MvcController {
@@ -21,14 +20,14 @@ class GjLoginController extends State<GjLoginView> implements MvcController {
   doLoginAsMember() async {
     var isSuccess = await MPAuthService.doLoginAsMember();
     if (isSuccess) {
-      Get.offAll(const GjDashboardView());
+      Get.offAll(const GjMainNavigationView());
     }
   }
 
   doLoginAsVendor() async {
     var isSuccess = await MPAuthService.doLoginAsVendor();
     if (isSuccess) {
-      Get.offAll(const GjDashboardView());
+      Get.offAll(const GjMainNavigationView());
     }
   }
 }

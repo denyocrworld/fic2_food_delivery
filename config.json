@@ -96,7 +96,15 @@
         "fhe/fhe_bottom_navigation",
         "fhe/fhe_form",
         "fhe/fhe_form_reuseable_widget",
+        "tutorial_ui/gojek/gj_main_navigation",
         "tutorial_ui/gojek/gj_login",
-        "tutorial_ui/gojek/gj_dashboard"
+        "tutorial_ui/gojek/gj_dashboard",
+        "tutorial_ui/gojek/gj_profile",
+        "tutorial_ui/gojek/gj_point_history",
+        "tutorial_ui/gojek/gj_chat",
+        "tutorial_ui/gojek/gj_pos",
+        "tutorial_ui/gojek/gj_product_list",
+        "tutorial_ui/gojek/gj_product_form",
+        "tutorial_ui/gojek/gj_category_list"
     ]
 }

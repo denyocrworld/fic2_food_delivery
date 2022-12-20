@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/fhe_bottom_navigation_view.dart';
+import '../view/gj_main_navigation_view.dart';
 
-class FheBottomNavigationController extends State<FheBottomNavigationView>
+class GjMainNavigationController extends State<GjMainNavigationView>
     implements MvcController {
-  static late FheBottomNavigationController instance;
-  late FheBottomNavigationView view;
+  static late GjMainNavigationController instance;
+  late GjMainNavigationView view;
 
   @override
   void initState() {
@@ -18,10 +18,5 @@ class FheBottomNavigationController extends State<FheBottomNavigationView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-
   int selectedIndex = 0;
-  updateIndex(int newIndex) {
-    selectedIndex = newIndex;
-    setState(() {});
-  }
 }

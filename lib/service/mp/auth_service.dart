@@ -1,3 +1,4 @@
+import 'package:example/service/mp/user_service.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -8,6 +9,7 @@ class MPAuthService {
 
   static doLoginAsMember() async {
     var isLoggedIn = await doGoogleLogin();
+    await MDUserService.createUserIfNotExists();
     if (isLoggedIn) {
       currentUser = FirebaseAuth.instance.currentUser!;
       isMember = true;
@@ -17,11 +19,18 @@ class MPAuthService {
 
   static doLoginAsVendor() async {
     var isLoggedIn = await doGoogleLogin();
+    await MDUserService.createUserIfNotExists();
     if (isLoggedIn) {
       currentUser = FirebaseAuth.instance.currentUser!;
       isVendor = true;
     }
     return isLoggedIn;
+  }
+
+  static doLogout() async {
+    await FirebaseAuth.instance.signOut();
+    isMember = false;
+    isVendor = false;
   }
 
   static Future<bool> doGoogleLogin() async {

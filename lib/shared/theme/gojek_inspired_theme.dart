@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CurrentTheme {
   static const mainColor = Color(0xff00880c);
-  static const scaffoldBackgroundColor = Colors.white;
+  static Color scaffoldBackgroundColor = Colors.grey[200]!;
   static const cardColor = Color(0xff0081a0);
   static const buttonColor = Color(0xff00a5cf);
   static const textColor = Color(0xff1b1b1b);
@@ -38,9 +38,11 @@ ThemeData getGojekTheme() {
       ),
     ),
     scaffoldBackgroundColor: CurrentTheme.scaffoldBackgroundColor,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
       // backgroundColor: Color(0xff26354F),
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
+      unselectedItemColor: Colors.grey[400],
+      selectedItemColor: CurrentTheme.mainColor,
     ),
     // drawerTheme: DrawerThemeData(
     //   backgroundColor: drawerBackgroundColor,

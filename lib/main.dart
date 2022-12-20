@@ -5,6 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
+/*
+! Link Komunitas
+? https://tinyurl.com/join-berandal
+
+! Link Kelas Online Dart & Fluter
+? https://capekngoding.com  | 8x Gmeet + Bonus 3 Aplikasi Flutter
+
+*/
 void main() async {
   await initialize();
   // windows, android, ios
@@ -30,7 +38,7 @@ runMainApp() async {
     debugShowCheckedModeBanner: false,
     theme: getGojekTheme(),
     // home: const MainView(),
-    // home: const FheMainNavigationView(),
-    home: const GjLoginView(),
+    home: const FheMainNavigationView(),
+    // home: const GjLoginView(),
   ));
 }

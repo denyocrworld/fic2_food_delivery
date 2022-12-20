@@ -30,7 +30,7 @@ class TcDialogView extends StatefulWidget {
                   ),
                 ),
                 onPressed: () async {
-                  showCustomDialog("Success", "Your order is complete");
+                  showTCCustomDialog("Success", "Your order is complete");
                 },
                 child: const Text("Show Dialog"),
               ),
@@ -45,7 +45,7 @@ class TcDialogView extends StatefulWidget {
                   ),
                 ),
                 onPressed: () async {
-                  showCustomDialog("Info", "Your order is not complete");
+                  showTCCustomDialog("Info", "Your order is not complete");
                 },
                 child: const Text("Show Info"),
               ),
@@ -60,7 +60,7 @@ class TcDialogView extends StatefulWidget {
                   ),
                 ),
                 onPressed: () async {
-                  showCustomDialog(
+                  showTCCustomDialog(
                     "Custom Color",
                     "Your order is not complete",
                     color: Colors.red,
@@ -79,7 +79,7 @@ class TcDialogView extends StatefulWidget {
                   ),
                 ),
                 onPressed: () async {
-                  showCustomDialog(
+                  showTCCustomDialog(
                     "3s Dialog",
                     "Your order is not complete",
                     color: Colors.orange[900],
@@ -99,7 +99,7 @@ class TcDialogView extends StatefulWidget {
   State<TcDialogView> createState() => TcDialogController();
 }
 
-Future showCustomDialog(
+Future showTCCustomDialog(
   title,
   message, {
   Color? color,

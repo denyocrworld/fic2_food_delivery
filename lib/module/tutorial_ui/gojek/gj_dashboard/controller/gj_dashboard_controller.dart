@@ -1,6 +1,8 @@
+import 'dart:convert';
+import 'dart:developer';
+
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/gj_dashboard_view.dart';
 
 class GjDashboardController extends State<GjDashboardView>
     implements MvcController {
@@ -70,4 +72,17 @@ class GjDashboardController extends State<GjDashboardView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  scanQrCode() async {
+    var qrCode = await showQrcodeScanner();
+    var obj = jsonDecode(qrCode);
+    log(obj.toString());
+    log(obj.toString());
+
+    await MPPointService.addPoint(
+      point: double.parse("${obj["point"] ?? 0}"),
+      total: double.parse("${obj["total"] ?? 0}"),
+    );
+    showInfoDialog("Your order is success!!!\n $qrCode");
+  }
 }
