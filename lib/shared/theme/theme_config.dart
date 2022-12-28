@@ -27,7 +27,7 @@ TextStyle googleFont = GoogleFonts.sora();
 Color drawerBackgroundColor = const Color(0xff404E67);
 Color drawerFontColor = Colors.grey[300]!;
 
-double cardElevation = 0.8;
+double cardElevation = 2.0;
 double cardBorderRadius = 24.0;
 //#!$O!@)$1@#
 

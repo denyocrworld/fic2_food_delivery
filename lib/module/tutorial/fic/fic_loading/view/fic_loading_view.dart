@@ -10,7 +10,7 @@ class FicLoadingView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicLoading"),
+        title: const Text("Loading"),
         actions: const [],
       ),
       body: SingleChildScrollView(

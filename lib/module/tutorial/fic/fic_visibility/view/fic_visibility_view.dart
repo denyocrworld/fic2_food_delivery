@@ -10,7 +10,7 @@ class FicVisibilityView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicVisibility"),
+        title: const Text("Visibility"),
         actions: const [],
       ),
       body: SingleChildScrollView(

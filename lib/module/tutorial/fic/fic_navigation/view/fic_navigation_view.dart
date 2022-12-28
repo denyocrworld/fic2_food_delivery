@@ -10,7 +10,7 @@ class FicNavigationView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicNavigation"),
+        title: const Text("Navigation"),
         actions: const [],
       ),
       body: Stack(

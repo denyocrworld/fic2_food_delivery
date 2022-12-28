@@ -86,7 +86,7 @@ class MainView extends StatefulWidget {
                 color: Colors.black,
               ),
               MainViewListItem(
-                title: "FIC State Management",
+                title: " State Management",
                 items: controller.ficStateManagementList,
                 color: Colors.purple,
               ),

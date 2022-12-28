@@ -12,7 +12,7 @@ class FicThemeView extends StatefulWidget {
       data: controller.themeList[controller.selectedindex],
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("FicTheme"),
+          title: const Text("Theme"),
           actions: const [],
         ),
         body: SingleChildScrollView(

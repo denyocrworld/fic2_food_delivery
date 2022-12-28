@@ -10,7 +10,7 @@ class FicCartView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicCart"),
+        title: const Text("Cart"),
         actions: const [],
       ),
       body: Container(

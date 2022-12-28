@@ -10,7 +10,7 @@ class FicEnableOrDisabledView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicEnableOrDisabled"),
+        title: const Text("EnableOrDisabled"),
         actions: const [],
       ),
       body: SingleChildScrollView(

@@ -1,4 +1,5 @@
 {
+    "openai_key": "",
     "modules": [
         "tutorial/fic/fic_counter",
         "tutorial/fic/fic_loading",
@@ -105,6 +106,12 @@
         "tutorial_ui/gojek/gj_pos",
         "tutorial_ui/gojek/gj_product_list",
         "tutorial_ui/gojek/gj_product_form",
-        "tutorial_ui/gojek/gj_category_list"
+        "tutorial_ui/gojek/gj_category_list",
+        "tutorial_crud/ex_product_list",
+        "tutorial_crud/ex_product_form",
+        "tutorial_ui/scheduler/sc_dashboard",
+        "tutorial_ui/scheduler/sc_schedule",
+        "tutorial_ui/scheduler/sc_task",
+        "contoh"
     ]
 }

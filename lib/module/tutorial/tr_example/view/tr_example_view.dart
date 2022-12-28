@@ -5,6 +5,10 @@ class TrExampleView extends StatefulWidget {
   const TrExampleView({Key? key}) : super(key: key);
   Widget build(context, TrExampleController controller) {
     controller.view = this;
+
+    String? productName;
+    String? photo;
+    String userPhoto = "https://i.ibb.co/PGv8ZzG/me.jpg";
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboards"),
@@ -14,6 +18,13 @@ class TrExampleView extends StatefulWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
+            Text(productName ?? "-"),
+            Image.network(
+              photo ?? "https://i.ibb.co/S32HNjD/no-image.jpg",
+              width: 64.0,
+              height: 64.0,
+              fit: BoxFit.fill,
+            ),
             Text(
               "${controller.counter.value}",
               style: const TextStyle(

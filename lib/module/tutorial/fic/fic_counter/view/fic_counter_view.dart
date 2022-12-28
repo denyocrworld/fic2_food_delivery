@@ -13,7 +13,7 @@ class FicCounterView extends StatefulWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: const Text("FicCounter"),
+        title: const Text("Counter"),
         actions: const [],
       ),
       body: SingleChildScrollView(

@@ -6,23 +6,36 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
-! Link Komunitas
-? https://tinyurl.com/join-berandal
+Nama: Deniansyah
+NamaProgrammer: DenyOcr
+2011
 
-! Link Kelas Online Dart & Fluter
-? https://capekngoding.com  | 8x Gmeet + Bonus 3 Aplikasi Flutter
+Freelancer
+2011 - 2022 (11 tahun)
+
+Ngantor
+3,5 Tahun
+
+ElectronRx
+Cambridge, 
+2-12
+
+Python
+PHP
+C#
+Java
+Bot
+Macro
 
 */
 void main() async {
   await initialize();
-  // windows, android, ios
   if (!kIsWeb) {
     var path = await getTemporaryDirectory();
     Hive.init(path.path);
   }
   mainStorage = await Hive.openBox('mainStorage');
   await ObsStorage.initializeObsStorage();
-
   await UserService.load();
   await ThemeService.load();
   await LocalProductService.load();
@@ -36,9 +49,10 @@ runMainApp() async {
     title: 'Capek Ngoding',
     navigatorKey: Get.navigatorKey,
     debugShowCheckedModeBanner: false,
-    theme: getGojekTheme(),
-    // home: const MainView(),
-    home: const FheMainNavigationView(),
-    // home: const GjLoginView(),
+    // theme: getGojekTheme(),
+    theme: ThemeData.dark(),
+    // home: const FheMainNavigationView(),
+    // home: const ExProductListView(),
+    home: const ContohView(),
   ));
 }

@@ -165,13 +165,12 @@ class FheBottomNavigationView extends StatefulWidget {
                       ),
                       floatingActionButtonLocation:
                           FloatingActionButtonLocation.centerDocked,
-                      bottomNavigationBar: BottomAppBar(
-                        color: Colors.redAccent,
-                        shape:
-                            const CircularNotchedRectangle(), //shape of notch
-                        notchMargin: 5,
-                        child: SizedBox(
-                          height: 50.0,
+                      bottomNavigationBar: SizedBox(
+                        height: 50.0,
+                        child: BottomAppBar(
+                          shape:
+                              const CircularNotchedRectangle(), //shape of notch
+                          notchMargin: 5,
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -180,7 +179,6 @@ class FheBottomNavigationView extends StatefulWidget {
                                 child: IconButton(
                                   icon: const Icon(
                                     Icons.dashboard,
-                                    color: Colors.white,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -189,7 +187,6 @@ class FheBottomNavigationView extends StatefulWidget {
                                 child: IconButton(
                                   icon: const Icon(
                                     Icons.list,
-                                    color: Colors.white,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -201,7 +198,6 @@ class FheBottomNavigationView extends StatefulWidget {
                                 child: IconButton(
                                   icon: const Icon(
                                     Icons.favorite,
-                                    color: Colors.white,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -210,7 +206,6 @@ class FheBottomNavigationView extends StatefulWidget {
                                 child: IconButton(
                                   icon: const Icon(
                                     Icons.person,
-                                    color: Colors.white,
                                   ),
                                   onPressed: () {},
                                 ),

@@ -10,7 +10,7 @@ class FicFilterListView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicFilterList"),
+        title: const Text("FilterList"),
         actions: const [],
       ),
       body: Container(

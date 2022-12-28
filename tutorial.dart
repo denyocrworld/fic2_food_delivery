@@ -1,20 +1,21 @@
-//TUTORIAL BIKIN HELLO WORLD
+//variable
+//print hello world
 void main() {
-  //looping
-  segitigaSamaKaki(10);
-}
-
-//@completed: Buatlah sebuah function segitigaSamaKaki(int tinggi) di Dart yang akan membuat looping dan print * dalam bentuk Donat, gunakan variable String output. Tidak perlu dipanggil dalam main().
-void segitigaSamaKaki(int tinggi) {
-  String output = '';
-  for (int i = 0; i < tinggi; i++) {
-    for (int j = 0; j < tinggi - i; j++) {
-      output += ' ';
+  String message = "HelloWorld";
+  List arr = [];
+  for (var i = 0; i < message.length; i++) {
+    var c = message[i];
+    for (var i = 1; i <= 2; i++) {
+      arr.add(c);
     }
-    for (int k = 0; k < (2 * i) + 1; k++) {
-      output += '*';
-    }
-    output += '\n';
   }
+
+  String output = "";
+  for (var i = 0; i < arr.length; i++) {
+    if (i % 2 == 0) {
+      output += arr[i];
+    }
+  }
+  print(arr);
   print(output);
 }

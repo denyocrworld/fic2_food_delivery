@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TemplateScaffoldTabbarVertical extends StatelessWidget {
-  const TemplateScaffoldTabbarVertical({Key? key}) : super(key: key);
+class TemplateScaffoldTabbarHorizontal extends StatelessWidget {
+  const TemplateScaffoldTabbarHorizontal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

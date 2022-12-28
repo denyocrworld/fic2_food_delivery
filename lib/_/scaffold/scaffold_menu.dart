@@ -70,7 +70,7 @@ class TemplateScaffoldMainNavigationView extends StatelessWidget {
                       "icon": Icons.developer_board,
                       "label": "Scaffold Tabbar Vertical",
                       "onTap": () =>
-                          navigateTo(const TemplateScaffoldTabbarVertical()),
+                          navigateTo(const TemplateScaffoldTabbarHorizontal()),
                     },
                     {
                       "icon": Icons.developer_board,

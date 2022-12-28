@@ -10,7 +10,7 @@ class FicAnimationView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FicAnimation"),
+        title: const Text("Animation"),
         actions: const [],
       ),
       body: SingleChildScrollView(
