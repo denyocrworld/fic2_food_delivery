@@ -126,7 +126,7 @@ class ContohView extends StatefulWidget {
       },
     ];
 
-//Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Utility, MVC Generator dengan color yang unik dan gunakan MdiIcons.
+//Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Dialog, Navigation, Utility, MVC Generator dengan color yang unik dan gunakan MdiIcons.
     List<Map> hyperUiMenuList = [
       {
         'label': 'Form',
@@ -147,15 +147,27 @@ class ContohView extends StatefulWidget {
         'onPressed': () {},
       },
       {
+        'label': 'Dialog',
+        'icon': MdiIcons.message,
+        'color': Colors.purple,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Navigation',
+        'icon': MdiIcons.navigation,
+        'color': Colors.orange,
+        'onPressed': () {},
+      },
+      {
         'label': 'Utility',
         'icon': MdiIcons.wrench,
-        'color': Colors.orange,
+        'color': Colors.teal,
         'onPressed': () {},
       },
       {
         'label': 'MVC Generator',
         'icon': MdiIcons.codeBraces,
-        'color': Colors.purple,
+        'color': Colors.pink,
         'onPressed': () {},
       },
     ];
