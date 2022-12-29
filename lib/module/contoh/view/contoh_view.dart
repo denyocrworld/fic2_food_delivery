@@ -1,3 +1,4 @@
+import 'package:example/module/contoh/widget/side_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 import '../../../_/scaffold/scaffold_bottom_navigationbar.dart';
@@ -9,20 +10,195 @@ class ContohView extends StatefulWidget {
   Widget build(context, ContohController controller) {
     controller.view = this;
 
-    return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            QImagePicker(
-              label: "Photo",
-              hint: "Your photo",
-              validator: Validator.required,
-              value: null,
-              onChanged: (value) {
-                print("URL: $value");
-              },
+//Buatlah List<Map> menuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard,  Scaffold, Navigation, Common\nWidget, Layout,  ListView, GridView, ListViewItem dan Form  dengan color yang unik dan gunakan MdiIcons.
+    List<Map> menuList = [
+      {
+        'label': 'Dashboard',
+        'icon': MdiIcons.viewDashboard,
+        'color': Colors.blue,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Scaffold',
+        'icon': MdiIcons.screwdriver,
+        'color': Colors.green,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Navigation',
+        'icon': MdiIcons.navigation,
+        'color': Colors.orange,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Common Widget',
+        'icon': MdiIcons.widgets,
+        'color': Colors.purple,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Layout',
+        'icon': MdiIcons.viewGrid,
+        'color': Colors.red,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ListView',
+        'icon': MdiIcons.viewList,
+        'color': Colors.teal,
+        'onPressed': () {},
+      },
+      {
+        'label': 'GridView',
+        'icon': MdiIcons.viewGridPlus,
+        'color': Colors.pink,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ListViewItem',
+        'icon': MdiIcons.viewListOutline,
+        'color': Colors.yellow,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Form',
+        'icon': MdiIcons.formTextbox,
+        'color': Colors.brown,
+        'onPressed': () {},
+      },
+    ];
+
+//Buatlah List<Map> uiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard, ListView, DetailView, ReportView, ProfileView dengan color yang unik dan gunakan MdiIcons.
+    List<Map> uiMenuList = [
+      {
+        'label': 'Dashboard',
+        'icon': MdiIcons.viewDashboard,
+        'color': Colors.blue,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ListView',
+        'icon': MdiIcons.viewList,
+        'color': Colors.green,
+        'onPressed': () {},
+      },
+      {
+        'label': 'DetailView',
+        'icon': MdiIcons.viewGrid,
+        'color': Colors.yellow,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ReportView',
+        'icon': MdiIcons.chartBar,
+        'color': Colors.red,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ProfileView',
+        'icon': MdiIcons.accountCircle,
+        'color': Colors.purple,
+        'onPressed': () {},
+      },
+    ];
+
+//Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Utility dengan color yang unik dan gunakan MdiIcons.
+    List<Map> hyperUiMenuList = [
+      {
+        'label': 'Form',
+        'icon': MdiIcons.formTextbox,
+        'color': Colors.blue,
+        'onPressed': () {},
+      },
+      {
+        'label': 'ListView',
+        'icon': MdiIcons.viewList,
+        'color': Colors.green,
+        'onPressed': () {},
+      },
+      {
+        'label': 'FireStream',
+        'icon': MdiIcons.fire,
+        'color': Colors.red,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Utility',
+        'icon': MdiIcons.wrench,
+        'color': Colors.orange,
+        'onPressed': () {},
+      },
+    ];
+
+    return Theme(
+      data: ThemeData.light(),
+      child: Scaffold(
+        backgroundColor: Colors.grey[300]!,
+        body: SingleChildScrollView(
+          controller: ScrollController(),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  color: Colors.grey[200],
+                  width: 340.0,
+                  padding: const EdgeInsets.all(12.0),
+                  height: MediaQuery.of(context).size.height,
+                  child: SingleChildScrollView(
+                    controller: ScrollController(),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Hyper UI",
+                          style: GoogleFonts.moonDance(
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          "Write less do more~",
+                          style: GoogleFonts.moonDance(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        SideMenu(
+                          menuList: menuList,
+                          title: "Basic",
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        SideMenu(
+                          menuList: uiMenuList,
+                          title: "Premade UI",
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        SideMenu(
+                          menuList: hyperUiMenuList,
+                          title: "Hyper UI",
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.grey[300],
+                    height: MediaQuery.of(context).size.height,
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
