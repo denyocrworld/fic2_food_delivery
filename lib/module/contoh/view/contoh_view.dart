@@ -126,7 +126,7 @@ class ContohView extends StatefulWidget {
       },
     ];
 
-//Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Utility dengan color yang unik dan gunakan MdiIcons.
+//Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Utility, MVC Generator dengan color yang unik dan gunakan MdiIcons.
     List<Map> hyperUiMenuList = [
       {
         'label': 'Form',
@@ -149,6 +149,34 @@ class ContohView extends StatefulWidget {
       {
         'label': 'Utility',
         'icon': MdiIcons.wrench,
+        'color': Colors.orange,
+        'onPressed': () {},
+      },
+      {
+        'label': 'MVC Generator',
+        'icon': MdiIcons.codeBraces,
+        'color': Colors.purple,
+        'onPressed': () {},
+      },
+    ];
+
+//Buatlah List<Map> demoAppList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa POS, Car Rental, Barber Shop dengan color yang unik dan gunakan MdiIcons.
+    List<Map> demoAppList = [
+      {
+        'label': 'POS',
+        'icon': MdiIcons.cashRegister,
+        'color': Colors.green,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Car Rental',
+        'icon': MdiIcons.car,
+        'color': Colors.blue,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Barber Shop',
+        'icon': MdiIcons.scissorsCutting,
         'color': Colors.orange,
         'onPressed': () {},
       },
@@ -209,6 +237,13 @@ class ContohView extends StatefulWidget {
                         SideMenu(
                           menuList: hyperUiMenuList,
                           title: "Hyper UI",
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        SideMenu(
+                          menuList: demoAppList,
+                          title: "Full Apps Demo",
                         ),
                       ],
                     ),

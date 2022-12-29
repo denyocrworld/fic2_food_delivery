@@ -14,7 +14,7 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {
-      var size = (constraint.biggest.width - 1) / 3;
+      var size = (constraint.biggest.width - 48) / 3;
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -34,6 +34,7 @@ class SideMenu extends StatelessWidget {
                 return Container(
                   width: size,
                   height: size,
+                  margin: const EdgeInsets.all(4.0),
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     padding: const EdgeInsets.all(6.0),
@@ -45,8 +46,8 @@ class SideMenu extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color: Color(0x19000000),
-                          blurRadius: 24,
-                          offset: Offset(0, 11),
+                          blurRadius: 12,
+                          offset: Offset(0, 4),
                         ),
                       ],
                     ),
@@ -60,13 +61,15 @@ class SideMenu extends StatelessWidget {
                           iconSize: 32.0,
                           onPressed: () {},
                         ),
-                        Text(
-                          '${item["label"]}',
-                          maxLines: 2,
-                          overflow: TextOverflow.visible,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontSize: 10.0,
+                        Expanded(
+                          child: Text(
+                            '${item["label"]}',
+                            maxLines: 2,
+                            overflow: TextOverflow.visible,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontSize: 10.0,
+                            ),
                           ),
                         )
                       ],
