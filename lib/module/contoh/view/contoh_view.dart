@@ -10,11 +10,11 @@ class ContohView extends StatefulWidget {
   Widget build(context, ContohController controller) {
     controller.view = this;
 
-//Buatlah List<Map> menuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard,  Scaffold, Navigation, Common\nWidget, Layout,  ListView, GridView, ListViewItem dan Form  dengan color yang unik dan gunakan MdiIcons.
+//Buatlah List<Map> menuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa HotKey, Scaffold,  Navigation, Container, Text, Image, Icon, CircleAvatar, Layout, ListView, GridView, ListViewItem dan Form  dengan color yang unik dan gunakan MdiIcons.
     List<Map> menuList = [
       {
-        'label': 'Dashboard',
-        'icon': MdiIcons.viewDashboard,
+        'label': 'HotKey',
+        'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
         'onPressed': () {},
       },
@@ -26,44 +26,68 @@ class ContohView extends StatefulWidget {
       },
       {
         'label': 'Navigation',
-        'icon': MdiIcons.navigation,
+        'icon': MdiIcons.mapMarkerPath,
+        'color': Colors.red,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Container',
+        'icon': MdiIcons.box,
+        'color': Colors.purple,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Text',
+        'icon': MdiIcons.textBox,
         'color': Colors.orange,
         'onPressed': () {},
       },
       {
-        'label': 'Common Widget',
-        'icon': MdiIcons.widgets,
-        'color': Colors.purple,
+        'label': 'Image',
+        'icon': MdiIcons.image,
+        'color': Colors.pink,
+        'onPressed': () {},
+      },
+      {
+        'label': 'Icon',
+        'icon': MdiIcons.emoticonHappyOutline,
+        'color': Colors.yellow,
+        'onPressed': () {},
+      },
+      {
+        'label': 'CircleAvatar',
+        'icon': MdiIcons.accountCircleOutline,
+        'color': Colors.teal,
         'onPressed': () {},
       },
       {
         'label': 'Layout',
         'icon': MdiIcons.viewGrid,
-        'color': Colors.red,
+        'color': Colors.brown,
         'onPressed': () {},
       },
       {
         'label': 'ListView',
         'icon': MdiIcons.viewList,
-        'color': Colors.teal,
+        'color': Colors.indigo,
         'onPressed': () {},
       },
       {
         'label': 'GridView',
         'icon': MdiIcons.viewGridPlus,
-        'color': Colors.pink,
+        'color': Colors.cyan,
         'onPressed': () {},
       },
       {
         'label': 'ListViewItem',
         'icon': MdiIcons.viewListOutline,
-        'color': Colors.yellow,
+        'color': Colors.lime,
         'onPressed': () {},
       },
       {
         'label': 'Form',
         'icon': MdiIcons.formTextbox,
-        'color': Colors.brown,
+        'color': Colors.amber,
         'onPressed': () {},
       },
     ];
