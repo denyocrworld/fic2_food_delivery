@@ -127,7 +127,11 @@ class _QImagePickerState extends State<QImagePicker> {
 
     imageUrl = await uploadFile(filePath);
     loading = false;
-    controller.text = imageUrl!;
+
+    if (imageUrl != null) {
+      widget.onChanged(imageUrl!);
+      controller.text = imageUrl!;
+    }
     setState(() {});
   }
 

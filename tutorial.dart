@@ -1,21 +1,12 @@
-//variable
-//print hello world
 void main() {
-  String message = "HelloWorld";
-  List arr = [];
-  for (var i = 0; i < message.length; i++) {
-    var c = message[i];
-    for (var i = 1; i <= 2; i++) {
-      arr.add(c);
-    }
-  }
+  List<String> productList = [
+    "GG FILTER",
+    "SK KRETEK 12",
+    "JR SUPER 12",
+    "SM MILD 16",
+  ];
 
-  String output = "";
-  for (var i = 0; i < arr.length; i++) {
-    if (i % 2 == 0) {
-      output += arr[i];
-    }
+  for (var product in productList) {
+    print(product);
   }
-  print(arr);
-  print(output);
 }
