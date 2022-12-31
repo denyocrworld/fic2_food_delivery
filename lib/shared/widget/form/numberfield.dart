@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class QNumberField extends StatefulWidget {
   final String label;
@@ -21,15 +22,27 @@ class QNumberField extends StatefulWidget {
 }
 
 class _QNumberFieldState extends State<QNumberField> {
+  String? value;
+  late TextEditingController controller;
+
   @override
   void initState() {
     super.initState();
+    value = widget.value?.replaceAll(RegExp(r'\D'), '');
+    controller = TextEditingController(
+      text: formattedValue,
+    );
+  }
+
+  String? get formattedValue {
+    final currencyFormat = NumberFormat("#,##0", "en_US");
+    return currencyFormat.format(num.tryParse(value.toString()) ?? 0);
   }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: widget.value,
+      controller: controller,
       validator: widget.validator,
       maxLength: 20,
       keyboardType: TextInputType.number,
@@ -48,7 +61,14 @@ class _QNumberFieldState extends State<QNumberField> {
         ),
         helperText: widget.hint,
       ),
-      onChanged: widget.onChanged,
+      onChanged: (newValue) {
+        //buatlah kode di dart untuk replaceAll semua karakter non digit?
+        value = newValue.replaceAll(RegExp(r'\D'), '');
+        controller.text = formattedValue ?? "";
+        widget.onChanged(newValue.replaceAll(RegExp(r'\D'), ''));
+        controller.selection =
+            TextSelection.collapsed(offset: controller.text.length);
+      },
     );
   }
 }
