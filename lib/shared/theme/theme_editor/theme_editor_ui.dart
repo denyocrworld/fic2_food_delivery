@@ -90,7 +90,7 @@ class ThemeEditorUI extends StatelessWidget {
                         ],
                         value: "Female",
                       ),
-                      const ExLocationPicker(
+                      const QLocationPicker(
                         id: "location",
                         label: "Location",
                         latitude: -6.218481065235333,

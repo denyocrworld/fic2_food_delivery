@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-class ExLocationPicker extends StatefulWidget {
+class QLocationPicker extends StatefulWidget {
   final String id;
   final String? label;
   final double? latitude;
   final double? longitude;
   final bool enableEdit;
 
-  const ExLocationPicker({
+  const QLocationPicker({
     Key? key,
     required this.id,
     this.label,
@@ -21,10 +21,10 @@ class ExLocationPicker extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ExLocationPickerState createState() => _ExLocationPickerState();
+  _QLocationPickerState createState() => _QLocationPickerState();
 }
 
-class _ExLocationPickerState extends State<ExLocationPicker>
+class _QLocationPickerState extends State<QLocationPicker>
     implements InputControlState {
   double? latitude;
   double? longitude;

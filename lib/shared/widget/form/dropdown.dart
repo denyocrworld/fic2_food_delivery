@@ -72,64 +72,67 @@ class _QDropdownFieldState extends State<QDropdownField> {
           ),
           child: DropdownButtonHideUnderline(
             child: ButtonTheme(
-              alignedDropdown: true,
-              child: DropdownButton<String>(
-                isExpanded: true,
-                value: currentValue,
-                icon: Padding(
-                  padding: const EdgeInsets.only(right: 10.0),
-                  child: Icon(
-                    Icons.arrow_drop_down_outlined,
-                    size: 24.0,
-                    color: Theme.of(context).textTheme.bodyText1!.color,
-                  ),
-                ),
-                iconSize: 16,
-                elevation: 16,
-                style: TextStyle(
-                  fontSize: Theme.of(context).textTheme.bodyText2!.fontSize,
-                  fontFamily: Theme.of(context).textTheme.bodyText2!.fontFamily,
-                  color: Theme.of(context).textTheme.bodyText2!.color,
-                ),
-                underline: Container(
-                  height: 0,
-                  color: Colors.grey[300],
-                ),
-                onChanged: (String? newValue) {
-                  if (newValue == "-" && widget.emptyMode) {
-                    selectedValue = null;
-                  } else {
-                    selectedValue = newValue!;
-                  }
-                  setState(() {});
-
-                  String? label = selectedValue;
-                  int index = items.indexWhere((item) => item == label);
-                  if (index == -1) {
-                    widget.onChanged(label, null);
-                    return;
-                  }
-
-                  if (widget.emptyMode) {
-                    index -= 1;
-                  }
-                  var value = widget.items[index]["value"];
-                  widget.onChanged(value, label);
-                },
-                items: items.map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 0.0,
-                        vertical: 0.0,
-                      ),
-                      child: Text(
-                        value,
-                      ),
+              alignedDropdown: false,
+              child: SizedBox(
+                child: DropdownButton<String>(
+                  isExpanded: true,
+                  value: currentValue,
+                  icon: Padding(
+                    padding: const EdgeInsets.only(right: 10.0),
+                    child: Icon(
+                      Icons.arrow_drop_down_outlined,
+                      size: 24.0,
+                      color: Theme.of(context).textTheme.bodyText1!.color,
                     ),
-                  );
-                }).toList(),
+                  ),
+                  iconSize: 16,
+                  elevation: 16,
+                  style: TextStyle(
+                    fontSize: Theme.of(context).textTheme.bodyText2!.fontSize,
+                    fontFamily:
+                        Theme.of(context).textTheme.bodyText2!.fontFamily,
+                    color: Theme.of(context).textTheme.bodyText2!.color,
+                  ),
+                  underline: Container(
+                    height: 0,
+                    color: Colors.grey[300],
+                  ),
+                  onChanged: (String? newValue) {
+                    if (newValue == "-" && widget.emptyMode) {
+                      selectedValue = null;
+                    } else {
+                      selectedValue = newValue!;
+                    }
+                    setState(() {});
+
+                    String? label = selectedValue;
+                    int index = items.indexWhere((item) => item == label);
+                    if (index == -1) {
+                      widget.onChanged(label, null);
+                      return;
+                    }
+
+                    if (widget.emptyMode) {
+                      index -= 1;
+                    }
+                    var value = widget.items[index]["value"];
+                    widget.onChanged(value, label);
+                  },
+                  items: items.map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 0.0,
+                          vertical: 0.0,
+                        ),
+                        child: Text(
+                          value,
+                        ),
+                      ),
+                    );
+                  }).toList(),
+                ),
               ),
             ),
           ),

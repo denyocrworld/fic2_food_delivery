@@ -34,6 +34,13 @@ class CgHyperuiFormView extends StatefulWidget {
                               onChanged: (value) {},
                             ),
                             QTextField(
+                              label: "Email",
+                              hint: "Your email",
+                              validator: Validator.email,
+                              value: "demo@gmail.com",
+                              onChanged: (value) {},
+                            ),
+                            QTextField(
                               label: "Password",
                               hint: "Your password",
                               obscure: true,
@@ -41,6 +48,20 @@ class CgHyperuiFormView extends StatefulWidget {
                               value: "123456",
                               onChanged: (value) {},
                             ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  Expanded(
+                    child: Card(
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: [
                             QNumberField(
                               label: "Price 1",
                               hint: "Your product price's",
@@ -100,51 +121,54 @@ class CgHyperuiFormView extends StatefulWidget {
                     width: 20.0,
                   ),
                   Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          children: [
-                            QMemoField(
-                              label: "Description",
-                              validator: Validator.required,
-                              hint: "Description",
-                              value: "-",
-                              onChanged: (value) {},
+                    child: Column(
+                      children: [
+                        Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              children: [
+                                QDatePicker(
+                                  label: "Birth date",
+                                  hint: "Your birth date",
+                                  validator: Validator.required,
+                                  onChanged: (value) {
+                                    print("value: $value");
+                                  },
+                                ),
+                                QTimePicker(
+                                  label: "Working hour",
+                                  hint: "Your working hour",
+                                  validator: Validator.required,
+                                  onChanged: (value) {
+                                    print("value: $value");
+                                  },
+                                ),
+                              ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20.0,
-                  ),
-                  Expanded(
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          children: [
-                            QDatePicker(
-                              label: "Birth date",
-                              hint: "Your birth date",
-                              validator: Validator.required,
-                              onChanged: (value) {
-                                print("value: $value");
-                              },
-                            ),
-                            QTimePicker(
-                              label: "Working hour",
-                              hint: "Your working hour",
-                              validator: Validator.required,
-                              onChanged: (value) {
-                                print("value: $value");
-                              },
-                            ),
-                          ],
+                        const SizedBox(
+                          height: 2.0,
                         ),
-                      ),
+                        Card(
+                          child: Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Column(
+                              children: [
+                                QMemoField(
+                                  label: "Address",
+                                  hint: "Your addresses",
+                                  validator: Validator.required,
+                                  value:
+                                      "Kamboja street 16, Bogor, West Java, Indonesia",
+                                  onChanged: (value) {},
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -295,7 +319,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
                           children: const [
-                            ExLocationPicker(
+                            QLocationPicker(
                               id: "location",
                               label: "Location",
                               latitude: -6.218481065235333,

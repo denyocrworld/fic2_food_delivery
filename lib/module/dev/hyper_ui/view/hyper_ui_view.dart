@@ -118,7 +118,7 @@ class HyperUiView extends StatefulWidget {
                           id: "photo",
                           label: "Photo",
                         ),
-                        const ExLocationPicker(
+                        const QLocationPicker(
                           id: "location",
                           label: "Location",
                           latitude: -6.218481065235333,
