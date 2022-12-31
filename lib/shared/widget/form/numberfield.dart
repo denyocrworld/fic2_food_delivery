@@ -8,6 +8,9 @@ class QNumberField extends StatefulWidget {
   final String? Function(String?)? validator;
   final Function(String) onChanged;
 
+  final String? pattern;
+  final String? locale;
+
   const QNumberField({
     Key? key,
     required this.label,
@@ -15,6 +18,8 @@ class QNumberField extends StatefulWidget {
     this.validator,
     this.hint,
     required this.onChanged,
+    this.pattern,
+    this.locale,
   }) : super(key: key);
 
   @override
@@ -28,15 +33,21 @@ class _QNumberFieldState extends State<QNumberField> {
   @override
   void initState() {
     super.initState();
-    value = widget.value?.replaceAll(RegExp(r'\D'), '');
+    //regex untuk hanya menerima angka dan koma?
+    value = widget.value?.replaceAll(RegExp(r'^[0-9,]+$'), '');
     controller = TextEditingController(
       text: formattedValue,
     );
   }
 
   String? get formattedValue {
-    final currencyFormat = NumberFormat("#,##0", "en_US");
-    return currencyFormat.format(num.tryParse(value.toString()) ?? 0);
+    if (widget.pattern != null) {
+      final currencyFormat = NumberFormat(widget.pattern, widget.locale);
+      var pValue = num.tryParse(value.toString()) ?? 0;
+      print("pValue: $pValue");
+      return currencyFormat.format(pValue);
+    }
+    return value;
   }
 
   @override

@@ -33,10 +33,32 @@ class CgHyperuiFormView extends StatefulWidget {
                               onChanged: (value) {},
                             ),
                             QNumberField(
-                              label: "Price",
+                              label: "Price 1",
+                              hint: "Your product price's",
+                              validator: Validator.required,
+                              value: "23000",
+                              onChanged: (value) {
+                                print("Product price: $value");
+                              },
+                            ),
+                            QNumberField(
+                              label: "Price 2",
                               hint: "Your product price's",
                               validator: Validator.required,
                               value: "15000",
+                              pattern: "#,##0",
+                              locale: "en_US",
+                              onChanged: (value) {
+                                print("Product price: $value");
+                              },
+                            ),
+                            QNumberField(
+                              label: "Price 3",
+                              hint: "Your product price's",
+                              validator: Validator.required,
+                              value: "23200.23",
+                              pattern: "#,###.0#",
+                              locale: "en_US",
                               onChanged: (value) {
                                 print("Product price: $value");
                               },
