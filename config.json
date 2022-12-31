@@ -23,7 +23,13 @@
         "capekngoding/cg_premade_list",
         "capekngoding/cg_premade_detail",
         "capekngoding/cg_premade_report",
-        "capekngoding/cg_premade_profile"
-
+        "capekngoding/cg_premade_profile",
+        "capekngoding/cg_hyperui_form",
+        "capekngoding/cg_hyperui_list",
+        "capekngoding/cg_hyperui_fire_stream",
+        "capekngoding/cg_hyperui_dialog",
+        "capekngoding/cg_hyperui_navigation",
+        "capekngoding/cg_hyperui_utility",
+        "capekngoding/cg_hyperui_mvc_generator"
     ]
 }

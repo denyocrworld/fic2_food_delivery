@@ -29,7 +29,7 @@ class CgMainService {
     },
     {
       'label': 'Card',
-      'icon': MdiIcons.box,
+      'icon': MdiIcons.cardOutline,
       'color': Colors.purple,
       'page': const CgCardView(),
     },
@@ -131,7 +131,7 @@ class CgMainService {
       'label': 'ReportView',
       'icon': MdiIcons.chartBar,
       'color': Colors.red,
-      'page': Container(),
+      'page': const CgPremadeReportView(),
     },
     {
       'label': 'ProfileView',
@@ -147,43 +147,43 @@ class CgMainService {
       'label': 'Form',
       'icon': MdiIcons.formTextbox,
       'color': Colors.blue,
-      'page': Container(),
+      'page': const CgHyperuiFormView(),
     },
     {
       'label': 'ListView',
       'icon': MdiIcons.viewList,
       'color': Colors.green,
-      'page': Container(),
+      'page': const CgHyperuiListView(),
     },
     {
       'label': 'FireStream',
       'icon': MdiIcons.fire,
       'color': Colors.red,
-      'page': Container(),
+      'page': const CgHyperuiFireStreamView(),
     },
     {
       'label': 'Dialog',
       'icon': MdiIcons.message,
       'color': Colors.purple,
-      'page': Container(),
+      'page': const CgHyperuiDialogView(),
     },
     {
       'label': 'Navigation',
       'icon': MdiIcons.navigation,
       'color': Colors.orange,
-      'page': Container(),
+      'page': const CgHyperuiNavigationView(),
     },
     {
       'label': 'Utility',
       'icon': MdiIcons.wrench,
       'color': Colors.teal,
-      'page': Container(),
+      'page': const CgHyperuiUtilityView(),
     },
     {
       'label': 'MVC Generator',
       'icon': MdiIcons.codeBraces,
       'color': Colors.pink,
-      'page': Container(),
+      'page': const CgHyperuiMvcGeneratorView(),
     },
   ];
 
@@ -194,18 +194,21 @@ class CgMainService {
       'icon': MdiIcons.cashRegister,
       'color': Colors.green,
       'page': Container(),
+      'tag': 'Coming Soon',
     },
     {
       'label': 'Car Rental',
       'icon': MdiIcons.car,
       'color': Colors.blue,
       'page': Container(),
+      'tag': 'Coming Soon',
     },
     {
       'label': 'Barber Shop',
       'icon': MdiIcons.scissorsCutting,
       'color': Colors.orange,
       'page': Container(),
+      'tag': 'Coming Soon',
     },
   ];
 }
