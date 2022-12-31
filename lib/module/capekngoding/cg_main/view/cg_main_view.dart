@@ -10,7 +10,12 @@ class CgMainView extends StatefulWidget {
     controller.view = this;
 
     return Theme(
-      data: ThemeData.light(),
+      data: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: Colors.grey[300],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[600],
+        ),
+      ),
       child: Scaffold(
         backgroundColor: Colors.grey[300]!,
         body: SingleChildScrollView(
@@ -38,9 +43,9 @@ class CgMainView extends StatefulWidget {
                           ),
                         ),
                         Text(
-                          "Write less do more~",
+                          "Write less do less~",
                           style: GoogleFonts.moonDance(
-                            fontSize: 12.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -80,6 +85,7 @@ class CgMainView extends StatefulWidget {
                   child: Container(
                     color: Colors.grey[300],
                     height: MediaQuery.of(context).size.height,
+                    child: controller.mainView,
                   ),
                 ),
               ],

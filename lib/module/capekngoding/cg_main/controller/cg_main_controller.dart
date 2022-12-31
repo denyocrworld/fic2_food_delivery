@@ -1,3 +1,4 @@
+import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
 import '../view/cg_main_view.dart';
@@ -17,4 +18,10 @@ class CgMainController extends State<CgMainView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  Widget mainView = const CgHotkeyView();
+  updateView(Widget view) {
+    mainView = view;
+    update();
+  }
 }
