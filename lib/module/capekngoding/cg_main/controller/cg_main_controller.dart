@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class CgMainController extends State<CgMainView> implements MvcController {
   static late CgMainController instance;
   late CgMainView view;
-  bool lightMode = true;
+  bool lightMode = false;
 
   @override
   void initState() {
@@ -26,6 +26,7 @@ class CgMainController extends State<CgMainView> implements MvcController {
 
   updateTheme() {
     lightMode = !lightMode;
+    Get.mainTheme.value = lightMode ? getDarkTheme() : getDefaultTheme();
     setState(() {});
   }
 }

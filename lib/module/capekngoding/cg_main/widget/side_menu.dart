@@ -4,12 +4,12 @@ import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class SideMenu extends StatelessWidget {
-  final String title;
+  final String? title;
   final List<Map> menuList;
   const SideMenu({
     Key? key,
-    required this.title,
     required this.menuList,
+    this.title,
   }) : super(key: key);
 
   @override
@@ -19,16 +19,18 @@ class SideMenu extends StatelessWidget {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+          if (title != null) ...[
+            Text(
+              title!,
+              style: const TextStyle(
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          const SizedBox(
-            height: 6.0,
-          ),
+            const SizedBox(
+              height: 6.0,
+            ),
+          ],
           Wrap(
             children: List.generate(
               menuList.length,
@@ -38,6 +40,10 @@ class SideMenu extends StatelessWidget {
 
                 return InkWell(
                   onTap: () {
+                    if (item["action"] != null) {
+                      item["action"]();
+                      return;
+                    }
                     print("updateView to ${item["page"]}");
                     CgMainController.instance.updateView(item["page"]);
                   },
@@ -71,7 +77,7 @@ class SideMenu extends StatelessWidget {
                                 IconButton(
                                   icon: Icon(item["icon"]),
                                   color: disabled ? Colors.grey : item["color"],
-                                  iconSize: 32.0,
+                                  iconSize: 24.0,
                                   onPressed: () {},
                                 ),
                                 Expanded(

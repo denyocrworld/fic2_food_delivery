@@ -20,7 +20,6 @@ class CgMainView extends StatefulWidget {
             children: [
               Container(
                 width: 340.0,
-                padding: const EdgeInsets.all(12.0),
                 height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor.withOpacity(0.6),
@@ -32,80 +31,113 @@ class CgMainView extends StatefulWidget {
                     ),
                   ],
                 ),
-                child: ScrollConfiguration(
-                  behavior: ScrollConfiguration.of(context)
-                      .copyWith(scrollbars: false),
-                  child: SingleChildScrollView(
-                    controller: ScrollController(),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Hyper UI",
-                          style: GoogleFonts.moonDance(
-                            fontSize: 30.0,
-                            fontWeight: FontWeight.bold,
+                child: Column(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(20.0),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).cardColor,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x19000000),
+                            blurRadius: 24,
+                            offset: Offset(0, 11),
                           ),
-                        ),
-                        Text(
-                          "Write less do less~",
-                          style: GoogleFonts.moonDance(
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Hyper UI",
+                                  style: GoogleFonts.moonDance(
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  "Write less do less~",
+                                  style: GoogleFonts.moonDance(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Switch(
-                          value: controller.lightMode,
-                          onChanged: (value) {
-                            controller.updateTheme();
-                            Get.mainTheme.value = controller.lightMode
-                                ? getDarkTheme()
-                                : getDefaultTheme();
-                          },
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        SideMenu(
-                          menuList: CgMainService.menuList,
-                          title: "Basic",
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        SideMenu(
-                          menuList: CgMainService.uiMenuList,
-                          title: "Premade UI",
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        SideMenu(
-                          menuList: CgMainService.hyperUiMenuList,
-                          title: "Hyper UI",
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        SideMenu(
-                          menuList: CgMainService.demoAppList,
-                          title: "Full Apps Demo",
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        const Text(
-                          "© CapekNgoding.com",
-                          style: TextStyle(
-                            fontSize: 12.0,
-                            fontWeight: FontWeight.bold,
+                          Switch(
+                            value: controller.lightMode,
+                            onChanged: (value) {
+                              controller.updateTheme();
+                            },
                           ),
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
+                    const SizedBox(
+                      height: 12.0,
+                    ),
+                    Expanded(
+                      child: ScrollConfiguration(
+                        behavior: ScrollConfiguration.of(context)
+                            .copyWith(scrollbars: false),
+                        child: SingleChildScrollView(
+                          controller: ScrollController(),
+                          child: Column(
+                            children: [
+                              SideMenu(
+                                menuList: CgMainService.promotionList,
+                              ),
+                              const SizedBox(
+                                height: 12.0,
+                              ),
+                              SideMenu(
+                                menuList: CgMainService.menuList,
+                                title: "Basic",
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              SideMenu(
+                                menuList: CgMainService.uiMenuList,
+                                title: "Premade UI",
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              SideMenu(
+                                menuList: CgMainService.hyperUiMenuList,
+                                title: "Hyper UI",
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              SideMenu(
+                                menuList: CgMainService.demoAppList,
+                                title: "Full Apps Demo",
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                              const Text(
+                                "© CapekNgoding.com",
+                                style: TextStyle(
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 20.0,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Expanded(

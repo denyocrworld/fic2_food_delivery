@@ -2,6 +2,41 @@ import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
 class CgMainService {
+  static List<Map> promotionList = [
+    {
+      'label': 'Komunitas Berandal',
+      'icon': MdiIcons.commaBox,
+      'color': Colors.orange,
+      'page': Container(),
+      'action': () async {
+        launchUrl(Uri.parse(
+          "https://chat.whatsapp.com/HijFMUeQx8A5fcIj0eJnSB",
+        ));
+      }
+    },
+    {
+      'label': 'Youtube',
+      'icon': MdiIcons.youtube,
+      'color': Colors.red,
+      'page': Container(),
+      'action': () async {
+        launchUrl(Uri.parse(
+          "https://youtube.com/@capekNgoding",
+        ));
+      }
+    },
+    {
+      'label': 'Kelas Online Flutter',
+      'icon': MdiIcons.codeBraces,
+      'color': Colors.green,
+      'page': Container(),
+      'action': () async {
+        launchUrl(Uri.parse(
+          "https://wa.me/6282146727409?text=Selamat siang, saya ingin join kelas online Dart/Flutter.",
+        ));
+      }
+    },
+  ];
   static List<Map> menuList = [
     {
       'label': 'HotKey',
