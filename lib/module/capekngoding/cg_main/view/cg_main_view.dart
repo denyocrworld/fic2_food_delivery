@@ -77,6 +77,19 @@ class CgMainView extends StatefulWidget {
                           menuList: CgMainService.demoAppList,
                           title: "Full Apps Demo",
                         ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        const Text(
+                          "© CapekNgoding.com",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
                       ],
                     ),
                   ),
