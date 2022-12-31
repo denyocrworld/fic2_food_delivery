@@ -542,6 +542,7 @@ export 'package:example/shared/widget/form/check_field/check_field.dart';
 export 'package:example/shared/widget/form/date_picker/datepicker.dart';
 export 'package:example/shared/widget/form/dropdown/dropdown.dart';
 export 'package:example/shared/widget/form/image_picker/image_picker.dart';
+export 'package:example/shared/widget/form/list/list_view.dart';
 export 'package:example/shared/widget/form/location_picker/location_picker.dart';
 export 'package:example/shared/widget/form/location_picker/location_picker_map_view.dart';
 export 'package:example/shared/widget/form/location_picker/map_viewer.dart';
