@@ -38,6 +38,12 @@ class Get {
   static double get height {
     return MediaQuery.of(currentContext).size.width;
   }
+
+  static ValueNotifier<ThemeData> mainTheme =
+      ValueNotifier<ThemeData>(ThemeData());
+  changeTheme(ThemeData theme) {
+    mainTheme.value = theme;
+  }
 }
 
 extension ChangeNotifierExtension on State {

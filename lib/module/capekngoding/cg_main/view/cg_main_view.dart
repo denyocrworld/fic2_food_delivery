@@ -9,28 +9,32 @@ class CgMainView extends StatefulWidget {
   Widget build(context, CgMainController controller) {
     controller.view = this;
 
-    return Theme(
-      data: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: Colors.grey[300],
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.grey[600],
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.grey[300]!,
-        body: SingleChildScrollView(
-          controller: ScrollController(),
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  color: Colors.grey[200],
-                  width: 340.0,
-                  padding: const EdgeInsets.all(12.0),
-                  height: MediaQuery.of(context).size.height,
+    return Scaffold(
+      body: SingleChildScrollView(
+        controller: ScrollController(),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 340.0,
+                padding: const EdgeInsets.all(12.0),
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).cardColor.withOpacity(0.6),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Color(0x19000000),
+                      blurRadius: 24,
+                      offset: Offset(0, 11),
+                    ),
+                  ],
+                ),
+                child: ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context)
+                      .copyWith(scrollbars: false),
                   child: SingleChildScrollView(
                     controller: ScrollController(),
                     child: Column(
@@ -48,6 +52,15 @@ class CgMainView extends StatefulWidget {
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
+                        ),
+                        Switch(
+                          value: controller.lightMode,
+                          onChanged: (value) {
+                            controller.updateTheme();
+                            Get.mainTheme.value = controller.lightMode
+                                ? getDarkTheme()
+                                : getDefaultTheme();
+                          },
                         ),
                         const SizedBox(
                           height: 20.0,
@@ -94,15 +107,15 @@ class CgMainView extends StatefulWidget {
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Container(
-                    color: Colors.grey[300],
-                    height: MediaQuery.of(context).size.height,
-                    child: controller.mainView,
-                  ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.grey[300],
+                  height: MediaQuery.of(context).size.height,
+                  child: controller.mainView,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

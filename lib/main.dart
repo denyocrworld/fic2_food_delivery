@@ -1,4 +1,3 @@
-import 'package:example/state_util.dart';
 import 'package:example/core.dart';
 import 'package:example/session.dart';
 import 'package:flutter/foundation.dart';
@@ -42,6 +41,8 @@ void main() async {
   await LocalProductService.load();
   await FormHistoryService.load();
   AppSession.token = await mainStorage.get("token") ?? "";
+
+  Get.mainTheme.value = getDefaultTheme();
   runMainApp();
 }
 
@@ -54,16 +55,21 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Capek Ngoding',
-      navigatorKey: Get.navigatorKey,
-      debugShowCheckedModeBanner: false,
-      // theme: getGojekTheme(),
-      theme: ThemeData.dark(),
-      // home: const FheMainNavigationView(),
-      // home: const ExProductListView(),
-      // home: const ContohView(),
-      home: const CgMainView(),
+    return ValueListenableBuilder(
+      valueListenable: Get.mainTheme,
+      builder: (context, value, child) {
+        return MaterialApp(
+          title: 'Capek Ngoding',
+          navigatorKey: Get.navigatorKey,
+          debugShowCheckedModeBanner: false,
+          // theme: getGojekTheme(),
+          theme: value,
+          // home: const FheMainNavigationView(),
+          // home: const ExProductListView(),
+          // home: const ContohView(),
+          home: const CgMainView(),
+        );
+      },
     );
   }
 }

@@ -1,11 +1,10 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
-import '../view/cg_main_view.dart';
 
 class CgMainController extends State<CgMainView> implements MvcController {
   static late CgMainController instance;
   late CgMainView view;
+  bool lightMode = true;
 
   @override
   void initState() {
@@ -23,5 +22,10 @@ class CgMainController extends State<CgMainView> implements MvcController {
   updateView(Widget view) {
     mainView = view;
     update();
+  }
+
+  updateTheme() {
+    lightMode = !lightMode;
+    setState(() {});
   }
 }

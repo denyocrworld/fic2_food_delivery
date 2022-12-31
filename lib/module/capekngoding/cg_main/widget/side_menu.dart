@@ -51,12 +51,12 @@ class SideMenu extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: Container(
                             padding: const EdgeInsets.all(6.0),
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.all(
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).cardColor,
+                              borderRadius: const BorderRadius.all(
                                 Radius.circular(12.0),
                               ),
-                              boxShadow: [
+                              boxShadow: const [
                                 BoxShadow(
                                   color: Color(0x19000000),
                                   blurRadius: 12,

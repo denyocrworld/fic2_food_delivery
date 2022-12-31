@@ -344,27 +344,31 @@ class CgButtonView extends StatefulWidget {
                           elevation: 0.0,
                         ),
                         onPressed: () {},
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Icon(
-                              Icons.home,
-                              color: Colors.blueGrey,
-                            ),
-                            SizedBox(
-                              height: 4.0,
-                            ),
-                            Text(
-                              "Menu",
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
+                        child: SizedBox(
+                          height: 60.0,
+                          width: 60.0,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Icon(
+                                Icons.home,
                                 color: Colors.blueGrey,
-                                fontSize: 8.0,
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 4.0,
+                              ),
+                              Text(
+                                "Menu",
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  color: Colors.blueGrey,
+                                  fontSize: 8.0,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       //#END
