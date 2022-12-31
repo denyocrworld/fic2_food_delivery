@@ -2,7 +2,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:flutter/material.dart';
 
 class CgMainService {
-//Buatlah List<Map> menuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa HotKey, Scaffold,  Navigation, Container, Text, Image, Icon, CircleAvatar, Layout, ListView, GridView, ListViewItem dan Form  dengan color yang unik dan gunakan MdiIcons.
   static List<Map> menuList = [
     {
       'label': 'HotKey',
@@ -65,15 +64,27 @@ class CgMainService {
       'onPressed': () {},
     },
     {
+      'label': 'ListViewItem',
+      'icon': MdiIcons.viewListOutline,
+      'color': Colors.lime,
+      'onPressed': () {},
+    },
+    {
       'label': 'GridView',
       'icon': MdiIcons.viewGridPlus,
       'color': Colors.cyan,
       'onPressed': () {},
     },
     {
-      'label': 'ListViewItem',
-      'icon': MdiIcons.viewListOutline,
-      'color': Colors.lime,
+      'label': 'TableView',
+      'icon': MdiIcons.table,
+      'color': Colors.cyan,
+      'onPressed': () {},
+    },
+    {
+      'label': 'ChartView',
+      'icon': MdiIcons.chartLine,
+      'color': Colors.cyan,
       'onPressed': () {},
     },
     {
@@ -86,6 +97,12 @@ class CgMainService {
 
 //Buatlah List<Map> uiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard, ListView, DetailView, ReportView, ProfileView dengan color yang unik dan gunakan MdiIcons.
   static List<Map> uiMenuList = [
+    {
+      'label': 'Login',
+      'icon': MdiIcons.loginVariant,
+      'color': Colors.purple,
+      'onPressed': () {},
+    },
     {
       'label': 'Dashboard',
       'icon': MdiIcons.viewDashboard,
