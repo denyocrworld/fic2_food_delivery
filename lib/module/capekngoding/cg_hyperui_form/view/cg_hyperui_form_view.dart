@@ -46,7 +46,7 @@ class CgHyperuiFormView extends StatefulWidget {
                               hint: "Your product price's",
                               validator: Validator.required,
                               value: "15000",
-                              pattern: "#,##0",
+                              pattern: "#,###",
                               locale: "en_US",
                               onChanged: (value) {
                                 print("Product price: $value");
@@ -57,7 +57,7 @@ class CgHyperuiFormView extends StatefulWidget {
                               hint: "Your product price's",
                               validator: Validator.required,
                               value: "23200.23",
-                              pattern: "#,###.0#",
+                              pattern: "#,###.00",
                               locale: "en_US",
                               onChanged: (value) {
                                 print("Product price: $value");
