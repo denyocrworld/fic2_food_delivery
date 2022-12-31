@@ -99,6 +99,12 @@ class CgMainService {
       'color': Colors.amber,
       'page': const CgFormView(),
     },
+    {
+      'label': 'Button',
+      'icon': MdiIcons.buttonPointer,
+      'color': Colors.red,
+      'page': const CgButtonView(),
+    },
   ];
 
 //Buatlah List<Map> uiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard, ListView, DetailView, ReportView, ProfileView dengan color yang unik dan gunakan MdiIcons.

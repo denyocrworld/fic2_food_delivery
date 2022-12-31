@@ -423,12 +423,14 @@ class CgHyperuiFormView extends StatefulWidget {
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
                           children: const [
+                            //#TEMPLATE q_location_picker
                             QLocationPicker(
                               id: "location",
                               label: "Location",
                               latitude: -6.218481065235333,
                               longitude: 106.80254435779423,
                             ),
+                            //#END
                           ],
                         ),
                       ),
