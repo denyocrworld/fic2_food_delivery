@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:example/state_util.dart';
-import '../view/contoh_view.dart';
+import '../view/cg_main_view.dart';
 
-class ContohController extends State<ContohView> implements MvcController {
-  static late ContohController instance;
-  late ContohView view;
+class CgMainController extends State<CgMainView> implements MvcController {
+  static late CgMainController instance;
+  late CgMainView view;
 
   @override
   void initState() {

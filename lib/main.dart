@@ -45,14 +45,24 @@ void main() async {
 }
 
 runMainApp() async {
-  return runApp(MaterialApp(
-    title: 'Capek Ngoding',
-    navigatorKey: Get.navigatorKey,
-    debugShowCheckedModeBanner: false,
-    // theme: getGojekTheme(),
-    theme: ThemeData.dark(),
-    // home: const FheMainNavigationView(),
-    // home: const ExProductListView(),
-    home: const ContohView(),
-  ));
+  return runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Capek Ngoding',
+      navigatorKey: Get.navigatorKey,
+      debugShowCheckedModeBanner: false,
+      // theme: getGojekTheme(),
+      theme: ThemeData.dark(),
+      // home: const FheMainNavigationView(),
+      // home: const ExProductListView(),
+      // home: const ContohView(),
+      home: const CgMainView(),
+    );
+  }
 }

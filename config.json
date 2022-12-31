@@ -112,6 +112,8 @@
         "tutorial_ui/scheduler/sc_dashboard",
         "tutorial_ui/scheduler/sc_schedule",
         "tutorial_ui/scheduler/sc_task",
-        "contoh"
+        "contoh",
+        "home",
+        "capekngoding/cg_main"
     ]
 }

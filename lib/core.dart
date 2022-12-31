@@ -12,8 +12,10 @@ export 'package:example/module/app/membership_app/ma_login/view/ma_login_view.da
 export 'package:example/module/app/membership_app/ma_main_navigation/controller/ma_main_navigation_controller.dart';
 export 'package:example/module/app/membership_app/ma_main_navigation/view/ma_main_navigation_view.dart';
 export 'package:example/module/avatar_ui/widget/avatar_ui.dart';
-export 'package:example/module/contoh/controller/contoh_controller.dart';
-export 'package:example/module/contoh/view/contoh_view.dart';
+export 'package:example/module/capekngoding/cg_main/controller/cg_main_controller.dart';
+export 'package:example/module/capekngoding/cg_main/service/cg_main_service.dart';
+export 'package:example/module/capekngoding/cg_main/view/cg_main_view.dart';
+export 'package:example/module/capekngoding/cg_main/widget/side_menu.dart';
 export 'package:example/module/dev/appbar_ui/controller/appbar_ui_controller.dart';
 export 'package:example/module/dev/appbar_ui/view/appbar_ui_view.dart';
 export 'package:example/module/dev/avatar_ui/controller/avatar_ui_controller.dart';
