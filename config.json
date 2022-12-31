@@ -6,6 +6,7 @@
         "capekngoding/cg_scaffold",
         "capekngoding/cg_navigation",
         "capekngoding/cg_container",
+        "capekngoding/cg_card",
         "capekngoding/cg_text",
         "capekngoding/cg_image",
         "capekngoding/cg_icon",
@@ -16,6 +17,13 @@
         "capekngoding/cg_grid",
         "capekngoding/cg_table",
         "capekngoding/cg_chart",
-        "capekngoding/cg_form"
+        "capekngoding/cg_form",
+        "capekngoding/cg_premade_login",
+        "capekngoding/cg_premade_dashboard",
+        "capekngoding/cg_premade_list",
+        "capekngoding/cg_premade_detail",
+        "capekngoding/cg_premade_report",
+        "capekngoding/cg_premade_profile"
+
     ]
 }

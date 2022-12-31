@@ -1,5 +1,4 @@
 import 'package:example/core.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 class CgMainService {
@@ -24,9 +23,15 @@ class CgMainService {
     },
     {
       'label': 'Container',
-      'icon': MdiIcons.box,
+      'icon': MdiIcons.card,
       'color': Colors.purple,
       'page': const CgContainerView(),
+    },
+    {
+      'label': 'Card',
+      'icon': MdiIcons.box,
+      'color': Colors.purple,
+      'page': const CgCardView(),
     },
     {
       'label': 'Text',
@@ -102,25 +107,25 @@ class CgMainService {
       'label': 'Login',
       'icon': MdiIcons.loginVariant,
       'color': Colors.purple,
-      'page': Container(),
+      'page': const CgPremadeLoginView(),
     },
     {
       'label': 'Dashboard',
       'icon': MdiIcons.viewDashboard,
       'color': Colors.blue,
-      'page': Container(),
+      'page': const CgPremadeDashboardView(),
     },
     {
       'label': 'ListView',
       'icon': MdiIcons.viewList,
       'color': Colors.green,
-      'page': Container(),
+      'page': const CgPremadeListView(),
     },
     {
       'label': 'DetailView',
       'icon': MdiIcons.viewGrid,
       'color': Colors.yellow,
-      'page': Container(),
+      'page': const CgPremadeDetailView(),
     },
     {
       'label': 'ReportView',
@@ -132,7 +137,7 @@ class CgMainService {
       'label': 'ProfileView',
       'icon': MdiIcons.accountCircle,
       'color': Colors.purple,
-      'page': Container(),
+      'page': const CgPremadeProfileView(),
     },
   ];
 
