@@ -120,7 +120,10 @@ class _QDropdownFieldState extends State<QDropdownField> {
                   return DropdownMenuItem<String>(
                     value: value,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 0.0,
+                        vertical: 0.0,
+                      ),
                       child: Text(
                         value,
                       ),

@@ -19,7 +19,7 @@ class QNumberField extends StatefulWidget {
     this.hint,
     required this.onChanged,
     this.pattern,
-    this.locale,
+    this.locale = "en_US",
   }) : super(key: key);
 
   @override
