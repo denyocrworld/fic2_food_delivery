@@ -19,9 +19,9 @@ class CgHotkeyView extends StatefulWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(12.0),
-                decoration: const BoxDecoration(
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                  color: Get.theme.cardColor,
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(12.0),
                     topRight: Radius.circular(12.0),
                   ),
@@ -35,7 +35,6 @@ class CgHotkeyView extends StatefulWidget {
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -48,7 +47,6 @@ class CgHotkeyView extends StatefulWidget {
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -63,7 +61,7 @@ class CgHotkeyView extends StatefulWidget {
                     return Container(
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
-                        color: Colors.blueGrey[100]!,
+                        color: Get.theme.cardColor,
                       ),
                       child: Row(
                         children: [

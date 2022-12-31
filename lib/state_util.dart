@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 BuildContext get globalContext {
-  return Get.navigatorKey.currentContext!;
+  return Get.currentContext;
 }
 
 class Get {
@@ -10,7 +10,7 @@ class Get {
       GlobalKey<NavigatorState>();
 
   static get currentContext {
-    return navigatorKey.currentContext;
+    return navigatorKey.currentState?.context;
   }
 
   static to(Widget page) async {
@@ -43,6 +43,10 @@ class Get {
       ValueNotifier<ThemeData>(ThemeData());
   changeTheme(ThemeData theme) {
     mainTheme.value = theme;
+  }
+
+  static ThemeData get theme {
+    return Theme.of(Get.currentContext);
   }
 }
 
