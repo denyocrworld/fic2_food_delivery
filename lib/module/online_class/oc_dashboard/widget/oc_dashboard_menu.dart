@@ -3,10 +3,10 @@
 import 'package:example/core.dart';
 import 'package:flutter/material.dart';
 
-class SideMenu extends StatelessWidget {
+class OcDashboardMenu extends StatelessWidget {
   final String? title;
   final List<Map> menuList;
-  const SideMenu({
+  const OcDashboardMenu({
     Key? key,
     required this.menuList,
     this.title,

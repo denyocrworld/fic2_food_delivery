@@ -31,6 +31,13 @@
         "capekngoding/cg_hyperui_dialog",
         "capekngoding/cg_hyperui_navigation",
         "capekngoding/cg_hyperui_utility",
-        "capekngoding/cg_hyperui_mvc_generator"
+        "capekngoding/cg_hyperui_mvc_generator",
+        "online_class/execises/oce_dart_basic",
+        "online_class/execises/oce_flutter_basic",
+        "online_class/execises/oce_dart_certification",
+        "online_class/execises/oce_flutter_certification",
+        "online_class/execises/oce_final_project_season1",
+        "online_class/oc_dashboard",
+        "online_class/oc_form"
     ]
 }

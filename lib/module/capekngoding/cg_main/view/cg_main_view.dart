@@ -59,7 +59,7 @@ class CgMainView extends StatefulWidget {
                                   ),
                                 ),
                                 Text(
-                                  "Write less do less~",
+                                  "Write less do more~",
                                   style: GoogleFonts.moonDance(
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.bold,
@@ -93,6 +93,13 @@ class CgMainView extends StatefulWidget {
                               ),
                               const SizedBox(
                                 height: 12.0,
+                              ),
+                              SideMenu(
+                                menuList: CgMainService.onlineClassExercises,
+                                title: "Online Class Exercises",
+                              ),
+                              const SizedBox(
+                                height: 20.0,
                               ),
                               SideMenu(
                                 menuList: CgMainService.menuList,

@@ -1,15 +1,17 @@
+import 'package:example/module/online_class/execises/oce_dart_basic/service/oce_dart_basic_service.dart';
 import 'package:flutter/material.dart';
 import 'package:example/core.dart';
 
-class CgHotkeyView extends StatefulWidget {
-  const CgHotkeyView({Key? key}) : super(key: key);
+class OceDartBasicView extends StatefulWidget {
+  const OceDartBasicView({Key? key}) : super(key: key);
 
-  Widget build(context, CgHotkeyController controller) {
+  Widget build(context, OceDartBasicController controller) {
     controller.view = this;
+    var hotkeys = OceDartBasicService().hotkeys;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CgHotkey"),
+        title: const Text("OceDartBasic"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -18,7 +20,7 @@ class CgHotkeyView extends StatefulWidget {
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
                   borderRadius: const BorderRadius.only(
@@ -29,9 +31,21 @@ class CgHotkeyView extends StatefulWidget {
                 child: Row(
                   children: const [
                     SizedBox(
-                      width: 110.0,
+                      width: 30.0,
                       child: Text(
-                        "Hotkey",
+                        "#",
+                        style: TextStyle(
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 12.0,
+                    ),
+                    Expanded(
+                      child: Text(
+                        "Description",
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
@@ -43,7 +57,7 @@ class CgHotkeyView extends StatefulWidget {
                     ),
                     Expanded(
                       child: Text(
-                        "Action",
+                        "Status",
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,
@@ -55,9 +69,10 @@ class CgHotkeyView extends StatefulWidget {
               ),
               Column(
                 children: List.generate(
-                  CgHotkeyService.hotkeys.length,
+                  hotkeys.length,
                   (index) {
-                    var item = CgHotkeyService.hotkeys[index];
+                    var item = hotkeys[index];
+                    var number = index + 1;
                     return Container(
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
@@ -66,9 +81,9 @@ class CgHotkeyView extends StatefulWidget {
                       child: Row(
                         children: [
                           SizedBox(
-                            width: 110.0,
+                            width: 30.0,
                             child: Text(
-                              item["hotkey"],
+                              "$number",
                               style: const TextStyle(
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.bold,
@@ -80,9 +95,37 @@ class CgHotkeyView extends StatefulWidget {
                           ),
                           Expanded(
                             child: Text(
-                              item["action"],
+                              item["description"],
                               style: const TextStyle(
                                 fontSize: 12.0,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 12.0,
+                          ),
+                          Expanded(
+                            child: Row(
+                              children: List.generate(
+                                item["exercises"]?.length ?? 0,
+                                (index) {
+                                  var retVal =
+                                      item["exercises"][index]["detail"]();
+                                  bool correct = item["exercises"][index]
+                                          ["correct_value"](retVal) ??
+                                      false;
+
+                                  return Container(
+                                    margin: const EdgeInsets.only(
+                                      right: 6.0,
+                                    ),
+                                    child: CircleAvatar(
+                                      radius: correct ? 9.0 : 7.0,
+                                      backgroundColor:
+                                          correct ? Colors.green : Colors.grey,
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ),
@@ -100,5 +143,5 @@ class CgHotkeyView extends StatefulWidget {
   }
 
   @override
-  State<CgHotkeyView> createState() => CgHotkeyController();
+  State<OceDartBasicView> createState() => OceDartBasicController();
 }

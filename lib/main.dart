@@ -6,28 +6,9 @@ import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
-Nama: Deniansyah
-NamaProgrammer: DenyOcr
-2011
-
-Freelancer
-2011 - 2022 (11 tahun)
-
-Ngantor
-3,5 Tahun
-
-ElectronRx
-Cambridge, 
-2-12
-
-Python
-PHP
-C#
-Java
-Bot
-Macro
 
 */
+
 void main() async {
   await initialize();
   if (!kIsWeb) {
@@ -66,10 +47,58 @@ class MainApp extends StatelessWidget {
           theme: value,
           // home: const FheMainNavigationView(),
           // home: const ExProductListView(),
-          // home: const ContohView(),
-          home: const CgMainView(),
+          // home: const OcDashboardView(),
+          home: const OcFormView(),
+          // home: const TestView(),
         );
       },
+    );
+  }
+}
+
+class TestView extends StatefulWidget {
+  const TestView({Key? key}) : super(key: key);
+
+  @override
+  State<TestView> createState() => _TestViewState();
+}
+
+class _TestViewState extends State<TestView> {
+  ValueNotifier<int> counter = ValueNotifier(0);
+
+  increnment() => counter.value++;
+  decrenment() => counter.value--;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          ValueListenableBuilder(
+            valueListenable: counter,
+            builder: (context, value, child) {
+              return Text(
+                "${counter.value}",
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              );
+            },
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          ElevatedButton.icon(
+            icon: const Icon(Icons.add),
+            label: const Text("Add"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.blueGrey,
+            ),
+            onPressed: () => increnment(),
+          ),
+        ],
+      ),
     );
   }
 }
