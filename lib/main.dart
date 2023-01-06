@@ -1,5 +1,4 @@
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/session.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
@@ -15,13 +14,6 @@ void main() async {
     var path = await getTemporaryDirectory();
     Hive.init(path.path);
   }
-  mainStorage = await Hive.openBox('mainStorage');
-  await ObsStorage.initializeObsStorage();
-  await UserService.load();
-  await ThemeService.load();
-  await LocalProductService.load();
-  await FormHistoryService.load();
-  AppSession.token = await mainStorage.get("token") ?? "";
 
   Get.mainTheme.value = getDefaultTheme();
   runMainApp();
@@ -45,10 +37,9 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // theme: getGojekTheme(),
           theme: value,
-          // home: const FheMainNavigationView(),
+          home: const CgMainView(),
           // home: const ExProductListView(),
           // home: const OcDashboardView(),
-          home: const OcFormView(),
           // home: const TestView(),
         );
       },

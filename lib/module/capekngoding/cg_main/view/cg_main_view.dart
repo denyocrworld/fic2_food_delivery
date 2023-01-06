@@ -94,10 +94,10 @@ class CgMainView extends StatefulWidget {
                               const SizedBox(
                                 height: 12.0,
                               ),
-                              SideMenu(
-                                menuList: CgMainService.onlineClassExercises,
-                                title: "Online Class Exercises",
-                              ),
+                              // SideMenu(
+                              //   menuList: CgMainService.onlineClassExercises,
+                              //   title: "Online Class Exercises",
+                              // ),
                               const SizedBox(
                                 height: 20.0,
                               ),

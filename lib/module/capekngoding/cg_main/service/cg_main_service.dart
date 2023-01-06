@@ -252,42 +252,4 @@ class CgMainService {
       'tag': 'Coming Soon',
     },
   ];
-
-  static List<Map> onlineClassExercises = [
-    {
-      'label': 'Basic Dart',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.blue[800],
-      'page': const OceDartBasicView(),
-      'tag': 'Member Only',
-    },
-    {
-      'label': 'Basic Fluter',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.blue,
-      'page': const OceFlutterBasicView(),
-      'tag': 'Member Only',
-    },
-    {
-      'label': 'Darts Certification',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.orange,
-      'page': const OceDartCertificationView(),
-      'tag': 'Member Only',
-    },
-    {
-      'label': 'Flutters Certification',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.red,
-      'page': const OceFlutterCertificationView(),
-      'tag': 'Member Only',
-    },
-    {
-      'label': 'Final Project (Season 1)',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.red,
-      'page': const OceFinalProjectSeason1View(),
-      'tag': 'Member Only',
-    },
-  ];
 }

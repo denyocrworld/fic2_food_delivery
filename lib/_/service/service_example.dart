@@ -8,9 +8,10 @@ import 'package:hive/hive.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:path_provider/path_provider.dart';
 
+late Box mainStorage;
+
 class ServiceExampleView extends StatelessWidget {
   const ServiceExampleView({Key? key}) : super(key: key);
-
   listener() {
     ScrollController scrollController = ScrollController();
     /*
