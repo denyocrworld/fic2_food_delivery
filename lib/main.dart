@@ -3,12 +3,19 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
+import 'service/main_storage/main_storage.dart';
 
 void main() async {
   await initialize();
   if (!kIsWeb) {
     var path = await getTemporaryDirectory();
     Hive.init(path.path);
+
+    if (!kIsWeb) {
+      var path = await getTemporaryDirectory();
+      Hive.init(path.path);
+    }
+    mainStorage = await Hive.openBox('mainStorage');
   }
 
   Get.mainTheme.value = getDefaultTheme();
