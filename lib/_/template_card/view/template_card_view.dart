@@ -12,9 +12,7 @@ class TemplateCardView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("TemplateCard"),
-        actions: const [
-          ThemeIcon(),
-        ],
+        actions: const [],
       ),
       body: SingleChildScrollView(
         controller: ScrollController(),
