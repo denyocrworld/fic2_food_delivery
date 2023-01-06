@@ -1,4 +1,4 @@
-package com.example.capek_ngoding_web
+package com.example.hyper_ui
 
 import io.flutter.embedding.android.FlutterActivity
 
