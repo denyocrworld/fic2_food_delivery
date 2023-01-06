@@ -15,6 +15,11 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraint) {
+      bool isTablet = MediaQuery.of(context).size.width < 1100 &&
+          MediaQuery.of(context).size.width >= 850;
+      bool isDesktop = MediaQuery.of(context).size.width >= 1100;
+      bool isMobile = MediaQuery.of(context).size.width < 850;
+
       var size = (constraint.biggest.width - 48) / 3;
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +51,11 @@ class SideMenu extends StatelessWidget {
                       return;
                     }
                     print("updateView to ${item["page"]}");
-                    CgMainController.instance.updateView(item["page"]);
+                    if (!isMobile) {
+                      CgMainController.instance.updateView(item["page"]);
+                    } else {
+                      Get.to(item["page"]);
+                    }
                   },
                   child: AbsorbPointer(
                     child: Stack(
@@ -81,15 +90,13 @@ class SideMenu extends StatelessWidget {
                                   iconSize: 24.0,
                                   onPressed: () {},
                                 ),
-                                Expanded(
-                                  child: Text(
-                                    '${item["label"]}',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.visible,
-                                    textAlign: TextAlign.center,
-                                    style: const TextStyle(
-                                      fontSize: 10.0,
-                                    ),
+                                Text(
+                                  '${item["label"]}',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.visible,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontSize: 10.0,
                                   ),
                                 )
                               ],
