@@ -35,7 +35,6 @@ class MainApp extends StatelessWidget {
           title: 'Capek Ngoding',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
-          // theme: getGojekTheme(),
           theme: value,
           home: const CgMainView(),
           // home: const ExProductListView(),
@@ -43,53 +42,6 @@ class MainApp extends StatelessWidget {
           // home: const TestView(),
         );
       },
-    );
-  }
-}
-
-class TestView extends StatefulWidget {
-  const TestView({Key? key}) : super(key: key);
-
-  @override
-  State<TestView> createState() => _TestViewState();
-}
-
-class _TestViewState extends State<TestView> {
-  ValueNotifier<int> counter = ValueNotifier(0);
-
-  increnment() => counter.value++;
-  decrenment() => counter.value--;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          ValueListenableBuilder(
-            valueListenable: counter,
-            builder: (context, value, child) {
-              return Text(
-                "${counter.value}",
-                style: const TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              );
-            },
-          ),
-          const SizedBox(
-            height: 20.0,
-          ),
-          ElevatedButton.icon(
-            icon: const Icon(Icons.add),
-            label: const Text("Add"),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blueGrey,
-            ),
-            onPressed: () => increnment(),
-          ),
-        ],
-      ),
     );
   }
 }
