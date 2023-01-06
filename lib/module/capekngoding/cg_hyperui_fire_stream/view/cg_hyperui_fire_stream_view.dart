@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/cg_hyperui_fire_stream_controller.dart';
 
 class CgHyperuiFireStreamView extends StatefulWidget {
@@ -25,5 +25,6 @@ class CgHyperuiFireStreamView extends StatefulWidget {
   }
 
   @override
-  State<CgHyperuiFireStreamView> createState() => CgHyperuiFireStreamController();
+  State<CgHyperuiFireStreamView> createState() =>
+      CgHyperuiFireStreamController();
 }

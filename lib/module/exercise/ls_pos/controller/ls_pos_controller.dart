@@ -1,4 +1,4 @@
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
 

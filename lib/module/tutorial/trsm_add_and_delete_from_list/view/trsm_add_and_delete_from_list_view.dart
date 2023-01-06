@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trsm_add_and_delete_from_list_controller.dart';
 
 class TrsmAddAndDeleteFromListView extends StatefulWidget {

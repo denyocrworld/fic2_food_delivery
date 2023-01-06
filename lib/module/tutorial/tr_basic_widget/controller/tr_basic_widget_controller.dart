@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/tr_basic_widget_view.dart';
 
 class TrBasicWidgetController extends State<TrBasicWidgetView>

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_icon_view.dart';
 
 class CgIconController extends State<CgIconView> implements MvcController {

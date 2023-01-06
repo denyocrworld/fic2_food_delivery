@@ -1,6 +1,6 @@
-import 'package:example/config.dart';
-import 'package:example/core.dart';
-import 'package:example/session.dart';
+import 'package:hyper_ui/config.dart';
+import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/session.dart';
 import 'package:flutter/material.dart';
 
 class LsLoginAndSaveTokenController extends State<LsLoginAndSaveTokenView>

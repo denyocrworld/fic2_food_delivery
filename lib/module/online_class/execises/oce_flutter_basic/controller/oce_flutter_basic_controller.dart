@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/oce_flutter_basic_view.dart';
 
-class OceFlutterBasicController extends State<OceFlutterBasicView> implements MvcController {
+class OceFlutterBasicController extends State<OceFlutterBasicView>
+    implements MvcController {
   static late OceFlutterBasicController instance;
   late OceFlutterBasicView view;
 

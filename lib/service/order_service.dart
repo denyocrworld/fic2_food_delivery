@@ -1,4 +1,4 @@
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class OrderService {
   static List products = [];

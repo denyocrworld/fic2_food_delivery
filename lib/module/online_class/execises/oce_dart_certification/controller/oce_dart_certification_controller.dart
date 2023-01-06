@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/oce_dart_certification_view.dart';
 
-class OceDartCertificationController extends State<OceDartCertificationView> implements MvcController {
+class OceDartCertificationController extends State<OceDartCertificationView>
+    implements MvcController {
   static late OceDartCertificationController instance;
   late OceDartCertificationView view;
 

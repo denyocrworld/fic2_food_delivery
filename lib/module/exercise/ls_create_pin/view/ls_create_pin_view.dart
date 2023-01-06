@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/ls_create_pin_controller.dart';
 
 class LsCreatePinView extends StatefulWidget {

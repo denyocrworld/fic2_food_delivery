@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/pos_product_list_view.dart';
 
 class PosProductListController extends State<PosProductListView>

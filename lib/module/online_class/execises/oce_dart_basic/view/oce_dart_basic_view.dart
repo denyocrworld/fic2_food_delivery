@@ -1,6 +1,5 @@
-import 'package:example/module/online_class/execises/oce_dart_basic/service/oce_dart_basic_service.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class OceDartBasicView extends StatefulWidget {
   const OceDartBasicView({Key? key}) : super(key: key);

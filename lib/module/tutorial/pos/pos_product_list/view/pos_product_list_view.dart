@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class PosProductListView extends StatefulWidget {
   const PosProductListView({Key? key}) : super(key: key);

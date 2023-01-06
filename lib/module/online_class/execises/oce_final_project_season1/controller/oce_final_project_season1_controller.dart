@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/oce_final_project_season1_view.dart';
 
-class OceFinalProjectSeason1Controller extends State<OceFinalProjectSeason1View> implements MvcController {
+class OceFinalProjectSeason1Controller extends State<OceFinalProjectSeason1View>
+    implements MvcController {
   static late OceFinalProjectSeason1Controller instance;
   late OceFinalProjectSeason1View view;
 

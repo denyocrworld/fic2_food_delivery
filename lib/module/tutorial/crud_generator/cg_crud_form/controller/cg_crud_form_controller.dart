@@ -1,4 +1,4 @@
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 class CgCrudFormController extends State<CgCrudFormView>

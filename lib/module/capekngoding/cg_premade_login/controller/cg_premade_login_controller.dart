@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_premade_login_view.dart';
 
-class CgPremadeLoginController extends State<CgPremadeLoginView> implements MvcController {
+class CgPremadeLoginController extends State<CgPremadeLoginView>
+    implements MvcController {
   static late CgPremadeLoginController instance;
   late CgPremadeLoginView view;
 

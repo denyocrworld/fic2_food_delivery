@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trsm_crud_controller.dart';
 
 class TrsmCrudView extends StatefulWidget {

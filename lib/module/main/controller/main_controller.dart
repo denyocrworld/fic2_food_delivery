@@ -1,4 +1,4 @@
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 class MainController extends State<MainView> implements MvcController {
@@ -33,18 +33,6 @@ class MainController extends State<MainView> implements MvcController {
     {
       "label": "ELearning",
       "view": const ElnMainNavigationView(),
-    },
-    {
-      "label": "Ionly UI",
-      "view": const IonlyMainNavigationView(),
-    },
-    {
-      "label": "Taras Migulko UI",
-      "view": const TmIntroView(),
-    },
-    {
-      "label": "Gojek",
-      "view": const GjDashboardView(),
     },
   ];
 
@@ -265,33 +253,6 @@ class MainController extends State<MainView> implements MvcController {
     {
       "label": "Product CRUD",
       "view": const HttpProductListView(),
-    },
-  ];
-
-  List firebaseExampleItems = [
-    {
-      "label": "Register",
-      "view": const TfRegisterView(),
-    },
-    {
-      "label": "Login",
-      "view": const TfLoginView(),
-    },
-    {
-      "label": "Dashboard",
-      "view": const TfDashboardView(),
-    },
-    {
-      "label": "Profile",
-      "view": const TfProfileView(),
-    },
-    {
-      "label": "Product List",
-      "view": const TfProductListView(),
-    },
-    {
-      "label": "User List",
-      "view": const TfUserListView(),
     },
   ];
 

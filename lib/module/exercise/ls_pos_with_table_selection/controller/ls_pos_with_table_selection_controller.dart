@@ -1,6 +1,6 @@
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../../../../shared/util/dialog/show_info_dialog.dart';
 import '../view/ls_pos_with_table_selection_view.dart';
 

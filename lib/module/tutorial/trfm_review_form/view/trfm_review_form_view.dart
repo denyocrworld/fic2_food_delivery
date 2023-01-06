@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trfm_review_form_controller.dart';
 
 class TrfmReviewFormView extends StatefulWidget {

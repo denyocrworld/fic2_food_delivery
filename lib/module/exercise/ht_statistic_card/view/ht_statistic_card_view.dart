@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/ht_statistic_card_controller.dart';
 
 class HtStatisticCardView extends StatefulWidget {

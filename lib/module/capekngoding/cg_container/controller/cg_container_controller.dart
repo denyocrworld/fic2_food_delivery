@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_container_view.dart';
 
-class CgContainerController extends State<CgContainerView> implements MvcController {
+class CgContainerController extends State<CgContainerView>
+    implements MvcController {
   static late CgContainerController instance;
   late CgContainerView view;
 

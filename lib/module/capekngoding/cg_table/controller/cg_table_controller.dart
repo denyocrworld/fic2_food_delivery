@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_table_view.dart';
 
 class CgTableController extends State<CgTableView> implements MvcController {

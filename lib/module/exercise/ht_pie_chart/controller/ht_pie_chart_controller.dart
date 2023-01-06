@@ -1,10 +1,10 @@
 import 'dart:math';
 
 import 'package:dio/dio.dart';
-import 'package:example/config.dart';
-import 'package:example/model/sales_data.dart';
+import 'package:hyper_ui/config.dart';
+import 'package:hyper_ui/model/sales_data.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../../../../shared/util/show_loading/show_loading.dart';
 import '../view/ht_pie_chart_view.dart';
 

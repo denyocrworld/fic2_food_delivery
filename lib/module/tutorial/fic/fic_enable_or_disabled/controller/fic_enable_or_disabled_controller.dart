@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/fic_enable_or_disabled_view.dart';
 
 class FicEnableOrDisabledController extends State<FicEnableOrDisabledView>

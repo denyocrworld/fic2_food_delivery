@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_premade_dashboard_view.dart';
 
-class CgPremadeDashboardController extends State<CgPremadeDashboardView> implements MvcController {
+class CgPremadeDashboardController extends State<CgPremadeDashboardView>
+    implements MvcController {
   static late CgPremadeDashboardController instance;
   late CgPremadeDashboardView view;
 

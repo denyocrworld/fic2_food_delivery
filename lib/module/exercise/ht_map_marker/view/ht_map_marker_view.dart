@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:latlong2/latlong.dart';
 
 class HtMapMarkerView extends StatefulWidget {

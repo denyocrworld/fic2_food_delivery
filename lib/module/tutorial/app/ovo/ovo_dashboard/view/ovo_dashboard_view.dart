@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class OvoDashboardView extends StatefulWidget {
   const OvoDashboardView({Key? key}) : super(key: key);

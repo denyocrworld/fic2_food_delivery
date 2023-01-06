@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/cg_premade_login_controller.dart';
 
 class CgPremadeLoginView extends StatefulWidget {

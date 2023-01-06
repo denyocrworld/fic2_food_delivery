@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/ltsm_fade_animation_view.dart';
 
 class LtsmFadeAnimationController extends State<LtsmFadeAnimationView>

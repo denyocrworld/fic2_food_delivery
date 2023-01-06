@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/trsm_loading_for_http_request_view.dart';
 
 class TrsmLoadingForHttpRequestController

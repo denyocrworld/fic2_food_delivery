@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/fic_animation_controller.dart';
 
 class FicAnimationView extends StatefulWidget {

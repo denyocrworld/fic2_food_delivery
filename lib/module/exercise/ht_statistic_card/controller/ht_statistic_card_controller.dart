@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:example/config.dart';
-import 'package:example/shared/util/random_image/random_image.dart';
+import 'package:hyper_ui/config.dart';
+import 'package:hyper_ui/shared/util/random_image/random_image.dart';
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/ht_statistic_card_view.dart';
 
 class HtStatisticCardController extends State<HtStatisticCardView>

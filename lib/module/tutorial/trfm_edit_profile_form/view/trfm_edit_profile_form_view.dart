@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trfm_edit_profile_form_controller.dart';
 
 class TrfmEditProfileFormView extends StatefulWidget {

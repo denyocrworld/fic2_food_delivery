@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/ack_tutorial_cart_view.dart';
 
-class AckTutorialCartController extends State<AckTutorialCartView> implements MvcController {
+class AckTutorialCartController extends State<AckTutorialCartView>
+    implements MvcController {
   static late AckTutorialCartController instance;
   late AckTutorialCartView view;
 

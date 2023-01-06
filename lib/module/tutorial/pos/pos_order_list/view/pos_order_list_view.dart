@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/pos_order_list_controller.dart';
 
 class PosOrderListView extends StatefulWidget {

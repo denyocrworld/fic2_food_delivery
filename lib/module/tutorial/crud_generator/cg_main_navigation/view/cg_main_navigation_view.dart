@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
-import '../controller/cg_main_navigation_controller.dart';
+import 'package:hyper_ui/core.dart';
 
 class CgMainNavigationView extends StatefulWidget {
   const CgMainNavigationView({Key? key}) : super(key: key);

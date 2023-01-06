@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_premade_profile_view.dart';
 
-class CgPremadeProfileController extends State<CgPremadeProfileView> implements MvcController {
+class CgPremadeProfileController extends State<CgPremadeProfileView>
+    implements MvcController {
   static late CgPremadeProfileController instance;
   late CgPremadeProfileView view;
 

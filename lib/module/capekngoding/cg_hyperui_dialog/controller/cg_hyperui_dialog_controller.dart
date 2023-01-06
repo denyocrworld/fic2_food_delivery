@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_hyperui_dialog_view.dart';
 
-class CgHyperuiDialogController extends State<CgHyperuiDialogView> implements MvcController {
+class CgHyperuiDialogController extends State<CgHyperuiDialogView>
+    implements MvcController {
   static late CgHyperuiDialogController instance;
   late CgHyperuiDialogView view;
 

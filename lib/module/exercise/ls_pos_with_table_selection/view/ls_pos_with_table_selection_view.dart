@@ -1,7 +1,6 @@
-import 'package:example/module/exercise/ls_pos_with_table_selection/widget/ls_pos_select_table.dart';
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class LsPosWithTableSelectionView extends StatefulWidget {
   const LsPosWithTableSelectionView({Key? key}) : super(key: key);

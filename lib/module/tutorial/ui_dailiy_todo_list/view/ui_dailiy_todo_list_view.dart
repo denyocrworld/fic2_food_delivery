@@ -1,6 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class UiDailiyTodoListView extends StatefulWidget {
   const UiDailiyTodoListView({Key? key}) : super(key: key);

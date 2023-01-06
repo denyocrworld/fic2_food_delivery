@@ -1,5 +1,5 @@
-import 'package:example/core.dart';
-import 'package:example/session.dart';
+import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/session.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';

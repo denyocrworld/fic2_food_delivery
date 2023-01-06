@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/oce_flutter_certification_controller.dart';
 
 class OceFlutterCertificationView extends StatefulWidget {
@@ -25,5 +25,6 @@ class OceFlutterCertificationView extends StatefulWidget {
   }
 
   @override
-  State<OceFlutterCertificationView> createState() => OceFlutterCertificationController();
+  State<OceFlutterCertificationView> createState() =>
+      OceFlutterCertificationController();
 }

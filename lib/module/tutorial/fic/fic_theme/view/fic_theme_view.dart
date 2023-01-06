@@ -1,6 +1,6 @@
 import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class FicThemeView extends StatefulWidget {
   const FicThemeView({Key? key}) : super(key: key);

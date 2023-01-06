@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class LtfmFilterDialogView extends StatefulWidget {
   const LtfmFilterDialogView({Key? key}) : super(key: key);

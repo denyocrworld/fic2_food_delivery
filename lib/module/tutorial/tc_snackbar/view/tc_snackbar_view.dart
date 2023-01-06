@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class TcSnackbarView extends StatefulWidget {
   const TcSnackbarView({Key? key}) : super(key: key);

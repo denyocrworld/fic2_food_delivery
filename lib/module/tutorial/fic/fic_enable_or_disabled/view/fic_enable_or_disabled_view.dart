@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/fic_enable_or_disabled_controller.dart';
 
 class FicEnableOrDisabledView extends StatefulWidget {

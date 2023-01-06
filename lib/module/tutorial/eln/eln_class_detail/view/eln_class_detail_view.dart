@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/eln_class_detail_controller.dart';
 
 class ElnClassDetailView extends StatefulWidget {

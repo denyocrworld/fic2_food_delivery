@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trsm_horizontal_category_list_controller.dart';
 
 class TrsmHorizontalCategoryListView extends StatefulWidget {

@@ -1,6 +1,6 @@
-import 'package:example/service/product_example_service.dart';
+import 'package:hyper_ui/service/product_example_service.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/http_product_form_view.dart';
 
 class HttpProductFormController extends State<HttpProductFormView>

@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/ls_product_crud_controller.dart';
 
 class LsProductCrudView extends StatefulWidget {

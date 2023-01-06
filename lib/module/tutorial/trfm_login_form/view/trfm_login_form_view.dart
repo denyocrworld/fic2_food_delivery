@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class TrfmLoginFormView extends StatefulWidget {
   const TrfmLoginFormView({Key? key}) : super(key: key);

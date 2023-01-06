@@ -1,6 +1,6 @@
 //#GROUP_TEMPLATE hyperui_form
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class CgHyperuiFormView extends StatefulWidget {
   const CgHyperuiFormView({Key? key}) : super(key: key);

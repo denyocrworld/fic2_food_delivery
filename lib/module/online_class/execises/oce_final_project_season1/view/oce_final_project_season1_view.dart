@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/oce_final_project_season1_controller.dart';
 
 class OceFinalProjectSeason1View extends StatefulWidget {
@@ -25,5 +25,6 @@ class OceFinalProjectSeason1View extends StatefulWidget {
   }
 
   @override
-  State<OceFinalProjectSeason1View> createState() => OceFinalProjectSeason1Controller();
+  State<OceFinalProjectSeason1View> createState() =>
+      OceFinalProjectSeason1Controller();
 }

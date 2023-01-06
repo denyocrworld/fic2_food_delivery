@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_hyperui_navigation_view.dart';
 
-class CgHyperuiNavigationController extends State<CgHyperuiNavigationView> implements MvcController {
+class CgHyperuiNavigationController extends State<CgHyperuiNavigationView>
+    implements MvcController {
   static late CgHyperuiNavigationController instance;
   late CgHyperuiNavigationView view;
 

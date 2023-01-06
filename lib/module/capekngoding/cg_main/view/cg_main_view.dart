@@ -1,6 +1,6 @@
-import 'package:example/_/scaffold/scaffold_bottom_navigationbar.dart';
+import 'package:hyper_ui/_/scaffold/scaffold_bottom_navigationbar.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../../../../_/scaffold/scaffold_tabbar_vertical.dart';
 
 class CgMainView extends StatefulWidget {

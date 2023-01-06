@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class LsLoginAndSaveTokenView extends StatefulWidget {
   const LsLoginAndSaveTokenView({Key? key}) : super(key: key);

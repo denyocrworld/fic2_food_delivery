@@ -1,6 +1,6 @@
 // ignore_for_file: dead_code
 
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 class MainViewNavigationItem extends StatelessWidget {

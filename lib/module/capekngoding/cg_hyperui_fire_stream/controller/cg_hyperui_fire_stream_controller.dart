@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_hyperui_fire_stream_view.dart';
 
-class CgHyperuiFireStreamController extends State<CgHyperuiFireStreamView> implements MvcController {
+class CgHyperuiFireStreamController extends State<CgHyperuiFireStreamView>
+    implements MvcController {
   static late CgHyperuiFireStreamController instance;
   late CgHyperuiFireStreamView view;
 

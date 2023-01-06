@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:example/module/main/widget/main_view_navigation_item.dart';
+import 'package:hyper_ui/module/main/widget/main_view_navigation_item.dart';
 import 'package:flutter/material.dart';
 
 class MainViewListItem extends StatefulWidget {

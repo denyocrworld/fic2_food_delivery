@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_premade_list_view.dart';
 
-class CgPremadeListController extends State<CgPremadeListView> implements MvcController {
+class CgPremadeListController extends State<CgPremadeListView>
+    implements MvcController {
   static late CgPremadeListController instance;
   late CgPremadeListView view;
 

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/tkpos_dashboard_view.dart';
 
-class TkposDashboardController extends State<TkposDashboardView> implements MvcController {
+class TkposDashboardController extends State<TkposDashboardView>
+    implements MvcController {
   static late TkposDashboardController instance;
   late TkposDashboardView view;
 

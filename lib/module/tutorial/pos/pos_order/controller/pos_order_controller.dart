@@ -1,6 +1,6 @@
-import 'package:example/service/order_service.dart';
+import 'package:hyper_ui/service/order_service.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/pos_order_view.dart';
 
 class PosOrderController extends State<PosOrderView> implements MvcController {

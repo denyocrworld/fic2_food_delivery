@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/cg_circle_avatar_view.dart';
 
-class CgCircleAvatarController extends State<CgCircleAvatarView> implements MvcController {
+class CgCircleAvatarController extends State<CgCircleAvatarView>
+    implements MvcController {
   static late CgCircleAvatarController instance;
   late CgCircleAvatarView view;
 

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/tr_product_form_example_view.dart';
 
 class TrProductFormExampleController extends State<TrProductFormExampleView>

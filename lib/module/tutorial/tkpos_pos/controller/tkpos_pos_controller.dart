@@ -1,6 +1,6 @@
-import 'package:example/service/tkpos_service.dart';
+import 'package:hyper_ui/service/tkpos_service.dart';
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/tkpos_pos_view.dart';
 
 class TkposPosController extends State<TkposPosView> implements MvcController {

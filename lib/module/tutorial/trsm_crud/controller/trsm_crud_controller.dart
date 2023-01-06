@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/trsm_crud_view.dart';
 
 class TrsmCrudController extends State<TrsmCrudView> implements MvcController {

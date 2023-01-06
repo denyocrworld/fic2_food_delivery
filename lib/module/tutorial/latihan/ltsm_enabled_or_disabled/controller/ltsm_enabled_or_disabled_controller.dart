@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/ltsm_enabled_or_disabled_view.dart';
 
 class LtsmEnabledOrDisabledController extends State<LtsmEnabledOrDisabledView>

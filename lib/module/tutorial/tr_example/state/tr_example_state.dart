@@ -1,4 +1,4 @@
-import 'package:example/module/tutorial/tr_example/util/obs.dart';
+import 'package:hyper_ui/module/tutorial/tr_example/util/obs.dart';
 
 class TrExampleState {
   var counter = 0.obs;

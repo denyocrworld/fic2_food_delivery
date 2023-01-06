@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trfm_edit_store_form_controller.dart';
 
 class TrfmEditStoreFormView extends StatefulWidget {

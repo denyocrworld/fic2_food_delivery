@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/fic_cart_view.dart';
 
 class FicCartController extends State<FicCartView> implements MvcController {

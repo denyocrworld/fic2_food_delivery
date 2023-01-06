@@ -1,5 +1,5 @@
-import 'package:example/config.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/config.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 class HtImageGalleriesController extends State<HtImageGalleriesView>

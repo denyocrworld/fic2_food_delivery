@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/cg_hyperui_mvc_generator_controller.dart';
 
 class CgHyperuiMvcGeneratorView extends StatefulWidget {
@@ -25,5 +25,6 @@ class CgHyperuiMvcGeneratorView extends StatefulWidget {
   }
 
   @override
-  State<CgHyperuiMvcGeneratorView> createState() => CgHyperuiMvcGeneratorController();
+  State<CgHyperuiMvcGeneratorView> createState() =>
+      CgHyperuiMvcGeneratorController();
 }

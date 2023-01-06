@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/mvc_profile_controller.dart';
 
 class MvcProfileView extends StatefulWidget {

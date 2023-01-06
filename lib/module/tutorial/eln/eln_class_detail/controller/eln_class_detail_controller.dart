@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/eln_class_detail_view.dart';
 
 class ElnClassDetailController extends State<ElnClassDetailView>

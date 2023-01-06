@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/cg_table_controller.dart';
 
 class CgTableView extends StatefulWidget {

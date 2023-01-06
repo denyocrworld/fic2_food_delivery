@@ -1,6 +1,6 @@
-import 'package:example/config.dart';
+import 'package:hyper_ui/config.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
@@ -104,11 +104,6 @@ class MainView extends StatefulWidget {
                 title: "HTTP Request",
                 items: controller.httpRequestItems,
                 color: Colors.green,
-              ),
-              MainViewListItem(
-                title: "Firebase x Firestore",
-                items: controller.firebaseExampleItems,
-                color: Colors.red,
               ),
               MainViewListItem(
                 title: "Coontextless Tutorial",

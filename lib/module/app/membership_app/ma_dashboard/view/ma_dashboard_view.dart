@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/ma_dashboard_controller.dart';
 
 class MaDashboardView extends StatefulWidget {

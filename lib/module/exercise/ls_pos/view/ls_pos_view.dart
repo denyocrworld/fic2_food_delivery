@@ -1,6 +1,6 @@
 import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 
 class LsPosView extends StatefulWidget {
   const LsPosView({Key? key}) : super(key: key);

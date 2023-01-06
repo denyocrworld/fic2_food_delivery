@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trsm_loading_for_http_request_controller.dart';
 
 class TrsmLoadingForHttpRequestView extends StatefulWidget {

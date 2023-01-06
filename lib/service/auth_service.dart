@@ -1,4 +1,4 @@
-import 'package:example/core_package.dart';
+import 'package:hyper_ui/core_package.dart';
 
 class AuthService {
   static Future<Map> login({

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/ma_dashboard_view.dart';
 
-class MaDashboardController extends State<MaDashboardView> implements MvcController {
+class MaDashboardController extends State<MaDashboardView>
+    implements MvcController {
   static late MaDashboardController instance;
   late MaDashboardView view;
 

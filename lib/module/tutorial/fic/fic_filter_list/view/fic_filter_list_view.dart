@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/fic_filter_list_controller.dart';
 
 class FicFilterListView extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/trsm_scale_animation_view.dart';
 
 class TrsmScaleAnimationController extends State<TrsmScaleAnimationView>

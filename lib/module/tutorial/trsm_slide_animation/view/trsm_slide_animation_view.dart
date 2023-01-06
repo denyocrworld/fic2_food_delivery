@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/trsm_slide_animation_controller.dart';
 
 class TrsmSlideAnimationView extends StatefulWidget {

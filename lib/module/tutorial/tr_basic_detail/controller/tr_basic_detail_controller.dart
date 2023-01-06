@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:example/state_util.dart';
+import 'package:hyper_ui/state_util.dart';
 import '../view/tr_basic_detail_view.dart';
 
 class TrBasicDetailController extends State<TrBasicDetailView>

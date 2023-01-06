@@ -1,4 +1,4 @@
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 // var bgColor = const Color(0xFF212332);

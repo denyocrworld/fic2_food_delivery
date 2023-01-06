@@ -1,6 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:flutter/material.dart';
-import 'package:example/core.dart';
+import 'package:hyper_ui/core.dart';
 import '../controller/cg_form_controller.dart';
 
 class CgFormView extends StatefulWidget {
