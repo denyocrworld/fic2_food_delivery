@@ -3,8 +3,6 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
-export 'package:hyper_ui/model/product/product.dart';
-export 'package:hyper_ui/model/sales_data.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/controller/cg_button_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/view/cg_button_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_card/controller/cg_card_controller.dart';
