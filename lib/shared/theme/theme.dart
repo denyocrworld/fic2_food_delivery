@@ -1,5 +1,3 @@
-//#GROUP_TEMPLATE theme
-export 'package:hyper_ui/shared/theme/theme_editor/themes/theme_widget.dart';
 import 'package:hyper_ui/shared/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
