@@ -48,7 +48,7 @@ ThemeData getDefaultTheme() {
     ),
     //#TEMPLATE theme_scroll
     scrollbarTheme: const ScrollbarThemeData().copyWith(
-      thumbColor: MaterialStateProperty.all(Colors.red),
+      thumbColor: MaterialStateProperty.all(Colors.blueGrey),
     ),
     //#END
   );
