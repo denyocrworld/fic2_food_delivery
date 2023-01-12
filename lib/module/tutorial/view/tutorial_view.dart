@@ -21,6 +21,18 @@ class TutorialView extends StatefulWidget {
    }
    */
 
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Dashboard"),
+        actions: const [],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10.0),
+        ),
+      ),
+    );
+
     int counter = 2;
     return DefaultTabController(
       length: 4,
@@ -41,6 +53,7 @@ class TutorialView extends StatefulWidget {
                 subtitle: const Text("Programmer"),
               ),
             ),
+            //--
             Card(
               child: ListTile(
                 leading: CircleAvatar(
