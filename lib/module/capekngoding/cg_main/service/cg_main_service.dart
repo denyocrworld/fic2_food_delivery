@@ -37,6 +37,28 @@ class CgMainService {
       }
     },
   ];
+
+  static List<Map> onlineClassMenuList = [
+    {
+      'label': 'State Management',
+      'icon': MdiIcons.keyboardOutline,
+      'color': Colors.blue,
+      'page': const OcStateManagementView(),
+    },
+    {
+      'label': 'HTTP Request',
+      'icon': MdiIcons.web,
+      'color': Colors.green,
+      'page': const OcHttpRequestView(),
+    },
+    {
+      'label': 'Firebase',
+      'icon': MdiIcons.firebase,
+      'color': Colors.green,
+      'page': const OcFirebaseView(),
+    },
+  ];
+
   static List<Map> menuList = [
     {
       'label': 'HotKey',

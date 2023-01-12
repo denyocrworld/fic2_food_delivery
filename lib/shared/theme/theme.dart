@@ -51,5 +51,9 @@ ThemeData getDefaultTheme() {
       thumbColor: MaterialStateProperty.all(Colors.blueGrey),
     ),
     //#END
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: Colors.blueGrey,
+      unselectedItemColor: Colors.grey[500],
+    ),
   );
 }
