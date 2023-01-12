@@ -43,6 +43,10 @@ class CgHotkeyService {
       "action": "Remove all constant",
     },
     {
+      "hotkey": "Ctrl + Alt + Shift + 1",
+      "action": "Update VsCode Settings (Enable auto-add constant on Save)",
+    },
+    {
       "title": "ListView",
     },
     {
