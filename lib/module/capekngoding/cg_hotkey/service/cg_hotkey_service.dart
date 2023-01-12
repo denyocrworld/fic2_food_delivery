@@ -32,6 +32,18 @@ class CgHotkeyService {
       "action": "Wrap with Column",
     },
     {
+      "hotkey": "Alt + Shift + W",
+      "action": "Wrap with Wrap",
+    },
+    {
+      "hotkey": "Alt + Shift + S",
+      "action": "Wrap with SingleChildScrollView",
+    },
+    {
+      "hotkey": "Alt + Shift + D",
+      "action": "Wrap with Dismissible",
+    },
+    {
       "title": "Common",
     },
     {
@@ -63,6 +75,37 @@ class CgHotkeyService {
     {
       "hotkey": "Alt + Shift + /",
       "action": "Remove all comment in Dart/Pubspec",
+    },
+    {
+      "title": "Modules",
+    },
+    {
+      "hotkey": "Alt + T",
+      "action": "Generate Modules",
+    },
+    {
+      "hotkey": "Alt + Shift + E",
+      "action": "Run Extractor",
+    },
+    {
+      "hotkey": "Ctrl + Shift + V",
+      "action": "Open View",
+    },
+    {
+      "hotkey": "Ctrl + Shift + C",
+      "action": "Open Controller",
+    },
+    {
+      "hotkey": "Alt + Shift + M",
+      "action": "Open main.dart",
+    },
+    {
+      "hotkey": "Alt + Shift + P",
+      "action": "Open pubspec.yaml",
+    },
+    {
+      "hotkey": "Alt + Shift + 0",
+      "action": "Open config.json",
     },
   ];
 }
