@@ -1,6 +1,9 @@
 class CgHotkeyService {
   static List hotkeys = [
     {
+      "title": "Basic",
+    },
+    {
       "hotkey": "Alt + I",
       "action": "Wrap with InkWell",
     },
@@ -13,8 +16,34 @@ class CgHotkeyService {
       "action": "Wrap with Container",
     },
     {
+      "hotkey": "Ctrl + Alt + Shift + C",
+      "action": "Wrap with Center",
+    },
+    {
       "hotkey": "Alt + P",
       "action": "Wrap with Padding",
+    },
+    {
+      "hotkey": "Alt + Shift + R",
+      "action": "Wrap with Row",
+    },
+    {
+      "hotkey": "Alt + Shift + C",
+      "action": "Wrap with Column",
+    },
+    {
+      "title": "Common",
+    },
+    {
+      "hotkey": "Ctrl + Alt + Shift + R",
+      "action": "Remove Widget",
+    },
+    {
+      "hotkey": "Alt + Shift + Enter",
+      "action": "Remove all constant",
+    },
+    {
+      "title": "ListView",
     },
     {
       "hotkey": "Alt + Shift + V",
@@ -23,6 +52,13 @@ class CgHotkeyService {
     {
       "hotkey": "Alt + Shift + H",
       "action": "Wrap with ListView Horizontal",
-    }
+    },
+    {
+      "title": "Other",
+    },
+    {
+      "hotkey": "Alt + Shift + /",
+      "action": "Remove all comment in Dart/Pubspec",
+    },
   ];
 }

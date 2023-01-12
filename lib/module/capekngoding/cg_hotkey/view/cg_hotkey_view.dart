@@ -3,10 +3,8 @@ import 'package:hyper_ui/core.dart';
 
 class CgHotkeyView extends StatefulWidget {
   const CgHotkeyView({Key? key}) : super(key: key);
-
   Widget build(context, CgHotkeyController controller) {
     controller.view = this;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("CgHotkey"),
@@ -58,6 +56,24 @@ class CgHotkeyView extends StatefulWidget {
                   CgHotkeyService.hotkeys.length,
                   (index) {
                     var item = CgHotkeyService.hotkeys[index];
+                    if (item["title"] != null) {
+                      return Container(
+                        padding: const EdgeInsets.all(12.0),
+                        width: MediaQuery.of(context).size.width,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "${item["title"]}",
+                              style: const TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }
                     return Container(
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
@@ -66,11 +82,11 @@ class CgHotkeyView extends StatefulWidget {
                       child: Row(
                         children: [
                           SizedBox(
-                            width: 110.0,
+                            width: 130.0,
                             child: Text(
                               item["hotkey"],
                               style: const TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 11.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
