@@ -37,6 +37,18 @@ class TutorialView extends StatefulWidget {
                     "https://i.ibb.co/QrTHd59/woman.jpg",
                   ),
                 ),
+                title: const Text("Jessica Doe"),
+                subtitle: const Text("Programmer"),
+              ),
+            ),
+            Card(
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey[200],
+                  backgroundImage: const NetworkImage(
+                    "https://i.ibb.co/QrTHd59/woman.jpg",
+                  ),
+                ),
                 title: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [Text("Jessica Doe")],
