@@ -1,4 +1,3 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
@@ -53,6 +52,27 @@ class MainApp extends StatelessWidget {
           home: const CgMainView(),
           // home: const ContohView(),
           // home: const TutorialView(),
+          builder: (context, child) {
+            if (child == null) {
+              return Container();
+            }
+            return Material(
+              child: Stack(
+                children: [
+                  child,
+                  InkWell(
+                    onTap: () {
+                      Get.changeTheme(getDarkTheme());
+                    },
+                    child: const CircleAvatar(
+                      radius: 8.0,
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
         );
       },
     );

@@ -40,7 +40,7 @@ class Get {
 
   static ValueNotifier<ThemeData> mainTheme =
       ValueNotifier<ThemeData>(ThemeData());
-  changeTheme(ThemeData theme) {
+  static changeTheme(ThemeData theme) {
     mainTheme.value = theme;
   }
 

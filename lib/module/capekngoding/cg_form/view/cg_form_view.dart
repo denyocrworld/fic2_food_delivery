@@ -367,7 +367,7 @@ class CgFormView extends StatefulWidget {
                         );
                       }),
                       //#END
-                      //#TEMPLATE form_ratingbar
+                      //#TEMPLATE form_rating
                       RatingBar.builder(
                         initialRating: 3,
                         minRating: 1,
@@ -387,7 +387,7 @@ class CgFormView extends StatefulWidget {
                       const SizedBox(
                         height: 20.0,
                       ),
-                      //#TEMPLATE form_ratingbar_sm
+                      //#TEMPLATE form_rating_sm
                       RatingBar.builder(
                         initialRating: 3,
                         minRating: 1,
@@ -407,7 +407,7 @@ class CgFormView extends StatefulWidget {
                       const SizedBox(
                         height: 20.0,
                       ),
-                      //#TEMPLATE form_ratingbar_lg
+                      //#TEMPLATE form_rating_lg
                       RatingBar.builder(
                         initialRating: 3,
                         minRating: 1,
@@ -427,6 +427,232 @@ class CgFormView extends StatefulWidget {
                       const SizedBox(
                         height: 20.0,
                       ),
+                      //#TEMPLATE form_row_ratingbar_sm
+                      Row(
+                        children: [
+                          const Text(
+                            "4.8",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemBuilder: (context, _) => const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemSize: 12.0,
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          const Text(
+                            "(1,1148)",
+                            style: TextStyle(
+                              fontSize: 10.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_row_ratingbar
+                      Row(
+                        children: [
+                          const Text(
+                            "4.8",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemBuilder: (context, _) => const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemSize: 16.0,
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          const Text(
+                            "(1,1148)",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_row_ratingbar_md
+                      Row(
+                        children: [
+                          const Text(
+                            "4.8",
+                            style: TextStyle(
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemBuilder: (context, _) => const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemSize: 24.0,
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          const Text(
+                            "(1,1148)",
+                            style: TextStyle(
+                              fontSize: 20.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_row_ratingbar_lg
+                      Row(
+                        children: [
+                          const Text(
+                            "4.8",
+                            style: TextStyle(
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemBuilder: (context, _) => const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            itemSize: 32.0,
+                            onRatingUpdate: (rating) {
+                              print(rating);
+                            },
+                          ),
+                          const SizedBox(
+                            width: 4.0,
+                          ),
+                          const Text(
+                            "(1,1148)",
+                            style: TextStyle(
+                              fontSize: 28.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_rating_review
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "John Doe",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 6.0,
+                          ),
+                          Row(
+                            children: [
+                              RatingBar.builder(
+                                initialRating: 3,
+                                minRating: 1,
+                                direction: Axis.horizontal,
+                                allowHalfRating: true,
+                                itemCount: 5,
+                                itemBuilder: (context, _) => const Icon(
+                                  Icons.star,
+                                  color: Colors.amber,
+                                ),
+                                itemSize: 12.0,
+                                onRatingUpdate: (rating) {
+                                  print(rating);
+                                },
+                              ),
+                              const SizedBox(
+                                width: 4.0,
+                              ),
+                              const Text(
+                                "1 Week ago",
+                                style: TextStyle(
+                                  fontSize: 10.0,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 6.0,
+                          ),
+                          const Text(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                      //#END
                     ],
                   ),
                 ),
