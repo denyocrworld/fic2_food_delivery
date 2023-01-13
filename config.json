@@ -66,6 +66,18 @@
         "online_class/state_management/sm_navigation",
         "online_class/state_management/sm_scroll",
         "online_class/state_management/sm_theme",
+        "online_class/http_request/hr_login",
+        "online_class/http_request/hr_list",
+        "online_class/http_request/hr_horizontal_category_list",
+        "online_class/http_request/hr_wrap_category_list",
+        "online_class/http_request/hr_dropdown",
+        "online_class/http_request/hr_radio",
+        "online_class/http_request/hr_map",
+        "online_class/http_request/hr_chart",
+        "online_class/http_request/hr_statistic_card",
+        "online_class/http_request/hr_upload_image",
+        "online_class/http_request/hr_crud_list",
+        "online_class/http_request/hr_crud_form",
         "tutorial"
     ]
 }
