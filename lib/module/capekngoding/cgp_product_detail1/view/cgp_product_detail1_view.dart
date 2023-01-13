@@ -8,7 +8,6 @@ class CgpProductDetail1View extends StatefulWidget {
     controller.view = this;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -74,7 +73,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(
@@ -92,7 +90,6 @@ class CgpProductDetail1View extends StatefulWidget {
                         style: TextStyle(
                           fontSize: 10.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.black,
                         ),
                       ),
                       const SizedBox(
@@ -129,7 +126,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(
@@ -149,7 +145,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     minLeadingWidth: 0.0,
                     leading: const Icon(
                       MdiIcons.shoppingOutline,
-                      color: Colors.black,
                     ),
                     title: const Text(
                       "Product Details",
@@ -163,7 +158,6 @@ class CgpProductDetail1View extends StatefulWidget {
                       icon: const Icon(
                         Icons.chevron_right,
                         size: 24.0,
-                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -171,7 +165,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     minLeadingWidth: 0.0,
                     leading: const Icon(
                       MdiIcons.carOutline,
-                      color: Colors.black,
                     ),
                     title: const Text(
                       "Shipping Information",
@@ -185,7 +178,6 @@ class CgpProductDetail1View extends StatefulWidget {
                       icon: const Icon(
                         Icons.chevron_right,
                         size: 24.0,
-                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -193,7 +185,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     minLeadingWidth: 0.0,
                     leading: const Icon(
                       MdiIcons.bookRemoveMultipleOutline,
-                      color: Colors.black,
                     ),
                     title: const Text(
                       "Returns",
@@ -207,7 +198,6 @@ class CgpProductDetail1View extends StatefulWidget {
                       icon: const Icon(
                         Icons.chevron_right,
                         size: 24.0,
-                        color: Colors.black,
                       ),
                     ),
                   ),
@@ -219,7 +209,6 @@ class CgpProductDetail1View extends StatefulWidget {
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(
@@ -238,7 +227,6 @@ class CgpProductDetail1View extends StatefulWidget {
                                 style: TextStyle(
                                   fontSize: 32.0,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
                                 ),
                               ),
                               Text(
@@ -276,6 +264,73 @@ class CgpProductDetail1View extends StatefulWidget {
                       ),
                     ],
                   ),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: List.generate(
+                          3,
+                          (index) {
+                            return Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  "John Doe",
+                                  style: TextStyle(
+                                    fontSize: 14.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 6.0,
+                                ),
+                                Row(
+                                  children: [
+                                    RatingBar.builder(
+                                      initialRating: 3,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: true,
+                                      itemCount: 5,
+                                      itemBuilder: (context, _) => const Icon(
+                                        Icons.star,
+                                        color: Colors.amber,
+                                      ),
+                                      itemSize: 12.0,
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    ),
+                                    const SizedBox(
+                                      width: 4.0,
+                                    ),
+                                    const Text(
+                                      "1 Week ago",
+                                      style: TextStyle(
+                                        fontSize: 10.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 6.0,
+                                ),
+                                const Text(
+                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                                  style: TextStyle(
+                                    fontSize: 12.0,
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -284,11 +339,10 @@ class CgpProductDetail1View extends StatefulWidget {
       ),
       bottomNavigationBar: Container(
         height: 70,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          boxShadow: const [
             BoxShadow(
-              color: Colors.black,
               offset: Offset(0.0, 0.5),
               blurRadius: 5.0,
             ),
@@ -299,7 +353,7 @@ class CgpProductDetail1View extends StatefulWidget {
             width: MediaQuery.of(context).size.width * 0.7,
             height: 46.0,
             decoration: BoxDecoration(
-              color: Colors.deepPurple[400],
+              color: Theme.of(context).primaryColor.withOpacity(0.4),
               borderRadius: const BorderRadius.all(
                 Radius.circular(
                   16.0,
@@ -337,7 +391,7 @@ class CgpProductDetail1View extends StatefulWidget {
                   width: 100.0,
                   height: 46.0,
                   decoration: BoxDecoration(
-                    color: Colors.deepPurple[500]!.withOpacity(0.4),
+                    color: Theme.of(context).primaryColor,
                     borderRadius: const BorderRadius.only(
                       topRight: Radius.circular(
                         16.0,

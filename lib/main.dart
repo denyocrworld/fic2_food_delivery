@@ -1,5 +1,6 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/shared/theme/theme_changer.dart';
 
 //! LINK KOMUNITAS BERANDAL
 //? CAPEKNGODING.COM/JOIN
@@ -60,14 +61,10 @@ class MainApp extends StatelessWidget {
               child: Stack(
                 children: [
                   child,
-                  InkWell(
-                    onTap: () {
-                      Get.changeTheme(getDarkTheme());
-                    },
-                    child: const CircleAvatar(
-                      radius: 8.0,
-                      backgroundColor: Colors.blueGrey,
-                    ),
+                  const Positioned(
+                    right: 10,
+                    bottom: 10,
+                    child: ThemeChangerIcon(),
                   ),
                 ],
               ),
