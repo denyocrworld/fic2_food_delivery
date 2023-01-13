@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_container.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import '../controller/cg_chart_controller.dart';
 
@@ -20,94 +21,121 @@ class CgChartView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              //#TEMPLATE chart_line
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        // Renders line chart
-                        LineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
+              //#TEMPLATE snippet
+              SnippetContainer(
+                snippet: "your_snippet",
+                builder: () {
+                  return Column(
+                    children: const [
+                      //Your Snippet Here
+                    ],
                   );
                 },
               ),
               //#END
-              const SizedBox(
-                height: 20.0,
-              ),
-              //#TEMPLATE chart_spline
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
+              SnippetContainer(
+                snippet: "chart_line",
+                builder: () {
+                  return Column(
+                    children: [
+                      //#TEMPLATE chart_line
+                      Builder(
+                        builder: (context) {
+                          final List<Map> chartData = [
+                            {
+                              "year": 2018,
+                              "sales": 40,
+                            },
+                            {
+                              "year": 2019,
+                              "sales": 90,
+                            },
+                            {
+                              "year": 2020,
+                              "sales": 30,
+                            },
+                            {
+                              "year": 2021,
+                              "sales": 80,
+                            },
+                            {
+                              "year": 2022,
+                              "sales": 90,
+                            }
+                          ];
 
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        SplineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
+                          return Container(
+                            color: Theme.of(context).cardColor,
+                            padding: const EdgeInsets.all(12.0),
+                            child: SfCartesianChart(
+                              series: <ChartSeries>[
+                                // Renders line chart
+                                LineSeries<Map, int>(
+                                  dataSource: chartData,
+                                  xValueMapper: (Map data, _) => data["year"],
+                                  yValueMapper: (Map data, _) => data["sales"],
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                      //#END
+                    ],
                   );
                 },
               ),
-              //#END
+              SnippetContainer(
+                snippet: "chart_spline",
+                builder: () {
+                  return Column(
+                    children: [
+                      //#TEMPLATE chart_spline
+                      Builder(
+                        builder: (context) {
+                          final List<Map> chartData = [
+                            {
+                              "year": 2018,
+                              "sales": 40,
+                            },
+                            {
+                              "year": 2019,
+                              "sales": 90,
+                            },
+                            {
+                              "year": 2020,
+                              "sales": 30,
+                            },
+                            {
+                              "year": 2021,
+                              "sales": 80,
+                            },
+                            {
+                              "year": 2022,
+                              "sales": 90,
+                            }
+                          ];
+
+                          return Container(
+                            color: Theme.of(context).cardColor,
+                            padding: const EdgeInsets.all(12.0),
+                            child: SfCartesianChart(
+                              series: <ChartSeries>[
+                                SplineSeries<Map, int>(
+                                  dataSource: chartData,
+                                  xValueMapper: (Map data, _) => data["year"],
+                                  yValueMapper: (Map data, _) => data["sales"],
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                      //#END
+                    ],
+                  );
+                },
+              ),
               const SizedBox(
                 height: 20.0,
               ),
@@ -340,7 +368,7 @@ class CgChartView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              //#TEMPLATE chart_bubble
+              //#TEMPLATE chart_step_line
               Builder(
                 builder: (context) {
                   final List<Map> chartData = [
