@@ -5,15 +5,12 @@ ThemeData getDefaultTheme() {
   return ThemeData(
     primaryColor: primaryColor,
     primarySwatch: primarySwatch,
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: primaryColor,
-        shape: ContinuousRectangleBorder(
-          borderRadius: BorderRadius.circular(64.0),
-        ),
-        foregroundColor: Colors.white,
-      ),
-    ),
+    // elevatedButtonTheme: ElevatedButtonThemeData(
+    //   style: ElevatedButton.styleFrom(
+    //     backgroundColor: primaryColor,
+    //     foregroundColor: Colors.white,
+    //   ),
+    // ),
     appBarTheme: AppBarTheme(
       backgroundColor: appbarBackgroundColor,
       elevation: 0.6,

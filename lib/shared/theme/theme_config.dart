@@ -22,7 +22,7 @@ var disabledTextColor = Colors.grey[800];
 Color appbarBackgroundColor = Colors.white;
 Color scaffoldBackgroundColor = Colors.grey[300]!;
 MaterialColor primarySwatch = Colors.blueGrey;
-TextStyle googleFont = GoogleFonts.sora();
+TextStyle googleFont = GoogleFonts.inter();
 Color drawerBackgroundColor = const Color(0xff404E67);
 Color drawerFontColor = Colors.grey[300]!;
 
@@ -51,7 +51,7 @@ const defaultRadius = 20;
 //---
 
 //Text
-Color textColor1 = Colors.grey[700]!;
+Color textColor1 = const Color(0xff101828);
 Color textColor2 = Colors.grey[600]!;
 Color textColor3 = Colors.grey[500]!;
 Color textColor4 = Colors.grey[500]!;
@@ -59,7 +59,7 @@ Color textColor5 = Colors.grey[300]!;
 Color textColor6 = Colors.grey[200]!;
 
 //Icon
-Color iconColor1 = Colors.grey[700]!;
+Color iconColor1 = const Color(0xff101828);
 Color iconColor2 = Colors.grey[600]!;
 Color iconColor3 = Colors.grey[500]!;
 Color iconColor4 = Colors.grey[500]!;

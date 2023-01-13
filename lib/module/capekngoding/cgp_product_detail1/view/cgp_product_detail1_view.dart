@@ -9,12 +9,20 @@ class CgpProductDetail1View extends StatefulWidget {
 
     return Scaffold(
       extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: const [],
-        leading: const BackButton(
-          color: Colors.white,
+        leading: Padding(
+          padding: const EdgeInsets.all(6.0),
+          child: CircleAvatar(
+            radius: 20.0,
+            backgroundColor: Colors.black.withOpacity(0.5),
+            child: const BackButton(
+              color: Colors.white,
+            ),
+          ),
         ),
       ),
       body: SingleChildScrollView(

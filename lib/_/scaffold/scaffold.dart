@@ -6,7 +6,6 @@ class TemplateScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //#GROUP_TEMPLATE scaffold
-    sc
 
     if (1 != 2) {
       //#TEMPLATE scaffold

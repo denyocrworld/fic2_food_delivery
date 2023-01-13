@@ -9,6 +9,8 @@ export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/controller/cgp_
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/view/cgp_product_detail2_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail3/controller/cgp_product_detail3_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail3/view/cgp_product_detail3_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_alert/controller/cg_alert_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_alert/view/cg_alert_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/controller/cg_button_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/view/cg_button_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_card/controller/cg_card_controller.dart';
@@ -142,6 +144,7 @@ export 'package:hyper_ui/module/tutorial/widget/banner_image.dart';
 export 'package:hyper_ui/module/tutorial/widget/shaken_animation.dart';
 export 'package:hyper_ui/service/main_storage/main_storage.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
+export 'package:hyper_ui/shared/theme/theme_changer.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';
 export 'package:hyper_ui/shared/theme/theme_dark.dart';
 export 'package:hyper_ui/shared/util/common/common.dart';
