@@ -11,13 +11,44 @@ class HrWrapCategoryListView extends StatefulWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("HrWrapCategoryList"),
-        actions: const [],
+        actions: [
+          IconButton(
+            onPressed: () => controller.loadProductCategoryList(),
+            icon: const Icon(
+              Icons.refresh,
+              size: 24.0,
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: List.generate(
+                  controller.categoryList.length,
+                  (index) {
+                    var item = controller.categoryList[index];
+                    return Container(
+                      padding: const EdgeInsets.all(12.0),
+                      decoration: BoxDecoration(
+                        color: Colors.red[200],
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(
+                            16.0,
+                          ),
+                        ),
+                      ),
+                      child: Text(item["category_name"]),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ),
       ),

@@ -105,6 +105,8 @@ export 'package:hyper_ui/module/online_class/http_request/hr_login/controller/hr
 export 'package:hyper_ui/module/online_class/http_request/hr_login/view/hr_login_view.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_map/controller/hr_map_controller.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_map/view/hr_map_view.dart';
+export 'package:hyper_ui/module/online_class/http_request/hr_order_list/controller/hr_order_list_controller.dart';
+export 'package:hyper_ui/module/online_class/http_request/hr_order_list/view/hr_order_list_view.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_radio/controller/hr_radio_controller.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_radio/view/hr_radio_view.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_statistic_card/controller/hr_statistic_card_controller.dart';

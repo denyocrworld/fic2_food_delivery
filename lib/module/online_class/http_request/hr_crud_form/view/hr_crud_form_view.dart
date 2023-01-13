@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/hr_crud_form_controller.dart';
 
 class HrCrudFormView extends StatefulWidget {
-  const HrCrudFormView({Key? key}) : super(key: key);
+  final Map? item;
+  const HrCrudFormView({
+    Key? key,
+    this.item,
+  }) : super(key: key);
 
   Widget build(context, HrCrudFormController controller) {
     controller.view = this;
@@ -15,10 +18,56 @@ class HrCrudFormView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: const [],
+            children: [
+              QImagePicker(
+                label: "Photo",
+                validator: Validator.required,
+                value: item?["photo"],
+                onChanged: (value) {
+                  controller.photo = value;
+                },
+              ),
+              QTextField(
+                label: "Product Name",
+                validator: Validator.required,
+                value: item?["product_name"],
+                onChanged: (value) {
+                  controller.productName = value;
+                },
+              ),
+              QNumberField(
+                label: "Price",
+                validator: Validator.required,
+                value: item?["price"]?.toString(),
+                onChanged: (value) {
+                  print(">>> $value");
+                  controller.price = double.tryParse(value) ?? 0.0;
+                  print("::: ${controller.price}");
+                },
+              ),
+              QMemoField(
+                label: "Description",
+                validator: Validator.required,
+                value: item?["description"],
+                onChanged: (value) {
+                  controller.description = value;
+                },
+              ),
+            ],
           ),
+        ),
+      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        padding: const EdgeInsets.all(12.0),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blueGrey,
+          ),
+          onPressed: () => controller.doSave(),
+          child: const Text("Save"),
         ),
       ),
     );

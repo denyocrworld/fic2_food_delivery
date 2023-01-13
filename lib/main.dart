@@ -1,13 +1,31 @@
 import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/shared/theme/theme_changer.dart';
 
-//! LINK KOMUNITAS BERANDAL
-//? CAPEKNGODING.COM/JOIN
+/*
 
-//! KELAS ONLINE
-//? CAPEKNGODING.COM
+HTTP
+- Ecommerce
+
+WebSocket
+- Aplikasi Chat
+- Game Online Multiplayer
+
+Front End
+- PHP, Golang, NodeJS, Python
+
+Dokumentasi API
+- Postman / Insomia / ThunderClient
+- Website
+
+------------------
+
+1. Bikin UI
+2. Consume API
+---
+3. Testing
+
+*/
 
 void main() async {
   await initialize();

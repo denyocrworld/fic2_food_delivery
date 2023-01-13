@@ -2,16 +2,17 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/config.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/hr_chart_view.dart';
+import '../view/hr_order_list_view.dart';
 
-class HrChartController extends State<HrChartView> implements MvcController {
-  static late HrChartController instance;
-  late HrChartView view;
+class HrOrderListController extends State<HrOrderListView>
+    implements MvcController {
+  static late HrOrderListController instance;
+  late HrOrderListView view;
 
   @override
   void initState() {
     instance = this;
-    getSales();
+    loadOrderList();
     super.initState();
   }
 
@@ -21,10 +22,10 @@ class HrChartController extends State<HrChartView> implements MvcController {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  List<Map<dynamic, dynamic>> sales = [];
-  getSales() async {
+  List orderList = [];
+  loadOrderList() async {
     var response = await Dio().get(
-      "${AppConfig.baseUrl}/deny/api/sales",
+      "${AppConfig.baseUrl}/deny/api/orders",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -32,8 +33,7 @@ class HrChartController extends State<HrChartView> implements MvcController {
       ),
     );
     Map obj = response.data;
-    print(obj);
-    sales = List.from(obj["data"]);
+    orderList = obj["data"];
     setState(() {});
   }
 }

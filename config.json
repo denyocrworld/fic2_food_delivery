@@ -68,6 +68,7 @@
         "online_class/state_management/sm_theme",
         "online_class/http_request/hr_login",
         "online_class/http_request/hr_list",
+        "online_class/http_request/hr_order_list",
         "online_class/http_request/hr_horizontal_category_list",
         "online_class/http_request/hr_wrap_category_list",
         "online_class/http_request/hr_dropdown",

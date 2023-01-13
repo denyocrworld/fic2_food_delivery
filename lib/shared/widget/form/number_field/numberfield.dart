@@ -78,14 +78,8 @@ class _QNumberFieldState extends State<QNumberField> {
         String str = 'Hello World 123';
 
         String result = str.replaceAll(RegExp(r'\D'), '');
-
-        print(result); // 123
-        //buatlah kode di dart untuk replaceAll semua karakter non digit?
-        // value = newValue.replaceAll(RegExp(r'\D'), '');
-        // controller.text = formattedValue ?? "";
+        //TODO: Bugs
         // widget.onChanged(newValue.replaceAll(RegExp(r'\D'), ''));
-        // controller.selection =
-        //     TextSelection.collapsed(offset: controller.text.length);
       },
       onEditingComplete: () {
         var newValue = controller.text;
@@ -97,6 +91,8 @@ class _QNumberFieldState extends State<QNumberField> {
         controller.text = formattedValue ?? "";
         controller.selection =
             TextSelection.collapsed(offset: controller.text.length);
+
+        widget.onChanged(newValue.replaceAll(RegExp(r'\D'), ''));
       },
     );
   }
