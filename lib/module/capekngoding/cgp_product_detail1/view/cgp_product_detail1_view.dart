@@ -1,25 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-/*
-! JOIN KELAS
-? https://capekngoding.com
-1. Bikin UI
-2. Consume API
+class CgpProductDetail1View extends StatefulWidget {
+  const CgpProductDetail1View({Key? key}) : super(key: key);
 
-X State Management ada yang cocok utk aplikasi kecil dan besar.
-v State Management tidak terlalu mempengaruhi utk membuat aplikasi skala kecil atau besar
-
-
-Bangun Rumah
-Arsitek
-Tukang
-Alat Tukang (Palu, Tang, Tangga, dll)
-*/
-class TutorialView extends StatefulWidget {
-  const TutorialView({Key? key}) : super(key: key);
-
-  Widget build(context, TutorialController controller) {
+  Widget build(context, CgpProductDetail1Controller controller) {
     controller.view = this;
 
     return Scaffold(
@@ -29,27 +14,40 @@ class TutorialView extends StatefulWidget {
         backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: const [],
+        leading: const BackButton(
+          color: Colors.white,
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 100.0,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    "https://images.unsplash.com/photo-1600950207944-0d63e8edbc3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-                  ),
-                  fit: BoxFit.cover,
+            ClipRRect(
+              clipBehavior: Clip.hardEdge,
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(
+                  12.0,
                 ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(
-                    16.0,
+                bottomRight: Radius.circular(
+                  12.0,
+                ),
+              ),
+              child: Container(
+                height: 100.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1600950207944-0d63e8edbc3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  bottomRight: Radius.circular(
-                    16.0,
-                  ),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      color: Colors.black.withOpacity(0.3),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -369,5 +367,5 @@ class TutorialView extends StatefulWidget {
   }
 
   @override
-  State<TutorialView> createState() => TutorialController();
+  State<CgpProductDetail1View> createState() => CgpProductDetail1Controller();
 }

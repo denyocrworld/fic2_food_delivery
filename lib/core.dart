@@ -3,6 +3,12 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/controller/cgp_product_detail1_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/view/cgp_product_detail1_view.dart';
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/controller/cgp_product_detail2_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/view/cgp_product_detail2_view.dart';
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail3/controller/cgp_product_detail3_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cgp_product_detail3/view/cgp_product_detail3_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/controller/cg_button_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_button/view/cg_button_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_card/controller/cg_card_controller.dart';
@@ -53,6 +59,7 @@ export 'package:hyper_ui/module/capekngoding/cg_navigation/view/cg_navigation_vi
 export 'package:hyper_ui/module/capekngoding/cg_premade_dashboard/controller/cg_premade_dashboard_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_premade_dashboard/view/cg_premade_dashboard_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_premade_detail/controller/cg_premade_detail_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_premade_detail/service/cg_premade_detail_service.dart';
 export 'package:hyper_ui/module/capekngoding/cg_premade_detail/view/cg_premade_detail_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_premade_list/controller/cg_premade_list_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_premade_list/view/cg_premade_list_view.dart';
@@ -114,6 +121,7 @@ export 'package:hyper_ui/module/online_class/state_management/sm_loading/control
 export 'package:hyper_ui/module/online_class/state_management/sm_loading/view/sm_loading_view.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_navigation/controller/sm_navigation_controller.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_navigation/view/sm_navigation_view.dart';
+export 'package:hyper_ui/module/online_class/state_management/sm_navigation/widget/awesome_menu.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_rotate_animation/controller/sm_rotate_animation_controller.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_rotate_animation/view/sm_rotate_animation_view.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_scale_animation/controller/sm_scale_animation_controller.dart';
@@ -171,6 +179,7 @@ export 'package:hyper_ui/shared/widget/form/time_picker/timepicker.dart';
 export 'package:hyper_ui/shared/widget/form/__form_detail_example.dart';
 export 'package:hyper_ui/shared/widget/form/__form_example.dart';
 export 'package:hyper_ui/shared/widget/list/list_view.dart';
+export 'package:hyper_ui/shared/widget/menu/menu.dart';
 export 'core_package.dart';
 export 'state_util.dart';
 export 'setup.dart';

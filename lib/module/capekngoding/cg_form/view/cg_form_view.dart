@@ -1,7 +1,6 @@
 //#GROUP_TEMPLATE form_
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_form_controller.dart';
 
 class CgFormView extends StatefulWidget {
   const CgFormView({Key? key}) : super(key: key);
@@ -368,6 +367,66 @@ class CgFormView extends StatefulWidget {
                         );
                       }),
                       //#END
+                      //#TEMPLATE form_ratingbar
+                      RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        itemSize: 24.0,
+                        onRatingUpdate: (rating) {
+                          print(rating);
+                        },
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_ratingbar_sm
+                      RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        itemSize: 20.0,
+                        onRatingUpdate: (rating) {
+                          print(rating);
+                        },
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      //#TEMPLATE form_ratingbar_lg
+                      RatingBar.builder(
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        itemSize: 32.0,
+                        onRatingUpdate: (rating) {
+                          print(rating);
+                        },
+                      ),
+                      //#END
+                      const SizedBox(
+                        height: 20.0,
+                      ),
                     ],
                   ),
                 ),
