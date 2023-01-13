@@ -151,6 +151,12 @@ class CgMainService {
       'page': const CgChartView(),
     },
     {
+      'label': 'MapView',
+      'icon': MdiIcons.map,
+      'color': Colors.cyan,
+      'page': const CgMapView(),
+    },
+    {
       'label': 'Form',
       'icon': MdiIcons.formTextbox,
       'color': Colors.amber,
