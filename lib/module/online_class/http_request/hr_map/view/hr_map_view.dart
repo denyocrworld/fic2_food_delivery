@@ -34,6 +34,10 @@ class HrMapView extends StatefulWidget {
           child: Column(
             children: [
               //map_fluttermap
+              /*
+              TODO: import this lines
+              import 'package:latlong2/latlong.dart';
+              */
               if (controller.markers.isNotEmpty)
                 Builder(
                   builder: (context) {
