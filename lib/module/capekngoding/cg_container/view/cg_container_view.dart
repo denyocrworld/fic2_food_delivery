@@ -8,7 +8,6 @@ class CgContainerView extends StatefulWidget {
   Widget build(context, CgContainerController controller) {
     controller.view = this;
     var CURSOR_1;
-    //#GROUP_TEMPLATE container
 
     return Scaffold(
       appBar: AppBar(
@@ -110,7 +109,7 @@ class CgContainerView extends StatefulWidget {
                   ],
                 ),
               ),
-              //#NED
+              //#END
               const SnippetContainer("conproduct"),
               //#TEMPLATE conproduct
               Container(
@@ -168,7 +167,7 @@ class CgContainerView extends StatefulWidget {
                   ],
                 ),
               ),
-              //#NED
+              //#END
               const SizedBox(
                 height: 20.0,
               ),
