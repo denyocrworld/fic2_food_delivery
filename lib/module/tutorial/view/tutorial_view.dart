@@ -19,6 +19,152 @@ class TutorialView extends StatefulWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              TextFormField(
+                initialValue: 'admin@gmail.com',
+                maxLength: 20,
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.email,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your email address',
+                ),
+                onChanged: (value) {},
+              ),
+              TextFormField(
+                initialValue: '123456',
+                maxLength: 20,
+                obscureText: true,
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  labelStyle: TextStyle(
+                    color: Colors.blueGrey,
+                  ),
+                  suffixIcon: Icon(
+                    Icons.password,
+                  ),
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Colors.blueGrey,
+                    ),
+                  ),
+                  helperText: 'Enter your password',
+                ),
+                onChanged: (value) {},
+              ),
+              RatingBar.builder(
+                initialRating: 3,
+                minRating: 1,
+                direction: Axis.horizontal,
+                allowHalfRating: true,
+                itemCount: 5,
+                itemBuilder: (context, _) => const Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                ),
+                itemSize: 24.0,
+                onRatingUpdate: (rating) {
+                  print(rating);
+                },
+              ),
+              Row(
+                children: [
+                  const Text(
+                    "4.8",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    itemSize: 16.0,
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  const Text(
+                    "(1,1148)",
+                    style: TextStyle(
+                      fontSize: 14.0,
+                    ),
+                  ),
+                ],
+              ),
+              ElevatedButton.icon(
+                icon: const Icon(Icons.save),
+                label: const Text("Save"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: [
+                  const Text(
+                    "4.8",
+                    style: TextStyle(
+                      fontSize: 32.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  RatingBar.builder(
+                    initialRating: 3,
+                    minRating: 1,
+                    direction: Axis.horizontal,
+                    allowHalfRating: true,
+                    itemCount: 5,
+                    itemBuilder: (context, _) => const Icon(
+                      Icons.star,
+                      color: Colors.amber,
+                    ),
+                    itemSize: 32.0,
+                    onRatingUpdate: (rating) {
+                      print(rating);
+                    },
+                  ),
+                  const SizedBox(
+                    width: 4.0,
+                  ),
+                  const Text(
+                    "(1,1148)",
+                    style: TextStyle(
+                      fontSize: 28.0,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 2.0,
+              ),
               Card(
                 clipBehavior: Clip.antiAlias,
                 child: SizedBox(
