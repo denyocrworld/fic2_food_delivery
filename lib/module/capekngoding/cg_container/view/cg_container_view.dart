@@ -8,6 +8,7 @@ class CgContainerView extends StatefulWidget {
   Widget build(context, CgContainerController controller) {
     controller.view = this;
     var CURSOR_1;
+    //#GROUP_TEMPLATE container
 
     return Scaffold(
       appBar: AppBar(
@@ -19,7 +20,6 @@ class CgContainerView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            //#GROUP_TEMPLATE container
             children: [
               const SnippetContainer("con"),
               //#TEMPLATE con
