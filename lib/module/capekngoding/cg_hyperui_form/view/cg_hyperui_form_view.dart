@@ -1,6 +1,7 @@
 //#GROUP_TEMPLATE hyperui_form
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_header.dart';
 
 class CgHyperuiFormView extends StatefulWidget {
   const CgHyperuiFormView({Key? key}) : super(key: key);
@@ -17,53 +18,118 @@ class CgHyperuiFormView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SnippetHeader("Basic"),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: [
+                      const SnippetContainer("q_textfield"),
+                      //#TEMPLATE q_textfield
+                      QTextField(
+                        label: "Name",
+                        hint: "Name",
+                        validator: Validator.required,
+                        value: "John Doe",
+                        onChanged: (value) {},
+                      ),
+                      //#END
+                      const SnippetContainer("q_email"),
+                      //#TEMPLATE q_email
+                      QTextField(
+                        label: "Email",
+                        hint: "Your email",
+                        validator: Validator.email,
+                        value: "demo@gmail.com",
+                        onChanged: (value) {},
+                      ),
+                      //#END
+                      const SnippetContainer("q_password"),
+                      //#TEMPLATE q_password
+                      QTextField(
+                        label: "Password",
+                        hint: "Your password",
+                        obscure: true,
+                        validator: Validator.required,
+                        suffixIcon: Icons.password,
+                        value: "123456",
+                        onChanged: (value) {},
+                      ),
+                      //#END
+                    ],
+                  ),
+                ),
+              ),
+
+              const SnippetHeader("Numberfield"),
+              //#TEMPLATE q_numberfield
+              QNumberField(
+                label: "Age",
+                hint: "Your age's",
+                validator: Validator.required,
+                value: "24",
+                onChanged: (value) {},
+              ),
+              //#END
+              QNumberField(
+                label: "Price 1",
+                hint: "Your product price's",
+                validator: Validator.required,
+                value: "23000",
+                onChanged: (value) {
+                  print("Product price: $value");
+                },
+              ),
+              QNumberField(
+                label: "Price 2",
+                hint: "Your product price's",
+                validator: Validator.required,
+                value: "15000",
+                pattern: "#,###",
+                locale: "en_US",
+                onChanged: (value) {
+                  print("Product price: $value");
+                },
+              ),
+              QNumberField(
+                label: "Price 3",
+                hint: "Your product price's",
+                validator: Validator.required,
+                value: "23200.23",
+                pattern: "#,###.00",
+                onChanged: (value) {
+                  print("Product price: $value");
+                },
+              ),
+              QNumberField(
+                label: "Price 4",
+                hint: "Your product price's",
+                validator: Validator.required,
+                value: "23200.23",
+                pattern: "#,###.000",
+                onChanged: (value) {
+                  print("Product price: $value");
+                },
+              ),
+              QNumberField(
+                label: "Price 5",
+                hint: "Your product price's",
+                validator: Validator.required,
+                value: "50000.45",
+                pattern: "\$#,###.00",
+                onChanged: (value) {
+                  print("Product price: $value");
+                },
+              ),
+
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Column(
                       children: [
-                        Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Column(
-                              children: [
-                                //#TEMPLATE q_textfield
-                                QTextField(
-                                  label: "Name",
-                                  hint: "Name",
-                                  validator: Validator.required,
-                                  value: "John Doe",
-                                  onChanged: (value) {},
-                                ),
-                                //#END
-                                //#TEMPLATE q_email
-                                QTextField(
-                                  label: "Email",
-                                  hint: "Your email",
-                                  validator: Validator.email,
-                                  value: "demo@gmail.com",
-                                  onChanged: (value) {},
-                                ),
-                                //#END
-                                //#TEMPLATE q_password
-                                QTextField(
-                                  label: "Password",
-                                  hint: "Your password",
-                                  obscure: true,
-                                  validator: Validator.required,
-                                  value: "123456",
-                                  onChanged: (value) {},
-                                ),
-                                //#END
-                              ],
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
                         Card(
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
@@ -140,67 +206,7 @@ class CgHyperuiFormView extends StatefulWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
-                          children: [
-                            //#TEMPLATE q_numberfield
-                            QNumberField(
-                              label: "Age",
-                              hint: "Your age's",
-                              validator: Validator.required,
-                              value: "24",
-                              onChanged: (value) {},
-                            ),
-                            //#END
-                            QNumberField(
-                              label: "Price 1",
-                              hint: "Your product price's",
-                              validator: Validator.required,
-                              value: "23000",
-                              onChanged: (value) {
-                                print("Product price: $value");
-                              },
-                            ),
-                            QNumberField(
-                              label: "Price 2",
-                              hint: "Your product price's",
-                              validator: Validator.required,
-                              value: "15000",
-                              pattern: "#,###",
-                              locale: "en_US",
-                              onChanged: (value) {
-                                print("Product price: $value");
-                              },
-                            ),
-                            QNumberField(
-                              label: "Price 3",
-                              hint: "Your product price's",
-                              validator: Validator.required,
-                              value: "23200.23",
-                              pattern: "#,###.00",
-                              onChanged: (value) {
-                                print("Product price: $value");
-                              },
-                            ),
-                            QNumberField(
-                              label: "Price 4",
-                              hint: "Your product price's",
-                              validator: Validator.required,
-                              value: "23200.23",
-                              pattern: "#,###.000",
-                              onChanged: (value) {
-                                print("Product price: $value");
-                              },
-                            ),
-                            QNumberField(
-                              label: "Price 5",
-                              hint: "Your product price's",
-                              validator: Validator.required,
-                              value: "50000.45",
-                              pattern: "\$#,###.00",
-                              onChanged: (value) {
-                                print("Product price: $value");
-                              },
-                            ),
-                          ],
+                          children: const [],
                         ),
                       ),
                     ),

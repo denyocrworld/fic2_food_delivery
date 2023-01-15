@@ -1,367 +1,570 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
+import 'package:latlong2/latlong.dart';
 
-/*
-! JOIN KELAS
-? https://capekngoding.com
-1. Bikin UI
-2. Consume API
-
-X State Management ada yang cocok utk aplikasi kecil dan besar.
-v State Management tidak terlalu mempengaruhi utk membuat aplikasi skala kecil atau besar
-
-
-Bangun Rumah
-Arsitek
-Tukang
-Alat Tukang (Palu, Tang, Tangga, dll)
-*/
 class TutorialView extends StatefulWidget {
   const TutorialView({Key? key}) : super(key: key);
 
   Widget build(context, TutorialController controller) {
     controller.view = this;
-
     return Scaffold(
-      backgroundColor: Colors.white,
-      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
+        title: const Text("Login"),
         actions: const [],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 100.0,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    "https://images.unsplash.com/photo-1600950207944-0d63e8edbc3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
-                  ),
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(
-                    16.0,
-                  ),
-                  bottomRight: Radius.circular(
-                    16.0,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 12.0,
-            ),
-            Container(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "LIPSY LONDON",
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      color: Colors.grey[700],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 4.0,
-                  ),
-                  const Text(
-                    "Sleeveless Ruffle",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 4.0,
-                  ),
-                  Row(
+        controller: ScrollController(),
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Card(
+                clipBehavior: Clip.antiAlias,
+                child: SizedBox(
+                  width: 300.0,
+                  child: Row(
                     children: [
-                      const Icon(
-                        Icons.star,
-                        color: Colors.orange,
-                        size: 16.0,
-                      ),
-                      const Text(
-                        "4.6",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                      const SizedBox(
-                        width: 4.0,
-                      ),
-                      const Text(
-                        "(120 Reviews)",
-                        style: TextStyle(
-                          fontSize: 10.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      const Spacer(),
-                      SizedBox(
-                        height: 20.0,
-                        child: FittedBox(
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.green,
+                      Container(
+                        width: 80.0,
+                        height: 80.0,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              "https://i.ibb.co/dGcQ5bw/photo-1549692520-acc6669e2f0c-ixlib-rb-1-2.jpg",
                             ),
-                            onPressed: () {},
-                            child: const Text("Available in stock"),
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  const Text(
-                    "Product Info",
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 4.0,
-                  ),
-                  const Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    maxLines: 3,
-                    style: TextStyle(
-                      fontSize: 10.0,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  ListTile(
-                    minLeadingWidth: 0.0,
-                    leading: const Icon(
-                      MdiIcons.shoppingOutline,
-                      color: Colors.black,
-                    ),
-                    title: const Text(
-                      "Product Details",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.chevron_right,
-                        size: 24.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    minLeadingWidth: 0.0,
-                    leading: const Icon(
-                      MdiIcons.carOutline,
-                      color: Colors.black,
-                    ),
-                    title: const Text(
-                      "Shipping Information",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.chevron_right,
-                        size: 24.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    minLeadingWidth: 0.0,
-                    leading: const Icon(
-                      MdiIcons.bookRemoveMultipleOutline,
-                      color: Colors.black,
-                    ),
-                    title: const Text(
-                      "Returns",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.chevron_right,
-                        size: 24.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  const Text(
-                    "Reviews (120)",
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20.0,
-                  ),
-                  Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
-                              Text(
-                                "4.6",
-                                style: TextStyle(
-                                  fontSize: 32.0,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                ),
+                      Expanded(
+                        child: Container(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: const [
+                                  Text(
+                                    "PRODUCTIVITY",
+                                    style: TextStyle(
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                  Spacer(),
+                                  Text(
+                                    "3 days ago",
+                                    style: TextStyle(
+                                      fontSize: 10.0,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                "/5",
+                              const SizedBox(
+                                height: 6.0,
+                              ),
+                              const Text(
+                                "7 Skills of Highly Effective Programmers",
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  fontSize: 14.0,
-                                  color: Colors.green,
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ],
                           ),
-                          const Text(
-                            "Based on 120 Reviews",
-                            style: TextStyle(
-                              fontSize: 10.0,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-                      RatingBar.builder(
-                        initialRating: 3,
-                        minRating: 1,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        itemBuilder: (context, _) => const Icon(
-                          Icons.star,
-                          color: Colors.amber,
                         ),
-                        itemSize: 20.0,
-                        onRatingUpdate: (rating) {
-                          print(rating);
-                        },
                       ),
                     ],
                   ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: Container(
-        height: 70,
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black,
-              offset: Offset(0.0, 0.5),
-              blurRadius: 5.0,
-            ),
-          ],
-        ),
-        child: Center(
-          child: Container(
-            width: MediaQuery.of(context).size.width * 0.7,
-            height: 46.0,
-            decoration: BoxDecoration(
-              color: Colors.deepPurple[400],
-              borderRadius: const BorderRadius.all(
-                Radius.circular(
-                  16.0,
                 ),
               ),
-            ),
-            child: Row(
-              children: [
-                const SizedBox(
-                  width: 12.0,
+              const SizedBox(
+                height: 20.0,
+              ),
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.grey[200],
+                    backgroundImage: const NetworkImage(
+                      "https://i.ibb.co/QrTHd59/woman.jpg",
+                    ),
+                  ),
+                  title: const Text("Jessica Doe"),
+                  subtitle: const Text("Programmer"),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Text(
-                      "\$140",
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 160.0,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.black26,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            16.0,
+                          ),
+                        ),
                       ),
                     ),
-                    Text(
-                      "Unit price",
-                      style: TextStyle(
-                        fontSize: 10.0,
-                        color: Colors.white,
+                    Positioned(
+                      left: 20.0,
+                      top: 0.0,
+                      bottom: 0.0,
+                      child: SizedBox(
+                        width: 100.0,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "30%",
+                              style: GoogleFonts.oswald(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "Discount Only Valid for Today",
+                              style: GoogleFonts.oswald(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
-                const Spacer(),
-                Container(
-                  width: 100.0,
-                  height: 46.0,
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple[500]!.withOpacity(0.4),
-                    borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(
-                        16.0,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  List<Marker> allMarkers = [
+                    Marker(
+                      point: LatLng(
+                        -6.1754234,
+                        106.827224,
                       ),
-                      bottomRight: Radius.circular(
-                        16.0,
-                      ),
-                    ),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Buy Now",
-                      style: TextStyle(
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                      builder: (context) => const Icon(
+                        Icons.pin_drop,
+                        color: Colors.red,
+                        size: 24,
                       ),
                     ),
-                  ),
-                ),
-              ],
-            ),
+                    Marker(
+                      point: LatLng(
+                        -6.1751234,
+                        106.826224,
+                      ),
+                      builder: (context) => const Icon(
+                        Icons.pin_drop,
+                        color: Colors.blue,
+                        size: 24,
+                      ),
+                    ),
+                  ];
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: FlutterMap(
+                      options: MapOptions(
+                        center: LatLng(
+                          -6.1754234,
+                          106.827224,
+                        ),
+                        zoom: 16,
+                        interactiveFlags:
+                            InteractiveFlag.all - InteractiveFlag.rotate,
+                      ),
+                      children: [
+                        TileLayer(
+                          urlTemplate:
+                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                          userAgentPackageName:
+                              'dev.fleaflet.flutter_map.example',
+                        ),
+                        MarkerLayer(
+                          markers: allMarkers,
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        AreaSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        BarSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      isTransposed: true,
+                      primaryXAxis: NumericAxis(
+                        decimalPlaces: 0,
+                      ),
+                      series: <ChartSeries>[
+                        BarSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": "Jan",
+                      "sales": 40,
+                    },
+                    {
+                      "year": "Feb",
+                      "sales": 90,
+                    },
+                    {
+                      "year": "Mar",
+                      "sales": 30,
+                    },
+                    {
+                      "year": "Apr",
+                      "sales": 80,
+                    },
+                    {
+                      "year": "May",
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCircularChart(
+                      legend: Legend(isVisible: true),
+                      series: <CircularSeries>[
+                        PieSeries<Map, String>(
+                          dataSource: chartData,
+                          dataLabelSettings: const DataLabelSettings(
+                            isVisible: true,
+                          ),
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        ScatterSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        // Renders line chart
+                        LineSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        SplineSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        StepLineSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ],
           ),
         ),
       ),

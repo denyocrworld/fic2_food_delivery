@@ -7,6 +7,10 @@ import 'package:flutter/material.dart';
 
 ! Link Kelas Online
 ? https://capekngoding.com
+
+Bahasa: DART
+Framework: Flutter
+
 */
 
 void main() async {
@@ -44,6 +48,19 @@ class MainApp extends StatelessWidget {
               child: Stack(
                 children: [
                   child,
+                  Positioned(
+                    right: 36,
+                    bottom: 10,
+                    child: InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const CircleAvatar(
+                        radius: 8.0,
+                        backgroundColor: Colors.blue,
+                      ),
+                    ),
+                  ),
                   const Positioned(
                     right: 10,
                     bottom: 10,

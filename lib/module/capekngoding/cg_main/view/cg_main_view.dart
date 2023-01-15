@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
@@ -56,11 +57,14 @@ class CgMainView extends StatefulWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      "Hyper UI",
-                                      style: GoogleFonts.moonDance(
-                                        fontSize: 30.0,
-                                        fontWeight: FontWeight.bold,
+                                    InkWell(
+                                      onTap: () => Get.to(const TutorialView()),
+                                      child: Text(
+                                        "Hyper UI",
+                                        style: GoogleFonts.moonDance(
+                                          fontSize: 30.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
                                     ),
                                     Text(

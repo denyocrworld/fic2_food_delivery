@@ -153,7 +153,7 @@ class MagicSnippetView extends StatelessWidget {
           //#TEMPLATE capc
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [CURSOR_1],
               ),
@@ -163,7 +163,7 @@ class MagicSnippetView extends StatelessWidget {
           //#TEMPLATE capr
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [CURSOR_1],
               ),
@@ -173,7 +173,7 @@ class MagicSnippetView extends StatelessWidget {
           //#TEMPLATE caprtt
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
                   const Text("Your Text"),
