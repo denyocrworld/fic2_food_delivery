@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
-import 'package:latlong2/latlong.dart';
 
 class TutorialView extends StatefulWidget {
   const TutorialView({Key? key}) : super(key: key);
@@ -10,705 +8,559 @@ class TutorialView extends StatefulWidget {
     controller.view = this;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login"),
+        title: const Text("Dashboard"),
         actions: const [],
       ),
       body: SingleChildScrollView(
-        controller: ScrollController(),
         child: Container(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextFormField(
-                initialValue: 'admin@gmail.com',
-                maxLength: 20,
-                decoration: const InputDecoration(
-                  labelText: 'Email',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.email,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
-                    ),
-                  ),
-                  helperText: 'Enter your email address',
+              //ALT+SHIFT+ENTER
+              //text
+              const Text("text"),
+              const Text(
+                "text",
+                style: TextStyle(
+                  fontSize: 12.0,
                 ),
-                onChanged: (value) {},
               ),
-              TextFormField(
-                initialValue: '123456',
-                maxLength: 20,
-                obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: 'Password',
-                  labelStyle: TextStyle(
-                    color: Colors.blueGrey,
-                  ),
-                  suffixIcon: Icon(
-                    Icons.password,
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(
-                      color: Colors.blueGrey,
-                    ),
-                  ),
-                  helperText: 'Enter your password',
+              const Text(
+                "text",
+                style: TextStyle(
+                  fontSize: 40.0,
                 ),
-                onChanged: (value) {},
               ),
-              RatingBar.builder(
-                initialRating: 3,
-                minRating: 1,
-                direction: Axis.horizontal,
-                allowHalfRating: true,
-                itemCount: 5,
-                itemBuilder: (context, _) => const Icon(
-                  Icons.star,
-                  color: Colors.amber,
+              //text50
+              const Text(
+                "Angga",
+                style: TextStyle(
+                  fontSize: 50.0,
                 ),
-                itemSize: 24.0,
-                onRatingUpdate: (rating) {
-                  print(rating);
-                },
               ),
-              Row(
-                children: [
-                  const Text(
-                    "4.8",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 4.0,
-                  ),
-                  RatingBar.builder(
-                    initialRating: 3,
-                    minRating: 1,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemBuilder: (context, _) => const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    itemSize: 16.0,
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                  const SizedBox(
-                    width: 4.0,
-                  ),
-                  const Text(
-                    "(1,1148)",
-                    style: TextStyle(
-                      fontSize: 14.0,
-                    ),
-                  ),
-                ],
-              ),
-              ElevatedButton.icon(
-                icon: const Icon(Icons.save),
-                label: const Text("Save"),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blueGrey,
+              const Text(
+                "Angga",
+                style: TextStyle(
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.bold,
                 ),
-                onPressed: () {},
               ),
-              const SizedBox(
-                height: 20.0,
+              const Text(
+                "text",
+                //sty
+                style: TextStyle(
+                  //fs30
+                  fontSize: 30.0,
+                  //bold
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              Row(
-                children: [
-                  const Text(
-                    "4.8",
-                    style: TextStyle(
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 4.0,
-                  ),
-                  RatingBar.builder(
-                    initialRating: 3,
-                    minRating: 1,
-                    direction: Axis.horizontal,
-                    allowHalfRating: true,
-                    itemCount: 5,
-                    itemBuilder: (context, _) => const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    itemSize: 32.0,
-                    onRatingUpdate: (rating) {
-                      print(rating);
-                    },
-                  ),
-                  const SizedBox(
-                    width: 4.0,
-                  ),
-                  const Text(
-                    "(1,1148)",
-                    style: TextStyle(
-                      fontSize: 28.0,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 2.0,
-              ),
-              Card(
-                clipBehavior: Clip.antiAlias,
-                child: SizedBox(
-                  width: 300.0,
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 80.0,
-                        height: 80.0,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              "https://i.ibb.co/dGcQ5bw/photo-1549692520-acc6669e2f0c-ixlib-rb-1-2.jpg",
-                            ),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                children: const [
-                                  Text(
-                                    "PRODUCTIVITY",
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Text(
-                                    "3 days ago",
-                                    style: TextStyle(
-                                      fontSize: 10.0,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                height: 6.0,
-                              ),
-                              const Text(
-                                "7 Skills of Highly Effective Programmers",
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+              const Text(
+                "Hello Angga",
+                //sty
+                style: TextStyle(
+                  //fs40
+                  fontSize: 40.0,
+                  //bold
+                  fontWeight: FontWeight.bold,
+                  //cblue
+                  color: Colors.red,
                 ),
               ),
               const SizedBox(
                 height: 20.0,
               ),
-              Card(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.grey[200],
-                    backgroundImage: const NetworkImage(
-                      "https://i.ibb.co/QrTHd59/woman.jpg",
+              Text(
+                "Hello Monalisa",
+                //sty
+                style: GoogleFonts.bebasNeue(
+                  //fs40
+                  fontSize: 40.0,
+                  //bold
+                  fontWeight: FontWeight.bold,
+                  //cBlue
+                  color: Colors.red,
+                ),
+              ),
+              const Divider(),
+              //icon
+              const Icon(
+                Icons.developer_board,
+                size: 128.0,
+                //cOrange
+                color: Colors.orange,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: const [
+                  Icon(
+                    Icons.dashboard,
+                    size: 30.0,
+                    color: Colors.blue,
+                  ),
+                  //sw20
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  Text(
+                    "Dashboard",
+                    style: TextStyle(
+                      fontSize: 30.0,
                     ),
                   ),
-                  title: const Text("Jessica Doe"),
-                  subtitle: const Text("Programmer"),
-                ),
+                ],
+              ),
+              //sh20
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: const [
+                  Icon(
+                    Icons.list,
+                    size: 30.0,
+                    color: Colors.blue,
+                  ),
+                  //sw20
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  Text(
+                    "Order",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Column(
+                children: const [
+                  Icon(
+                    Icons.developer_board,
+                    size: 24.0,
+                  ),
+                  Text("text"),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Column(
+                children: const [
+                  Icon(
+                    Icons.add,
+                    size: 24.0,
+                  ),
+                  Text("Add"),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Image.network(
+                "https://akcdn.detik.net.id/community/media/visual/2023/01/14/cristiano-ronaldo-1_169.jpeg?w=700&q=90",
+                width: 164.0,
+                height: 164.0,
+                fit: BoxFit.fill,
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Image.network(
+                "https://akcdn.detik.net.id/community/media/visual/2023/01/14/cristiano-ronaldo-1_169.jpeg?w=700&q=90",
+                width: 164.0,
+                height: 164.0,
+                fit: BoxFit.cover,
               ),
               const SizedBox(
                 height: 20.0,
               ),
               Container(
-                height: 160.0,
+                height: 200,
+                width: 200,
                 decoration: const BoxDecoration(
+                  color: Colors.blue,
+                  //decoration_image
                   image: DecorationImage(
                     image: NetworkImage(
-                      "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+                      "https://awsimages.detik.net.id/community/media/visual/2022/11/25/cristiano-ronaldo-3_169.jpeg?w=1200",
                     ),
                     fit: BoxFit.cover,
                   ),
+                  //radius
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: [
+                  Image.network(
+                    "https://i.ibb.co/S32HNjD/no-image.jpg",
+                    width: 64.0,
+                    height: 64.0,
+                    fit: BoxFit.fill,
+                  ),
+                  //textb30
+                  const Text(
+                    "text",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  //text30
+                  const Text(
+                    "text",
+                    style: TextStyle(
+                      fontSize: 30.0,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Column(
+                children: [
+                  Image.network(
+                    "https://i.ibb.co/S32HNjD/no-image.jpg",
+                    width: 64.0,
+                    height: 64.0,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    height: 12.0,
+                  ),
+                  const Text("text"),
+                ],
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              //circle_icon
+              const CircleAvatar(
+                //rd40
+                radius: 40.0,
+                backgroundColor: Colors.red,
+                child: Icon(
+                  Icons.add,
+                  color: Colors.yellow,
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              //circle_image
+              const CircleAvatar(
+                radius: 40.0,
+                backgroundImage: NetworkImage(
+                  "https://i.ibb.co/PGv8ZzG/me.jpg",
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: const [
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://i.ibb.co/PGv8ZzG/me.jpg",
+                    ),
+                  ),
+                  SizedBox(
+                    width: 12.0,
+                  ),
+                  Text("Muhammad Angga"),
+                ],
+              ),
+
+              /*
+              1. Bikin text, isi dengan "Nama saya Muhammad Angga"
+              */
+              const Text("Nama saya Muhammad angga"),
+              const Divider(),
+              /*
+              2. Bikin text "Hello Indonesia"
+              Buat tulisanya jadi bold,
+              Atur ukuran-nya menjadi 40
+              */
+              const Text(
+                "Hello Indonesia",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const Divider(),
+              /*
+              3. Atur warna teks "Muhammad" dan "Angga" menjadi tebal,
+              ukurannya 30 dan warnanya merah.
+              */
+              Row(
+                children: const [
+                  Text("Nama saya "),
+                  Text(
+                    "Muhammad ",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Text(
+                    "Angga",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+              const Divider(),
+              /*
+              4. Buatlah sebuah Row, isi dengan icon dan text
+              */
+              Row(
+                children: const [
+                  Icon(
+                    Icons.developer_board,
+                    size: 24.0,
+                  ),
+                  Text("text"),
+                ],
+              ),
+              const Divider(),
+              /*
+              5. Buatlah sebuah Column, isi dengan icon dan text
+              */
+              Column(
+                children: const [
+                  Icon(
+                    Icons.developer_board,
+                    size: 24.0,
+                  ),
+                  Text("text"),
+                ],
+              ),
+              const Divider(),
+              /*
+              6. Buatlah sebuah Column, isi dengan icon dan text.
+              Atur iconnya menjadi:
+              - Ubah iconnya menjadi Icons.dashboard
+              - Atur ukurannya menjadi 40
+              - Warnanya Merah
+              Atur teks-nya menjadi:
+              - Teks: "Dashboard"
+              - Ukurannya 40
+              - Warnanya, Putih
+              */
+              Column(
+                children: const [
+                  Icon(
+                    Icons.dashboard,
+                    size: 40.0,
+                    color: Colors.red,
+                  ),
+                  Text(
+                    "Dasboard",
+                    style: TextStyle(
+                      fontSize: 40,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              const Divider(),
+              /*
+              7. Buatlah sebuah image, dengan ukuran 200x100
+              Isi dengan gambar pikacu
+              Cari di google
+              */
+              Image.network(
+                "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//83/MTA-4211363/bluelans_bluelans_cute_cartoon_pokemon_pikachu_c002_car_sticker_full02.jpg",
+                width: 200.0,
+                height: 100.0,
+                fit: BoxFit.fill,
+              ),
+              const Divider(),
+              /*
+              8. Buatlah Column, isi dengan image dan text,
+              image:
+                - cari gambar son goku
+                - ubah ukurannya jadi 200x100
+              text
+                - ganti teks-nya jadi "Son Goku"
+                - Atur fontsize-nya jadi 30
+                - Atur warnanya jadi kuning (cYellow)
+              
+              Lalu, beri jarak antara Gambar dan text sebanyak 12
+              (sh12)
+              */
+              Column(
+                children: [
+                  Image.network(
+                    "https://rukminim1.flixcart.com/image/416/416/ky90scw0/poster/m/6/4/medium-redcloud-goku-ultra-instinct-wall-poster-for-room-for-original-imagagedrzjxskyj.jpeg?q=70",
+                    width: 200.0,
+                    height: 100.0,
+                    fit: BoxFit.fill,
+                  ),
+                  const Text(
+                    "Son Goku",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.yellow,
+                    ),
+                  ),
+                ],
+              ),
+              const Divider(),
+              /*
+              9. Buatlah Row, isi dengan image dan text,
+              image:
+                - cari gambar Doraemon
+                - ubah ukurannya jadi 120x120
+              text
+                - ganti teks-nya jadi "Doraemon"
+                - Atur fontsize-nya jadi 30
+                - Atur warnanya jadi kuning (cBlue)
+              
+              Lalu, beri jarak antara Gambar dan text sebanyak 20
+              (sw20)
+              */
+              Row(
+                children: [
+                  Image.network(
+                    "https://cdn.pixabay.com/photo/2019/10/16/09/09/doraemon-4553920_1280.png",
+                    width: 120.0,
+                    height: 120.0,
+                    fit: BoxFit.fill,
+                  ),
+                  const SizedBox(
+                    width: 20.0,
+                  ),
+                  const Text(
+                    "Doraemon",
+                    style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.blue,
+                    ),
+                  )
+                ],
+              ),
+              const Divider(),
+              /*
+              10. Buatlah sebuah Column, isi dengan circle_icon dan text
+              */
+              Column(
+                children: const [
+                  CircleAvatar(
+                    backgroundColor: Colors.blueGrey,
+                    child: Icon(Icons.add),
+                  ),
+                  Text("text"),
+                ],
+              ),
+              const Divider(),
+              /*
+              11. Buatlah sebuah Row, isi dengan circle_image dan text
+              ? Beri jarak sebanyak 12 (sw12)
+              */
+              Row(
+                children: const [
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://i.ibb.co/PGv8ZzG/me.jpg",
+                    ),
+                  ),
+                  SizedBox(
+                    width: 12.0,
+                  ),
+                  Text("text"),
+                ],
+              ),
+              const Divider(),
+              /*
+              12. Buatlah sebuah Column, isi dengan Gambar, text dan text
+              - Ubah gambarnya menjadi Messi
+              - Ubah teks pertama jadi Lionel
+              - Ubah teks kedua jadi Messi
+              */
+              Column(
+                children: [
+                  Image.network(
+                    "https://cdn-asset.jawapos.com/wp-content/uploads/2021/08/Messi-AFP-560x373.jpg",
+                    width: 64.0,
+                    height: 64.0,
+                    fit: BoxFit.fill,
+                  ),
+                  const Text("Lionel"),
+                  const Text("Messi"),
+                ],
+              ),
+              const Divider(),
+              Container(
+                height: 100.0,
+                padding: const EdgeInsets.all(12.0),
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
                   borderRadius: BorderRadius.all(
                     Radius.circular(
                       16.0,
                     ),
                   ),
                 ),
-                child: Stack(
+                child: Row(
                   children: [
-                    Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.black26,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(
-                            16.0,
+                    Image.network(
+                      "https://files.kfcku.com/uploads/media/dummy/food/thumbnail/kfc-web_sbspicysour-2_t.png",
+                      width: 64.0,
+                      height: 64.0,
+                      fit: BoxFit.fill,
+                    ),
+                    const SizedBox(
+                      width: 12.0,
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            "kfc",
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
+                          Text(
+                            "31rb",
+                            style: TextStyle(
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Positioned(
-                      left: 20.0,
-                      top: 0.0,
-                      bottom: 0.0,
-                      child: SizedBox(
-                        width: 100.0,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "30%",
-                              style: GoogleFonts.oswald(
-                                fontSize: 30.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              "Discount Only Valid for Today",
-                              style: GoogleFonts.oswald(
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
+                    const CircleAvatar(
+                      backgroundColor: Colors.red,
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.yellow,
                       ),
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  List<Marker> allMarkers = [
-                    Marker(
-                      point: LatLng(
-                        -6.1754234,
-                        106.827224,
-                      ),
-                      builder: (context) => const Icon(
-                        Icons.pin_drop,
-                        color: Colors.red,
-                        size: 24,
-                      ),
-                    ),
-                    Marker(
-                      point: LatLng(
-                        -6.1751234,
-                        106.826224,
-                      ),
-                      builder: (context) => const Icon(
-                        Icons.pin_drop,
-                        color: Colors.blue,
-                        size: 24,
-                      ),
-                    ),
-                  ];
-                  return SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    child: FlutterMap(
-                      options: MapOptions(
-                        center: LatLng(
-                          -6.1754234,
-                          106.827224,
-                        ),
-                        zoom: 16,
-                        interactiveFlags:
-                            InteractiveFlag.all - InteractiveFlag.rotate,
-                      ),
-                      children: [
-                        TileLayer(
-                          urlTemplate:
-                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                          userAgentPackageName:
-                              'dev.fleaflet.flutter_map.example',
-                        ),
-                        MarkerLayer(
-                          markers: allMarkers,
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        AreaSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        BarSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      isTransposed: true,
-                      primaryXAxis: NumericAxis(
-                        decimalPlaces: 0,
-                      ),
-                      series: <ChartSeries>[
-                        BarSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": "Jan",
-                      "sales": 40,
-                    },
-                    {
-                      "year": "Feb",
-                      "sales": 90,
-                    },
-                    {
-                      "year": "Mar",
-                      "sales": 30,
-                    },
-                    {
-                      "year": "Apr",
-                      "sales": 80,
-                    },
-                    {
-                      "year": "May",
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCircularChart(
-                      legend: Legend(isVisible: true),
-                      series: <CircularSeries>[
-                        PieSeries<Map, String>(
-                          dataSource: chartData,
-                          dataLabelSettings: const DataLabelSettings(
-                            isVisible: true,
-                          ),
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        ScatterSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        // Renders line chart
-                        LineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        SplineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        StepLineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
               ),
             ],
           ),

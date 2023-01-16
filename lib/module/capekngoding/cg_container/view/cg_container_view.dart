@@ -30,11 +30,9 @@ class CgContainerView extends StatefulWidget {
                 ),
               ),
               //#END
-              const SizedBox(
-                height: 20.0,
-              ),
-              //#TEMPLATE contrad
               const SnippetContainer("contrad"),
+
+              //#TEMPLATE contrad
               Container(
                 height: 100.0,
                 decoration: const BoxDecoration(

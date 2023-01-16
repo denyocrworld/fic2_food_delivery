@@ -4,12 +4,68 @@ import 'package:flutter/material.dart';
 /*
 ! LINK KOMUNITAS
 ? https://capekngoding.com/join
-
 ! Link Kelas Online
 ? https://capekngoding.com
 
+
 Bahasa: DART
 Framework: Flutter
+
+Basic Pemrograman
+- Variable
+- Operator Aritmatika
+- IF
+- List
+- Map
+- Looping
+- Function
+-------------------------
+
+Junior Programmer
+- Basic Pemrograman
+- OOP
+
+> Portofolio
+
+Front End
+- Bikin UI
+- Consume API
+
+Trik-nya gini, kalo lo ga punya portofolio:
+- Bikin 5 UI Aplikasi Populer | per Aplikasi 3-5 Halaman aja
+(Tokopedia, Shopee, Tiktok, Noice, Spotify, Netflix)
+- Bikin 5 UI dari dribbble, cari desain terbaik
+10 Portofolio - Mengesankan
+
+Buat 2-3 Aplikasi yang terintegrasi dengan API
+(Pake API Public)
+(Weather API, Movie API, dsb..)
+
+Belajar berfikir simple
+Jangan terlallu over thingking
+Kurangi membaca, banyakin latihan
+
+---
+Mungkin gan, lo bisa main gitar
+Tapi cuman baca buku gitar doang~
+Bahkan kalo lo hafal smua isi buka gitar,
+Belum tentu bisa main gitar.
+---
+lo hafalan bagus, hafal smua isi buku koding
+Tapi jarang ngoding
+Tetep lo ga lancar ngoding-nya.
+---
+
+Skill
+- Basic Pemrograman
+- OOP
+- Framework 
+- Bikin Portofolio
+Experience
+- Magang
+- Kerja Full time
+- Freelance
+- Bikin produk sendiri
 
 */
 
