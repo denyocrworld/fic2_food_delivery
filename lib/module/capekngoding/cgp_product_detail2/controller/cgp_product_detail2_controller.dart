@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/cgp_product_detail2_view.dart';
 
-class CgpProductDetail2Controller extends State<CgpProductDetail2View> implements MvcController {
+class CgpProductDetail2Controller extends State<CgpProductDetail2View>
+    implements MvcController {
   static late CgpProductDetail2Controller instance;
   late CgpProductDetail2View view;
 
@@ -17,4 +18,10 @@ class CgpProductDetail2Controller extends State<CgpProductDetail2View> implement
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  int selectedIndex = 0;
+  updateIndex(int newIndex) {
+    selectedIndex = newIndex;
+    setState(() {});
+  }
 }
