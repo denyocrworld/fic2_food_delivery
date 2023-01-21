@@ -1,12 +1,25 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
+
+/*
+Kelas Online /w DenyOcr - Gelombang 2 (6 February)
+Mau join?
+? Buka capekngoding.com
+*/
+
+/*
+Gaji Junior Programmer yang Realistis
+
+
+*/
 
 void main() async {
   await initialize();
 
-  Get.mainTheme.value = getDefaultTheme();
-  // Get.mainTheme.value = getDarkTheme();
+  // await FirebaseFirestore.instance.collection("products").get();
+
+  // Get.mainTheme.value = getDefaultTheme();
+  Get.mainTheme.value = getDarkTheme();
   runMainApp();
 }
 

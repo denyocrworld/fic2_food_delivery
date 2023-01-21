@@ -22,7 +22,7 @@ class CgMapView extends StatefulWidget {
               //#TEMPLATE map_fluttermap
               Builder(
                 builder: (context) {
-                  List<Marker> allMarkers = [
+                  List<Marker> markers = [
                     Marker(
                       point: LatLng(
                         -6.1754234,
@@ -55,7 +55,7 @@ class CgMapView extends StatefulWidget {
                               'dev.fleaflet.flutter_map.example',
                         ),
                         MarkerLayer(
-                          markers: allMarkers,
+                          markers: markers,
                         ),
                       ],
                     ),

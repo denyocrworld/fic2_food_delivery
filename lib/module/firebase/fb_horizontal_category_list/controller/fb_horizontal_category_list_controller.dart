@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/fb_horizontal_category_list_view.dart';
 
-class FbHorizontalCategoryListController extends State<FbHorizontalCategoryListView> implements MvcController {
+class FbHorizontalCategoryListController
+    extends State<FbHorizontalCategoryListView> implements MvcController {
   static late FbHorizontalCategoryListController instance;
   late FbHorizontalCategoryListView view;
 
@@ -17,4 +18,6 @@ class FbHorizontalCategoryListController extends State<FbHorizontalCategoryListV
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String selectedId = "";
 }

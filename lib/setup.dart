@@ -1,34 +1,34 @@
-// import 'package:hyper_ui/firebase_options.dart';
-import 'package:flutter/foundation.dart';
+import 'dart:io';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-import 'package:hyper_ui/_/service/service_example.dart';
-import 'package:path_provider/path_provider.dart';
+/*
+TODO: 
+Run this command if you don't already have firebase_options.dart
+flutterfire configure
+Docs: https://firebase.flutter.dev/docs/cli/
+*/
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await _initLocalStorage();
-  await _initFirebase();
+  if (Platform.isWindows) return;
+
+  // await Firebase.initializeApp(
+  //   //run > flutterfire configure
+  //   //and import DefaultFirebaseOptions!
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
+  await FirebaseAuth.instance.wait();
 }
 
-_initLocalStorage() async {
-  if (!kIsWeb) {
-    var path = await getTemporaryDirectory();
-    Hive.init(path.path);
+extension FirebaseAuthExtension on FirebaseAuth {
+  wait() async {
+    bool ready = false;
+    FirebaseAuth.instance.authStateChanges().listen((event) {
+      ready = true;
+    });
 
-    if (!kIsWeb) {
-      var path = await getTemporaryDirectory();
-      Hive.init(path.path);
+    while (ready == false) {
+      await Future.delayed(const Duration(milliseconds: 250));
     }
-    mainStorage = await Hive.openBox('mainStorage');
   }
-}
-
-_initFirebase() async {
-  // If you want to enable FirebaseFirestore
-  // if (!kIsWeb && !Platform.isWindows) {
-  //   await Firebase.initializeApp(
-  //     options: DefaultFirebaseOptions.currentPlatform,
-  //   );
-  // }
 }

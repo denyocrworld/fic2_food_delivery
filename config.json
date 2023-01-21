@@ -2,6 +2,7 @@
     "openai_key": "",
     "modules": [
         "firebase/fb_login",
+        "firebase/fb_register",
         "firebase/fb_list",
         "firebase/fb_order_list",
         "firebase/fb_horizontal_category_list",

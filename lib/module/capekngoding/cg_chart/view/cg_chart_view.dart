@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_container.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '../controller/cg_chart_controller.dart';
 
 //#GROUP_TEMPLATE chart
 class CgChartView extends StatefulWidget {
@@ -29,7 +27,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_line
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -59,7 +57,7 @@ class CgChartView extends StatefulWidget {
                       series: <ChartSeries>[
                         // Renders line chart
                         LineSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -73,7 +71,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_spline
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -102,7 +100,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         SplineSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -116,7 +114,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_bar_horizontal
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -145,7 +143,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         BarSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -159,7 +157,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_bar_vertical
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -192,7 +190,7 @@ class CgChartView extends StatefulWidget {
                       ),
                       series: <ChartSeries>[
                         BarSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -206,7 +204,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_scatter
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -235,7 +233,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         ScatterSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -249,7 +247,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_area
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -278,7 +276,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         AreaSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -292,7 +290,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_bubble
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -321,7 +319,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         BubbleSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -335,7 +333,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_step_line
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": 2018,
                       "sales": 40,
@@ -364,7 +362,7 @@ class CgChartView extends StatefulWidget {
                     child: SfCartesianChart(
                       series: <ChartSeries>[
                         StepLineSeries<Map, int>(
-                          dataSource: chartData,
+                          dataSource: items,
                           xValueMapper: (Map data, _) => data["year"],
                           yValueMapper: (Map data, _) => data["sales"],
                         )
@@ -378,7 +376,7 @@ class CgChartView extends StatefulWidget {
               //#TEMPLATE chart_pie
               Builder(
                 builder: (context) {
-                  final List<Map> chartData = [
+                  final List<Map> items = [
                     {
                       "year": "Jan",
                       "sales": 40,
@@ -408,7 +406,7 @@ class CgChartView extends StatefulWidget {
                       legend: Legend(isVisible: true),
                       series: <CircularSeries>[
                         PieSeries<Map, String>(
-                          dataSource: chartData,
+                          dataSource: items,
                           dataLabelSettings: const DataLabelSettings(
                             isVisible: true,
                           ),

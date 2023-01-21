@@ -14,6 +14,12 @@ class OcFirebaseView extends StatefulWidget {
         'page': const FbLoginView(),
       },
       {
+        'label': 'Register',
+        'icon': MdiIcons.keyboardOutline,
+        'color': Colors.blue,
+        'page': const FbRegisterView(),
+      },
+      {
         'label': 'List',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
@@ -77,7 +83,7 @@ class OcFirebaseView extends StatefulWidget {
         'label': 'CRUD',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const FbCrudListView(),
+        'page': FbCrudListView(),
       },
     ];
 

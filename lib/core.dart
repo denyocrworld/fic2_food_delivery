@@ -100,6 +100,8 @@ export 'package:hyper_ui/module/firebase/fb_order_list/controller/fb_order_list_
 export 'package:hyper_ui/module/firebase/fb_order_list/view/fb_order_list_view.dart';
 export 'package:hyper_ui/module/firebase/fb_radio/controller/fb_radio_controller.dart';
 export 'package:hyper_ui/module/firebase/fb_radio/view/fb_radio_view.dart';
+export 'package:hyper_ui/module/firebase/fb_register/controller/fb_register_controller.dart';
+export 'package:hyper_ui/module/firebase/fb_register/view/fb_register_view.dart';
 export 'package:hyper_ui/module/firebase/fb_statistic_card/controller/fb_statistic_card_controller.dart';
 export 'package:hyper_ui/module/firebase/fb_statistic_card/view/fb_statistic_card_view.dart';
 export 'package:hyper_ui/module/firebase/fb_upload_image/controller/fb_upload_image_controller.dart';
