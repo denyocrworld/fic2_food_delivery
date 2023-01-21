@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_list_controller.dart';
 
 class CgListView extends StatefulWidget {
   const CgListView({Key? key}) : super(key: key);
@@ -8,18 +7,13 @@ class CgListView extends StatefulWidget {
   Widget build(context, CgListController controller) {
     controller.view = this;
 
-    return Scaffold(
+    return QScaffold(
       appBar: AppBar(
         title: const Text("CgList"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
-        ),
+      body: Column(
+        children: const [],
       ),
     );
   }

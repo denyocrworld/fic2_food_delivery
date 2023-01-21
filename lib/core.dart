@@ -246,6 +246,7 @@ export 'package:hyper_ui/shared/widget/form/__form_detail_example.dart';
 export 'package:hyper_ui/shared/widget/form/__form_example.dart';
 export 'package:hyper_ui/shared/widget/list/list_view.dart';
 export 'package:hyper_ui/shared/widget/menu/menu.dart';
+export 'package:hyper_ui/shared/widget/scaffold/q_scaffold.dart';
 export 'core_package.dart';
 export 'state_util.dart';
 export 'setup.dart';

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_hyperui_dialog_controller.dart';
 
 class CgHyperuiDialogView extends StatefulWidget {
   const CgHyperuiDialogView({Key? key}) : super(key: key);
@@ -8,18 +7,13 @@ class CgHyperuiDialogView extends StatefulWidget {
   Widget build(context, CgHyperuiDialogController controller) {
     controller.view = this;
 
-    return Scaffold(
+    return QScaffold(
       appBar: AppBar(
         title: const Text("CgHyperuiDialog"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
-        ),
+      body: Column(
+        children: const [],
       ),
     );
   }
