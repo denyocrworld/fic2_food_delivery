@@ -33,12 +33,12 @@ ThemeData getDefaultTheme() {
       bodyText1: googleFont.copyWith(color: textColor1),
       bodyText2: googleFont.copyWith(color: textColor1),
     ),
-    cardTheme: CardTheme(
-      elevation: cardElevation,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(cardBorderRadius),
-      ),
-    ),
+    // cardTheme: const CardTheme(
+    // elevation: cardElevation,
+    // shape: RoundedRectangleBorder(
+    //   borderRadius: BorderRadius.circular(cardBorderRadius),
+    // ),
+    // ),
     chipTheme: const ChipThemeData(),
     tabBarTheme: TabBarTheme(
       labelColor: textColor1,

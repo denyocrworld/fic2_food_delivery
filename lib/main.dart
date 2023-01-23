@@ -8,9 +8,29 @@ Mau join?
 */
 
 /*
-Gaji Junior Programmer yang Realistis
+Dart Basic
+- Basic Pemrograman
+Variable
+Operator Aritmatika
+IF Statement
+List/Array
+Map
+Looping
+OOP
 
+- Flutter Basic
+Common Widget 
+Layout
+ListView & GridView
+Navigasi
+State Management
+HTTP Request
+Firebase
 
+Optional
+- Testing
+- Deploy ke Google Play/App Store
+- CICD
 */
 
 void main() async {
@@ -18,7 +38,7 @@ void main() async {
 
   // await FirebaseFirestore.instance.collection("products").get();
 
-  // Get.mainTheme.value = getDefaultTheme();
+  Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();
 }

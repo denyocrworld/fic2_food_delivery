@@ -136,7 +136,7 @@ class CgMainService {
       'label': 'GridView',
       'icon': MdiIcons.viewGridPlus,
       'color': Colors.cyan,
-      'page': Container(),
+      'page': const CgGridView(),
     },
     {
       'label': 'TableView',
