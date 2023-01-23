@@ -55,15 +55,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var response = Dio().get(
-      "https://reqres.in/api/users",
-      options: Options(
-        headers: {
-          "Content-Type": "application/json",
-        },
-      ),
-    );
-
     return ValueListenableBuilder(
       valueListenable: Get.mainTheme,
       builder: (context, value, child) {
