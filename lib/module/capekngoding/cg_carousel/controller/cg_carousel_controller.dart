@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
-import '../view/cg_carousel_view.dart';
+import 'package:hyper_ui/core.dart';
 
-class CgCarouselController extends State<CgCarouselView> implements MvcController {
+class CgCarouselController extends State<CgCarouselView>
+    implements MvcController {
   static late CgCarouselController instance;
   late CgCarouselView view;
 
@@ -17,4 +17,7 @@ class CgCarouselController extends State<CgCarouselView> implements MvcControlle
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  int currentIndex = 0;
+  final CarouselController carouselController = CarouselController();
 }
