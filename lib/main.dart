@@ -1,38 +1,34 @@
+import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 /*
-Kelas Online /w DenyOcr - Gelombang 2 (6 February)
-Mau join?
-? Buka capekngoding.com
-*/
+Front End
+- Membuat UI
+- Consume API
 
-/*
-Dart Basic
-- Basic Pemrograman
-Variable
-Operator Aritmatika
-IF Statement
-List/Array
-Map
-Looping
-OOP
-
-- Flutter Basic
-Common Widget 
-Layout
-ListView & GridView
-Navigasi
-State Management
-HTTP Request
-Firebase
-
-Optional
+---
+(Optional)
 - Testing
-- Deploy ke Google Play/App Store
-- CICD
-*/
+- Deploy
+- Paham Architecture
 
+------------
+
+1. Latihan Membuat UI
+Login
+SignUp
+Dashboard
+Profile
+EditProfile
+ListView
+DetailView
+
+Skill
+
+Experience
+POS
+*/
 void main() async {
   await initialize();
 
@@ -46,9 +42,6 @@ void main() async {
 runMainApp() async {
   return runApp(const MainApp());
 }
-
-//Buatlah sebuah function untuk
-//Alt+SHift+Enter
 
 class MainApp extends StatelessWidget {
   const MainApp({Key? key}) : super(key: key);

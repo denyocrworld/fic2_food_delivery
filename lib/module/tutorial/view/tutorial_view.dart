@@ -1,44 +1,60 @@
+import 'package:latlong2/latlong.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-
-// ! Kelas Online Dart/Flutter Gelombang 2
-// ? https://capekngoding.com
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 /*
-Kelas Tiktok hari ini:
-10:35 WIB
-? Bantu Share!!
+Junior Programmer
+Jakarta
+8 - 15
 
-Materi:
-- Card
-- ListTile
+Daerah
+4 - 8
 
-Layout
-- Row (Horizontal)
-- Column (Vertical)
-- Expanded
-- SingleChildScrollView
+Singapur
+15 - 35++
 
-============
-- Stack - Positioned
-- Wrap
+US/UK
+25 - 45++
 
-===============
+Front End
+- Bikin UI
+- Consume API
 
-MediaQuery
-  OrientationBuilder
-  LayoutBuilder
+Optional
+- Bisa Testing
+- Bisa deploy
+- Paham architecture
 
-===============
+Punya Portofolio
+Q: Bang, gw belum pernah ngerjain project apapun
+A: 
+1. Coba bikin 5 UI Aplikasi Populer
+Seperti Tokopedia, Tiktok, Shopee,
+(Per aplikasi, 3-5 halaman aja )
 
-- ListView
+2, Clone 5 UI dari Dribble, cari yang terbaik
 
-NamaWidget(
-  property: value,
+3. Bikin 1 Aplikasi yang terhubung dengan API
+(Movie API, Weather API, Forex API, Crypto API, dsb)
 
-)
+- 11 Portofolio
+
+
+Portofolio
+
+Skill
+- Login n get Token
+- CRUD
+- Proteksi Endpoint
+- Bikin Dokumentasi di Postman/Insomia/ThunderClient/Web
+
+Product
+- Ecommerce APi
+- Movie Api
+- Chat API (Biasanya pake Websocket)
+
 */
-
 class TutorialView extends StatefulWidget {
   const TutorialView({Key? key}) : super(key: key);
 
@@ -56,247 +72,156 @@ class TutorialView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              const Icon(
-                Icons.more_horiz,
-                size: 24.0,
-              ),
-              const CircleAvatar(
-                radius: 12.0,
-                backgroundColor: Colors.green,
-                child: Icon(
-                  Icons.check,
-                  color: Colors.white,
-                  size: 12.0,
-                ),
-              ),
-              const CircleAvatar(
-                radius: 12.0,
-                backgroundColor: Colors.green,
-                child: Icon(
-                  Icons.cloud_download,
-                  color: Colors.white,
-                  size: 12.0,
-                ),
-              ),
-              //====================================
-              const Card(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      "https://i.ibb.co/PGv8ZzG/me.jpg",
-                    ),
-                  ),
-                  title: Text(
-                    "Moby",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Text("71 songs"),
-                  trailing: CircleAvatar(
-                    radius: 10.0,
-                    backgroundColor: Colors.green,
-                    child: Icon(
-                      Icons.check,
-                      size: 10,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 12.0,
-              ),
-              const Card(
-                child: ListTile(
-                  leading: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      "https://i.ibb.co/PGv8ZzG/me.jpg",
-                    ),
-                  ),
-                  title: Text(
-                    "I Like it",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  subtitle: Text("Cardi B, Bad bunny & J Balvin"),
-                  trailing: Icon(
-                    Icons.cloud_download,
-                    size: 20.0,
-                  ),
-                ),
-              ),
-              //====================================
-              const Divider(),
-              const Divider(),
-              Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      "https://i.ibb.co/PGv8ZzG/me.jpg",
-                    ),
-                  ),
-                  title: Row(
-                    children: const [
-                      Text(
-                        "Tyler Phelps",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 6.0,
-                      ),
-                      Text(
-                        "Wao is amazing!",
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-                  subtitle: const Text("15 JAN 2018 8 Likes"),
-                  trailing: const Icon(
-                    Icons.favorite,
-                    size: 24.0,
-                  ),
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          "https://i.ibb.co/3pPYd14/freeban.jpg",
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    child: Stack(
-                      children: const [
-                        Positioned(
-                          right: 10,
-                          top: 10,
-                          child: Icon(Icons.more_horiz),
-                        ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": 2018,
+                      "sales": 40,
+                    },
+                    {
+                      "year": 2019,
+                      "sales": 90,
+                    },
+                    {
+                      "year": 2020,
+                      "sales": 30,
+                    },
+                    {
+                      "year": 2021,
+                      "sales": 80,
+                    },
+                    {
+                      "year": 2022,
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCartesianChart(
+                      series: <ChartSeries>[
+                        LineSeries<Map, int>(
+                          dataSource: chartData,
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
                       ],
                     ),
-                  ),
-                  const SizedBox(
-                    height: 12.0,
-                  ),
-                  const Text(
-                    "Daddy yankee | Dura (video oficial)",
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 18.0,
-                  ),
-                  const Text(
-                    "1B views 7 months ago",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const Text(
-                    "Daddy yankee",
-                    style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-
-              //====================================
-              const SizedBox(
-                height: 30.0,
-              ),
-              Container(
-                height: 200,
-                width: 200,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://i.ibb.co/3pPYd14/freeban.jpg",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      child: Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.4),
-                        ),
-                      ),
-                    ),
-                    const Positioned(
-                      right: 10,
-                      top: 10,
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: Icon(
-                          Icons.favorite,
-                          color: Colors.red,
-                        ),
-                      ),
-                    ),
-                    const Positioned(
-                      right: 10,
-                      bottom: 20,
-                      child: Text(
-                        "Hello World",
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 2.0,
-              ),
-              CircleAvatar(
-                radius: MediaQuery.of(context).size.width * 0.2,
-                backgroundImage: const NetworkImage(
-                  "https://i.ibb.co/PGv8ZzG/me.jpg",
-                ),
+                  );
+                },
               ),
               const SizedBox(
                 height: 20.0,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: const BoxDecoration(
-                  color: Colors.blue,
-                ),
+              Builder(
+                builder: (context) {
+                  List<Marker> allMarkers = [
+                    Marker(
+                      point: LatLng(
+                        -6.1754234,
+                        106.827224,
+                      ),
+                      builder: (context) => const Icon(
+                        Icons.pin_drop,
+                        color: Colors.red,
+                        size: 24,
+                      ),
+                    ),
+                  ];
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    child: FlutterMap(
+                      options: MapOptions(
+                        center: LatLng(
+                          -6.1754234,
+                          106.827224,
+                        ),
+                        zoom: 16,
+                        interactiveFlags:
+                            InteractiveFlag.all - InteractiveFlag.rotate,
+                      ),
+                      children: [
+                        TileLayer(
+                          urlTemplate:
+                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                          userAgentPackageName:
+                              'dev.fleaflet.flutter_map.example',
+                        ),
+                        MarkerLayer(
+                          markers: allMarkers,
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: const BoxDecoration(
-                  color: Colors.red,
-                ),
+              const SizedBox(
+                height: 20.0,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                decoration: const BoxDecoration(
-                  color: Colors.yellow,
-                ),
+              Builder(
+                builder: (context) {
+                  final List<Map> chartData = [
+                    {
+                      "year": "Jan",
+                      "sales": 40,
+                    },
+                    {
+                      "year": "Feb",
+                      "sales": 90,
+                    },
+                    {
+                      "year": "Mar",
+                      "sales": 30,
+                    },
+                    {
+                      "year": "Apr",
+                      "sales": 80,
+                    },
+                    {
+                      "year": "May",
+                      "sales": 90,
+                    }
+                  ];
+
+                  return Container(
+                    color: Theme.of(context).cardColor,
+                    padding: const EdgeInsets.all(12.0),
+                    child: SfCircularChart(
+                      legend: Legend(isVisible: true),
+                      series: <CircularSeries>[
+                        PieSeries<Map, String>(
+                          dataSource: chartData,
+                          dataLabelSettings: const DataLabelSettings(
+                            isVisible: true,
+                          ),
+                          xValueMapper: (Map data, _) => data["year"],
+                          yValueMapper: (Map data, _) => data["sales"],
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              QDropdownField(
+                label: "Roles",
+                hint: "Your roles",
+                validator: Validator.required,
+                items: const [
+                  {
+                    "label": "Admin",
+                    "value": 1,
+                  },
+                  {
+                    "label": "Staff",
+                    "value": 2,
+                  }
+                ],
+                onChanged: (value, label) {},
               ),
             ],
           ),

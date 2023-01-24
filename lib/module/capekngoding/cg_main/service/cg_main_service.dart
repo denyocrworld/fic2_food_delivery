@@ -40,7 +40,7 @@ class CgMainService {
 
   static List<Map> onlineClassMenuList = [
     {
-      'label': 'State Management',
+      'label': 'Layout',
       'icon': MdiIcons.keyboardOutline,
       'color': Colors.blue,
       'page': const OcStateManagementView(),
@@ -56,6 +56,26 @@ class CgMainService {
       'icon': MdiIcons.firebase,
       'color': Colors.green,
       'page': const OcFirebaseView(),
+    },
+  ];
+  static List<Map> onlineClassExercises = [
+    {
+      'label': 'Layout',
+      'icon': MdiIcons.keyboardOutline,
+      'color': Colors.blue,
+      'page': const ExLayoutView(),
+    },
+    {
+      'label': 'State Management',
+      'icon': MdiIcons.keyboardOutline,
+      'color': Colors.blue,
+      'page': Container(),
+    },
+    {
+      'label': 'HTTP Request',
+      'icon': MdiIcons.keyboardOutline,
+      'color': Colors.blue,
+      'page': Container(),
     },
   ];
 

@@ -14,6 +14,13 @@
         "firebase/fb_statistic_card",
         "firebase/fb_upload_image",
         "firebase/fb_crud_list",
-        "firebase/fb_crud_form"
+        "firebase/fb_crud_form",
+        "online_class/ex_layout",
+        "online_class/exl_login1",
+        "online_class/exl_login2",
+        "online_class/exl_signup1",
+        "online_class/exl_signup2",
+        "online_class/exl_dashboard1",
+        "online_class/exl_dashboard2"
     ]
 }

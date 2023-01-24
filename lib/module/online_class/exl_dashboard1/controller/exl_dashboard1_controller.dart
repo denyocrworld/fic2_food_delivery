@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/state_util.dart';
+import '../view/exl_dashboard1_view.dart';
 
-class TutorialController extends State<TutorialView> implements MvcController {
-  static late TutorialController instance;
-  late TutorialView view;
+class ExlDashboard1Controller extends State<ExlDashboard1View>
+    implements MvcController {
+  static late ExlDashboard1Controller instance;
+  late ExlDashboard1View view;
 
   @override
   void initState() {
@@ -16,6 +18,22 @@ class TutorialController extends State<TutorialView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  List images = [
+    "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=781&q=80",
+    "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+    "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80",
+  ];
+
+  List categories = [
+    "Shoes",
+    "Shirts",
+    "Watches",
+    "Jeans",
+  ];
+
   List products = [
     {
       "id": 1,
@@ -138,13 +156,4 @@ class TutorialController extends State<TutorialView> implements MvcController {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
-
-  double get total {
-    var itemTotal = 0.0;
-    for (var product in products) {
-      product["qty"] ??= 0;
-      itemTotal += product["qty"] * product["price"];
-    }
-    return itemTotal;
-  }
 }
