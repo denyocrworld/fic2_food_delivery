@@ -1,7 +1,5 @@
-import 'package:latlong2/latlong.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 /*
 Junior Programmer
@@ -66,165 +64,89 @@ class TutorialView extends StatefulWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        controller: ScrollController(),
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": 2018,
-                      "sales": 40,
-                    },
-                    {
-                      "year": 2019,
-                      "sales": 90,
-                    },
-                    {
-                      "year": 2020,
-                      "sales": 30,
-                    },
-                    {
-                      "year": 2021,
-                      "sales": 80,
-                    },
-                    {
-                      "year": 2022,
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCartesianChart(
-                      series: <ChartSeries>[
-                        LineSeries<Map, int>(
-                          dataSource: chartData,
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
+      body: Container(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(
+                vertical: 6.0,
+                horizontal: 12.0,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.grey[200],
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(20.0),
+                ),
+              ),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.grey[500],
                     ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  List<Marker> allMarkers = [
-                    Marker(
-                      point: LatLng(
-                        -6.1754234,
-                        106.827224,
+                  ),
+                  Expanded(
+                    child: TextFormField(
+                      initialValue: null,
+                      style: const TextStyle(
+                        color: Colors.grey,
                       ),
-                      builder: (context) => const Icon(
-                        Icons.pin_drop,
-                        color: Colors.red,
-                        size: 24,
+                      decoration: InputDecoration.collapsed(
+                        filled: true,
+                        fillColor: Colors.transparent,
+                        hintText: "What are you craving?",
+                        hintStyle: TextStyle(
+                          color: Colors.grey[500],
+                        ),
+                        hoverColor: Colors.transparent,
                       ),
+                      onFieldSubmitted: (value) {
+                        controller.search = value;
+                        controller.setState(() {});
+                      },
                     ),
-                  ];
-                  return SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.4,
-                    child: FlutterMap(
-                      options: MapOptions(
-                        center: LatLng(
-                          -6.1754234,
-                          106.827224,
-                        ),
-                        zoom: 16,
-                        interactiveFlags:
-                            InteractiveFlag.all - InteractiveFlag.rotate,
-                      ),
-                      children: [
-                        TileLayer(
-                          urlTemplate:
-                              'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-                          userAgentPackageName:
-                              'dev.fleaflet.flutter_map.example',
-                        ),
-                        MarkerLayer(
-                          markers: allMarkers,
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Builder(
-                builder: (context) {
-                  final List<Map> chartData = [
-                    {
-                      "year": "Jan",
-                      "sales": 40,
-                    },
-                    {
-                      "year": "Feb",
-                      "sales": 90,
-                    },
-                    {
-                      "year": "Mar",
-                      "sales": 30,
-                    },
-                    {
-                      "year": "Apr",
-                      "sales": 80,
-                    },
-                    {
-                      "year": "May",
-                      "sales": 90,
-                    }
-                  ];
-
-                  return Container(
-                    color: Theme.of(context).cardColor,
-                    padding: const EdgeInsets.all(12.0),
-                    child: SfCircularChart(
-                      legend: Legend(isVisible: true),
-                      series: <CircularSeries>[
-                        PieSeries<Map, String>(
-                          dataSource: chartData,
-                          dataLabelSettings: const DataLabelSettings(
-                            isVisible: true,
-                          ),
-                          xValueMapper: (Map data, _) => data["year"],
-                          yValueMapper: (Map data, _) => data["sales"],
-                        )
-                      ],
-                    ),
-                  );
-                },
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              QDropdownField(
-                label: "Roles",
-                hint: "Your roles",
-                validator: Validator.required,
-                items: const [
-                  {
-                    "label": "Admin",
-                    "value": 1,
-                  },
-                  {
-                    "label": "Staff",
-                    "value": 2,
-                  }
+                  ),
                 ],
-                onChanged: (value, label) {},
               ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: controller.products.length,
+                itemBuilder: (context, index) {
+                  var item = controller.products[index];
+
+                  if (controller.search.isNotEmpty) {
+                    var search = controller.search.toLowerCase();
+                    var productName =
+                        item["product_name"].toString().toLowerCase();
+
+                    if (!productName.contains(search)) {
+                      return Container();
+                    }
+                  }
+
+                  return Card(
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.grey[200],
+                        backgroundImage: NetworkImage(
+                          item["photo"],
+                        ),
+                      ),
+                      title: Text(item["product_name"]),
+                      subtitle: Text("${item["price"]}"),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
