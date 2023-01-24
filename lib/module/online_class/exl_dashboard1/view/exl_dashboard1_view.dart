@@ -111,6 +111,7 @@ class ExlDashboard1View extends StatefulWidget {
             CarouselSlider(
               options: CarouselOptions(
                 height: 160.0,
+                autoPlay: true,
               ),
               items: controller.images.map((imageUrl) {
                 return Builder(

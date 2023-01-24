@@ -2,33 +2,6 @@ import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
-/*
-Front End
-- Membuat UI
-- Consume API
-
----
-(Optional)
-- Testing
-- Deploy
-- Paham Architecture
-
-------------
-
-1. Latihan Membuat UI
-Login
-SignUp
-Dashboard
-Profile
-EditProfile
-ListView
-DetailView
-
-Skill
-
-Experience
-POS
-*/
 void main() async {
   await initialize();
 
