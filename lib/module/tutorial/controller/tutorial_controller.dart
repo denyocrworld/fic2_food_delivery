@@ -18,6 +18,7 @@ class TutorialController extends State<TutorialView> implements MvcController {
   Widget build(BuildContext context) => widget.build(context, this);
 
   String search = "";
+  bool gridMode = false;
   List products = [
     {
       "id": 1,
@@ -140,4 +141,13 @@ class TutorialController extends State<TutorialView> implements MvcController {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
+
+  double get total {
+    double itemTotal = 0.0;
+    for (var product in products) {
+      product["qty"] ??= 0;
+      itemTotal += product["qty"] * product["price"];
+    }
+    return itemTotal;
+  }
 }

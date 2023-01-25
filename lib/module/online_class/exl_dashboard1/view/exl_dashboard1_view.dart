@@ -248,7 +248,7 @@ class ExlDashboard1View extends StatefulWidget {
                   ),
                   //ALT+SHIFT+H
                   SizedBox(
-                    height: 80.0 + 153,
+                    height: 80.0 + 160,
                     child: ListView.builder(
                       itemCount: controller.products.length,
                       scrollDirection: Axis.horizontal,

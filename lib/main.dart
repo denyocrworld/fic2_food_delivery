@@ -2,19 +2,9 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 /*
-- Latihan Bikin UI
-
-Referensi:
-- Google
-- Dribbble
-- Figma Community
-- UI8.NET
-- Behance
-
-Format
-- Gambar (jpg/png)
-- Figma, Adobe XD
-
+! Kelas Online Flutter
+Harga Mahasiswa: 88k 
+? MAU JOIN tinyurl.com/kelas-flutter | 2 Hari Lagi Pendaftaran di TUTUP!
 */
 void main() async {
   await initialize();

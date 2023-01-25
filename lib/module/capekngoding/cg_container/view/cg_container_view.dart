@@ -18,6 +18,7 @@ class CgContainerView extends StatefulWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SnippetContainer("con"),
+          //#TEMPLATE con
           Container(
             height: 100,
             width: 100,
@@ -25,7 +26,10 @@ class CgContainerView extends StatefulWidget {
               color: Colors.blue,
             ),
           ),
+          //#END
           const SnippetContainer("contrad"),
+
+          //#TEMPLATE contrad
           Container(
             height: 100.0,
             decoration: const BoxDecoration(
@@ -37,7 +41,9 @@ class CgContainerView extends StatefulWidget {
               ),
             ),
           ),
+          //#END
           const SnippetContainer("conimage"),
+          //#TEMPLATE conimage
           Container(
             height: 160.0,
             decoration: const BoxDecoration(
@@ -54,7 +60,9 @@ class CgContainerView extends StatefulWidget {
               ),
             ),
           ),
+          //#END
           const SnippetContainer("confav"),
+          //#TEMPLATE confav
           Container(
             height: 164.0,
             width: 164.0,
@@ -96,7 +104,9 @@ class CgContainerView extends StatefulWidget {
               ],
             ),
           ),
+          //#END
           const SnippetContainer("conproduct"),
+          //#TEMPLATE conproduct
           Container(
             height: 164.0,
             width: 164.0,
@@ -152,22 +162,32 @@ class CgContainerView extends StatefulWidget {
               ],
             ),
           ),
+          //#END
           const SizedBox(
             height: 20.0,
           ),
           Container(
+            //#TEMPLATE decoration
             decoration: const BoxDecoration(),
+            //#END
           ),
+
+          //----------------------------------------
           Container(
             height: 100.0,
             decoration: BoxDecoration(
+              //#TEMPLATE border
               border: Border.all(
                 width: 1.0,
                 color: Colors.grey[900]!,
               ),
+              //#END
+              //#TEMPLATE radius
               borderRadius: const BorderRadius.all(
                 Radius.circular(12.0),
               ),
+              //#END
+              //#TEMPLATE shadow
               boxShadow: const [
                 BoxShadow(
                   color: Color(0x19000000),
@@ -175,12 +195,16 @@ class CgContainerView extends StatefulWidget {
                   offset: Offset(0, 11),
                 ),
               ],
+              //#END
+              //#TEMPLATE decoration_image
               image: const DecorationImage(
                 image: NetworkImage(
                   "https://i.ibb.co/3pPYd14/freeban.jpg",
                 ),
                 fit: BoxFit.cover,
               ),
+              //#END
+              //#TEMPLATE gradient
               gradient: const LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
@@ -189,8 +213,13 @@ class CgContainerView extends StatefulWidget {
                   Colors.red,
                 ],
               ),
+              //#END
             ),
           ),
+          //----------------------------------------
+          //----------------------------------------
+          //----------------------------------------
+          //#TEMPLATE ch3
           Container(
             width: 100.0,
             color: Colors.red,
@@ -203,6 +232,8 @@ class CgContainerView extends StatefulWidget {
             width: 100.0,
             color: Colors.red,
           ),
+          //#END
+          //#TEMPLATE cv3
           Container(
             height: 100.0,
             color: Colors.green,
@@ -215,6 +246,7 @@ class CgContainerView extends StatefulWidget {
             height: 100.0,
             color: Colors.purple,
           ),
+          //#END
         ],
       ),
     );
