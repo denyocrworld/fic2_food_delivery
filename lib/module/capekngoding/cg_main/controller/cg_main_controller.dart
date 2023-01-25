@@ -26,7 +26,7 @@ class CgMainController extends State<CgMainView> implements MvcController {
 
   updateTheme() {
     lightMode = !lightMode;
-    Get.mainTheme.value = lightMode ? getDarkTheme() : getDefaultTheme();
+    Get.mainTheme.value = lightMode ? getDefaultTheme() : getDarkTheme();
     setState(() {});
   }
 }
