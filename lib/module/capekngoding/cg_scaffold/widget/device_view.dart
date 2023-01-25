@@ -39,7 +39,7 @@ class DeviceView extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const SnippetContainer("scaffold_bottom_navigation_bar"),
+          SnippetContainer(snippet),
           Expanded(
             child: child,
           ),

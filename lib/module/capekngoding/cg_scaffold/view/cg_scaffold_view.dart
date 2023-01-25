@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_bottom_navigationbar.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_drawer.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_image.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_simple.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_sliver_appbar.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_tabbar_vertical.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/widget/device_view.dart';
 
 class CgScaffoldView extends StatefulWidget {
   const CgScaffoldView({Key? key}) : super(key: key);
@@ -51,10 +43,6 @@ class CgScaffoldView extends StatefulWidget {
               DeviceView(
                 snippet: "scaffold_tabbar_horizontal",
                 child: TemplateScaffoldTabbarHorizontal(),
-              ),
-              DeviceView(
-                snippet: "scaffold",
-                child: TemplateScaffold(),
               ),
             ],
           ),
