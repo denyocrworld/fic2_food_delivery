@@ -73,6 +73,21 @@ class DevDocsView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 //#END
               ),
+              Column(
+                //#TEMPLATE mainspacebetween
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //#END
+              ),
+              Column(
+                //#TEMPLATE mainspacearound
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //#END
+              ),
+              Column(
+                //#TEMPLATE mainspacearound
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //#END
+              ),
               ListView.builder(
                 shrinkWrap: true,
                 itemCount: 0,

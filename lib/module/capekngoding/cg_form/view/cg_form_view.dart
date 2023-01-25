@@ -22,6 +22,7 @@ class CgFormView extends StatefulWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SnippetContainer("form_rounded_textfield"),
                       //#TEMPLATE form_rounded_textfield
