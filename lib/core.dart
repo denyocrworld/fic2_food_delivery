@@ -78,6 +78,16 @@ export 'package:hyper_ui/module/capekngoding/cg_premade_report/controller/cg_pre
 export 'package:hyper_ui/module/capekngoding/cg_premade_report/view/cg_premade_report_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_scaffold/controller/cg_scaffold_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_scaffold/view/cg_scaffold_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/widget/device_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_bottom_navigationbar.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_drawer.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_image.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_menu.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_ovo.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_simple.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_sliver_appbar.dart';
+export 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_tabbar_vertical.dart';
 export 'package:hyper_ui/module/capekngoding/cg_table/controller/cg_table_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_table/view/cg_table_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_text/controller/cg_text_controller.dart';
