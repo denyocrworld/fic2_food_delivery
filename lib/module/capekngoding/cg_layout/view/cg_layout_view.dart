@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import '../controller/cg_layout_controller.dart';
 
 class CgLayoutView extends StatefulWidget {
   const CgLayoutView({Key? key}) : super(key: key);
@@ -7,13 +8,18 @@ class CgLayoutView extends StatefulWidget {
   Widget build(context, CgLayoutController controller) {
     controller.view = this;
 
-    return QScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("CgLayout"),
         actions: const [],
       ),
-      body: Column(
-        children: const [],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: const [],
+          ),
+        ),
       ),
     );
   }

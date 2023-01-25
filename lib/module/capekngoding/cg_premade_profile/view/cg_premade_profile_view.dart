@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import '../controller/cg_premade_profile_controller.dart';
 
 class CgPremadeProfileView extends StatefulWidget {
   const CgPremadeProfileView({Key? key}) : super(key: key);
@@ -7,13 +8,18 @@ class CgPremadeProfileView extends StatefulWidget {
   Widget build(context, CgPremadeProfileController controller) {
     controller.view = this;
 
-    return QScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("CgPremadeProfile"),
         actions: const [],
       ),
-      body: Column(
-        children: const [],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: const [],
+          ),
+        ),
       ),
     );
   }

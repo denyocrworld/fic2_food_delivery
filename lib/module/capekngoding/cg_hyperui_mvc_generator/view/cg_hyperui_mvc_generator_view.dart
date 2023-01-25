@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import '../controller/cg_hyperui_mvc_generator_controller.dart';
 
 class CgHyperuiMvcGeneratorView extends StatefulWidget {
   const CgHyperuiMvcGeneratorView({Key? key}) : super(key: key);
@@ -7,13 +8,18 @@ class CgHyperuiMvcGeneratorView extends StatefulWidget {
   Widget build(context, CgHyperuiMvcGeneratorController controller) {
     controller.view = this;
 
-    return QScaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("CgHyperuiMvcGenerator"),
         actions: const [],
       ),
-      body: Column(
-        children: const [],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: const [],
+          ),
+        ),
       ),
     );
   }

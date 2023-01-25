@@ -107,20 +107,5 @@ class CgHotkeyService {
       "hotkey": "Alt + Shift + 0",
       "action": "Open config.json",
     },
-    {
-      "title": "Firebase",
-    },
-    {
-      "hotkey": "Ctrl + Alt + Shift + Q",
-      "action": "Wrap with StreambuilderItemDoc",
-    },
-    {
-      "hotkey": "Ctrl + Alt + Shift + W",
-      "action": "Wrap with StreambuilderItemList",
-    },
-    {
-      "hotkey": "Ctrl + Alt + Shift + E",
-      "action": "Wrap ListView with StreamBuilder",
-    },
   ];
 }
