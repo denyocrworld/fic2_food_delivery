@@ -84,8 +84,8 @@ class DevDocsView extends StatelessWidget {
                 //#END
               ),
               Column(
-                //#TEMPLATE mainspacearound
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //#TEMPLATE mainspaceevently
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 //#END
               ),
               ListView.builder(
