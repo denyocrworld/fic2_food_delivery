@@ -1,8 +1,10 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/exl_dashboard2_view.dart';
 
-class ExlDashboard2Controller extends State<ExlDashboard2View> implements MvcController {
+class ExlDashboard2Controller extends State<ExlDashboard2View>
+    implements MvcController {
   static late ExlDashboard2Controller instance;
   late ExlDashboard2View view;
 
@@ -17,4 +19,7 @@ class ExlDashboard2Controller extends State<ExlDashboard2View> implements MvcCon
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  int currentIndex = 0;
+  final CarouselController carouselController = CarouselController();
 }
