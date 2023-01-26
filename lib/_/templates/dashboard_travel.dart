@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class TemplateDashboardTravelView extends StatelessWidget {
@@ -139,7 +139,7 @@ class TemplateDashboardTravelView extends StatelessWidget {
                             "Hi,Brooklyn",
                             style: Theme.of(context)
                                 .textTheme
-                                .caption!
+                                .bodySmall!
                                 .copyWith(fontSize: 14),
                           ),
                           Row(
@@ -170,7 +170,7 @@ class TemplateDashboardTravelView extends StatelessWidget {
                         },
                         child: SizedBox(
                           width: 32.0,
-                          child: Badge(
+                          child: badges.Badge(
                             badgeContent: const Text(
                               "2",
                               style: TextStyle(
@@ -197,7 +197,7 @@ class TemplateDashboardTravelView extends StatelessWidget {
                         },
                         child: SizedBox(
                           width: 32.0,
-                          child: Badge(
+                          child: badges.Badge(
                             badgeContent: const Text(
                               "4",
                               style: TextStyle(
@@ -464,7 +464,7 @@ class TemplateDashboardTravelView extends StatelessWidget {
                                                   item["location"],
                                                   style: Theme.of(context)
                                                       .textTheme
-                                                      .caption,
+                                                      .bodySmall,
                                                 ),
                                               ],
                                             ),
@@ -593,7 +593,7 @@ class TemplateDashboardTravelView extends StatelessWidget {
                                                       e["location"]!,
                                                       style: Theme.of(context)
                                                           .textTheme
-                                                          .caption,
+                                                          .bodySmall,
                                                     ),
                                                   ],
                                                 ),
