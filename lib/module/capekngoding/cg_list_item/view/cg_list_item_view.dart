@@ -191,7 +191,7 @@ class CgListItemView extends StatefulWidget {
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: NetworkImage(
-                              "https://i.ibb.co/3pPYd14/freeban.jpg",
+                              "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
                             ),
                             fit: BoxFit.cover,
                           ),
