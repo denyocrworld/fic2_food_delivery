@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_navigation_controller.dart';
 
 class CgNavigationView extends StatefulWidget {
   const CgNavigationView({Key? key}) : super(key: key);
@@ -15,9 +14,38 @@ class CgNavigationView extends StatefulWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: const [],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SnippetContainer("navpush"),
+              Text(
+                """
+Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => Container()),
+);
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("navback"),
+              Text(
+                """
+Navigator.pop(context);
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("navreplace"),
+              Text(
+                """
+Navigator.pushReplacement(
+  context,
+  MaterialPageRoute(builder: (context) => Container()),
+);
+"""
+                    .trim(),
+              ),
+            ],
           ),
         ),
       ),

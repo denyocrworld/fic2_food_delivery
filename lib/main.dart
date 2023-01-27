@@ -5,7 +5,11 @@ import 'package:flutter/material.dart';
 ! Kelas Online Flutter
 Harga Mahasiswa: 88k 
 ? MAU JOIN tinyurl.com/kelas-flutter | 2 Hari Lagi Pendaftaran di TUTUP!
+
+BASIC DART~
 */
+
+//CTRL+SHIFT+ALT+1
 void main() async {
   await initialize();
 

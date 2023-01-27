@@ -169,6 +169,71 @@ class CgContainerView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
+              const SnippetContainer("decoration"),
+              Text(
+                """
+decoration: const BoxDecoration(),
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("border"),
+              Text(
+                """
+border: Border.all(
+  width: 1.0,
+  color: Colors.grey[900]!,
+),
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("radius"),
+              Text(
+                """
+borderRadius: const BorderRadius.all(
+  Radius.circular(12.0),
+),
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("shadow"),
+              Text(
+                """
+boxShadow: const [
+  BoxShadow(
+    color: Color(0x19000000),
+    blurRadius: 24,
+    offset: Offset(0, 11),
+  ),
+],
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("decoration_image"),
+              Text(
+                """
+image: const DecorationImage(
+  image: NetworkImage(
+    "https://i.ibb.co/3pPYd14/freeban.jpg",
+  ),
+  fit: BoxFit.cover,
+),
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("gradient"),
+              Text(
+                """
+ gradient: const LinearGradient(
+  begin: Alignment.topRight,
+  end: Alignment.bottomLeft,
+  colors: [
+    Colors.blue,
+    Colors.red,
+  ],
+),
+"""
+                    .trim(),
+              ),
               Container(
                 //#TEMPLATE decoration
                 decoration: const BoxDecoration(),
@@ -222,34 +287,6 @@ class CgContainerView extends StatefulWidget {
               //----------------------------------------
               //----------------------------------------
               //----------------------------------------
-              //#TEMPLATE ch3
-              Container(
-                width: 100.0,
-                color: Colors.red,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.red,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.red,
-              ),
-              //#END
-              //#TEMPLATE cv3
-              Container(
-                height: 100.0,
-                color: Colors.green,
-              ),
-              Container(
-                height: 100.0,
-                color: Colors.blue,
-              ),
-              Container(
-                height: 100.0,
-                color: Colors.purple,
-              ),
-              //#END
             ],
           ),
         ),

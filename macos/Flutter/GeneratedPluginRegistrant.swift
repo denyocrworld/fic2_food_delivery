@@ -11,7 +11,7 @@ import firebase_auth
 import firebase_core
 import geolocator_apple
 import mobile_scanner
-import path_provider_macos
+import path_provider_foundation
 import sqflite
 import url_launcher_macos
 
