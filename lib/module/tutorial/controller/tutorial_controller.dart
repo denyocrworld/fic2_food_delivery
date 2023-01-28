@@ -8,7 +8,7 @@ class TutorialController extends State<TutorialView> implements MvcController {
   @override
   void initState() {
     instance = this;
-    getUsers();
+    getProducts();
     super.initState();
   }
 
@@ -17,16 +17,29 @@ class TutorialController extends State<TutorialView> implements MvcController {
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
-  int selectedIndex = 0;
-  updateIndex(int newIndex) {
-    selectedIndex = newIndex;
-    setState(() {});
+
+  List products = [];
+  doGenerate() async {
+    for (var i = 0; i < 5; i++) {
+      var response = await Dio().post(
+        "http://localhost:8080/deny/api/products",
+        options: Options(
+          headers: {
+            "Content-Type": "application/json",
+          },
+        ),
+        data: {
+          "product_name": "Product #$i",
+          "price": 15.25,
+        },
+      );
+    }
+    await getProducts();
   }
 
-  List users = [];
-  getUsers() async {
+  getProducts() async {
     var response = await Dio().get(
-      "https://reqres.in/api/users",
+      "http://localhost:8080/deny/api/products",
       options: Options(
         headers: {
           "Content-Type": "application/json",
@@ -34,10 +47,35 @@ class TutorialController extends State<TutorialView> implements MvcController {
       ),
     );
     Map obj = response.data;
-    users = obj["data"];
+    products = obj["data"];
     setState(() {});
   }
 
   int currentIndex = 0;
   final CarouselController carouselController = CarouselController();
 }
+/*
+Backend
+---
+Bahasa Pemrograman = PHP | GOLANG | PYTHON
+Bikin API
+Bikin Dokumentasi
+Bikin Testing
+Deploy utk mode produksi
+
+Framework:
+ExpressJS
+Laravel
+Beego, GIN
+Djanggo
+
+
+Front End
+---
+Bikin UI
+Consume API
+
+Full Stack
+--=
+
+*/

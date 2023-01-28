@@ -1,13 +1,10 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
-
 /*
-! Kelas Online Flutter
-Harga Mahasiswa: 88k 
-? MAU JOIN tinyurl.com/kelas-flutter | 2 Hari Lagi Pendaftaran di TUTUP!
-
-BASIC DART~
-*/
+  Kelas Online /w DenyOcr
+  Start: Awal February Gelombang 2
+  ? capekngoding.com
+  */
 
 //CTRL+SHIFT+ALT+1
 void main() async {
