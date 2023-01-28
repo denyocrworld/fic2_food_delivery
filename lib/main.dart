@@ -35,6 +35,7 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const CgMainView(),
+          // home: const GegeGeminkDashboardUiView(),
           // home: ContohView(),
           // home: TutorialView(),
           builder: (context, child) {

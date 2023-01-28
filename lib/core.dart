@@ -221,6 +221,8 @@ export 'package:hyper_ui/module/online_class/state_management/sm_visibility/cont
 export 'package:hyper_ui/module/online_class/state_management/sm_visibility/view/sm_visibility_view.dart';
 export 'package:hyper_ui/module/pos/controller/pos_controller.dart';
 export 'package:hyper_ui/module/pos/view/pos_view.dart';
+export 'package:hyper_ui/module/random/gege_gemink_dashboard_ui/controller/gege_gemink_dashboard_ui_controller.dart';
+export 'package:hyper_ui/module/random/gege_gemink_dashboard_ui/view/gege_gemink_dashboard_ui_view.dart';
 export 'package:hyper_ui/module/tutorial/controller/tutorial_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/controller/tutorial_dashboard_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';
@@ -228,6 +230,7 @@ export 'package:hyper_ui/module/tutorial/tutorial_login/controller/tutorial_logi
 export 'package:hyper_ui/module/tutorial/tutorial_login/view/tutorial_login_view.dart';
 export 'package:hyper_ui/module/tutorial/view/tutorial_view.dart';
 export 'package:hyper_ui/module/tutorial/widget/banner_image.dart';
+export 'package:hyper_ui/module/tutorial/widget/product_card.dart';
 export 'package:hyper_ui/module/tutorial/widget/shaken_animation.dart';
 export 'package:hyper_ui/service/main_storage/main_storage.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
