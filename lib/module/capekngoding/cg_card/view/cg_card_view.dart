@@ -17,18 +17,106 @@ class CgCardView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              Card(
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text("Hello"),
-                    ],
+              const SnippetContainer("list_tile"),
+              //#TEMPLATE list_tile
+              ListTile(
+                leading: const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                    "https://i.ibb.co/PGv8ZzG/me.jpg",
+                  ),
+                ),
+                title: const Text("John doe"),
+                subtitle: const Text("john.doe@gmail.com"),
+                trailing: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.add,
+                    size: 24.0,
                   ),
                 ),
               ),
+              //#END
+              const SnippetContainer("card_tile"),
+              //#TEMPLATE card_tile
+              Card(
+                child: ListTile(
+                  leading: const CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      "https://i.ibb.co/PGv8ZzG/me.jpg",
+                    ),
+                  ),
+                  title: const Text("John doe"),
+                  subtitle: const Text("john.doe@gmail.com"),
+                  trailing: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.add,
+                      size: 24.0,
+                    ),
+                  ),
+                ),
+              ),
+              //#END
+              const SnippetContainer("card_cart"),
+              //#TEMPLATE card_cart
+              Card(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.grey[200],
+                    backgroundImage: const NetworkImage(
+                      "https://i.ibb.co/xgwkhVb/740922.png",
+                    ),
+                  ),
+                  title: const Text("Apple"),
+                  subtitle: const Text("15 USD"),
+                  trailing: SizedBox(
+                    width: 120.0,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Colors.blueGrey,
+                          radius: 12.0,
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                                size: 9.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "1",
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        CircleAvatar(
+                          backgroundColor: Colors.blueGrey,
+                          radius: 12.0,
+                          child: Center(
+                            child: IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.add,
+                                color: Colors.white,
+                                size: 9.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              //#END
             ],
           ),
         ),
