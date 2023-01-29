@@ -1,9 +1,21 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 /*
+
+
+
+
+
+
+
+
   Kelas Online /w DenyOcr
   Start: Awal February Gelombang 2
   ? capekngoding.com
+
+  + Dapat 16 Video Gmeet Gelombang 1
+  + 8x Gmeet
+  + Boleh ikut gelombang berikutnya FREE
   */
 
 //CTRL+SHIFT+ALT+1
