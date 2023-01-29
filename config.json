@@ -2,7 +2,7 @@
     "openai_key": "",
     "modules": [
         "capekngoding/cg_carousel",
-        "firebase/fb_login",
+         "firebase/fb_login",
         "firebase/fb_register",
         "firebase/fb_list",
         "firebase/fb_order_list",

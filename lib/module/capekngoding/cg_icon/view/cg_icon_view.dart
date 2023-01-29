@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_icon_controller.dart';
 
 class CgIconView extends StatefulWidget {
   const CgIconView({Key? key}) : super(key: key);
@@ -17,7 +16,86 @@ class CgIconView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SnippetContainer("icon"),
+              //#TEMPLATE icon
+              const Icon(
+                Icons.developer_board,
+                size: 24.0,
+              ),
+              //#END
+
+              const SnippetContainer("icon_badge"),
+              //#TEMPLATE icon_badge
+              const Badge(
+                label: Text(
+                  "4",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                child: Icon(Icons.notifications),
+              ),
+              //#END
+
+              const SnippetContainer("icon_image"),
+              //#TEMPLATE icon_image
+              const ImageIcon(
+                NetworkImage(
+                  "https://i.ibb.co/rsz6JWq/751463.png",
+                ),
+                size: 24.0,
+              ),
+              //#END
+
+              const SnippetContainer("icon_image_asset"),
+              //#TEMPLATE icon_image_asset
+              const ImageIcon(
+                AssetImage(
+                  "assets/icon/icon.png",
+                ),
+                size: 24.0,
+              ),
+              //#END
+
+              const SnippetContainer("icon_button"),
+              //#TEMPLATE icon_button
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.add,
+                  size: 24.0,
+                ),
+              ),
+              //#END
+
+              const SnippetContainer("icon_image_button"),
+              //#TEMPLATE icon_image_button
+              IconButton(
+                onPressed: () {},
+                icon: const ImageIcon(
+                  NetworkImage(
+                    "https://i.ibb.co/rsz6JWq/751463.png",
+                  ),
+                  size: 24.0,
+                ),
+              ),
+              //#END
+
+              const SnippetContainer("icon_image_asset_button"),
+              //#TEMPLATE icon_image_asset_button
+              IconButton(
+                onPressed: () {},
+                icon: const ImageIcon(
+                  AssetImage(
+                    "assets/icon/icon.png",
+                  ),
+                  size: 24.0,
+                ),
+              ),
+              //#END
+            ],
           ),
         ),
       ),

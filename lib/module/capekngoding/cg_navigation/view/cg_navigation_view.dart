@@ -45,6 +45,33 @@ Navigator.pushReplacement(
 """
                     .trim(),
               ),
+              if (1 == 2)
+                ElevatedButton.icon(
+                  icon: const Icon(Icons.add),
+                  label: const Text("Add"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueGrey,
+                  ),
+                  onPressed: () {
+                    //#TEMPLATE navpush
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Container()),
+                    );
+                    //#END
+
+                    //#TEMPLATE navreplace
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Container()),
+                    );
+                    //#END
+
+                    //#TEMPLATE navback
+                    Navigator.pop(context);
+                    //#END
+                  },
+                ),
             ],
           ),
         ),
