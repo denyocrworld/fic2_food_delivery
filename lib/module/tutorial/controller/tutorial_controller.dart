@@ -53,6 +53,38 @@ class TutorialController extends State<TutorialView> implements MvcController {
 
   int currentIndex = 0;
   final CarouselController carouselController = CarouselController();
+
+//Buatlah sebuah List<Map> di Flutter berisi data name, message, is_me, isi dengan 10 data dummy
+  List<Map<String, dynamic>> messages = [
+    {'name': 'John', 'message': 'Hello, how are you?', 'is_me': false},
+    {'name': 'Jane', 'message': 'I am doing great, thank you!', 'is_me': true},
+    {'name': 'John', 'message': 'That is great to hear!', 'is_me': false},
+    {'name': 'Jane', 'message': 'What about you?', 'is_me': true},
+    {'name': 'John', 'message': 'I am doing well too!', 'is_me': false},
+    {'name': 'Jane', 'message': 'That is great to hear!', 'is_me': true},
+    {'name': 'John', 'message': 'What are you up to?', 'is_me': false},
+    {
+      'name': 'Jane',
+      'message': 'Just hanging out with friends!',
+      'is_me': true
+    },
+    {'name': 'John', 'message': 'That sounds like fun!', 'is_me': false},
+    {'name': 'Jane', 'message': 'It sure is!', 'is_me': true},
+  ];
+
+//Buatlah List<String> categories, yang berisi 10 category yang biasa digunakan i aplikasi Ecommerce
+  List<String> categories = [
+    'Fashion',
+    'Elektronik',
+    'Kesehatan & Kecantikan',
+    'Olahraga',
+    'Rumah & Taman',
+    'Mainan & Hobi',
+    'Makanan & Minuman',
+    'Komputer & Aksesoris',
+    'Kendaraan & Aksesoris',
+    'Perlengkapan Bayi'
+  ];
 }
 /*
 Backend

@@ -148,6 +148,11 @@ class CgCarouselView extends StatefulWidget {
 
               const SnippetContainer("carousel_indicator2"),
               //#TEMPLATE carousel_indicator2
+              /*
+              TODO: Implement this @ controller
+              int currentIndex = 0;
+              final CarouselController carouselController = CarouselController();
+              */
               Builder(builder: (context) {
                 List images = [
                   "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",

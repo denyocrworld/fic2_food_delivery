@@ -23,6 +23,11 @@
         "online_class/exl_signup2",
         "online_class/exl_dashboard1",
         "online_class/exl_dashboard2",
-        "random/gege_gemink_dashboard_ui"
+        "random/gege_gemink_dashboard_ui",
+        "temp/login",
+        "temp/dashboard",
+        "temp/profile",
+        "temp/product_list",
+        "temp/product_form"
     ]
 }

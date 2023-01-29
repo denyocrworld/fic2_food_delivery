@@ -1,14 +1,6 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 /*
-
-
-
-
-
-
-
-
   Kelas Online /w DenyOcr
   Start: Awal February Gelombang 2
   ? capekngoding.com
@@ -16,6 +8,15 @@ import 'package:flutter/material.dart';
   + Dapat 16 Video Gmeet Gelombang 1
   + 8x Gmeet
   + Boleh ikut gelombang berikutnya FREE
+
+  Software-
+  ----
+  VsCode
+  Android Studio
+  Flutter SDK
+
+  Bahasa: Dart
+  Framework: Flutter
   */
 
 //CTRL+SHIFT+ALT+1
@@ -47,6 +48,7 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const CgMainView(),
+          // home: const LoginView(),
           // home: const GegeGeminkDashboardUiView(),
           // home: ContohView(),
           // home: TutorialView(),
