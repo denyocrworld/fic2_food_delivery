@@ -19,7 +19,8 @@ class CgCommonView extends StatefulWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               SnippetContainer("cRed , cBlue, cYellow, cRed300 , ..."),
-              Text("""
+              Text(
+                  """
 color: Colors.red,
 color: Colors.blue,
 color: Colors.yellow,
@@ -207,6 +208,54 @@ item[""]
 item["CURSOR_2"]
 #END
 */
+              SnippetContainer("cl"),
+              Text("""
+controller
+"""),
+/*
+#TEMPLATE cl
+controller
+#END
+*/
+              Divider(),
+              SnippetContainer("srcNoImage"),
+              Text("""
+"https://i.ibb.co/S32HNjD/no-image.jpg"
+"""),
+/*
+#TEMPLATE srcNoImage
+"https://i.ibb.co/S32HNjD/no-image.jpg"
+#END
+*/
+              SnippetContainer("srcPicSum"),
+              Text("""
+"https://picsum.photos/1000"
+"""),
+/*
+#TEMPLATE srcPicSum
+"https://picsum.photos/1000"
+#END
+*/
+              SnippetContainer("srcMeImage"),
+              Text("""
+"https://i.ibb.co/PGv8ZzG/me.jpg"
+"""),
+/*
+#TEMPLATE srcMeImage
+"https://i.ibb.co/PGv8ZzG/me.jpg"
+#END
+*/
+              SnippetContainer("lorem"),
+              Text(
+                  """
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+"""),
+/*
+#TEMPLATE lorem
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+#END
+*/
+              Divider(),
             ],
           ),
         ),

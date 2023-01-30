@@ -1,12 +1,14 @@
 //#GROUP_TEMPLATE http
 
-//#TEMPLATE http_import
 import 'dart:convert';
-
 import "package:http/http.dart" as http;
-//#END
 
 void main() async {
+  /*
+//#TEMPLATE http_import
+import "package:http/http.dart" as http;
+//#END
+  */
   var filePath = "";
 
   {

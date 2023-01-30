@@ -208,24 +208,22 @@ class CgMainService {
       'tag': 'Nunggu Mood'
     },
     {
+      'label': 'Get ???',
+      'icon': MdiIcons.firebase,
+      'color': Colors.red,
+      'page': const CgGetView(),
+    },
+    {
       'label': 'HTTP Request',
       'icon': MdiIcons.web,
-      'color': Colors.grey,
+      'color': Colors.blue,
       'page': const CgHttpView(),
-      'tag': 'Nunggu Mood'
     },
     {
       'label': 'Firebase',
       'icon': MdiIcons.firebase,
       'color': Colors.grey,
       'page': const CgFirebaseView(),
-      'tag': 'Nunggu Mood'
-    },
-    {
-      'label': 'Get ???',
-      'icon': MdiIcons.firebase,
-      'color': Colors.grey,
-      'page': const CgGetView(),
       'tag': 'Nunggu Mood'
     },
   ];
