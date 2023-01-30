@@ -286,39 +286,45 @@ class CgMainService {
     {
       'label': 'ListView',
       'icon': MdiIcons.viewList,
-      'color': Colors.green,
+      'color': Colors.grey,
       'page': const CgHyperuiListView(),
+      'tag': "Nunggu Mood",
     },
     {
       'label': 'FireStream',
       'icon': MdiIcons.fire,
-      'color': Colors.red,
+      'color': Colors.grey,
       'page': const CgHyperuiFireStreamView(),
+      'tag': "Nunggu Mood",
     },
     {
       'label': 'Dialog',
       'icon': MdiIcons.message,
-      'color': Colors.purple,
+      'color': Colors.grey,
       'page': const CgHyperuiDialogView(),
+      'tag': "Nunggu Mood",
     },
     {
       'label': 'Navigation',
       'icon': MdiIcons.navigation,
-      'color': Colors.orange,
+      'color': Colors.grey,
       'page': const CgHyperuiNavigationView(),
+      'tag': "Nunggu Mood",
     },
     {
       'label': 'Utility',
       'icon': MdiIcons.wrench,
-      'color': Colors.teal,
+      'color': Colors.grey,
       'page': const CgHyperuiUtilityView(),
+      'tag': "Nunggu Mood",
     },
-    {
-      'label': 'MVC Generator',
-      'icon': MdiIcons.codeBraces,
-      'color': Colors.pink,
-      'page': const CgHyperuiMvcGeneratorView(),
-    },
+    // {
+    //   'label': 'MVC Generator',
+    //   'icon': MdiIcons.codeBraces,
+    //   'color': Colors.grey,
+    //   'page': const CgHyperuiMvcGeneratorView(),
+    //   'tag': "Nunggu Mood",
+    // },
   ];
 
 //Buatlah List<Map> demoAppList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa POS, Car Rental, Barber Shop dengan color yang unik dan gunakan MdiIcons.
