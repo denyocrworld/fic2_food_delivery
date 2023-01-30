@@ -18,6 +18,13 @@ class CgCircleAvatarView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
+              SnippetContainer("circle"),
+              //#TEMPLATE circle
+              CircleAvatar(
+                radius: 28.0,
+                backgroundColor: Colors.green,
+              ),
+              //#END
               SnippetContainer("circle_image_lg"),
               //#TEMPLATE circle_image_lg
               CircleAvatar(
@@ -27,7 +34,6 @@ class CgCircleAvatarView extends StatefulWidget {
                 ),
               ),
               //#END
-
               SnippetContainer("circle_image_md"),
               //#TEMPLATE circle_image_md
               CircleAvatar(
