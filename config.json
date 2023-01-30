@@ -1,35 +1,6 @@
 {
     "openai_key": "",
     "modules": [
-        "capekngoding/cg_carousel",
-        "firebase/fb_login",
-        "firebase/fb_register",
-        "firebase/fb_list",
-        "firebase/fb_order_list",
-        "firebase/fb_horizontal_category_list",
-        "firebase/fb_wrap_category_list",
-        "firebase/fb_dropdown",
-        "firebase/fb_radio",
-        "firebase/fb_map",
-        "firebase/fb_chart",
-        "firebase/fb_statistic_card",
-        "firebase/fb_upload_image",
-        "firebase/fb_crud_list",
-        "firebase/fb_crud_form",
-        "online_class/ex_layout",
-        "online_class/exl_login1",
-        "online_class/exl_login2",
-        "online_class/exl_signup1",
-        "online_class/exl_signup2",
-        "online_class/exl_dashboard1",
-        "online_class/exl_dashboard2",
-        "random/gege_gemink_dashboard_ui",
-        "temp/login",
-        "temp/dashboard",
-        "temp/profile",
-        "temp/product_list",
-        "temp/product_form",
-        "temp/shakuro_dashboard",
-        "temp/shakuro_product_detail"
+       
     ]
 }

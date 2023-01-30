@@ -14,6 +14,8 @@ class CgMainView extends StatefulWidget {
         bool isDesktop = MediaQuery.of(context).size.width >= 1100;
         bool isMobile = MediaQuery.of(context).size.width < 850;
 
+        CgMainService cgMainService = CgMainService();
+
         return Scaffold(
           body: SingleChildScrollView(
             controller: ScrollController(),
@@ -97,17 +99,17 @@ class CgMainView extends StatefulWidget {
                               child: Column(
                                 children: [
                                   SideMenu(
-                                    menuList: CgMainService.promotionList,
+                                    menuList: cgMainService.promotionList,
                                   ),
                                   const SizedBox(
                                     height: 12.0,
                                   ),
                                   // SideMenu(
-                                  //   menuList: CgMainService.onlineClassExercises,
+                                  //   menuList: cgMainService.onlineClassExercises,
                                   //   title: "Online Class Exercises",
                                   // ),
                                   SideMenu(
-                                    menuList: CgMainService.onlineClassMenuList,
+                                    menuList: cgMainService.onlineClassMenuList,
                                     title: "Online Class",
                                   ),
                                   const SizedBox(
@@ -115,35 +117,42 @@ class CgMainView extends StatefulWidget {
                                   ),
                                   SideMenu(
                                     menuList:
-                                        CgMainService.onlineClassExercises,
+                                        cgMainService.onlineClassExercises,
                                     title: "Exercise",
                                   ),
                                   const SizedBox(
                                     height: 20.0,
                                   ),
                                   SideMenu(
-                                    menuList: CgMainService.menuList,
+                                    menuList: cgMainService.menuList,
                                     title: "Basic",
                                   ),
                                   const SizedBox(
                                     height: 20.0,
                                   ),
                                   SideMenu(
-                                    menuList: CgMainService.uiMenuList,
+                                    menuList: cgMainService.uiMenuList,
                                     title: "Premade UI",
                                   ),
                                   const SizedBox(
                                     height: 20.0,
                                   ),
                                   SideMenu(
-                                    menuList: CgMainService.hyperUiMenuList,
+                                    menuList: cgMainService.slicingUiList,
+                                    title: "Slicing UI",
+                                  ),
+                                  const SizedBox(
+                                    height: 20.0,
+                                  ),
+                                  SideMenu(
+                                    menuList: cgMainService.hyperUiMenuList,
                                     title: "Hyper UI",
                                   ),
                                   const SizedBox(
                                     height: 20.0,
                                   ),
                                   SideMenu(
-                                    menuList: CgMainService.demoAppList,
+                                    menuList: cgMainService.demoAppList,
                                     title: "Full Apps Demo",
                                   ),
                                   const SizedBox(

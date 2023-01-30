@@ -2,7 +2,7 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 class CgMainService {
-  static List<Map> promotionList = [
+  List<Map> promotionList = [
     {
       'label': 'Komunitas Berandal',
       'icon': MdiIcons.commaBox,
@@ -38,7 +38,7 @@ class CgMainService {
     },
   ];
 
-  static List<Map> onlineClassMenuList = [
+  List<Map> onlineClassMenuList = [
     {
       'label': 'Layout',
       'icon': MdiIcons.keyboardOutline,
@@ -58,7 +58,7 @@ class CgMainService {
       'page': const OcFirebaseView(),
     },
   ];
-  static List<Map> onlineClassExercises = [
+  List<Map> onlineClassExercises = [
     {
       'label': 'Layout',
       'icon': MdiIcons.keyboardOutline,
@@ -79,7 +79,7 @@ class CgMainService {
     },
   ];
 
-  static List<Map> menuList = [
+  List<Map> menuList = [
     {
       'label': 'HotKey',
       'icon': MdiIcons.keyboardOutline,
@@ -203,7 +203,7 @@ class CgMainService {
   ];
 
 //Buatlah List<Map> uiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard, ListView, DetailView, ReportView, ProfileView dengan color yang unik dan gunakan MdiIcons.
-  static List<Map> uiMenuList = [
+  List<Map> uiMenuList = [
     {
       'label': 'Login',
       'icon': MdiIcons.loginVariant,
@@ -242,8 +242,29 @@ class CgMainService {
     },
   ];
 
+  List<Map> slicingUiList = [
+    {
+      'label': 'Shakuro UI',
+      'icon': MdiIcons.card,
+      'color': Colors.purple,
+      'page': const ShakuroDashboardView(),
+    },
+    {
+      'label': 'Shakuro UI',
+      'icon': MdiIcons.card,
+      'color': Colors.purple,
+      'page': const CgPremadeLoginView(),
+    },
+    {
+      'label': 'Shakuro UI',
+      'icon': MdiIcons.card,
+      'color': Colors.purple,
+      'page': const CgPremadeLoginView(),
+    },
+  ];
+
 //Buatlah List<Map> hyperUiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Form, ListView, FireStream, Dialog, Navigation, Utility, MVC Generator dengan color yang unik dan gunakan MdiIcons.
-  static List<Map> hyperUiMenuList = [
+  List<Map> hyperUiMenuList = [
     {
       'label': 'Form',
       'icon': MdiIcons.formTextbox,
@@ -289,7 +310,7 @@ class CgMainService {
   ];
 
 //Buatlah List<Map> demoAppList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa POS, Car Rental, Barber Shop dengan color yang unik dan gunakan MdiIcons.
-  static List<Map> demoAppList = [
+  List<Map> demoAppList = [
     {
       'label': 'POS',
       'icon': MdiIcons.cashRegister,
