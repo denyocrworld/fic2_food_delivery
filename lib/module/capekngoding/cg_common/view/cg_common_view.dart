@@ -26,6 +26,31 @@ color: Colors.yellow,
 color: Colors.red[300],
 """),
               Divider(),
+              SnippetContainer("mq"),
+              Text("""
+MediaQuery.of(context)
+"""),
+              SnippetContainer("mqs"),
+              Text("""
+MediaQuery.of(context).size
+"""),
+              SnippetContainer("mqw"),
+              Text("""
+MediaQuery.of(context).size.width,
+"""),
+              SnippetContainer("mqh"),
+              Text("""
+MediaQuery.of(context).size.height
+"""),
+              SnippetContainer("w100"),
+              Text("""
+width: MediaQuery.of(context).size.width,
+"""),
+              SnippetContainer("h100"),
+              Text("""
+height: MediaQuery.of(context).size.height,
+"""),
+              Divider(),
               SnippetContainer("sw1 - sw50"),
               Text("""
 const SizedBox(
@@ -153,6 +178,24 @@ mainAxisAlignment: MainAxisAlignment.spaceAround,
               SnippetContainer("mainspaceevently"),
               Text("""
 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+"""),
+              Divider(),
+              SnippetContainer("axisv"),
+              Text("""
+scrollDirection: Axis.vertical,
+"""),
+              SnippetContainer("axish"),
+              Text("""
+scrollDirection: Axis.horizontal,
+"""),
+              Divider(),
+              SnippetContainer("mat"),
+              Text("""
+import 'package:flutter/material.dart';
+"""),
+              SnippetContainer("cup"),
+              Text("""
+import 'package:flutter/cupertino.dart';
 """),
               Divider(),
               SnippetContainer("item"),

@@ -150,7 +150,6 @@ class DevDocsView extends StatelessWidget {
                     'Female',
                     'Male',
                   ];
-
                   return Container(
                     padding: const EdgeInsets.all(12),
                     margin: const EdgeInsets.only(),
