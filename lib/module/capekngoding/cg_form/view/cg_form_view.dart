@@ -633,7 +633,7 @@ class CgFormView extends StatefulWidget {
                       ),
                       //#END
                       const SnippetContainer("form_rating_review"),
-                      //#TEMPLATE form_rating_review
+                      //#TEMPLATE form_rating_reviews
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
