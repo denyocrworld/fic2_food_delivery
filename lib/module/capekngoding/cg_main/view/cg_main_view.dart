@@ -151,10 +151,10 @@ class CgMainView extends StatefulWidget {
                                   const SizedBox(
                                     height: 20.0,
                                   ),
-                                  SideMenu(
-                                    menuList: cgMainService.demoAppList,
-                                    title: "Full Apps Demo",
-                                  ),
+                                  // SideMenu(
+                                  //   menuList: cgMainService.demoAppList,
+                                  //   title: "Full Apps Demo",
+                                  // ),
                                   const SizedBox(
                                     height: 20.0,
                                   ),
