@@ -18,9 +18,25 @@ class CgCommonView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              SnippetContainer("item"),
+              SnippetContainer("cRed , cBlue, cYellow, cRed300 , ..."),
               Text("""
-item[""]
+color: Colors.red,
+color: Colors.blue,
+color: Colors.yellow,
+color: Colors.red[300],
+"""),
+              Divider(),
+              SnippetContainer("sw1 - sw50"),
+              Text("""
+const SizedBox(
+  width: n,
+),
+"""),
+              SnippetContainer("sh1 - sh50"),
+              Text("""
+const SizedBox(
+  height: n,
+),
 """),
               Divider(),
               SnippetContainer("pa"),
@@ -87,6 +103,61 @@ margin: const EdgeInsets.symmetric(vertical: n),
               SnippetContainer("mh1 - mh50"),
               Text("""
 margin: const EdgeInsets.symmetric(horizontal: n),
+"""),
+              Divider(),
+              SnippetContainer("sz1 - sz50"),
+              Text("""
+size: n,
+"""),
+              SnippetContainer("rd1 - rd50"),
+              Text("""
+radius: n,
+"""),
+              SnippetContainer("fs1 - fs50"),
+              Text("""
+fontSize: n,
+"""),
+              Divider(),
+              SnippetContainer("crostart"),
+              Text("""
+crossAxisAlignment: CrossAxisAlignment.start,
+"""),
+              SnippetContainer("crocenter"),
+              Text("""
+crossAxisAlignment: CrossAxisAlignment.center,
+"""),
+              SnippetContainer("croend"),
+              Text("""
+crossAxisAlignment: CrossAxisAlignment.end,
+"""),
+              SnippetContainer("mainstart"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.start,
+"""),
+              SnippetContainer("mainend"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.end,
+"""),
+              SnippetContainer("maincenter"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.center,
+"""),
+              SnippetContainer("mainspacebetween"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.spaceBetween,
+"""),
+              SnippetContainer("mainspacearound"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.spaceAround,
+"""),
+              SnippetContainer("mainspaceevently"),
+              Text("""
+mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+"""),
+              Divider(),
+              SnippetContainer("item"),
+              Text("""
+item[""]
 """),
             ],
           ),
