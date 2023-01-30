@@ -246,19 +246,19 @@ class CgMainService {
     {
       'label': 'Shakuro UI',
       'icon': MdiIcons.card,
-      'color': Colors.purple,
+      'color': Colors.green,
       'page': const ShakuroDashboardView(),
     },
     {
       'label': 'Shakuro UI',
       'icon': MdiIcons.card,
-      'color': Colors.purple,
+      'color': Colors.orange,
       'page': const CgPremadeLoginView(),
     },
     {
       'label': 'Shakuro UI',
       'icon': MdiIcons.card,
-      'color': Colors.purple,
+      'color': Colors.blue,
       'page': const CgPremadeLoginView(),
     },
   ];
