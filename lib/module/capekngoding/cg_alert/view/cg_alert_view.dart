@@ -21,7 +21,8 @@ class CgAlertView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
+              /*
               Container(
                 constraints: BoxConstraints(
                   maxWidth: MediaQuery.of(context).size.width * 0.8,
@@ -281,6 +282,7 @@ class CgAlertView extends StatefulWidget {
                   ],
                 ),
               ),
+              */
             ],
           ),
         ),

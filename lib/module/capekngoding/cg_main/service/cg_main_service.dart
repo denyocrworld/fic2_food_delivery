@@ -195,16 +195,31 @@ class CgMainService {
       'page': const CgButtonView(),
     },
     {
-      'label': 'Alert',
-      'icon': MdiIcons.alertBoxOutline,
-      'color': Colors.red,
-      'page': const CgAlertView(),
-    },
-    {
       'label': 'Carousel',
       'icon': MdiIcons.alertBoxOutline,
       'color': Colors.red,
       'page': const CgCarouselView(),
+    },
+    {
+      'label': 'Alert',
+      'icon': MdiIcons.alertBoxOutline,
+      'color': Colors.grey,
+      'page': const CgAlertView(),
+      'tag': 'Nunggu Mood'
+    },
+    {
+      'label': 'HTTP Request',
+      'icon': MdiIcons.web,
+      'color': Colors.grey,
+      'page': const CgHttpView(),
+      'tag': 'Nunggu Mood'
+    },
+    {
+      'label': 'Firebase',
+      'icon': MdiIcons.firebase,
+      'color': Colors.grey,
+      'page': const CgFirebaseView(),
+      'tag': 'Nunggu Mood'
     },
   ];
 

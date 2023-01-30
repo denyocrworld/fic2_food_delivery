@@ -26,6 +26,8 @@ export 'package:hyper_ui/module/capekngoding/cg_common/controller/cg_common_cont
 export 'package:hyper_ui/module/capekngoding/cg_common/view/cg_common_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_container/controller/cg_container_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_container/view/cg_container_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_firebase/controller/cg_firebase_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_firebase/view/cg_firebase_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/controller/cg_form_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/view/cg_form_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_grid/controller/cg_grid_controller.dart';
@@ -33,6 +35,8 @@ export 'package:hyper_ui/module/capekngoding/cg_grid/view/cg_grid_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/controller/cg_hotkey_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/service/cg_hotkey_service.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/view/cg_hotkey_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_http/controller/cg_http_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_http/view/cg_http_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hyperui_dialog/controller/cg_hyperui_dialog_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hyperui_dialog/view/cg_hyperui_dialog_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hyperui_fire_stream/controller/cg_hyperui_fire_stream_controller.dart';

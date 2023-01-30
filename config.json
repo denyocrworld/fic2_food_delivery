@@ -2,6 +2,8 @@
     "openai_key": "",
     "modules": [
         "capekngoding/cg_common",
-        "capekngoding/cg_wrap"
+        "capekngoding/cg_wrap",
+        "capekngoding/cg_http",
+        "capekngoding/cg_firebase"
     ]
 }
