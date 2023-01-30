@@ -213,38 +213,44 @@ class CgMainService {
     {
       'label': 'Login',
       'icon': MdiIcons.loginVariant,
-      'color': Colors.purple,
+      'color': Colors.grey,
       'page': const CgPremadeLoginView(),
+      'tag': 'Nunggu Mood',
     },
     {
       'label': 'Dashboard',
       'icon': MdiIcons.viewDashboard,
-      'color': Colors.blue,
+      'color': Colors.grey,
       'page': const CgPremadeDashboardView(),
+      'tag': 'Nunggu Mood',
     },
     {
       'label': 'ListView',
       'icon': MdiIcons.viewList,
-      'color': Colors.green,
+      'color': Colors.grey,
       'page': const CgPremadeListView(),
+      'tag': 'Nunggu Mood',
     },
     {
       'label': 'DetailView',
       'icon': MdiIcons.viewGrid,
-      'color': Colors.yellow,
+      'color': Colors.grey,
       'page': const CgPremadeDetailView(),
+      'tag': 'Nunggu Mood',
     },
     {
       'label': 'ReportView',
       'icon': MdiIcons.chartBar,
-      'color': Colors.red,
+      'color': Colors.grey,
       'page': const CgPremadeReportView(),
+      'tag': 'Nunggu Mood',
     },
     {
       'label': 'ProfileView',
       'icon': MdiIcons.accountCircle,
-      'color': Colors.purple,
+      'color': Colors.grey,
       'page': const CgPremadeProfileView(),
+      'tag': 'Nunggu Mood',
     },
   ];
 
@@ -256,16 +262,16 @@ class CgMainService {
       'page': const ShakuroDashboardView(),
     },
     {
-      'label': 'Shakuro UI',
+      'label': '???',
       'icon': MdiIcons.card,
       'color': Colors.orange,
-      'page': const CgPremadeLoginView(),
+      'page': Container(),
     },
     {
-      'label': 'Shakuro UI',
+      'label': '???',
       'icon': MdiIcons.card,
       'color': Colors.blue,
-      'page': const CgPremadeLoginView(),
+      'page': Container(),
     },
   ];
 
