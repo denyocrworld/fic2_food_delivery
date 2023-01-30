@@ -5,6 +5,10 @@ import 'package:flutter/material.dart';
   Start: Awal February Gelombang 2
   ? capekngoding.com
 
+
+  LINK Komunitas Berandal:
+  ? https://tinyurl.com/berandal-group
+  
   Front End
   - Web
   - Mobile
