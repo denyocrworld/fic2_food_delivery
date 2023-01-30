@@ -18,6 +18,7 @@ class SnippetContainer extends StatelessWidget {
           child: Row(
             children: [
               Card(
+                color: Colors.purple,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 12.0,
@@ -28,6 +29,7 @@ class SnippetContainer extends StatelessWidget {
                     style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 11.0,
+                      color: Colors.white,
                     ),
                   ),
                 ),

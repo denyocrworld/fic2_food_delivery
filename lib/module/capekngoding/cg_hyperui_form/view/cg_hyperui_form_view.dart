@@ -41,6 +41,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         label: "Email",
                         hint: "Your email",
                         validator: Validator.email,
+                        suffixIcon: Icons.email,
                         value: "demo@gmail.com",
                         onChanged: (value) {},
                       ),
@@ -59,6 +60,7 @@ class CgHyperuiFormView extends StatefulWidget {
                       //#END
 
                       const SnippetHeader("Numberfield"),
+                      const SnippetContainer("q_numberfield"),
                       //#TEMPLATE q_numberfield
                       QNumberField(
                         label: "Age",
@@ -68,15 +70,8 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value) {},
                       ),
                       //#END
-                      QNumberField(
-                        label: "Price 1",
-                        hint: "Your product price's",
-                        validator: Validator.required,
-                        value: "23000",
-                        onChanged: (value) {
-                          print("Product price: $value");
-                        },
-                      ),
+                      const SnippetContainer("q_moneyfield"),
+                      //#TEMPLATE q_moneyfield
                       QNumberField(
                         label: "Price 2",
                         hint: "Your product price's",
@@ -88,6 +83,9 @@ class CgHyperuiFormView extends StatefulWidget {
                           print("Product price: $value");
                         },
                       ),
+                      //#END
+                      const SnippetContainer("q_moneyfield_decimal"),
+                      //#TEMPLATE q_moneyfield_decimal
                       QNumberField(
                         label: "Price 3",
                         hint: "Your product price's",
@@ -98,16 +96,10 @@ class CgHyperuiFormView extends StatefulWidget {
                           print("Product price: $value");
                         },
                       ),
-                      QNumberField(
-                        label: "Price 4",
-                        hint: "Your product price's",
-                        validator: Validator.required,
-                        value: "23200.23",
-                        pattern: "#,###.000",
-                        onChanged: (value) {
-                          print("Product price: $value");
-                        },
-                      ),
+                      //#END
+                      const SnippetContainer(
+                          "q_moneyfield_decimal_with_currency"),
+                      //#TEMPLATE q_moneyfield_decimal_with_currency
                       QNumberField(
                         label: "Price 5",
                         hint: "Your product price's",
@@ -118,8 +110,9 @@ class CgHyperuiFormView extends StatefulWidget {
                           print("Product price: $value");
                         },
                       ),
-
+                      //#END
                       const SnippetHeader("Autocomplete"),
+                      const SnippetContainer("q_autocomplete"),
                       //#TEMPLATE q_autocomplete
                       QAutoComplete(
                         label: "Favorite employee",
@@ -145,6 +138,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value, label) {},
                       ),
                       //#END
+                      const SnippetContainer("q_autocomplete_with_photo"),
                       //#TEMPLATE q_autocomplete_with_photo
                       QAutoComplete(
                         label: "Staff",
@@ -177,6 +171,7 @@ class CgHyperuiFormView extends StatefulWidget {
                       ),
                       //#END
 
+                      const SnippetContainer("q_datefield"),
                       //#TEMPLATE q_datefield
                       QDatePicker(
                         label: "Birth date",
@@ -187,6 +182,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         },
                       ),
                       //#END
+                      const SnippetContainer("q_timefield"),
                       //#TEMPLATE q_timefield
                       QTimePicker(
                         label: "Working hour",
@@ -197,7 +193,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         },
                       ),
                       //#END
-
+                      const SnippetContainer("q_memofield"),
                       //#TEMPLATE q_memofield
                       QMemoField(
                         label: "Address",
@@ -207,7 +203,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value) {},
                       ),
                       //#END
-
+                      const SnippetContainer("q_dropdown"),
                       //#TEMPLATE q_dropdown
                       QDropdownField(
                         label: "Roles",
@@ -226,7 +222,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value, label) {},
                       ),
                       //#END
-
+                      const SnippetContainer("q_check"),
                       //#TEMPLATE q_check
                       QCheckField(
                         label: "Club",
@@ -247,7 +243,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (values, ids) {},
                       ),
                       //#END
-
+                      const SnippetContainer("q_switch"),
                       //#TEMPLATE q_switch
                       QSwitch(
                         label: "Member",
@@ -266,6 +262,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (values, ids) {},
                       ),
                       //#END
+                      const SnippetContainer("q_radio"),
                       //#TEMPLATE q_radio
                       QRadioField(
                         label: "Gender",
@@ -284,7 +281,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value, label) {},
                       ),
                       //#END
-
+                      const SnippetContainer("q_image_picker"),
                       //#TEMPLATE q_image_picker
                       QImagePicker(
                         label: "Photo",
@@ -294,7 +291,7 @@ class CgHyperuiFormView extends StatefulWidget {
                         onChanged: (value) {},
                       ),
                       //#END
-
+                      const SnippetContainer("q_location_picker"),
                       //#TEMPLATE q_location_picker
                       const QLocationPicker(
                         id: "location",

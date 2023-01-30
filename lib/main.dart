@@ -1,4 +1,3 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 /*
@@ -6,26 +5,52 @@ import 'package:flutter/material.dart';
   Start: Awal February Gelombang 2
   ? capekngoding.com
 
-  + Dapat 16 Video Gmeet Gelombang 1
-  + 8x Gmeet
-  + Boleh ikut gelombang berikutnya FREE
+  Front End
+  - Web
+  - Mobile
 
-  Software-
-  ----
-  VsCode
-  Android Studio
-  Flutter SDK
+  ! Basic Pemrograman
+  - Variable
+  - Operator Aritmatika
+  - IF
+  - List/Array
+  - Map
+  - Looping
+  - Function
+  - OOP
 
-  Bahasa: Dart
-  Framework: Flutter
+  ! Framework
+
+  Skills
+  - 
+
+  Experience
+  - Ngerjain real project
+  - Freelance
+  - Fulltime ngantor
+  - Magang
+  - Bikin produk sendiri
+
+  Pemain Bola
+  Skills
+  - Gocek
+  - Lari-nya kenceng
+  - Nendang-nya kenceng
+
+  Experience
+  - Udah pernah ikut piala dunia
+  - Udah pernah ikut club di liga professional
+
+  ! Ditampung dulu
+  - tutor form validation pake flutter bang
+
+
   */
 
-//CTRL+SHIFT+ALT+1
 void main() async {
   await initialize();
 
   // await FirebaseFirestore.instance.collection("products").get();
-
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();
@@ -49,9 +74,9 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const CgMainView(),
-          // home: const ShakuroDashboardView(),
-          // home: const LoginView(),
-          // home: const GegeGeminkDashboardUiView(),
+          // home: ShakuroDashboardView(),
+          // home: LoginView(),
+          // home: GegeGeminkDashboardUiView(),
           // home: ContohView(),
           // home: TutorialView(),
           builder: (context, child) {
