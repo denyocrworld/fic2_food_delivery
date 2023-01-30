@@ -234,6 +234,10 @@ export 'package:hyper_ui/module/temp/product_list/controller/product_list_contro
 export 'package:hyper_ui/module/temp/product_list/view/product_list_view.dart';
 export 'package:hyper_ui/module/temp/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/temp/profile/view/profile_view.dart';
+export 'package:hyper_ui/module/temp/shakuro_dashboard/controller/shakuro_dashboard_controller.dart';
+export 'package:hyper_ui/module/temp/shakuro_dashboard/view/shakuro_dashboard_view.dart';
+export 'package:hyper_ui/module/temp/shakuro_product_detail/controller/shakuro_product_detail_controller.dart';
+export 'package:hyper_ui/module/temp/shakuro_product_detail/view/shakuro_product_detail_view.dart';
 export 'package:hyper_ui/module/tutorial/controller/tutorial_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/controller/tutorial_dashboard_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';

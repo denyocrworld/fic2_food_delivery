@@ -2,7 +2,7 @@
     "openai_key": "",
     "modules": [
         "capekngoding/cg_carousel",
-         "firebase/fb_login",
+        "firebase/fb_login",
         "firebase/fb_register",
         "firebase/fb_list",
         "firebase/fb_order_list",
@@ -28,6 +28,8 @@
         "temp/dashboard",
         "temp/profile",
         "temp/product_list",
-        "temp/product_form"
+        "temp/product_form",
+        "temp/shakuro_dashboard",
+        "temp/shakuro_product_detail"
     ]
 }

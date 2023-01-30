@@ -4,110 +4,150 @@ import 'package:hyper_ui/core.dart';
 class TutorialController extends State<TutorialView> implements MvcController {
   static late TutorialController instance;
   late TutorialView view;
+  late ScrollController scrollController;
 
   @override
   void initState() {
     instance = this;
-    getProducts();
+    scrollController = ScrollController();
+
     super.initState();
   }
 
   @override
-  void dispose() => super.dispose();
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  List products = [];
-  doGenerate() async {
-    for (var i = 0; i < 5; i++) {
-      var response = await Dio().post(
-        "http://localhost:8080/deny/api/products",
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-          },
-        ),
-        data: {
-          "product_name": "Product #$i",
-          "price": 15.25,
-        },
-      );
-    }
-    await getProducts();
-  }
-
-  getProducts() async {
-    var response = await Dio().get(
-      "http://localhost:8080/deny/api/products",
-      options: Options(
-        headers: {
-          "Content-Type": "application/json",
-        },
-      ),
-    );
-    Map obj = response.data;
-    products = obj["data"];
+  bool loading = false;
+  updateLoading() {
+    loading = !loading;
     setState(() {});
   }
 
-  int currentIndex = 0;
-  final CarouselController carouselController = CarouselController();
-
-//Buatlah sebuah List<Map> di Flutter berisi data name, message, is_me, isi dengan 10 data dummy
-  List<Map<String, dynamic>> messages = [
-    {'name': 'John', 'message': 'Hello, how are you?', 'is_me': false},
-    {'name': 'Jane', 'message': 'I am doing great, thank you!', 'is_me': true},
-    {'name': 'John', 'message': 'That is great to hear!', 'is_me': false},
-    {'name': 'Jane', 'message': 'What about you?', 'is_me': true},
-    {'name': 'John', 'message': 'I am doing well too!', 'is_me': false},
-    {'name': 'Jane', 'message': 'That is great to hear!', 'is_me': true},
-    {'name': 'John', 'message': 'What are you up to?', 'is_me': false},
+  List products = [
     {
-      'name': 'Jane',
-      'message': 'Just hanging out with friends!',
-      'is_me': true
+      "id": 1,
+      "photo":
+          "https://i.ibb.co/dG68KJM/photo-1513104890138-7c749659a591-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "product_name": "Frenzy Pizza",
+      "price": 25,
+      "category": "Food",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
-    {'name': 'John', 'message': 'That sounds like fun!', 'is_me': false},
-    {'name': 'Jane', 'message': 'It sure is!', 'is_me': true},
-  ];
-
-//Buatlah List<String> categories, yang berisi 10 category yang biasa digunakan i aplikasi Ecommerce
-  List<String> categories = [
-    'Fashion',
-    'Elektronik',
-    'Kesehatan & Kecantikan',
-    'Olahraga',
-    'Rumah & Taman',
-    'Mainan & Hobi',
-    'Makanan & Minuman',
-    'Komputer & Aksesoris',
-    'Kendaraan & Aksesoris',
-    'Perlengkapan Bayi'
+    {
+      "id": 2,
+      "photo":
+          "https://i.ibb.co/mHtmhmP/photo-1521305916504-4a1121188589-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "product_name": "Beef Burger",
+      "price": 22,
+      "category": "Food",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 3,
+      "photo":
+          "https://images.unsplash.com/photo-1625869016774-3a92be2ae2cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "product_name": "Seperait",
+      "price": 33,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 4,
+      "photo":
+          "https://images.unsplash.com/photo-1578160112054-954a67602b88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      "product_name": "Fried Rice",
+      "price": 31,
+      "category": "Food",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 5,
+      "photo":
+          "https://i.ibb.co/mHCx9Nj/photo-1517487881594-2787fef5ebf7-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "product_name": "Terrano Milk",
+      "price": 32,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 6,
+      "photo":
+          "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "product_name": "Fried Chicken",
+      "price": 49,
+      "category": "Food",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 7,
+      "photo":
+          "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+      "product_name": "Mango Juice",
+      "price": 62,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 8,
+      "photo":
+          "https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "product_name": "Orange Juice",
+      "price": 56,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 9,
+      "photo":
+          "https://images.unsplash.com/photo-1604085792782-8d92f276d7d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "product_name": "Avocado Juice",
+      "price": 56,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 10,
+      "photo":
+          "https://images.unsplash.com/photo-1622240506921-042a4e71c172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "product_name": "Puncak Coffe",
+      "price": 56,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 11,
+      "photo":
+          "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "product_name": "Silvana Tea",
+      "price": 56,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      "id": 12,
+      "photo":
+          "https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "product_name": "Paradox Tea",
+      "price": 56,
+      "category": "Drink",
+      "description":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
   ];
 }
-/*
-Backend
----
-Bahasa Pemrograman = PHP | GOLANG | PYTHON
-Bikin API
-Bikin Dokumentasi
-Bikin Testing
-Deploy utk mode produksi
-
-Framework:
-ExpressJS
-Laravel
-Beego, GIN
-Djanggo
-
-
-Front End
----
-Bikin UI
-Consume API
-
-Full Stack
---=
-
-*/

@@ -1,4 +1,3 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 /*
@@ -27,7 +26,7 @@ void main() async {
   // await FirebaseFirestore.instance.collection("products").get();
 
   Get.mainTheme.value = getDefaultTheme();
-  Get.mainTheme.value = getDarkTheme();
+  // Get.mainTheme.value = getDarkTheme();
   runMainApp();
 }
 
@@ -48,7 +47,8 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const CgMainView(),
+          // home: const CgMainView(),
+          home: const ShakuroDashboardView(),
           // home: const LoginView(),
           // home: const GegeGeminkDashboardUiView(),
           // home: ContohView(),
