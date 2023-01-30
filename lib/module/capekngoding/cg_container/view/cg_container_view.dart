@@ -30,13 +30,22 @@ class CgContainerView extends StatefulWidget {
                 ),
               ),
               //#END
+              const SnippetContainer("conf"),
+              //#TEMPLATE conf
+              Container(
+                height: 100,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  color: Colors.green,
+                ),
+              ),
+              //#END
               const SnippetContainer("contrad"),
-
               //#TEMPLATE contrad
               Container(
                 height: 100.0,
                 decoration: const BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: Colors.orange,
                   borderRadius: BorderRadius.all(
                     Radius.circular(
                       16.0,
