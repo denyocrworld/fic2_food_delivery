@@ -202,6 +202,11 @@ import 'package:flutter/cupertino.dart';
               Text("""
 item[""]
 """),
+/*
+#TEMPLATE item
+item["CURSOR_2"]
+#END
+*/
             ],
           ),
         ),

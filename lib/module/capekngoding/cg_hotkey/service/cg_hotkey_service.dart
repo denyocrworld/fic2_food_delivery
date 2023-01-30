@@ -77,6 +77,10 @@ class CgHotkeyService {
       "action": "Remove all comment in Dart/Pubspec",
     },
     {
+      "hotkey": "Alt + Shift + L",
+      "action": "Select string inside \"JohnDoe\" or 'JohnDoe'",
+    },
+    {
       "title": "Modules",
     },
     {

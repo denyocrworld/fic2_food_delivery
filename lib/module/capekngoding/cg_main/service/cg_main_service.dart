@@ -159,6 +159,12 @@ class CgMainService {
       'page': const CgGridView(),
     },
     {
+      'label': 'Wrap',
+      'icon': MdiIcons.wrap,
+      'color': Colors.cyan,
+      'page': const CgWrapView(),
+    },
+    {
       'label': 'TableView',
       'icon': MdiIcons.table,
       'color': Colors.cyan,

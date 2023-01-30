@@ -92,6 +92,8 @@ export 'package:hyper_ui/module/capekngoding/cg_table/controller/cg_table_contro
 export 'package:hyper_ui/module/capekngoding/cg_table/view/cg_table_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_text/controller/cg_text_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_text/view/cg_text_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_wrap/controller/cg_wrap_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_wrap/view/cg_wrap_view.dart';
 export 'package:hyper_ui/module/firebase/fb_chart/controller/fb_chart_controller.dart';
 export 'package:hyper_ui/module/firebase/fb_chart/view/fb_chart_view.dart';
 export 'package:hyper_ui/module/firebase/fb_crud_form/controller/fb_crud_form_controller.dart';
