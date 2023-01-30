@@ -223,30 +223,6 @@ class TemplateLayout extends StatelessWidget {
                 height: 20.0,
               ),
 
-              //#TEMPLATE grid
-              GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 6,
-                  crossAxisSpacing: 6,
-                ),
-                itemCount: 4,
-                shrinkWrap: true,
-                physics: const ScrollPhysics(),
-                itemBuilder: (BuildContext context, int index) {
-                  return Container(
-                    color: Colors.red[100],
-                    child: Column(
-                      children: const [],
-                    ),
-                  );
-                },
-              ),
-              //#END
-              const SizedBox(
-                height: 20.0,
-              ),
-
               SizedBox(
                 height: 100.0,
                 child:

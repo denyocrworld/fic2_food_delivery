@@ -141,12 +141,6 @@ class CgMainService {
       'page': const CgCircleAvatarView(),
     },
     {
-      'label': 'Layout',
-      'icon': MdiIcons.viewGrid,
-      'color': Colors.brown,
-      'page': const CgLayoutView(),
-    },
-    {
       'label': 'ListView',
       'icon': MdiIcons.viewList,
       'color': Colors.indigo,

@@ -51,8 +51,6 @@ export 'package:hyper_ui/module/capekngoding/cg_icon/controller/cg_icon_controll
 export 'package:hyper_ui/module/capekngoding/cg_icon/view/cg_icon_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_image/controller/cg_image_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_image/view/cg_image_view.dart';
-export 'package:hyper_ui/module/capekngoding/cg_layout/controller/cg_layout_controller.dart';
-export 'package:hyper_ui/module/capekngoding/cg_layout/view/cg_layout_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_list/controller/cg_list_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_list/view/cg_list_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_list_item/controller/cg_list_item_controller.dart';
