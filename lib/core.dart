@@ -22,6 +22,8 @@ export 'package:hyper_ui/module/capekngoding/cg_chart/controller/cg_chart_contro
 export 'package:hyper_ui/module/capekngoding/cg_chart/view/cg_chart_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_circle_avatar/controller/cg_circle_avatar_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_circle_avatar/view/cg_circle_avatar_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_common/controller/cg_common_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_common/view/cg_common_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_container/controller/cg_container_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_container/view/cg_container_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/controller/cg_form_controller.dart';

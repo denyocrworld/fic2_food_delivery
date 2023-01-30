@@ -1,20 +1,4 @@
 /*
-
-#GROUP_TEMPLATE data_dummy
-#TEMPLATE randomImage
-"@randomImage"
-#END
-#TEMPLATE randomImagePicasso
-"@randomImagePicasso"
-#END
-#TEMPLATE randomName
-"@randomName"
-#END
-#TEMPLATE randomAddress
-"@randomAddress"
-#END
-
-
 #GROUP_TEMPLATE skip_docs
 #TEMPLATE text
 Text("text"),

@@ -87,6 +87,12 @@ class CgMainService {
       'page': const CgHotkeyView(),
     },
     {
+      'label': 'Common',
+      'icon': MdiIcons.soccerField,
+      'color': Colors.yellow,
+      'page': const CgCommonView(),
+    },
+    {
       'label': 'Scaffold',
       'icon': MdiIcons.screwdriver,
       'color': Colors.green,

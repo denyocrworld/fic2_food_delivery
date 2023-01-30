@@ -1,6 +1,6 @@
 {
     "openai_key": "",
     "modules": [
-       
+        "capekngoding/cg_common"
     ]
 }
