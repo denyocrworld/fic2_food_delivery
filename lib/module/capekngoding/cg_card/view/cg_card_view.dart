@@ -17,25 +17,17 @@ class CgCardView extends StatefulWidget {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
-              ListTile(
-                leading: const CircleAvatar(
+              const ListTile(
+                leading: CircleAvatar(
                   backgroundImage: NetworkImage(
                     "https://i.ibb.co/PGv8ZzG/me.jpg",
                   ),
                 ),
-                title: const Text("John doe"),
-                subtitle: const Text("john.doe@gmail.com"),
-                trailing: SizedBox(
-                  width: 60,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Icon(
-                        Icons.developer_board,
-                        size: 24.0,
-                      )
-                    ],
-                  ),
+                title: Text("John doe"),
+                subtitle: Text("john.doe@gmail.com"),
+                trailing: Icon(
+                  Icons.add,
+                  size: 24.0,
                 ),
               ),
               const SnippetContainer("list_tile"),
