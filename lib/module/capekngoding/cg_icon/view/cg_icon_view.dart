@@ -95,6 +95,29 @@ class CgIconView extends StatefulWidget {
                 ),
               ),
               //#END
+
+              const SnippetContainer("mdi"),
+              const Text("MdiIcons"),
+              /*
+              //#TEMPLATE mdi
+              MdiIcons
+              //#END
+              */
+
+              const SnippetContainer("icons"),
+              const Text("Icons"),
+              /*
+              //#TEMPLATE icons
+              Icons
+              //#END
+              */
+              const SnippetContainer("faw"),
+              const Text("FontAwesomeIcons"),
+              /*
+              //#TEMPLATE faw
+              FontAwesomeIcons
+              //#END
+              */
             ],
           ),
         ),

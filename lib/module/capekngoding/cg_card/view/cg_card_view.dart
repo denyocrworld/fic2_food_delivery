@@ -36,6 +36,31 @@ class CgCardView extends StatefulWidget {
                 ),
               ),
               //#END
+              const SnippetContainer("list_tile_row"),
+              //#TEMPLATE list_tile_row
+              const ListTile(
+                title: Text("John doe"),
+                trailing: Icon(
+                  Icons.chevron_right,
+                  size: 24.0,
+                ),
+              ),
+              //#END
+              const SnippetContainer("list_tile_row_icon"),
+              //#TEMPLATE list_tile_row_icon
+              const ListTile(
+                leading: Icon(Icons.share),
+                minLeadingWidth: 0.0,
+                title: Text("John doe"),
+                trailing: SizedBox(
+                  width: 50,
+                  child: Icon(
+                    Icons.chevron_right,
+                    size: 24.0,
+                  ),
+                ),
+              ),
+              //#END
               const SnippetContainer("card_tile"),
               //#TEMPLATE card_tile
               Card(
