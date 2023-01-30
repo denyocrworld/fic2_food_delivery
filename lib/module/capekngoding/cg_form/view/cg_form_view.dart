@@ -365,7 +365,7 @@ class CgFormView extends StatefulWidget {
                                         size: 24.0,
                                         color: Theme.of(context)
                                             .textTheme
-                                            .bodyText1!
+                                            .bodyLarge!
                                             .color,
                                       ),
                                     ),
@@ -374,15 +374,15 @@ class CgFormView extends StatefulWidget {
                                     style: TextStyle(
                                       fontSize: Theme.of(context)
                                           .textTheme
-                                          .bodyText2!
+                                          .bodyMedium!
                                           .fontSize,
                                       fontFamily: Theme.of(context)
                                           .textTheme
-                                          .bodyText2!
+                                          .bodyMedium!
                                           .fontFamily,
                                       color: Theme.of(context)
                                           .textTheme
-                                          .bodyText2!
+                                          .bodyMedium!
                                           .color,
                                     ),
                                     underline: Container(
@@ -638,7 +638,7 @@ class CgFormView extends StatefulWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            "John Doe",
+                            'John Doe',
                             style: TextStyle(
                               fontSize: 14.0,
                               fontWeight: FontWeight.bold,
@@ -668,7 +668,7 @@ class CgFormView extends StatefulWidget {
                                 width: 4.0,
                               ),
                               const Text(
-                                "1 Week ago",
+                                '1 Week ago',
                                 style: TextStyle(
                                   fontSize: 10.0,
                                 ),
@@ -679,7 +679,7 @@ class CgFormView extends StatefulWidget {
                             height: 6.0,
                           ),
                           const Text(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                             style: TextStyle(
                               fontSize: 12.0,
                             ),
