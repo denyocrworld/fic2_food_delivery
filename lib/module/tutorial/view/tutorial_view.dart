@@ -18,6 +18,116 @@ class TutorialView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Container(
+                height: 160.0,
+                //w100
+                width: MediaQuery.of(context).size.width,
+                clipBehavior: Clip.antiAlias,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    const Positioned(
+                      right: 10,
+                      top: 10,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 12.0,
+                        child: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                          size: 12.0,
+                        ),
+                      ),
+                    ),
+                    //ALT+SHIFT+ENTER
+                    Positioned(
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      child: Container(
+                        padding: const EdgeInsets.all(12.0),
+                        color: Colors.black.withOpacity(0.8),
+                        child: const Text(
+                          "Tokyo, Japan",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                height: 164.0,
+                width: 164.0,
+                clipBehavior: Clip.hardEdge,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      "https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(
+                      16.0,
+                    ),
+                  ),
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      color: Colors.black26,
+                    ),
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: CircleAvatar(
+                          backgroundColor:
+                              Theme.of(context).cardColor.withOpacity(0.6),
+                          child: const Icon(
+                            Icons.favorite,
+                            size: 14.0,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        color: Colors.black54,
+                        padding: const EdgeInsets.all(12.0),
+                        child: const Text(
+                          "How to play guitar for beginner",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               ListTile(
                 leading: const CircleAvatar(
                   backgroundImage: NetworkImage(
