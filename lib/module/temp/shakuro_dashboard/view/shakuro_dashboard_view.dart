@@ -252,6 +252,10 @@ class ShakuroDashboardView extends StatefulWidget {
                               ),
                               fit: BoxFit.cover,
                             ),
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(12.0),
+                              topRight: Radius.circular(12.0),
+                            ),
                           ),
                         ),
                         Container(
@@ -261,7 +265,6 @@ class ShakuroDashboardView extends StatefulWidget {
                             children: [
                               Row(
                                 children: const [
-                                  //Nama restoran Italy yang ok?
                                   Text(
                                     "Mr. John Pizza",
                                     style: TextStyle(
