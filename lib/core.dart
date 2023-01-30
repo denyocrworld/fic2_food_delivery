@@ -30,6 +30,8 @@ export 'package:hyper_ui/module/capekngoding/cg_firebase/controller/cg_firebase_
 export 'package:hyper_ui/module/capekngoding/cg_firebase/view/cg_firebase_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/controller/cg_form_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/view/cg_form_view.dart';
+export 'package:hyper_ui/module/capekngoding/cg_get/controller/cg_get_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_get/view/cg_get_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_grid/controller/cg_grid_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_grid/view/cg_grid_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/controller/cg_hotkey_controller.dart';

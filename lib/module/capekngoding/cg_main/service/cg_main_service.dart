@@ -221,6 +221,13 @@ class CgMainService {
       'page': const CgFirebaseView(),
       'tag': 'Nunggu Mood'
     },
+    {
+      'label': 'Get ???',
+      'icon': MdiIcons.firebase,
+      'color': Colors.grey,
+      'page': const CgGetView(),
+      'tag': 'Nunggu Mood'
+    },
   ];
 
 //Buatlah List<Map> uiMenuList di Flutter yang berisi Map dengan label, icon,color dan event onPressed tanpa isi. Tambahkan 3 data di dalamnya berupa Dashboard, ListView, DetailView, ReportView, ProfileView dengan color yang unik dan gunakan MdiIcons.

@@ -7,6 +7,9 @@ State
 - Global State
 - Reuseable Widget State
 
+- Freelance
+- Fulltime
+
 StatefulWidget  v
 LocationPicker
 LocationPickerState

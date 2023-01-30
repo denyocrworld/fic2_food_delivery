@@ -4,6 +4,7 @@
         "capekngoding/cg_common",
         "capekngoding/cg_wrap",
         "capekngoding/cg_http",
-        "capekngoding/cg_firebase"
+        "capekngoding/cg_firebase",
+        "capekngoding/cg_get"
     ]
 }
