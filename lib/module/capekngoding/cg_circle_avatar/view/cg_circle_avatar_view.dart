@@ -125,6 +125,7 @@ class CgCircleAvatarView extends StatefulWidget {
                 ),
               ),
               //#END
+              Divider(),
             ],
           ),
         ),
