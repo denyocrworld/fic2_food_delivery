@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:url_launcher/link.dart';
-import '../controller/cg_button_controller.dart';
 
 //#GROUP_TEMPLATE button
 class CgButtonView extends StatefulWidget {
@@ -20,12 +19,16 @@ class CgButtonView extends StatefulWidget {
           width: MediaQuery.of(context).size.width,
           padding: const EdgeInsets.all(10.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Card(
-                child: Padding(
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(20.0),
-                  child: Row(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const SnippetContainer("button"),
                       //#TEMPLATE button
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -35,10 +38,7 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-                      const SizedBox(
-                        width: 12.0,
-                      ),
-
+                      const SnippetContainer("button_stadium"),
                       //#TEMPLATE button_stadium
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -49,25 +49,20 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-                      const SizedBox(
-                        width: 12.0,
-                      ),
+                      const SnippetContainer("button_radius"),
                       //#TEMPLATE button_radius
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueGrey,
                           shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(12), // <-- Radius
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                         onPressed: () {},
                         child: const Text("Save"),
                       ),
                       //#END
-                      const SizedBox(
-                        width: 12.0,
-                      ),
+                      const SnippetContainer("button_continuous"),
                       //#TEMPLATE button_continuous
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -80,9 +75,7 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-                      const SizedBox(
-                        width: 12.0,
-                      ),
+                      const SnippetContainer("button_beveled"),
                       //#TEMPLATE button_beveled
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -95,57 +88,63 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+
+                      const Divider(),
+                      const SnippetContainer("button_outline"),
                       //#TEMPLATE button_outline
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
-                        ),
-                        onPressed: () {},
-                        child: const Text("Save"),
-                      ),
-                      //#END
-
-                      //#TEMPLATE button_outline_stadium
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
-                          shape: const StadiumBorder(),
-                        ),
-                        onPressed: () {},
-                        child: const Text("Save"),
-                      ),
-                      //#END
-
-                      //#TEMPLATE button_outline_radius
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
-                          shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(12), // <-- Radius
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
                           ),
                         ),
                         onPressed: () {},
                         child: const Text("Save"),
                       ),
                       //#END
-
-                      //#TEMPLATE button_outline_continuous
+                      const SnippetContainer("button_outline_stadium"),
+                      //#TEMPLATE button_outline_stadium
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
+                          shape: const StadiumBorder(),
+                        ),
+                        onPressed: () {},
+                        child: const Text("Save"),
+                      ),
+                      //#END
+                      const SnippetContainer("button_outline_radius"),
+                      //#TEMPLATE button_outline_radius
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: const Text("Save"),
+                      ),
+                      //#END
+                      const SnippetContainer("button_outline_continuous"),
+                      //#TEMPLATE button_outline_continuous
+                      OutlinedButton(
+                        clipBehavior: Clip.antiAlias,
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: Colors.green,
+                          shadowColor: Colors.transparent,
+                          surfaceTintColor: Colors.red,
+                          side: const BorderSide(
+                            color: Colors.green,
+                            width: 2.0,
+                          ),
                           shape: ContinuousRectangleBorder(
                             borderRadius: BorderRadius.circular(64.0),
                           ),
@@ -154,11 +153,14 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-
+                      const SnippetContainer("button_outline_beveled"),
                       //#TEMPLATE button_outline_beveled
                       OutlinedButton(
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
                           shape: BeveledRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -167,18 +169,8 @@ class CgButtonView extends StatefulWidget {
                         child: const Text("Save"),
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const Divider(),
+                      const SnippetContainer("button_icon"),
                       //#TEMPLATE button_icon
                       ElevatedButton.icon(
                         icon: const Icon(Icons.add),
@@ -189,7 +181,7 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_stadium"),
                       //#TEMPLATE button_icon_stadium
                       ElevatedButton.icon(
                         icon: const Icon(Icons.add),
@@ -201,7 +193,7 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_radius"),
                       //#TEMPLATE button_icon_radius
                       ElevatedButton.icon(
                         icon: const Icon(Icons.add),
@@ -209,14 +201,13 @@ class CgButtonView extends StatefulWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blueGrey,
                           shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(12), // <-- Radius
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_continuous"),
                       //#TEMPLATE button_icon_continuous
                       ElevatedButton.icon(
                         icon: const Icon(Icons.add),
@@ -230,7 +221,7 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_beveled"),
                       //#TEMPLATE button_icon_beveled
                       ElevatedButton.icon(
                         icon: const Icon(Icons.add),
@@ -244,47 +235,48 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const Divider(),
+                      const SnippetContainer("button_icon_outline"),
                       //#TEMPLATE button_icon_outline
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label: const Text("Add"),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
                         ),
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_outline_stadium"),
                       //#TEMPLATE button_icon_outline_stadium
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label: const Text("Add"),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
                           shape: const StadiumBorder(),
                         ),
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_outline_continuous"),
                       //#TEMPLATE button_icon_outline_continuous
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label: const Text("Add"),
+                        clipBehavior: Clip.antiAlias,
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                            width: 2.0,
+                          ),
                           shape: ContinuousRectangleBorder(
                             borderRadius: BorderRadius.circular(64.0),
                           ),
@@ -292,28 +284,33 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_outline_radius"),
                       //#TEMPLATE button_icon_outline_radius
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label: const Text("Add"),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
                           shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.circular(12), // <-- Radius
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                         onPressed: () {},
                       ),
                       //#END
-
+                      const SnippetContainer("button_icon_outline_beveled"),
                       //#TEMPLATE button_icon_outline_beveled
                       OutlinedButton.icon(
                         icon: const Icon(Icons.add),
                         label: const Text("Add"),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.blueGrey,
+                          foregroundColor: Colors.green,
+                          side: const BorderSide(
+                            color: Colors.green,
+                          ),
                           shape: BeveledRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -321,18 +318,8 @@ class CgButtonView extends StatefulWidget {
                         onPressed: () {},
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const Divider(),
+                      const SnippetContainer("button_icon_vertical"),
                       //#TEMPLATE button_icon_vertical
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
@@ -353,7 +340,7 @@ class CgButtonView extends StatefulWidget {
                             children: const [
                               Icon(
                                 Icons.home,
-                                color: Colors.blueGrey,
+                                color: Colors.green,
                               ),
                               SizedBox(
                                 height: 4.0,
@@ -363,7 +350,7 @@ class CgButtonView extends StatefulWidget {
                                 textAlign: TextAlign.center,
                                 overflow: TextOverflow.ellipsis,
                                 style: TextStyle(
-                                  color: Colors.blueGrey,
+                                  color: Colors.green,
                                   fontSize: 8.0,
                                 ),
                               ),
@@ -372,44 +359,34 @@ class CgButtonView extends StatefulWidget {
                         ),
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        height: 0.0,
-                        width: 0.0,
-                        child: Scaffold(
-                          //#TEMPLATE floating_action_button
-                          floatingActionButton: FloatingActionButton(
-                            child: const Icon(Icons.add),
-                            onPressed: () {
-                              //
-                            },
+                      const Divider(),
+                      const SnippetContainer("floating_action_button"),
+                      Text("""
+floatingActionButton: FloatingActionButton(
+  child: const Icon(Icons.add),
+  onPressed: () {
+    //
+  },
+),
+"""
+                          .trim()),
+                      if (1 == 2)
+                        SizedBox(
+                          height: 0.0,
+                          width: 0.0,
+                          child: Scaffold(
+                            //#TEMPLATE floating_action_button
+                            floatingActionButton: FloatingActionButton(
+                              child: const Icon(Icons.add),
+                              onPressed: () {
+                                //
+                              },
+                            ),
+                            //#END
                           ),
-                          //#END
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const Divider(),
+                      const SnippetContainer("link"),
                       //#TEMPLATE link
                       Link(
                         uri:
@@ -424,18 +401,7 @@ class CgButtonView extends StatefulWidget {
                         },
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const SnippetContainer("link_button"),
                       //#TEMPLATE link_button
                       Link(
                         uri:
@@ -452,18 +418,7 @@ class CgButtonView extends StatefulWidget {
                         },
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const SnippetContainer("link_button_icon"),
                       //#TEMPLATE link_button_icon
                       Link(
                         uri:
@@ -474,25 +429,17 @@ class CgButtonView extends StatefulWidget {
                             icon: const Icon(Icons.link),
                             label: const Text("Open Link"),
                             style: OutlinedButton.styleFrom(
-                              foregroundColor: Colors.blueGrey,
+                              foregroundColor: Colors.green,
+                              side: const BorderSide(
+                                color: Colors.green,
+                              ),
                             ),
                             onPressed: openLink,
                           );
                         },
                       ),
                       //#END
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: [
+                      const SnippetContainer("link_icon"),
                       //#TEMPLATE link_icon
                       Link(
                         uri:
@@ -512,44 +459,6 @@ class CgButtonView extends StatefulWidget {
                     ],
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: const [],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    children: const [],
-                  ),
-                ),
-              ),
-
-              //----------------------
-
-              //----------
-
-              const SizedBox(
-                height: 20.0,
-              ),
-
-              const SizedBox(
-                height: 20.0,
-              ),
-
-              const SizedBox(
-                height: 20.0,
               ),
             ],
           ),
