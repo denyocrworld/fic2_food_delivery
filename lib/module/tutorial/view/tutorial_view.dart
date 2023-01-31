@@ -58,9 +58,25 @@ Backend
 - Integrasi dengan 3rd party API
 > Payment gateway (Midtrans)
 */
+//CTRL+SHIFT+C => Controller
+//CTRL+SHIFT+V => View
 class TutorialView extends StatefulWidget {
   const TutorialView({Key? key}) : super(key: key);
 
+/*
+Basic Pemrograman
+- Variable
+- Operator Aritmatika
+- IF Statement
+- List/Array
+- Map
+- Looping
+- Function
+- OOP
+
+MVC
+- Cukup mudah
+*/
   Widget build(context, TutorialController controller) {
     controller.view = this;
     return Scaffold(
@@ -68,49 +84,14 @@ class TutorialView extends StatefulWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
+      //CTRL+SHIFT+ALT+R
       body: SingleChildScrollView(
         controller: ScrollController(),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: [
-                      QImagePicker(
-                        label: "Photo",
-                        validator: Validator.required,
-                        value: null,
-                        onChanged: (value) {
-                          print("value: $value");
-                          controller.photoUrl = value;
-                        },
-                      ),
-                      QTextField(
-                        label: "Name",
-                        validator: Validator.required,
-                        onChanged: (value) {},
-                      ),
-                      QNumberField(
-                        label: "Age",
-                        validator: Validator.required,
-                        onChanged: (value) {},
-                      ),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blueGrey,
-                        ),
-                        onPressed: () {},
-                        child: const Text("Save"),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
+            children: const [],
           ),
         ),
       ),

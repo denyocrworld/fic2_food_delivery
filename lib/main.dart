@@ -1,61 +1,21 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
+
 /*
-  Kelas Online /w DenyOcr
-  Start: Awal February Gelombang 2
-  ? capekngoding.com
 
+https://capekngoding.com/docs
+*Yuk belajar Flutter jalur sesat >_<*
+9:49 - 10:30
 
-  LINK Komunitas Berandal:
-  ? https://tinyurl.com/berandal-group
-  
-  Front End
-  - Web
-  - Mobile
+*Update Extension Ngebut*
+- Dokumentasi di Web
+- Snippet2 dan Hotkey2 Baru
 
-  ! Basic Pemrograman
-  - Variable
-  - Operator Aritmatika
-  - IF
-  - List/Array
-  - Map
-  - Looping
-  - Function
-  - OOP
-
-  ! Framework
-
-  Skills
-  - 
-
-  Experience
-  - Ngerjain real project
-  - Freelance
-  - Fulltime ngantor
-  - Magang
-  - Bikin produk sendiri
-
-  Pemain Bola
-  Skills
-  - Gocek
-  - Lari-nya kenceng
-  - Nendang-nya kenceng
-
-  Experience
-  - Udah pernah ikut piala dunia
-  - Udah pernah ikut club di liga professional
-
-  ! Ditampung dulu
-  - tutor form validation pake flutter bang
-
-
-  */
+*/
 
 void main() async {
   await initialize();
 
-  // await FirebaseFirestore.instance.collection("products").get();
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();

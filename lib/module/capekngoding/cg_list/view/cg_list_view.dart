@@ -74,7 +74,7 @@ class CgListView extends StatefulWidget {
                 //#END,
               ),
               const SnippetContainer("list_horizontal"),
-              //#TEMPLATE list_horizontal_basic
+              //#TEMPLATE list_horizontal
               SizedBox(
                 height: 32.0,
                 child: ListView.builder(

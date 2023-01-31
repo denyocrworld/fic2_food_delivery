@@ -20,4 +20,7 @@ class TutorialController extends State<TutorialView> implements MvcController {
   Widget build(BuildContext context) => widget.build(context, this);
 
   String? photoUrl;
+
+  int currentIndex = 0;
+  final CarouselController carouselController = CarouselController();
 }
