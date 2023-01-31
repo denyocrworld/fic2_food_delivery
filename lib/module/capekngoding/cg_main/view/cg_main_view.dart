@@ -180,8 +180,26 @@ class CgMainView extends StatefulWidget {
                     Expanded(
                       child: Container(
                         color: Colors.grey[300],
+                        width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
-                        child: controller.mainView,
+                        child: Row(
+                          children: [
+                            Container(
+                              constraints: const BoxConstraints(
+                                maxWidth: 600,
+                              ),
+                              child: controller.mainView,
+                            ),
+                            Expanded(
+                              child: Scaffold(
+                                appBar: AppBar(),
+                                body: Container(
+                                    // color: Colors.black,
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                 ],

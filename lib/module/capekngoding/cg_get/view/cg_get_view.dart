@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+//#SKIP_TEMPLATE
+//! Don't CREATE TEMPLATE in this File!!!
+//! Only Docs!
 
 class CgGetView extends StatefulWidget {
   const CgGetView({Key? key}) : super(key: key);

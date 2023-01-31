@@ -222,9 +222,8 @@ class CgMainService {
     {
       'label': 'Firebase',
       'icon': MdiIcons.firebase,
-      'color': Colors.grey,
+      'color': Colors.orange,
       'page': const CgFirebaseView(),
-      'tag': 'Nunggu Mood'
     },
   ];
 
