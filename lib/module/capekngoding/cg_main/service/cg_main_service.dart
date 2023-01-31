@@ -10,7 +10,7 @@ class CgMainService {
       'page': Container(),
       'action': () async {
         launchUrl(Uri.parse(
-          "https://chat.whatsapp.com/HijFMUeQx8A5fcIj0eJnSB",
+          "https://chat.whatsapp.com/GL00oxRZAID4wW0P0mCTKl",
         ));
       }
     },
