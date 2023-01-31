@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 /*
 TODO: 
@@ -10,7 +11,7 @@ Docs: https://firebase.flutter.dev/docs/cli/
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (Platform.isWindows) return;
+  if (kIsWeb || Platform.isWindows) return;
 
   // await Firebase.initializeApp(
   //   //run > flutterfire configure

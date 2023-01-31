@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -184,7 +185,8 @@ class _QLocationPickerState extends State<QLocationPicker>
                               backgroundColor: Colors.blueGrey,
                             ),
                             onPressed: () async {
-                              if (Platform.isAndroid || Platform.isIOS) {
+                              if (!kIsWeb &&
+                                  (Platform.isAndroid || Platform.isIOS)) {
                                 if (!await Permission.location
                                     .request()
                                     .isGranted) {

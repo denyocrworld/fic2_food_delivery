@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
@@ -108,21 +109,24 @@ class CgMainView extends StatefulWidget {
                                   //   menuList: cgMainService.onlineClassExercises,
                                   //   title: "Online Class Exercises",
                                   // ),
-                                  SideMenu(
-                                    menuList: cgMainService.onlineClassMenuList,
-                                    title: "Online Class",
-                                  ),
-                                  const SizedBox(
-                                    height: 20.0,
-                                  ),
-                                  SideMenu(
-                                    menuList:
-                                        cgMainService.onlineClassExercises,
-                                    title: "Exercise",
-                                  ),
-                                  const SizedBox(
-                                    height: 20.0,
-                                  ),
+                                  if (kDebugMode) ...[
+                                    SideMenu(
+                                      menuList:
+                                          cgMainService.onlineClassMenuList,
+                                      title: "Online Class",
+                                    ),
+                                    const SizedBox(
+                                      height: 20.0,
+                                    ),
+                                    SideMenu(
+                                      menuList:
+                                          cgMainService.onlineClassExercises,
+                                      title: "Exercise",
+                                    ),
+                                    const SizedBox(
+                                      height: 20.0,
+                                    ),
+                                  ],
                                   SideMenu(
                                     menuList: cgMainService.menuList,
                                     title: "Basic",
