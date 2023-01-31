@@ -179,23 +179,28 @@ class CgMainView extends StatefulWidget {
                   if (!isMobile)
                     Expanded(
                       child: Container(
-                        color: Theme.of(context).scaffoldBackgroundColor,
+                        color: Theme.of(context).cardColor,
                         width: MediaQuery.of(context).size.width,
                         height: MediaQuery.of(context).size.height,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Container(
-                              margin: const EdgeInsets.symmetric(
-                                vertical: 12.0,
-                                horizontal: 12.0,
+                        child: SingleChildScrollView(
+                          controller: ScrollController(),
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.symmetric(
+                                  vertical: 12.0,
+                                  horizontal: 12.0,
+                                ),
+                                constraints: const BoxConstraints(
+                                  maxWidth: 400,
+                                  minWidth: 300,
+                                ),
+                                child: controller.mainView,
                               ),
-                              constraints: const BoxConstraints(
-                                maxWidth: 600,
-                              ),
-                              child: controller.mainView,
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),

@@ -18,27 +18,26 @@ class CgFirebaseView extends StatefulWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SnippetContainer("fireuser"),
+              const SnippetContainer("fire_user"),
               Text("""
 FirebaseAuth.instance.currentUser!
-""".trim()),
-              const SnippetContainer("firelogin"),
-              Text(
-                  """
+"""
+                  .trim()),
+              const SnippetContainer("fire_login"),
+              Text("""
 await FirebaseAuth.instance.signInWithEmailAndPassword(
   email: "user@demo.com",
   password: "123456 xxx",
 );
 """
-                      .trim()),
-              const SnippetContainer("fireloginanonymously"),
+                  .trim()),
+              const SnippetContainer("fire_login_anonymously"),
               Text("""
 await FirebaseAuth.instance.signInAnonymously();
 """
                   .trim()),
-              const SnippetContainer("firegooglelogin"),
-              Text(
-                  """
+              const SnippetContainer("fire_login_google"),
+              Text("""
 GoogleSignIn googleSignIn = GoogleSignIn(
   scopes: [
     'email',
@@ -64,50 +63,46 @@ try {
   //------------------
 } catch (_) {}
 """
-                      .trim()),
-              const SnippetContainer("firesignup"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_signup"),
+              Text("""
 await FirebaseAuth.instance.createUserWithEmailAndPassword(
   email: email,
   password: password,
 );
 """
-                      .trim()),
-              const SnippetContainer("fireregister"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_register"),
+              Text("""
 await FirebaseAuth.instance.createUserWithEmailAndPassword(
   email: email,
   password: password,
 );
 """
-                      .trim()),
-              const SnippetContainer("firecreate"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_create"),
+              Text("""
 await FirebaseAuth.instance.createUserWithEmailAndPassword(
   email: email,
   password: password,
 );
 """
-                      .trim()),
-              const SnippetContainer("firelogout"),
+                  .trim()),
+              const SnippetContainer("fire_logout"),
               Text("""
 await FirebaseAuth.instance.signOut();
-""".trim()),
-              const SnippetContainer("fireadd"),
-              Text(
-                  """
+"""
+                  .trim()),
+              const SnippetContainer("fire_add"),
+              Text("""
 await FirebaseFirestore.instance.collection("products").add({
   "product_name": "ProductXXX",
   "price": 25,
 });
 """
-                      .trim()),
-              const SnippetContainer("fireupdate"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_update"),
+              Text("""
 await FirebaseFirestore.instance
   .collection("products")
   .doc("xxx")
@@ -116,31 +111,27 @@ await FirebaseFirestore.instance
     "price": 25,
   });
 """
-                      .trim()),
-              const SnippetContainer("firedelete"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_delete"),
+              Text("""
 await FirebaseFirestore.instance
   .collection("products")
   .doc("xxx")
   .delete();
 """
-                      .trim()),
-              const SnippetContainer("fireget"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_get"),
+              Text("""
 await FirebaseFirestore.instance.collection("products").get();
 """
-                      .trim()),
-              const SnippetContainer("firesnapshot"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_snapshot"),
+              Text("""
 FirebaseFirestore.instance.collection("products").snapshots();
 """
-                      .trim()),
-              const SnippetContainer("firedeleteall"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_delete_all"),
+              Text("""
 var snapshot =
     await FirebaseFirestore.instance.collection("products").get();
 for (var i = 0; i < snapshot.docs.length; i++) {
@@ -150,25 +141,22 @@ for (var i = 0; i < snapshot.docs.length; i++) {
       .delete();
 }
 """
-                      .trim()),
-              const SnippetContainer("firesnapshot"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_snapshot"),
+              Text("""
 FirebaseFirestore.instance.collection("products").snapshots();
 """
-                      .trim()),
-              const SnippetContainer("firesnapshot"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_snapshot"),
+              Text("""
 FirebaseFirestore.instance.collection("products").snapshots();
 """
-                      .trim()),
-              const SnippetContainer("firesnapshot"),
-              Text(
-                  """
+                  .trim()),
+              const SnippetContainer("fire_snapshot"),
+              Text("""
 FirebaseFirestore.instance.collection("products").snapshots();
 """
-                      .trim()),
+                  .trim()),
             ],
           ),
         ),

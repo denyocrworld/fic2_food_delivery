@@ -12,27 +12,27 @@ class DevSnippetView extends StatelessWidget {
       var email = "";
       var password = "";
 
-      //#GROUP_TEMPLATE firebase
+      //#GROUP_TEMPLATE fire_base
 
       /*
-      //#TEMPLATE fireuser
+      //#TEMPLATE fire_user
       FirebaseAuth.instance.currentUser!
       //#END
       */
 
-      //#TEMPLATE firelogin
+      //#TEMPLATE fire_login
 await FirebaseAuth.instance.signInWithEmailAndPassword(
   email: "user@demo.com",
   password: "123456 xxx",
 );
       //#END
 
-      //#TEMPLATE fireloginanonymously
+      //#TEMPLATE fire_login_anonymously
       await FirebaseAuth.instance.signInAnonymously();
       //#END
 
       /*
-      //#TEMPLATE firegooglelogin
+      //#TEMPLATE fire_login_google
       GoogleSignIn googleSignIn = GoogleSignIn(
         scopes: [
           'email',
@@ -60,39 +60,39 @@ await FirebaseAuth.instance.signInWithEmailAndPassword(
       //#END
       */
 
-      //#TEMPLATE firesignup
+      //#TEMPLATE fire_signup
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
       //#END
 
-      //#TEMPLATE fireregister
+      //#TEMPLATE fire_register
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
       //#END
 
-      //#TEMPLATE firecreate
+      //#TEMPLATE fire_create
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
       //#END
 
-      //#TEMPLATE firelogout
+      //#TEMPLATE fire_logout
       await FirebaseAuth.instance.signOut();
       //#END
 
-      //#TEMPLATE fireadd
+      //#TEMPLATE fire_add
       await FirebaseFirestore.instance.collection("products").add({
         "product_name": "ProductXXX",
         "price": 25,
       });
       //#END
 
-      //#TEMPLATE fireupdate
+      //#TEMPLATE fire_update
       await FirebaseFirestore.instance
           .collection("products")
           .doc("xxx")
@@ -102,7 +102,7 @@ await FirebaseAuth.instance.signInWithEmailAndPassword(
       });
       //#END
 
-      //#TEMPLATE firedelete
+      //#TEMPLATE fire_delete
       await FirebaseFirestore.instance
           .collection("products")
           .doc("xxx")
@@ -110,17 +110,17 @@ await FirebaseAuth.instance.signInWithEmailAndPassword(
       //#END
 
       {
-        //#TEMPLATE fireget
+        //#TEMPLATE fire_get
         await FirebaseFirestore.instance.collection("products").get();
         //#END
       }
       {
-        //#TEMPLATE firesnapshot
+        //#TEMPLATE fire_snapshot
         FirebaseFirestore.instance.collection("products").snapshots();
         //#END
       }
 
-      //#TEMPLATE firedeleteall
+      //#TEMPLATE fire_delete_all
       var snapshot =
           await FirebaseFirestore.instance.collection("products").get();
       for (var i = 0; i < snapshot.docs.length; i++) {
