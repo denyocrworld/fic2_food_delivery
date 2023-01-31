@@ -23,6 +23,14 @@ class CgTextView extends StatefulWidget {
 Text("text"),
 """
                   .trim()),
+              const SnippetContainer("texts"),
+              Text("""
+Text(
+  "",
+  style: TextStyle(),
+),
+"""
+                  .trim()),
               const SnippetContainer("text1 - text50"),
               Text("""
 Text(
