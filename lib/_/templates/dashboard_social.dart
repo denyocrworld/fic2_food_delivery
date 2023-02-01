@@ -42,16 +42,16 @@ class TemplateDashboardSocialView extends StatelessWidget {
               Theme(
                 data: ThemeData(
                   textTheme: GoogleFonts.pacificoTextTheme().copyWith(
-                    headline1: TextStyle(
+                    displayLarge: TextStyle(
                       color: Colors.grey[800],
                     ),
-                    headline2: TextStyle(
+                    displayMedium: TextStyle(
                       color: Colors.grey[800],
                     ),
-                    bodyText1: TextStyle(
+                    bodyLarge: TextStyle(
                       color: Colors.grey[800],
                     ),
-                    bodyText2: TextStyle(
+                    bodyMedium: TextStyle(
                       color: Colors.grey[800],
                     ),
                   ),

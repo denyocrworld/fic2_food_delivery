@@ -1,5 +1,3 @@
-import 'package:blur/blur.dart';
-import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import '../controller/template_card_controller.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/model/user.dart';
 
 class HrListView extends StatefulWidget {
   const HrListView({Key? key}) : super(key: key);
@@ -37,19 +36,18 @@ class HrListView extends StatefulWidget {
                 itemCount: controller.userList.length,
                 itemBuilder: (context, index) {
                   Map<String, dynamic> item = controller.userList[index];
-                  User user = User.fromJson(item);
 
                   return Card(
                     child: ListTile(
                       leading: CircleAvatar(
                         backgroundColor: Colors.grey[200],
                         backgroundImage: NetworkImage(
-                          user.avatar ??
+                          item["avatar"] ??
                               "https://i.ibb.co/S32HNjD/no-image.jpg",
                         ),
                       ),
-                      title: Text("${user.firstName}"),
-                      subtitle: Text("${user.lastName}"),
+                      title: Text("${item["first_name"]}"),
+                      subtitle: Text("${item["email"]}}"),
                     ),
                   );
                 },

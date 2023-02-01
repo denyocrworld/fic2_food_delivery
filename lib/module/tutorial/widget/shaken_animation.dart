@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ShakeAnimation extends StatefulWidget {
+  const ShakeAnimation({super.key});
+
   @override
   _ShakeAnimationState createState() => _ShakeAnimationState();
 }

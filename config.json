@@ -5,6 +5,9 @@
         "capekngoding/cg_wrap",
         "capekngoding/cg_http",
         "capekngoding/cg_firebase",
-        "capekngoding/cg_get"
+        "capekngoding/cg_get",
+        "__example/ex_main_navigation",
+        "__example/imran/imran_dashboard",
+        "__example/imran/imran_product_detail"
     ]
 }

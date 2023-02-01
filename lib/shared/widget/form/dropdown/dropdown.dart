@@ -82,16 +82,16 @@ class _QDropdownFieldState extends State<QDropdownField> {
                     child: Icon(
                       Icons.arrow_drop_down_outlined,
                       size: 24.0,
-                      color: Theme.of(context).textTheme.bodyText1!.color,
+                      color: Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                   ),
                   iconSize: 16,
                   elevation: 16,
                   style: TextStyle(
-                    fontSize: Theme.of(context).textTheme.bodyText2!.fontSize,
+                    fontSize: Theme.of(context).textTheme.bodyMedium!.fontSize,
                     fontFamily:
-                        Theme.of(context).textTheme.bodyText2!.fontFamily,
-                    color: Theme.of(context).textTheme.bodyText2!.color,
+                        Theme.of(context).textTheme.bodyMedium!.fontFamily,
+                    color: Theme.of(context).textTheme.bodyMedium!.color,
                   ),
                   underline: Container(
                     height: 0,

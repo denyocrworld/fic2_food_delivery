@@ -73,8 +73,47 @@ class CgListView extends StatefulWidget {
                 ),
                 //#END,
               ),
-              const SnippetContainer("list_horizontal"),
+              const SnippetContainer("list_horizontal_singlechild"),
               //#TEMPLATE list_horizontal
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                controller: ScrollController(),
+                child: Row(
+                  children: List.generate(
+                    10,
+                    (index) {
+                      var item = {};
+                      bool selected = index == 0;
+
+                      return Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0,
+                          vertical: 8.0,
+                        ),
+                        margin: const EdgeInsets.only(right: 10.0),
+                        decoration: BoxDecoration(
+                          color: selected ? Colors.orange : Colors.grey,
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(16.0),
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Menu ${index + 1}",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11.0,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+              //#END
+              const SnippetContainer("list_horizontal"),
+              //#TEMPLATE list_horizontal_with_listview
               SizedBox(
                 height: 32.0,
                 child: ListView.builder(
@@ -107,6 +146,9 @@ class CgListView extends StatefulWidget {
                 ),
               ),
               //#END
+              const SizedBox(
+                height: 200.0,
+              ),
             ],
           ),
         ),

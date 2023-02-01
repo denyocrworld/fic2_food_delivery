@@ -281,10 +281,10 @@ class CgMainService {
       'page': const ShakuroDashboardView(),
     },
     {
-      'label': '???',
+      'label': 'Imran UI',
       'icon': MdiIcons.card,
       'color': Colors.orange,
-      'page': Container(),
+      'page': const ImranDashboardView(),
     },
     {
       'label': '???',

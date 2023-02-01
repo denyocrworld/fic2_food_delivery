@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/capekngoding/cg_premade_detail/service/cg_premade_detail_service.dart';
-import 'package:hyper_ui/shared/widget/menu/menu.dart';
-import '../controller/cg_premade_detail_controller.dart';
 
 class CgPremadeDetailView extends StatefulWidget {
   const CgPremadeDetailView({Key? key}) : super(key: key);

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_container.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-import '../controller/cg_chart_controller.dart';
 
 //#GROUP_TEMPLATE chart
 class CgChartView extends StatefulWidget {

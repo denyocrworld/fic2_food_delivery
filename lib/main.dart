@@ -1,17 +1,6 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
-
-/*
-
-https://capekngoding.com/docs
-*Yuk belajar Flutter jalur sesat >_<*
-9:49 - 10:30
-
-*Update Extension Ngebut*
-- Dokumentasi di Web
-- Snippet2 dan Hotkey2 Baru
-
-*/
+import 'package:hyper_ui/debug.dart';
 
 void main() async {
   await initialize();
@@ -44,39 +33,7 @@ class MainApp extends StatelessWidget {
           // home: GegeGeminkDashboardUiView(),
           // home: ContohView(),
           // home: TutorialView(),
-          builder: (context, child) {
-            if (child == null) {
-              return Container();
-            }
-
-            //Alt+Shift+Enter
-            //Ctrl+S
-            return Material(
-              child: Stack(
-                children: [
-                  child,
-                  Positioned(
-                    right: 36,
-                    bottom: 10,
-                    child: InkWell(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: const CircleAvatar(
-                        radius: 8.0,
-                        backgroundColor: Colors.blue,
-                      ),
-                    ),
-                  ),
-                  const Positioned(
-                    right: 10,
-                    bottom: 10,
-                    child: ThemeChangerIcon(),
-                  ),
-                ],
-              ),
-            );
-          },
+          builder: debugView,
         );
       },
     );

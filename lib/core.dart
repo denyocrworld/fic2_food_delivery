@@ -3,7 +3,6 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
-export 'package:hyper_ui/model/user.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/controller/cgp_product_detail1_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/view/cgp_product_detail1_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/controller/cgp_product_detail2_controller.dart';
@@ -27,10 +26,12 @@ export 'package:hyper_ui/module/capekngoding/cg_common/view/cg_common_view.dart'
 export 'package:hyper_ui/module/capekngoding/cg_container/controller/cg_container_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_container/view/cg_container_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_firebase/controller/cg_firebase_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_firebase/snippet/firebase.dart';
 export 'package:hyper_ui/module/capekngoding/cg_firebase/view/cg_firebase_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/controller/cg_form_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_form/view/cg_form_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_get/controller/cg_get_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_get/snippet/common.dart';
 export 'package:hyper_ui/module/capekngoding/cg_get/view/cg_get_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_grid/controller/cg_grid_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_grid/view/cg_grid_view.dart';
@@ -38,6 +39,8 @@ export 'package:hyper_ui/module/capekngoding/cg_hotkey/controller/cg_hotkey_cont
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/service/cg_hotkey_service.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hotkey/view/cg_hotkey_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_http/controller/cg_http_controller.dart';
+export 'package:hyper_ui/module/capekngoding/cg_http/snippet/dio.dart';
+export 'package:hyper_ui/module/capekngoding/cg_http/snippet/http.dart';
 export 'package:hyper_ui/module/capekngoding/cg_http/view/cg_http_view.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hyperui_dialog/controller/cg_hyperui_dialog_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cg_hyperui_dialog/view/cg_hyperui_dialog_view.dart';
@@ -251,10 +254,16 @@ export 'package:hyper_ui/module/tutorial/view/tutorial_view.dart';
 export 'package:hyper_ui/module/tutorial/widget/banner_image.dart';
 export 'package:hyper_ui/module/tutorial/widget/product_card.dart';
 export 'package:hyper_ui/module/tutorial/widget/shaken_animation.dart';
-export 'package:hyper_ui/module/__random/shakuro/shakuro_dashboard/controller/shakuro_dashboard_controller.dart';
-export 'package:hyper_ui/module/__random/shakuro/shakuro_dashboard/view/shakuro_dashboard_view.dart';
-export 'package:hyper_ui/module/__random/shakuro/shakuro_product_detail/controller/shakuro_product_detail_controller.dart';
-export 'package:hyper_ui/module/__random/shakuro/shakuro_product_detail/view/shakuro_product_detail_view.dart';
+export 'package:hyper_ui/module/__example/ex_main_navigation/controller/ex_main_navigation_controller.dart';
+export 'package:hyper_ui/module/__example/ex_main_navigation/view/ex_main_navigation_view.dart';
+export 'package:hyper_ui/module/__example/imran/imran_dashboard/controller/imran_dashboard_controller.dart';
+export 'package:hyper_ui/module/__example/imran/imran_dashboard/view/imran_dashboard_view.dart';
+export 'package:hyper_ui/module/__example/imran/imran_product_detail/controller/imran_product_detail_controller.dart';
+export 'package:hyper_ui/module/__example/imran/imran_product_detail/view/imran_product_detail_view.dart';
+export 'package:hyper_ui/module/__example/shakuro/shakuro_dashboard/controller/shakuro_dashboard_controller.dart';
+export 'package:hyper_ui/module/__example/shakuro/shakuro_dashboard/view/shakuro_dashboard_view.dart';
+export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/controller/shakuro_product_detail_controller.dart';
+export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/view/shakuro_product_detail_view.dart';
 export 'package:hyper_ui/service/main_storage/main_storage.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_changer.dart';
@@ -268,6 +277,7 @@ export 'package:hyper_ui/shared/util/firebase_notification/firebase_notification
 export 'package:hyper_ui/shared/util/firebase_notification/notification_controller.dart';
 export 'package:hyper_ui/shared/util/focus_helper/focus_helper.dart';
 export 'package:hyper_ui/shared/util/input/input.dart';
+export 'package:hyper_ui/shared/util/platform_extension/platform_extension.dart';
 export 'package:hyper_ui/shared/util/random_image/random_image.dart';
 export 'package:hyper_ui/shared/util/responsive/responsive.dart';
 export 'package:hyper_ui/shared/util/show_loading/show_loading.dart';

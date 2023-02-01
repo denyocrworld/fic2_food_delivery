@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/online_class/state_management/sm_navigation/widget/awesome_menu.dart';
-import '../controller/sm_navigation_controller.dart';
 
 class SmNavigationView extends StatefulWidget {
   const SmNavigationView({Key? key}) : super(key: key);

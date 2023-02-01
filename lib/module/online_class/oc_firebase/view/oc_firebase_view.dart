@@ -83,7 +83,7 @@ class OcFirebaseView extends StatefulWidget {
         'label': 'CRUD',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': FbCrudListView(),
+        'page': const FbCrudListView(),
       },
     ];
 
