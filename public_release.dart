@@ -25,8 +25,9 @@ void main() async {
   for (var ff in list) {
     if (ff.path.endsWith("\\build")) continue;
 
+    if (ff.path.endsWith(".git")) continue;
+
     if (ff is File) {
-      if (ff.path.endsWith(".git")) continue;
       if (ff.path.endsWith(".dart")) continue;
       if (ff.path.endsWith(".bat")) continue;
       if (ff.path.endsWith("config.json")) continue;
