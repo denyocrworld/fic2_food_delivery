@@ -7,11 +7,6 @@ void main() async {
 //Jalankan perintah "cp -r tutorial.dart tutorial_copy.dart" dengan Dart
   print("Copy file");
 
-  // await Process.run('rmdir', ['/s /q', hyperUiPublicPath])
-  //     .then((ProcessResult results) {
-  //   print(results.stdout);
-  // });
-
   deleteDir(
     "$hyperUiPublicPath\\",
     onlyContent: true,
@@ -66,7 +61,44 @@ void main() async {
   f.copySync("$hyperUiPublicPath\\lib\\setup.dart");
 
   await removeAllCommentInDir(hyperUiPublicPath);
-  return;
+
+  //Genearte Core
+  generateCore(hyperUiPublicPath);
+}
+
+generateCore(hyperUiPublicPath) async {
+  var libPath = "$hyperUiPublicPath\\lib\\";
+  var dir = Directory(libPath);
+  var list = dir.listSync(recursive: true);
+  var importContent = """
+/*
+We believe, the class name must be unique. 
+If there is a conflicting class name in this file,
+it means you have to rename it to something more unique.
+*/
+"""
+      .trimLeft();
+  for (var f in list) {
+    if (f is File) {
+      if (f.path.endsWith(".dart") == false) continue;
+      var importPath =
+          f.path.toString().replaceAll(libPath, "").replaceAll("\\", "/");
+      var exportLine = "export 'package:hyper_ui/$importPath';";
+      print(">> ${f.path}");
+      print("@@ $importPath");
+
+      if (importPath == "setup_basic.dart") continue;
+      if (importPath == "main.dart") continue;
+      if (importPath == "debug.dart") continue;
+      if (importPath == "core.dart") continue;
+      print(exportLine);
+
+      importContent += "$exportLine\n";
+    }
+  }
+
+  var coreFile = File("$hyperUiPublicPath\\lib\\core.dart");
+  coreFile.writeAsStringSync(importContent);
 }
 
 deleteFile(String path) {

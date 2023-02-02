@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/product_form_view.dart';
+import '../view/favorite_view.dart';
 
-class ProductFormController extends State<ProductFormView> implements MvcController {
-  static late ProductFormController instance;
-  late ProductFormView view;
+class FavoriteController extends State<FavoriteView> implements MvcController {
+  static late FavoriteController instance;
+  late FavoriteView view;
 
   @override
   void initState() {

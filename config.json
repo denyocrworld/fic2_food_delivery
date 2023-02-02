@@ -8,6 +8,12 @@
         "capekngoding/cg_get",
         "__example/ex_main_navigation",
         "__example/imran/imran_dashboard",
-        "__example/imran/imran_product_detail"
+        "__example/imran/imran_product_detail",
+        "main_navigation",
+        "dashboard",
+        "order",
+        "favorite",
+        "profile"
+
     ]
 }

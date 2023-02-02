@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/dashboard_controller.dart';
+import '../controller/favorite_controller.dart';
 
-class DashboardView extends StatefulWidget {
-  const DashboardView({Key? key}) : super(key: key);
+class FavoriteView extends StatefulWidget {
+  const FavoriteView({Key? key}) : super(key: key);
 
-  Widget build(context, DashboardController controller) {
+  Widget build(context, FavoriteController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Favorite"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class DashboardView extends StatefulWidget {
   }
 
   @override
-  State<DashboardView> createState() => DashboardController();
+  State<FavoriteView> createState() => FavoriteController();
 }

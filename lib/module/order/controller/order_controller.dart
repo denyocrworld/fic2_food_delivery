@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/product_list_view.dart';
+import '../view/order_view.dart';
 
-class ProductListController extends State<ProductListView> implements MvcController {
-  static late ProductListController instance;
-  late ProductListView view;
+class OrderController extends State<OrderView> implements MvcController {
+  static late OrderController instance;
+  late OrderView view;
 
   @override
   void initState() {
