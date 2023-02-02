@@ -7,6 +7,7 @@ Widget debugView({
   Widget? child,
 }) {
   if (child == null) return Container();
+  if (!visible) return Container();
   return Material(
     child: Stack(
       children: [

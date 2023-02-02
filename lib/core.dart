@@ -254,8 +254,6 @@ export 'package:hyper_ui/module/tutorial/view/tutorial_view.dart';
 export 'package:hyper_ui/module/tutorial/widget/banner_image.dart';
 export 'package:hyper_ui/module/tutorial/widget/product_card.dart';
 export 'package:hyper_ui/module/tutorial/widget/shaken_animation.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/controller/ex_main_navigation_controller.dart';
-export 'package:hyper_ui/module/__example/ex_main_navigation/view/ex_main_navigation_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/controller/imran_dashboard_controller.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/view/imran_dashboard_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_product_detail/controller/imran_product_detail_controller.dart';

@@ -45,6 +45,11 @@ void main() async {
     onlyContent: true,
     exceptions: [
       "__example",
+      "main_navigation",
+      "dashboard",
+      "order",
+      "favorite",
+      "profile",
     ],
   );
   deleteDir("$hyperUiPublicPath\\lib\\firebase");
