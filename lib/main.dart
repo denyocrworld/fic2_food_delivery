@@ -34,7 +34,11 @@ class MainApp extends StatelessWidget {
           // home: GegeGeminkDashboardUiView(),
           // home: ContohView(),
           // home: TutorialView(),
-          builder: debugView,
+          builder: (context, child) => debugView(
+            context: context,
+            child: child,
+            visible: true,
+          ),
         );
       },
     );

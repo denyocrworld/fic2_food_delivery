@@ -266,7 +266,6 @@ export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/control
 export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/view/shakuro_product_detail_view.dart';
 export 'package:hyper_ui/service/main_storage/main_storage.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
-export 'package:hyper_ui/shared/theme/theme_changer.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';
 export 'package:hyper_ui/shared/theme/theme_dark.dart';
 export 'package:hyper_ui/shared/util/common/common.dart';
