@@ -1,4 +1,3 @@
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 
 class TemplateScaffoldMenubar extends StatelessWidget {
@@ -12,20 +11,7 @@ class TemplateScaffoldMenubar extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          bottom: const TabBar(
-            tabs: [
-              Tab(
-                text: "Pending",
-              ),
-              Tab(
-                text: "Ongoing",
-              ),
-              Tab(
-                text: "Done",
-              ),
-            ],
-          ),
-          title: const Text('Order List'),
+          title: const Text('Profile'),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -42,16 +28,15 @@ class TemplateScaffoldMenubar extends StatelessWidget {
                           children: [
                             IconButton(
                               onPressed: () {},
-                              icon: const Icon(Icons.dark_mode_rounded),
+                              icon: const Icon(Icons.question_mark_outlined),
                             ),
                             const SizedBox(
                               width: 5.0,
                             ),
-                            Text(
-                              "Darkmode",
-                              style: GoogleFonts.montserrat(
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.w500,
+                            const Text(
+                              "FAQ",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -70,21 +55,19 @@ class TemplateScaffoldMenubar extends StatelessWidget {
                             const SizedBox(
                               width: 5.0,
                             ),
-                            Text(
+                            const Text(
                               "About",
-                              style: GoogleFonts.montserrat(
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.w500,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
                       ),
                     ],
-                    child: Text(
+                    child: const Text(
                       "Settings",
-                      style: GoogleFonts.montserrat(
-                        letterSpacing: 1,
+                      style: TextStyle(
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -94,18 +77,13 @@ class TemplateScaffoldMenubar extends StatelessWidget {
             ),
           ],
         ),
-        body: TabBarView(
-          children: [
-            Container(
-              color: Colors.red[100],
+        body: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              children: const [],
             ),
-            Container(
-              color: Colors.green[100],
-            ),
-            Container(
-              color: Colors.blue[100],
-            ),
-          ],
+          ),
         ),
       ),
     );
