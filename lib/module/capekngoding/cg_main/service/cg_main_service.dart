@@ -287,6 +287,12 @@ class CgMainService {
       'page': const ImranDashboardView(),
     },
     {
+      'label': 'Lay UI',
+      'icon': MdiIcons.card,
+      'color': Colors.red,
+      'page': const LayDashboardView(),
+    },
+    {
       'label': '???',
       'icon': MdiIcons.card,
       'color': Colors.blue,

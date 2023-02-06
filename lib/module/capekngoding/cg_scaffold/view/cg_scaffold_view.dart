@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_menubar.dart';
 
 class CgScaffoldView extends StatefulWidget {
   const CgScaffoldView({Key? key}) : super(key: key);
@@ -43,6 +44,10 @@ class CgScaffoldView extends StatefulWidget {
               DeviceView(
                 snippet: "scaffold_tabbar_horizontal",
                 child: TemplateScaffoldTabbarHorizontal(),
+              ),
+              DeviceView(
+                snippet: "scaffold_menubar",
+                child: TemplateScaffoldMenubar(),
               ),
             ],
           ),

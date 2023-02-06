@@ -7,6 +7,8 @@
         "capekngoding/cg_firebase",
         "capekngoding/cg_get",
         "__example/ex_main_navigation",
+        "__example/lay/lay_dashboard",
+        "__example/lay/lay_booking_detail",
         "__example/imran/imran_dashboard",
         "__example/imran/imran_product_detail",
         "main_navigation",
