@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/fbk_main_navigation_controller.dart';
 
 class FbkMainNavigationView extends StatefulWidget {
   const FbkMainNavigationView({Key? key}) : super(key: key);
@@ -10,28 +9,32 @@ class FbkMainNavigationView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FbkMainNavigation"),
+        title: const Text("Flutter Book"),
         actions: const [],
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
+          children: [
+            const Text(
               "Dart Basic",
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            TextButton(
+              onPressed: () => Get.to(const FbkDartVariableView()),
+              child: const Text("Dart - Variable"),
+            ),
+            const SizedBox(
               height: 20.0,
             ),
-            Text(
+            const Text(
               "Flutter Basic",
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 14.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
