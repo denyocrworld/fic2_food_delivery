@@ -6,7 +6,7 @@ class TemplateScaffoldMenubar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //#GROUP_TEMPLATE scaffold
-    //#TEMPLATE scaffold_tabbar_horizontal
+    //#TEMPLATE scaffold_menubar
     return DefaultTabController(
       length: 3,
       child: Scaffold(
