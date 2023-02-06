@@ -335,6 +335,22 @@ class CgButtonView extends StatefulWidget {
                       ),
                       //#END
                       const Divider(),
+                      const SnippetContainer("buttonf"),
+                      //#TEMPLATE buttonf
+                      Container(
+                        height: 64,
+                        width: MediaQuery.of(context).size.width,
+                        padding: const EdgeInsets.all(12.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blueGrey,
+                          ),
+                          onPressed: () {},
+                          child: const Text("Checkout"),
+                        ),
+                      ),
+                      //#END
+                      const Divider(),
                       const SnippetContainer("button_icon_vertical"),
                       //#TEMPLATE button_icon_vertical
                       ElevatedButton(
