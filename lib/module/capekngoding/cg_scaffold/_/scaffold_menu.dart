@@ -5,7 +5,7 @@ import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_image.dart';
 import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_ovo.dart';
 import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_simple.dart';
 import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_sliver_appbar.dart';
-import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_tabbar_vertical.dart';
+import 'package:hyper_ui/module/capekngoding/cg_scaffold/_/scaffold_tabbar_horizontal.dart';
 
 import '../../../../_/navigation/navigation_vertical.dart';
 import '../../../../_/navigation/navigation_vertical_icon.dart';

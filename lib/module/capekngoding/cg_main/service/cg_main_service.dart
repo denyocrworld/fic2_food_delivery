@@ -1,6 +1,8 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
+import '../../cg_menubar/view/cg_menubar_view.dart';
+
 class CgMainService {
   List<Map> promotionList = [
     {
@@ -97,6 +99,12 @@ class CgMainService {
       'icon': MdiIcons.screwdriver,
       'color': Colors.green,
       'page': const CgScaffoldView(),
+    },
+    {
+      'label': 'Menubar',
+      'icon': MdiIcons.menu,
+      'color': Colors.orange,
+      'page': const CgMenubarView(),
     },
     {
       'label': 'Navigation',

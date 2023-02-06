@@ -6,6 +6,7 @@
         "capekngoding/cg_http",
         "capekngoding/cg_firebase",
         "capekngoding/cg_get",
+        "capekngoding/cg_menubar",
         "__example/ex_main_navigation",
         "__example/lay/lay_dashboard",
         "__example/lay/lay_booking_detail",

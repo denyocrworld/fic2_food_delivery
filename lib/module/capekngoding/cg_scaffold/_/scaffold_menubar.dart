@@ -18,59 +18,34 @@ class TemplateScaffoldMenubar extends StatelessWidget {
               child: MenuBar(
                 children: <Widget>[
                   SubmenuButton(
-                    leadingIcon: const Icon(
-                      Icons.settings,
-                    ),
                     menuChildren: <Widget>[
                       MenuItemButton(
                         onPressed: () {},
-                        child: Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(Icons.question_mark_outlined),
-                            ),
-                            const SizedBox(
-                              width: 5.0,
-                            ),
-                            const Text(
-                              "FAQ",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
+                        child: const MenuAcceleratorLabel('&Save'),
                       ),
                       MenuItemButton(
                         onPressed: () {},
-                        child: Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.info_rounded,
-                              ),
-                            ),
-                            const SizedBox(
-                              width: 5.0,
-                            ),
-                            const Text(
-                              "About",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
+                        child: const MenuAcceleratorLabel('&Quit'),
+                      ),
+                      MenuItemButton(
+                        onPressed: () {},
+                        child: const MenuAcceleratorLabel('&About'),
                       ),
                     ],
-                    child: const Text(
-                      "Settings",
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
+                    child: const MenuAcceleratorLabel('&File'),
+                  ),
+                  SubmenuButton(
+                    menuChildren: <Widget>[
+                      MenuItemButton(
+                        onPressed: () {},
+                        child: const MenuAcceleratorLabel('&Magnify'),
                       ),
-                    ),
+                      MenuItemButton(
+                        onPressed: () {},
+                        child: const MenuAcceleratorLabel('Mi&nify'),
+                      ),
+                    ],
+                    child: const MenuAcceleratorLabel('&View'),
                   ),
                 ],
               ),
