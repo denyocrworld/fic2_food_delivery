@@ -1,8 +1,6 @@
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
-import '../../cg_menubar/view/cg_menubar_view.dart';
-
 class CgMainService {
   List<Map> promotionList = [
     {
@@ -59,7 +57,14 @@ class CgMainService {
       'color': Colors.green,
       'page': const OcFirebaseView(),
     },
+    {
+      'label': 'Flutter Book',
+      'icon': MdiIcons.book,
+      'color': Colors.red,
+      'page': const FbkMainNavigationView(),
+    },
   ];
+
   List<Map> onlineClassExercises = [
     {
       'label': 'Layout',
