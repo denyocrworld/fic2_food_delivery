@@ -319,6 +319,22 @@ class CgButtonView extends StatefulWidget {
                       ),
                       //#END
                       const Divider(),
+                      const SnippetContainer("button_text"),
+                      //#TEMPLATE button_text
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text("Save"),
+                      ),
+                      //#END
+                      const SnippetContainer("button_text_icon"),
+                      //#TEMPLATE button_text_icon
+                      TextButton.icon(
+                        onPressed: () {},
+                        icon: const Icon(Icons.save),
+                        label: const Text("Save"),
+                      ),
+                      //#END
+                      const Divider(),
                       const SnippetContainer("button_icon_vertical"),
                       //#TEMPLATE button_icon_vertical
                       ElevatedButton(
