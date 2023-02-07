@@ -104,6 +104,31 @@ class FbkDartVariableView extends StatefulWidget {
     return name == "Deny";
   }
 
+  bool? exercise9() {
+    List numbers = [70, 23, 44, 33, 100, 23, 109];
+    double average = 0;
+    double total = 0;
+    /*
+    Hitunglah nilai rata2 dari List di atas.
+    [TIPS] Gunakan for untuk mendapatkan total.
+    Gunakan numbers.length untuk mendapatkan panjang List
+    */
+    return average.toStringAsFixed(2) == "57.43";
+  }
+
+  bool? exercise10() {
+    List numbers = [70, 23, 44, 33, 100, 23, 109];
+    /*
+    Hitunglah minValue dan maxValue dari List numbers di atas.
+    [Tips] - Gunakan .sort, ambil minValue dari .first dan ambil maxValue
+    dari .last
+    */
+    int minValue = 0;
+    int maxValue = 0;
+
+    return minValue == 23 && maxValue == 109;
+  }
+
   double getTotal(double price, int qty) {
     return price * qty;
   }
@@ -150,6 +175,8 @@ class FbkDartVariableView extends StatefulWidget {
             rowLabel(exercise6),
             rowLabel(exercise7),
             rowLabel(exercise8),
+            rowLabel(exercise9),
+            rowLabel(exercise10),
           ],
         ),
       ),
