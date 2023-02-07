@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/fbk_dart_date_util_controller.dart';
 
 class FbkDartDateUtilView extends StatefulWidget {
   const FbkDartDateUtilView({Key? key}) : super(key: key);
+  bool? exercise1() {
+    int? number;
+
+    return number == 0;
+  }
 
   Widget build(context, FbkDartDateUtilController controller) {
     controller.view = this;
@@ -17,7 +21,9 @@ class FbkDartDateUtilView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              rowLabel(exercise1),
+            ],
           ),
         ),
       ),

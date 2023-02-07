@@ -8,14 +8,23 @@ class FbkMainNavigationView extends StatefulWidget {
     required String label,
     required Widget view,
   }) {
-    return Padding(
+    bool isFlutter = label.toLowerCase().contains("flutter");
+    return Container(
+      width: MediaQuery.of(Get.currentContext).size.width,
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.green,
+          backgroundColor: isFlutter ? Colors.blue[800] : Colors.blue,
         ),
         onPressed: () => Get.to(view),
-        child: Text(label),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              label,
+            )
+          ],
+        ),
       ),
     );
   }
@@ -52,6 +61,46 @@ class FbkMainNavigationView extends StatefulWidget {
             getMenu(
               label: "Dart - String",
               view: const FbkDartStringView(),
+            ),
+            getMenu(
+              label: "Dart - Number",
+              view: const FbkDartNumberView(),
+            ),
+            getMenu(
+              label: "Dart - DateTime",
+              view: const FbkDartDatetimeView(),
+            ),
+            getMenu(
+              label: "Dart - List & Map",
+              view: const FbkDartListAndMapView(),
+            ),
+            getMenu(
+              label: "Dart - Regex",
+              view: const FbkDartRegexView(),
+            ),
+            getMenu(
+              label: "Dart - Encode and Decode",
+              view: const FbkDartEncodeAndDecodeView(),
+            ),
+            getMenu(
+              label: "Dart - Model",
+              view: const FbkDartModelView(),
+            ),
+            getMenu(
+              label: "Dart - Service",
+              view: const FbkDartServiceView(),
+            ),
+            getMenu(
+              label: "Dart - Date Util",
+              view: const FbkDartDateUtilView(),
+            ),
+            getMenu(
+              label: "Dart - String Util",
+              view: const FbkDartStringView(),
+            ),
+            getMenu(
+              label: "Flutter - Common Widget",
+              view: const FbkFlutterCommonWidgetView(),
             ),
             const SizedBox(
               height: 20.0,
