@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/module/online_class/flutter_book/shared/widget/row_label/row_label.dart';
 import '../controller/fbk_dart_variable_controller.dart';
 
 class FbkDartVariableView extends StatefulWidget {
@@ -133,28 +134,6 @@ class FbkDartVariableView extends StatefulWidget {
     return price * qty;
   }
 
-  Widget rowLabel(Function func) {
-    var text = func.toString();
-    int startIndex = text.indexOf("'") + 1;
-    int endIndex = text.lastIndexOf("'");
-    String functionName = text.substring(startIndex, endIndex);
-
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: Row(
-        children: [
-          Expanded(
-            child: Text(functionName),
-          ),
-          Checkbox(
-            value: func() ?? false,
-            onChanged: (value) {},
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget build(context, FbkDartVariableController controller) {
     controller.view = this;
 
@@ -163,21 +142,24 @@ class FbkDartVariableView extends StatefulWidget {
         title: const Text("FbkDartVariable"),
         actions: const [],
       ),
-      body: Container(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            rowLabel(exercise1),
-            rowLabel(exercise2),
-            rowLabel(exercise3),
-            rowLabel(exercise4),
-            rowLabel(exercise5),
-            rowLabel(exercise6),
-            rowLabel(exercise7),
-            rowLabel(exercise8),
-            rowLabel(exercise9),
-            rowLabel(exercise10),
-          ],
+      body: SingleChildScrollView(
+        controller: ScrollController(),
+        child: Container(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              rowLabel(exercise1),
+              rowLabel(exercise2),
+              rowLabel(exercise3),
+              rowLabel(exercise4),
+              rowLabel(exercise5),
+              rowLabel(exercise6),
+              rowLabel(exercise7),
+              rowLabel(exercise8),
+              rowLabel(exercise9),
+              rowLabel(exercise10),
+            ],
+          ),
         ),
       ),
     );

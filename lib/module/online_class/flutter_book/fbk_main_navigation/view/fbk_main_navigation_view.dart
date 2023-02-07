@@ -4,6 +4,22 @@ import 'package:hyper_ui/core.dart';
 class FbkMainNavigationView extends StatefulWidget {
   const FbkMainNavigationView({Key? key}) : super(key: key);
 
+  getMenu({
+    required String label,
+    required Widget view,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.green,
+        ),
+        onPressed: () => Get.to(view),
+        child: Text(label),
+      ),
+    );
+  }
+
   Widget build(context, FbkMainNavigationController controller) {
     controller.view = this;
 
@@ -24,9 +40,18 @@ class FbkMainNavigationView extends StatefulWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            TextButton(
-              onPressed: () => Get.to(const FbkDartVariableView()),
-              child: const Text("Dart - Variable"),
+            const Divider(),
+            getMenu(
+              label: "Dart - Variable",
+              view: const FbkDartVariableView(),
+            ),
+            getMenu(
+              label: "Dart - Symbol",
+              view: const FbkDartSymbolView(),
+            ),
+            getMenu(
+              label: "Dart - String",
+              view: const FbkDartStringView(),
             ),
             const SizedBox(
               height: 20.0,
