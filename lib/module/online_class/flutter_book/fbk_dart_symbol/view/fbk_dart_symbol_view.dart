@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../../shared/widget/row_label/row_label.dart';
-import '../controller/fbk_dart_symbol_controller.dart';
 
 class FbkDartSymbolView extends StatefulWidget {
   const FbkDartSymbolView({Key? key}) : super(key: key);
