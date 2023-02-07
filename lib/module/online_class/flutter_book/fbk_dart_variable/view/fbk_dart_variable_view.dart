@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/module/online_class/flutter_book/shared/widget/row_label/row_label.dart';
-import '../controller/fbk_dart_variable_controller.dart';
 
 class FbkDartVariableView extends StatefulWidget {
   const FbkDartVariableView({Key? key}) : super(key: key);

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/cg_menubar_controller.dart';
 
 class CgMenubarView extends StatefulWidget {
   const CgMenubarView({Key? key}) : super(key: key);
