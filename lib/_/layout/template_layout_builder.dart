@@ -20,19 +20,19 @@ class TemplateLayoutBuilder extends StatelessWidget {
 
           if (isDesktop) {
             return Container(
-              color: Colors.red[100],
+              color: Colors.red,
             );
           }
 
           if (isTablet) {
             return Container(
-              color: Colors.green[100],
+              color: Colors.green,
             );
           }
 
           //mobile
           return Container(
-            color: Colors.blue[100],
+            color: Colors.blue,
           );
         },
       ),

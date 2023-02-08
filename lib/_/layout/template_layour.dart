@@ -152,15 +152,15 @@ class TemplateLayout extends StatelessWidget {
                 children: [
                   Container(
                     height: 100.0,
-                    color: Colors.red,
+                    color: Colors.brown,
                   ),
                   Container(
                     height: 100.0,
-                    color: Colors.blue,
+                    color: Colors.yellow,
                   ),
                   Container(
                     height: 100.0,
-                    color: Colors.purple,
+                    color: Colors.orange,
                   ),
                 ],
               ),
