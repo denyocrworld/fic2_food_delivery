@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/tutorial_dashboard_controller.dart';
+import '../controller/tutorial_main_navigation_controller.dart';
 
-class TutorialDashboardView extends StatefulWidget {
-  const TutorialDashboardView({Key? key}) : super(key: key);
+class TutorialMainNavigationView extends StatefulWidget {
+  const TutorialMainNavigationView({Key? key}) : super(key: key);
 
-  Widget build(context, TutorialDashboardController controller) {
+  Widget build(context, TutorialMainNavigationController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("TutorialDashboard"),
+        title: const Text("TutorialMainNavigation"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class TutorialDashboardView extends StatefulWidget {
   }
 
   @override
-  State<TutorialDashboardView> createState() => TutorialDashboardController();
+  State<TutorialMainNavigationView> createState() => TutorialMainNavigationController();
 }

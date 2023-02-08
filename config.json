@@ -30,6 +30,10 @@
         "online_class/flutter_book/fbk_dart_service",
         "online_class/flutter_book/fbk_dart_date_util",
         "online_class/flutter_book/fbk_dart_string_util",
-        "online_class/flutter_book/fbk_flutter_common_widget"
+        "online_class/flutter_book/fbk_flutter_common_widget",
+        "tutorial/tutorial_dashboard",
+        "tutorial/tutorial_main_navigation",
+        "tutorial/tutorial_product_list",
+        "tutorial/tutorial_product_detail"
     ]
 }

@@ -5,7 +5,6 @@ void main() async {
   String hyperUiPublicPath =
       r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_public";
 //Jalankan perintah "cp -r tutorial.dart tutorial_copy.dart" dengan Dart
-  print("Copy file");
 
   deleteDir(
     "$hyperUiPublicPath\\",
@@ -67,8 +66,27 @@ void main() async {
 
   await removeAllCommentInDir(hyperUiPublicPath);
 
-  //Genearte Core
-  generateCore(hyperUiPublicPath);
+  //Generate Core
+  await generateCore(hyperUiPublicPath);
+
+  await formatLibDirectories(hyperUiPublicPath);
+}
+
+formatLibDirectories(hyperUiPublicPath) async {
+  runCommand('flutter format $hyperUiPublicPath\\lib');
+}
+
+runCommand(String command) {
+  try {
+    Process.runSync(
+      command,
+      [],
+      includeParentEnvironment: true,
+      runInShell: true,
+    );
+  } on Exception catch (err) {
+    print(err);
+  }
 }
 
 generateCore(hyperUiPublicPath) async {
@@ -153,19 +171,9 @@ removeAllCommentInDir(String path) async {
     content = content.replaceAll("@@--@@", "://");
 
     if (file.path.endsWith("main.dart")) {
-      content = content.replaceAll("CgMainView", "ExMainNavigationView");
+      content = content.replaceAll("CgMainView", "MainNavigationView");
     }
 
     file.writeAsStringSync(content);
-
-    print("flutter format ${f.path}");
-    try {
-      await Process.run('flutter', ['format', f.path])
-          .then((ProcessResult results) {
-        print(results.stdout);
-      });
-    } on Exception catch (err) {
-      print(err);
-    }
   }
 }

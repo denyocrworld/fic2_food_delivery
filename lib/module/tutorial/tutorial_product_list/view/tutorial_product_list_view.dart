@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/ex_main_navigation_controller.dart';
+import '../controller/tutorial_product_list_controller.dart';
 
-class ExMainNavigationView extends StatefulWidget {
-  const ExMainNavigationView({Key? key}) : super(key: key);
+class TutorialProductListView extends StatefulWidget {
+  const TutorialProductListView({Key? key}) : super(key: key);
 
-  Widget build(context, ExMainNavigationController controller) {
+  Widget build(context, TutorialProductListController controller) {
     controller.view = this;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ExMainNavigation"),
+        title: const Text("TutorialProductList"),
         actions: const [],
       ),
       body: SingleChildScrollView(
@@ -25,5 +25,5 @@ class ExMainNavigationView extends StatefulWidget {
   }
 
   @override
-  State<ExMainNavigationView> createState() => ExMainNavigationController();
+  State<TutorialProductListView> createState() => TutorialProductListController();
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/tutorial_login_view.dart';
+import '../view/tutorial_main_navigation_view.dart';
 
-class TutorialLoginController extends State<TutorialLoginView> implements MvcController {
-  static late TutorialLoginController instance;
-  late TutorialLoginView view;
+class TutorialMainNavigationController extends State<TutorialMainNavigationView> implements MvcController {
+  static late TutorialMainNavigationController instance;
+  late TutorialMainNavigationView view;
 
   @override
   void initState() {

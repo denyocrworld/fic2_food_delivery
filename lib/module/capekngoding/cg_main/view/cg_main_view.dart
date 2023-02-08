@@ -60,7 +60,8 @@ class CgMainView extends StatefulWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     InkWell(
-                                      onTap: () => Get.to(const TutorialView()),
+                                      onTap: () =>
+                                          Get.to(const TutorialDashboardView()),
                                       child: Text(
                                         "Hyper UI",
                                         style: GoogleFonts.moonDance(
