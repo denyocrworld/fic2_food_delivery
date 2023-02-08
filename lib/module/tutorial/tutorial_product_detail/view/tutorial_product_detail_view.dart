@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
-import '../controller/tutorial_product_detail_controller.dart';
 
 class TutorialProductDetailView extends StatefulWidget {
   const TutorialProductDetailView({Key? key}) : super(key: key);
@@ -17,7 +16,38 @@ class TutorialProductDetailView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [],
+            children: [
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text("Back"),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                ),
+                onPressed: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => const LoginView(),),
+                  // );
+                  // Navigator.pushReplacement(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => const LoginView()),
+                  // );
+                  Get.offAll(const LoginView());
+                },
+                child: const Text("Logout"),
+              ),
+            ],
           ),
         ),
       ),
@@ -25,5 +55,6 @@ class TutorialProductDetailView extends StatefulWidget {
   }
 
   @override
-  State<TutorialProductDetailView> createState() => TutorialProductDetailController();
+  State<TutorialProductDetailView> createState() =>
+      TutorialProductDetailController();
 }

@@ -138,6 +138,8 @@ export 'package:hyper_ui/module/firebase/fb_upload_image/controller/fb_upload_im
 export 'package:hyper_ui/module/firebase/fb_upload_image/view/fb_upload_image_view.dart';
 export 'package:hyper_ui/module/firebase/fb_wrap_category_list/controller/fb_wrap_category_list_controller.dart';
 export 'package:hyper_ui/module/firebase/fb_wrap_category_list/view/fb_wrap_category_list_view.dart';
+export 'package:hyper_ui/module/login/controller/login_controller.dart';
+export 'package:hyper_ui/module/login/view/login_view.dart';
 export 'package:hyper_ui/module/main_navigation/controller/main_navigation_controller.dart';
 export 'package:hyper_ui/module/main_navigation/view/main_navigation_view.dart';
 export 'package:hyper_ui/module/online_class/execises/oce_dart_basic/controller/oce_dart_basic_controller.dart';
@@ -285,6 +287,8 @@ export 'package:hyper_ui/module/tutorial/tutorial_product_detail/controller/tuto
 export 'package:hyper_ui/module/tutorial/tutorial_product_detail/view/tutorial_product_detail_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_product_list/controller/tutorial_product_list_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_product_list/view/tutorial_product_list_view.dart';
+export 'package:hyper_ui/module/__example/ex_main_navigation/controller/ex_main_navigation_controller.dart';
+export 'package:hyper_ui/module/__example/ex_main_navigation/view/ex_main_navigation_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/controller/imran_dashboard_controller.dart';
 export 'package:hyper_ui/module/__example/imran/imran_dashboard/view/imran_dashboard_view.dart';
 export 'package:hyper_ui/module/__example/imran/imran_product_detail/controller/imran_product_detail_controller.dart';

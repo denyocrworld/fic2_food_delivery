@@ -18,7 +18,7 @@ Future initialize() async {
   //   //and import DefaultFirebaseOptions!
   //   options: DefaultFirebaseOptions.currentPlatform,
   // );
-  await FirebaseAuth.instance.wait();
+  // await FirebaseAuth.instance.wait();
 }
 
 extension FirebaseAuthExtension on FirebaseAuth {
