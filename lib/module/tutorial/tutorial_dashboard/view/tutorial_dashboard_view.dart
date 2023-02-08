@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:hyper_ui/core.dart';
 
 class TutorialDashboardView extends StatefulWidget {
@@ -77,7 +78,6 @@ class TutorialDashboardView extends StatefulWidget {
     Navigasi
       - Pindah halaman, back
       - Masuk ke halaman dan tidak bisa kembali lagi
-      - Cara oper data dari Page 1 ke Page 2
     State Management
       StatelessWidget
       StatefulWidget
@@ -109,97 +109,30 @@ class TutorialDashboardView extends StatefulWidget {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: Container(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueGrey,
-              ),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginView()),
-                );
-              },
-              child: const Text("Save"),
-            ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: controller.products.length,
-                itemBuilder: (context, index) {
-                  var item = controller.products[index];
-                  item["qty"] ??= 0;
-                  return Card(
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: Colors.grey[200],
-                        backgroundImage: NetworkImage(
-                          item["product_name"],
-                        ),
-                      ),
-                      title: Text("${item["product_name"]}"),
-                      subtitle: Text("${item["price"]} USD"),
-                      trailing: SizedBox(
-                        width: 120.0,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Colors.blueGrey,
-                              radius: 12.0,
-                              child: Center(
-                                child: IconButton(
-                                  onPressed: () {
-                                    if (item["qty"] == 0) return;
-                                    item["qty"]--;
-                                    controller.setState(() {});
-                                  },
-                                  icon: const Icon(
-                                    Icons.remove,
-                                    color: Colors.white,
-                                    size: 9.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(
-                                "${item["qty"]}",
-                                style: const TextStyle(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ),
-                            CircleAvatar(
-                              backgroundColor: Colors.blueGrey,
-                              radius: 12.0,
-                              child: Center(
-                                child: IconButton(
-                                  onPressed: () {
-                                    item["qty"]++;
-                                    controller.setState(() {});
-                                  },
-                                  icon: const Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                    size: 9.0,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+              )
+                  .animate(
+                    delay: 1000.ms,
+                  )
+                  .tint(
+                    color: Colors.red,
+                  )
+                  .shake()
+                  .move()
+                  .flip()
+                  .rotate(),
+            ],
+          ),
         ),
       ),
     );

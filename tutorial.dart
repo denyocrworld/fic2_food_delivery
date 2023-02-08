@@ -1,79 +1,23 @@
-/*
-Docs:
-https://dart-tutorial.com/object-oriented-programming/static-in-dart/
+void main() {
+  //Hello World
+  //? Sabar yaa, masih belum jalan aplikasi Flutter-nya
+  //? Lagi downloading... >_<
+  List list1 = ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d"];
+  List list2 = [];
+  for (var i = 0; i < list1.length; i++) {
+    var item = list1[i];
+    for (var n = 1; n <= 2; n++) {
+      list2.add(item);
+    }
+  }
+  print(list2);
+  String output = "";
+  for (var i = 0; i < list2.length; i++) {
+    var item = list2[i];
+    if (i % 2 == 0) {
+      output += item;
+    }
+  }
 
-Tutorial Install Nodemon:
-https://jagoflutter.com/tutorial-install-nodemon/
-
-nodemon --exec dart .\tutorial.dart
-
-Basic Pemrograman
-Variable
-  Declaration
-  Assignment
-  How to Convert
-  Null Safety
-    Variable?
-    ??
-    !
-    >>> ??=
-List
-  Declaration
-  Assignment
-  Add
-  Remove
-
-Clean Code
-  Penamaan Variable and List
-
-Operator Aritmatika
-
-IF Statement
-  Operator: && || == >= <= > <
-  Not: !
-
-Looping
-  for(var i=0;i<10;i++){}
-  for(var product in products){}
-
-Function
-  Function
-    Parameter
-    Named Parameter
-  Async Function
-
-Clean Code
-  Penamaan Function
-
-OOP
-  Class and Object
-  Denah Rumah = Class
-  Rumah = Object **
-  Future
-
-  Access Modifier
-    public, private, static
-  How to Use Object
-    Create new instance
-  Constructor
-  Inheritance
-  With Mixin
-*/
-//ctrl+shift+`
-
-import 'package:dio/dio.dart';
-
-void main() async {
-  var response = await Dio().get(
-    "https://reqres.in/api/users",
-    options: Options(
-      headers: {
-        "Content-Type": "application/json",
-      },
-    ),
-  );
-  Map obj = response.data;
-  print(obj);
-  print(response.statusCode);
-  print(obj == null);
+  print(output);
 }
