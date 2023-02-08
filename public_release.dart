@@ -71,11 +71,17 @@ void main() async {
 
   await formatLibDirectories(hyperUiPublicPath);
 
-  runCommand("git add . && git commit -m '.' && git push --force");
+  runCommand(
+    "git add . && git commit -m '.' && git push --force",
+    workingDirectory: hyperUiPublicPath,
+  );
 }
 
 formatLibDirectories(hyperUiPublicPath) async {
-  runCommand('flutter format $hyperUiPublicPath\\lib');
+  runCommand(
+    'flutter format $hyperUiPublicPath\\lib',
+    workingDirectory: hyperUiPublicPath,
+  );
 }
 
 runCommand(
