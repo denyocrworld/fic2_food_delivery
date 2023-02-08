@@ -70,20 +70,23 @@ void main() async {
   await generateCore(hyperUiPublicPath);
 
   await formatLibDirectories(hyperUiPublicPath);
+
+  runCommand("git add . && git commit -m '.' && git push --force");
 }
 
 formatLibDirectories(hyperUiPublicPath) async {
   runCommand('flutter format $hyperUiPublicPath\\lib');
 }
 
-runCommand(String command) {
+runCommand(
+  String command, {
+  String? workingDirectory,
+}) {
   try {
-    Process.runSync(
-      command,
-      [],
-      includeParentEnvironment: true,
-      runInShell: true,
-    );
+    Process.runSync(command, [],
+        includeParentEnvironment: true,
+        runInShell: true,
+        workingDirectory: workingDirectory);
   } on Exception catch (err) {
     print(err);
   }
