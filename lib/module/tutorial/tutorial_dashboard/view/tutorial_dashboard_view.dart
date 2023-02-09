@@ -12,7 +12,7 @@ class TutorialDashboardView extends StatefulWidget {
     Kelas Online Flutter: (Gelombang II)
     ? Buka aja
     ! capekngoding.com
-    Kelas-nya start besok!
+    Kelas-nya start MALAM INI!
     ---
 
     Basic Pemrograman
@@ -64,6 +64,7 @@ class TutorialDashboardView extends StatefulWidget {
       ----------
       - Chart
       - Map dgn FlutterMap
+      
     Layout
       - Row
       - Column
