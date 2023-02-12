@@ -5,7 +5,11 @@ import 'package:hyper_ui/debug.dart';
 
 void main() async {
   await initialize();
-
+  /*
+  ? Kelas Online Flutter - Gelombang 2
+  ! Segera mulai, MALAM INI
+  ? Buka capekngoding.com
+  */
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();
@@ -29,6 +33,7 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const CgMainView(),
+          // home: const TutorialListView(),
           // home: const MainNavigationView(),
           // home: ShakuroDashboardView(),
           // home: LoginView(),

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../util/input/input.dart';
+
 class QTextField extends StatefulWidget {
+  final String? id;
   final String label;
   final String? value;
   final String? hint;
@@ -14,6 +17,7 @@ class QTextField extends StatefulWidget {
   const QTextField({
     Key? key,
     required this.label,
+    this.id,
     this.value,
     this.validator,
     this.hint,
@@ -28,16 +32,19 @@ class QTextField extends StatefulWidget {
   State<QTextField> createState() => _QTextFieldState();
 }
 
-class _QTextFieldState extends State<QTextField> {
+class _QTextFieldState extends State<QTextField> with InputControlState {
+  TextEditingController textEditingController = TextEditingController();
+
   @override
   void initState() {
+    textEditingController.text = widget.value ?? "";
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: widget.value,
+      controller: textEditingController,
       validator: widget.validator,
       maxLength: widget.maxLength,
       obscureText: widget.obscure,

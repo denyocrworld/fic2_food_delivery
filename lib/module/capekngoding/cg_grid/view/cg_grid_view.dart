@@ -20,7 +20,9 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid"),
               //#TEMPLATE grid
               GridView.builder(
+                padding: EdgeInsets.zero,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.0,
                   crossAxisCount: 2,
                   mainAxisSpacing: 6,
                   crossAxisSpacing: 6,
@@ -30,7 +32,7 @@ class CgGridView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    color: Colors.red[100],
+                    color: Colors.red,
                     child: Column(
                       children: const [],
                     ),
@@ -41,7 +43,9 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid2"),
               //#TEMPLATE grid2
               GridView.builder(
+                padding: EdgeInsets.zero,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.0,
                   crossAxisCount: 2,
                   mainAxisSpacing: 6,
                   crossAxisSpacing: 6,
@@ -51,7 +55,7 @@ class CgGridView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    color: Colors.purple[100],
+                    color: Colors.purple,
                     child: Column(
                       children: const [],
                     ),
@@ -62,7 +66,9 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid3"),
               //#TEMPLATE grid3
               GridView.builder(
+                padding: EdgeInsets.zero,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.0,
                   crossAxisCount: 3,
                   mainAxisSpacing: 6,
                   crossAxisSpacing: 6,
@@ -72,7 +78,7 @@ class CgGridView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    color: Colors.purple[100],
+                    color: Colors.orange,
                     child: Column(
                       children: const [],
                     ),
@@ -83,7 +89,9 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid4"),
               //#TEMPLATE grid4
               GridView.builder(
+                padding: EdgeInsets.zero,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.0,
                   crossAxisCount: 4,
                   mainAxisSpacing: 6,
                   crossAxisSpacing: 6,
@@ -93,7 +101,7 @@ class CgGridView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    color: Colors.pink[100],
+                    color: Colors.pink,
                     child: Column(
                       children: const [],
                     ),
@@ -104,7 +112,9 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid5"),
               //#TEMPLATE grid5
               GridView.builder(
+                padding: EdgeInsets.zero,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.0,
                   crossAxisCount: 5,
                   mainAxisSpacing: 6,
                   crossAxisSpacing: 6,
@@ -114,7 +124,7 @@ class CgGridView extends StatefulWidget {
                 physics: const ScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    color: Colors.pink[100],
+                    color: Colors.greenAccent,
                     child: Column(
                       children: const [],
                     ),
@@ -125,6 +135,8 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid_count"),
               //#TEMPLATE grid_count
               GridView.count(
+                padding: EdgeInsets.zero,
+                childAspectRatio: 1.0,
                 crossAxisCount: 3,
                 crossAxisSpacing: 6,
                 mainAxisSpacing: 6,
@@ -133,7 +145,7 @@ class CgGridView extends StatefulWidget {
                   Container(
                     height: 100.0,
                     width: 100.0,
-                    color: Colors.brown[100],
+                    color: Colors.brown,
                     child: const Center(
                       child: Text("1"),
                     ),
@@ -141,7 +153,7 @@ class CgGridView extends StatefulWidget {
                   Container(
                     height: 100.0,
                     width: 100.0,
-                    color: Colors.brown[100],
+                    color: Colors.brown,
                     child: const Center(
                       child: Text("2"),
                     ),
@@ -149,7 +161,7 @@ class CgGridView extends StatefulWidget {
                   Container(
                     height: 100.0,
                     width: 100.0,
-                    color: Colors.brown[100],
+                    color: Colors.brown,
                     child: const Center(
                       child: Text("3"),
                     ),
@@ -160,6 +172,8 @@ class CgGridView extends StatefulWidget {
               const SnippetContainer("grid_extent"),
               //#TEMPLATE grid_extent
               GridView.extent(
+                padding: EdgeInsets.zero,
+                childAspectRatio: 1.0,
                 maxCrossAxisExtent: MediaQuery.of(context).size.width / 4,
                 crossAxisSpacing: 6,
                 mainAxisSpacing: 6,

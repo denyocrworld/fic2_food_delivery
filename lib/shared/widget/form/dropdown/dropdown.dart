@@ -5,7 +5,7 @@ class QDropdownField extends StatefulWidget {
   final String? hint;
   final List<Map<String, dynamic>> items;
   final String? Function(String? value)? validator;
-  final String? value;
+  final dynamic value;
   final bool emptyMode;
   final Function(dynamic value, String? label) onChanged;
 
@@ -25,18 +25,33 @@ class QDropdownField extends StatefulWidget {
 }
 
 class _QDropdownFieldState extends State<QDropdownField> {
-  List<String> items = [];
-  String? selectedValue;
+  List<Map<String, dynamic>> items = [];
+  dynamic selectedValue;
 
   @override
   void initState() {
     super.initState();
-    if (widget.emptyMode) items.add("-");
+
+    items = [];
+    if (widget.emptyMode) {
+      items.add({
+        "label": "-",
+        "value": "-",
+      });
+      selectedValue = {
+        "label": "-",
+        "value": "-",
+      };
+    }
 
     for (var item in widget.items) {
-      items.add(item["label"]);
+      items.add(item);
     }
-    selectedValue = widget.value;
+
+    var values = widget.items.where((i) => i["id"] == widget.value).toList();
+    if (values.isNotEmpty) {
+      selectedValue = values.first["label"];
+    }
   }
 
   setAllItemsToFalse() {
@@ -45,11 +60,20 @@ class _QDropdownFieldState extends State<QDropdownField> {
     }
   }
 
-  String? get currentValue {
-    if (widget.emptyMode && selectedValue == null) {
-      return '-';
+  Map<String, dynamic>? get currentValue {
+    if (widget.emptyMode) {
+      var foundItems =
+          items.where((i) => i["value"] == selectedValue["value"]).toList();
+      if (foundItems.isNotEmpty) {
+        return foundItems.first;
+      }
+
+      return {
+        "label": "-",
+        "value": "-",
+      };
     }
-    return selectedValue;
+    return items.first;
   }
 
   @override
@@ -74,7 +98,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
             child: ButtonTheme(
               alignedDropdown: false,
               child: SizedBox(
-                child: DropdownButton<String>(
+                child: DropdownButton<Map<String, dynamic>>(
                   isExpanded: true,
                   value: currentValue,
                   icon: Padding(
@@ -97,41 +121,39 @@ class _QDropdownFieldState extends State<QDropdownField> {
                     height: 0,
                     color: Colors.grey[300],
                   ),
-                  onChanged: (String? newValue) {
-                    if (newValue == "-" && widget.emptyMode) {
-                      selectedValue = null;
+                  onChanged: (Map<String, dynamic>? newValue) {
+                    if (widget.emptyMode && newValue?["value"] == "-") {
+                      selectedValue = {
+                        "label": "-",
+                        "value": "-",
+                      };
                     } else {
                       selectedValue = newValue!;
                     }
                     setState(() {});
 
-                    String? label = selectedValue;
-                    int index = items.indexWhere((item) => item == label);
-                    if (index == -1) {
-                      widget.onChanged(label, null);
-                      return;
-                    }
-
-                    if (widget.emptyMode) {
-                      index -= 1;
-                    }
-                    var value = widget.items[index]["value"];
+                    var label = selectedValue["label"];
+                    var value = selectedValue["value"];
                     widget.onChanged(value, label);
                   },
-                  items: items.map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 0.0,
-                          vertical: 0.0,
+                  items: List.generate(
+                    items.length,
+                    (index) {
+                      var item = items[index];
+                      return DropdownMenuItem<Map<String, dynamic>>(
+                        value: item,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 0.0,
+                            vertical: 0.0,
+                          ),
+                          child: Text(
+                            item["label"],
+                          ),
                         ),
-                        child: Text(
-                          value,
-                        ),
-                      ),
-                    );
-                  }).toList(),
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

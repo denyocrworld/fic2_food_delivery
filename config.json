@@ -32,9 +32,23 @@
         "online_class/flutter_book/fbk_dart_date_util",
         "online_class/flutter_book/fbk_dart_string_util",
         "online_class/flutter_book/fbk_flutter_common_widget",
+        "online_class/flutter_book/fbk_wpm",
         "tutorial/tutorial_dashboard",
         "tutorial/tutorial_main_navigation",
         "tutorial/tutorial_product_list",
-        "tutorial/tutorial_product_detail"
+        "tutorial/tutorial_product_detail",
+        "tutorial/tutorial_product_form",
+        "tutorial/tutorial_login",
+        "temp/tutorial_list",
+        "elv/elv1",
+        "elv/elv2",
+        "elv/elv3",
+        "elv/elv4",
+        "elv/elv5",
+        "elv/elv6",
+        "elv/elv7",
+        "elv/elv8",
+        "elv/elv9",
+        "elv/elv10"
     ]
 }
