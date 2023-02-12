@@ -82,6 +82,9 @@ class _QDropdownFieldState extends State<QDropdownField> {
       initialValue: false,
       validator: (value) {
         if (widget.validator != null) {
+          if (widget.emptyMode && selectedValue?["value"] == "-") {
+            return widget.validator!(null);
+          }
           return widget.validator!(selectedValue);
         }
         return null;

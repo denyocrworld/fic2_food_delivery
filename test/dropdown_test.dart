@@ -43,12 +43,18 @@ void main() {
                 ],
                 onChanged: (value, label) {},
               ),
-              QDropdownField(
-                label: "Roles",
-                hint: "Your roles",
-                validator: Validator.required,
-                items: const [],
-                onChanged: (value, label) {},
+              Form(
+                child: Column(
+                  children: [
+                    QDropdownField(
+                      label: "Roles",
+                      hint: "Your roles",
+                      validator: Validator.required,
+                      items: const [],
+                      onChanged: (value, label) {},
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

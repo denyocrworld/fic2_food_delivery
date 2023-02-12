@@ -17,4 +17,6 @@ class TutorialLoginController extends State<TutorialLoginView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  final formKey = GlobalKey<FormState>();
 }

@@ -15,68 +15,48 @@ class TutorialLoginView extends StatefulWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              QDropdownField(
-                label: "Gender",
-                hint: "Gender",
-                value: "xMale",
-                validator: Validator.required,
-                items: const [
-                  {
-                    "label": "Male",
-                    "value": "xMale",
-                  },
-                  {
-                    "label": "Female",
-                    "value": "xFemale",
-                  }
-                ],
-                onChanged: (value, label) {},
-              ),
-              QDropdownField(
-                label: "Gender",
-                hint: "Gender",
-                value: "xFemale",
-                validator: Validator.required,
-                items: const [
-                  {
-                    "label": "Male",
-                    "value": "xMale",
-                  },
-                  {
-                    "label": "Female",
-                    "value": "xFemale",
-                  }
-                ],
-                onChanged: (value, label) {},
-              ),
-              QDropdownField(
-                label: "Gender",
-                hint: "Gender",
-                value: "xFemale",
-                validator: Validator.required,
-                items: const [],
-                onChanged: (value, label) {},
-              ),
-              QDropdownField(
-                label: "Gender",
-                hint: "Gender",
-                value: "xFemale",
-                validator: Validator.required,
-                items: const [
-                  {
-                    "label": "Male",
-                    "value": 1,
-                  },
-                  {
-                    "label": "Female",
-                    "value": 2,
-                  }
-                ],
-                onChanged: (value, label) {},
-              ),
-            ],
+          child: Form(
+            key: controller.formKey,
+            child: Column(
+              children: [
+                QDropdownField(
+                  label: "Gender",
+                  hint: "Gender",
+                  value: "xFemale",
+                  validator: Validator.required,
+                  items: const [
+                    {
+                      "label": "Male",
+                      "value": 1,
+                    },
+                    {
+                      "label": "Female",
+                      "value": 2,
+                    }
+                  ],
+                  onChanged: (value, label) {},
+                ),
+                const Divider(),
+                Container(
+                  height: 64,
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.all(12.0),
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                    ),
+                    onPressed: () {
+                      bool isValid =
+                          controller.formKey.currentState!.validate();
+                      if (!isValid) {}
+
+                      print(isValid);
+                    },
+                    child: const Text("Save"),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
