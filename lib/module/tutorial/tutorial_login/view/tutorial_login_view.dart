@@ -19,6 +19,19 @@ class TutorialLoginView extends StatefulWidget {
             key: controller.formKey,
             child: Column(
               children: [
+                QImagePicker(
+                  label: "Photo",
+                  hint: "Your photo",
+                  validator: Validator.required,
+                  value: null,
+                  onChanged: (value) {},
+                ),
+                const QLocationPicker(
+                  id: "location",
+                  label: "Location",
+                  latitude: -6.218481065235333,
+                  longitude: 106.80254435779423,
+                ),
                 QDropdownField(
                   label: "Gender",
                   hint: "Gender",
