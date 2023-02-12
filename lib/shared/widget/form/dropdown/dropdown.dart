@@ -4,7 +4,7 @@ class QDropdownField extends StatefulWidget {
   final String label;
   final String? hint;
   final List<Map<String, dynamic>> items;
-  final String? Function(String? value)? validator;
+  final String? Function(Map<String, dynamic>? value)? validator;
   final dynamic value;
   final bool emptyMode;
   final Function(dynamic value, String? label) onChanged;
@@ -26,7 +26,7 @@ class QDropdownField extends StatefulWidget {
 
 class _QDropdownFieldState extends State<QDropdownField> {
   List<Map<String, dynamic>> items = [];
-  dynamic selectedValue;
+  Map<String, dynamic>? selectedValue;
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
 
     var values = widget.items.where((i) => i["id"] == widget.value).toList();
     if (values.isNotEmpty) {
-      selectedValue = values.first["label"];
+      selectedValue = values.first;
     }
   }
 
@@ -63,7 +63,7 @@ class _QDropdownFieldState extends State<QDropdownField> {
   Map<String, dynamic>? get currentValue {
     if (widget.emptyMode) {
       var foundItems =
-          items.where((i) => i["value"] == selectedValue["value"]).toList();
+          items.where((i) => i["value"] == selectedValue?["value"]).toList();
       if (foundItems.isNotEmpty) {
         return foundItems.first;
       }
@@ -132,8 +132,8 @@ class _QDropdownFieldState extends State<QDropdownField> {
                     }
                     setState(() {});
 
-                    var label = selectedValue["label"];
-                    var value = selectedValue["value"];
+                    var label = selectedValue!["label"];
+                    var value = selectedValue!["value"];
                     widget.onChanged(value, label);
                   },
                   items: List.generate(
