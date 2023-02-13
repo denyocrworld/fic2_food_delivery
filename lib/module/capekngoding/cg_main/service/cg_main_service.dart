@@ -43,7 +43,7 @@ class CgMainService {
       'label': 'Layout',
       'icon': MdiIcons.keyboardOutline,
       'color': Colors.blue,
-      'page': const OcStateManagementView(),
+      'page': const OcStateManagementMainNavigationView(),
     },
     {
       'label': 'HTTP Request',
@@ -70,7 +70,7 @@ class CgMainService {
       'label': 'State Management',
       'icon': MdiIcons.keyboardOutline,
       'color': Colors.blue,
-      'page': const OcStateManagementView(),
+      'page': const OcStateManagementMainNavigationView(),
     },
     {
       'label': 'State Management',
