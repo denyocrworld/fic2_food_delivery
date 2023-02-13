@@ -921,6 +921,8 @@ class FbkDartListAndMapView extends StatefulWidget {
               rowLabel(exercise53),
               rowLabel(exercise54),
               rowLabel(exercise55),
+              rowLabel(exercise56),
+              rowLabel(exercise57),
             ],
           ),
         ),

@@ -67,10 +67,10 @@ class CgMainService {
 
   List<Map> onlineClassExercises = [
     {
-      'label': 'Layout',
+      'label': 'State Management',
       'icon': MdiIcons.keyboardOutline,
       'color': Colors.blue,
-      'page': const ExLayoutView(),
+      'page': const OcStateManagementView(),
     },
     {
       'label': 'State Management',

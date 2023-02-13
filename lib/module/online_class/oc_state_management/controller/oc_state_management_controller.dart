@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/oc_state_management_view.dart';
 
-class OcStateManagementController extends State<OcStateManagementView> implements MvcController {
+class OcStateManagementController extends State<OcStateManagementView>
+    implements MvcController {
   static late OcStateManagementController instance;
   late OcStateManagementView view;
 

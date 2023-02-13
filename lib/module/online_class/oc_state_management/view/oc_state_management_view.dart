@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import '../controller/oc_state_management_controller.dart';
 
 class OcStateManagementView extends StatefulWidget {
   const OcStateManagementView({Key? key}) : super(key: key);
@@ -9,112 +10,40 @@ class OcStateManagementView extends StatefulWidget {
 
     List menuList = [
       {
-        'label': 'Counter',
+        'label': 'Login 1',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmCounterView(),
+        'page': const ExlLogin1View(),
       },
       {
-        'label': 'Loading',
+        'label': 'Login 2',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmLoadingView(),
+        'page': const ExlLogin2View(),
       },
       {
-        'label': 'Visibility',
+        'label': 'Signup 1',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmVisibilityView(),
+        'page': const ExlSignup1View(),
       },
       {
-        'label': 'Enabled/Disabled',
+        'label': 'Signup 2',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmEnabledOrDisabledView(),
+        'page': const ExlSignup1View(),
       },
       {
-        'label': 'Basic Animation',
+        'label': 'Dashboard 1',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmBasicAnimationView(),
+        'page': const ExlDashboard1View(),
       },
       {
-        'label': 'Scale Animation',
+        'label': 'Dashboard 2',
         'icon': MdiIcons.keyboardOutline,
         'color': Colors.blue,
-        'page': const SmScaleAnimationView(),
-      },
-      {
-        'label': 'Rotate Animation',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmRotateAnimationView(),
-      },
-      {
-        'label': 'Fade Animation',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmFadeAnimationView(),
-      },
-      {
-        'label': 'Digital Clock',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmDigitalClockView(),
-      },
-      {
-        'label': 'Horizontal Category List',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmHorizontalCategoryListView(),
-      },
-      {
-        'label': 'Vertical Category List',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmVerticalCategoryListView(),
-      },
-      {
-        'label': 'Category in Wrap',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmCategoryInWrapView(),
-      },
-      {
-        'label': 'Cart',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmCartView(),
-      },
-      {
-        'label': 'CRUD',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmCrudView(),
-      },
-      {
-        'label': 'Filter List',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmFilterListView(),
-      },
-      {
-        'label': 'Navigation',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmNavigationView(),
-      },
-      {
-        'label': 'Scroll',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmScrollView(),
-      },
-      {
-        'label': 'Theme',
-        'icon': MdiIcons.keyboardOutline,
-        'color': Colors.blue,
-        'page': const SmThemeView(),
+        'page': const ExlDashboard2View(),
       },
     ];
 

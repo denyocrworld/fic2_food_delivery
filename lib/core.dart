@@ -184,8 +184,6 @@ export 'package:hyper_ui/module/online_class/exl_signup1/controller/exl_signup1_
 export 'package:hyper_ui/module/online_class/exl_signup1/view/exl_signup1_view.dart';
 export 'package:hyper_ui/module/online_class/exl_signup2/controller/exl_signup2_controller.dart';
 export 'package:hyper_ui/module/online_class/exl_signup2/view/exl_signup2_view.dart';
-export 'package:hyper_ui/module/online_class/ex_layout/controller/ex_layout_controller.dart';
-export 'package:hyper_ui/module/online_class/ex_layout/view/ex_layout_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_datetime/controller/fbk_dart_datetime_controller.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_datetime/view/fbk_dart_datetime_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_date_util/controller/fbk_dart_date_util_controller.dart';
@@ -251,7 +249,6 @@ export 'package:hyper_ui/module/online_class/oc_form/controller/oc_form_controll
 export 'package:hyper_ui/module/online_class/oc_form/view/oc_form_view.dart';
 export 'package:hyper_ui/module/online_class/oc_http_request/controller/oc_http_request_controller.dart';
 export 'package:hyper_ui/module/online_class/oc_http_request/view/oc_http_request_view.dart';
-export 'package:hyper_ui/module/online_class/oc_state_management/controller/oc_state_management_controller.dart';
 export 'package:hyper_ui/module/online_class/oc_state_management/view/oc_state_management_view.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_basic_animation/controller/sm_basic_animation_controller.dart';
 export 'package:hyper_ui/module/online_class/state_management/sm_basic_animation/view/sm_basic_animation_view.dart';
