@@ -40,26 +40,26 @@ class CgMainService {
 
   List<Map> onlineClassMenuList = [
     {
-      'label': 'Layout',
-      'icon': MdiIcons.keyboardOutline,
+      'label': 'State Management',
+      'icon': MdiIcons.codeBraces,
       'color': Colors.blue,
       'page': const OcStateManagementMainNavigationView(),
     },
     {
       'label': 'HTTP Request',
-      'icon': MdiIcons.web,
+      'icon': MdiIcons.codeBraces,
       'color': Colors.green,
       'page': const OcHttpRequestView(),
     },
     {
       'label': 'Firebase',
-      'icon': MdiIcons.firebase,
+      'icon': MdiIcons.codeBraces,
       'color': Colors.green,
       'page': const OcFirebaseView(),
     },
     {
       'label': 'Flutter Book',
-      'icon': MdiIcons.book,
+      'icon': MdiIcons.codeBraces,
       'color': Colors.red,
       'page': const FbkMainNavigationView(),
     },
