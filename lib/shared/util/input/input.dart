@@ -3,19 +3,11 @@ class Input {
   static Map<String, InputControlState> inputController = {};
 
   static set(key, value) {
-    values[key] = value;
-  }
-
-  static get(key) {
-    return values[key];
-  }
-
-  static setValue(key, value) {
     inputController[key]?.setValue(value);
   }
 
-  static getValue(key, value) {
-    inputController[key]?.getValue();
+  static get(key) {
+    return inputController[key]?.getValue();
   }
 
   static clear(key) {

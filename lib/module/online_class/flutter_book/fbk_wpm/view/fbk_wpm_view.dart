@@ -35,7 +35,7 @@ class FbkWpmView extends StatefulWidget {
                 onChanged: (value) {},
                 onSubmitted: (value) {
                   print("value: $value");
-                  Input.setValue("product", "Demos");
+                  Input.set("product", "Demos");
                 },
               ),
             ],
