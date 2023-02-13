@@ -15,12 +15,18 @@ Widget rowLabel(Function func) {
     child: Row(
       children: [
         Expanded(
-          child: Text(functionName),
+          child: Text(
+            functionName[0].toUpperCase() + functionName.substring(1),
+            style: const TextStyle(
+              fontSize: 14.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
         Icon(
-          isDone ? Icons.check_circle_outline : MdiIcons.clockOutline,
+          isDone ? Icons.check_box : MdiIcons.minusBox,
           color: isDone ? Colors.green : Colors.grey,
-          size: 24.0,
+          size: 32.0,
         ),
       ],
     ),

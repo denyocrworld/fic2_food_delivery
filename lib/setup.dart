@@ -11,7 +11,7 @@ Docs: https://firebase.flutter.dev/docs/cli/
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb || Platform.isWindows) return;
+  if (!kIsWeb && Platform.isWindows) return;
 
   // await Firebase.initializeApp(
   //   //run > flutterfire configure

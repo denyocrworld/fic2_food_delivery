@@ -1,68 +1,37 @@
 /*
-Basic Pemrograman
-Variable
-  Mangkok, Gelas, Piring
-  Bakso  , Air  , Nasi Goreng
-Operator Aritmatika
-IF Statement
-List
-Map
----
-Konversi Tipe Data
-Casting tipe data x sebagai y
----
-Looping
-Function & Async Function
-*/
+//5 Soal latihan praktek Dart tentang Function
+1. Apa yang dimaksud dengan Function di Dart?
 
-//dart tutorial.dart
-//nodemon --exec dart tutorial.dart
+Function adalah sebuah blok kode yang dapat dipanggil untuk melakukan tugas tertentu. Function dapat menerima parameter dan mengembalikan nilai. Function dapat digunakan untuk membuat kode yang lebih terstruktur dan mudah dibaca.
 
-// 1. Install nodejs
-// 2. npm install -g nodemon
+2. Bagaimana cara mendeklarasikan Function di Dart?
 
-/*
-;
-() 
-{}
-[]
-*/
+Function dapat dideklarasikan dengan menggunakan kata kunci 'void' atau 'return'. Contoh:
 
-double getNetSalary(double salary) {
-  double tax = 0.1;
-  double asuransi = 10;
-  double bebanLainnya = 5;
-  double netSalary = (salary - asuransi - bebanLainnya) - (salary * tax);
-  return netSalary;
+void namaFunction() {
+  // kode yang akan dijalankan
 }
 
-void main() {
-  double netSalaryBudy = getNetSalary(10000);
-  double netSalaryAny = getNetSalary(70000);
-  double netSalaryAlex = getNetSalary(6000);
+atau
 
-  print("netSalaryBudy : $netSalaryBudy");
-  print("netSalaryAny : $netSalaryAny");
-  print("netSalaryAlex : $netSalaryAlex");
+return namaFunction() {
+  // kode yang akan dijalankan
 }
 
-saveProduct() {
-  int number = 3;
+3. Apa yang dimaksud dengan Parameter di Dart?
+
+Parameter adalah variabel yang diteruskan ke dalam sebuah function. Parameter dapat digunakan untuk mengirimkan nilai ke dalam function dan mengubah perilaku function.
+
+4. Bagaimana cara menggunakan Parameter di Dart?
+
+Parameter dapat dideklarasikan dengan menggunakan tanda kurung dan tanda titik dua. Contoh:
+
+void namaFunction(parameter1, parameter2) {
+  // kode yang akan dijalankan
 }
 
-/*
-Mesin Keju
-Input: Susu
-Process: Fermentasi
-Output: Keju
+5. Apa yang dimaksud dengan Flutter Function di Dart?
 
-Masak Nasi
-INput: Beras
-Process: Menanak Nasi
-Output: Nasi
+Flutter Function adalah sebuah library yang menyediakan berbagai fungsi yang dapat digunakan untuk membuat aplikasi mobile dengan Flutter. Library ini menyediakan berbagai fungsi seperti membuat widget, mengakses data, dan lain-lain.
 
-Mie Rebus
-Input: Mie Kering
-Process: Merebus
-Output: Mie Rebus Matang
 */

@@ -7,21 +7,6 @@ class TutorialDashboardView extends StatefulWidget {
   Widget build(context, TutorialDashboardController controller) {
     controller.view = this;
 
-    //penyimpanannya berbasis index
-    List products = [
-      "JR SUPER 12", //0
-      "SUSU ENAK", //1
-    ];
-
-    //penyimpanannya berbasis key n value
-    Map product = {
-      //key: value
-      "id": 1,
-      "product_name": "GG FILTER 12",
-      "price": 25.0,
-      "description": "-",
-    };
-
     return Scaffold(
       appBar: AppBar(
         title: const Text("Dashboard"),

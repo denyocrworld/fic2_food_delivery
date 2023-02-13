@@ -1,4 +1,3 @@
-import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
@@ -6,8 +5,7 @@ import 'package:hyper_ui/debug.dart';
 void main() async {
   await initialize();
   /*
-  ? Kelas Online Flutter - Gelombang 2
-  ! Segera mulai, MALAM INI
+  ? Kelas Online Flutter
   ? Buka capekngoding.com
   */
   // Get.mainTheme.value = getDefaultTheme();
