@@ -88,7 +88,8 @@ class _QLocationPickerState extends State<QLocationPicker>
   @override
   setValue(value) {}
 
-  getValue(value) {}
+  @override
+  getValue() {}
 
   @override
   resetValue() {}

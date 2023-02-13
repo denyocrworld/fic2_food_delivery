@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
 
 import '../../../util/input/input.dart';
 
@@ -13,6 +14,7 @@ class QTextField extends StatefulWidget {
   final IconData? prefixIcon;
   final IconData? suffixIcon;
   final Function(String) onChanged;
+  final Function(String)? onSubmitted;
 
   const QTextField({
     Key? key,
@@ -23,6 +25,7 @@ class QTextField extends StatefulWidget {
     this.hint,
     this.maxLength,
     required this.onChanged,
+    this.onSubmitted,
     this.obscure = false,
     this.prefixIcon,
     this.suffixIcon,
@@ -32,13 +35,29 @@ class QTextField extends StatefulWidget {
   State<QTextField> createState() => _QTextFieldState();
 }
 
-class _QTextFieldState extends State<QTextField> with InputControlState {
+class _QTextFieldState extends State<QTextField> implements InputControlState {
   TextEditingController textEditingController = TextEditingController();
 
   @override
   void initState() {
     textEditingController.text = widget.value ?? "";
+    Input.inputController[widget.id ?? const Uuid().v4()] = this;
     super.initState();
+  }
+
+  @override
+  getValue() {
+    return textEditingController.text;
+  }
+
+  @override
+  setValue(value) {
+    textEditingController.text = value;
+  }
+
+  @override
+  resetValue() {
+    textEditingController.text = "";
   }
 
   @override
@@ -65,6 +84,9 @@ class _QTextFieldState extends State<QTextField> with InputControlState {
       ),
       onChanged: (value) {
         widget.onChanged(value);
+      },
+      onFieldSubmitted: (value) {
+        if (widget.onSubmitted != null) widget.onSubmitted!(value);
       },
     );
   }

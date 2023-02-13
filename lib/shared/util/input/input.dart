@@ -10,6 +10,14 @@ class Input {
     return values[key];
   }
 
+  static setValue(key, value) {
+    inputController[key]?.setValue(value);
+  }
+
+  static getValue(key, value) {
+    inputController[key]?.getValue();
+  }
+
   static clear(key) {
     values.remove(key);
   }
@@ -22,6 +30,7 @@ class Input {
 }
 
 class InputControlState {
+  getValue() {}
   setValue(value) {}
   resetValue() {}
 }

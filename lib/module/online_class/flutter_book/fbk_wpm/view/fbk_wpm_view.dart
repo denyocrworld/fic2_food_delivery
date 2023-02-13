@@ -28,10 +28,15 @@ class FbkWpmView extends StatefulWidget {
                 height: 20.0,
               ),
               QTextField(
-                label: "Type",
+                id: "product",
+                label: "",
                 validator: Validator.required,
                 value: "",
                 onChanged: (value) {},
+                onSubmitted: (value) {
+                  print("value: $value");
+                  Input.setValue("product", "Demos");
+                },
               ),
             ],
           ),
