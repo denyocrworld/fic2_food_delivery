@@ -27,7 +27,7 @@ class TemplateCraeteLoginSocialView extends StatelessWidget {
     import 'package:dio/dio.dart';
 
     [2.a] If you are using Getx
-    import 'package:get/get.dart' hide Response, FormData, MultipartFile;
+    import 'package:get/get.dart' hide response, formdata, multipartfile;
 
     ------------------------
     Code generation with snippets can be a good solution for you or it can kill you.
