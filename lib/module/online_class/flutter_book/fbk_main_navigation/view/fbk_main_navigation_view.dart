@@ -188,45 +188,48 @@ class FbkMainNavigationView extends StatefulWidget {
               ),
               getGrid(title: "Flutter - Overflow Handling", children: [
                 getMenu(
-                  label: "Eoh1",
+                  label: "Overflow Handling",
                   disabled: true,
-                  view: const Elv1View(),
-                ),
-              ]),
-              getGrid(title: "UI PRO - Overflow Handling", children: [
-                getMenu(
-                  label: "Dribbble",
-                  disabled: true,
-                  view: const Elv1View(),
+                  view: Container(),
                 ),
               ]),
               getGrid(
-                title: "State Management",
+                title: "Flutter - State Management",
                 children: [
                   getMenu(
-                    label: "Elv1",
+                    label: "State Management",
                     disabled: true,
-                    view: const Elv1View(),
+                    view: Container(),
                   ),
                 ],
               ),
               getGrid(
-                title: "Local Storage",
+                title: "Flutter - Local Storage",
                 children: [
                   getMenu(
-                    label: "Elv1",
+                    label: "Local Storage",
                     disabled: true,
-                    view: const Elv1View(),
+                    view: Container(),
                   ),
                 ],
               ),
               getGrid(
-                title: "Firebase",
+                title: "HTTP Request",
                 children: [
                   getMenu(
-                    label: "Elv1",
+                    label: "Http Request",
                     disabled: true,
-                    view: const Elv1View(),
+                    view: Container(),
+                  ),
+                ],
+              ),
+              getGrid(
+                title: "Flutter - Firebase",
+                children: [
+                  getMenu(
+                    label: "Firebase",
+                    disabled: true,
+                    view: Container(),
                   ),
                 ],
               ),
@@ -234,48 +237,8 @@ class FbkMainNavigationView extends StatefulWidget {
                 title: "Latihan Layout",
                 children: [
                   getMenu(
-                    label: "Elv1",
-                    view: const Elv1View(),
-                  ),
-                  getMenu(
-                    label: "Elv2",
-                    view: const Elv2View(),
-                  ),
-                  getMenu(
-                    label: "Elv3",
-                    view: const Elv3View(),
-                  ),
-                  getMenu(
-                    label: "Elv4",
-                    view: const Elv4View(),
-                  ),
-                  getMenu(
-                    label: "Elv5",
-                    view: const Elv5View(),
-                  ),
-                  getMenu(
-                    label: "Elv6",
-                    view: const Elv6View(),
-                  ),
-                  getMenu(
-                    label: "Elv7",
-                    view: const Elv7View(),
-                  ),
-                  getMenu(
-                    label: "Elv8",
-                    view: const Elv8View(),
-                  ),
-                  getMenu(
-                    label: "Elv9",
-                    view: const Elv9View(),
-                  ),
-                  getMenu(
-                    label: "Elv9",
-                    view: const Elv9View(),
-                  ),
-                  getMenu(
                     label: "Elv10",
-                    view: const Elv10View(),
+                    view: Container(),
                   ),
                 ],
               ),
