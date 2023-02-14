@@ -95,6 +95,9 @@ class _QLocationPickerState extends State<QLocationPicker>
   resetValue() {}
 
   @override
+  focus() {}
+
+  @override
   Widget build(BuildContext context) {
     return FormField(
       initialValue: false,

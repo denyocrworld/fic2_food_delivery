@@ -5,10 +5,12 @@ class TutorialLoginController extends State<TutorialLoginView>
     implements MvcController {
   static late TutorialLoginController instance;
   late TutorialLoginView view;
+  late String firstName;
 
   @override
   void initState() {
     instance = this;
+    firstName = mainStorage.get("first_name") ?? "Deny";
     super.initState();
   }
 

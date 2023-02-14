@@ -130,6 +130,190 @@ class FbkDartStringView extends StatefulWidget {
     return product['product_name'] == 'GG FILTER 12';
   }
 
+  bool exercise13() {
+    String input = "Hello World";
+    // Tuliskan kode untuk mengubah input menjadi huruf besar
+    String? output;
+
+    return output == "HELLO WORLD";
+  }
+
+  bool exercise14() {
+    String input = "Hello World";
+    // Tuliskan kode untuk mengubah input menjadi huruf kecil
+    String? output;
+
+    return output == "hello world";
+  }
+
+  bool exercise15() {
+    String input = "Hello World";
+    // Tuliskan kode untuk mengubah input menjadi judul case
+    String? output;
+
+    return output == "Hello World";
+  }
+
+  bool exercise16() {
+    String input = "1234";
+    // Tuliskan kode untuk mengubah input menjadi angka
+    int? output;
+
+    return output == 1234;
+  }
+
+  bool exercise17() {
+    String input = "1234.56";
+    // Tuliskan kode untuk mengubah input menjadi double
+    double? output;
+
+    return output == 1234.56;
+  }
+
+  bool exercise18() {
+    String input = "Rp. 1.234,56";
+    // Tuliskan kode untuk mengubah input menjadi double tanpa simbol mata uang
+    double? output;
+
+    return output == 1234.56;
+  }
+
+  bool exercise19() {
+    double input = 1234.56;
+    // Tuliskan kode untuk mengubah input menjadi String dengan format currency
+    String? output;
+
+    return output == "Rp. 1.234,56";
+  }
+
+  bool exercise20() {
+    String input = "1234.56";
+    // Tuliskan kode untuk mengubah input menjadi String dengan format currency
+    String? output;
+
+    return output == "Rp. 1.234,56";
+  }
+
+  bool exercise21() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk memverifikasi apakah input berisi kata "Hello"
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise22() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk mengubah input menjadi "Hello World"
+    String? output;
+
+    return output == "Hello World";
+  }
+
+  bool exercise23() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk mengubah input menjadi "Hello,World!"
+    String? output;
+
+    return output == "Hello,World!";
+  }
+
+  bool exercise24() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk memverifikasi apakah input berisi kata "world"
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise25() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk memverifikasi apakah input berisi kata "World"
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise26() {
+    String input = "Rp. 10.000";
+    // Tuliskan kode untuk mengubah input menjadi 10000
+    int? output;
+
+    return output == 10000;
+  }
+
+  bool exercise27() {
+    String input = "Rp. 10.000";
+    // Tuliskan kode untuk mengubah input menjadi 10.000
+    double? output;
+
+    return output == 10.000;
+  }
+
+  bool exercise28() {
+    String input = "Rp. 10.000";
+    // Tuliskan kode untuk mengubah input menjadi 10,000.00
+    String? output;
+
+    return output == "10,000.00";
+  }
+
+  bool exercise29() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk memverifikasi apakah input berisi huruf besar
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise30() {
+    String input = "Hello, World!";
+    // Tuliskan kode untuk memverifikasi apakah input berisi huruf kecil
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise31() {
+    String input = "12,345.67";
+    // Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12345.67;
+  }
+
+  bool exercise32() {
+    String input = "Rp. 12.345,67";
+    // Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12345.67;
+  }
+
+  bool exercise33() {
+    String input = "USD 12,345.67";
+    // Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12345.67;
+  }
+
+  bool exercise34() {
+    String input = "€12.345,67";
+    // Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12345.67;
+  }
+
+  bool exercise35() {
+    String input = "¥12,345.67";
+    // Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12345.67;
+  }
+
   Widget build(context, FbkDartStringController controller) {
     controller.view = this;
 
@@ -155,6 +339,29 @@ class FbkDartStringView extends StatefulWidget {
               rowLabel(exercise10),
               rowLabel(exercise11),
               rowLabel(exercise12),
+              rowLabel(exercise13),
+              rowLabel(exercise14),
+              rowLabel(exercise15),
+              rowLabel(exercise16),
+              rowLabel(exercise17),
+              rowLabel(exercise18),
+              rowLabel(exercise19),
+              rowLabel(exercise20),
+              rowLabel(exercise21),
+              rowLabel(exercise22),
+              rowLabel(exercise23),
+              rowLabel(exercise24),
+              rowLabel(exercise25),
+              rowLabel(exercise26),
+              rowLabel(exercise27),
+              rowLabel(exercise28),
+              rowLabel(exercise29),
+              rowLabel(exercise30),
+              rowLabel(exercise31),
+              rowLabel(exercise32),
+              rowLabel(exercise33),
+              rowLabel(exercise34),
+              rowLabel(exercise35),
             ],
           ),
         ),

@@ -190,6 +190,8 @@ export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_date_util/con
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_date_util/view/fbk_dart_date_util_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_encode_and_decode/controller/fbk_dart_encode_and_decode_controller.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_encode_and_decode/view/fbk_dart_encode_and_decode_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_if_statement/controller/fbk_dart_if_statement_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_if_statement/view/fbk_dart_if_statement_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_list_and_map/controller/fbk_dart_list_and_map_controller.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_list_and_map/view/fbk_dart_list_and_map_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_dart_model/controller/fbk_dart_model_controller.dart';
@@ -213,6 +215,7 @@ export 'package:hyper_ui/module/online_class/flutter_book/fbk_flutter_common_wid
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/controller/fbk_main_navigation_controller.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_main_navigation_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/controller/fbk_wpm_controller.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/service/fbk_wpm_service.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_wpm/view/fbk_wpm_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/shared/widget/row_label/row_label.dart';
 export 'package:hyper_ui/module/online_class/http_request/hr_chart/controller/hr_chart_controller.dart';
@@ -306,6 +309,7 @@ export 'package:hyper_ui/module/tutorial/tutorial_dashboard/controller/tutorial_
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_login/controller/tutorial_login_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_login/view/tutorial_login_view.dart';
+export 'package:hyper_ui/module/tutorial/tutorial_login/widget/super_list.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_main_navigation/controller/tutorial_main_navigation_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_main_navigation/view/tutorial_main_navigation_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_product_detail/controller/tutorial_product_detail_controller.dart';

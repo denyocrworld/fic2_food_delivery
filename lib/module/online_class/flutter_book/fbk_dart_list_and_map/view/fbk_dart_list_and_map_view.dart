@@ -854,6 +854,543 @@ class FbkDartListAndMapView extends StatefulWidget {
         e["age"] >= employees[employees.indexOf(e) - 1]["age"]);
   }
 
+  bool exercise58() {
+    List<Map<String, dynamic>> employees = [
+      {
+        "name": "John",
+        "age": 32,
+        "position": "Manager",
+      },
+      {
+        "name": "Jane",
+        "age": 25,
+        "position": "Developer",
+      },
+      {
+        "name": "Jack",
+        "age": 41,
+        "position": "CTO",
+      },
+      {
+        "name": "Jill",
+        "age": 29,
+        "position": "Designer",
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan employee tertua dan tampung ke variable di bawah ini
+    Map<String, dynamic>? oldestEmployee;
+
+    return oldestEmployee == {"name": "Jack", "age": 41, "position": "CTO"};
+  }
+
+  bool exercise59() {
+    List<Map<String, dynamic>> employees = [
+      {
+        "name": "John",
+        "age": 32,
+        "position": "Manager",
+        "salary": 8000,
+      },
+      {
+        "name": "Jane",
+        "age": 25,
+        "position": "Developer",
+        "salary": 6000,
+      },
+      {
+        "name": "Jack",
+        "age": 41,
+        "position": "CTO",
+        "salary": 10000,
+      },
+      {
+        "name": "Jill",
+        "age": 29,
+        "position": "Designer",
+        "salary": 7000,
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan employee dengan gaji tertinggi dan tampung ke variable di bawah ini
+    Map<String, dynamic>? highestPaidEmployee;
+
+    return highestPaidEmployee ==
+        {"name": "Jack", "age": 41, "position": "CTO", "salary": 10000};
+  }
+
+  bool exercise60() {
+    List<Map<String, dynamic>> employees = [
+      {
+        "name": "John",
+        "age": 32,
+        "position": "Manager",
+        "salary": 8000,
+      },
+      {
+        "name": "Jane",
+        "age": 25,
+        "position": "Developer",
+        "salary": 6000,
+      },
+      {
+        "name": "Jack",
+        "age": 41,
+        "position": "CTO",
+        "salary": 10000,
+      },
+      {
+        "name": "Jill",
+        "age": 29,
+        "position": "Designer",
+        "salary": 7000,
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan rata-rata gaji dari semua employee dan tampung ke variable di bawah ini
+    double? averageSalary;
+
+    return averageSalary == 7500.0;
+  }
+
+  bool exercise61() {
+    List<Map<String, dynamic>> products = [
+      {
+        "name": "iPhone",
+        "price": 1000,
+        "quantity": 5,
+      },
+      {
+        "name": "Macbook",
+        "price": 2000,
+        "quantity": 2,
+      },
+      {
+        "name": "iPad",
+        "price": 500,
+        "quantity": 10,
+      },
+      {
+        "name": "Apple Watch",
+        "price": 300,
+        "quantity": 20,
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan produk dengan harga termahal dan tampung ke variable di bawah ini
+    Map<String, dynamic>? mostExpensiveProduct;
+
+    return mostExpensiveProduct ==
+        {"name": "Macbook", "price": 2000, "quantity": 2};
+  }
+
+  bool exercise62() {
+    List<Map<String, dynamic>> products = [
+      {
+        "name": "iPhone",
+        "price": 1000,
+        "quantity": 5,
+      },
+      {
+        "name": "Macbook",
+        "price": 2000,
+        "quantity": 2,
+      },
+      {
+        "name": "iPad",
+        "price": 500,
+        "quantity": 10,
+      },
+      {
+        "name": "Apple Watch",
+        "price": 300,
+        "quantity": 20,
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah stok produk dan tampung ke variable di bawah ini
+    int? totalStock;
+
+    return totalStock == 37;
+  }
+
+  bool exercise63() {
+    List<Map<String, dynamic>> orders = [
+      {
+        "id": 1,
+        "created_at": "2023-01-01",
+        "customer": {
+          "id": 1001,
+          "name": "Deny",
+        },
+        "items": [
+          {
+            "id": 2001,
+            "product_name": "T-Shirts",
+            "price": 25,
+            "description": "-",
+            "qty": 2,
+          },
+        ],
+      },
+      {
+        "id": 2,
+        "created_at": "2023-01-02",
+        "customer": {
+          "id": 1002,
+          "name": "Jenny",
+        },
+        "items": [
+          {
+            "id": 2002,
+            "product_name": "Jeans",
+            "price": 50,
+            "description": "-",
+            "qty": 3,
+          },
+          {
+            "id": 2003,
+            "product_name": "Shoes",
+            "price": 100,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah produk yang terjual dan tampung ke variable di bawah ini
+    int? totalQty;
+
+    return totalQty == 7;
+  }
+
+  bool exercise64() {
+    List<Map<String, dynamic>> orders = [
+      {
+        "id": 1,
+        "created_at": "2023-01-01",
+        "customer": {
+          "id": 1001,
+          "name": "Deny",
+        },
+        "items": [
+          {
+            "id": 2001,
+            "product_name": "T-Shirts",
+            "price": 25,
+            "description": "-",
+            "qty": 2,
+          },
+        ],
+      },
+      {
+        "id": 2,
+        "created_at": "2023-01-02",
+        "customer": {
+          "id": 1002,
+          "name": "Jenny",
+        },
+        "items": [
+          {
+            "id": 2002,
+            "product_name": "Jeans",
+            "price": 50,
+            "description": "-",
+            "qty": 3,
+          },
+          {
+            "id": 2003,
+            "product_name": "Shoes",
+            "price": 100,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah total penjualan dan tampung ke variable di bawah ini
+    double? totalSale;
+
+    return totalSale == 325.0;
+  }
+
+  bool exercise65() {
+    List<Map<String, dynamic>> orders = [
+      {
+        "id": 1,
+        "created_at": "2023-01-01",
+        "customer": {
+          "id": 1001,
+          "name": "Deny",
+        },
+        "items": [
+          {
+            "id": 2001,
+            "product_name": "T-Shirts",
+            "price": 25,
+            "description": "-",
+            "qty": 2,
+          },
+        ],
+      },
+      {
+        "id": 2,
+        "created_at": "2023-01-02",
+        "customer": {
+          "id": 1002,
+          "name": "Jenny",
+        },
+        "items": [
+          {
+            "id": 2002,
+            "product_name": "Jeans",
+            "price": 50,
+            "description": "-",
+            "qty": 3,
+          },
+          {
+            "id": 2003,
+            "product_name": "Shoes",
+            "price": 100,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+      {
+        "id": 3,
+        "created_at": "2023-01-05",
+        "customer": {
+          "id": 1003,
+          "name": "Kevin",
+        },
+        "items": [
+          {
+            "id": 2004,
+            "product_name": "Bag",
+            "price": 75,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah total penjualan order antara tanggal "2023-01-01" dan "2023-01-03" dan tampung ke variable di bawah ini
+    double? totalSale;
+
+    return totalSale == 250.0;
+  }
+
+  bool exercise66() {
+    List<Map<String, dynamic>> orders = [
+      {
+        "id": 1,
+        "created_at": "2023-01-01",
+        "customer": {
+          "id": 1001,
+          "name": "Deny",
+        },
+        "items": [
+          {
+            "id": 2001,
+            "product_name": "T-Shirts",
+            "price": 25,
+            "description": "-",
+            "qty": 2,
+          },
+        ],
+      },
+      {
+        "id": 2,
+        "created_at": "2023-01-02",
+        "customer": {
+          "id": 1002,
+          "name": "Jenny",
+        },
+        "items": [
+          {
+            "id": 2002,
+            "product_name": "Jeans",
+            "price": 50,
+            "description": "-",
+            "qty": 3,
+          },
+          {
+            "id": 2003,
+            "product_name": "Shoes",
+            "price": 100,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+      {
+        "id": 3,
+        "created_at": "2023-01-05",
+        "customer": {
+          "id": 1003,
+          "name": "Kevin",
+        },
+        "items": [
+          {
+            "id": 2004,
+            "product_name": "Bag",
+            "price": 75,
+            "description": "-",
+            "qty": 1,
+          },
+        ],
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah total penjualan order antara tanggal "2023-01-01" dan "2023-01-03" dan tampung ke variable di bawah ini
+    double? totalSale;
+
+    return totalSale == 250.0;
+  }
+
+  bool exercise67() {
+    List<Map<String, dynamic>> orders = [
+      {
+        "id": 1,
+        "created_at": "2023-01-01",
+        "customer": {
+          "id": 1001,
+          "name": "Deny",
+        },
+        "items": [
+          {
+            "id": 2001,
+            "product_name": "Paracetamol",
+            "price": 1000,
+            "description": "Obat sakit kepala",
+            "qty": 2,
+            "category": "Obat",
+          },
+          {
+            "id": 2002,
+            "product_name": "Ceres",
+            "price": 2500,
+            "description": "Obat demam",
+            "qty": 1,
+            "category": "Obat",
+          },
+        ],
+      },
+      {
+        "id": 2,
+        "created_at": "2023-01-02",
+        "customer": {
+          "id": 1002,
+          "name": "Jenny",
+        },
+        "items": [
+          {
+            "id": 2003,
+            "product_name": "Blender",
+            "price": 20000,
+            "description": "Alat dapur untuk menghaluskan bahan makanan",
+            "qty": 1,
+            "category": "Alat Dapur",
+          },
+          {
+            "id": 2004,
+            "product_name": "Panci",
+            "price": 15000,
+            "description": "Alat dapur untuk memasak",
+            "qty": 2,
+            "category": "Alat Dapur",
+          },
+        ],
+      },
+      {
+        "id": 3,
+        "created_at": "2023-01-05",
+        "customer": {
+          "id": 1003,
+          "name": "Kevin",
+        },
+        "items": [
+          {
+            "id": 2005,
+            "product_name": "Thermometer",
+            "price": 5000,
+            "description": "Alat untuk mengukur suhu badan",
+            "qty": 1,
+            "category": "Kesehatan",
+          },
+        ],
+      },
+    ];
+
+    // Tuliskan kode untuk menentukan jumlah total penjualan obat pada tanggal "2023-01-01" dan tampung ke variable di bawah ini
+    double? totalSale;
+
+    return totalSale == 35000.0;
+  }
+
+  bool exercise68() {
+    Map<String, dynamic> product = {
+      "name": "Blender",
+      "price": 49.99,
+      "category": "Kitchenware",
+      "isAvailable": true,
+      "details": {
+        "brand": "Cuisinart",
+        "wattage": 700,
+        "color": "Silver",
+      },
+    };
+
+    // Tuliskan kode untuk mengakses wattage dari produk dan tampung ke variable di bawah ini
+    int? wattage;
+
+    return wattage == product["details"]["wattage"];
+  }
+
+  bool exercise69() {
+    Map<String, dynamic> customer = {
+      "name": "Jane Doe",
+      "age": 25,
+      "email": "jane.doe@email.com",
+      "isSubscribed": true,
+      "address": {
+        "street": "456 Elm St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001",
+      },
+    };
+
+    // Tuliskan kode untuk mengakses email dari customer dan tampung ke variable di bawah ini
+    String? email;
+
+    return email == customer["email"];
+  }
+
+  bool exercise70() {
+    Map<String, dynamic> book = {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 15.99,
+      "category": "Fiction",
+      "isInStock": true,
+      "details": {
+        "pages": 324,
+        "publisher": "HarperCollins",
+        "publishedDate": "1960-07-11",
+      },
+    };
+
+    // Tuliskan kode untuk mengakses jumlah halaman dari buku dan tampung ke variable di bawah ini
+    int? pages;
+
+    return pages == book["details"]["pages"];
+  }
+
   Widget build(context, FbkDartListAndMapController controller) {
     controller.view = this;
 
@@ -923,6 +1460,19 @@ class FbkDartListAndMapView extends StatefulWidget {
               rowLabel(exercise55),
               rowLabel(exercise56),
               rowLabel(exercise57),
+              rowLabel(exercise58),
+              rowLabel(exercise59),
+              rowLabel(exercise60),
+              rowLabel(exercise61),
+              rowLabel(exercise62),
+              rowLabel(exercise63),
+              rowLabel(exercise64),
+              rowLabel(exercise65),
+              rowLabel(exercise66),
+              rowLabel(exercise67),
+              rowLabel(exercise68),
+              rowLabel(exercise69),
+              rowLabel(exercise70),
             ],
           ),
         ),

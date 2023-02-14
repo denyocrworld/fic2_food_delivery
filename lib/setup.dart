@@ -2,6 +2,9 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hyper_ui/service/main_storage/main_storage.dart';
+import 'package:path_provider/path_provider.dart';
 /*
 TODO: 
 Run this command if you don't already have firebase_options.dart
@@ -11,6 +14,11 @@ Docs: https://firebase.flutter.dev/docs/cli/
 
 Future initialize() async {
   WidgetsFlutterBinding.ensureInitialized();
+  if (!kIsWeb) {
+    var path = await getTemporaryDirectory();
+    Hive.init(path.path);
+  }
+  mainStorage = await Hive.openBox('mainStorage');
   if (!kIsWeb && Platform.isWindows) return;
 
   // await Firebase.initializeApp(

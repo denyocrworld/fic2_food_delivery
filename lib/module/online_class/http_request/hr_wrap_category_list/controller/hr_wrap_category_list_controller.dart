@@ -23,7 +23,7 @@ class HrWrapCategoryListController extends State<HrWrapCategoryListView>
   List categoryList = [];
   loadProductCategoryList() async {
     var response = await Dio().get(
-      "http://localhost:8080/deny/api/product_categories",
+      "https://capekngoding.com/deny/api/product_categories",
       options: Options(
         headers: {
           "Content-Type": "application/json",

@@ -147,6 +147,192 @@ class FbkDartNumberView extends StatefulWidget {
     return number == 23;
   }
 
+  bool exercise13() {
+    int input = 12345;
+    // Tuliskan kode untuk memverifikasi apakah input adalah bilangan genap
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise14() {
+    double input = 12345.6789;
+    // Tuliskan kode untuk membulatkan input ke 2 angka di belakang koma
+    double? output;
+
+    return output == 12345.68;
+  }
+
+  bool exercise15() {
+    int input = 123456;
+    // Tuliskan kode untuk memverifikasi apakah input adalah bilangan bulat yang habis dibagi 3
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise16() {
+    int input = 123456;
+    // Tuliskan kode untuk memverifikasi apakah input adalah bilangan bulat yang habis dibagi 6
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise17() {
+    int a = 10;
+    int b = 20;
+    // Tuliskan kode untuk menukar nilai a dan b
+    int? c;
+    int? d;
+
+    return c == 20 && d == 10;
+  }
+
+  bool exercise18() {
+    int input = 12345;
+    // Tuliskan kode untuk memverifikasi apakah input adalah bilangan prima
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise19() {
+    double input = 12345.6789;
+    // Tuliskan kode untuk membulatkan input ke 1 angka di belakang koma
+    double? output;
+
+    return output == 12345.7;
+  }
+
+  bool exercise20() {
+    int input = 123456;
+    // Tuliskan kode untuk memverifikasi apakah input adalah bilangan bulat yang habis dibagi 9
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise21() {
+    String input = "12345";
+// Tuliskan kode untuk mengkonversi input menjadi integer
+    int? output;
+
+    return output == 12345;
+  }
+
+  bool exercise22() {
+    String input = "12.345";
+// Tuliskan kode untuk mengkonversi input menjadi double
+    double? output;
+
+    return output == 12.345;
+  }
+
+  bool exercise23() {
+    int input = 12345;
+// Tuliskan kode untuk mengkonversi input menjadi string
+    String? output;
+
+    return output == "12345";
+  }
+
+  bool exercise24() {
+    double input = 12345.678;
+// Tuliskan kode untuk mengkonversi input menjadi string
+    String? output;
+
+    return output == "12345.678";
+  }
+
+  bool exercise25() {
+    String input = "12345";
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan bulat
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise26() {
+    String input = "12345.678";
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan riil
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise27() {
+    String input = "abcde";
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan bulat
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise28() {
+    String input = "abcde";
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan riil
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise29() {
+    int input = 12345;
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan negatif
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise30() {
+    int input = -12345;
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan negatif
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise31() {
+    int input = 12345;
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan positif
+    bool? output;
+
+    return output == true;
+  }
+
+  bool exercise32() {
+    int input = -12345;
+// Tuliskan kode untuk memverifikasi apakah input merupakan bilangan positif
+    bool? output;
+
+    return output == false;
+  }
+
+  bool exercise33() {
+    String input = "1,000.50";
+    // Tuliskan kode untuk mengubah input menjadi double
+    double? output;
+
+    return output == 1000.5;
+  }
+
+  bool exercise34() {
+    String input = "100,000";
+    // Tuliskan kode untuk mengubah input menjadi int
+    int? output;
+
+    return output == 100000;
+  }
+
+  bool exercise35() {
+    String input = "100.5";
+    // Tuliskan kode untuk memverifikasi apakah input bisa dikonversi ke double
+    bool? output;
+
+    return output == true;
+  }
+
   Widget build(context, FbkDartNumberController controller) {
     controller.view = this;
 
@@ -172,6 +358,29 @@ class FbkDartNumberView extends StatefulWidget {
               rowLabel(exercise10),
               rowLabel(exercise11),
               rowLabel(exercise12),
+              rowLabel(exercise13),
+              rowLabel(exercise14),
+              rowLabel(exercise15),
+              rowLabel(exercise16),
+              rowLabel(exercise17),
+              rowLabel(exercise18),
+              rowLabel(exercise19),
+              rowLabel(exercise20),
+              rowLabel(exercise21),
+              rowLabel(exercise22),
+              rowLabel(exercise23),
+              rowLabel(exercise24),
+              rowLabel(exercise25),
+              rowLabel(exercise26),
+              rowLabel(exercise27),
+              rowLabel(exercise28),
+              rowLabel(exercise29),
+              rowLabel(exercise30),
+              rowLabel(exercise31),
+              rowLabel(exercise32),
+              rowLabel(exercise33),
+              rowLabel(exercise34),
+              rowLabel(exercise35),
             ],
           ),
         ),

@@ -10,6 +10,10 @@ class Input {
     return inputController[key]?.getValue();
   }
 
+  static focus(key) {
+    return inputController[key]?.focus();
+  }
+
   static clear(key) {
     values.remove(key);
   }
@@ -25,4 +29,5 @@ class InputControlState {
   getValue() {}
   setValue(value) {}
   resetValue() {}
+  focus() {}
 }

@@ -25,7 +25,7 @@ class HrHorizontalCategoryListController
   doGenerate() async {
     for (var i = 1; i <= 10; i++) {
       var response = await Dio().post(
-        "http://localhost:8080/deny/api/product_categories",
+        "https://capekngoding.com/deny/api/product_categories",
         options: Options(
           headers: {
             "Content-Type": "application/json",
@@ -42,7 +42,7 @@ class HrHorizontalCategoryListController
   List categoryList = [];
   loadProductCategoryList() async {
     var response = await Dio().get(
-      "http://localhost:8080/deny/api/product_categories",
+      "https://capekngoding.com/deny/api/product_categories",
       options: Options(
         headers: {
           "Content-Type": "application/json",

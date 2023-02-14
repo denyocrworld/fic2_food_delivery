@@ -32,6 +32,7 @@ class MainApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: value,
           home: const CgMainView(),
+          // home: const ContohView(),
           // home: const TutorialListView(),
           // home: const MainNavigationView(),
           // home: ShakuroDashboardView(),

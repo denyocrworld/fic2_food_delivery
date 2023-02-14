@@ -9,7 +9,7 @@ class TutorialDashboardView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Hello"),
         actions: const [],
       ),
       body: Container(

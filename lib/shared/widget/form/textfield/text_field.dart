@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../../../util/input/input.dart';
-
 class QTextField extends StatefulWidget {
   final String? id;
   final String label;
@@ -60,10 +58,17 @@ class _QTextFieldState extends State<QTextField> implements InputControlState {
     textEditingController.text = "";
   }
 
+  focus() {
+    focusNode.requestFocus();
+  }
+
+  FocusNode focusNode = FocusNode();
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: textEditingController,
+      focusNode: focusNode,
       validator: widget.validator,
       maxLength: widget.maxLength,
       obscureText: widget.obscure,

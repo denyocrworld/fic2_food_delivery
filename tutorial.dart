@@ -1,124 +1,150 @@
 /*
+Yok yang mau join,
+Untuk memperdalam Dart n Flutter
+
+Saya buat Rutin tiap senin pagi dan selasa pagi
+(Kalo lagi Mood yak~)
+
+----
+
+Basic Dart
+Tiktok
+https://www.tiktok.com/@codingwithdeny/live
+
+Gmeet
+https://meet.google.com/oec-kbmg-uqh
+
+Senin
+6:30/7:00/7:30(Pagi) - Selesai
+
+-----
+
+Basic Flutter
+Tiktok
+https://www.tiktok.com/@codingwithdeny/live
+
+Gmeet
+https://meet.google.com/oec-kbmg-uqh
+
+Selasa
+6:30/7:00/7:30(Pagi) - Selesai
+
+
+-----
 Variable
+  Mangkok, Piring, dan Gelas
+  Bakso  , Nasi Goreng| Air
 Operator Aritmatika
 IF Statement
 List
+  - Bisa di isi lebih dari 1 nilai
+  - Penyimpannya berbasis index yang dimulai dari 0
+  Rak Buku
+    3 4 Buku Politik
+    2 3
+    1 2
+    0 1 Buku Sejarah
+
 Map
+  - Bisa di isi lebih dari 1 nilai
+  - Penyimpannya berbasis key and value
+  Rak Buku
+    3 [Politik] Buku Politik
+    2 [Sains]
+    1 [Ekonomi]
+    0 [Sejarah] Buku Sejarah
+    
 Looping
 Function
+--
+OOP x
+
+dart tutorial.dart
 */
-void main() {
-/*
-Gelas, Mangkok, Piring
-Air  , Bakso  , Nasi Goreng
-
-Gelas != Nasi Goreng
-*/
-  //tipe_data nama_variable = nilai_awal;
-  // String productName = "JR SUPER 12";
-  // double price = 20.50;
-  // int age = 30;
-  // bool isAdmin = false; //true || false
-
-  // productName = "SUSU DANCOW";
-  // productName = "SK KRETEK 12";
-  // productName = "GG FILTER 12";
-  // productName = "VIKS ANAK";
-
-  // print("productName: $productName");
-  // print("price: $price");
-  // print("age: $age");
-  // print("isAdmin: $isAdmin");
-  //                    0             1             2            3
-  List productList = ["Kayu Putih", "Kecap Bango", "SUSU ENAK", "GG FILTER"];
-  for (var product in productList) {
-    print(product);
-  }
-
-  print("---");
-
-  // for (var i = 0; i < productList.length; i++) {
-  for (var i = 0; i < 4; i++) {
-    var product = productList[i];
-    print(product);
-  }
-
-  //kondisi-nya
-  //action-nya
-
-  print("-------");
-
-  var name = "Angga";
-
-  //if(condition){
-  //
-  //}
+void main() async {
   /*
-  ==
-  !=
-  >
-  <
-  >=
-  <=
+  1. Kode kita lebih effisien
+  2. Supaya tidak terjadi pengulangan dimana mana
+  3. Supaya mudah di maintan
+  4. Supaya lebih mudah dipahami/dibaca
+
+  Function dan OOP
   */
-  if (name != "Angga") {
-    //true || false
-    print("Anda adalah anak Bapak iding");
-  } else if (name == "Deny") {
-    print("Anda adalah anak Bapak Yusda");
-  } else {
-    print("Anda bukanlah anak Bapak iding");
-  }
-
-  /*
-  Nasi -> 
-  Panci 
-
-  Magikom
-  */
-
-  // double salary = 1000;
+  // double budySalary = 1000;
   // double tax = 0.1;
-  // double insurance = 200;
-  // double lainLain = 50;
+  // double expense = 100;
+  // double insurance = 50;
 
-  // double netSalary = salary - (salary * tax) - insurance - lainLain;
+  // double grossSalary = budySalary - expense - insurance;
+  // double netSalary = grossSalary - (grossSalary * tax);
   // print("netSalary: $netSalary");
 
-  // double salary = 900;
+  // double anySalary = 1000;
   // double tax = 0.1;
-  // double insurance = 200;
-  // double lainLain = 50;
+  // double expense = 100;
+  // double insurance = 50;
 
-  // double netSalary = salary - (salary * tax) - insurance - lainLain;
+  // double grossSalary = anySalary - expense - insurance;
+  // double netSalary = grossSalary - (grossSalary * tax);
   // print("netSalary: $netSalary");
 
-  // double salary = 800;
+  // double alexSalary = 1000;
   // double tax = 0.1;
-  // double insurance = 200;
-  // double lainLain = 50;
+  // double expense = 100;
+  // double insurance = 50;
 
-  // double netSalary = salary - (salary * tax) - insurance - lainLain;
+  // double grossSalary = alexSalary - expense - insurance;
+  // double netSalary = grossSalary - (grossSalary * tax);
   // print("netSalary: $netSalary");
 
-  double anggaSalary = 1000;
-  double anggaNetSalary = getNetSalary(anggaSalary);
-  print("anggaNetSalary: $anggaNetSalary");
+  double budySalary = getNetSalary(1000);
+  print("budySalary: $budySalary");
 
-  double monaSalary = 2000;
-  double monaNetSalary = getNetSalary(monaSalary);
-  print("monaNetSalary: $monaNetSalary");
+  double anySalary = getNetSalary(2000);
+  print("anySalary: $anySalary");
 
-  double denySalary = 3000;
-  double denyNetSalary = getNetSalary(denySalary);
-  print("denyNetSalary: $denyNetSalary");
+  double alexSalary = getNetSalary(4000);
+  print("alexSalary: $alexSalary");
 }
 
-double getNetSalary(double salary) {
-  double tax = 0.1;
-  double insurance = 200;
-  double lainLain = 50;
+/*
+Input
+Process
+Output
 
-  double netSalary = salary - (salary * tax) - insurance - lainLain;
+
+Memasak Nasi
+Input: Beras
+Process: Mengkukus
+OUtput: Nasi
+
+Memasak Mie
+Input: Mie Kering
+Process: Merebus Mie
+OUtput: Mie Rebus Matang
+*/
+double getNetSalary(double salary) {
+  double tax = 0.3;
+  double expense = 100;
+  double insurance = 50;
+
+  double grossSalary = salary - expense - insurance;
+  double netSalary = grossSalary - (grossSalary * tax);
   return netSalary;
 }
+
+//ini adalah function utk menambah produk
+/*
+1. Gunakan prefix
+*/
+product() {}
+
+addProduct() {}
+deleteProduct() {}
+updateProduct() {}
+getProducts() {}
+
+/*
+Clean Code
+Robert c Martin
+*/
