@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/config.dart';
 import 'package:hyper_ui/core.dart';
+
+import '../../../../service/product_service/product_service.dart';
 
 class TutorialProductFormController extends State<TutorialProductFormView>
     implements MvcController {
@@ -10,14 +11,14 @@ class TutorialProductFormController extends State<TutorialProductFormView>
   @override
   void initState() {
     instance = this;
-    if (isEditMode) {
-      id = widget.item!["id"];
+
+    if (widget.item != null) {
       photo = widget.item!["photo"];
       productName = widget.item!["product_name"];
       price = widget.item!["price"];
-      productCategory = widget.item!["product_category"];
       description = widget.item!["description"];
     }
+
     super.initState();
   }
 
@@ -27,10 +28,8 @@ class TutorialProductFormController extends State<TutorialProductFormView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  int? id;
   String? photo;
   String? productName;
-  String? productCategory;
   double? price;
   String? description;
 
@@ -40,45 +39,23 @@ class TutorialProductFormController extends State<TutorialProductFormView>
 
   doSave() async {
     if (isEditMode) {
-      //Update
-      var response = await Dio().post(
-        "http://127.0.0.1:8080/deny/api/products/$id",
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-            "token": AppConfig.token,
-          },
-        ),
-        data: {
-          "photo": photo,
-          "product_name": productName,
-          "product_category": productCategory,
-          "price": price,
-          "description": description,
-        },
+      var id = widget.item!["id"];
+      await ProductService.updateProduct(
+        id: id,
+        photo: photo,
+        productName: productName,
+        price: price,
+        description: description,
       );
-      Map obj = response.data;
     } else {
-      //Create
-      var response = await Dio().post(
-        "http://127.0.0.1:8080/deny/api/products",
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-            "token": AppConfig.token,
-          },
-        ),
-        data: {
-          "photo": photo,
-          "product_name": productName,
-          "product_category": productCategory,
-          "price": price,
-          "description": description,
-        },
+      await ProductService.addProduct(
+        photo: photo,
+        productName: productName,
+        price: price,
+        description: description,
       );
-      Map obj = response.data;
     }
-    await showInfoDialog("Berhasil menyimpan data");
+
     Get.back();
   }
 }

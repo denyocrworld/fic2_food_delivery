@@ -30,6 +30,7 @@ class _ContohViewState extends State<ContohView> {
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
+              //flutter_animate
               Text(
                 "loading: $loading",
                 style: const TextStyle(

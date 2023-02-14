@@ -313,7 +313,7 @@ class FbkDartIfStatementView extends StatefulWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("FbkDartListAndMap"),
+        title: const Text("FbkDartIfStatement"),
         actions: const [],
       ),
       body: SingleChildScrollView(
