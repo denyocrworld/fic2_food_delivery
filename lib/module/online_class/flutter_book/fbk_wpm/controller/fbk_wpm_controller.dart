@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/shared/util/input/input.dart';
 import 'package:hyper_ui/state_util.dart';
@@ -8,6 +10,8 @@ class FbkWpmController extends State<FbkWpmView> implements MvcController {
   static late FbkWpmController instance;
   late FbkWpmView view;
 
+  late Timer timer;
+  int seconds = 0;
   @override
   void initState() {
     instance = this;
@@ -15,11 +19,20 @@ class FbkWpmController extends State<FbkWpmView> implements MvcController {
     Future.delayed(const Duration(milliseconds: 200), () {
       Input.focus("input");
     });
+    timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (seconds < 60) {
+        seconds++;
+        setState(() {});
+      }
+    });
     super.initState();
   }
 
   @override
-  void dispose() => super.dispose();
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
@@ -33,10 +46,17 @@ class FbkWpmController extends State<FbkWpmView> implements MvcController {
 
   validate(value) {
     Input.set("input", "");
-    if (currentText == value) {
+    if (currentText.trim() == value.trim()) {
       word++;
     }
     currentIndex++;
+    setState(() {});
+    Input.focus("input");
+  }
+
+  restart() {
+    seconds = 0;
+    word = 0;
     setState(() {});
     Input.focus("input");
   }

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../service/fbk_wpm_service.dart';
-
 class FbkWpmView extends StatefulWidget {
   const FbkWpmView({Key? key}) : super(key: key);
 
@@ -22,6 +20,13 @@ class FbkWpmView extends StatefulWidget {
             children: [
               Text(
                 "WPM: ${controller.word}",
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Seconds: ${controller.seconds}",
                 style: const TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
@@ -68,15 +73,30 @@ class FbkWpmView extends StatefulWidget {
               const SizedBox(
                 height: 20.0,
               ),
-              QTextField(
-                id: "input",
-                label: "",
-                validator: Validator.required,
-                value: "",
-                onChanged: (value) {},
-                onSubmitted: (value) {
-                  controller.validate(value);
-                },
+              if (controller.seconds < 60)
+                QTextField(
+                  id: "input",
+                  label: "",
+                  validator: Validator.required,
+                  value: "",
+                  onChanged: (value) {},
+                  onSubmitted: (value) {
+                    controller.validate(value);
+                  },
+                ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              SizedBox(
+                width: 200.0,
+                height: 48,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                  ),
+                  onPressed: () => controller.restart(),
+                  child: const Text("Restart"),
+                ),
               ),
             ],
           ),
