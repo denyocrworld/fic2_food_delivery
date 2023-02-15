@@ -61,7 +61,7 @@ class CgMainView extends StatefulWidget {
                                   children: [
                                     InkWell(
                                       onTap: () =>
-                                          Get.offAll(const TutorialLoginView()),
+                                          Get.offAll(const TutorialDemoView()),
                                       child: Text(
                                         "Hyper UI",
                                         style: GoogleFonts.moonDance(

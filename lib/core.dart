@@ -601,6 +601,8 @@ export 'package:hyper_ui/module/tutorial/tutorial_dashboard/controller/tutorial_
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/widget/oval_painter.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/widget/wave_painter.dart';
+export 'package:hyper_ui/module/tutorial/tutorial_demo/controller/tutorial_demo_controller.dart';
+export 'package:hyper_ui/module/tutorial/tutorial_demo/view/tutorial_demo_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_login/controller/tutorial_login_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_login/view/tutorial_login_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_login/widget/super_list.dart';
