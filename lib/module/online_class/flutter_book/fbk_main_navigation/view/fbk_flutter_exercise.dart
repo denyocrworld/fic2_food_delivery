@@ -1,8 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
-
-import '../widget/get_grid.dart';
+import 'package:hyper_ui/core.dart';
 
 class FbkFlutterExerciseView extends StatelessWidget {
   const FbkFlutterExerciseView({Key? key}) : super(key: key);
@@ -18,9 +17,24 @@ class FbkFlutterExerciseView extends StatelessWidget {
             children: [
               getGrid(title: "Flutter - Overflow Handling", children: [
                 getMenu(
-                  label: "Overflow Handling",
-                  disabled: true,
-                  view: Container(),
+                  label: "Ovh 1",
+                  view: const Ovh1View(),
+                ),
+                getMenu(
+                  label: "Ovh 2",
+                  view: const Ovh2View(),
+                ),
+                getMenu(
+                  label: "Ovh 3",
+                  view: const Ovh3View(),
+                ),
+                getMenu(
+                  label: "Ovh 4",
+                  view: const Ovh4View(),
+                ),
+                getMenu(
+                  label: "Ovh 5",
+                  view: const Ovh5View(),
                 ),
               ]),
               getGrid(
