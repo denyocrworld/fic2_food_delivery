@@ -3,7 +3,7 @@ import 'dart:io';
 
 void main() async {
   String hyperUiPublicPath =
-      r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_public";
+      r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_blank";
 //Jalankan perintah "cp -r tutorial.dart tutorial_copy.dart" dengan Dart
 
   deleteDir(
@@ -43,12 +43,12 @@ void main() async {
     "$hyperUiPublicPath\\lib\\module",
     onlyContent: true,
     exceptions: [
-      "__example",
-      "main_navigation",
-      "dashboard",
-      "order",
-      "favorite",
-      "profile",
+      // "__example",
+      // "main_navigation",
+      // "dashboard",
+      // "order",
+      // "favorite",
+      // "profile",
     ],
   );
   deleteDir("$hyperUiPublicPath\\lib\\firebase");
@@ -62,6 +62,7 @@ void main() async {
   deleteDir("$hyperUiPublicPath\\fic-exercises");
   deleteDir("$hyperUiPublicPath\\test");
   deleteDir("$hyperUiPublicPath\\web");
+  deleteFile("$hyperUiPublicPath\\lib\\state_util.dart");
 
   //Firebase?
   deleteFile("$hyperUiPublicPath\\lib\\firebase_options.dart");
@@ -185,7 +186,7 @@ removeAllCommentInDir(String path) async {
     content = content.replaceAll("@@--@@", "://");
 
     if (file.path.endsWith("main.dart")) {
-      content = content.replaceAll("CgMainView", "MainNavigationView");
+      content = content.replaceAll("CgMainView", "Scaffold");
     }
 
     file.writeAsStringSync(content);
