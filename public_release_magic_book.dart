@@ -11,7 +11,6 @@ void main() async {
     onlyContent: true,
     exceptions: [".git"],
   );
-
   await Future.delayed(const Duration(seconds: 1));
 
   Directory dir = Directory.current;
