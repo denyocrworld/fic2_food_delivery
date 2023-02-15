@@ -5,12 +5,6 @@ class TutorialLoginView extends StatefulWidget {
   const TutorialLoginView({Key? key}) : super(key: key);
 
   Widget build(context, TutorialLoginController controller) {
-    /*
-    HTTP Request
-      Dokumentasi API
-        Postman
-        Website
-    */
     controller.view = this;
     return Scaffold(
       appBar: AppBar(

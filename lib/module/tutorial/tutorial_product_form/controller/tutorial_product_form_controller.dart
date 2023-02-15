@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../../../../service/product_service/product_service.dart';
-
 class TutorialProductFormController extends State<TutorialProductFormView>
     implements MvcController {
   static late TutorialProductFormController instance;
