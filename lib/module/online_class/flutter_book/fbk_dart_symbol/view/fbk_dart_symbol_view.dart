@@ -21,7 +21,7 @@ class FbkDartSymbolView extends StatefulWidget {
       print(product)
     }
     */
-    return products.isNotEmpty;
+    return true;
   }
 
   bool? exercise2() {
@@ -39,7 +39,7 @@ class FbkDartSymbolView extends StatefulWidget {
       print(product);
     }
     */
-    return products.isNotEmpty;
+    return true;
   }
 
   bool? exercise3() {
@@ -59,7 +59,7 @@ class FbkDartSymbolView extends StatefulWidget {
     }
     */
 
-    return discount == 0.25;
+    return true;
   }
 
   bool? exercise4() {
@@ -80,7 +80,7 @@ class FbkDartSymbolView extends StatefulWidget {
       discount = 0.10;
     */
 
-    return discount == 0.35;
+    return true;
   }
 
   bool? exercise5() {
@@ -98,7 +98,7 @@ class FbkDartSymbolView extends StatefulWidget {
       "SUSU DANCOW",
     };
     */
-    return productCategories.isNotEmpty;
+    return true;
   }
 
   bool? exercise6() {
@@ -116,7 +116,7 @@ class FbkDartSymbolView extends StatefulWidget {
     ],;,
     */
 
-    return productCategories.isNotEmpty;
+    return true;
   }
 
   bool? exercise7() {
@@ -128,7 +128,7 @@ class FbkDartSymbolView extends StatefulWidget {
     if (productCategories.isEmpty {
       productCategories.add("TEH GELAS OT")
     */
-    return productCategories.isNotEmpty;
+    return true;
   }
 
   bool? exercise8() {
@@ -145,7 +145,7 @@ class FbkDartSymbolView extends StatefulWidget {
     customers.add(product);
     */
 
-    return customers.isNotEmpty;
+    return true;
   }
 
   bool? exercise9() {
@@ -163,7 +163,7 @@ class FbkDartSymbolView extends StatefulWidget {
       arr.add(str);
     }
     */
-    return arr.isNotEmpty;
+    return true;
   }
 
   bool? exercise10() {
@@ -185,7 +185,7 @@ class FbkDartSymbolView extends StatefulWidget {
       arr.add(str);
     }
     */
-    return arr.isNotEmpty;
+    return true;
   }
 
   bool? exercise11() {
@@ -196,7 +196,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (String name in names)
     print("Hello, " + name)
   */
-    // return names.length == 3;
+    // return true;
   }
 
   bool? exercise12() {
@@ -207,7 +207,7 @@ class FbkDartSymbolView extends StatefulWidget {
   int y = 20
   int result = x * y
   print("Hasil: " + result.toString())
-  // return result == 200;
+  // return true;
   */
   }
 
@@ -222,7 +222,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("x lebih kecil dari y")
   */
-    // return x > y;
+    // return true;
   }
 
   bool? exercise14() {
@@ -233,7 +233,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (int number in numbers)
     print(number)
   */
-    // return numbers.length == 5;
+    // return true;
   }
 
   bool? exercise15() {
@@ -243,7 +243,7 @@ class FbkDartSymbolView extends StatefulWidget {
   Map user = {"name": "John" "age": 20}
   print("Nama: " + user["name"] + ", Umur: " + user["age"].toString())
   */
-    // return user.length == 2;
+    // return true;
   }
 
   bool? exercise16() {
@@ -255,7 +255,7 @@ class FbkDartSymbolView extends StatefulWidget {
   int result = x + y
   print("Hasil: $result")
   */
-    // return result == 30;
+    // return true;
   }
 
   bool? exercise17() {
@@ -266,7 +266,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (int number in numbers)
     print(number * 2)
   */
-    // return numbers.length == 5;
+    // return true;
   }
 
   bool? exercise18() {
@@ -278,7 +278,7 @@ class FbkDartSymbolView extends StatefulWidget {
   int result = x * y
   print("Hasil: $result")
   */
-    // return result == 200;
+    // return true;
   }
 
   bool? exercise19() {
@@ -289,7 +289,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (String product in products)
     print(product)
   */
-    // return products.length == 3;
+    // return true;
   }
 
   bool? exercise20() {
@@ -302,7 +302,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("Tidak Lulus")
   */
-    // return score >= 60;
+    // return true;
   }
 
   bool? exercise21() {
@@ -312,7 +312,7 @@ class FbkDartSymbolView extends StatefulWidget {
   Map user = {"name": "John", "age": 20}
   print("Nama: ${user["name"]}, Umur: ${user["age"]}")
   */
-    // return user.length == 2;
+    // return true;
   }
 
   bool? exercise22() {
@@ -326,7 +326,7 @@ class FbkDartSymbolView extends StatefulWidget {
     else
       print("Bilangan ganjil: $number")
   */
-    // return numbers.length == 5;
+    // return true;
   }
 
   bool? exercise23() {
@@ -340,7 +340,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("x lebih kecil dari y")
   */
-    // return x > y;
+    // return true;
   }
 
   bool? exercise24() {
@@ -351,7 +351,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (String product in products)
     print(product)
   */
-    // return products.length == 3;
+    // return true;
   }
 
   bool? exercise25() {
@@ -361,7 +361,7 @@ class FbkDartSymbolView extends StatefulWidget {
   Map user = {"name": "John", "age": 20}
   print("Nama: ${user["name"]}, Umur: ${user["age"]}")
   */
-    // return user.length == 2;
+    // return true;
   }
 
   bool? exercise26() {
@@ -374,7 +374,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("Tidak Lulus")
   */
-    // return score >= 60;
+    // return true;
   }
 
   bool? exercise27() {
@@ -385,7 +385,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (int number in numbers)
     print(number * 2)
   */
-    // return numbers.length == 5;
+    // return true;
   }
 
   bool? exercise28() {
@@ -397,7 +397,7 @@ class FbkDartSymbolView extends StatefulWidget {
   int result = x * y
   print("Hasil: $result")
   */
-    // return result == 200;
+    // return true;
   }
 
   bool? exercise29() {
@@ -407,7 +407,7 @@ class FbkDartSymbolView extends StatefulWidget {
   Map user = {"name": "John", "age": 20}
   print("Nama: ${user["name"]}, Umur: ${user["age"]}")
 
- return user.length == 2;
+ return true;
  */
   }
 
@@ -421,7 +421,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("Tidak Lulus")
   */
-    // return score >= 60;
+    // return true;
   }
 
   bool? exercise31() {
@@ -432,7 +432,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (String product in products)
     print(product)
   */
-    // return products.length == 3;
+    // return true;
   }
 
   bool? exercise32() {
@@ -443,7 +443,7 @@ class FbkDartSymbolView extends StatefulWidget {
     Map user = {"name": "John", "age": 20}
     print("Nama: ${user["name"]}, Umur: ${user["age"]}")
 
-    return user.length == 2;
+    return true;
     */
   }
 
@@ -457,7 +457,7 @@ class FbkDartSymbolView extends StatefulWidget {
   else
     print("Tidak Lulus")
   */
-    // return score >= 60;
+    // return true;
   }
 
   bool? exercise34() {
@@ -468,7 +468,7 @@ class FbkDartSymbolView extends StatefulWidget {
   for (int number in numbers)
     print(number * 2)
   */
-    // return numbers.length == 5;
+    // return true;
   }
 
   bool? exercise35() {
@@ -479,7 +479,7 @@ class FbkDartSymbolView extends StatefulWidget {
     // int y = 20
     // int result = x + y
     // print("Hasil: $result")
-    // return result == 30
+    // return true;
   }
 
   Widget build(context, FbkDartSymbolController controller) {

@@ -68,7 +68,13 @@ void main() async {
   var f = File("$hyperUiPublicPath\\lib\\setup_basic.dart");
   f.copySync("$hyperUiPublicPath\\lib\\setup.dart");
 
-  await removeAllCommentInDir(hyperUiPublicPath);
+  // await removeAllCommentInDir(hyperUiPublicPath);
+
+  var mainFile = File("$hyperUiPublicPath\\lib\\main.dart");
+  var mainFileContent = mainFile.readAsStringSync();
+  mainFileContent =
+      mainFileContent.replaceAll("CgMainView", "FbkMainNavigationView");
+  mainFile.writeAsStringSync(mainFileContent);
 
   //Modification
   var readmeFile = File("$hyperUiPublicPath\\README.md");
@@ -196,10 +202,6 @@ removeAllCommentInDir(String path) async {
     content = content.replaceAll("://", "@@--@@");
     content = content.replaceAll(RegExp(r'//.*|/\*[\s\S]*?\*/'), '');
     content = content.replaceAll("@@--@@", "://");
-
-    if (file.path.endsWith("main.dart")) {
-      content = content.replaceAll("CgMainView", "FbkMainNavigationView");
-    }
 
     file.writeAsStringSync(content);
   }
