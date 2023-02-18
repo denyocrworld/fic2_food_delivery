@@ -444,7 +444,7 @@ class FbkDartListAndMapView extends StatefulWidget {
     ];
     //Tulis kode untuk menentukan berapa banyak karyawan dengan gaji di atas 4000
     int? employeesAboveSalary;
-    return employeesAboveSalary == 2;
+    return employeesAboveSalary == 1;
   }
 
   bool exercise45() {
