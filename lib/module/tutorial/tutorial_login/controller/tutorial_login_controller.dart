@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
-import '../../../../service/auth_service/auth_service.dart';
-
 class TutorialLoginController extends State<TutorialLoginView>
     implements MvcController {
   static late TutorialLoginController instance;
@@ -40,60 +38,32 @@ class TutorialLoginController extends State<TutorialLoginView>
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  final formKey = GlobalKey<FormState>();
-
-  int currentIndex = 0;
-  final CarouselController carouselController = CarouselController();
-
-  bool isLoading = false;
-  updateLoading() {
-    // if (isLoading) {
-    //   isLoading = false;
-    // } else {
-    //   isLoading = true;
-    // }
-
-    isLoading = !isLoading;
-
-    print("isLoading: $isLoading");
-    setState(() {});
-  }
-
-  String email = "";
-  String password = "";
+  String email = "admin@demo.com";
+  String password = "123456";
 
   doLogin() async {
-    /*
-    URL
-    Method
-    Data
-    Headers
-    */
-    // var response = await Dio().post(
-    //   "https://capekngoding.com/deny/api/auth/action/login",
-    //   options: Options(
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   ),
-    //   data: {
-    //     "email": email,
-    //     "password": password,
-    //   },
-    // );
-    // Map obj = response.data;
-    // print(response.data);
-
-    Map obj = await AuthService.doLogin(
-      email: email,
-      password: password,
+    var response = await Dio().post(
+      "https://capekngoding.com/deny/api/auth/action/login",
+      options: Options(
+        headers: {
+          "Content-Type": "application/json",
+        },
+      ),
+      data: {
+        "email": email,
+        "password": password,
+      },
     );
+    Map obj = response.data;
 
-    if (obj["success"] == true) {
-      showInfoDialog("Berhasil login");
-      Get.offAll(const TutorialDashboardView());
-    } else {
+    if (obj["success"] != true) {
       showInfoDialog("Gagal login");
+      return;
     }
+
+    AuthService.role = "Admin";
+    // AuthService.role = "User";
+
+    Get.offAll(const TutorialDashboardView());
   }
 }

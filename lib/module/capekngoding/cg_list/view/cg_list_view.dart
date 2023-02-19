@@ -147,6 +147,52 @@ class CgListView extends StatefulWidget {
               ),
               //#END
               const SizedBox(
+                height: 20.0,
+              ),
+              const SnippetContainer("rowg"),
+              /*
+              //#TEMPLATE rowg
+              Row(
+                children: List.generate(10, (index) {CURSOR_2}),
+              ),
+              //#END
+              */
+              Text("""
+Row(
+  children: List.generate(10, (index) {}),
+),
+              """
+                  .trim()),
+              const SnippetContainer("colg"),
+              /*
+              //#TEMPLATE colg
+              Column(
+                children: List.generate(10, (index) {CURSOR_2}),
+              ),
+              //#END
+              */
+              Text("""
+Column(
+  children: List.generate(10, (index) {}),
+),
+              """
+                  .trim()),
+              const SnippetContainer("wrapg"),
+              /*
+              //#TEMPLATE wrapg
+              Wrap(
+                children: List.generate(10, (index) {CURSOR_2}),
+              ),
+              //#END
+              */
+              Text("""
+Wrap(
+  children: List.generate(10, (index) {}),
+),
+              """
+                  .trim()),
+
+              const SizedBox(
                 height: 200.0,
               ),
             ],
