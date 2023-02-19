@@ -13,11 +13,14 @@ class FbkFullAppsExerciseView extends StatelessWidget {
         controller: ScrollController(),
         child: Container(
           padding: const EdgeInsets.all(20.0),
+          width: MediaQuery.of(context).size.width,
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               getContainer(
-                title: "Food Delivery Apps - (FD)",
+                title: "Food Delivery Apps",
                 children: [
+                  getInfo(label: "Customer"),
                   getGrid(
                     title: "Start",
                     children: [
@@ -99,6 +102,10 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                         label: "Order Detail",
                         view: Container(),
                       ),
+                      getMenu(
+                        label: "Live Tracking",
+                        view: Container(),
+                      ),
                     ],
                   ),
                   getGrid(
@@ -127,6 +134,69 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                       ),
                       getMenu(
                         label: "About Us",
+                        view: Container(),
+                      ),
+                    ],
+                  ),
+                  getInfo(label: "Driver"),
+                  getGrid(
+                    title: "Navigation",
+                    children: [
+                      getMenu(
+                        label: "Main Navigation",
+                        view: Container(),
+                      ),
+                    ],
+                  ),
+                  getGrid(
+                    title: "Main View",
+                    children: [
+                      getMenu(
+                        label: "Dashboard",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Order",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Profile",
+                        view: Container(),
+                      ),
+                    ],
+                  ),
+                  getGrid(
+                    title: "Detail",
+                    children: [
+                      getMenu(
+                        label: "Order Detail",
+                        view: Container(),
+                      ),
+                    ],
+                  ),
+                  getInfo(label: "Restaurant"),
+                  getGrid(
+                    title: "Navigation",
+                    children: [
+                      getMenu(
+                        label: "Main Navigation",
+                        view: Container(),
+                      ),
+                    ],
+                  ),
+                  getGrid(
+                    title: "Main View",
+                    children: [
+                      getMenu(
+                        label: "Dashboard",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Order",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Profile",
                         view: Container(),
                       ),
                     ],

@@ -18,6 +18,34 @@ getTitle({
   );
 }
 
+getInfo({
+  required String label,
+}) {
+  return Padding(
+    padding: const EdgeInsets.all(12.0),
+    child: Row(
+      children: [
+        const Icon(
+          Icons.info,
+          size: 16.0,
+          color: Colors.orange,
+        ),
+        const SizedBox(
+          width: 6.0,
+        ),
+        Text(
+          label,
+          style: const TextStyle(
+            fontSize: 12.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.orange,
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
 getContainer({
   required String title,
   required List<Widget> children,
@@ -30,6 +58,7 @@ getContainer({
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             getGroupTitle(
               title: title,
