@@ -18,6 +18,56 @@ getTitle({
   );
 }
 
+getContainer({
+  required String title,
+  required List<Widget> children,
+}) {
+  return Container(
+    margin: const EdgeInsets.only(
+      bottom: 10.0,
+    ),
+    child: Card(
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            getGroupTitle(
+              title: title,
+            ),
+            ...children,
+          ],
+        ),
+      ),
+    ),
+  );
+}
+
+getGroupTitle({
+  required String title,
+}) {
+  return Container(
+    width: MediaQuery.of(Get.currentContext).size.width,
+    padding: const EdgeInsets.symmetric(
+      vertical: 12.0,
+      horizontal: 12.0,
+    ),
+    decoration: const BoxDecoration(),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(
+            fontSize: 16.0,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const Divider(),
+      ],
+    ),
+  );
+}
+
 getMenu({
   required String label,
   required Widget view,
@@ -32,7 +82,7 @@ getMenu({
       Get.to(view);
     },
     child: Card(
-      color: disabled ? Colors.grey : null,
+      color: disabled ? Colors.grey : Colors.blueGrey[700],
       shape: ContinuousRectangleBorder(
         borderRadius: BorderRadius.circular(64.0),
       ),
@@ -44,6 +94,7 @@ getMenu({
               style: const TextStyle(
                 fontSize: 10.0,
                 fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
           ),

@@ -15,149 +15,121 @@ class FbkFullAppsExerciseView extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              getGrid(
-                title: "EDR1",
+              getContainer(
+                title: "Food Delivery Apps - (FD)",
                 children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard1View(),
+                  getGrid(
+                    title: "Start",
+                    children: [
+                      getMenu(
+                        label: "Full Demo",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                  getMenu(
-                    label: "Travel Detail",
-                    view: const EdrTravelDetail1View(),
+                  getGrid(
+                    title: "Getting Started",
+                    children: [
+                      getMenu(
+                        label: "Splash",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Intro",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              getGrid(
-                title: "EDR2",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard2View(),
+                  getGrid(
+                    title: "Auth",
+                    children: [
+                      getMenu(
+                        label: "Login",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                  getMenu(
-                    label: "Travel Detail",
-                    view: const EdrTravelDetail2View(),
+                  getGrid(
+                    title: "Navigation",
+                    children: [
+                      getMenu(
+                        label: "Main Navigation",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              getGrid(
-                title: "EDR3",
-                children: [
-                  getMenu(
-                    label: "Welcome",
-                    view: const EdrWelcome3View(),
+                  getGrid(
+                    title: "Main View",
+                    children: [
+                      getMenu(
+                        label: "Dashboard",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Order",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Favorite",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Profile",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard3View(),
+                  getGrid(
+                    title: "List",
+                    children: [
+                      getMenu(
+                        label: "Food List",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                  getMenu(
-                    label: "Travel",
-                    view: const EdrTravelDetail3View(),
+                  getGrid(
+                    title: "Detail",
+                    children: [
+                      getMenu(
+                        label: "Product Detail",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Order Detail",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              getGrid(
-                title: "EDR4",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard4View(),
+                  getGrid(
+                    title: "Transaction",
+                    children: [
+                      getMenu(
+                        label: "Cart",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Checkout",
+                        view: Container(),
+                      ),
+                    ],
                   ),
-                  getMenu(
-                    label: "Movie Detail",
-                    view: const EdrMovieDetail4View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR5",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard5View(),
-                  ),
-                  getMenu(
-                    label: "Movie Detail",
-                    view: const EdrMovieDetail5View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR6",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard6View(),
-                  ),
-                  getMenu(
-                    label: "Movie Detail",
-                    view: const EdrMovieDetail6View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR7",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard7View(),
-                  ),
-                  getMenu(
-                    label: "Product Detail",
-                    view: const EdrProductDetail7View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR8",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard8View(),
-                  ),
-                  getMenu(
-                    label: "Product Detail",
-                    view: const EdrProductDetail8View(),
-                  ),
-                  getMenu(
-                    label: "Cart",
-                    view: const EdrCart8View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR9",
-                children: [
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard9View(),
-                  ),
-                  getMenu(
-                    label: "Product List",
-                    view: const EdrProductDetail9View(),
-                  ),
-                  getMenu(
-                    label: "Product Detail",
-                    view: const EdrProductDetail9View(),
-                  ),
-                ],
-              ),
-              getGrid(
-                title: "EDR10",
-                children: [
-                  getMenu(
-                    label: "Welcome",
-                    view: const EdrWelcome10View(),
-                  ),
-                  getMenu(
-                    label: "Dashboard",
-                    view: const EdrDashboard10View(),
-                  ),
-                  getMenu(
-                    label: "Product Detail",
-                    view: const EdrProductDetail10View(),
+                  getGrid(
+                    title: "Etc",
+                    children: [
+                      getMenu(
+                        label: "TOS",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "Privacy policy",
+                        view: Container(),
+                      ),
+                      getMenu(
+                        label: "About Us",
+                        view: Container(),
+                      ),
+                    ],
                   ),
                 ],
               ),
