@@ -48,7 +48,7 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                     children: [
                       getMenu(
                         label: "Login",
-                        view: Container(),
+                        view: const FdLoginView(),
                       ),
                     ],
                   ),

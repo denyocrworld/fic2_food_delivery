@@ -3,6 +3,18 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/controller/fd_admin_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/view/fd_admin_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/controller/fd_login_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/view/fd_login_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/controller/fd_customer_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/view/fd_customer_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/driver/fd_driver_main_navigation/controller/fd_driver_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/driver/fd_driver_main_navigation/view/fd_driver_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/fd_profile/controller/fd_profile_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/fd_profile/view/fd_profile_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/controller/fd_restaurant_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/view/fd_restaurant_main_navigation_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/controller/cgp_product_detail1_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/view/cgp_product_detail1_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/controller/cgp_product_detail2_controller.dart';
@@ -484,6 +496,7 @@ export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/co
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_dart_exercise_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_flutter_exercise.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_form_view.dart';
+export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_full_apps_exercise_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_main_navigation_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_ui_basic_view.dart';
 export 'package:hyper_ui/module/online_class/flutter_book/fbk_main_navigation/view/fbk_ui_pro_view.dart.dart';
@@ -599,6 +612,7 @@ export 'package:hyper_ui/module/temp/tutorial_list/service/elv_service.dart';
 export 'package:hyper_ui/module/temp/tutorial_list/view/tutorial_list_view.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/controller/tutorial_dashboard_controller.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/view/tutorial_dashboard_view.dart';
+export 'package:hyper_ui/module/tutorial/tutorial_dashboard/widget/my_awesome_carousel.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/widget/oval_painter.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_dashboard/widget/wave_painter.dart';
 export 'package:hyper_ui/module/tutorial/tutorial_demo/controller/tutorial_demo_controller.dart';

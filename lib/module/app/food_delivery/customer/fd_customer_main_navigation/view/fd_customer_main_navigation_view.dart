@@ -1,26 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
+import '../controller/fd_customer_main_navigation_controller.dart';
 
-class TemplateScaffoldBottomNavigationBar extends StatefulWidget {
-  const TemplateScaffoldBottomNavigationBar({Key? key}) : super(key: key);
+class FdCustomerMainNavigationView extends StatefulWidget {
+  const FdCustomerMainNavigationView({Key? key}) : super(key: key);
 
-  @override
-  State<TemplateScaffoldBottomNavigationBar> createState() =>
-      TemplateScaffoldBottomNavigationBarController();
+  Widget build(context, FdCustomerMainNavigationController controller) {
+    controller.view = this;
 
-  Widget build(
-    BuildContext context,
-    TemplateScaffoldBottomNavigationBarController controller,
-  ) {
-    //#GROUP_TEMPLATE scaffold
-    //#TEMPLATE scaffold_bottom_navigation_bar
-    /*
-    TODO: Implement this @ controller
-    int selectedIndex = 0;
-    updateIndex(int newIndex) {
-      selectedIndex = newIndex;
-      setState(() {});
-    }
-    */
     return DefaultTabController(
       length: 4,
       initialIndex: controller.selectedIndex,
@@ -37,9 +24,7 @@ class TemplateScaffoldBottomNavigationBar extends StatefulWidget {
             Container(
               color: Colors.blue,
             ),
-            Container(
-              color: Colors.purple,
-            ),
+            const FdProfileView(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -74,28 +59,9 @@ class TemplateScaffoldBottomNavigationBar extends StatefulWidget {
         ),
       ),
     );
-    //#END
-  }
-}
-
-class TemplateScaffoldBottomNavigationBarController
-    extends State<TemplateScaffoldBottomNavigationBar> {
-  @override
-  void initState() {
-    super.initState();
   }
 
   @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => widget.build(context, this);
-
-  int selectedIndex = 0;
-  updateIndex(int newIndex) {
-    selectedIndex = newIndex;
-    setState(() {});
-  }
+  State<FdCustomerMainNavigationView> createState() =>
+      FdCustomerMainNavigationController();
 }
