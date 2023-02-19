@@ -20,7 +20,7 @@ class FbkFullAppsExerciseView extends StatelessWidget {
               getContainer(
                 title: "Food Delivery Apps",
                 children: [
-                  getInfo(label: "Customer"),
+                  getInfo(label: "General"),
                   getGrid(
                     title: "Start",
                     children: [
@@ -53,6 +53,16 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                     ],
                   ),
                   getGrid(
+                    title: "Main View",
+                    children: [
+                      getMenu(
+                        label: "Profile",
+                        view: const FdProfileView(),
+                      ),
+                    ],
+                  ),
+                  getInfo(label: "Customer"),
+                  getGrid(
                     title: "Navigation",
                     children: [
                       getMenu(
@@ -74,10 +84,6 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                       ),
                       getMenu(
                         label: "Favorite",
-                        view: Container(),
-                      ),
-                      getMenu(
-                        label: "Profile",
                         view: Container(),
                       ),
                     ],
@@ -159,10 +165,6 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                         label: "Order",
                         view: Container(),
                       ),
-                      getMenu(
-                        label: "Profile",
-                        view: Container(),
-                      ),
                     ],
                   ),
                   getGrid(
@@ -193,10 +195,6 @@ class FbkFullAppsExerciseView extends StatelessWidget {
                       ),
                       getMenu(
                         label: "Order",
-                        view: Container(),
-                      ),
-                      getMenu(
-                        label: "Profile",
                         view: Container(),
                       ),
                     ],
