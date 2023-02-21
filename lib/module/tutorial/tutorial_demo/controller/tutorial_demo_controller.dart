@@ -1,6 +1,6 @@
+import 'package:faker_dart/faker_dart.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/state_util.dart';
-import '../view/tutorial_demo_view.dart';
+import 'package:hyper_ui/core.dart';
 
 class TutorialDemoController extends State<TutorialDemoView>
     implements MvcController {
@@ -10,6 +10,7 @@ class TutorialDemoController extends State<TutorialDemoView>
   @override
   void initState() {
     instance = this;
+    getProducts();
     super.initState();
   }
 
@@ -18,6 +19,45 @@ class TutorialDemoController extends State<TutorialDemoView>
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  List productList = [];
+  String search = "";
+  getProducts() async {
+    productList = await mainStorage.get("products") ?? [];
+    productList.sort((a, b) => a["product_name"].compareTo(b["product_name"]));
+    setState(() {});
+  }
+
+  addProduct() async {
+    productList.add({
+      "id": const Uuid().v4(),
+      "product_name": Faker.instance.commerce.productName(),
+      "price": Faker.instance.commerce.price(),
+      "description": Faker.instance.commerce.productDescription(),
+    });
+    await mainStorage.put("products", productList);
+    getProducts();
+  }
+
+  deleteProduct(item) async {
+    productList.remove(item);
+    await mainStorage.put("products", productList);
+    setState(() {});
+  }
+
+  bool ascending = true;
+  updateSort() {
+    ascending = !ascending;
+    if (ascending) {
+      productList
+          .sort((a, b) => a["product_name"].compareTo(b["product_name"]));
+    } else {
+      productList
+          .sort((a, b) => b["product_name"].compareTo(a["product_name"]));
+    }
+
+    setState(() {});
+  }
 
   List products = [
     {

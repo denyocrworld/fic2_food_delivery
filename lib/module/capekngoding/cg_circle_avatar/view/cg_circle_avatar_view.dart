@@ -77,10 +77,11 @@ class CgCircleAvatarView extends StatefulWidget {
               SnippetContainer("circle_icon_lg"),
               //#TEMPLATE circle_icon_lg
               CircleAvatar(
-                backgroundColor: Colors.blueGrey,
+                backgroundColor: Colors.white,
                 radius: 28.0,
                 child: Icon(
-                  Icons.add,
+                  Icons.favorite,
+                  color: Colors.red,
                   size: 28.0,
                 ),
               ),
@@ -89,26 +90,33 @@ class CgCircleAvatarView extends StatefulWidget {
               SnippetContainer("circle_icon_md"),
               //#TEMPLATE circle_icon_md
               CircleAvatar(
-                backgroundColor: Colors.blueGrey,
-                child: Icon(Icons.add),
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
               ),
               //#END
 
               SnippetContainer("circle_icon"),
               //#TEMPLATE circle_icon
               CircleAvatar(
-                backgroundColor: Colors.blueGrey,
-                child: Icon(Icons.add),
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.favorite,
+                  color: Colors.red,
+                ),
               ),
               //#END
 
               SnippetContainer("circle_icon_sm"),
               //#TEMPLATE circle_icon_sm
               CircleAvatar(
-                backgroundColor: Colors.blueGrey,
+                backgroundColor: Colors.white,
                 radius: 16.0,
                 child: Icon(
-                  Icons.add,
+                  Icons.favorite,
+                  color: Colors.red,
                   size: 16.0,
                 ),
               ),
@@ -117,11 +125,12 @@ class CgCircleAvatarView extends StatefulWidget {
               SnippetContainer("circle_icon_xs"),
               //#TEMPLATE circle_icon_xs
               CircleAvatar(
-                backgroundColor: Colors.blueGrey,
+                backgroundColor: Colors.white,
                 radius: 12.0,
                 child: Icon(
-                  Icons.add,
+                  Icons.favorite,
                   size: 12.0,
+                  color: Colors.red,
                 ),
               ),
               //#END
