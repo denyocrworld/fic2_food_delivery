@@ -8,7 +8,7 @@ class FdRestaurantMainNavigationView extends StatefulWidget {
     controller.view = this;
 
     return DefaultTabController(
-      length: 3,
+      length: 4,
       initialIndex: controller.selectedIndex,
       child: Scaffold(
         body: IndexedStack(
@@ -20,6 +20,7 @@ class FdRestaurantMainNavigationView extends StatefulWidget {
             Container(
               color: Colors.green,
             ),
+            const FdRestaurantProductListView(),
             const FdProfileView(),
           ],
         ),
@@ -38,6 +39,12 @@ class FdRestaurantMainNavigationView extends StatefulWidget {
                 Icons.list,
               ),
               label: "Order",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.food_bank,
+              ),
+              label: "Product",
             ),
             BottomNavigationBarItem(
               icon: Icon(

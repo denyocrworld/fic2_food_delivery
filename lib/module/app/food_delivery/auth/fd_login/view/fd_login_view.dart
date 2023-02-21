@@ -32,8 +32,50 @@ class FdLoginView extends StatefulWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(
+                    height: 38.0,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    child: ElevatedButton.icon(
+                      icon: const Icon(MdiIcons.loginVariant),
+                      label: const Text("Create account"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                      ),
+                      onPressed: () => controller.doCreateAccount(),
+                    ),
+                  ),
                   const SizedBox(
-                    height: 20.0,
+                    height: 12.0,
+                  ),
+                  SizedBox(
+                    height: 38.0,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    child: ElevatedButton.icon(
+                      icon: const Icon(MdiIcons.loginVariant),
+                      label: const Text("Login Anonymously"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                      ),
+                      onPressed: () => controller.doAnonymousLogin(),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 12.0,
+                  ),
+                  SizedBox(
+                    height: 38.0,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    child: ElevatedButton.icon(
+                      icon: const Icon(MdiIcons.loginVariant),
+                      label: const Text("Login by Email"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                      ),
+                      onPressed: () => controller.doEmailLogin(),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 12.0,
                   ),
                   SizedBox(
                     height: 38.0,

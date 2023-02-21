@@ -7,6 +7,8 @@ export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation
 export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/view/fd_admin_main_navigation_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/controller/fd_login_controller.dart';
 export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/view/fd_login_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_dashboard/controller/fd_customer_dashboard_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_dashboard/view/fd_customer_dashboard_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/controller/fd_customer_main_navigation_controller.dart';
 export 'package:hyper_ui/module/app/food_delivery/customer/fd_customer_main_navigation/view/fd_customer_main_navigation_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/driver/fd_driver_main_navigation/controller/fd_driver_main_navigation_controller.dart';
@@ -15,6 +17,10 @@ export 'package:hyper_ui/module/app/food_delivery/fd_profile/controller/fd_profi
 export 'package:hyper_ui/module/app/food_delivery/fd_profile/view/fd_profile_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/controller/fd_restaurant_main_navigation_controller.dart';
 export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_main_navigation/view/fd_restaurant_main_navigation_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_form/controller/fd_restaurant_product_form_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_form/view/fd_restaurant_product_form_view.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_list/controller/fd_restaurant_product_list_controller.dart';
+export 'package:hyper_ui/module/app/food_delivery/restaurant/fd_restaurant_product_list/view/fd_restaurant_product_list_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/controller/cgp_product_detail1_controller.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail1/view/cgp_product_detail1_view.dart';
 export 'package:hyper_ui/module/capekngoding/cgp_product_detail2/controller/cgp_product_detail2_controller.dart';

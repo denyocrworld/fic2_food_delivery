@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
@@ -20,5 +21,15 @@ class FdProfileController extends State<FdProfileView>
 
   doLogout() async {
     Get.offAll(const FdLoginView());
+  }
+
+  String get currentUser {
+    if (FirebaseAuth.instance.currentUser!.isAnonymous) return "Guest";
+    return FirebaseAuth.instance.currentUser!.displayName ?? "-";
+  }
+
+  sendVerificationCode() async {
+    await FirebaseAuth.instance.currentUser!.sendEmailVerification();
+    showInfoDialog("Sent!");
   }
 }

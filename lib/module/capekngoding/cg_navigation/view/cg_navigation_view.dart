@@ -70,6 +70,21 @@ Navigator.pushReplacement(
                     //#TEMPLATE navback
                     Navigator.pop(context);
                     //#END
+
+                    //! Named Version
+                    //#TEMPLATE navpushnamed
+                    Navigator.pushNamed(
+                      context,
+                      "/viewName",
+                    );
+                    //#END
+
+                    //#TEMPLATE navreplacenamed
+                    Navigator.pushReplacementNamed(
+                      context,
+                      "/viewName",
+                    );
+                    //#END
                   },
                 ),
             ],

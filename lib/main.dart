@@ -4,10 +4,7 @@ import 'package:hyper_ui/debug.dart';
 
 void main() async {
   await initialize();
-  /*
-  ? Kelas Online Flutter
-  ? Buka capekngoding.com
-  */
+
   // Get.mainTheme.value = getDefaultTheme();
   Get.mainTheme.value = getDarkTheme();
   runMainApp();

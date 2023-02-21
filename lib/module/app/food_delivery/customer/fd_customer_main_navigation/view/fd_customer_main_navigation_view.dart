@@ -15,9 +15,7 @@ class FdCustomerMainNavigationView extends StatefulWidget {
         body: IndexedStack(
           index: controller.selectedIndex,
           children: [
-            Container(
-              color: Colors.red,
-            ),
+            const FdCustomerDashboardView(),
             Container(
               color: Colors.green,
             ),
