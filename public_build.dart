@@ -1,6 +1,15 @@
 import 'dart:convert';
 import 'dart:io';
 
+/*
+Windows
+xcopy /E /I "C:\Users\denyo\Documents\FLUTTER_PROJECT\hyper_ui\build\windows\runner\Release" "G:\My Drive\__PUBLIC"
+
+Android
+copy "C:\Users\denyo\Documents\FLUTTER_PROJECT\hyper_ui\build\app\outputs\flutter-apk\app-release.apk" "G:\My Drive\__PUBLIC\android\"
+
+*/
+
 void main() async {
   // await runCommand(
   //   "flutter build apk --release",
