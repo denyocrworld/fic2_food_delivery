@@ -45,7 +45,7 @@ Navigator.pushReplacement(
 """
                     .trim(),
               ),
-              const SnippetContainer("pushNamed"),
+              const SnippetContainer("navpushnamed"),
               Text(
                 """
 Navigator.pushNamed(
