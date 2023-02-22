@@ -45,6 +45,26 @@ Navigator.pushReplacement(
 """
                     .trim(),
               ),
+              const SnippetContainer("pushNamed"),
+              Text(
+                """
+Navigator.pushNamed(
+  context,
+  "/viewName",
+);
+"""
+                    .trim(),
+              ),
+              const SnippetContainer("navreplacenamed"),
+              Text(
+                """
+Navigator.pushReplacementNamed(
+  context,
+  "/viewName",
+);
+"""
+                    .trim(),
+              ),
               if (1 == 2)
                 ElevatedButton.icon(
                   icon: const Icon(Icons.add),
