@@ -68,7 +68,7 @@ class CgHotkeyService {
     {
       "hotkey": "Alt + Shift + H",
       "action": "Wrap with ListView Horizontal",
-    }, 
+    },
     {
       "hotkey": "Alt + Shift + J",
       "action": "Wrap with Horizontal SingleChildScrollView",
