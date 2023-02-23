@@ -1,6 +1,7 @@
 {
     "openai_key": "",
     "modules": [
+        "capekngoding/cg_list_checker",
         "capekngoding/cg_common",
         "capekngoding/cg_wrap",
         "capekngoding/cg_http",
