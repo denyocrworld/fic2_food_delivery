@@ -21,27 +21,27 @@ class CgImageView extends StatefulWidget {
               const SnippetContainer("image"),
               //#TEMPLATE image
               Image.network(
-                "https://i.ibb.co/S32HNjD/no-image.jpg",
-                width: 64.0,
-                height: 64.0,
-                fit: BoxFit.fill,
+                "https://images.unsplash.com/photo-1484517586036-ed3db9e3749e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                width: 200.0,
+                height: 200.0,
+                fit: BoxFit.cover,
               ),
               //#END
               const SnippetContainer("image_network"),
               //#TEMPLATE image_network
               Image.network(
-                "https://i.ibb.co/S32HNjD/no-image.jpg",
-                width: 64.0,
-                height: 64.0,
-                fit: BoxFit.fill,
+                "https://images.unsplash.com/flagged/photo-1559502867-c406bd78ff24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+                width: 200.0,
+                height: 200.0,
+                fit: BoxFit.cover,
               ),
               //#END
               const SnippetContainer("image_asset"),
               //#TEMPLATE image_asset
               Image.asset(
                 "assets/icon/icon.png",
-                width: 64.0,
-                height: 64.0,
+                width: 120.0,
+                height: 120.0,
                 fit: BoxFit.fill,
               ),
               //#END
