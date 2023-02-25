@@ -1,20 +1,20 @@
+import 'public_release_magic_book.dart';
 import 'util.dart';
 
 void main() async {
-  await release(false);
-  await release(true);
+  // await release(false);
+  // await release(true);
+  await releaseMagicBook();
 }
 
 release(bool blankMode) async {
-  String hyperUiPublicPath =
-      r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_public";
+  String target = r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_public";
   if (blankMode) {
-    hyperUiPublicPath =
-        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_blank";
+    target = r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__hyper_ui_blank";
   }
-  await copyAll(hyperUiPublicPath);
+  await copyAll(target);
 
-  deleteDir("$hyperUiPublicPath\\lib\\_");
+  deleteDir("$target\\lib\\_");
 
   List<String> exceptions = [];
   if (!blankMode) {
@@ -27,36 +27,36 @@ release(bool blankMode) async {
     ]);
   }
   deleteDir(
-    "$hyperUiPublicPath\\lib\\module",
+    "$target\\lib\\module",
     onlyContent: true,
     exceptions: exceptions,
   );
 
   //Firebase?
-  commonDelete(hyperUiPublicPath);
-  await removeAllCommentInDir(hyperUiPublicPath);
+  commonDelete(target);
+  await removeAllCommentInDir(target);
 
   if (blankMode) {
-    useContainer(hyperUiPublicPath);
+    useContainer(target);
   } else {
-    useMainNavigationView(hyperUiPublicPath);
+    useMainNavigationView(target);
   }
 
   //Modification
   // flutterMagicbookReadme(hyperUiPublicPath);
 
-  cleanService(hyperUiPublicPath);
-  cleanModel(hyperUiPublicPath);
+  cleanService(target);
+  cleanModel(target);
   // if (blankMode) {
   //   cleanModule(hyperUiPublicPath);
   // }
 
   //Generate Core
-  await generateCore(hyperUiPublicPath);
-  await formatLibDirectories(hyperUiPublicPath);
+  await generateCore(target);
+  await formatLibDirectories(target);
 
   runCommand(
     "git add . && git commit -m '.' && git push --force",
-    workingDirectory: hyperUiPublicPath,
+    workingDirectory: target,
   );
 }

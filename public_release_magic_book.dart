@@ -1,16 +1,17 @@
 import 'util.dart';
 
-void main() async {
-  String hyperUiPublicPath =
+releaseMagicBook() async {
+  String target =
       r"C:\Users\denyo\Documents\FLUTTER_PROJECT\__flutter_magic_book";
 
-  await copyAll(hyperUiPublicPath);
+  await copyAll(target);
 
-  deleteDir("$hyperUiPublicPath\\lib\\_");
+  deleteDir("$target\\lib\\_");
   deleteDir(
-    "$hyperUiPublicPath\\lib\\module",
+    "$target\\lib\\module",
     onlyContent: true,
     exceptions: [
+      "app",
       "online_class",
       // "main_navigation",
       // "dashboard",
@@ -21,20 +22,20 @@ void main() async {
   );
 
   //Firebase?
-  commonDelete(hyperUiPublicPath);
+  commonDelete(target);
   // await removeAllCommentInDir(hyperUiPublicPath);
 
-  useFbkMainNavigationView(hyperUiPublicPath);
+  useFbkMainNavigationView(target);
 
   //Modification
-  flutterMagicbookReadme(hyperUiPublicPath);
+  flutterMagicbookReadme(target);
 
   //Generate Core
-  await generateCore(hyperUiPublicPath);
-  await formatLibDirectories(hyperUiPublicPath);
+  await generateCore(target);
+  await formatLibDirectories(target);
 
   runCommand(
     "git add . && git commit -m '.' && git push --force",
-    workingDirectory: hyperUiPublicPath,
+    workingDirectory: target,
   );
 }
