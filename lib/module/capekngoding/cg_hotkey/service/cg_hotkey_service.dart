@@ -1,5 +1,5 @@
 class CgHotkeyService {
-  static List hotkeys = [
+  List hotkeys = [
     {
       "title": "Basic",
     },
@@ -126,6 +126,25 @@ class CgHotkeyService {
     {
       "hotkey": "Alt + Shift + 0",
       "action": "Open config.json",
+    },
+    {
+      "title": "Key & Value Shortcit",
+    },
+    {
+      "hotkey": "Alt + Shift + K",
+      "action": "Select Key",
+    },
+    {
+      "hotkey": "Alt + Shift + L",
+      "action": "Select Value",
+    },
+    {
+      "hotkey": "Ctrl + Alt + Shift + K",
+      "action": "Select Key with quotes",
+    },
+    {
+      "hotkey": "Ctrl + Alt + Shift + L",
+      "action": "Select Value with quotes",
     },
   ];
 }

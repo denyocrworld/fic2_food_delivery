@@ -5,6 +5,13 @@ class CgHotkeyView extends StatefulWidget {
   const CgHotkeyView({Key? key}) : super(key: key);
   Widget build(context, CgHotkeyController controller) {
     controller.view = this;
+    CgHotkeyService service = CgHotkeyService();
+
+    var test = {
+      "product_name": "123123",
+      'test': '123',
+    };
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("CgHotkey"),
@@ -53,9 +60,9 @@ class CgHotkeyView extends StatefulWidget {
               ),
               Column(
                 children: List.generate(
-                  CgHotkeyService.hotkeys.length,
+                  service.hotkeys.length,
                   (index) {
-                    var item = CgHotkeyService.hotkeys[index];
+                    var item = service.hotkeys[index];
                     if (item["title"] != null) {
                       return Container(
                         padding: const EdgeInsets.all(12.0),
