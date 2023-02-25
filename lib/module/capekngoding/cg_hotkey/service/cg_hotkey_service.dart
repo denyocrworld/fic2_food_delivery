@@ -112,6 +112,18 @@ class CgHotkeyService {
       "action": "Open pubspec.yaml",
     },
     {
+      "hotkey": "Alt + Shift + 7",
+      "action": "Open Android build.gradle",
+    },
+    {
+      "hotkey": "Alt + Shift + 8",
+      "action": "Open App build.gradle",
+    },
+    {
+      "hotkey": "Alt + Shift + 9",
+      "action": "Open AndroidManifest.xml",
+    },
+    {
       "hotkey": "Alt + Shift + 0",
       "action": "Open config.json",
     },
