@@ -205,6 +205,8 @@
         "temp/temp_login",
         "temp/temp_dashboard",
         "temp/temp_profile",
-        "temp/temp_order"
+        "temp/temp_order",
+        "form/user_list",
+        "form/user_form"
     ]
 }

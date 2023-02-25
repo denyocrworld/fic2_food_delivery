@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
 
+import '../../../../shared/widget/form/rating/rating_field.dart';
+
 class CgHyperuiFormView extends StatefulWidget {
   const CgHyperuiFormView({Key? key}) : super(key: key);
 
@@ -293,13 +295,45 @@ class CgHyperuiFormView extends StatefulWidget {
                       //#END
                       const SnippetContainer("q_location_picker"),
                       //#TEMPLATE q_location_picker
-                      const QLocationPicker(
+                      QLocationPicker(
                         id: "location",
                         label: "Location",
                         latitude: -6.218481065235333,
                         longitude: 106.80254435779423,
+                        onChanged: (latitude, longitude) {},
                       ),
                       //#END
+                      //#TEMPLATE q_rating
+                      QRatingField(
+                        label: "Rating",
+                        value: 3,
+                        onChanged: (value) {
+                          showInfoDialog(value.toString());
+                        },
+                      ),
+                      //#END
+                      const SnippetContainer("form_key"),
+                      const Text("""
+GlobalKey<FormState> formKey = GlobalKey<FormState>();
+"""),
+                      const SnippetContainer("form_validate"),
+                      const Text("""
+bool isValid = formKey.currentState!.validate();
+if(isValid) {
+  return;
+}
+"""),
+                      /*
+                      //#TEMPLATE form_key
+                      GlobalKey<FormState> formKey = GlobalKey<FormState>();
+                      //#END
+                      //#TEMPLATE form_validate
+                      bool isValid = formKey.currentState!.validate();
+                      if(isValid) {
+                        return;
+                      }
+                      //#END
+                      */
                     ],
                   ),
                 ),

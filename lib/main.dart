@@ -2,6 +2,12 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
+/*
+! FLASH SALE !
+! HARGA SPESIAL HANYA HARI INI!
+KELAS ONLINE /w DENYOCR
+? BUKA CAPEKNGODING.COM
+*/
 void main() async {
   await initialize();
 
@@ -27,8 +33,9 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          // home: const CgMainView(),
-          home: const CgListCheckerView(),
+          home: const CgMainView(),
+          // home: const UserListView(),
+          // home: const CgListCheckerView(),
           // home: const ContohView(),
           // home: const TutorialListView(),
           // home: const MainNavigationView(),
