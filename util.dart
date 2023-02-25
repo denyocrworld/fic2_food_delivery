@@ -54,6 +54,39 @@ commonDelete(path) {
   deleteFile("$path\\lib\\setup_basic.dart");
 }
 
+cleanModule(path) {
+  deleteDir(
+    "$path\\lib\\module",
+    onlyContent: true,
+  );
+  addBlankFile("$path\\lib\\module");
+}
+
+cleanService(path) {
+  deleteDir(
+    "$path\\lib\\service",
+    onlyContent: true,
+    exceptions: [
+      "main_storage_service",
+    ],
+  );
+  addBlankFile("$path\\lib\\service");
+}
+
+cleanModel(path) {
+  deleteDir(
+    "$path\\lib\\model",
+    onlyContent: true,
+  );
+  addBlankFile("$path\\lib\\model");
+}
+
+addBlankFile(dir) {
+  var f = File("$dir\\_");
+  f.createSync(recursive: true);
+  f.writeAsStringSync("");
+}
+
 useFbkMainNavigationView(path) {
   var mainFile = File("$path\\lib\\main.dart");
   var mainFileContent = mainFile.readAsStringSync();
@@ -67,6 +100,13 @@ useMainNavigationView(path) {
   var mainFileContent = mainFile.readAsStringSync();
   mainFileContent =
       mainFileContent.replaceAll("CgMainView", "MainNavigationView");
+  mainFile.writeAsStringSync(mainFileContent);
+}
+
+useContainer(path) {
+  var mainFile = File("$path\\lib\\main.dart");
+  var mainFileContent = mainFile.readAsStringSync();
+  mainFileContent = mainFileContent.replaceAll("const CgMainView", "Container");
   mainFile.writeAsStringSync(mainFileContent);
 }
 
@@ -124,15 +164,10 @@ it means you have to rename it to something more unique.
       var importPath =
           f.path.toString().replaceAll(libPath, "").replaceAll("\\", "/");
       var exportLine = "export 'package:hyper_ui/$importPath';";
-      print(">> ${f.path}");
-      print("@@ $importPath");
-
       if (importPath == "setup_basic.dart") continue;
       if (importPath == "main.dart") continue;
       if (importPath == "debug.dart") continue;
       if (importPath == "core.dart") continue;
-      print(exportLine);
-
       importContent += "$exportLine\n";
     }
   }

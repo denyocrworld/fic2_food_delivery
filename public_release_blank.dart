@@ -28,14 +28,10 @@ void main() async {
       if (ff.path.endsWith("config.json")) continue;
       if (ff.path.endsWith("pubspec.lock")) continue;
       await Process.run('cp', ['-r', ff.path, hyperUiPublicPath])
-          .then((ProcessResult results) {
-        print(results.stdout);
-      });
+          .then((ProcessResult results) {});
     } else if (ff is Directory) {
       await Process.run('cp', ['-r', ff.path, hyperUiPublicPath])
-          .then((ProcessResult results) {
-        print(results.stdout);
-      });
+          .then((ProcessResult results) {});
     }
   }
 
@@ -76,7 +72,6 @@ void main() async {
 
   //Generate Core
   await generateCore(hyperUiPublicPath);
-
   await formatLibDirectories(hyperUiPublicPath);
 
   runCommand(

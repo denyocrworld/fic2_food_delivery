@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:hyper_ui/service/main_storage/main_storage.dart';
+import 'package:hyper_ui/service/main_storage_service/main_storage.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'firebase_options.dart';

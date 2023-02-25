@@ -658,7 +658,7 @@ export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/control
 export 'package:hyper_ui/module/__example/shakuro/shakuro_product_detail/view/shakuro_product_detail_view.dart';
 export 'package:hyper_ui/service/auth_service/auth_service.dart';
 export 'package:hyper_ui/service/dummy_service/dummy_service.dart';
-export 'package:hyper_ui/service/main_storage/main_storage.dart';
+export 'package:hyper_ui/service/main_storage_service/main_storage.dart';
 export 'package:hyper_ui/service/product_service/product_service.dart';
 export 'package:hyper_ui/shared/theme/theme.dart';
 export 'package:hyper_ui/shared/theme/theme_config.dart';
