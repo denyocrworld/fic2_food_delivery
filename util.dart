@@ -1,11 +1,95 @@
 import 'dart:convert';
 import 'dart:io';
 
+copyAll(path) async {
+  deleteDir(
+    "$path\\",
+    onlyContent: true,
+    exceptions: [".git"],
+  );
+
+  await Future.delayed(const Duration(seconds: 1));
+  Directory dir = Directory.current;
+  List list = dir.listSync(recursive: false);
+  for (var ff in list) {
+    if (ff.path.endsWith("\\build")) continue;
+
+    if (ff.path.endsWith(".git")) continue;
+
+    if (ff is File) {
+      if (ff.path.endsWith(".dart")) continue;
+      if (ff.path.endsWith(".bat")) continue;
+      if (ff.path.endsWith("config.json")) continue;
+      if (ff.path.endsWith("pubspec.lock")) continue;
+      await Process.run('cp', ['-r', ff.path, path])
+          .then((ProcessResult results) {
+        print(results.stdout);
+      });
+    } else if (ff is Directory) {
+      await Process.run('cp', ['-r', ff.path, path])
+          .then((ProcessResult results) {
+        print(results.stdout);
+      });
+    }
+  }
+}
+
+commonDelete(path) {
+  deleteDir("$path\\lib\\firebase");
+  deleteDir("$path\\lib\\online_class");
+  deleteDir("$path\\lib\\pos");
+  deleteDir("$path\\lib\\random");
+  deleteDir("$path\\lib\\temp");
+  deleteDir("$path\\lib\\tutorial");
+
+  //Others
+  deleteDir("$path\\fic-exercises");
+  deleteDir("$path\\test");
+  deleteDir("$path\\web");
+
+  deleteFile("$path\\lib\\firebase_options.dart");
+  deleteFile("$path\\lib\\setup.dart");
+  var f = File("$path\\lib\\setup_basic.dart");
+  f.copySync("$path\\lib\\setup.dart");
+  deleteFile("$path\\lib\\setup_basic.dart");
+}
+
+useFbkMainNavigationView(path) {
+  var mainFile = File("$path\\lib\\main.dart");
+  var mainFileContent = mainFile.readAsStringSync();
+  mainFileContent =
+      mainFileContent.replaceAll("CgMainView", "FbkMainNavigationView");
+  mainFile.writeAsStringSync(mainFileContent);
+}
+
+useMainNavigationView(path) {
+  var mainFile = File("$path\\lib\\main.dart");
+  var mainFileContent = mainFile.readAsStringSync();
+  mainFileContent =
+      mainFileContent.replaceAll("CgMainView", "MainNavigationView");
+  mainFile.writeAsStringSync(mainFileContent);
+}
+
 formatLibDirectories(hyperUiPublicPath) async {
   runCommand(
     'flutter format $hyperUiPublicPath\\lib',
     workingDirectory: hyperUiPublicPath,
   );
+}
+
+flutterMagicbookReadme(path) {
+  var readmeFile = File("$path\\README.md");
+  readmeFile.writeAsStringSync("""
+# Flutter Magic Book by DenyOcr
+Figma<br>
+https://www.figma.com/file/PreoFlFsdSfKIGFpNGwaT8/Flutter-MagicBook?node-id=305%3A189&t=uD0cPaYw88v2hTIy-1<br>
+
+---
+
+Repository:<br>
+git clone https://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@github.com/denyocrworld/flutter_magic_book.git<br>
+"""
+      .trim());
 }
 
 runCommand(

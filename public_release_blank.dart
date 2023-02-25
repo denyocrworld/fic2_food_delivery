@@ -70,6 +70,7 @@ void main() async {
   deleteFile("$hyperUiPublicPath\\lib\\setup.dart");
   var f = File("$hyperUiPublicPath\\lib\\setup_basic.dart");
   f.copySync("$hyperUiPublicPath\\lib\\setup.dart");
+  deleteFile("$hyperUiPublicPath\\lib\\setup_basic.dart");
 
   await removeAllCommentInDir(hyperUiPublicPath);
 
