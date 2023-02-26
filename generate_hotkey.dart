@@ -31,20 +31,20 @@ margin: const EdgeInsets.all(\$1),
 #END
 """);
 
-  for (var i = 1; i <= 40; i++) {
+  for (var i = 1; i <= 50; i++) {
     templates.add("""
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE sz$i
-radius: $i.0,
+size: $i.0,
 #END
 
 #TEMPLATE rd$i
-borderRadius: BorderRadius.circular($i.0)
+radius: $i.0,
 #END
 
 #TEMPLATE brd$i
-size: $i.0,
+borderRadius: BorderRadius.circular($i.0),
 #END
 
 
@@ -131,6 +131,14 @@ padding: const EdgeInsets.symmetric(vertical: $i.0),
 
 #TEMPLATE ph$i
 padding: const EdgeInsets.symmetric(horizontal: $i.0),
+#END
+
+#TEMPLATE v$i
+vertical: $i.0,
+#END
+
+#TEMPLATE h$i
+horizontal: $i.0,
 #END
 
 #GROUP_TEMPLATE skip_docs

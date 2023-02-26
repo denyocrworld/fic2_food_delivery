@@ -1,4 +1,20 @@
 /*
+
+#GROUP_TEMPLATE data_dummy
+#TEMPLATE randomImage
+"@randomImage"
+#END
+#TEMPLATE randomImagePicasso
+"@randomImagePicasso"
+#END
+#TEMPLATE randomName
+"@randomName"
+#END
+#TEMPLATE randomAddress
+"@randomAddress"
+#END
+
+
 #GROUP_TEMPLATE skip_docs
 #TEMPLATE text
 Text("text"),
@@ -21,7 +37,7 @@ radius: 1.0,
 #END
 
 #TEMPLATE brd1
-borderRadius: BorderRadius.circular(1.0)
+borderRadius: BorderRadius.circular(1.0),
 #END
 
 
@@ -110,6 +126,14 @@ padding: const EdgeInsets.symmetric(vertical: 1.0),
 padding: const EdgeInsets.symmetric(horizontal: 1.0),
 #END
 
+#TEMPLATE v1
+vertical: 1.0,
+#END
+
+#TEMPLATE h1
+horizontal: 1.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs1
@@ -143,7 +167,7 @@ radius: 2.0,
 #END
 
 #TEMPLATE brd2
-borderRadius: BorderRadius.circular(2.0)
+borderRadius: BorderRadius.circular(2.0),
 #END
 
 
@@ -232,6 +256,14 @@ padding: const EdgeInsets.symmetric(vertical: 2.0),
 padding: const EdgeInsets.symmetric(horizontal: 2.0),
 #END
 
+#TEMPLATE v2
+vertical: 2.0,
+#END
+
+#TEMPLATE h2
+horizontal: 2.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs2
@@ -265,7 +297,7 @@ radius: 3.0,
 #END
 
 #TEMPLATE brd3
-borderRadius: BorderRadius.circular(3.0)
+borderRadius: BorderRadius.circular(3.0),
 #END
 
 
@@ -354,6 +386,14 @@ padding: const EdgeInsets.symmetric(vertical: 3.0),
 padding: const EdgeInsets.symmetric(horizontal: 3.0),
 #END
 
+#TEMPLATE v3
+vertical: 3.0,
+#END
+
+#TEMPLATE h3
+horizontal: 3.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs3
@@ -387,7 +427,7 @@ radius: 4.0,
 #END
 
 #TEMPLATE brd4
-borderRadius: BorderRadius.circular(4.0)
+borderRadius: BorderRadius.circular(4.0),
 #END
 
 
@@ -476,6 +516,14 @@ padding: const EdgeInsets.symmetric(vertical: 4.0),
 padding: const EdgeInsets.symmetric(horizontal: 4.0),
 #END
 
+#TEMPLATE v4
+vertical: 4.0,
+#END
+
+#TEMPLATE h4
+horizontal: 4.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs4
@@ -509,7 +557,7 @@ radius: 5.0,
 #END
 
 #TEMPLATE brd5
-borderRadius: BorderRadius.circular(5.0)
+borderRadius: BorderRadius.circular(5.0),
 #END
 
 
@@ -598,6 +646,14 @@ padding: const EdgeInsets.symmetric(vertical: 5.0),
 padding: const EdgeInsets.symmetric(horizontal: 5.0),
 #END
 
+#TEMPLATE v5
+vertical: 5.0,
+#END
+
+#TEMPLATE h5
+horizontal: 5.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs5
@@ -631,7 +687,7 @@ radius: 6.0,
 #END
 
 #TEMPLATE brd6
-borderRadius: BorderRadius.circular(6.0)
+borderRadius: BorderRadius.circular(6.0),
 #END
 
 
@@ -720,6 +776,14 @@ padding: const EdgeInsets.symmetric(vertical: 6.0),
 padding: const EdgeInsets.symmetric(horizontal: 6.0),
 #END
 
+#TEMPLATE v6
+vertical: 6.0,
+#END
+
+#TEMPLATE h6
+horizontal: 6.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs6
@@ -753,7 +817,7 @@ radius: 7.0,
 #END
 
 #TEMPLATE brd7
-borderRadius: BorderRadius.circular(7.0)
+borderRadius: BorderRadius.circular(7.0),
 #END
 
 
@@ -842,6 +906,14 @@ padding: const EdgeInsets.symmetric(vertical: 7.0),
 padding: const EdgeInsets.symmetric(horizontal: 7.0),
 #END
 
+#TEMPLATE v7
+vertical: 7.0,
+#END
+
+#TEMPLATE h7
+horizontal: 7.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs7
@@ -875,7 +947,7 @@ radius: 8.0,
 #END
 
 #TEMPLATE brd8
-borderRadius: BorderRadius.circular(8.0)
+borderRadius: BorderRadius.circular(8.0),
 #END
 
 
@@ -964,6 +1036,14 @@ padding: const EdgeInsets.symmetric(vertical: 8.0),
 padding: const EdgeInsets.symmetric(horizontal: 8.0),
 #END
 
+#TEMPLATE v8
+vertical: 8.0,
+#END
+
+#TEMPLATE h8
+horizontal: 8.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs8
@@ -997,7 +1077,7 @@ radius: 9.0,
 #END
 
 #TEMPLATE brd9
-borderRadius: BorderRadius.circular(9.0)
+borderRadius: BorderRadius.circular(9.0),
 #END
 
 
@@ -1086,6 +1166,14 @@ padding: const EdgeInsets.symmetric(vertical: 9.0),
 padding: const EdgeInsets.symmetric(horizontal: 9.0),
 #END
 
+#TEMPLATE v9
+vertical: 9.0,
+#END
+
+#TEMPLATE h9
+horizontal: 9.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs9
@@ -1119,7 +1207,7 @@ radius: 10.0,
 #END
 
 #TEMPLATE brd10
-borderRadius: BorderRadius.circular(10.0)
+borderRadius: BorderRadius.circular(10.0),
 #END
 
 
@@ -1208,6 +1296,14 @@ padding: const EdgeInsets.symmetric(vertical: 10.0),
 padding: const EdgeInsets.symmetric(horizontal: 10.0),
 #END
 
+#TEMPLATE v10
+vertical: 10.0,
+#END
+
+#TEMPLATE h10
+horizontal: 10.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs10
@@ -1241,7 +1337,7 @@ radius: 11.0,
 #END
 
 #TEMPLATE brd11
-borderRadius: BorderRadius.circular(11.0)
+borderRadius: BorderRadius.circular(11.0),
 #END
 
 
@@ -1330,6 +1426,14 @@ padding: const EdgeInsets.symmetric(vertical: 11.0),
 padding: const EdgeInsets.symmetric(horizontal: 11.0),
 #END
 
+#TEMPLATE v11
+vertical: 11.0,
+#END
+
+#TEMPLATE h11
+horizontal: 11.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs11
@@ -1363,7 +1467,7 @@ radius: 12.0,
 #END
 
 #TEMPLATE brd12
-borderRadius: BorderRadius.circular(12.0)
+borderRadius: BorderRadius.circular(12.0),
 #END
 
 
@@ -1452,6 +1556,14 @@ padding: const EdgeInsets.symmetric(vertical: 12.0),
 padding: const EdgeInsets.symmetric(horizontal: 12.0),
 #END
 
+#TEMPLATE v12
+vertical: 12.0,
+#END
+
+#TEMPLATE h12
+horizontal: 12.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs12
@@ -1485,7 +1597,7 @@ radius: 13.0,
 #END
 
 #TEMPLATE brd13
-borderRadius: BorderRadius.circular(13.0)
+borderRadius: BorderRadius.circular(13.0),
 #END
 
 
@@ -1574,6 +1686,14 @@ padding: const EdgeInsets.symmetric(vertical: 13.0),
 padding: const EdgeInsets.symmetric(horizontal: 13.0),
 #END
 
+#TEMPLATE v13
+vertical: 13.0,
+#END
+
+#TEMPLATE h13
+horizontal: 13.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs13
@@ -1607,7 +1727,7 @@ radius: 14.0,
 #END
 
 #TEMPLATE brd14
-borderRadius: BorderRadius.circular(14.0)
+borderRadius: BorderRadius.circular(14.0),
 #END
 
 
@@ -1696,6 +1816,14 @@ padding: const EdgeInsets.symmetric(vertical: 14.0),
 padding: const EdgeInsets.symmetric(horizontal: 14.0),
 #END
 
+#TEMPLATE v14
+vertical: 14.0,
+#END
+
+#TEMPLATE h14
+horizontal: 14.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs14
@@ -1729,7 +1857,7 @@ radius: 15.0,
 #END
 
 #TEMPLATE brd15
-borderRadius: BorderRadius.circular(15.0)
+borderRadius: BorderRadius.circular(15.0),
 #END
 
 
@@ -1818,6 +1946,14 @@ padding: const EdgeInsets.symmetric(vertical: 15.0),
 padding: const EdgeInsets.symmetric(horizontal: 15.0),
 #END
 
+#TEMPLATE v15
+vertical: 15.0,
+#END
+
+#TEMPLATE h15
+horizontal: 15.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs15
@@ -1851,7 +1987,7 @@ radius: 16.0,
 #END
 
 #TEMPLATE brd16
-borderRadius: BorderRadius.circular(16.0)
+borderRadius: BorderRadius.circular(16.0),
 #END
 
 
@@ -1940,6 +2076,14 @@ padding: const EdgeInsets.symmetric(vertical: 16.0),
 padding: const EdgeInsets.symmetric(horizontal: 16.0),
 #END
 
+#TEMPLATE v16
+vertical: 16.0,
+#END
+
+#TEMPLATE h16
+horizontal: 16.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs16
@@ -1973,7 +2117,7 @@ radius: 17.0,
 #END
 
 #TEMPLATE brd17
-borderRadius: BorderRadius.circular(17.0)
+borderRadius: BorderRadius.circular(17.0),
 #END
 
 
@@ -2062,6 +2206,14 @@ padding: const EdgeInsets.symmetric(vertical: 17.0),
 padding: const EdgeInsets.symmetric(horizontal: 17.0),
 #END
 
+#TEMPLATE v17
+vertical: 17.0,
+#END
+
+#TEMPLATE h17
+horizontal: 17.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs17
@@ -2095,7 +2247,7 @@ radius: 18.0,
 #END
 
 #TEMPLATE brd18
-borderRadius: BorderRadius.circular(18.0)
+borderRadius: BorderRadius.circular(18.0),
 #END
 
 
@@ -2184,6 +2336,14 @@ padding: const EdgeInsets.symmetric(vertical: 18.0),
 padding: const EdgeInsets.symmetric(horizontal: 18.0),
 #END
 
+#TEMPLATE v18
+vertical: 18.0,
+#END
+
+#TEMPLATE h18
+horizontal: 18.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs18
@@ -2217,7 +2377,7 @@ radius: 19.0,
 #END
 
 #TEMPLATE brd19
-borderRadius: BorderRadius.circular(19.0)
+borderRadius: BorderRadius.circular(19.0),
 #END
 
 
@@ -2306,6 +2466,14 @@ padding: const EdgeInsets.symmetric(vertical: 19.0),
 padding: const EdgeInsets.symmetric(horizontal: 19.0),
 #END
 
+#TEMPLATE v19
+vertical: 19.0,
+#END
+
+#TEMPLATE h19
+horizontal: 19.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs19
@@ -2339,7 +2507,7 @@ radius: 20.0,
 #END
 
 #TEMPLATE brd20
-borderRadius: BorderRadius.circular(20.0)
+borderRadius: BorderRadius.circular(20.0),
 #END
 
 
@@ -2428,6 +2596,14 @@ padding: const EdgeInsets.symmetric(vertical: 20.0),
 padding: const EdgeInsets.symmetric(horizontal: 20.0),
 #END
 
+#TEMPLATE v20
+vertical: 20.0,
+#END
+
+#TEMPLATE h20
+horizontal: 20.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs20
@@ -2461,7 +2637,7 @@ radius: 21.0,
 #END
 
 #TEMPLATE brd21
-borderRadius: BorderRadius.circular(21.0)
+borderRadius: BorderRadius.circular(21.0),
 #END
 
 
@@ -2550,6 +2726,14 @@ padding: const EdgeInsets.symmetric(vertical: 21.0),
 padding: const EdgeInsets.symmetric(horizontal: 21.0),
 #END
 
+#TEMPLATE v21
+vertical: 21.0,
+#END
+
+#TEMPLATE h21
+horizontal: 21.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs21
@@ -2583,7 +2767,7 @@ radius: 22.0,
 #END
 
 #TEMPLATE brd22
-borderRadius: BorderRadius.circular(22.0)
+borderRadius: BorderRadius.circular(22.0),
 #END
 
 
@@ -2672,6 +2856,14 @@ padding: const EdgeInsets.symmetric(vertical: 22.0),
 padding: const EdgeInsets.symmetric(horizontal: 22.0),
 #END
 
+#TEMPLATE v22
+vertical: 22.0,
+#END
+
+#TEMPLATE h22
+horizontal: 22.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs22
@@ -2705,7 +2897,7 @@ radius: 23.0,
 #END
 
 #TEMPLATE brd23
-borderRadius: BorderRadius.circular(23.0)
+borderRadius: BorderRadius.circular(23.0),
 #END
 
 
@@ -2794,6 +2986,14 @@ padding: const EdgeInsets.symmetric(vertical: 23.0),
 padding: const EdgeInsets.symmetric(horizontal: 23.0),
 #END
 
+#TEMPLATE v23
+vertical: 23.0,
+#END
+
+#TEMPLATE h23
+horizontal: 23.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs23
@@ -2827,7 +3027,7 @@ radius: 24.0,
 #END
 
 #TEMPLATE brd24
-borderRadius: BorderRadius.circular(24.0)
+borderRadius: BorderRadius.circular(24.0),
 #END
 
 
@@ -2916,6 +3116,14 @@ padding: const EdgeInsets.symmetric(vertical: 24.0),
 padding: const EdgeInsets.symmetric(horizontal: 24.0),
 #END
 
+#TEMPLATE v24
+vertical: 24.0,
+#END
+
+#TEMPLATE h24
+horizontal: 24.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs24
@@ -2949,7 +3157,7 @@ radius: 25.0,
 #END
 
 #TEMPLATE brd25
-borderRadius: BorderRadius.circular(25.0)
+borderRadius: BorderRadius.circular(25.0),
 #END
 
 
@@ -3038,6 +3246,14 @@ padding: const EdgeInsets.symmetric(vertical: 25.0),
 padding: const EdgeInsets.symmetric(horizontal: 25.0),
 #END
 
+#TEMPLATE v25
+vertical: 25.0,
+#END
+
+#TEMPLATE h25
+horizontal: 25.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs25
@@ -3071,7 +3287,7 @@ radius: 26.0,
 #END
 
 #TEMPLATE brd26
-borderRadius: BorderRadius.circular(26.0)
+borderRadius: BorderRadius.circular(26.0),
 #END
 
 
@@ -3160,6 +3376,14 @@ padding: const EdgeInsets.symmetric(vertical: 26.0),
 padding: const EdgeInsets.symmetric(horizontal: 26.0),
 #END
 
+#TEMPLATE v26
+vertical: 26.0,
+#END
+
+#TEMPLATE h26
+horizontal: 26.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs26
@@ -3193,7 +3417,7 @@ radius: 27.0,
 #END
 
 #TEMPLATE brd27
-borderRadius: BorderRadius.circular(27.0)
+borderRadius: BorderRadius.circular(27.0),
 #END
 
 
@@ -3282,6 +3506,14 @@ padding: const EdgeInsets.symmetric(vertical: 27.0),
 padding: const EdgeInsets.symmetric(horizontal: 27.0),
 #END
 
+#TEMPLATE v27
+vertical: 27.0,
+#END
+
+#TEMPLATE h27
+horizontal: 27.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs27
@@ -3315,7 +3547,7 @@ radius: 28.0,
 #END
 
 #TEMPLATE brd28
-borderRadius: BorderRadius.circular(28.0)
+borderRadius: BorderRadius.circular(28.0),
 #END
 
 
@@ -3404,6 +3636,14 @@ padding: const EdgeInsets.symmetric(vertical: 28.0),
 padding: const EdgeInsets.symmetric(horizontal: 28.0),
 #END
 
+#TEMPLATE v28
+vertical: 28.0,
+#END
+
+#TEMPLATE h28
+horizontal: 28.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs28
@@ -3437,7 +3677,7 @@ radius: 29.0,
 #END
 
 #TEMPLATE brd29
-borderRadius: BorderRadius.circular(29.0)
+borderRadius: BorderRadius.circular(29.0),
 #END
 
 
@@ -3526,6 +3766,14 @@ padding: const EdgeInsets.symmetric(vertical: 29.0),
 padding: const EdgeInsets.symmetric(horizontal: 29.0),
 #END
 
+#TEMPLATE v29
+vertical: 29.0,
+#END
+
+#TEMPLATE h29
+horizontal: 29.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs29
@@ -3559,7 +3807,7 @@ radius: 30.0,
 #END
 
 #TEMPLATE brd30
-borderRadius: BorderRadius.circular(30.0)
+borderRadius: BorderRadius.circular(30.0),
 #END
 
 
@@ -3648,6 +3896,14 @@ padding: const EdgeInsets.symmetric(vertical: 30.0),
 padding: const EdgeInsets.symmetric(horizontal: 30.0),
 #END
 
+#TEMPLATE v30
+vertical: 30.0,
+#END
+
+#TEMPLATE h30
+horizontal: 30.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs30
@@ -3681,7 +3937,7 @@ radius: 31.0,
 #END
 
 #TEMPLATE brd31
-borderRadius: BorderRadius.circular(31.0)
+borderRadius: BorderRadius.circular(31.0),
 #END
 
 
@@ -3770,6 +4026,14 @@ padding: const EdgeInsets.symmetric(vertical: 31.0),
 padding: const EdgeInsets.symmetric(horizontal: 31.0),
 #END
 
+#TEMPLATE v31
+vertical: 31.0,
+#END
+
+#TEMPLATE h31
+horizontal: 31.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs31
@@ -3803,7 +4067,7 @@ radius: 32.0,
 #END
 
 #TEMPLATE brd32
-borderRadius: BorderRadius.circular(32.0)
+borderRadius: BorderRadius.circular(32.0),
 #END
 
 
@@ -3892,6 +4156,14 @@ padding: const EdgeInsets.symmetric(vertical: 32.0),
 padding: const EdgeInsets.symmetric(horizontal: 32.0),
 #END
 
+#TEMPLATE v32
+vertical: 32.0,
+#END
+
+#TEMPLATE h32
+horizontal: 32.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs32
@@ -3925,7 +4197,7 @@ radius: 33.0,
 #END
 
 #TEMPLATE brd33
-borderRadius: BorderRadius.circular(33.0)
+borderRadius: BorderRadius.circular(33.0),
 #END
 
 
@@ -4014,6 +4286,14 @@ padding: const EdgeInsets.symmetric(vertical: 33.0),
 padding: const EdgeInsets.symmetric(horizontal: 33.0),
 #END
 
+#TEMPLATE v33
+vertical: 33.0,
+#END
+
+#TEMPLATE h33
+horizontal: 33.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs33
@@ -4047,7 +4327,7 @@ radius: 34.0,
 #END
 
 #TEMPLATE brd34
-borderRadius: BorderRadius.circular(34.0)
+borderRadius: BorderRadius.circular(34.0),
 #END
 
 
@@ -4136,6 +4416,14 @@ padding: const EdgeInsets.symmetric(vertical: 34.0),
 padding: const EdgeInsets.symmetric(horizontal: 34.0),
 #END
 
+#TEMPLATE v34
+vertical: 34.0,
+#END
+
+#TEMPLATE h34
+horizontal: 34.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs34
@@ -4169,7 +4457,7 @@ radius: 35.0,
 #END
 
 #TEMPLATE brd35
-borderRadius: BorderRadius.circular(35.0)
+borderRadius: BorderRadius.circular(35.0),
 #END
 
 
@@ -4258,6 +4546,14 @@ padding: const EdgeInsets.symmetric(vertical: 35.0),
 padding: const EdgeInsets.symmetric(horizontal: 35.0),
 #END
 
+#TEMPLATE v35
+vertical: 35.0,
+#END
+
+#TEMPLATE h35
+horizontal: 35.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs35
@@ -4291,7 +4587,7 @@ radius: 36.0,
 #END
 
 #TEMPLATE brd36
-borderRadius: BorderRadius.circular(36.0)
+borderRadius: BorderRadius.circular(36.0),
 #END
 
 
@@ -4380,6 +4676,14 @@ padding: const EdgeInsets.symmetric(vertical: 36.0),
 padding: const EdgeInsets.symmetric(horizontal: 36.0),
 #END
 
+#TEMPLATE v36
+vertical: 36.0,
+#END
+
+#TEMPLATE h36
+horizontal: 36.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs36
@@ -4413,7 +4717,7 @@ radius: 37.0,
 #END
 
 #TEMPLATE brd37
-borderRadius: BorderRadius.circular(37.0)
+borderRadius: BorderRadius.circular(37.0),
 #END
 
 
@@ -4502,6 +4806,14 @@ padding: const EdgeInsets.symmetric(vertical: 37.0),
 padding: const EdgeInsets.symmetric(horizontal: 37.0),
 #END
 
+#TEMPLATE v37
+vertical: 37.0,
+#END
+
+#TEMPLATE h37
+horizontal: 37.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs37
@@ -4535,7 +4847,7 @@ radius: 38.0,
 #END
 
 #TEMPLATE brd38
-borderRadius: BorderRadius.circular(38.0)
+borderRadius: BorderRadius.circular(38.0),
 #END
 
 
@@ -4624,6 +4936,14 @@ padding: const EdgeInsets.symmetric(vertical: 38.0),
 padding: const EdgeInsets.symmetric(horizontal: 38.0),
 #END
 
+#TEMPLATE v38
+vertical: 38.0,
+#END
+
+#TEMPLATE h38
+horizontal: 38.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs38
@@ -4657,7 +4977,7 @@ radius: 39.0,
 #END
 
 #TEMPLATE brd39
-borderRadius: BorderRadius.circular(39.0)
+borderRadius: BorderRadius.circular(39.0),
 #END
 
 
@@ -4746,6 +5066,14 @@ padding: const EdgeInsets.symmetric(vertical: 39.0),
 padding: const EdgeInsets.symmetric(horizontal: 39.0),
 #END
 
+#TEMPLATE v39
+vertical: 39.0,
+#END
+
+#TEMPLATE h39
+horizontal: 39.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs39
@@ -4779,7 +5107,7 @@ radius: 40.0,
 #END
 
 #TEMPLATE brd40
-borderRadius: BorderRadius.circular(40.0)
+borderRadius: BorderRadius.circular(40.0),
 #END
 
 
@@ -4868,6 +5196,14 @@ padding: const EdgeInsets.symmetric(vertical: 40.0),
 padding: const EdgeInsets.symmetric(horizontal: 40.0),
 #END
 
+#TEMPLATE v40
+vertical: 40.0,
+#END
+
+#TEMPLATE h40
+horizontal: 40.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs40
@@ -4901,7 +5237,7 @@ radius: 41.0,
 #END
 
 #TEMPLATE brd41
-borderRadius: BorderRadius.circular(41.0)
+borderRadius: BorderRadius.circular(41.0),
 #END
 
 
@@ -4990,6 +5326,14 @@ padding: const EdgeInsets.symmetric(vertical: 41.0),
 padding: const EdgeInsets.symmetric(horizontal: 41.0),
 #END
 
+#TEMPLATE v41
+vertical: 41.0,
+#END
+
+#TEMPLATE h41
+horizontal: 41.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs41
@@ -5023,7 +5367,7 @@ radius: 42.0,
 #END
 
 #TEMPLATE brd42
-borderRadius: BorderRadius.circular(42.0)
+borderRadius: BorderRadius.circular(42.0),
 #END
 
 
@@ -5112,6 +5456,14 @@ padding: const EdgeInsets.symmetric(vertical: 42.0),
 padding: const EdgeInsets.symmetric(horizontal: 42.0),
 #END
 
+#TEMPLATE v42
+vertical: 42.0,
+#END
+
+#TEMPLATE h42
+horizontal: 42.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs42
@@ -5145,7 +5497,7 @@ radius: 43.0,
 #END
 
 #TEMPLATE brd43
-borderRadius: BorderRadius.circular(43.0)
+borderRadius: BorderRadius.circular(43.0),
 #END
 
 
@@ -5234,6 +5586,14 @@ padding: const EdgeInsets.symmetric(vertical: 43.0),
 padding: const EdgeInsets.symmetric(horizontal: 43.0),
 #END
 
+#TEMPLATE v43
+vertical: 43.0,
+#END
+
+#TEMPLATE h43
+horizontal: 43.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs43
@@ -5267,7 +5627,7 @@ radius: 44.0,
 #END
 
 #TEMPLATE brd44
-borderRadius: BorderRadius.circular(44.0)
+borderRadius: BorderRadius.circular(44.0),
 #END
 
 
@@ -5356,6 +5716,14 @@ padding: const EdgeInsets.symmetric(vertical: 44.0),
 padding: const EdgeInsets.symmetric(horizontal: 44.0),
 #END
 
+#TEMPLATE v44
+vertical: 44.0,
+#END
+
+#TEMPLATE h44
+horizontal: 44.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs44
@@ -5389,7 +5757,7 @@ radius: 45.0,
 #END
 
 #TEMPLATE brd45
-borderRadius: BorderRadius.circular(45.0)
+borderRadius: BorderRadius.circular(45.0),
 #END
 
 
@@ -5478,6 +5846,14 @@ padding: const EdgeInsets.symmetric(vertical: 45.0),
 padding: const EdgeInsets.symmetric(horizontal: 45.0),
 #END
 
+#TEMPLATE v45
+vertical: 45.0,
+#END
+
+#TEMPLATE h45
+horizontal: 45.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs45
@@ -5511,7 +5887,7 @@ radius: 46.0,
 #END
 
 #TEMPLATE brd46
-borderRadius: BorderRadius.circular(46.0)
+borderRadius: BorderRadius.circular(46.0),
 #END
 
 
@@ -5600,6 +5976,14 @@ padding: const EdgeInsets.symmetric(vertical: 46.0),
 padding: const EdgeInsets.symmetric(horizontal: 46.0),
 #END
 
+#TEMPLATE v46
+vertical: 46.0,
+#END
+
+#TEMPLATE h46
+horizontal: 46.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs46
@@ -5633,7 +6017,7 @@ radius: 47.0,
 #END
 
 #TEMPLATE brd47
-borderRadius: BorderRadius.circular(47.0)
+borderRadius: BorderRadius.circular(47.0),
 #END
 
 
@@ -5722,6 +6106,14 @@ padding: const EdgeInsets.symmetric(vertical: 47.0),
 padding: const EdgeInsets.symmetric(horizontal: 47.0),
 #END
 
+#TEMPLATE v47
+vertical: 47.0,
+#END
+
+#TEMPLATE h47
+horizontal: 47.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs47
@@ -5755,7 +6147,7 @@ radius: 48.0,
 #END
 
 #TEMPLATE brd48
-borderRadius: BorderRadius.circular(48.0)
+borderRadius: BorderRadius.circular(48.0),
 #END
 
 
@@ -5844,6 +6236,14 @@ padding: const EdgeInsets.symmetric(vertical: 48.0),
 padding: const EdgeInsets.symmetric(horizontal: 48.0),
 #END
 
+#TEMPLATE v48
+vertical: 48.0,
+#END
+
+#TEMPLATE h48
+horizontal: 48.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs48
@@ -5877,7 +6277,7 @@ radius: 49.0,
 #END
 
 #TEMPLATE brd49
-borderRadius: BorderRadius.circular(49.0)
+borderRadius: BorderRadius.circular(49.0),
 #END
 
 
@@ -5966,6 +6366,14 @@ padding: const EdgeInsets.symmetric(vertical: 49.0),
 padding: const EdgeInsets.symmetric(horizontal: 49.0),
 #END
 
+#TEMPLATE v49
+vertical: 49.0,
+#END
+
+#TEMPLATE h49
+horizontal: 49.0,
+#END
+
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE fs49
@@ -5999,7 +6407,7 @@ radius: 50.0,
 #END
 
 #TEMPLATE brd50
-borderRadius: BorderRadius.circular(50.0)
+borderRadius: BorderRadius.circular(50.0),
 #END
 
 
@@ -6086,6 +6494,14 @@ padding: const EdgeInsets.symmetric(vertical: 50.0),
 
 #TEMPLATE ph50
 padding: const EdgeInsets.symmetric(horizontal: 50.0),
+#END
+
+#TEMPLATE v50
+vertical: 50.0,
+#END
+
+#TEMPLATE h50
+horizontal: 50.0,
 #END
 
 #GROUP_TEMPLATE skip_docs
