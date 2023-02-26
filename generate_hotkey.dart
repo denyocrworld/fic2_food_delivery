@@ -36,6 +36,14 @@ margin: const EdgeInsets.all(\$1),
 #GROUP_TEMPLATE skip_docs
 
 #TEMPLATE sz$i
+radius: $i.0,
+#END
+
+#TEMPLATE rd$i
+borderRadius: BorderRadius.circular($i.0)
+#END
+
+#TEMPLATE brd$i
 size: $i.0,
 #END
 
