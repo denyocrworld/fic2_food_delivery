@@ -3,6 +3,12 @@ We believe, the class name must be unique.
 If there is a conflicting class name in this file,
 it means you have to rename it to something more unique.
 */
+export 'package:hyper_ui/module/app/car_rental/cr_car_detail/controller/cr_car_detail_controller.dart';
+export 'package:hyper_ui/module/app/car_rental/cr_car_detail/view/cr_car_detail_view.dart';
+export 'package:hyper_ui/module/app/car_rental/cr_dashboard/controller/cr_dashboard_controller.dart';
+export 'package:hyper_ui/module/app/car_rental/cr_dashboard/view/cr_dashboard_view.dart';
+export 'package:hyper_ui/module/app/car_rental/cr_main_navigation/controller/cr_main_navigation_controller.dart';
+export 'package:hyper_ui/module/app/car_rental/cr_main_navigation/view/cr_main_navigation_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/controller/fd_admin_main_navigation_controller.dart';
 export 'package:hyper_ui/module/app/food_delivery/admin/fd_admin_main_navigation/view/fd_admin_main_navigation_view.dart';
 export 'package:hyper_ui/module/app/food_delivery/auth/fd_login/controller/fd_login_controller.dart';
