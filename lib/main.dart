@@ -2,6 +2,10 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
+/*
+Kelas Online /w DenyOcr
+? Buka capekngoding.com
+*/
 void main() async {
   await initialize();
 

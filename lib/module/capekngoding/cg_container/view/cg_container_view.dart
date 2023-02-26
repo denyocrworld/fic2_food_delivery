@@ -298,6 +298,24 @@ image: const DecorationImage(
               //----------------------------------------
               //----------------------------------------
               //----------------------------------------
+
+              const Divider(),
+              const SnippetContainer("ctext"),
+              //#TEMPLATE ctext
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12.0,
+                  vertical: 6.0,
+                ),
+                decoration: const BoxDecoration(
+                  color: Colors.grey,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                ),
+                child: const Text("Category1"),
+              ),
+              //#END
             ],
           ),
         ),
