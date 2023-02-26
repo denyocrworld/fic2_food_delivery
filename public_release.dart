@@ -2,8 +2,8 @@ import 'public_release_magic_book.dart';
 import 'util.dart';
 
 void main() async {
-  // await release(false);
-  // await release(true);
+  await release(false);
+  await release(true);
   await releaseMagicBook();
 }
 
