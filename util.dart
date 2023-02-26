@@ -35,6 +35,7 @@ copyAll(path) async {
 }
 
 commonDelete(path) {
+  deleteDir("$path\\docs");
   deleteDir("$path\\lib\\firebase");
   deleteDir("$path\\lib\\online_class");
   deleteDir("$path\\lib\\pos");
