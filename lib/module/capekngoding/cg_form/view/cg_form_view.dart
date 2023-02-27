@@ -41,14 +41,13 @@ class CgFormView extends StatefulWidget {
                         ),
                         child: Center(
                           child: TextField(
-                            obscureText: true,
                             style: TextStyle(
-                              color: Colors.grey[600],
+                              color: Colors.grey[800],
                             ),
                             decoration: InputDecoration(
-                              hintText: "Password",
+                              hintText: "Search",
                               suffixIcon: Icon(
-                                Icons.password,
+                                Icons.search,
                                 color: Colors.grey[600],
                               ),
                               border: InputBorder.none,

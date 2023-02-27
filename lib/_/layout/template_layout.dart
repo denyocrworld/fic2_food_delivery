@@ -47,25 +47,51 @@ class TemplateLayout extends StatelessWidget {
               const SizedBox(
                 height: 20.0,
               ),
+              //#TEMPLATE wrapexample
+              Wrap(
+                spacing: 10,
+                runSpacing: 10,
+                children: [
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.red,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.purple,
+                  ),
+                ],
+              ),
+              //#END
+              const SizedBox(
+                height: 20.0,
+              ),
               //#TEMPLATE row3
-              SizedBox(
-                height: 100.0,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 100.0,
-                      color: Colors.red,
-                    ),
-                    Container(
-                      width: 100.0,
-                      color: Colors.blue,
-                    ),
-                    Container(
-                      width: 100.0,
-                      color: Colors.purple,
-                    ),
-                  ],
-                ),
+              Row(
+                children: [
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.red,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.blue,
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
+                    color: Colors.purple,
+                  ),
+                ],
               ),
               //#END
               const SizedBox(
