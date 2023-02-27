@@ -243,6 +243,40 @@ image: const DecorationImage(
 """
                     .trim(),
               ),
+              const SnippetContainer("clipAnti"),
+              Text("""
+clipBehavior: Clip.antiAlias,
+"""
+                  .trim()),
+              const SnippetContainer("clipAntiAliasWithSaveLayer"),
+              Text("""
+clipBehavior: Clip.antiAliasWithSaveLayer,
+"""
+                  .trim()),
+              const SnippetContainer("hardEdge"),
+              Text("""
+clipBehavior: Clip.hardEdge,
+"""
+                  .trim()),
+              const SnippetContainer("clipNone"),
+              Text("""
+clipBehavior: Clip.none,
+"""
+                  .trim()),
+              /*
+              #TEMPLATE clipAnti
+              clipBehavior: Clip.antiAlias,
+              #END
+              #TEMPLATE clipAntiAliasWithSaveLayer
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              #END
+              #TEMPLATE clipHardEdge
+              clipBehavior: Clip.hardEdge,
+              #END
+              #TEMPLATE clipNone
+              clipBehavior: Clip.none,
+              #END
+              */
               /*
               Container(
                 //#TEMPLATE decoration
