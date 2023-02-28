@@ -29,7 +29,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   url_launcher: ^6.1.6
   blur: ^3.1.0
-  flutter_svg: ^1.1.5
+  flutter_svg: ^2.0.2
   custom_clippers: ^2.0.0
   badges: ^2.0.3
   flutter_markdown: ^0.6.12
@@ -45,6 +45,8 @@ dependencies:
   firebase_messaging: ^14.2.5
   flutter_local_notifications: ^8.2.0
   dio: ^5.0.1
+  flutter_custom_clippers: ^2.1.0
+  ionicons: ^0.2.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -58,4 +60,5 @@ flutter:
     - assets/icon/
     - assets/font/
     - assets/icon/
-    - assets/image/
+    - assets/image/
+    - assets/svg/

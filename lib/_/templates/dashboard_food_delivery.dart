@@ -7,7 +7,7 @@ class TemplateDashboardFoodDeliveryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //#GROUP_TEMPLATE view
-    //#TEMPLATE ui_dashboard_food_delivery
+    //#TEMPLATE ui_dashboard_hyper_ui
     /*
     ------------------------
     https://capekngoding.com

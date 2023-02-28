@@ -2,10 +2,6 @@ import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/debug.dart';
 
-/*
-Kelas Online /w DenyOcr
-? Buka capekngoding.com
-*/
 void main() async {
   await initialize();
 
@@ -15,7 +11,7 @@ void main() async {
 }
 
 runMainApp() async {
-  return runApp(MainApp());
+  return runApp(const MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -31,7 +27,7 @@ class MainApp extends StatelessWidget {
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: value,
-          home: const CgMainView(),
+          home: const DashboardView(),
           builder: (context, child) => debugView(
             context: context,
             child: child,
