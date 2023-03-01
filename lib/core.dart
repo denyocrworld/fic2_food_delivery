@@ -24,6 +24,7 @@ export 'package:hyper_ui/module/customer/cs_vendor_detail/controller/cs_vendor_d
 export 'package:hyper_ui/module/customer/cs_vendor_detail/view/cs_vendor_detail_view.dart';
 export 'package:hyper_ui/module/customer/cs_vendor_list/controller/cs_vendor_list_controller.dart';
 export 'package:hyper_ui/module/customer/cs_vendor_list/view/cs_vendor_list_view.dart';
+export 'package:hyper_ui/module/customer/cs_vendor_list/widget/resto_card.dart';
 export 'package:hyper_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:hyper_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:hyper_ui/module/driver/dr_dashboard/controller/dr_dashboard_controller.dart';
@@ -32,6 +33,10 @@ export 'package:hyper_ui/module/driver/dr_main_navigation/controller/dr_main_nav
 export 'package:hyper_ui/module/driver/dr_main_navigation/view/dr_main_navigation_view.dart';
 export 'package:hyper_ui/module/user/profile/controller/profile_controller.dart';
 export 'package:hyper_ui/module/user/profile/view/profile_view.dart';
+export 'package:hyper_ui/module/user/user_profile/controller/user_profile_controller.dart';
+export 'package:hyper_ui/module/user/user_profile/view/user_profile_view.dart';
+export 'package:hyper_ui/module/user/vendor_profile/controller/vendor_profile_controller.dart';
+export 'package:hyper_ui/module/user/vendor_profile/view/vendor_profile_view.dart';
 export 'package:hyper_ui/module/vendor/vn_dashboard/controller/vn_dashboard_controller.dart';
 export 'package:hyper_ui/module/vendor/vn_dashboard/view/vn_dashboard_view.dart';
 export 'package:hyper_ui/module/vendor/vn_main_navigation/controller/vn_main_navigation_controller.dart';
@@ -70,6 +75,7 @@ export 'package:hyper_ui/shared/util/validator/validator.dart';
 export 'package:hyper_ui/shared/widget/card/card.dart';
 export 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_container.dart';
 export 'package:hyper_ui/shared/widget/dev/snippet_container/snippet_header.dart';
+export 'package:hyper_ui/shared/widget/firebase/fire_stream/fire_stream.dart';
 export 'package:hyper_ui/shared/widget/form/autocomplete/autocomplete.dart';
 export 'package:hyper_ui/shared/widget/form/check_field/check_field.dart';
 export 'package:hyper_ui/shared/widget/form/date_picker/datepicker.dart';

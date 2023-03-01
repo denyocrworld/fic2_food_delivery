@@ -17,23 +17,6 @@ class ProfileController extends State<ProfileView> implements MvcController {
   @override
   Widget build(BuildContext context) => widget.build(context, this);
 
-  String? photo;
-  String? restoName;
-  String? address;
-  double? latitude;
-  double? longitude;
-
-  doSave() async {
-    await RestoService.save(
-      photo: photo!,
-      restoName: restoName!,
-      address: address!,
-      latitude: latitude!,
-      longitude: longitude!,
-    );
-    showInfoDialog("Berhasil menyimpan data");
-  }
-
   doLogout() async {
     await AuthService.doLogout();
     Get.offAll(const LoginView());

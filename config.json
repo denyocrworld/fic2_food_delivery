@@ -5,6 +5,8 @@
         "dashboard",
         "auth/login",
         "user/profile",
+        "user/user_profile",
+        "user/vendor_profile",
         "customer/cs_main_navigation",
         "customer/cs_dashboard",
         "customer/cs_vendor_detail",

@@ -17,16 +17,18 @@ class AuthService {
         .collection("users")
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .get();
-    await FirebaseFirestore.instance
-        .collection("users")
-        .doc(FirebaseAuth.instance.currentUser!.uid)
-        .set({
-      "uid": FirebaseAuth.instance.currentUser!.uid,
-      "photo": FirebaseAuth.instance.currentUser!.photoURL,
-      "email": FirebaseAuth.instance.currentUser!.email,
-      "name": FirebaseAuth.instance.currentUser!.displayName,
-      "role": role,
-    });
+    if (!snapshot.exists) {
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(FirebaseAuth.instance.currentUser!.uid)
+          .set({
+        "uid": FirebaseAuth.instance.currentUser!.uid,
+        "photo": FirebaseAuth.instance.currentUser!.photoURL,
+        "email": FirebaseAuth.instance.currentUser!.email,
+        "name": FirebaseAuth.instance.currentUser!.displayName,
+        "role": role,
+      });
+    }
 
     return true;
   }
