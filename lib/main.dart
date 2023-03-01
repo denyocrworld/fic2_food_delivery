@@ -1,12 +1,12 @@
+import 'package:hyper_ui/state_util.dart';
 import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_ui/debug.dart';
 
 void main() async {
   await initialize();
 
   // Get.mainTheme.value = getDefaultTheme();
-  Get.mainTheme.value = getDarkTheme();
+  // Get.mainTheme.value = getDarkTheme();
   runMainApp();
 }
 
@@ -26,13 +26,8 @@ class MainApp extends StatelessWidget {
           title: 'Capek Ngoding',
           navigatorKey: Get.navigatorKey,
           debugShowCheckedModeBanner: false,
-          theme: value,
-          home: const DashboardView(),
-          builder: (context, child) => debugView(
-            context: context,
-            child: child,
-            visible: true,
-          ),
+          theme: getDefaultTheme(),
+          home: const LoginView(),
         );
       },
     );

@@ -1,49 +1,42 @@
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hyper_ui/shared/theme/theme_config.dart';
 import 'package:flutter/material.dart';
 
+var primaryColor = const Color(0xffffce00);
+var secondaryColor = const Color(0xFF2A2D3E);
+var textColor = const Color(0xff092543);
+var iconColor = const Color(0xff092543);
+
+var dangerColor = Colors.red[300]!;
+var successColor = const Color(0xff8cc63f);
+var infoColor = Colors.blue[300]!;
+var warningColor = Colors.orange[300]!;
+var disabledColor = Colors.grey[300]!;
+
 ThemeData getDefaultTheme() {
-  return ThemeData().copyWith(
+  return ThemeData(
     primaryColor: primaryColor,
-    scaffoldBackgroundColor: Colors.grey[300],
     appBarTheme: AppBarTheme(
-      backgroundColor: appbarBackgroundColor,
-      elevation: 0.6,
-      titleTextStyle: GoogleFonts.lato(
-        color: Colors.blueGrey[700],
+      backgroundColor: primaryColor,
+      titleTextStyle: GoogleFonts.roboto(
+        color: textColor,
         fontWeight: FontWeight.bold,
+        fontSize: 16.0,
       ),
       iconTheme: IconThemeData(
-        color: Colors.blueGrey[700],
+        color: iconColor,
       ),
+      elevation: 0.0,
+    ),
+    cardTheme: const CardTheme(
+      elevation: 1.4,
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      unselectedItemColor: Colors.grey,
-      selectedItemColor: Colors.blueGrey[900]!,
+      selectedItemColor: textColor,
+      unselectedItemColor: textColor.withOpacity(0.5),
     ),
-    tabBarTheme: TabBarTheme(
-      unselectedLabelColor: Colors.grey,
-      labelColor: Colors.blueGrey[900]!,
-    ),
-    textTheme: TextTheme(
-      titleSmall: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
-      titleMedium: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
-      titleLarge: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
-      bodyLarge: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
-      bodySmall: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
-      bodyMedium: GoogleFonts.lato(
-        color: Colors.blueGrey[900],
-      ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: primaryColor,
+      foregroundColor: textColor,
     ),
   );
 }

@@ -3,16 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hyper_ui/core.dart';
-import 'package:ionicons/ionicons.dart';
-
-import '../../../shared/theme/theme.dart';
 
 class NearByPopularFood extends StatelessWidget {
   const NearByPopularFood({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var controller = DashboardController.instance;
+    var controller = CsDashboardController.instance;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

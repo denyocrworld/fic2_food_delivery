@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
-import '../view/login_view.dart';
+import '../view/cs_vendor_detail_view.dart';
 
-class LoginController extends State<LoginView> implements MvcController {
-  static late LoginController instance;
-  late LoginView view;
+class CsVendorDetailController extends State<CsVendorDetailView> implements MvcController {
+  static late CsVendorDetailController instance;
+  late CsVendorDetailView view;
 
   @override
   void initState() {

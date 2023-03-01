@@ -3,6 +3,22 @@
     "modules": [
         "welcome",
         "dashboard",
-        "login"
+        "auth/login",
+        "user/profile",
+        "customer/cs_main_navigation",
+        "customer/cs_dashboard",
+        "customer/cs_vendor_detail",
+        "customer/cs_cart",
+        "customer/cs_checkout",
+        "customer/cs_order_list",
+        "customer/cs_vendor_list",
+        "admin/adm_dashboard",
+        "admin/adm_main_navigation",
+        "vendor/vn_main_navigation",
+        "vendor/vn_dashboard",
+        "vendor/vn_product_list",
+        "vendor/vn_product_form",
+        "driver/dr_main_navigation",
+        "driver/dr_dashboard"
     ]
 }
