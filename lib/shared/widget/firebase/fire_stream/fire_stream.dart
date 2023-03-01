@@ -25,6 +25,7 @@ class FireStream extends StatelessWidget {
         final data = snapshot.data!;
         return ListView.builder(
           itemCount: data.docs.length,
+          padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
             Map<String, dynamic> item =
                 (data.docs[index].data() as Map<String, dynamic>);

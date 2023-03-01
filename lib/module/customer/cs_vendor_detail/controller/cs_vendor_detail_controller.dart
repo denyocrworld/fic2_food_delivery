@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/cs_vendor_detail_view.dart';
 
-class CsVendorDetailController extends State<CsVendorDetailView> implements MvcController {
+class CsVendorDetailController extends State<CsVendorDetailView>
+    implements MvcController {
   static late CsVendorDetailController instance;
   late CsVendorDetailView view;
 
@@ -17,4 +18,6 @@ class CsVendorDetailController extends State<CsVendorDetailView> implements MvcC
 
   @override
   Widget build(BuildContext context) => widget.build(context, this);
+
+  String search = "";
 }

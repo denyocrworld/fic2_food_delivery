@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
@@ -27,6 +28,8 @@ class VnProductListView extends StatefulWidget {
               child: StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection("products")
+                    .where("owner.uid",
+                        isEqualTo: FirebaseAuth.instance.currentUser!.uid)
                     .snapshots(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) return const Text("Error");

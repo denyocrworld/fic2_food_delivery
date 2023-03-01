@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/core.dart';
 
 class RestoCard extends StatelessWidget {
   final Map item;
@@ -11,15 +12,20 @@ class RestoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return InkWell(
+      onTap: () async {
+        await Get.to(CsVendorDetailView(
+          resto: item,
+        ));
+      },
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: 90,
-              height: 90,
+              width: 100,
+              height: 100,
               margin: const EdgeInsets.only(right: 10.0),
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -29,7 +35,7 @@ class RestoCard extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 borderRadius: const BorderRadius.all(
-                  Radius.circular(16.0),
+                  Radius.circular(12.0),
                 ),
                 color: Colors.blue[400],
               ),
@@ -73,6 +79,30 @@ class RestoCard extends StatelessWidget {
                     height: 6.0,
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        size: 12.0,
+                        color: primaryColor,
+                      ),
+                      const SizedBox(
+                        width: 4.0,
+                      ),
+                      Text(
+                        item["address"],
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 10.0,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 6.0,
+                  ),
+                  Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
@@ -103,15 +133,6 @@ class RestoCard extends StatelessWidget {
                         ),
                       ),
                     ],
-                  ),
-                  const SizedBox(
-                    height: 6.0,
-                  ),
-                  const Text(
-                    "Bakery & Cake . Breakfast . Snack",
-                    style: TextStyle(
-                      fontSize: 10.0,
-                    ),
                   ),
                   const SizedBox(
                     height: 6.0,
