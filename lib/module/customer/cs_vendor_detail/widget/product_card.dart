@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_typing_uninitialized_variables
 
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/module/customer/cs_vendor_detail/controller/cs_vendor_detail_controller.dart';
 
 class ProductCard extends StatelessWidget {
   final Map item;
@@ -11,6 +12,8 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CsVendorDetailController controller = CsVendorDetailController.instance;
+
     return Padding(
       padding: const EdgeInsets.all(12.0),
       child: Row(
@@ -71,23 +74,92 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(
                   height: 6.0,
                 ),
-                Text(
-                  item["category"],
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 10.0,
-                  ),
-                ),
-                const SizedBox(
-                  height: 6.0,
-                ),
-                const Text(
-                  "€24",
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            item["category"],
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 6.0,
+                          ),
+                          const Text(
+                            "€24",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 4.0,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(4.0),
+                            ),
+                            border: Border.all(
+                              width: 1.0,
+                              color: Colors.grey[800]!,
+                            ),
+                          ),
+                          child: InkWell(
+                            onTap: () => controller.decreaseQty(item),
+                            child: Icon(
+                              Icons.remove,
+                              size: 20.0,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 6.0,
+                        ),
+                        Text(
+                          "${controller.getQty(item)}",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey[800],
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 6.0,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(4.0),
+                            ),
+                            border: Border.all(
+                              width: 1.0,
+                              color: Colors.grey[800]!,
+                            ),
+                          ),
+                          child: InkWell(
+                            onTap: () => controller.increaseQty(item),
+                            child: Icon(
+                              Icons.add,
+                              size: 20.0,
+                              color: Colors.grey[800],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),

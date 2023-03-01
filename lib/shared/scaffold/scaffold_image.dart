@@ -9,12 +9,14 @@ class ScaffoldImage extends StatelessWidget {
   final String title;
   final String? backgroundUrl;
   final List<Widget>? actions;
+  final Widget? bottomNavigationBar;
   const ScaffoldImage({
     Key? key,
     required this.body,
     required this.title,
     this.actions,
     this.backgroundUrl,
+    this.bottomNavigationBar,
   }) : super(key: key);
 
   @override
@@ -55,6 +57,7 @@ class ScaffoldImage extends StatelessWidget {
         ),
         actions: actions,
       ),
+      bottomNavigationBar: bottomNavigationBar,
       body: Column(
         children: [
           Container(

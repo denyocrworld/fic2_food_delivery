@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hyper_ui/core.dart';
+import 'package:hyper_ui/service/cart_service/cart_service.dart';
 import '../../../../shared/scaffold/scaffold_image.dart';
 import '../../../../shared/widget/form/search/search.dart';
 import '../widget/product_card.dart';
@@ -70,6 +71,50 @@ class CsVendorDetailView extends StatefulWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: Wrap(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Text(
+                    "Total",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Text(
+                  "${CartService.total}",
+                  style: const TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 68,
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsets.all(12.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: primaryColor,
+              ),
+              onPressed: () {},
+              child: Text(
+                "Checkout",
+                style: TextStyle(
+                  color: textColor,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

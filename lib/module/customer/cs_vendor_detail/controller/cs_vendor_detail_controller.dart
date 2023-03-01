@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hyper_ui/service/cart_service/cart_service.dart';
 import 'package:hyper_ui/state_util.dart';
 import '../view/cs_vendor_detail_view.dart';
 
@@ -10,6 +11,7 @@ class CsVendorDetailController extends State<CsVendorDetailView>
   @override
   void initState() {
     instance = this;
+    CartService.clearCart();
     super.initState();
   }
 
@@ -20,4 +22,18 @@ class CsVendorDetailController extends State<CsVendorDetailView>
   Widget build(BuildContext context) => widget.build(context, this);
 
   String search = "";
+
+  getQty(Map product) {
+    return CartService.getQty(product);
+  }
+
+  increaseQty(Map product) {
+    CartService.increaseQty(product);
+    setState(() {});
+  }
+
+  decreaseQty(Map product) {
+    CartService.decreaseQty(product);
+    setState(() {});
+  }
 }
